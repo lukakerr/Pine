@@ -15,9 +15,6 @@ class PreferencesWindowController: NSWindowController, NSWindowDelegate {
     
     if let window = window {
       window.appearance = NSAppearance(named: theme.appearance)
-      window.titleVisibility = NSWindow.TitleVisibility.hidden
-      window.titlebarAppearsTransparent = true
-      window.styleMask.insert(.fullSizeContentView)
       window.isOpaque = false
       window.invalidateShadow()
       window.center()

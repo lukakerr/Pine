@@ -693,7 +693,7 @@
         <scene sceneID="UqC-3D-TJP">
             <objects>
                 <windowController id="Ul4-m2-Yud" customClass="PreferencesWindowController" customModule="Twig" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="GdU-QC-Lde">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" id="GdU-QC-Lde">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="294" y="362" width="480" height="270"/>
@@ -715,55 +715,47 @@
             <objects>
                 <viewController id="Qoo-tX-NpU" customClass="PreferencesViewController" customModule="Twig" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="LEu-6c-HQb">
-                        <rect key="frame" x="0.0" y="0.0" width="319" height="134"/>
+                        <rect key="frame" x="0.0" y="0.0" width="319" height="161"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3WV-GM-JyE">
-                                <rect key="frame" x="58" y="91" width="204" height="24"/>
-                                <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="gSy-tR-jYD">
-                                    <font key="font" metaFont="system"/>
-                                    <segments>
-                                        <segment label="Light Theme"/>
-                                        <segment label="Dark Theme" selected="YES" tag="1"/>
-                                    </segments>
-                                </segmentedCell>
-                                <connections>
-                                    <action selector="themeChanged:" target="Qoo-tX-NpU" id="WGm-Oe-Vy3"/>
-                                </connections>
-                            </segmentedControl>
-                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PiB-n0-eXD">
-                                <rect key="frame" x="123" y="49" width="76" height="26"/>
-                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="ZgE-eI-iLc" id="yhi-fh-e3P">
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PiB-n0-eXD">
+                                <rect key="frame" x="98" y="117" width="204" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="yhi-fh-e3P">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
-                                    <menu key="menu" id="ipD-qs-gwh">
-                                        <items>
-                                            <menuItem title="Item 1" state="on" id="ZgE-eI-iLc"/>
-                                            <menuItem title="Item 2" id="WZZ-OQ-7IM"/>
-                                            <menuItem title="Item 3" id="Qpw-gs-cWN"/>
-                                        </items>
-                                    </menu>
+                                    <menu key="menu" id="ipD-qs-gwh"/>
                                 </popUpButtonCell>
                                 <connections>
                                     <action selector="syntaxChanged:" target="Qoo-tX-NpU" id="YTQ-XY-Zho"/>
                                 </connections>
                             </popUpButton>
+                            <box horizontalHuggingPriority="750" ambiguous="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="win-yJ-Pis">
+                                <rect key="frame" x="89" y="12" width="5" height="137"/>
+                            </box>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pmp-yi-6Ll">
+                                <rect key="frame" x="18" y="122" width="67" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Theme" id="6l5-LS-mSt">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="PiB-n0-eXD" firstAttribute="top" secondItem="3WV-GM-JyE" secondAttribute="bottom" constant="20" id="0Bw-tb-Fg7"/>
-                            <constraint firstItem="3WV-GM-JyE" firstAttribute="centerX" secondItem="LEu-6c-HQb" secondAttribute="centerX" id="8Av-g7-sPu"/>
-                            <constraint firstItem="3WV-GM-JyE" firstAttribute="centerX" secondItem="PiB-n0-eXD" secondAttribute="centerX" id="M3V-pR-E48"/>
-                            <constraint firstItem="3WV-GM-JyE" firstAttribute="top" secondItem="LEu-6c-HQb" secondAttribute="top" constant="20" symbolic="YES" id="quW-bw-SuQ"/>
+                            <constraint firstAttribute="bottom" secondItem="win-yJ-Pis" secondAttribute="bottom" constant="12" id="ZCn-bh-H5w"/>
+                            <constraint firstItem="win-yJ-Pis" firstAttribute="top" secondItem="LEu-6c-HQb" secondAttribute="top" constant="12" id="wk0-RQ-3y6"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="syntaxDropdown" destination="PiB-n0-eXD" id="1kg-WG-E0p"/>
-                        <outlet property="themeButton" destination="3WV-GM-JyE" id="Uxx-PE-DzM"/>
                     </connections>
                 </viewController>
                 <customObject id="yyx-8C-T1R" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController id="wKS-Fq-Red"/>
             </objects>
-            <point key="canvasLocation" x="1227.5" y="-412"/>
+            <point key="canvasLocation" x="1227.5" y="-398.5"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">

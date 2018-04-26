@@ -26,18 +26,6 @@ class Theme {
     }
   }
   
-  public func setTheme(_ theme: ThemeType) {
-    self.type = theme
-    if (self.type == ThemeType.light) {
-      self.id = 0
-      self.appearance = .vibrantLight
-    } else {
-      self.id = 1
-      self.appearance = .vibrantDark
-    }
-    defaults.setValue(self.type.rawValue, forKey: "theme")
-  }
-  
 }
 
 let theme = Theme.sharedInstance

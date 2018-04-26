@@ -15,7 +15,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
 
   @IBOutlet var markdownTextView: NSTextView!
   
-  private let highlightr = Highlightr()!
+  public let highlightr = Highlightr()!
   
   // Cocoa binding for text inside markdownTextView
   @objc var attributedMarkdownTextInput: NSAttributedString {
@@ -58,12 +58,31 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
     
     markdownTextView.delegate = self
     markdownTextView.font = DEFAULT_FONT
+    markdownTextView.insertionPointColor = .gray
+  }
+  
+  override func viewDidAppear() {
+    highlightr.setTheme(to: theme.syntax)
+    setBackgroundColor()
   }
   
   // On theme change, update window appearance and reparse with possible new syntax
   @objc private func themeChanged(notification: Notification?) {
-    self.view.window?.appearance = NSAppearance(named: theme.appearance)
     syntaxHighlight(markdownTextView.string)
+    setBackgroundColor()
+  }
+  
+  private func setBackgroundColor() {
+    guard let color = highlightr.theme.themeBackgroundColor else {
+      return
+    }
+    
+    if color.isDark {
+      self.view.window?.appearance = NSAppearance(named: .vibrantDark)
+    } else {
+      self.view.window?.appearance = NSAppearance(named: .vibrantLight)
+    }
+    self.view.window?.backgroundColor = color
   }
 
 }

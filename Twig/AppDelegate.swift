@@ -14,14 +14,7 @@ let defaults = UserDefaults.standard
 class AppDelegate: NSObject, NSApplicationDelegate {
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
-    
-    // Restore default theme
-    if let defaultTheme = defaults.string(forKey: "theme") {
-      if let type = ThemeType(rawValue: defaultTheme) {
-        theme.setTheme(type)
-      }
-    }
-    
+
     // Restore default syntax theme
     if let defaultSyntax = defaults.string(forKey: "syntax") {
       theme.syntax = defaultSyntax
