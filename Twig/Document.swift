@@ -34,7 +34,7 @@ class Document: NSDocument {
     let windowController = storyboard.instantiateController(
       withIdentifier: NSStoryboard.SceneIdentifier("Document Window Controller")
     ) as! NSWindowController
-    self.markdownVC = windowController.contentViewController as? MarkdownViewController
+    self.markdownVC = windowController.contentViewController?.childViewControllers[0] as? MarkdownViewController
     self.addWindowController(windowController)
     self.setContents()
   }

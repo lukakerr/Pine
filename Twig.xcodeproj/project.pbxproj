@@ -10,6 +10,7 @@
 		5EC2EB6C996D63F9FA158160 /* Pods_Twig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66B7DAE689A6827E658233B /* Pods_Twig.framework */; };
 		A13C23F8209153E1008557D0 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C23F7209153E1008557D0 /* PreferencesWindowController.swift */; };
 		A13C23FA209167F0008557D0 /* NSColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C23F9209167F0008557D0 /* NSColor+Extension.swift */; };
+		A13C23FC20919672008557D0 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C23FB20919672008557D0 /* PreviewViewController.swift */; };
 		A148C3A020914F0F00B1165C /* SyntaxThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148C39F20914F0F00B1165C /* SyntaxThemes.swift */; };
 		A148C3A22091522C00B1165C /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148C3A12091522C00B1165C /* PreferencesViewController.swift */; };
 		A156AF812090606C0098BBDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AF802090606C0098BBDD /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 		A156AFAF209061D60098BBDD /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFAE209061D60098BBDD /* WindowController.swift */; };
 		A156AFB120908ECE0098BBDD /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFB020908ECE0098BBDD /* Theme.swift */; };
 		A1682E87209097E700164D78 /* NSMutableAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1682E86209097E700164D78 /* NSMutableAttributedString+Extension.swift */; };
+		A182096E20919F6000016AD5 /* HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = A182096D20919F6000016AD5 /* HTML.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 /* Begin PBXFileReference section */
 		A13C23F7209153E1008557D0 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
 		A13C23F9209167F0008557D0 /* NSColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Extension.swift"; sourceTree = "<group>"; };
+		A13C23FB20919672008557D0 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		A148C39F20914F0F00B1165C /* SyntaxThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxThemes.swift; sourceTree = "<group>"; };
 		A148C3A12091522C00B1165C /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		A156AF7D2090606C0098BBDD /* Twig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twig.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +66,7 @@
 		A156AFAE209061D60098BBDD /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		A156AFB020908ECE0098BBDD /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		A1682E86209097E700164D78 /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		A182096D20919F6000016AD5 /* HTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTML.swift; sourceTree = "<group>"; };
 		B2BE6FC4D33EB0DD8E860B17 /* Pods-Twig.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twig.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Twig/Pods-Twig.debug.xcconfig"; sourceTree = "<group>"; };
 		B66B7DAE689A6827E658233B /* Pods_Twig.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twig.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE61D6DEDFEA5C5AF04564BE /* Pods-Twig.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twig.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twig/Pods-Twig.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,10 +132,12 @@
 				A156AF822090606C0098BBDD /* MarkdownViewController.swift */,
 				A148C3A12091522C00B1165C /* PreferencesViewController.swift */,
 				A13C23F7209153E1008557D0 /* PreferencesWindowController.swift */,
+				A13C23FB20919672008557D0 /* PreviewViewController.swift */,
 				A148C39F20914F0F00B1165C /* SyntaxThemes.swift */,
 				A156AFB020908ECE0098BBDD /* Theme.swift */,
 				A156AF8C2090606D0098BBDD /* Twig.entitlements */,
 				A156AFAE209061D60098BBDD /* WindowController.swift */,
+				A182096D20919F6000016AD5 /* HTML.swift */,
 			);
 			path = Twig;
 			sourceTree = "<group>";
@@ -362,7 +368,9 @@
 				A148C3A020914F0F00B1165C /* SyntaxThemes.swift in Sources */,
 				A156AFAF209061D60098BBDD /* WindowController.swift in Sources */,
 				A148C3A22091522C00B1165C /* PreferencesViewController.swift in Sources */,
+				A13C23FC20919672008557D0 /* PreviewViewController.swift in Sources */,
 				A13C23FA209167F0008557D0 /* NSColor+Extension.swift in Sources */,
+				A182096E20919F6000016AD5 /* HTML.swift in Sources */,
 				A156AFB120908ECE0098BBDD /* Theme.swift in Sources */,
 				A1682E87209097E700164D78 /* NSMutableAttributedString+Extension.swift in Sources */,
 				A13C23F8209153E1008557D0 /* PreferencesWindowController.swift in Sources */,

@@ -15,7 +15,7 @@ enum ThemeType: String {
 class Theme {
   static let sharedInstance = Theme()
   
-  private init(){}
+  private init() {}
   
   public var id: Int = 0
   public var type: ThemeType = ThemeType.light

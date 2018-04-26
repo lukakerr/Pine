@@ -8,6 +8,7 @@
 
 import Cocoa
 import Highlightr
+import Down
 
 let DEFAULT_FONT = NSFont(name: "Courier", size: CGFloat(18))
 
@@ -24,6 +25,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
     }
     set {
       syntaxHighlight(newValue.string)
+      generatePreview(newValue.string)
     }
   }
   
@@ -43,6 +45,18 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
       markdownTextView.textStorage?.endEditing()
     }
     markdownTextView.setSelectedRange(NSMakeRange(cursorPosition, 0))
+  }
+  
+  private func generatePreview(_ string: String) {
+    if let splitViewController = self.parent as? NSSplitViewController,
+      let previewView = splitViewController.splitViewItems.last {
+      let previewViewController = previewView.viewController as? PreviewViewController
+      let down = Down(markdownString: string)
+      let html = try? down.toHTML()
+      if let html = html {
+        previewViewController?.webPreview.loadHTMLString(html, baseURL: nil)
+      }
+    }
   }
   
   override func viewDidLoad() {

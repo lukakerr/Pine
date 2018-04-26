@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="14109"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -771,32 +772,88 @@
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="5gI-5U-AMq" kind="relationship" relationship="window.shadowedContentViewController" id="nsd-lR-9xd"/>
+                        <segue destination="H9B-K3-Dzn" kind="relationship" relationship="window.shadowedContentViewController" id="sS9-Sl-rmu"/>
                     </connections>
                 </windowController>
                 <customObject id="6f7-a7-6o1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
+        <!--Split View Controller-->
+        <scene sceneID="Buc-Zo-HkQ">
+            <objects>
+                <splitViewController id="H9B-K3-Dzn" sceneMemberID="viewController">
+                    <splitViewItems>
+                        <splitViewItem id="lV3-gA-f3R"/>
+                        <splitViewItem id="fdr-H4-RuV"/>
+                    </splitViewItems>
+                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="C6s-QO-K51">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <outlet property="delegate" destination="H9B-K3-Dzn" id="g46-D7-pDI"/>
+                        </connections>
+                    </splitView>
+                    <connections>
+                        <outlet property="splitView" destination="C6s-QO-K51" id="9WS-hK-jjt"/>
+                        <segue destination="5gI-5U-AMq" kind="relationship" relationship="splitItems" id="Mqf-Pl-Mhu"/>
+                        <segue destination="xlE-2V-boh" kind="relationship" relationship="splitItems" id="xEJ-Rj-VMt"/>
+                    </connections>
+                </splitViewController>
+                <customObject id="kZD-Eb-f8B" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="946"/>
+        </scene>
+        <!--Preview View Controller-->
+        <scene sceneID="ZGZ-HR-qRb">
+            <objects>
+                <viewController id="xlE-2V-boh" customClass="PreviewViewController" customModule="Twig" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="wce-QW-CaH">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4aR-r7-dV0">
+                                <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4aR-r7-dV0" secondAttribute="trailing" id="0gU-Ox-hKU"/>
+                            <constraint firstItem="4aR-r7-dV0" firstAttribute="top" secondItem="wce-QW-CaH" secondAttribute="top" id="GgM-lu-29C"/>
+                            <constraint firstItem="4aR-r7-dV0" firstAttribute="leading" secondItem="wce-QW-CaH" secondAttribute="leading" id="JF0-vl-ZDJ"/>
+                            <constraint firstAttribute="bottom" secondItem="4aR-r7-dV0" secondAttribute="bottom" id="eEl-F4-Rr5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webPreview" destination="4aR-r7-dV0" id="jSW-rS-PZF"/>
+                    </connections>
+                </viewController>
+                <customObject id="t48-Mq-JBU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="395" y="1588"/>
+        </scene>
         <!--Markdown View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="5gI-5U-AMq" customClass="MarkdownViewController" customModule="Twig" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="ERx-hH-rdd">
-                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView focusRingType="none" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAD-f9-Lpr">
-                                <rect key="frame" x="10" y="10" width="780" height="580"/>
+                                <rect key="frame" x="10" y="10" width="480" height="580"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="s9D-Lv-cP8">
-                                    <rect key="frame" x="0.0" y="0.0" width="780" height="580"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="480" height="580"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView focusRingType="none" drawsBackground="NO" importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" smartInsertDelete="YES" id="SNH-fR-eeK">
-                                            <rect key="frame" x="0.0" y="0.0" width="780" height="580"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="480" height="580"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="780" height="580"/>
+                                            <size key="minSize" width="480" height="580"/>
                                             <size key="maxSize" width="800" height="10000000"/>
                                             <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
@@ -815,7 +872,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="2Fr-Xo-YM2">
-                                    <rect key="frame" x="764" y="0.0" width="16" height="580"/>
+                                    <rect key="frame" x="464" y="0.0" width="16" height="580"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
@@ -834,7 +891,7 @@
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="SCX-Ho-naq"/>
             </objects>
-            <point key="canvasLocation" x="75" y="1123"/>
+            <point key="canvasLocation" x="-205" y="1588"/>
         </scene>
     </scenes>
 </document>
