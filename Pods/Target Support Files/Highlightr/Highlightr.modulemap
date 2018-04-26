@@ -1,0 +1,6 @@
+framework module Highlightr {
+  umbrella header "Highlightr-umbrella.h"
+
+  export *
+  module * { export * }
+}

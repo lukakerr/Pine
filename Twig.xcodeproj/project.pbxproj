@@ -1,0 +1,690 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5EC2EB6C996D63F9FA158160 /* Pods_Twig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66B7DAE689A6827E658233B /* Pods_Twig.framework */; };
+		A13C23F8209153E1008557D0 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C23F7209153E1008557D0 /* PreferencesWindowController.swift */; };
+		A148C3A020914F0F00B1165C /* SyntaxThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148C39F20914F0F00B1165C /* SyntaxThemes.swift */; };
+		A148C3A22091522C00B1165C /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148C3A12091522C00B1165C /* PreferencesViewController.swift */; };
+		A156AF812090606C0098BBDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AF802090606C0098BBDD /* AppDelegate.swift */; };
+		A156AF832090606C0098BBDD /* MarkdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AF822090606C0098BBDD /* MarkdownViewController.swift */; };
+		A156AF852090606C0098BBDD /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AF842090606C0098BBDD /* Document.swift */; };
+		A156AF872090606C0098BBDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A156AF862090606C0098BBDD /* Assets.xcassets */; };
+		A156AF8A2090606D0098BBDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A156AF882090606D0098BBDD /* Main.storyboard */; };
+		A156AF962090606D0098BBDD /* TwigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AF952090606D0098BBDD /* TwigTests.swift */; };
+		A156AFA12090606D0098BBDD /* TwigUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFA02090606D0098BBDD /* TwigUITests.swift */; };
+		A156AFAF209061D60098BBDD /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFAE209061D60098BBDD /* WindowController.swift */; };
+		A156AFB120908ECE0098BBDD /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFB020908ECE0098BBDD /* Theme.swift */; };
+		A1682E87209097E700164D78 /* NSMutableAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1682E86209097E700164D78 /* NSMutableAttributedString+Extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A156AF922090606D0098BBDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A156AF752090606C0098BBDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A156AF7C2090606C0098BBDD;
+			remoteInfo = Twig;
+		};
+		A156AF9D2090606D0098BBDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A156AF752090606C0098BBDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A156AF7C2090606C0098BBDD;
+			remoteInfo = Twig;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A13C23F7209153E1008557D0 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
+		A148C39F20914F0F00B1165C /* SyntaxThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxThemes.swift; sourceTree = "<group>"; };
+		A148C3A12091522C00B1165C /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		A156AF7D2090606C0098BBDD /* Twig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twig.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A156AF802090606C0098BBDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A156AF822090606C0098BBDD /* MarkdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownViewController.swift; sourceTree = "<group>"; };
+		A156AF842090606C0098BBDD /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		A156AF862090606C0098BBDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A156AF892090606D0098BBDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A156AF8B2090606D0098BBDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A156AF8C2090606D0098BBDD /* Twig.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Twig.entitlements; sourceTree = "<group>"; };
+		A156AF912090606D0098BBDD /* TwigTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwigTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A156AF952090606D0098BBDD /* TwigTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwigTests.swift; sourceTree = "<group>"; };
+		A156AF972090606D0098BBDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A156AF9C2090606D0098BBDD /* TwigUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwigUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A156AFA02090606D0098BBDD /* TwigUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwigUITests.swift; sourceTree = "<group>"; };
+		A156AFA22090606D0098BBDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A156AFAE209061D60098BBDD /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		A156AFB020908ECE0098BBDD /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		A1682E86209097E700164D78 /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		B2BE6FC4D33EB0DD8E860B17 /* Pods-Twig.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twig.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Twig/Pods-Twig.debug.xcconfig"; sourceTree = "<group>"; };
+		B66B7DAE689A6827E658233B /* Pods_Twig.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twig.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE61D6DEDFEA5C5AF04564BE /* Pods-Twig.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twig.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twig/Pods-Twig.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A156AF7A2090606C0098BBDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EC2EB6C996D63F9FA158160 /* Pods_Twig.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A156AF8E2090606D0098BBDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A156AF992090606D0098BBDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A156AF742090606C0098BBDD = {
+			isa = PBXGroup;
+			children = (
+				A156AF7F2090606C0098BBDD /* Twig */,
+				A156AF942090606D0098BBDD /* TwigTests */,
+				A156AF9F2090606D0098BBDD /* TwigUITests */,
+				A156AF7E2090606C0098BBDD /* Products */,
+				E4FB2329AC3DC77FB4340593 /* Pods */,
+				AF85BB3E71369DF39A9597F6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A156AF7E2090606C0098BBDD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A156AF7D2090606C0098BBDD /* Twig.app */,
+				A156AF912090606D0098BBDD /* TwigTests.xctest */,
+				A156AF9C2090606D0098BBDD /* TwigUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A156AF7F2090606C0098BBDD /* Twig */ = {
+			isa = PBXGroup;
+			children = (
+				A156AF802090606C0098BBDD /* AppDelegate.swift */,
+				A156AF862090606C0098BBDD /* Assets.xcassets */,
+				A156AF842090606C0098BBDD /* Document.swift */,
+				A1682E85209097D500164D78 /* Extensions */,
+				A156AF8B2090606D0098BBDD /* Info.plist */,
+				A156AF882090606D0098BBDD /* Main.storyboard */,
+				A156AF822090606C0098BBDD /* MarkdownViewController.swift */,
+				A148C3A12091522C00B1165C /* PreferencesViewController.swift */,
+				A13C23F7209153E1008557D0 /* PreferencesWindowController.swift */,
+				A148C39F20914F0F00B1165C /* SyntaxThemes.swift */,
+				A156AFB020908ECE0098BBDD /* Theme.swift */,
+				A156AF8C2090606D0098BBDD /* Twig.entitlements */,
+				A156AFAE209061D60098BBDD /* WindowController.swift */,
+			);
+			path = Twig;
+			sourceTree = "<group>";
+		};
+		A156AF942090606D0098BBDD /* TwigTests */ = {
+			isa = PBXGroup;
+			children = (
+				A156AF952090606D0098BBDD /* TwigTests.swift */,
+				A156AF972090606D0098BBDD /* Info.plist */,
+			);
+			path = TwigTests;
+			sourceTree = "<group>";
+		};
+		A156AF9F2090606D0098BBDD /* TwigUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A156AFA02090606D0098BBDD /* TwigUITests.swift */,
+				A156AFA22090606D0098BBDD /* Info.plist */,
+			);
+			path = TwigUITests;
+			sourceTree = "<group>";
+		};
+		A1682E85209097D500164D78 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A1682E86209097E700164D78 /* NSMutableAttributedString+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AF85BB3E71369DF39A9597F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B66B7DAE689A6827E658233B /* Pods_Twig.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4FB2329AC3DC77FB4340593 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2BE6FC4D33EB0DD8E860B17 /* Pods-Twig.debug.xcconfig */,
+				DE61D6DEDFEA5C5AF04564BE /* Pods-Twig.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A156AF7C2090606C0098BBDD /* Twig */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A156AFA52090606D0098BBDD /* Build configuration list for PBXNativeTarget "Twig" */;
+			buildPhases = (
+				1C9E57CBD9210A5F16D7F6F9 /* [CP] Check Pods Manifest.lock */,
+				A156AF792090606C0098BBDD /* Sources */,
+				A156AF7A2090606C0098BBDD /* Frameworks */,
+				A156AF7B2090606C0098BBDD /* Resources */,
+				51CE2BB76FF74BE199796301 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Twig;
+			productName = Twig;
+			productReference = A156AF7D2090606C0098BBDD /* Twig.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A156AF902090606D0098BBDD /* TwigTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A156AFA82090606D0098BBDD /* Build configuration list for PBXNativeTarget "TwigTests" */;
+			buildPhases = (
+				A156AF8D2090606D0098BBDD /* Sources */,
+				A156AF8E2090606D0098BBDD /* Frameworks */,
+				A156AF8F2090606D0098BBDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A156AF932090606D0098BBDD /* PBXTargetDependency */,
+			);
+			name = TwigTests;
+			productName = TwigTests;
+			productReference = A156AF912090606D0098BBDD /* TwigTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A156AF9B2090606D0098BBDD /* TwigUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A156AFAB2090606D0098BBDD /* Build configuration list for PBXNativeTarget "TwigUITests" */;
+			buildPhases = (
+				A156AF982090606D0098BBDD /* Sources */,
+				A156AF992090606D0098BBDD /* Frameworks */,
+				A156AF9A2090606D0098BBDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A156AF9E2090606D0098BBDD /* PBXTargetDependency */,
+			);
+			name = TwigUITests;
+			productName = TwigUITests;
+			productReference = A156AF9C2090606D0098BBDD /* TwigUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A156AF752090606C0098BBDD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Luka Kerr";
+				TargetAttributes = {
+					A156AF7C2090606C0098BBDD = {
+						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					A156AF902090606D0098BBDD = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = A156AF7C2090606C0098BBDD;
+					};
+					A156AF9B2090606D0098BBDD = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = A156AF7C2090606C0098BBDD;
+					};
+				};
+			};
+			buildConfigurationList = A156AF782090606C0098BBDD /* Build configuration list for PBXProject "Twig" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A156AF742090606C0098BBDD;
+			productRefGroup = A156AF7E2090606C0098BBDD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A156AF7C2090606C0098BBDD /* Twig */,
+				A156AF902090606D0098BBDD /* TwigTests */,
+				A156AF9B2090606D0098BBDD /* TwigUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A156AF7B2090606C0098BBDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A156AF872090606C0098BBDD /* Assets.xcassets in Resources */,
+				A156AF8A2090606D0098BBDD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A156AF8F2090606D0098BBDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A156AF9A2090606D0098BBDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C9E57CBD9210A5F16D7F6F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Twig-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51CE2BB76FF74BE199796301 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Twig/Pods-Twig-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Down/Down.framework",
+				"${BUILT_PRODUCTS_DIR}/Highlightr/Highlightr.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Down.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Highlightr.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Twig/Pods-Twig-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A156AF792090606C0098BBDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A156AF832090606C0098BBDD /* MarkdownViewController.swift in Sources */,
+				A148C3A020914F0F00B1165C /* SyntaxThemes.swift in Sources */,
+				A156AFAF209061D60098BBDD /* WindowController.swift in Sources */,
+				A148C3A22091522C00B1165C /* PreferencesViewController.swift in Sources */,
+				A156AFB120908ECE0098BBDD /* Theme.swift in Sources */,
+				A1682E87209097E700164D78 /* NSMutableAttributedString+Extension.swift in Sources */,
+				A13C23F8209153E1008557D0 /* PreferencesWindowController.swift in Sources */,
+				A156AF812090606C0098BBDD /* AppDelegate.swift in Sources */,
+				A156AF852090606C0098BBDD /* Document.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A156AF8D2090606D0098BBDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A156AF962090606D0098BBDD /* TwigTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A156AF982090606D0098BBDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A156AFA12090606D0098BBDD /* TwigUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A156AF932090606D0098BBDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A156AF7C2090606C0098BBDD /* Twig */;
+			targetProxy = A156AF922090606D0098BBDD /* PBXContainerItemProxy */;
+		};
+		A156AF9E2090606D0098BBDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A156AF7C2090606C0098BBDD /* Twig */;
+			targetProxy = A156AF9D2090606D0098BBDD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A156AF882090606D0098BBDD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A156AF892090606D0098BBDD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A156AFA32090606D0098BBDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A156AFA42090606D0098BBDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		A156AFA62090606D0098BBDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2BE6FC4D33EB0DD8E860B17 /* Pods-Twig.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Twig/Twig.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QY544RDL2W;
+				INFOPLIST_FILE = Twig/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.Twig;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		A156AFA72090606D0098BBDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE61D6DEDFEA5C5AF04564BE /* Pods-Twig.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Twig/Twig.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QY544RDL2W;
+				INFOPLIST_FILE = Twig/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.Twig;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		A156AFA92090606D0098BBDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TwigTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.TwigTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Twig.app/Contents/MacOS/Twig";
+			};
+			name = Debug;
+		};
+		A156AFAA2090606D0098BBDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TwigTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.TwigTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Twig.app/Contents/MacOS/Twig";
+			};
+			name = Release;
+		};
+		A156AFAC2090606D0098BBDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TwigUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.TwigUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = Twig;
+			};
+			name = Debug;
+		};
+		A156AFAD2090606D0098BBDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TwigUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.TwigUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = Twig;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A156AF782090606C0098BBDD /* Build configuration list for PBXProject "Twig" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A156AFA32090606D0098BBDD /* Debug */,
+				A156AFA42090606D0098BBDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A156AFA52090606D0098BBDD /* Build configuration list for PBXNativeTarget "Twig" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A156AFA62090606D0098BBDD /* Debug */,
+				A156AFA72090606D0098BBDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A156AFA82090606D0098BBDD /* Build configuration list for PBXNativeTarget "TwigTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A156AFA92090606D0098BBDD /* Debug */,
+				A156AFAA2090606D0098BBDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A156AFAB2090606D0098BBDD /* Build configuration list for PBXNativeTarget "TwigUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A156AFAC2090606D0098BBDD /* Debug */,
+				A156AFAD2090606D0098BBDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A156AF752090606C0098BBDD /* Project object */;
+}
