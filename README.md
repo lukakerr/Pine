@@ -17,13 +17,13 @@ It is a [document based application](https://developer.apple.com/document-based-
 
 ### To Do
 
-- Add toggleable split view with markdown preview
-- Add ability for custom theme files
-- Add more preferences for:
+- [x] Add toggleable split view with markdown preview
+- [ ] Add ability for custom theme files
+- [ ] Add more preferences for:
 	- Font style
 	- Editing style
-- Add support for LaTeX/MathJax
-- Add folder/workspace support
+- [ ] Add support for LaTeX/MathJax
+- [ ] Add folder/workspace support
 
 ### Installing
 
