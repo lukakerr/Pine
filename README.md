@@ -18,7 +18,7 @@ It is a [document based application](https://developer.apple.com/document-based-
 ### To Do
 
 - [x] Add toggleable split view with markdown preview
-- [ ] Add ability for custom theme files
+- [ ] Add ability to edit preview theme CSS
 - [ ] Add more preferences for:
 	- Font style
 	- Editing style
