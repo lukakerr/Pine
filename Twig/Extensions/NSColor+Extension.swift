@@ -23,4 +23,16 @@ extension NSColor {
     return false
   }
   
+  var hex: String {
+    if let color = self.usingColorSpace(.sRGB) {
+      let red = Int(round(color.redComponent * 0xFF))
+      let green = Int(round(color.greenComponent * 0xFF))
+      let blue = Int(round(color.blueComponent * 0xFF))
+      
+      let hexString = NSString(format: "#%02X%02X%02X", red, green, blue)
+      return hexString as String
+    }
+    return "#FFF"
+  }
+  
 }

@@ -8,19 +8,13 @@
 
 import Cocoa
 
-enum ThemeType: String {
-  case light, dark
-}
-
 class Theme {
   static let sharedInstance = Theme()
   
   private init() {}
   
-  public var id: Int = 0
-  public var type: ThemeType = ThemeType.light
-  public var appearance: NSAppearance.Name = .vibrantLight
-  public var syntax: String = "paraiso-light" {
+  // Default theme is github-gist
+  public var syntax: String = "github-gist" {
     willSet(newSyntax) {
       defaults.setValue(newSyntax, forKey: "syntax")
     }

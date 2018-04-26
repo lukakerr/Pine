@@ -817,11 +817,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4aR-r7-dV0">
+                            <wkWebView wantsLayer="YES" focusRingType="none" allowsLinkPreview="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aR-r7-dV0">
                                 <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
+                                    <wkPreferences key="preferences" javaScriptEnabled="NO"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
                         </subviews>
@@ -849,16 +849,16 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView focusRingType="none" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAD-f9-Lpr">
-                                <rect key="frame" x="10" y="10" width="480" height="580"/>
+                                <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="s9D-Lv-cP8">
-                                    <rect key="frame" x="0.0" y="0.0" width="480" height="580"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView focusRingType="none" drawsBackground="NO" importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" smartInsertDelete="YES" id="SNH-fR-eeK">
-                                            <rect key="frame" x="0.0" y="0.0" width="480" height="580"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="480" height="580"/>
+                                            <size key="minSize" width="500" height="600"/>
                                             <size key="maxSize" width="800" height="10000000"/>
                                             <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
@@ -877,16 +877,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="2Fr-Xo-YM2">
-                                    <rect key="frame" x="464" y="0.0" width="16" height="580"/>
+                                    <rect key="frame" x="484" y="0.0" width="16" height="600"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="LAD-f9-Lpr" secondAttribute="bottom" constant="10" id="7AS-4z-opP"/>
-                            <constraint firstItem="LAD-f9-Lpr" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="10" id="USI-XC-Cbs"/>
-                            <constraint firstItem="LAD-f9-Lpr" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" constant="10" id="jYv-Zm-LJi"/>
-                            <constraint firstAttribute="trailing" secondItem="LAD-f9-Lpr" secondAttribute="trailing" constant="10" id="qQ6-Ce-I2F"/>
+                            <constraint firstItem="LAD-f9-Lpr" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" id="1hl-zR-pdl"/>
+                            <constraint firstAttribute="bottom" secondItem="LAD-f9-Lpr" secondAttribute="bottom" id="91h-re-9b3"/>
+                            <constraint firstAttribute="trailing" secondItem="LAD-f9-Lpr" secondAttribute="trailing" id="B2C-hK-WSB"/>
+                            <constraint firstItem="LAD-f9-Lpr" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" id="QK6-F3-40T"/>
                         </constraints>
                     </view>
                     <connections>

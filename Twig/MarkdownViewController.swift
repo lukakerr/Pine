@@ -16,7 +16,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
 
   @IBOutlet var markdownTextView: NSTextView!
   
-  public let highlightr = Highlightr()!
+  private let highlightr = Highlightr()!
   
   // Cocoa binding for text inside markdownTextView
   @objc var attributedMarkdownTextInput: NSAttributedString {
@@ -43,6 +43,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
     markdownTextView.delegate = self
     markdownTextView.font = DEFAULT_FONT
     markdownTextView.insertionPointColor = .gray
+    markdownTextView.textContainerInset = NSSize(width: 10.0, height: 10.0)
   }
   
   override func viewDidAppear() {
@@ -84,10 +85,9 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
     if let splitViewController = self.parent as? NSSplitViewController,
       let previewView = splitViewController.splitViewItems.last {
       let previewViewController = previewView.viewController as? PreviewViewController
-      let down = Down(markdownString: string)
-      let html = try? down.toHTML()
-      if let html = html {
-        previewViewController?.webPreview.loadHTMLString(html, baseURL: nil)
+      if let parsed = try? Down(markdownString: string).toHTML() {
+        html.contents = parsed
+        previewViewController?.webPreview.loadHTMLString(html.getHTML(), baseURL: nil)
       }
     }
   }

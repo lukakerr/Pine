@@ -14,9 +14,6 @@ class PreferencesWindowController: NSWindowController, NSWindowDelegate {
     super.windowDidLoad()
     
     if let window = window {
-      window.appearance = NSAppearance(named: theme.appearance)
-      window.isOpaque = false
-      window.invalidateShadow()
       window.center()
       window.makeKeyAndOrderFront(nil)
     }
