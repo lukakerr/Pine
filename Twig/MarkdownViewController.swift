@@ -28,6 +28,39 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
       generatePreview(newValue.string)
     }
   }
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    // Setup notification observer for theme change
+    NotificationCenter.default.addObserver(
+      self,
+      selector: #selector(self.themeChanged),
+      name: NSNotification.Name(rawValue: "changeThemeNotification"),
+      object: nil
+    )
+    
+    markdownTextView.delegate = self
+    markdownTextView.font = DEFAULT_FONT
+    markdownTextView.insertionPointColor = .gray
+  }
+  
+  override func viewDidAppear() {
+    highlightr.setTheme(to: theme.syntax)
+    setBackgroundColor()
+  }
+  
+  override var acceptsFirstResponder: Bool {
+    return true
+  }
+  
+  @IBAction func togglePreview(sender: NSMenuItem) {
+    if let splitViewController = self.parent as? NSSplitViewController,
+      let previewViewController = splitViewController.splitViewItems.last {
+      previewViewController.collapseBehavior = .preferResizingSplitViewWithFixedSiblings
+      previewViewController.animator().isCollapsed = !previewViewController.isCollapsed
+    }
+  }
   
   // Syntax highlight the given markdown string and insert into text view
   private func syntaxHighlight(_ string: String) {
@@ -57,27 +90,6 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
         previewViewController?.webPreview.loadHTMLString(html, baseURL: nil)
       }
     }
-  }
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    // Setup notification observer for theme change
-    NotificationCenter.default.addObserver(
-      self,
-      selector: #selector(self.themeChanged),
-      name: NSNotification.Name(rawValue: "changeThemeNotification"),
-      object: nil
-    )
-    
-    markdownTextView.delegate = self
-    markdownTextView.font = DEFAULT_FONT
-    markdownTextView.insertionPointColor = .gray
-  }
-  
-  override func viewDidAppear() {
-    highlightr.setTheme(to: theme.syntax)
-    setBackgroundColor()
   }
   
   // On theme change, update window appearance and reparse with possible new syntax

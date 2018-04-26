@@ -619,6 +619,11 @@
                                                 <action selector="toggleToolbarShown:" target="Ady-hI-5gd" id="BXY-wc-z0C"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="Toggle Preview" keyEquivalent="\" id="rnJ-91-chb">
+                                            <connections>
+                                                <action selector="togglePreviewWithSender:" target="Ady-hI-5gd" id="98T-ho-mLk"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem title="Customize Toolbar…" id="1UK-8n-QPP">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
