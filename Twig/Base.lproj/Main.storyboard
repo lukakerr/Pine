@@ -818,18 +818,18 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <wkWebView wantsLayer="YES" focusRingType="none" allowsLinkPreview="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aR-r7-dV0">
-                                <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
+                                <rect key="frame" x="0.0" y="5" width="500" height="595"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences" javaScriptEnabled="NO"/>
+                                    <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="4aR-r7-dV0" secondAttribute="trailing" id="0gU-Ox-hKU"/>
-                            <constraint firstItem="4aR-r7-dV0" firstAttribute="top" secondItem="wce-QW-CaH" secondAttribute="top" id="GgM-lu-29C"/>
-                            <constraint firstItem="4aR-r7-dV0" firstAttribute="leading" secondItem="wce-QW-CaH" secondAttribute="leading" id="JF0-vl-ZDJ"/>
-                            <constraint firstAttribute="bottom" secondItem="4aR-r7-dV0" secondAttribute="bottom" id="eEl-F4-Rr5"/>
+                            <constraint firstItem="4aR-r7-dV0" firstAttribute="leading" secondItem="wce-QW-CaH" secondAttribute="leading" id="3Pa-FN-YRt"/>
+                            <constraint firstAttribute="trailing" secondItem="4aR-r7-dV0" secondAttribute="trailing" id="KLP-sb-Z1j"/>
+                            <constraint firstItem="4aR-r7-dV0" firstAttribute="top" secondItem="wce-QW-CaH" secondAttribute="top" id="jgj-8V-vNJ"/>
+                            <constraint firstAttribute="bottom" secondItem="4aR-r7-dV0" secondAttribute="bottom" constant="5" id="om0-s3-XRS"/>
                         </constraints>
                     </view>
                     <connections>

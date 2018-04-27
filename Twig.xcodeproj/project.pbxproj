@@ -25,6 +25,8 @@
 		A1682E87209097E700164D78 /* NSMutableAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1682E86209097E700164D78 /* NSMutableAttributedString+Extension.swift */; };
 		A182096E20919F6000016AD5 /* HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = A182096D20919F6000016AD5 /* HTML.swift */; };
 		A189EA742091E4F300DB0559 /* Markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = A189EA732091E4E300DB0559 /* Markdown.css */; };
+		A1FD269A20932CDD004D1C95 /* highlight-js in Resources */ = {isa = PBXBuildFile; fileRef = A1FD269820932CDC004D1C95 /* highlight-js */; };
+		A1FD269B20932CDD004D1C95 /* credits in Resources */ = {isa = PBXBuildFile; fileRef = A1FD269920932CDD004D1C95 /* credits */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		A1682E86209097E700164D78 /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extension.swift"; sourceTree = "<group>"; };
 		A182096D20919F6000016AD5 /* HTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTML.swift; sourceTree = "<group>"; };
 		A189EA732091E4E300DB0559 /* Markdown.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Markdown.css; sourceTree = "<group>"; };
+		A1FD269820932CDC004D1C95 /* highlight-js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "highlight-js"; sourceTree = "<group>"; };
+		A1FD269920932CDD004D1C95 /* credits */ = {isa = PBXFileReference; lastKnownFileType = folder; path = credits; sourceTree = "<group>"; };
 		B2BE6FC4D33EB0DD8E860B17 /* Pods-Twig.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twig.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Twig/Pods-Twig.debug.xcconfig"; sourceTree = "<group>"; };
 		B66B7DAE689A6827E658233B /* Pods_Twig.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twig.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE61D6DEDFEA5C5AF04564BE /* Pods-Twig.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twig.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twig/Pods-Twig.release.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +179,8 @@
 		A189EA722091E4E300DB0559 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A1FD269920932CDD004D1C95 /* credits */,
+				A1FD269820932CDC004D1C95 /* highlight-js */,
 				A189EA732091E4E300DB0559 /* Markdown.css */,
 			);
 			path = Resources;
@@ -310,6 +316,8 @@
 			files = (
 				A189EA742091E4F300DB0559 /* Markdown.css in Resources */,
 				A156AF872090606C0098BBDD /* Assets.xcassets in Resources */,
+				A1FD269A20932CDD004D1C95 /* highlight-js in Resources */,
+				A1FD269B20932CDD004D1C95 /* credits in Resources */,
 				A156AF8A2090606D0098BBDD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

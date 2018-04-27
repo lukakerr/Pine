@@ -49,6 +49,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   override func viewDidAppear() {
     highlightr.setTheme(to: theme.syntax)
     setBackgroundColor()
+    generatePreview(markdownTextView.string)
   }
   
   override var acceptsFirstResponder: Bool {
@@ -96,6 +97,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   @objc private func themeChanged(notification: Notification?) {
     syntaxHighlight(markdownTextView.string)
     setBackgroundColor()
+    generatePreview(markdownTextView.string)
   }
   
   private func setBackgroundColor() {
@@ -103,9 +105,15 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
       return
     }
     
+    theme.background = color.hex
+    
     if color.isDark {
+      theme.code = color.lighter.hex
+      theme.text = "#FFF"
       self.view.window?.appearance = NSAppearance(named: .vibrantDark)
     } else {
+      theme.code = color.darker.hex
+      theme.text = "#000"
       self.view.window?.appearance = NSAppearance(named: .vibrantLight)
     }
     self.view.window?.backgroundColor = color

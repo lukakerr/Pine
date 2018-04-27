@@ -19,6 +19,9 @@ class Theme {
       defaults.setValue(newSyntax, forKey: "syntax")
     }
   }
+  public var background: String = "#FFF"
+  public var code: String = "#FFF"
+  public var text: String = "#FFF"
   
 }
 

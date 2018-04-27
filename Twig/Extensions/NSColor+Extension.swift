@@ -35,4 +35,24 @@ extension NSColor {
     return "#FFF"
   }
   
+  var lighter: NSColor {
+    if let color = self.usingColorSpace(.sRGB) {
+      var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
+      
+      color.getRed(&r, green: &g, blue: &b, alpha: &a)
+      return NSColor(red: max(r + 0.1, 0.0), green: max(g + 0.1, 0.0), blue: max(b + 0.1, 0.0), alpha: a)
+    }
+    return self
+  }
+  
+  var darker: NSColor {
+    if let color = self.usingColorSpace(.sRGB) {
+      var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
+      
+      color.getRed(&r, green: &g, blue: &b, alpha: &a)
+      return NSColor(red: max(r - 0.1, 0.0), green: max(g - 0.1, 0.0), blue: max(b - 0.1, 0.0), alpha: a)
+    }
+    return self
+  }
+  
 }

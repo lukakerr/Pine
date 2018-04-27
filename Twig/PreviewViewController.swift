@@ -23,9 +23,9 @@ class PreviewViewController: NSViewController, WKNavigationDelegate {
   public func webView(_ webView: WKWebView,
                       decidePolicyFor navigationAction: WKNavigationAction,
                       decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-    
+
     let url = navigationAction.request.url
-    
+
     if String(describing: url).contains("http") {
       decisionHandler(.cancel)
       if let url = url {

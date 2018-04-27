@@ -1,5 +1,5 @@
 # Twig
-
+ 
 <p align="center">
   <img src="./Twig/Assets.xcassets/AppIcon.appiconset/twig-512.png" width="200">
 </p>
@@ -42,9 +42,9 @@ $ open Twig.xcworkspace
 ### Screenshots
 
 <p align="center">
-  <img src="https://i.imgur.com/sKBp65k.png">
+  <img src="https://i.imgur.com/IpFI0RU.png">
 </p>
 
 <p align="center">
-  <img src="https://i.imgur.com/mtE09Yo.png">
+  <img src="https://i.imgur.com/qxB9OLn.png">
 </p>
