@@ -18,8 +18,7 @@ class PreviewViewController: NSViewController, WKNavigationDelegate {
     super.viewDidLoad()
     webPreview.navigationDelegate = self
     webPreview.setValue(false, forKey: "drawsBackground")
-    webPreview.enclosingScrollView?.wantsLayer = true
-    webPreview.configuration.preferences.setValue(true, forKey: "developerExtrasEnabled")
+//    webPreview.configuration.preferences.setValue(true, forKey: "developerExtrasEnabled")
   }
   
   public func captureScroll(completion: @escaping () -> Void) {
