@@ -17,6 +17,8 @@ class PreviewViewController: NSViewController, WKNavigationDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     webPreview.navigationDelegate = self
+    webPreview.setValue(false, forKey: "drawsBackground")
+//    webPreview.configuration.preferences.setValue(true, forKey: "developerExtrasEnabled")
   }
   
   // Open web links in browser, not webview

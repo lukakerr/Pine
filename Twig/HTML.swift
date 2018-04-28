@@ -12,15 +12,13 @@ class HTML {
   
   static let sharedInstance = HTML()
   
-  // FIXME: fix this class
-  // How this class should work:
-  //  - copy resources to application support directory
-  //  - get file path to css and js resources and insert them as the src/href into the HTML
+  // Currently WKWebView doesn't allow local resources to be loaded (css, js)
+  // via file:/// so we have to read from the file and insert it into the html inline
   
   private init() {
     self.copyFiles()
     self.loadCSS()
-//    self.loadJS()
+    self.loadJS()
   }
   
   var contents: String = ""
@@ -37,14 +35,13 @@ class HTML {
       <style>
       \(self.css)
       \(self.baseCSS)
-      pre code, p code {background: \(theme.code)!important}
-      body {background: \(theme.background)}
+      pre code, p code {background: \(theme.code) !important}
       p, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, table {
       color: \(theme.text);
       }
       </style>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/\(theme.syntax).min.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js">
+      <script>
+      \(self.js)
       </script>
       <script>hljs.initHighlightingOnLoad();</script>
       </head>
@@ -78,11 +75,11 @@ class HTML {
     let baseCSSFile = folder.appendingPathComponent("Markdown.css")
     guard let baseCSSResult = try? String(contentsOf: baseCSSFile, encoding: .utf8) else { return }
     
-//    guard let bundlePath = Bundle.main.resourcePath else { return }
-//    let cssFolder = NSURL(fileURLWithPath: (String(describing: bundlePath) + "/highlight-js/styles/\(theme.syntax).css"))
-//    guard let cssResult = try? String(contentsOf: cssFolder as URL, encoding: .utf8) else { return }
+    guard let bundlePath = Bundle.main.resourcePath else { return }
+    let cssFolder = NSURL(fileURLWithPath: (String(describing: bundlePath) + "/highlight-js/styles/\(theme.syntax).css"))
+    guard let cssResult = try? String(contentsOf: cssFolder as URL, encoding: .utf8) else { return }
 
-//    self.css = cssResult
+    self.css = cssResult
     self.baseCSS = baseCSSResult
   }
   

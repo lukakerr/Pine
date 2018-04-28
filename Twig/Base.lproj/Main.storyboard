@@ -813,7 +813,7 @@
         <scene sceneID="ZGZ-HR-qRb">
             <objects>
                 <viewController id="xlE-2V-boh" customClass="PreviewViewController" customModule="Twig" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="wce-QW-CaH">
+                    <view key="view" focusRingType="none" id="wce-QW-CaH">
                         <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
