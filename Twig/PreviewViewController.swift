@@ -22,7 +22,7 @@ class PreviewViewController: NSViewController, WKNavigationDelegate {
   }
   
   public func captureScroll(completion: @escaping () -> Void) {
-    webPreview.evaluateJavaScript("document.documentElement.scrollTop || document.body.scrollTop;") { (response, err) in
+    webPreview.evaluateJavaScript("window.scrollY;") { (response, err) in
       if let pos = response as? Int {
         html.y = pos
         completion()
