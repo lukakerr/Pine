@@ -42,6 +42,7 @@ To build and run, clone this repository, open in Xcode and hit "Run".
 ```bash
 $ git clone git@github.com:lukakerr/twig.git
 $ cd twig
+$ pod install
 $ open Twig.xcworkspace
 ```
 
