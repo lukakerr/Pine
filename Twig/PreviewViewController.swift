@@ -18,7 +18,17 @@ class PreviewViewController: NSViewController, WKNavigationDelegate {
     super.viewDidLoad()
     webPreview.navigationDelegate = self
     webPreview.setValue(false, forKey: "drawsBackground")
-//    webPreview.configuration.preferences.setValue(true, forKey: "developerExtrasEnabled")
+    webPreview.enclosingScrollView?.wantsLayer = true
+    webPreview.configuration.preferences.setValue(true, forKey: "developerExtrasEnabled")
+  }
+  
+  public func captureScroll(completion: @escaping () -> Void) {
+    webPreview.evaluateJavaScript("document.documentElement.scrollTop || document.body.scrollTop;") { (response, err) in
+      if let pos = response as? Int {
+        html.y = pos
+        completion()
+      }
+    }
   }
   
   // Open web links in browser, not webview

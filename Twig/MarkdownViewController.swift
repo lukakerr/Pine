@@ -88,7 +88,9 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
       let previewViewController = previewView.viewController as? PreviewViewController
       if let parsed = try? Down(markdownString: string).toHTML() {
         html.contents = parsed
-        previewViewController?.webPreview.loadHTMLString(html.getHTML(), baseURL: nil)
+        previewViewController?.captureScroll() {
+          previewViewController?.webPreview.loadHTMLString(html.getHTML(), baseURL: nil)
+        }
       }
     }
   }

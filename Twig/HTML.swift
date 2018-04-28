@@ -25,6 +25,7 @@ class HTML {
   var baseCSS: String = ""
   var css: String = ""
   var js: String = ""
+  var y: Int = 0
   
   func getHTML() -> String {
     return(
@@ -47,6 +48,9 @@ class HTML {
       </head>
       <body>
       \(self.contents)
+      <script>
+      window.scrollTo(0, \(y));
+      </script>
       </body>
       </html>
       """
