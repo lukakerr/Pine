@@ -45,6 +45,11 @@ class HTML {
       \(self.js)
       </script>
       <script>hljs.initHighlightingOnLoad();</script>
+      <script type="text/x-mathjax-config">
+      \(self.mathJaxConfig())
+      </script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-AMS_SVG" async>
+      </script>
       </head>
       <body>
       \(self.contents)
@@ -54,6 +59,21 @@ class HTML {
       </body>
       </html>
       """
+    )
+  }
+  
+  private func mathJaxConfig() -> String {
+    return (
+    """
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      messageStyle: "none",
+    });
+    """
     )
   }
   
