@@ -17,6 +17,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   @IBOutlet var markdownTextView: NSTextView!
   
   private let highlightr = Highlightr()!
+  private var debouncedGeneratePreview: Debouncer!
   
   // Cocoa binding for text inside markdownTextView
   @objc var attributedMarkdownTextInput: NSAttributedString {
@@ -25,7 +26,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
     }
     set {
       syntaxHighlight(newValue.string)
-      generatePreview(newValue.string)
+      debouncedGeneratePreview.call()
     }
   }
 
@@ -39,6 +40,10 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
       name: NSNotification.Name(rawValue: "changeThemeNotification"),
       object: nil
     )
+    
+    debouncedGeneratePreview = Debouncer(delay: 0.2) {
+      self.generatePreview(self.markdownTextView.string)
+    }
     
     markdownTextView.delegate = self
     markdownTextView.font = DEFAULT_FONT
@@ -66,30 +71,40 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   
   // Syntax highlight the given markdown string and insert into text view
   private func syntaxHighlight(_ string: String) {
-    highlightr.setTheme(to: theme.syntax)
-    let highlightedCode = highlightr.highlight(string, as: "markdown")
-    let cursorPosition = markdownTextView.selectedRanges[0].rangeValue.location
-    
-    if let syntaxHighlighted = highlightedCode {
-      let code = NSMutableAttributedString(attributedString: syntaxHighlighted)
-      if let font = DEFAULT_FONT {
-        code.withFont(font)
+    DispatchQueue.global(qos: .userInitiated).async {
+      self.highlightr.setTheme(to: theme.syntax)
+      let highlightedCode = self.highlightr.highlight(string, as: "markdown")
+      
+      if let syntaxHighlighted = highlightedCode {
+        let code = NSMutableAttributedString(attributedString: syntaxHighlighted)
+        if let font = DEFAULT_FONT {
+          code.withFont(font)
+          
+          DispatchQueue.main.async {
+            let cursorPosition = self.markdownTextView.selectedRanges[0].rangeValue.location
+            self.markdownTextView.textStorage?.beginEditing()
+            self.markdownTextView.textStorage?.setAttributedString(code)
+            self.markdownTextView.textStorage?.endEditing()
+            self.markdownTextView.setSelectedRange(NSMakeRange(cursorPosition, 0))
+          }
+        }
       }
-      markdownTextView.textStorage?.beginEditing()
-      markdownTextView.textStorage?.setAttributedString(code)
-      markdownTextView.textStorage?.endEditing()
     }
-    markdownTextView.setSelectedRange(NSMakeRange(cursorPosition, 0))
   }
   
   private func generatePreview(_ string: String) {
-    if let splitViewController = self.parent as? NSSplitViewController,
-      let previewView = splitViewController.splitViewItems.last {
-      let previewViewController = previewView.viewController as? PreviewViewController
-      if let parsed = try? Down(markdownString: string).toHTML() {
-        html.contents = parsed
-        previewViewController?.captureScroll() {
-          previewViewController?.webPreview.loadHTMLString(html.getHTML(), baseURL: nil)
+    DispatchQueue.global(qos: .userInitiated).async {
+      if let splitViewController = self.parent as? NSSplitViewController,
+        let previewView = splitViewController.splitViewItems.last {
+        let previewViewController = previewView.viewController as? PreviewViewController
+        
+        if let parsed = try? Down(markdownString: string).toHTML() {
+          html.contents = parsed
+          DispatchQueue.main.async {
+            previewViewController?.captureScroll() {
+              previewViewController?.webPreview.loadHTMLString(html.getHTML(), baseURL: nil)
+            }
+          }
         }
       }
     }
