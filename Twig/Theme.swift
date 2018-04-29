@@ -11,7 +11,12 @@ import Cocoa
 class Theme {
   static let sharedInstance = Theme()
   
-  private init() {}
+  private init() {
+    // Restore default syntax theme
+    if let defaultSyntax = defaults.string(forKey: "syntax") {
+      self.syntax = defaultSyntax
+    }
+  }
   
   // Default theme is github-gist
   public var syntax: String = "github-gist" {

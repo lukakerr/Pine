@@ -11,6 +11,9 @@ import Cocoa
 class PreferencesViewController: NSViewController {
   
   @IBOutlet weak var syntaxDropdown: NSPopUpButton!
+  @IBOutlet weak var showPreviewOnStartup: NSButton!
+  @IBOutlet weak var openNewDocumentOnStartup: NSButton!
+  @IBOutlet weak var autosaveDocument: NSButton!
   
   let wc = WindowController()
   
@@ -24,11 +27,31 @@ class PreferencesViewController: NSViewController {
     }
     
     syntaxDropdown.selectItem(withTitle: theme.syntax)
+    
+    showPreviewOnStartup.state = getState(preferences.showPreviewOnStartup)
+    openNewDocumentOnStartup.state = getState(preferences.openNewDocumentOnStartup)
+    autosaveDocument.state = getState(preferences.autosaveDocument)
+  }
+  
+  private func getState(_ state: Bool) -> NSControl.StateValue {
+    return state ? .on : .off
   }
   
   @IBAction func syntaxChanged(_ sender: NSPopUpButton) {
     theme.syntax = sender.title
     postNotification()
+  }
+  
+  @IBAction func showPreviewOnStartupChanged(_ sender: NSButton) {
+    preferences.showPreviewOnStartup = sender.state.rawValue.bool
+  }
+  
+  @IBAction func openNewDocumentOnStartupChanged(_ sender: NSButton) {
+    preferences.openNewDocumentOnStartup = sender.state.rawValue.bool
+  }
+  
+  @IBAction func autosaveDocumentChanged(_ sender: NSButton) {
+    preferences.autosaveDocument = sender.state.rawValue.bool
   }
   
   private func postNotification() {

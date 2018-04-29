@@ -21,7 +21,7 @@ class Document: NSDocument {
   
   // Autosaving
   override class var autosavesInPlace: Bool {
-    return true
+    return preferences.autosaveDocument
   }
 
   // Handles changes from another application

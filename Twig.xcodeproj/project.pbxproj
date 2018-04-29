@@ -26,6 +26,8 @@
 		A182096E20919F6000016AD5 /* HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = A182096D20919F6000016AD5 /* HTML.swift */; };
 		A189EA742091E4F300DB0559 /* Markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = A189EA732091E4E300DB0559 /* Markdown.css */; };
 		A18A0406209585C8006F6B99 /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A0405209585C8006F6B99 /* Debouncer.swift */; };
+		A18A040820958C8B006F6B99 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A040720958C8B006F6B99 /* Preferences.swift */; };
+		A18A040A20958EB6006F6B99 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A040920958EB6006F6B99 /* Int+Extension.swift */; };
 		A1FD269A20932CDD004D1C95 /* highlight-js in Resources */ = {isa = PBXBuildFile; fileRef = A1FD269820932CDC004D1C95 /* highlight-js */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,8 @@
 		A182096D20919F6000016AD5 /* HTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTML.swift; sourceTree = "<group>"; };
 		A189EA732091E4E300DB0559 /* Markdown.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Markdown.css; sourceTree = "<group>"; };
 		A18A0405209585C8006F6B99 /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
+		A18A040720958C8B006F6B99 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		A18A040920958EB6006F6B99 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		A1FD269820932CDC004D1C95 /* highlight-js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "highlight-js"; sourceTree = "<group>"; };
 		B2BE6FC4D33EB0DD8E860B17 /* Pods-Twig.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twig.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Twig/Pods-Twig.debug.xcconfig"; sourceTree = "<group>"; };
 		B66B7DAE689A6827E658233B /* Pods_Twig.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twig.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +143,7 @@
 				A156AF8B2090606D0098BBDD /* Info.plist */,
 				A156AF882090606D0098BBDD /* Main.storyboard */,
 				A156AF822090606C0098BBDD /* MarkdownViewController.swift */,
+				A18A040720958C8B006F6B99 /* Preferences.swift */,
 				A148C3A12091522C00B1165C /* PreferencesViewController.swift */,
 				A13C23F7209153E1008557D0 /* PreferencesWindowController.swift */,
 				A13C23FB20919672008557D0 /* PreviewViewController.swift */,
@@ -173,6 +178,7 @@
 			children = (
 				A1682E86209097E700164D78 /* NSMutableAttributedString+Extension.swift */,
 				A13C23F9209167F0008557D0 /* NSColor+Extension.swift */,
+				A18A040920958EB6006F6B99 /* Int+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -383,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A18A040A20958EB6006F6B99 /* Int+Extension.swift in Sources */,
 				A156AF832090606C0098BBDD /* MarkdownViewController.swift in Sources */,
 				A148C3A020914F0F00B1165C /* SyntaxThemes.swift in Sources */,
 				A156AFAF209061D60098BBDD /* WindowController.swift in Sources */,
@@ -391,6 +398,7 @@
 				A13C23FA209167F0008557D0 /* NSColor+Extension.swift in Sources */,
 				A182096E20919F6000016AD5 /* HTML.swift in Sources */,
 				A156AFB120908ECE0098BBDD /* Theme.swift in Sources */,
+				A18A040820958C8B006F6B99 /* Preferences.swift in Sources */,
 				A1682E87209097E700164D78 /* NSMutableAttributedString+Extension.swift in Sources */,
 				A13C23F8209153E1008557D0 /* PreferencesWindowController.swift in Sources */,
 				A18A0406209585C8006F6B99 /* Debouncer.swift in Sources */,

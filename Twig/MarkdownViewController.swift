@@ -45,6 +45,11 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
       self.generatePreview(self.markdownTextView.string)
     }
     
+    if let splitViewController = self.parent as? NSSplitViewController,
+      let previewViewController = splitViewController.splitViewItems.last {
+      previewViewController.isCollapsed = !preferences.showPreviewOnStartup
+    }
+    
     markdownTextView.delegate = self
     markdownTextView.font = DEFAULT_FONT
     markdownTextView.insertionPointColor = .gray
@@ -71,8 +76,9 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   
   // Syntax highlight the given markdown string and insert into text view
   private func syntaxHighlight(_ string: String) {
+    self.highlightr.setTheme(to: theme.syntax)
+    
     DispatchQueue.global(qos: .userInitiated).async {
-      self.highlightr.setTheme(to: theme.syntax)
       let highlightedCode = self.highlightr.highlight(string, as: "markdown")
       
       if let syntaxHighlighted = highlightedCode {
@@ -97,6 +103,10 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
       if let splitViewController = self.parent as? NSSplitViewController,
         let previewView = splitViewController.splitViewItems.last {
         let previewViewController = previewView.viewController as? PreviewViewController
+        
+        if previewView.isCollapsed {
+          return
+        }
         
         if let parsed = try? Down(markdownString: string).toHTML() {
           html.contents = parsed

@@ -14,6 +14,8 @@ class HTML {
   
   // Currently WKWebView doesn't allow local resources to be loaded (css, js)
   // via file:/// so we have to read from the file and insert it into the html inline
+  // This file IO only happens when the singleton is instantiated, but the WKWebView
+  // has to re-parse the entire HTML returned from getHTML()
   
   private init() {
     self.copyFiles()
@@ -33,24 +35,24 @@ class HTML {
       <!DOCTYPE html>
       <html>
       <head>
-      <style>
-      \(self.css)
-      \(self.baseCSS)
-      pre code, p code {background: \(theme.code) !important}
-      p, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, table {
-      color: \(theme.text);
-      }
-      </style>
-      <script>
-      \(self.js)
-      </script>
-      <script>hljs.initHighlightingOnLoad();</script>
+        <style>
+          \(self.css)
+          \(self.baseCSS)
+          pre code, p code { background: \(theme.code) !important }
+          p, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, table {
+            color: \(theme.text);
+          }
+        </style>
+        <script>
+          \(self.js)
+        </script>
+        <script>hljs.initHighlightingOnLoad();</script>
       </head>
       <body>
-      \(self.contents)
-      <script>
-      window.scrollTo(0, \(y));
-      </script>
+        \(self.contents)
+        <script>
+          window.scrollTo(0, \(y));
+        </script>
       </body>
       </html>
       """
