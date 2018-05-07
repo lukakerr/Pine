@@ -4,7 +4,7 @@
   <img src="./Twig/Assets.xcassets/AppIcon.appiconset/twig-512.png" width="200">
 </p>
 
-Twig is modern macOS markdown editor. It's currently a work in progress.
+Twig is lightweight macOS markdown editor. It's currently a work in progress.
 
 It is a [document based application](https://developer.apple.com/document-based-apps), and aims to follow Apple's [Human Interface Guidelines](https://developer.apple.com/macos/human-interface-guidelines)
 
