@@ -14,6 +14,7 @@ class PreferencesViewController: NSViewController {
   @IBOutlet weak var showPreviewOnStartup: NSButton!
   @IBOutlet weak var openNewDocumentOnStartup: NSButton!
   @IBOutlet weak var autosaveDocument: NSButton!
+  @IBOutlet weak var transparentEditingView: NSButton!
   
   let wc = WindowController()
   
@@ -31,6 +32,7 @@ class PreferencesViewController: NSViewController {
     showPreviewOnStartup.state = getState(preferences.showPreviewOnStartup)
     openNewDocumentOnStartup.state = getState(preferences.openNewDocumentOnStartup)
     autosaveDocument.state = getState(preferences.autosaveDocument)
+    transparentEditingView.state = getState(preferences.transparentEditingView)
   }
   
   private func getState(_ state: Bool) -> NSControl.StateValue {
@@ -54,9 +56,14 @@ class PreferencesViewController: NSViewController {
     preferences.autosaveDocument = sender.state.rawValue.bool
   }
   
+  @IBAction func transparentEditingViewChanged(_ sender: NSButton) {
+    preferences.transparentEditingView = sender.state.rawValue.bool
+    postNotification()
+  }
+  
   private func postNotification() {
     NotificationCenter.default.post(
-      name: NSNotification.Name(rawValue: "changeThemeNotification"),
+      name: NSNotification.Name(rawValue: "preferencesChanged"),
       object: nil
     )
   }

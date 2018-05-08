@@ -15,6 +15,7 @@ let DEFAULT_FONT = NSFont(name: "Courier", size: CGFloat(18))
 class MarkdownViewController: NSViewController, NSTextViewDelegate {
 
   @IBOutlet var markdownTextView: NSTextView!
+  @IBOutlet weak var transparentView: NSVisualEffectView!
   
   private let highlightr = Highlightr()!
   private var debouncedGeneratePreview: Debouncer!
@@ -37,7 +38,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
     NotificationCenter.default.addObserver(
       self,
       selector: #selector(self.themeChanged),
-      name: NSNotification.Name(rawValue: "changeThemeNotification"),
+      name: NSNotification.Name(rawValue: "preferencesChanged"),
       object: nil
     )
     
@@ -121,7 +122,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   }
   
   // On theme change, update window appearance and reparse with possible new syntax
-  @objc private func themeChanged(notification: Notification?) {
+  @objc private func themeChanged() {
     syntaxHighlight(markdownTextView.string)
     setBackgroundColor()
     generatePreview(markdownTextView.string)
@@ -135,10 +136,12 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
     theme.background = color.hex
     
     if color.isDark {
+      transparentView.material = .dark
       theme.code = color.lighter.hex
       theme.text = "#FFF"
       self.view.window?.appearance = NSAppearance(named: .vibrantDark)
     } else {
+      transparentView.material = .light
       theme.code = color.darker.hex
       theme.text = "#000"
       self.view.window?.appearance = NSAppearance(named: .vibrantLight)

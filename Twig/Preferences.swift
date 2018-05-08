@@ -11,7 +11,7 @@ import Cocoa
 class Preferences {
   static let sharedInstance = Preferences()
   
-  private init() {
+  private init() {    
     if defaults.object(forKey: "showPreviewOnStartup") != nil {
       self.showPreviewOnStartup = defaults.bool(forKey: "showPreviewOnStartup")
     }
@@ -22,6 +22,10 @@ class Preferences {
     
     if defaults.object(forKey: "autosaveDocument") != nil {
       self.autosaveDocument = defaults.bool(forKey: "autosaveDocument")
+    }
+    
+    if defaults.object(forKey: "transparentEditingView") != nil {
+      self.transparentEditingView = defaults.bool(forKey: "transparentEditingView")
     }
   }
   
@@ -40,6 +44,14 @@ class Preferences {
   public var autosaveDocument = true {
     willSet(newVal) {
       setDefaults(key: "autosaveDocument", newVal)
+    }
+  }
+  
+  public var transparentEditingView = false {
+    willSet(newVal) {
+      // transparentEditingView looks best without preview showing
+      self.showPreviewOnStartup = !newVal
+      setDefaults(key: "transparentEditingView", newVal)
     }
   }
   
