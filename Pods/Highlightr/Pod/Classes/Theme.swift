@@ -112,7 +112,8 @@ open class Theme {
         if(italicCodeFont == nil || italicCodeFont.familyName != font.familyName)
         {
             italicCodeFont = RPFont(descriptor: obliqueDescriptor, size: font.pointSize)
-        } else if(italicCodeFont == nil )
+        }
+        if(italicCodeFont == nil)
         {
             italicCodeFont = font
         }
@@ -134,11 +135,11 @@ open class Theme {
         
         if styleList.count > 0
         {
-            var attrs = [NSAttributedStringKey: Any]()
-            attrs[.font] = codeFont
+            var attrs = [NSAttributedString.Key: Any]()
+            attrs[NSAttributedString.Key.font] = codeFont
             for style in styleList
             {
-                if let themeStyle = themeDict[style] as? [NSAttributedStringKey: Any]
+                if let themeStyle = themeDict[style] as? [NSAttributedString.Key: Any]
                 {
                     for (attrName, attrValue) in themeStyle
                     {
@@ -151,7 +152,7 @@ open class Theme {
         }
         else
         {
-            returnString = NSAttributedString(string: string, attributes:[NSAttributedStringKey.font:codeFont] )
+            returnString = NSAttributedString(string: string, attributes:[NSAttributedString.Key.font:codeFont] )
         }
         
         return returnString
@@ -235,7 +236,7 @@ open class Theme {
         var returnTheme = RPThemeDict()
         for (className, props) in theme
         {
-            var keyProps = [NSAttributedStringKey: AnyObject]()
+            var keyProps = [NSAttributedString.Key: AnyObject]()
             for (key, prop) in props
             {
                 switch key
@@ -278,19 +279,19 @@ open class Theme {
         }
     }
     
-    private func attributeForCSSKey(_ key: String) -> NSAttributedStringKey
+    private func attributeForCSSKey(_ key: String) -> NSAttributedString.Key
     {
         switch key {
         case "color":
-            return .foregroundColor
+            return NSAttributedString.Key.foregroundColor
         case "font-weight":
-            return .font
+            return NSAttributedString.Key.font
         case "font-style":
-            return .font
+            return NSAttributedString.Key.font
         case "background-color":
-            return .backgroundColor
+            return NSAttributedString.Key.backgroundColor
         default:
-            return .font
+            return NSAttributedString.Key.font
         }
     }
     

@@ -8,6 +8,10 @@
 
 import Foundation
 
+#if os(OSX)
+    import AppKit
+#endif
+
 /// Highlighting Delegate
 @objc public protocol HighlightDelegate
 {
@@ -33,7 +37,7 @@ import Foundation
 open class CodeAttributedString : NSTextStorage
 {
     /// Internal Storage
-    let stringStorage = NSMutableAttributedString(string: "")
+    let stringStorage = NSTextStorage()
 
     /// Highlightr instace used internally for highlighting. Use this for configuring the theme.
     open let highlightr = Highlightr()!
@@ -90,7 +94,7 @@ open class CodeAttributedString : NSTextStorage
      
      - returns: Attributes
      */
-    open override func attributes(at location: Int, effectiveRange range: NSRangePointer?) -> [NSAttributedStringKey : Any]
+    open override func attributes(at location: Int, effectiveRange range: NSRangePointer?) -> [NSAttributedString.Key : Any]
     {
         return stringStorage.attributes(at: location, effectiveRange: range)
     }
@@ -113,7 +117,7 @@ open class CodeAttributedString : NSTextStorage
      - parameter attrs: [String : AnyObject]
      - parameter range: NSRange
      */
-    open override func setAttributes(_ attrs: [NSAttributedStringKey : Any]?, range: NSRange)
+    open override func setAttributes(_ attrs: [NSAttributedString.Key : Any]?, range: NSRange)
     {
         stringStorage.setAttributes(attrs, range: range)
         self.edited(NSTextStorageEditActions.editedAttributes, range: range, changeInLength: 0)

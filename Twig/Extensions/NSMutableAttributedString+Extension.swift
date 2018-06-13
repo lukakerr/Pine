@@ -10,7 +10,7 @@ import Cocoa
 
 extension NSMutableAttributedString {
   
-  public func withAttribute(_ attribute: NSAttributedStringKey, _ value: Any, _ range: NSRange? = nil) {
+  public func withAttribute(_ attribute: NSAttributedString.Key, _ value: Any, _ range: NSRange? = nil) {
     return self.addAttribute(
       attribute,
       value: value,
@@ -19,15 +19,15 @@ extension NSMutableAttributedString {
   }
   
   public func withColor(_ color: NSColor, at: NSRange? = nil) {
-    return withAttribute(NSAttributedStringKey.foregroundColor, color, at)
+    return withAttribute(NSAttributedString.Key.foregroundColor, color, at)
   }
   
   public func withBackgroundColor(_ color: NSColor, at: NSRange? = nil) {
-    return withAttribute(NSAttributedStringKey.backgroundColor, color, at)
+    return withAttribute(NSAttributedString.Key.backgroundColor, color, at)
   }
   
   public func withFont(_ font: NSFont, at: NSRange? = nil) {
-    return withAttribute(NSAttributedStringKey.font, font, at)
+    return withAttribute(NSAttributedString.Key.font, font, at)
   }
   
 }

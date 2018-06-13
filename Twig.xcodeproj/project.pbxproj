@@ -279,6 +279,7 @@
 				TargetAttributes = {
 					A156AF7C2090606C0098BBDD = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -287,10 +288,12 @@
 					};
 					A156AF902090606D0098BBDD = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 						TestTargetID = A156AF7C2090606C0098BBDD;
 					};
 					A156AF9B2090606D0098BBDD = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 						TestTargetID = A156AF7C2090606C0098BBDD;
 					};
 				};
@@ -581,7 +584,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.Twig;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -603,7 +606,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.Twig;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -622,7 +625,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.TwigTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Twig.app/Contents/MacOS/Twig";
 			};
 			name = Debug;
@@ -642,7 +645,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.TwigTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Twig.app/Contents/MacOS/Twig";
 			};
 			name = Release;
@@ -661,7 +664,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.TwigUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = Twig;
 			};
 			name = Debug;
@@ -680,7 +683,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.TwigUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = Twig;
 			};
 			name = Release;

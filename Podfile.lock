@@ -1,6 +1,6 @@
 PODS:
-  - Down (0.5.1)
-  - Highlightr (2.0.0)
+  - Down (0.5.2)
+  - Highlightr (2.0.1)
 
 DEPENDENCIES:
   - Down
@@ -12,8 +12,8 @@ SPEC REPOS:
     - Highlightr
 
 SPEC CHECKSUMS:
-  Down: 6ace44ecec0c408826342ed420002f39a18e38c3
-  Highlightr: e68a91ed9067ef0a787b920dd9becbd9935c2b79
+  Down: 587371ad58002b06023d9c602519216862c3acbc
+  Highlightr: 65655134dd0d5e1320afdd8a9d880c9e9dc0b437
 
 PODFILE CHECKSUM: b13c8dc6bd96417e5732bb39b4466b1093d7b3dd
 

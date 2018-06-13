@@ -9,6 +9,10 @@
 import Foundation
 import JavaScriptCore
 
+#if os(OSX)
+    import AppKit
+#endif
+
 /// Utility class for generating a highlighted NSAttributedString from a String.
 open class Highlightr
 {

@@ -16,6 +16,8 @@ Is your app using it? [Let us know!](mailto:rob@robphillips.me)
 
 - [Rob Phillips](https://github.com/iwasrobbed)
 - [Keaton Burleson](https://github.com/128keaton)
+- [Tony Arnold](https://github.com/tonyarnold)
+- [Ken Harris](https://github.com/kengruven)
 - [Other contributors](https://github.com/iwasrobbed/Down/graphs/contributors) 🙌 
 
 ### Installation
