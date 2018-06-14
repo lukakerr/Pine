@@ -28,6 +28,7 @@
 		A18A0406209585C8006F6B99 /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A0405209585C8006F6B99 /* Debouncer.swift */; };
 		A18A040820958C8B006F6B99 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A040720958C8B006F6B99 /* Preferences.swift */; };
 		A18A040A20958EB6006F6B99 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A040920958EB6006F6B99 /* Int+Extension.swift */; };
+		A1E647DC20D1E9C000F32E55 /* EditorSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */; };
 		A1FD269A20932CDD004D1C95 /* highlight-js in Resources */ = {isa = PBXBuildFile; fileRef = A1FD269820932CDC004D1C95 /* highlight-js */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		A18A0405209585C8006F6B99 /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
 		A18A040720958C8B006F6B99 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		A18A040920958EB6006F6B99 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorSplitView.swift; sourceTree = "<group>"; };
 		A1FD269820932CDC004D1C95 /* highlight-js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "highlight-js"; sourceTree = "<group>"; };
 		B2BE6FC4D33EB0DD8E860B17 /* Pods-Twig.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twig.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Twig/Pods-Twig.debug.xcconfig"; sourceTree = "<group>"; };
 		B66B7DAE689A6827E658233B /* Pods_Twig.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twig.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +153,7 @@
 				A156AFB020908ECE0098BBDD /* Theme.swift */,
 				A156AF8C2090606D0098BBDD /* Twig.entitlements */,
 				A156AFAE209061D60098BBDD /* WindowController.swift */,
+				A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */,
 			);
 			path = Twig;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				A13C23F8209153E1008557D0 /* PreferencesWindowController.swift in Sources */,
 				A18A0406209585C8006F6B99 /* Debouncer.swift in Sources */,
 				A156AF812090606C0098BBDD /* AppDelegate.swift in Sources */,
+				A1E647DC20D1E9C000F32E55 /* EditorSplitView.swift in Sources */,
 				A156AF852090606C0098BBDD /* Document.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

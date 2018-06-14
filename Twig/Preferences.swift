@@ -11,7 +11,7 @@ import Cocoa
 class Preferences {
   static let sharedInstance = Preferences()
   
-  private init() {    
+  private init() {
     if defaults.object(forKey: "showPreviewOnStartup") != nil {
       self.showPreviewOnStartup = defaults.bool(forKey: "showPreviewOnStartup")
     }
@@ -26,6 +26,10 @@ class Preferences {
     
     if defaults.object(forKey: "transparentEditingView") != nil {
       self.transparentEditingView = defaults.bool(forKey: "transparentEditingView")
+    }
+    
+    if defaults.object(forKey: "verticalSplitView") != nil {
+      self.verticalSplitView = defaults.bool(forKey: "verticalSplitView")
     }
   }
   
@@ -52,6 +56,12 @@ class Preferences {
       // transparentEditingView looks best without preview showing
       self.showPreviewOnStartup = !newVal
       setDefaults(key: "transparentEditingView", newVal)
+    }
+  }
+  
+  public var verticalSplitView = true {
+    willSet(newVal) {
+      setDefaults(key: "verticalSplitView", newVal)
     }
   }
   

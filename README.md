@@ -53,6 +53,10 @@ $ open Twig.xcworkspace
 </p>
 
 <p align="center">
+  <img src="https://i.imgur.com/kpaHqoF.png">
+</p>
+
+<p align="center">
   <img src="https://i.imgur.com/qxB9OLn.png">
 </p>
 

@@ -15,6 +15,7 @@ class PreferencesViewController: NSViewController {
   @IBOutlet weak var openNewDocumentOnStartup: NSButton!
   @IBOutlet weak var autosaveDocument: NSButton!
   @IBOutlet weak var transparentEditingView: NSButton!
+  @IBOutlet weak var verticalSplitView: NSButton!
   
   let wc = WindowController()
   
@@ -33,6 +34,7 @@ class PreferencesViewController: NSViewController {
     openNewDocumentOnStartup.state = getState(preferences.openNewDocumentOnStartup)
     autosaveDocument.state = getState(preferences.autosaveDocument)
     transparentEditingView.state = getState(preferences.transparentEditingView)
+    verticalSplitView.state = getState(preferences.verticalSplitView)
   }
   
   private func getState(_ state: Bool) -> NSControl.StateValue {
@@ -58,6 +60,11 @@ class PreferencesViewController: NSViewController {
   
   @IBAction func transparentEditingViewChanged(_ sender: NSButton) {
     preferences.transparentEditingView = sender.state.rawValue.bool
+    postNotification()
+  }
+  
+  @IBAction func verticalSplitViewChanged(_ sender: NSButton) {
+    preferences.verticalSplitView = sender.state.rawValue.bool
     postNotification()
   }
   
