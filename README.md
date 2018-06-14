@@ -16,6 +16,7 @@ It is a [document based application](https://developer.apple.com/document-based-
 - Minimal and simple to use
 - Full screen support
 - Tab support
+- Horizontal or vertical source/preview layout
 
 ### To Do
 
