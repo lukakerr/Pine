@@ -56,6 +56,7 @@ class Document: NSDocument {
   
   private func setContents() {
     if let data = self.fileData, let contents = String(data: data, encoding: .utf8) {
+      self.markdownVC?.markdownTextView.string = contents
       self.markdownVC?.attributedMarkdownTextInput = NSAttributedString(string: contents)
     }
   }

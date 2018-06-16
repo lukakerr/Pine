@@ -28,6 +28,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
     set {
       syntaxHighlight(newValue.string)
       debouncedGeneratePreview.call()
+      setWordCount()
     }
   }
 
@@ -156,6 +157,20 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
       self.view.window?.appearance = NSAppearance(named: .vibrantLight)
     }
     self.view.window?.backgroundColor = color
+  }
+  
+  private func setWordCount() {
+    let wordCountView = self.view.window?.titlebarAccessoryViewControllers.first?.view.subviews.first as? NSTextField
+    guard let wordCount = self.markdownTextView.textStorage?.words.count else { return }
+    
+    var countString = String(describing: wordCount) + " word"
+    
+    if wordCount > 1 {
+      countString += "s"
+    } else if wordCount < 1 {
+      countString = ""
+    }
+    wordCountView?.stringValue = countString
   }
   
   private func getSplitViewController() -> NSSplitViewController? {

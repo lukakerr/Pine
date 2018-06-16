@@ -21,6 +21,13 @@ class WindowController: NSWindowController {
       name: NSNotification.Name(rawValue: "preferencesChanged"),
       object: nil
     )
+    
+    // set word count label in titlebar
+    if let titlebarController = self.storyboard?.instantiateController(withIdentifier: "titlebarViewController") as? NSTitlebarAccessoryViewController {
+      titlebarController.layoutAttribute = .right
+      self.window?.addTitlebarAccessoryViewController(titlebarController)
+      self.showWindow(self.window)
+    }
   }
   
   // When preferences.transparentEditingView is changed this gets called

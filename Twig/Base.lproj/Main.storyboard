@@ -1032,5 +1032,36 @@
             </objects>
             <point key="canvasLocation" x="-205" y="1588"/>
         </scene>
+        <!--Titlebar Accessory View Controller-->
+        <scene sceneID="fOn-TJ-NH0">
+            <objects>
+                <viewController storyboardIdentifier="titlebarViewController" id="y8f-Tv-q7B" customClass="NSTitlebarAccessoryViewController" sceneMemberID="viewController">
+                    <view key="view" id="edG-Rc-DPX">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="33"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZn-oo-QSr">
+                                <rect key="frame" x="6" y="8" width="108" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="charWrapping" refusesFirstResponder="YES" allowsUndo="NO" focusRingType="none" alignment="right" title="0 Words" usesSingleLineMode="YES" id="gHe-60-NLZ">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" patternImage="NSLinenBackgroundPattern" colorSpace="pattern"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="WZn-oo-QSr" firstAttribute="leading" secondItem="edG-Rc-DPX" secondAttribute="leading" constant="8" id="J9H-5e-Vjg"/>
+                            <constraint firstItem="WZn-oo-QSr" firstAttribute="centerX" secondItem="edG-Rc-DPX" secondAttribute="centerX" id="bkm-jV-JjN"/>
+                            <constraint firstItem="WZn-oo-QSr" firstAttribute="centerY" secondItem="edG-Rc-DPX" secondAttribute="centerY" id="cnM-LX-Lxh"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="e6b-fw-BOA" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-266" y="-173"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="NSLinenBackgroundPattern" width="256" height="256"/>
+    </resources>
 </document>
