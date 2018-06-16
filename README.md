@@ -11,12 +11,14 @@ It is a [document based application](https://developer.apple.com/document-based-
 ### Features
 
 - Syntax highlighting with 70+ themes, for both markdown source and fenced code blocks
-- Window and preview adapts to selected theme
+- LaTeX math subset support
+- Export to PDF, HTML
 - Toggleable split view
 - Minimal and simple to use
 - Full screen support
 - Tab support
 - Horizontal or vertical source/preview layout
+- Window and preview adapts to selected theme
 
 ### To Do
 
