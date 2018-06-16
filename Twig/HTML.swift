@@ -47,11 +47,23 @@ class HTML {
           \(self.js)
         </script>
         <script>hljs.initHighlightingOnLoad();</script>
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/contrib/auto-render.min.js"></script>
       </head>
       <body>
         \(self.contents)
         <script>
           window.scrollTo(0, \(y));
+        </script>
+        <script>
+          renderMathInElement(document.body,{ delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\[", right: "\\]", display: true},
+            {left: "\\(", right: "\\)", display: false},
+          ]});
         </script>
       </body>
       </html>

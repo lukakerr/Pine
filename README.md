@@ -25,7 +25,7 @@ It is a [document based application](https://developer.apple.com/document-based-
 - [ ] Add more preferences for:
 	- Font style
 	- Editing style
-- [ ] Add support for LaTeX/MathJax
+- [x ] Add support for LaTeX/MathJax
 - [ ] Add folder/workspace support
 
 ### Contributing
@@ -51,6 +51,10 @@ $ open Twig.xcworkspace
 
 <p align="center">
   <img src="https://i.imgur.com/IpFI0RU.png">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/1xfSfcS.png">
 </p>
 
 <p align="center">
