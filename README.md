@@ -25,7 +25,7 @@ It is a [document based application](https://developer.apple.com/document-based-
 - [ ] Add more preferences for:
 	- Font style
 	- Editing style
-- [x ] Add support for LaTeX/MathJax
+- [x] Add support for LaTeX/MathJax
 - [ ] Add folder/workspace support
 
 ### Contributing
