@@ -115,6 +115,26 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="aJh-i4-bef"/>
+                                        <menuItem title="Export" id="sWb-QD-FdT">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Export" id="1BO-uJ-DCP">
+                                                <items>
+                                                    <menuItem title="PDF" id="7WY-ZG-qgk">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="exportPDFWithSender:" target="Ady-hI-5gd" id="yLj-Su-szR"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="HTML" id="dBb-b6-LRQ">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="exportHTMLWithSender:" target="Ady-hI-5gd" id="twh-fc-bOj"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="F7T-Os-qv5"/>
                                         <menuItem title="Page Setup…" keyEquivalent="P" id="qIS-W8-SiK">
                                             <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
                                             <connections>

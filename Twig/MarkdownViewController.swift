@@ -46,9 +46,8 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
       self.generatePreview(self.markdownTextView.string)
     }
     
-    if let splitViewController = self.parent as? NSSplitViewController,
-      let previewViewController = splitViewController.splitViewItems.last {
-      previewViewController.isCollapsed = !preferences.showPreviewOnStartup
+    if let preview = getSplitViewController()?.splitViewItems.last {
+      preview.isCollapsed = !preferences.showPreviewOnStartup
     }
     
     markdownTextView.delegate = self
@@ -68,10 +67,21 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   }
   
   @IBAction func togglePreview(sender: NSMenuItem) {
-    if let splitViewController = self.parent as? NSSplitViewController,
-      let previewViewController = splitViewController.splitViewItems.last {
-      previewViewController.collapseBehavior = .preferResizingSplitViewWithFixedSiblings
-      previewViewController.animator().isCollapsed = !previewViewController.isCollapsed
+    if let preview = getSplitViewController()?.splitViewItems.last {
+      preview.collapseBehavior = .preferResizingSplitViewWithFixedSiblings
+      preview.animator().isCollapsed = !preview.isCollapsed
+    }
+  }
+  
+  @IBAction func exportPDF(sender: NSMenuItem) {
+    if let pvc = getPreviewViewController() {
+      Exporter.exportPDF(from: pvc.webPreview)
+    }
+  }
+  
+  @IBAction func exportHTML(sender: NSMenuItem) {
+    if let pvc = getPreviewViewController() {
+      Exporter.exportHTML(from: pvc.webPreview)
     }
   }
   
@@ -101,19 +111,18 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   
   private func generatePreview(_ string: String) {
     DispatchQueue.global(qos: .userInitiated).async {
-      if let splitViewController = self.parent as? NSSplitViewController,
-        let previewView = splitViewController.splitViewItems.last {
-        let previewViewController = previewView.viewController as? PreviewViewController
+      if let pvc = self.getPreviewViewController(),
+        let preview = self.getSplitViewController()?.splitViewItems.last {
         
-        if previewView.isCollapsed {
+        if preview.isCollapsed {
           return
         }
         
         if let parsed = try? Down(markdownString: string).toHTML() {
           html.contents = parsed
           DispatchQueue.main.async {
-            previewViewController?.captureScroll() {
-              previewViewController?.webPreview.loadHTMLString(html.getHTML(), baseURL: nil)
+            pvc.captureScroll() {
+              pvc.webPreview.loadHTMLString(html.getHTML(), baseURL: nil)
             }
           }
         }
@@ -147,6 +156,14 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
       self.view.window?.appearance = NSAppearance(named: .vibrantLight)
     }
     self.view.window?.backgroundColor = color
+  }
+  
+  private func getSplitViewController() -> NSSplitViewController? {
+    return self.parent as? NSSplitViewController
+  }
+  
+  private func getPreviewViewController() -> PreviewViewController? {
+    return getSplitViewController()?.splitViewItems.last?.viewController as? PreviewViewController
   }
 
 }
