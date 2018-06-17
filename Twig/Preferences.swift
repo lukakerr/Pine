@@ -65,7 +65,7 @@ class Preferences {
     }
   }
   
-  @objc dynamic var font: NSFont {
+  public var font: NSFont {
     get {
       let fontSize = defaults.double(forKey: "fontSize")
       if let fontName = defaults.string(forKey: "fontName"),
