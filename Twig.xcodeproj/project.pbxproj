@@ -112,16 +112,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A142C98020D67389002ED94F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A156AF822090606C0098BBDD /* MarkdownViewController.swift */,
+				A148C3A12091522C00B1165C /* PreferencesViewController.swift */,
+				A13C23F7209153E1008557D0 /* PreferencesWindowController.swift */,
+				A13C23FB20919672008557D0 /* PreviewViewController.swift */,
+				A156AFAE209061D60098BBDD /* WindowController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A142C98120D67389002ED94F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A156AF842090606C0098BBDD /* Document.swift */,
+				A182096D20919F6000016AD5 /* HTML.swift */,
+				A18A040720958C8B006F6B99 /* Preferences.swift */,
+				A156AFB020908ECE0098BBDD /* Theme.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A142C98220D67389002ED94F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A18A0405209585C8006F6B99 /* Debouncer.swift */,
+				A1D5466320D4D9CC00D1221A /* Exporter.swift */,
+				A148C39F20914F0F00B1165C /* SyntaxThemes.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A142C98320D673B0002ED94F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A156AF742090606C0098BBDD = {
 			isa = PBXGroup;
 			children = (
+				AF85BB3E71369DF39A9597F6 /* Frameworks */,
+				E4FB2329AC3DC77FB4340593 /* Pods */,
+				A156AF7E2090606C0098BBDD /* Products */,
 				A189EA722091E4E300DB0559 /* Resources */,
 				A156AF7F2090606C0098BBDD /* Twig */,
 				A156AF942090606D0098BBDD /* TwigTests */,
 				A156AF9F2090606D0098BBDD /* TwigUITests */,
-				A156AF7E2090606C0098BBDD /* Products */,
-				E4FB2329AC3DC77FB4340593 /* Pods */,
-				AF85BB3E71369DF39A9597F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,23 +181,14 @@
 			children = (
 				A156AF802090606C0098BBDD /* AppDelegate.swift */,
 				A156AF862090606C0098BBDD /* Assets.xcassets */,
-				A18A0405209585C8006F6B99 /* Debouncer.swift */,
-				A156AF842090606C0098BBDD /* Document.swift */,
+				A142C98020D67389002ED94F /* Controllers */,
 				A1682E85209097D500164D78 /* Extensions */,
-				A182096D20919F6000016AD5 /* HTML.swift */,
+				A142C98220D67389002ED94F /* Helpers */,
 				A156AF8B2090606D0098BBDD /* Info.plist */,
 				A156AF882090606D0098BBDD /* Main.storyboard */,
-				A156AF822090606C0098BBDD /* MarkdownViewController.swift */,
-				A18A040720958C8B006F6B99 /* Preferences.swift */,
-				A148C3A12091522C00B1165C /* PreferencesViewController.swift */,
-				A13C23F7209153E1008557D0 /* PreferencesWindowController.swift */,
-				A13C23FB20919672008557D0 /* PreviewViewController.swift */,
-				A148C39F20914F0F00B1165C /* SyntaxThemes.swift */,
-				A156AFB020908ECE0098BBDD /* Theme.swift */,
+				A142C98120D67389002ED94F /* Models */,
 				A156AF8C2090606D0098BBDD /* Twig.entitlements */,
-				A156AFAE209061D60098BBDD /* WindowController.swift */,
-				A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */,
-				A1D5466320D4D9CC00D1221A /* Exporter.swift */,
+				A142C98320D673B0002ED94F /* Views */,
 			);
 			path = Twig;
 			sourceTree = "<group>";
@@ -182,9 +214,9 @@
 		A1682E85209097D500164D78 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A1682E86209097E700164D78 /* NSMutableAttributedString+Extension.swift */,
-				A13C23F9209167F0008557D0 /* NSColor+Extension.swift */,
 				A18A040920958EB6006F6B99 /* Int+Extension.swift */,
+				A13C23F9209167F0008557D0 /* NSColor+Extension.swift */,
+				A1682E86209097E700164D78 /* NSMutableAttributedString+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
