@@ -68,6 +68,19 @@ class PreferencesViewController: NSViewController {
     postNotification()
   }
   
+  @IBAction func fontChanged(_ sender: NSButton) {
+    let fontPanel = NSFontPanel.shared
+    fontPanel.setPanelFont(preferences.font, isMultiple: false)
+    fontPanel.makeKeyAndOrderFront(sender)
+  }
+  
+  override func changeFont(_ sender: Any?) {
+    if let fontManager = sender as? NSFontManager {
+      preferences.font = fontManager.convert(preferences.font)
+      postNotification()
+    }
+  }
+
   private func postNotification() {
     NotificationCenter.default.post(
       name: NSNotification.Name(rawValue: "preferencesChanged"),

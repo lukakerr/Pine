@@ -8,27 +8,28 @@ Twig is lightweight macOS markdown editor. It's currently a work in progress.
 
 It is a [document based application](https://developer.apple.com/document-based-apps), and aims to follow Apple's [Human Interface Guidelines](https://developer.apple.com/macos/human-interface-guidelines)
 
-### Features
+### Features/Todo
 
-- Syntax highlighting with 70+ themes, for both markdown source and fenced code blocks
-- LaTeX math subset support
-- Export to PDF, HTML
-- Toggleable split view
-- Minimal and simple to use
-- Full screen support
-- Tab support
-- Horizontal or vertical source/preview layout
-- Window and preview adapts to selected theme
-
-### To Do
-
-- [x] Add toggleable split view with markdown preview
-- [ ] Add ability to edit preview theme CSS
-- [ ] Add more preferences for:
-	- Font style
-	- Editing style
-- [x] Add support for LaTeX/MathJax
-- [ ] Add folder/workspace support
+| Feature                                    | Completed?                                |
+| ------------------------------------------ | ----------------------------------------- |
+| Themeable                                  | **Yes**                                   |
+| Math support (LaTeX subset)                | **Yes**                                   |
+| Exporting to PDF, HTML, TXT, RST, RTF      | Partly - [contribubte](./CONTRIBUTING.md) |
+| Toggleable split view                      | **Yes**                                   |
+| Full screen support                        | **Yes**                                   |
+| Tab support                                | **Yes**                                   |
+| Workspace/folder support                   | No - [contribubte](./CONTRIBUTING.md)     |
+| Horizontal and vertical split view         | **Yes**                                   |
+| Ability to create custom `.css` themes     | No - [contribubte](./CONTRIBUTING.md)     |
+| Sparkle auto updating framework            | No - [contribubte](./CONTRIBUTING.md)     |
+| Ability to share `.md` files               | **Yes**                                   |
+| Syntax highlighting for source and preview | **Yes**                                   |
+| Autosaving                                 | **Yes**                                   |
+| Version control and history recovery       | **Yes**                                   |
+| Markdown shortcuts/auto pair               | No - [contribubte](./CONTRIBUTING.md)     |
+| Custom font                                | **Yes**                                   |
+| Ability to edit preview `.css`             | No - [contribubte](./CONTRIBUTING.md)     |
+| Word count                                 | **Yes**                                   |
 
 ### Contributing
 

@@ -65,6 +65,29 @@ class Preferences {
     }
   }
   
+  @objc dynamic var font: NSFont {
+    get {
+      let fontSize = defaults.double(forKey: "fontSize")
+      if let fontName = defaults.string(forKey: "fontName"),
+        let font = NSFont(name: fontName, size: CGFloat(fontSize)) {
+        return font
+      }
+      
+      // default font not found, try to use a few standard ones
+      for fontName in ["Courier", "Monaco", "Menlo", "SF Mono"] {
+        if let font = NSFont(name: fontName, size: CGFloat(18)) {
+          return font
+        }
+      }
+      
+      return NSFont.monospacedDigitSystemFont(ofSize: CGFloat(18), weight: .regular)
+    }
+    set {
+      setDefaults(key: "fontName", newValue.fontName)
+      setDefaults(key: "fontSize", newValue.pointSize)
+    }
+  }
+  
   private func setDefaults(key: String, _ val: Any) {
     defaults.setValue(val, forKey: key)
   }

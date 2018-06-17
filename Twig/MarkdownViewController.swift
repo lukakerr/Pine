@@ -10,8 +10,6 @@ import Cocoa
 import Highlightr
 import Down
 
-let DEFAULT_FONT = NSFont(name: "Courier", size: CGFloat(18))
-
 class MarkdownViewController: NSViewController, NSTextViewDelegate {
 
   @IBOutlet var markdownTextView: NSTextView!
@@ -52,7 +50,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
     }
     
     markdownTextView.delegate = self
-    markdownTextView.font = DEFAULT_FONT
+    markdownTextView.font = preferences.font
     markdownTextView.insertionPointColor = .gray
     markdownTextView.textContainerInset = NSSize(width: 10.0, height: 10.0)
   }
@@ -95,16 +93,14 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
       
       if let syntaxHighlighted = highlightedCode {
         let code = NSMutableAttributedString(attributedString: syntaxHighlighted)
-        if let font = DEFAULT_FONT {
-          code.withFont(font)
-          
-          DispatchQueue.main.async {
-            let cursorPosition = self.markdownTextView.selectedRanges[0].rangeValue.location
-            self.markdownTextView.textStorage?.beginEditing()
-            self.markdownTextView.textStorage?.setAttributedString(code)
-            self.markdownTextView.textStorage?.endEditing()
-            self.markdownTextView.setSelectedRange(NSMakeRange(cursorPosition, 0))
-          }
+        code.withFont(preferences.font)
+
+        DispatchQueue.main.async {
+          let cursorPosition = self.markdownTextView.selectedRanges[0].rangeValue.location
+          self.markdownTextView.textStorage?.beginEditing()
+          self.markdownTextView.textStorage?.setAttributedString(code)
+          self.markdownTextView.textStorage?.endEditing()
+          self.markdownTextView.setSelectedRange(NSMakeRange(cursorPosition, 0))
         }
       }
     }
