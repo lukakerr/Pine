@@ -8,12 +8,12 @@
 
 import Cocoa
 import Highlightr
-import Down
+//import Down
+//import cmark_gfm_swift
 
 class MarkdownViewController: NSViewController, NSTextViewDelegate {
 
   @IBOutlet var markdownTextView: NSTextView!
-  @IBOutlet weak var transparentView: NSVisualEffectView!
 
   private var debouncedGeneratePreview: Debouncer!
   private let highlightr = Highlightr()!
@@ -110,9 +110,9 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
       let previewViewController = preview.viewController as? PreviewViewController
       
       if preview.isCollapsed { return }
-        
+
       DispatchQueue.global(qos: .userInitiated).async {
-        if let parsed = try? Down(markdownString: string).toHTML() {
+        if let parsed = Node(markdown: string)?.html {
           DispatchQueue.main.async {
             previewViewController?.captureScroll() {
               previewViewController?.webPreview.loadHTMLString(html.getHTML(with: parsed), baseURL: nil)

@@ -26,8 +26,8 @@ class MarkdownView: NSView {
     self.window?.titlebarAppearsTransparent = preferences.modernTitlebar
     
     if appearance == .darkAqua || bg.isDark {
-      theme.code = bg.lighter.hex
-      theme.text = "#FFF"
+      theme.code = bg.lighter
+      theme.text = .white
       
       // using dark mode, so remove theme based appearance
       if appearance == .darkAqua {
@@ -37,8 +37,8 @@ class MarkdownView: NSView {
         self.window?.backgroundColor = bg
       }
     } else {
-      theme.code = bg.darker.hex
-      theme.text = "#000"
+      theme.code = bg.darker
+      theme.text = .black
       self.window?.appearance = NSAppearance(named: .aqua)
       self.window?.backgroundColor = bg
     }

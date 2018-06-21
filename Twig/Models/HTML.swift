@@ -30,6 +30,8 @@ class HTML {
   // The innerHTML contents are passed in here rather than stored
   // to prevent asynchronous race conditions changing the content on startup
   func getHTML(with contents: String) -> String {
+    let bg = theme.background ?? .white
+    
     return(
       """
       <!DOCTYPE html>
@@ -38,9 +40,18 @@ class HTML {
         <style>
           \(self.css)
           \(self.baseCSS)
-          pre code, p code { background: \(theme.code) !important }
-          p, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, table {
-            color: \(theme.text);
+          pre code, p code { background: \(theme.code.hex) !important }
+          p, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, table, tr {
+            color: \(theme.text.hex);
+          }
+          table tr {
+            background: \(bg.hex);
+          }
+          table tr:nth-child(2n) {
+            background: \(bg.darker.hex);
+          }
+          table tr th, table tr td {
+            border-color: \(bg.lighter.hex)
           }
         </style>
         <script>

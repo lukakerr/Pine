@@ -24,10 +24,6 @@ class Preferences {
       self.autosaveDocument = defaults.bool(forKey: "autosaveDocument")
     }
     
-    if defaults.object(forKey: "transparentEditingView") != nil {
-      self.transparentEditingView = defaults.bool(forKey: "transparentEditingView")
-    }
-    
     if defaults.object(forKey: "verticalSplitView") != nil {
       self.verticalSplitView = defaults.bool(forKey: "verticalSplitView")
     }
@@ -52,14 +48,6 @@ class Preferences {
   public var autosaveDocument = true {
     willSet(newVal) {
       setDefaults(key: "autosaveDocument", newVal)
-    }
-  }
-  
-  public var transparentEditingView = false {
-    willSet(newVal) {
-      // transparentEditingView looks best without preview showing
-      self.showPreviewOnStartup = !newVal
-      setDefaults(key: "transparentEditingView", newVal)
     }
   }
   

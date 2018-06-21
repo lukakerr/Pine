@@ -31,6 +31,58 @@
 		A18A040A20958EB6006F6B99 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A040920958EB6006F6B99 /* Int+Extension.swift */; };
 		A198047320DB64BA0066FDA6 /* MarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198047220DB64BA0066FDA6 /* MarkdownView.swift */; };
 		A198047520DB7B2E0066FDA6 /* NotificationCenter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198047420DB7B2E0066FDA6 /* NotificationCenter+Extension.swift */; };
+		A19828B420DBC2AA008C2364 /* ListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198285B20DBC2AA008C2364 /* ListElement.swift */; };
+		A19828B520DBC2AA008C2364 /* TextElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198285C20DBC2AA008C2364 /* TextElement.swift */; };
+		A19828B620DBC2AA008C2364 /* Block+TableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198285D20DBC2AA008C2364 /* Block+TableRow.swift */; };
+		A19828B720DBC2AA008C2364 /* TableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198285E20DBC2AA008C2364 /* TableRow.swift */; };
+		A19828B820DBC2AA008C2364 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A198285F20DBC2AA008C2364 /* LICENSE */; };
+		A19828B920DBC2AA008C2364 /* xml.c in Sources */ = {isa = PBXBuildFile; fileRef = A198286120DBC2AA008C2364 /* xml.c */; };
+		A19828BA20DBC2AA008C2364 /* strikethrough.c in Sources */ = {isa = PBXBuildFile; fileRef = A198286220DBC2AA008C2364 /* strikethrough.c */; };
+		A19828BB20DBC2AA008C2364 /* cmark.c in Sources */ = {isa = PBXBuildFile; fileRef = A198286320DBC2AA008C2364 /* cmark.c */; };
+		A19828BC20DBC2AA008C2364 /* scanners.re in Resources */ = {isa = PBXBuildFile; fileRef = A198286420DBC2AA008C2364 /* scanners.re */; };
+		A19828BD20DBC2AA008C2364 /* man.c in Sources */ = {isa = PBXBuildFile; fileRef = A198286520DBC2AA008C2364 /* man.c */; };
+		A19828BE20DBC2AA008C2364 /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = A198286620DBC2AA008C2364 /* buffer.c */; };
+		A19828BF20DBC2AA008C2364 /* autolink.c in Sources */ = {isa = PBXBuildFile; fileRef = A198286720DBC2AA008C2364 /* autolink.c */; };
+		A19828C020DBC2AA008C2364 /* blocks.c in Sources */ = {isa = PBXBuildFile; fileRef = A198286820DBC2AA008C2364 /* blocks.c */; };
+		A19828C120DBC2AA008C2364 /* cmark_ctype.c in Sources */ = {isa = PBXBuildFile; fileRef = A198286920DBC2AA008C2364 /* cmark_ctype.c */; };
+		A19828C220DBC2AA008C2364 /* table.c in Sources */ = {isa = PBXBuildFile; fileRef = A198286A20DBC2AA008C2364 /* table.c */; };
+		A19828C320DBC2AA008C2364 /* inlines.c in Sources */ = {isa = PBXBuildFile; fileRef = A198286B20DBC2AA008C2364 /* inlines.c */; };
+		A19828C420DBC2AA008C2364 /* mention.c in Sources */ = {isa = PBXBuildFile; fileRef = A198286C20DBC2AA008C2364 /* mention.c */; };
+		A19828C520DBC2AA008C2364 /* latex.c in Sources */ = {isa = PBXBuildFile; fileRef = A198286D20DBC2AA008C2364 /* latex.c */; };
+		A19828C620DBC2AA008C2364 /* houdini_href_e.c in Sources */ = {isa = PBXBuildFile; fileRef = A198286E20DBC2AA008C2364 /* houdini_href_e.c */; };
+		A19828C720DBC2AA008C2364 /* syntax_extension.c in Sources */ = {isa = PBXBuildFile; fileRef = A198286F20DBC2AA008C2364 /* syntax_extension.c */; };
+		A19828C820DBC2AA008C2364 /* case_fold_switch.inc in Sources */ = {isa = PBXBuildFile; fileRef = A198287020DBC2AA008C2364 /* case_fold_switch.inc */; };
+		A19828C920DBC2AA008C2364 /* entities.inc in Sources */ = {isa = PBXBuildFile; fileRef = A198287120DBC2AA008C2364 /* entities.inc */; };
+		A19828CA20DBC2AA008C2364 /* ext_scanners.c in Sources */ = {isa = PBXBuildFile; fileRef = A198287220DBC2AA008C2364 /* ext_scanners.c */; };
+		A19828CB20DBC2AA008C2364 /* tagfilter.c in Sources */ = {isa = PBXBuildFile; fileRef = A198287320DBC2AA008C2364 /* tagfilter.c */; };
+		A19828CC20DBC2AA008C2364 /* houdini_html_e.c in Sources */ = {isa = PBXBuildFile; fileRef = A198287420DBC2AA008C2364 /* houdini_html_e.c */; };
+		A19828CD20DBC2AA008C2364 /* plaintext.c in Sources */ = {isa = PBXBuildFile; fileRef = A198289720DBC2AA008C2364 /* plaintext.c */; };
+		A19828CE20DBC2AA008C2364 /* utf8.c in Sources */ = {isa = PBXBuildFile; fileRef = A198289820DBC2AA008C2364 /* utf8.c */; };
+		A19828CF20DBC2AA008C2364 /* references.c in Sources */ = {isa = PBXBuildFile; fileRef = A198289920DBC2AA008C2364 /* references.c */; };
+		A19828D020DBC2AA008C2364 /* render.c in Sources */ = {isa = PBXBuildFile; fileRef = A198289A20DBC2AA008C2364 /* render.c */; };
+		A19828D120DBC2AA008C2364 /* iterator.c in Sources */ = {isa = PBXBuildFile; fileRef = A198289B20DBC2AA008C2364 /* iterator.c */; };
+		A19828D220DBC2AA008C2364 /* arena.c in Sources */ = {isa = PBXBuildFile; fileRef = A198289C20DBC2AA008C2364 /* arena.c */; };
+		A19828D320DBC2AA008C2364 /* linked_list.c in Sources */ = {isa = PBXBuildFile; fileRef = A198289D20DBC2AA008C2364 /* linked_list.c */; };
+		A19828D420DBC2AA008C2364 /* commonmark.c in Sources */ = {isa = PBXBuildFile; fileRef = A198289E20DBC2AA008C2364 /* commonmark.c */; };
+		A19828D520DBC2AA008C2364 /* map.c in Sources */ = {isa = PBXBuildFile; fileRef = A198289F20DBC2AA008C2364 /* map.c */; };
+		A19828D620DBC2AA008C2364 /* html.c in Sources */ = {isa = PBXBuildFile; fileRef = A19828A020DBC2AA008C2364 /* html.c */; };
+		A19828D720DBC2AA008C2364 /* plugin.c in Sources */ = {isa = PBXBuildFile; fileRef = A19828A120DBC2AA008C2364 /* plugin.c */; };
+		A19828D820DBC2AA008C2364 /* scanners.c in Sources */ = {isa = PBXBuildFile; fileRef = A19828A220DBC2AA008C2364 /* scanners.c */; };
+		A19828D920DBC2AA008C2364 /* footnotes.c in Sources */ = {isa = PBXBuildFile; fileRef = A19828A420DBC2AA008C2364 /* footnotes.c */; };
+		A19828DA20DBC2AA008C2364 /* checkbox.c in Sources */ = {isa = PBXBuildFile; fileRef = A19828A520DBC2AA008C2364 /* checkbox.c */; };
+		A19828DB20DBC2AA008C2364 /* houdini_html_u.c in Sources */ = {isa = PBXBuildFile; fileRef = A19828A620DBC2AA008C2364 /* houdini_html_u.c */; };
+		A19828DC20DBC2AA008C2364 /* registry.c in Sources */ = {isa = PBXBuildFile; fileRef = A19828A720DBC2AA008C2364 /* registry.c */; };
+		A19828DD20DBC2AA008C2364 /* node.c in Sources */ = {isa = PBXBuildFile; fileRef = A19828A820DBC2AA008C2364 /* node.c */; };
+		A19828DE20DBC2AA008C2364 /* core-extensions.c in Sources */ = {isa = PBXBuildFile; fileRef = A19828A920DBC2AA008C2364 /* core-extensions.c */; };
+		A19828DF20DBC2AA008C2364 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19828AA20DBC2AA008C2364 /* Element.swift */; };
+		A19828E020DBC2AA008C2364 /* ASTOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19828AB20DBC2AA008C2364 /* ASTOperations.swift */; };
+		A19828E120DBC2AA008C2364 /* Node+Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19828AC20DBC2AA008C2364 /* Node+Elements.swift */; };
+		A19828E220DBC2AA008C2364 /* Inline+TextElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19828AE20DBC2AA008C2364 /* Inline+TextElement.swift */; };
+		A19828E320DBC2AA008C2364 /* Block+ListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19828AF20DBC2AA008C2364 /* Block+ListElement.swift */; };
+		A19828E420DBC2AA008C2364 /* Block+TextElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19828B020DBC2AA008C2364 /* Block+TextElement.swift */; };
+		A19828E520DBC2AA008C2364 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A19828B120DBC2AA008C2364 /* Info.plist */; };
+		A19828E620DBC2AA008C2364 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19828B220DBC2AA008C2364 /* Node.swift */; };
+		A19828E720DBC2AA008C2364 /* SwiftAST.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19828B320DBC2AA008C2364 /* SwiftAST.swift */; };
 		A1D5466420D4D9CC00D1221A /* Exporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D5466320D4D9CC00D1221A /* Exporter.swift */; };
 		A1E647DC20D1E9C000F32E55 /* EditorSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */; };
 		A1FD269A20932CDD004D1C95 /* highlight-js in Resources */ = {isa = PBXBuildFile; fileRef = A1FD269820932CDC004D1C95 /* highlight-js */; };
@@ -84,6 +136,93 @@
 		A18A040920958EB6006F6B99 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		A198047220DB64BA0066FDA6 /* MarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownView.swift; sourceTree = "<group>"; };
 		A198047420DB7B2E0066FDA6 /* NotificationCenter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Extension.swift"; sourceTree = "<group>"; };
+		A198285B20DBC2AA008C2364 /* ListElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListElement.swift; sourceTree = "<group>"; };
+		A198285C20DBC2AA008C2364 /* TextElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextElement.swift; sourceTree = "<group>"; };
+		A198285D20DBC2AA008C2364 /* Block+TableRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Block+TableRow.swift"; sourceTree = "<group>"; };
+		A198285E20DBC2AA008C2364 /* TableRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRow.swift; sourceTree = "<group>"; };
+		A198285F20DBC2AA008C2364 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		A198286120DBC2AA008C2364 /* xml.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = xml.c; sourceTree = "<group>"; };
+		A198286220DBC2AA008C2364 /* strikethrough.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = strikethrough.c; sourceTree = "<group>"; };
+		A198286320DBC2AA008C2364 /* cmark.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cmark.c; sourceTree = "<group>"; };
+		A198286420DBC2AA008C2364 /* scanners.re */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = scanners.re; sourceTree = "<group>"; };
+		A198286520DBC2AA008C2364 /* man.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = man.c; sourceTree = "<group>"; };
+		A198286620DBC2AA008C2364 /* buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = buffer.c; sourceTree = "<group>"; };
+		A198286720DBC2AA008C2364 /* autolink.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = autolink.c; sourceTree = "<group>"; };
+		A198286820DBC2AA008C2364 /* blocks.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = blocks.c; sourceTree = "<group>"; };
+		A198286920DBC2AA008C2364 /* cmark_ctype.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cmark_ctype.c; sourceTree = "<group>"; };
+		A198286A20DBC2AA008C2364 /* table.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = table.c; sourceTree = "<group>"; };
+		A198286B20DBC2AA008C2364 /* inlines.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = inlines.c; sourceTree = "<group>"; };
+		A198286C20DBC2AA008C2364 /* mention.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mention.c; sourceTree = "<group>"; };
+		A198286D20DBC2AA008C2364 /* latex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = latex.c; sourceTree = "<group>"; };
+		A198286E20DBC2AA008C2364 /* houdini_href_e.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = houdini_href_e.c; sourceTree = "<group>"; };
+		A198286F20DBC2AA008C2364 /* syntax_extension.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = syntax_extension.c; sourceTree = "<group>"; };
+		A198287020DBC2AA008C2364 /* case_fold_switch.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = case_fold_switch.inc; sourceTree = "<group>"; };
+		A198287120DBC2AA008C2364 /* entities.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = entities.inc; sourceTree = "<group>"; };
+		A198287220DBC2AA008C2364 /* ext_scanners.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ext_scanners.c; sourceTree = "<group>"; };
+		A198287320DBC2AA008C2364 /* tagfilter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tagfilter.c; sourceTree = "<group>"; };
+		A198287420DBC2AA008C2364 /* houdini_html_e.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = houdini_html_e.c; sourceTree = "<group>"; };
+		A198287620DBC2AA008C2364 /* cmarkextensions_export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmarkextensions_export.h; sourceTree = "<group>"; };
+		A198287720DBC2AA008C2364 /* cmark_export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmark_export.h; sourceTree = "<group>"; };
+		A198287820DBC2AA008C2364 /* html.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = html.h; sourceTree = "<group>"; };
+		A198287920DBC2AA008C2364 /* plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plugin.h; sourceTree = "<group>"; };
+		A198287A20DBC2AA008C2364 /* map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = map.h; sourceTree = "<group>"; };
+		A198287B20DBC2AA008C2364 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		A198287C20DBC2AA008C2364 /* chunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chunk.h; sourceTree = "<group>"; };
+		A198287D20DBC2AA008C2364 /* footnotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = footnotes.h; sourceTree = "<group>"; };
+		A198287E20DBC2AA008C2364 /* parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
+		A198287F20DBC2AA008C2364 /* scanners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scanners.h; sourceTree = "<group>"; };
+		A198288020DBC2AA008C2364 /* libcmark_gfm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libcmark_gfm.h; sourceTree = "<group>"; };
+		A198288120DBC2AA008C2364 /* node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = node.h; sourceTree = "<group>"; };
+		A198288220DBC2AA008C2364 /* core-extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "core-extensions.h"; sourceTree = "<group>"; };
+		A198288320DBC2AA008C2364 /* registry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = registry.h; sourceTree = "<group>"; };
+		A198288420DBC2AA008C2364 /* cmark_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmark_version.h; sourceTree = "<group>"; };
+		A198288520DBC2AA008C2364 /* checkbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkbox.h; sourceTree = "<group>"; };
+		A198288620DBC2AA008C2364 /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
+		A198288720DBC2AA008C2364 /* cmark_ctype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmark_ctype.h; sourceTree = "<group>"; };
+		A198288820DBC2AA008C2364 /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffer.h; sourceTree = "<group>"; };
+		A198288920DBC2AA008C2364 /* cmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmark.h; sourceTree = "<group>"; };
+		A198288A20DBC2AA008C2364 /* strikethrough.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strikethrough.h; sourceTree = "<group>"; };
+		A198288B20DBC2AA008C2364 /* cmark_extension_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmark_extension_api.h; sourceTree = "<group>"; };
+		A198288C20DBC2AA008C2364 /* syntax_extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = syntax_extension.h; sourceTree = "<group>"; };
+		A198288D20DBC2AA008C2364 /* mention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mention.h; sourceTree = "<group>"; };
+		A198288E20DBC2AA008C2364 /* inlines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = inlines.h; sourceTree = "<group>"; };
+		A198288F20DBC2AA008C2364 /* table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = table.h; sourceTree = "<group>"; };
+		A198289020DBC2AA008C2364 /* tagfilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tagfilter.h; sourceTree = "<group>"; };
+		A198289120DBC2AA008C2364 /* ext_scanners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ext_scanners.h; sourceTree = "<group>"; };
+		A198289220DBC2AA008C2364 /* houdini.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = houdini.h; sourceTree = "<group>"; };
+		A198289320DBC2AA008C2364 /* iterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iterator.h; sourceTree = "<group>"; };
+		A198289420DBC2AA008C2364 /* utf8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utf8.h; sourceTree = "<group>"; };
+		A198289520DBC2AA008C2364 /* references.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = references.h; sourceTree = "<group>"; };
+		A198289620DBC2AA008C2364 /* render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = render.h; sourceTree = "<group>"; };
+		A198289720DBC2AA008C2364 /* plaintext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = plaintext.c; sourceTree = "<group>"; };
+		A198289820DBC2AA008C2364 /* utf8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utf8.c; sourceTree = "<group>"; };
+		A198289920DBC2AA008C2364 /* references.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = references.c; sourceTree = "<group>"; };
+		A198289A20DBC2AA008C2364 /* render.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = render.c; sourceTree = "<group>"; };
+		A198289B20DBC2AA008C2364 /* iterator.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = iterator.c; sourceTree = "<group>"; };
+		A198289C20DBC2AA008C2364 /* arena.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = arena.c; sourceTree = "<group>"; };
+		A198289D20DBC2AA008C2364 /* linked_list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = linked_list.c; sourceTree = "<group>"; };
+		A198289E20DBC2AA008C2364 /* commonmark.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = commonmark.c; sourceTree = "<group>"; };
+		A198289F20DBC2AA008C2364 /* map.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = map.c; sourceTree = "<group>"; };
+		A19828A020DBC2AA008C2364 /* html.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = html.c; sourceTree = "<group>"; };
+		A19828A120DBC2AA008C2364 /* plugin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = plugin.c; sourceTree = "<group>"; };
+		A19828A220DBC2AA008C2364 /* scanners.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = scanners.c; sourceTree = "<group>"; };
+		A19828A320DBC2AA008C2364 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		A19828A420DBC2AA008C2364 /* footnotes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = footnotes.c; sourceTree = "<group>"; };
+		A19828A520DBC2AA008C2364 /* checkbox.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = checkbox.c; sourceTree = "<group>"; };
+		A19828A620DBC2AA008C2364 /* houdini_html_u.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = houdini_html_u.c; sourceTree = "<group>"; };
+		A19828A720DBC2AA008C2364 /* registry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = registry.c; sourceTree = "<group>"; };
+		A19828A820DBC2AA008C2364 /* node.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = node.c; sourceTree = "<group>"; };
+		A19828A920DBC2AA008C2364 /* core-extensions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "core-extensions.c"; sourceTree = "<group>"; };
+		A19828AA20DBC2AA008C2364 /* Element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
+		A19828AB20DBC2AA008C2364 /* ASTOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASTOperations.swift; sourceTree = "<group>"; };
+		A19828AC20DBC2AA008C2364 /* Node+Elements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Node+Elements.swift"; sourceTree = "<group>"; };
+		A19828AD20DBC2AA008C2364 /* cmark-gfm-swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cmark-gfm-swift.h"; sourceTree = "<group>"; };
+		A19828AE20DBC2AA008C2364 /* Inline+TextElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Inline+TextElement.swift"; sourceTree = "<group>"; };
+		A19828AF20DBC2AA008C2364 /* Block+ListElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Block+ListElement.swift"; sourceTree = "<group>"; };
+		A19828B020DBC2AA008C2364 /* Block+TextElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Block+TextElement.swift"; sourceTree = "<group>"; };
+		A19828B120DBC2AA008C2364 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A19828B220DBC2AA008C2364 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		A19828B320DBC2AA008C2364 /* SwiftAST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftAST.swift; sourceTree = "<group>"; };
 		A1D5466320D4D9CC00D1221A /* Exporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exporter.swift; sourceTree = "<group>"; };
 		A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorSplitView.swift; sourceTree = "<group>"; };
 		A1FD269820932CDC004D1C95 /* highlight-js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "highlight-js"; sourceTree = "<group>"; };
@@ -192,6 +331,7 @@
 				A1682E85209097D500164D78 /* Extensions */,
 				A142C98220D67389002ED94F /* Helpers */,
 				A156AF8B2090606D0098BBDD /* Info.plist */,
+				A198285920DBC2AA008C2364 /* Libraries */,
 				A156AF882090606D0098BBDD /* Main.storyboard */,
 				A142C98120D67389002ED94F /* Models */,
 				A156AF8C2090606D0098BBDD /* Twig.entitlements */,
@@ -237,6 +377,124 @@
 				A189EA732091E4E300DB0559 /* Markdown.css */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A198285920DBC2AA008C2364 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				A198285A20DBC2AA008C2364 /* cmark-gfm-swift */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		A198285A20DBC2AA008C2364 /* cmark-gfm-swift */ = {
+			isa = PBXGroup;
+			children = (
+				A19828AB20DBC2AA008C2364 /* ASTOperations.swift */,
+				A19828AF20DBC2AA008C2364 /* Block+ListElement.swift */,
+				A198285D20DBC2AA008C2364 /* Block+TableRow.swift */,
+				A19828B020DBC2AA008C2364 /* Block+TextElement.swift */,
+				A198286020DBC2AA008C2364 /* cmark_gfm */,
+				A19828AD20DBC2AA008C2364 /* cmark-gfm-swift.h */,
+				A19828AA20DBC2AA008C2364 /* Element.swift */,
+				A19828B120DBC2AA008C2364 /* Info.plist */,
+				A19828AE20DBC2AA008C2364 /* Inline+TextElement.swift */,
+				A198285F20DBC2AA008C2364 /* LICENSE */,
+				A198285B20DBC2AA008C2364 /* ListElement.swift */,
+				A19828B220DBC2AA008C2364 /* Node.swift */,
+				A19828AC20DBC2AA008C2364 /* Node+Elements.swift */,
+				A19828B320DBC2AA008C2364 /* SwiftAST.swift */,
+				A198285E20DBC2AA008C2364 /* TableRow.swift */,
+				A198285C20DBC2AA008C2364 /* TextElement.swift */,
+			);
+			path = "cmark-gfm-swift";
+			sourceTree = "<group>";
+		};
+		A198286020DBC2AA008C2364 /* cmark_gfm */ = {
+			isa = PBXGroup;
+			children = (
+				A198289C20DBC2AA008C2364 /* arena.c */,
+				A198286720DBC2AA008C2364 /* autolink.c */,
+				A198286820DBC2AA008C2364 /* blocks.c */,
+				A198286620DBC2AA008C2364 /* buffer.c */,
+				A198287020DBC2AA008C2364 /* case_fold_switch.inc */,
+				A19828A520DBC2AA008C2364 /* checkbox.c */,
+				A198286920DBC2AA008C2364 /* cmark_ctype.c */,
+				A198286320DBC2AA008C2364 /* cmark.c */,
+				A198289E20DBC2AA008C2364 /* commonmark.c */,
+				A19828A920DBC2AA008C2364 /* core-extensions.c */,
+				A198287120DBC2AA008C2364 /* entities.inc */,
+				A198287220DBC2AA008C2364 /* ext_scanners.c */,
+				A19828A420DBC2AA008C2364 /* footnotes.c */,
+				A198286E20DBC2AA008C2364 /* houdini_href_e.c */,
+				A198287420DBC2AA008C2364 /* houdini_html_e.c */,
+				A19828A620DBC2AA008C2364 /* houdini_html_u.c */,
+				A19828A020DBC2AA008C2364 /* html.c */,
+				A198287520DBC2AA008C2364 /* include */,
+				A198286B20DBC2AA008C2364 /* inlines.c */,
+				A198289B20DBC2AA008C2364 /* iterator.c */,
+				A198286D20DBC2AA008C2364 /* latex.c */,
+				A198289D20DBC2AA008C2364 /* linked_list.c */,
+				A198286520DBC2AA008C2364 /* man.c */,
+				A198289F20DBC2AA008C2364 /* map.c */,
+				A198286C20DBC2AA008C2364 /* mention.c */,
+				A19828A320DBC2AA008C2364 /* module.modulemap */,
+				A19828A820DBC2AA008C2364 /* node.c */,
+				A198289720DBC2AA008C2364 /* plaintext.c */,
+				A19828A120DBC2AA008C2364 /* plugin.c */,
+				A198289920DBC2AA008C2364 /* references.c */,
+				A19828A720DBC2AA008C2364 /* registry.c */,
+				A198289A20DBC2AA008C2364 /* render.c */,
+				A19828A220DBC2AA008C2364 /* scanners.c */,
+				A198286420DBC2AA008C2364 /* scanners.re */,
+				A198286220DBC2AA008C2364 /* strikethrough.c */,
+				A198286F20DBC2AA008C2364 /* syntax_extension.c */,
+				A198286A20DBC2AA008C2364 /* table.c */,
+				A198287320DBC2AA008C2364 /* tagfilter.c */,
+				A198289820DBC2AA008C2364 /* utf8.c */,
+				A198286120DBC2AA008C2364 /* xml.c */,
+			);
+			path = cmark_gfm;
+			sourceTree = "<group>";
+		};
+		A198287520DBC2AA008C2364 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				A198288620DBC2AA008C2364 /* autolink.h */,
+				A198288820DBC2AA008C2364 /* buffer.h */,
+				A198288520DBC2AA008C2364 /* checkbox.h */,
+				A198287C20DBC2AA008C2364 /* chunk.h */,
+				A198288720DBC2AA008C2364 /* cmark_ctype.h */,
+				A198287720DBC2AA008C2364 /* cmark_export.h */,
+				A198288B20DBC2AA008C2364 /* cmark_extension_api.h */,
+				A198288420DBC2AA008C2364 /* cmark_version.h */,
+				A198288920DBC2AA008C2364 /* cmark.h */,
+				A198287620DBC2AA008C2364 /* cmarkextensions_export.h */,
+				A198287B20DBC2AA008C2364 /* config.h */,
+				A198288220DBC2AA008C2364 /* core-extensions.h */,
+				A198289120DBC2AA008C2364 /* ext_scanners.h */,
+				A198287D20DBC2AA008C2364 /* footnotes.h */,
+				A198289220DBC2AA008C2364 /* houdini.h */,
+				A198287820DBC2AA008C2364 /* html.h */,
+				A198288E20DBC2AA008C2364 /* inlines.h */,
+				A198289320DBC2AA008C2364 /* iterator.h */,
+				A198288020DBC2AA008C2364 /* libcmark_gfm.h */,
+				A198287A20DBC2AA008C2364 /* map.h */,
+				A198288D20DBC2AA008C2364 /* mention.h */,
+				A198288120DBC2AA008C2364 /* node.h */,
+				A198287E20DBC2AA008C2364 /* parser.h */,
+				A198287920DBC2AA008C2364 /* plugin.h */,
+				A198289520DBC2AA008C2364 /* references.h */,
+				A198288320DBC2AA008C2364 /* registry.h */,
+				A198289620DBC2AA008C2364 /* render.h */,
+				A198287F20DBC2AA008C2364 /* scanners.h */,
+				A198288A20DBC2AA008C2364 /* strikethrough.h */,
+				A198288C20DBC2AA008C2364 /* syntax_extension.h */,
+				A198288F20DBC2AA008C2364 /* table.h */,
+				A198289020DBC2AA008C2364 /* tagfilter.h */,
+				A198289420DBC2AA008C2364 /* utf8.h */,
+			);
+			path = include;
 			sourceTree = "<group>";
 		};
 		AF85BB3E71369DF39A9597F6 /* Frameworks */ = {
@@ -371,9 +629,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A189EA742091E4F300DB0559 /* Markdown.css in Resources */,
+				A19828BC20DBC2AA008C2364 /* scanners.re in Resources */,
 				A156AF872090606C0098BBDD /* Assets.xcassets in Resources */,
 				A1FD269A20932CDD004D1C95 /* highlight-js in Resources */,
 				A156AF8A2090606D0098BBDD /* Main.storyboard in Resources */,
+				A19828B820DBC2AA008C2364 /* LICENSE in Resources */,
+				A19828E520DBC2AA008C2364 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,12 +680,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Twig/Pods-Twig-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Down/Down.framework",
 				"${BUILT_PRODUCTS_DIR}/Highlightr/Highlightr.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Down.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Highlightr.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,25 +698,74 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A19828C220DBC2AA008C2364 /* table.c in Sources */,
 				A18A040A20958EB6006F6B99 /* Int+Extension.swift in Sources */,
+				A19828B520DBC2AA008C2364 /* TextElement.swift in Sources */,
 				A156AF832090606C0098BBDD /* MarkdownViewController.swift in Sources */,
+				A19828C720DBC2AA008C2364 /* syntax_extension.c in Sources */,
+				A19828DD20DBC2AA008C2364 /* node.c in Sources */,
+				A19828BB20DBC2AA008C2364 /* cmark.c in Sources */,
+				A19828D720DBC2AA008C2364 /* plugin.c in Sources */,
 				A148C3A020914F0F00B1165C /* SyntaxThemes.swift in Sources */,
+				A19828D620DBC2AA008C2364 /* html.c in Sources */,
+				A19828D020DBC2AA008C2364 /* render.c in Sources */,
 				A156AFAF209061D60098BBDD /* WindowController.swift in Sources */,
 				A148C3A22091522C00B1165C /* PreferencesViewController.swift in Sources */,
+				A19828CD20DBC2AA008C2364 /* plaintext.c in Sources */,
+				A19828DC20DBC2AA008C2364 /* registry.c in Sources */,
+				A19828D920DBC2AA008C2364 /* footnotes.c in Sources */,
 				A13C23FC20919672008557D0 /* PreviewViewController.swift in Sources */,
+				A19828C420DBC2AA008C2364 /* mention.c in Sources */,
+				A19828BE20DBC2AA008C2364 /* buffer.c in Sources */,
+				A19828E020DBC2AA008C2364 /* ASTOperations.swift in Sources */,
 				A13C23FA209167F0008557D0 /* NSColor+Extension.swift in Sources */,
+				A19828C820DBC2AA008C2364 /* case_fold_switch.inc in Sources */,
+				A19828CE20DBC2AA008C2364 /* utf8.c in Sources */,
 				A182096E20919F6000016AD5 /* HTML.swift in Sources */,
 				A156AFB120908ECE0098BBDD /* Theme.swift in Sources */,
+				A19828B920DBC2AA008C2364 /* xml.c in Sources */,
+				A19828D820DBC2AA008C2364 /* scanners.c in Sources */,
+				A19828E620DBC2AA008C2364 /* Node.swift in Sources */,
+				A19828CC20DBC2AA008C2364 /* houdini_html_e.c in Sources */,
+				A19828E320DBC2AA008C2364 /* Block+ListElement.swift in Sources */,
+				A19828E420DBC2AA008C2364 /* Block+TextElement.swift in Sources */,
+				A19828E120DBC2AA008C2364 /* Node+Elements.swift in Sources */,
+				A19828C920DBC2AA008C2364 /* entities.inc in Sources */,
+				A19828DA20DBC2AA008C2364 /* checkbox.c in Sources */,
 				A18A040820958C8B006F6B99 /* Preferences.swift in Sources */,
+				A19828DF20DBC2AA008C2364 /* Element.swift in Sources */,
+				A19828B620DBC2AA008C2364 /* Block+TableRow.swift in Sources */,
+				A19828DE20DBC2AA008C2364 /* core-extensions.c in Sources */,
+				A19828BD20DBC2AA008C2364 /* man.c in Sources */,
+				A19828C620DBC2AA008C2364 /* houdini_href_e.c in Sources */,
+				A19828CA20DBC2AA008C2364 /* ext_scanners.c in Sources */,
+				A19828C120DBC2AA008C2364 /* cmark_ctype.c in Sources */,
 				A1682E87209097E700164D78 /* NSMutableAttributedString+Extension.swift in Sources */,
 				A198047320DB64BA0066FDA6 /* MarkdownView.swift in Sources */,
+				A19828E720DBC2AA008C2364 /* SwiftAST.swift in Sources */,
+				A19828CF20DBC2AA008C2364 /* references.c in Sources */,
+				A19828CB20DBC2AA008C2364 /* tagfilter.c in Sources */,
 				A13C23F8209153E1008557D0 /* PreferencesWindowController.swift in Sources */,
 				A18A0406209585C8006F6B99 /* Debouncer.swift in Sources */,
+				A19828D220DBC2AA008C2364 /* arena.c in Sources */,
 				A156AF812090606C0098BBDD /* AppDelegate.swift in Sources */,
+				A19828B720DBC2AA008C2364 /* TableRow.swift in Sources */,
 				A1E647DC20D1E9C000F32E55 /* EditorSplitView.swift in Sources */,
+				A19828D120DBC2AA008C2364 /* iterator.c in Sources */,
+				A19828C020DBC2AA008C2364 /* blocks.c in Sources */,
+				A19828D520DBC2AA008C2364 /* map.c in Sources */,
 				A106D59020DB56DA00880B7D /* MarkdownViewController+Extension.swift in Sources */,
+				A19828BA20DBC2AA008C2364 /* strikethrough.c in Sources */,
+				A19828C320DBC2AA008C2364 /* inlines.c in Sources */,
+				A19828C520DBC2AA008C2364 /* latex.c in Sources */,
+				A19828B420DBC2AA008C2364 /* ListElement.swift in Sources */,
+				A19828BF20DBC2AA008C2364 /* autolink.c in Sources */,
+				A19828D320DBC2AA008C2364 /* linked_list.c in Sources */,
+				A19828DB20DBC2AA008C2364 /* houdini_html_u.c in Sources */,
 				A198047520DB7B2E0066FDA6 /* NotificationCenter+Extension.swift in Sources */,
 				A1D5466420D4D9CC00D1221A /* Exporter.swift in Sources */,
+				A19828D420DBC2AA008C2364 /* commonmark.c in Sources */,
+				A19828E220DBC2AA008C2364 /* Inline+TextElement.swift in Sources */,
 				A156AF852090606C0098BBDD /* Document.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,6 +869,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Twig/Libraries/cmark-gfm-swift/cmark_gfm";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -614,6 +923,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Twig/Libraries/cmark-gfm-swift/cmark_gfm";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
@@ -628,6 +938,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = QY544RDL2W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Twig",
+				);
 				INFOPLIST_FILE = Twig/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -651,6 +965,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = QY544RDL2W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Twig",
+				);
 				INFOPLIST_FILE = Twig/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -135,6 +135,8 @@ blockquote > :last-child {
 
 table {
   padding: 0;
+  border-spacing: 0px !important;
+  border-collapse: collapse;
 }
 
 table tr {
@@ -150,14 +152,14 @@ table tr:nth-child(2n) {
 
 table tr th {
   font-weight: bold;
-  border: 1px solid #cccccc;
-  text-align: left;
+  border: 1px solid #dfe2e5;
+  text-align: center;
   margin: 0;
   padding: 6px 13px;
 }
 
 table tr td {
-  border: 1px solid #cccccc;
+  border: 1px solid #dfe2e5;
   text-align: left;
   margin: 0;
   padding: 6px 13px;

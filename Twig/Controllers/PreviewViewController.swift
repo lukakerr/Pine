@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import Down
+//import Down
 import WebKit
 
 class PreviewViewController: NSViewController, WKNavigationDelegate {

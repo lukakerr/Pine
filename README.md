@@ -4,6 +4,7 @@
   <img src="./Twig/Assets.xcassets/AppIcon.appiconset/twig-512.png" width="200">
 </p>
 
+
 Twig is lightweight macOS markdown editor. It's currently a work in progress.
 
 It is a [document based application](https://developer.apple.com/document-based-apps), and aims to follow Apple's [Human Interface Guidelines](https://developer.apple.com/macos/human-interface-guidelines)
@@ -57,17 +58,9 @@ $ open Twig.xcworkspace
 </p>
 
 <p align="center">
+  <img src="https://i.imgur.com/04E4cK2.png">
+</p>
+
+<p align="center">
   <img src="https://i.imgur.com/1xfSfcS.png">
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/kpaHqoF.png">
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/qxB9OLn.png">
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/46Yq1PK.jpg">
 </p>
