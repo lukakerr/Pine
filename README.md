@@ -15,6 +15,7 @@ It is a [document based application](https://developer.apple.com/document-based-
 | ------------------------------------------ | ----------------------------------------- |
 | Themeable                                  | **Yes**                                   |
 | Math support (LaTeX subset)                | **Yes**                                   |
+| Github flavored markdown                | **Yes**                                   |
 | Exporting to PDF, HTML, TXT, RST, RTF      | Partly - [contribubte](./CONTRIBUTING.md) |
 | Toggleable split view                      | **Yes**                                   |
 | Full screen support                        | **Yes**                                   |
