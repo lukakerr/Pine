@@ -54,13 +54,5 @@ $ open Twig.xcworkspace
 ### Screenshots
 
 <p align="center">
-  <img src="https://i.imgur.com/IpFI0RU.png">
-</p>
-
-<p align="center">
   <img src="https://i.imgur.com/04E4cK2.png">
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/1xfSfcS.png">
 </p>
