@@ -25,8 +25,7 @@ class Document: NSDocument {
   }
 
   // Handles changes from another application
-  override func presentedItemDidChange() {
-  }
+  override func presentedItemDidChange() {}
   
   override func makeWindowControllers() {
     // Returns the Storyboard that contains your Document window.

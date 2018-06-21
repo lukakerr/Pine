@@ -24,14 +24,14 @@ class Debouncer: NSObject {
     let nextTimer = Timer.scheduledTimer(
       timeInterval: delay,
       target: self,
-      selector: #selector(fireNow),
+      selector: #selector(fire),
       userInfo: nil,
       repeats: false
     )
     timer = nextTimer
   }
   
-  @objc func fireNow() {
+  @objc func fire() {
     self.callback()
   }
   

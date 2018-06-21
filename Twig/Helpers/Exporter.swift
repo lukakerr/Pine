@@ -16,8 +16,31 @@ public class Exporter {
   /// - Parameters:
   ///   - webview: the instance of the webview
   static func exportPDF(from webview: WKWebView) {
-    let PDFData = webview.dataWithPDF(inside: webview.frame)
-    save(PDFData, filetypes: ["pdf"], type: "PDF")
+    webview.evaluateJavaScript("document.documentElement.outerHTML") { (response, err) in
+      if let HTMLString = response as? String {
+        let HTMLData = "<!DOCTYPE HTML>" + HTMLString
+        let wv = WebView()
+        wv.mainFrame.loadHTMLString(HTMLData, baseURL: nil)
+        
+        let when = DispatchTime.now() + 0.5
+        DispatchQueue.main.asyncAfter(deadline: when) {
+          let printOptions = [NSPrintInfo.AttributeKey.jobDisposition: NSPrintInfo.JobDisposition.save]
+          let printInfo = NSPrintInfo(dictionary: printOptions)
+          printInfo.topMargin = 40.0
+          printInfo.leftMargin = 40.0
+          printInfo.rightMargin = 40.0
+          printInfo.bottomMargin = 40.0
+          printInfo.isVerticallyCentered = false
+
+          let printOp = NSPrintOperation(view: wv.mainFrame.frameView.documentView, printInfo: printInfo)
+          printOp.showsPrintPanel = false
+          printOp.showsProgressPanel = false
+          printOp.pdfPanel = NSPDFPanel()
+          printOp.pdfPanel.options = [.showsPaperSize, .showsOrientation]
+          printOp.run()
+        }
+      }
+    }
   }
   
   /// Export HTML data from a webview
@@ -26,9 +49,11 @@ public class Exporter {
   ///   - webview: the instance of the webview
   static func exportHTML(from webview: WKWebView) {
     webview.evaluateJavaScript("document.documentElement.outerHTML") { (response, err) in
-      let HTMLString = "<!DOCTYPE HTML>" + String(describing: response)
-      if let HTMLData = HTMLString.data(using: .utf8) {
-        save(HTMLData, filetypes: ["html"], type: "HTML")
+      if let HTMLString = response as? String {
+        let HTMLData = "<!DOCTYPE HTML>" + HTMLString
+        if let data = HTMLData.data(using: .utf8) {
+          save(data, filetypes: ["html"], type: "HTML")
+        }
       }
     }
   }

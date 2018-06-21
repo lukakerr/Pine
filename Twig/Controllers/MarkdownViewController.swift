@@ -107,19 +107,17 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   }
   
   private func generatePreview(_ string: String) {
-    DispatchQueue.global(qos: .userInitiated).async {
-      if let pvc = self.getPreviewViewController(),
-        let preview = self.getSplitViewController()?.splitViewItems.last {
+    if let svc = self.getSplitViewController(),
+      let preview = svc.splitViewItems.last {
+      let previewViewController = preview.viewController as? PreviewViewController
+      
+      if preview.isCollapsed { return }
         
-        if preview.isCollapsed {
-          return
-        }
-        
+      DispatchQueue.global(qos: .userInitiated).async {
         if let parsed = try? Down(markdownString: string).toHTML() {
-          html.contents = parsed
           DispatchQueue.main.async {
-            pvc.captureScroll() {
-              pvc.webPreview.loadHTMLString(html.getHTML(), baseURL: nil)
+            previewViewController?.captureScroll() {
+              previewViewController?.webPreview.loadHTMLString(html.getHTML(with: parsed), baseURL: nil)
             }
           }
         }
@@ -174,7 +172,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   }
   
   private func getPreviewViewController() -> PreviewViewController? {
-    return getSplitViewController()?.splitViewItems.last?.viewController as? PreviewViewController
+    return self.getSplitViewController()?.splitViewItems.last?.viewController as? PreviewViewController
   }
 
 }

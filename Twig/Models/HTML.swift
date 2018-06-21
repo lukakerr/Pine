@@ -16,20 +16,20 @@ class HTML {
   // via file:/// so we have to read from the file and insert it into the html inline
   // This file IO only happens when the singleton is instantiated, but the WKWebView
   // has to re-parse the entire HTML returned from getHTML()
-  
   private init() {
     self.copyFiles()
     self.loadCSS()
     self.loadJS()
   }
   
-  var contents: String = ""
   var baseCSS: String = ""
   var css: String = ""
   var js: String = ""
   var y: Int = 0
-  
-  func getHTML() -> String {
+
+  // The innerHTML contents are passed in here rather than stored
+  // to prevent asynchronous race conditions changing the content on startup
+  func getHTML(with contents: String) -> String {
     return(
       """
       <!DOCTYPE html>
@@ -53,7 +53,7 @@ class HTML {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/contrib/auto-render.min.js"></script>
       </head>
       <body>
-        \(self.contents)
+        \(contents)
         <script>
           window.scrollTo(0, \(y));
         </script>
@@ -61,8 +61,6 @@ class HTML {
           renderMathInElement(document.body,{ delimiters: [
             {left: "$$", right: "$$", display: true},
             {left: "$", right: "$", display: false},
-            {left: "\\[", right: "\\]", display: true},
-            {left: "\\(", right: "\\)", display: false},
           ]});
         </script>
       </body>
