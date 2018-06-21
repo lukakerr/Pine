@@ -14,9 +14,9 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
 
   @IBOutlet var markdownTextView: NSTextView!
   @IBOutlet weak var transparentView: NSVisualEffectView!
-  
-  private let highlightr = Highlightr()!
+
   private var debouncedGeneratePreview: Debouncer!
+  private let highlightr = Highlightr()!
   
   // Cocoa binding for text inside markdownTextView
   @objc var attributedMarkdownTextInput: NSAttributedString {
@@ -34,12 +34,9 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
     super.viewDidLoad()
     
     // Setup notification observer for theme change
-    NotificationCenter.default.addObserver(
-      self,
-      selector: #selector(self.themeChanged),
-      name: NSNotification.Name(rawValue: "preferencesChanged"),
-      object: nil
-    )
+    NotificationCenter.receive("preferencesChanged", instance: self, selector: #selector(self.reloadUI))
+    // Setup notification observer for system dark/light mode change
+    NotificationCenter.receive("appearanceChanged", instance: self, selector: #selector(self.reGeneratePreview))
     
     debouncedGeneratePreview = Debouncer(delay: 0.2) {
       self.generatePreview(self.markdownTextView.string)
@@ -57,8 +54,8 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   
   override func viewDidAppear() {
     highlightr.setTheme(to: theme.syntax)
-    setBackgroundColor()
-    generatePreview(markdownTextView.string)
+    theme.background = highlightr.theme.themeBackgroundColor
+    reloadUI()
   }
   
   override var acceptsFirstResponder: Bool {
@@ -86,7 +83,8 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   
   // Syntax highlight the given markdown string and insert into text view
   private func syntaxHighlight(_ string: String) {
-    self.highlightr.setTheme(to: theme.syntax)
+    highlightr.setTheme(to: theme.syntax)
+    theme.background = highlightr.theme.themeBackgroundColor
     
     DispatchQueue.global(qos: .userInitiated).async {
       let highlightedCode = self.highlightr.highlight(string, as: "markdown")
@@ -124,33 +122,15 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
       }
     }
   }
-  
-  // On theme change, update window appearance and reparse with possible new syntax
-  @objc private func themeChanged() {
+
+  @objc private func reloadUI() {
     syntaxHighlight(markdownTextView.string)
-    setBackgroundColor()
-    generatePreview(markdownTextView.string)
+    self.view.updateLayer()
+    reGeneratePreview()
   }
   
-  private func setBackgroundColor() {
-    guard let color = highlightr.theme.themeBackgroundColor else {
-      return
-    }
-    
-    theme.background = color.hex
-    
-    if color.isDark {
-      transparentView.material = .dark
-      theme.code = color.lighter.hex
-      theme.text = "#FFF"
-      self.view.window?.appearance = NSAppearance(named: .vibrantDark)
-    } else {
-      transparentView.material = .light
-      theme.code = color.darker.hex
-      theme.text = "#000"
-      self.view.window?.appearance = NSAppearance(named: .vibrantLight)
-    }
-    self.view.window?.backgroundColor = color
+  @objc private func reGeneratePreview() {
+    generatePreview(markdownTextView.string)
   }
   
   private func setWordCount() {
@@ -165,14 +145,6 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
       countString = ""
     }
     wordCountView?.stringValue = countString
-  }
-  
-  private func getSplitViewController() -> NSSplitViewController? {
-    return self.parent as? NSSplitViewController
-  }
-  
-  private func getPreviewViewController() -> PreviewViewController? {
-    return self.getSplitViewController()?.splitViewItems.last?.viewController as? PreviewViewController
   }
 
 }

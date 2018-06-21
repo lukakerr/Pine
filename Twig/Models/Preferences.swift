@@ -31,6 +31,10 @@ class Preferences {
     if defaults.object(forKey: "verticalSplitView") != nil {
       self.verticalSplitView = defaults.bool(forKey: "verticalSplitView")
     }
+    
+    if defaults.object(forKey: "modernTitlebar") != nil {
+      self.modernTitlebar = defaults.bool(forKey: "modernTitlebar")
+    }
   }
   
   public var showPreviewOnStartup = true {
@@ -62,6 +66,12 @@ class Preferences {
   public var verticalSplitView = true {
     willSet(newVal) {
       setDefaults(key: "verticalSplitView", newVal)
+    }
+  }
+  
+  public var modernTitlebar = true {
+    willSet(newVal) {
+      setDefaults(key: "modernTitlebar", newVal)
     }
   }
   

@@ -13,10 +13,24 @@ class PreferencesWindowController: NSWindowController, NSWindowDelegate {
   override func windowDidLoad() {
     super.windowDidLoad()
     
+    updateUI()
+    
+    NotificationCenter.receive("preferencesChanged", instance: self, selector: #selector(self.updateUI))
+
     window?.center()
     window?.makeKeyAndOrderFront(nil)
-    
-    NSApp.activate(ignoringOtherApps: true)
+  }
+  
+  @objc private func updateUI() {
+    if NSApp.effectiveAppearance.name == .darkAqua { return }
+    if let bg = theme.background {
+      window?.backgroundColor = bg
+      if bg.isDark {
+        window?.appearance = NSAppearance(named: .darkAqua)
+      } else {
+        window?.appearance = NSAppearance(named: .aqua)
+      }
+    }
   }
   
 }

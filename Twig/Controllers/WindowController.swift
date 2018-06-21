@@ -15,12 +15,7 @@ class WindowController: NSWindowController {
     self.handleTransparentView()
     
     // Setup notification observer for preferences change
-    NotificationCenter.default.addObserver(
-      self,
-      selector: #selector(self.handleTransparentView),
-      name: NSNotification.Name(rawValue: "preferencesChanged"),
-      object: nil
-    )
+    NotificationCenter.receive("preferencesChanged", instance: self, selector: #selector(self.handleTransparentView))
     
     // set word count label in titlebar
     if let titlebarController = self.storyboard?.instantiateController(withIdentifier: "titlebarViewController") as? NSTitlebarAccessoryViewController {

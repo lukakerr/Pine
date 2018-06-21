@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5EC2EB6C996D63F9FA158160 /* Pods_Twig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66B7DAE689A6827E658233B /* Pods_Twig.framework */; };
+		A106D59020DB56DA00880B7D /* MarkdownViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106D58F20DB56DA00880B7D /* MarkdownViewController+Extension.swift */; };
 		A13C23F8209153E1008557D0 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C23F7209153E1008557D0 /* PreferencesWindowController.swift */; };
 		A13C23FA209167F0008557D0 /* NSColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C23F9209167F0008557D0 /* NSColor+Extension.swift */; };
 		A13C23FC20919672008557D0 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C23FB20919672008557D0 /* PreviewViewController.swift */; };
@@ -28,6 +29,8 @@
 		A18A0406209585C8006F6B99 /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A0405209585C8006F6B99 /* Debouncer.swift */; };
 		A18A040820958C8B006F6B99 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A040720958C8B006F6B99 /* Preferences.swift */; };
 		A18A040A20958EB6006F6B99 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A040920958EB6006F6B99 /* Int+Extension.swift */; };
+		A198047320DB64BA0066FDA6 /* MarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198047220DB64BA0066FDA6 /* MarkdownView.swift */; };
+		A198047520DB7B2E0066FDA6 /* NotificationCenter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198047420DB7B2E0066FDA6 /* NotificationCenter+Extension.swift */; };
 		A1D5466420D4D9CC00D1221A /* Exporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D5466320D4D9CC00D1221A /* Exporter.swift */; };
 		A1E647DC20D1E9C000F32E55 /* EditorSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */; };
 		A1FD269A20932CDD004D1C95 /* highlight-js in Resources */ = {isa = PBXBuildFile; fileRef = A1FD269820932CDC004D1C95 /* highlight-js */; };
@@ -51,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A106D58F20DB56DA00880B7D /* MarkdownViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MarkdownViewController+Extension.swift"; sourceTree = "<group>"; };
 		A13C23F7209153E1008557D0 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
 		A13C23F9209167F0008557D0 /* NSColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Extension.swift"; sourceTree = "<group>"; };
 		A13C23FB20919672008557D0 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 		A18A0405209585C8006F6B99 /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
 		A18A040720958C8B006F6B99 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		A18A040920958EB6006F6B99 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		A198047220DB64BA0066FDA6 /* MarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownView.swift; sourceTree = "<group>"; };
+		A198047420DB7B2E0066FDA6 /* NotificationCenter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Extension.swift"; sourceTree = "<group>"; };
 		A1D5466320D4D9CC00D1221A /* Exporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exporter.swift; sourceTree = "<group>"; };
 		A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorSplitView.swift; sourceTree = "<group>"; };
 		A1FD269820932CDC004D1C95 /* highlight-js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "highlight-js"; sourceTree = "<group>"; };
@@ -149,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */,
+				A198047220DB64BA0066FDA6 /* MarkdownView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,6 +222,8 @@
 			isa = PBXGroup;
 			children = (
 				A18A040920958EB6006F6B99 /* Int+Extension.swift */,
+				A106D58F20DB56DA00880B7D /* MarkdownViewController+Extension.swift */,
+				A198047420DB7B2E0066FDA6 /* NotificationCenter+Extension.swift */,
 				A13C23F9209167F0008557D0 /* NSColor+Extension.swift */,
 				A1682E86209097E700164D78 /* NSMutableAttributedString+Extension.swift */,
 			);
@@ -441,10 +450,13 @@
 				A156AFB120908ECE0098BBDD /* Theme.swift in Sources */,
 				A18A040820958C8B006F6B99 /* Preferences.swift in Sources */,
 				A1682E87209097E700164D78 /* NSMutableAttributedString+Extension.swift in Sources */,
+				A198047320DB64BA0066FDA6 /* MarkdownView.swift in Sources */,
 				A13C23F8209153E1008557D0 /* PreferencesWindowController.swift in Sources */,
 				A18A0406209585C8006F6B99 /* Debouncer.swift in Sources */,
 				A156AF812090606C0098BBDD /* AppDelegate.swift in Sources */,
 				A1E647DC20D1E9C000F32E55 /* EditorSplitView.swift in Sources */,
+				A106D59020DB56DA00880B7D /* MarkdownViewController+Extension.swift in Sources */,
+				A198047520DB7B2E0066FDA6 /* NotificationCenter+Extension.swift in Sources */,
 				A1D5466420D4D9CC00D1221A /* Exporter.swift in Sources */,
 				A156AF852090606C0098BBDD /* Document.swift in Sources */,
 			);
@@ -621,6 +633,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.Twig;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -643,6 +656,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.Twig;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

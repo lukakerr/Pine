@@ -11,6 +11,10 @@ import Cocoa
 class Theme {
   static let sharedInstance = Theme()
   
+  public var code: String = "#FFF"
+  public var text: String = "#FFF"
+  public var background: NSColor?
+  
   private init() {
     // Restore default syntax theme
     if let defaultSyntax = defaults.string(forKey: "syntax") {
@@ -18,15 +22,12 @@ class Theme {
     }
   }
   
-  // Default theme is github-gist
-  public var syntax: String = "github-gist" {
+  // Default theme is gruvbox-dark
+  public var syntax: String = "gruvbox-dark" {
     willSet(newSyntax) {
       defaults.setValue(newSyntax, forKey: "syntax")
     }
   }
-  public var background: String = "#FFF"
-  public var code: String = "#FFF"
-  public var text: String = "#FFF"
   
 }
 

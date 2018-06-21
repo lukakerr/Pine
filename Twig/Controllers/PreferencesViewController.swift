@@ -16,6 +16,7 @@ class PreferencesViewController: NSViewController {
   @IBOutlet weak var autosaveDocument: NSButton!
   @IBOutlet weak var transparentEditingView: NSButton!
   @IBOutlet weak var verticalSplitView: NSButton!
+  @IBOutlet weak var modernTitlebar: NSButton!
   
   let wc = WindowController()
   
@@ -35,6 +36,7 @@ class PreferencesViewController: NSViewController {
     autosaveDocument.state = getState(preferences.autosaveDocument)
     transparentEditingView.state = getState(preferences.transparentEditingView)
     verticalSplitView.state = getState(preferences.verticalSplitView)
+    modernTitlebar.state = getState(preferences.modernTitlebar)
   }
   
   private func getState(_ state: Bool) -> NSControl.StateValue {
@@ -81,11 +83,13 @@ class PreferencesViewController: NSViewController {
     }
   }
 
+  @IBAction func changeModernTitlebar(_ sender: NSButton) {
+    preferences.modernTitlebar = sender.state.rawValue.bool
+    postNotification()
+  }
+
   private func postNotification() {
-    NotificationCenter.default.post(
-      name: NSNotification.Name(rawValue: "preferencesChanged"),
-      object: nil
-    )
+    NotificationCenter.send("preferencesChanged")
   }
   
 }
