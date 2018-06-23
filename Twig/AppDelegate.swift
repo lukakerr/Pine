@@ -18,7 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
   func applicationWillTerminate(_ aNotification: Notification) {
   }
-  
+
   func applicationShouldOpenUntitledFile(_ sender: NSApplication) -> Bool {
     return preferences.openNewDocumentOnStartup
   }

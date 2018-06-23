@@ -13,7 +13,7 @@ import WebKit
 /// Must provide a filetype and generic method used to export
 protocol Exporter {
   static var filetype: String { get }
-  
+
   /// Export data from a view
   ///
   /// - Parameters:
@@ -33,7 +33,7 @@ struct PDFExporter: Exporter {
         let HTMLData = "<!DOCTYPE HTML>" + HTMLString
         let wv = WebView()
         wv.mainFrame.loadHTMLString(HTMLData, baseURL: nil)
-        
+
         let when = DispatchTime.now() + 0.5
         DispatchQueue.main.asyncAfter(deadline: when) {
           let printOptions = [NSPrintInfo.AttributeKey.jobDisposition: NSPrintInfo.JobDisposition.save]
@@ -43,7 +43,7 @@ struct PDFExporter: Exporter {
           printInfo.rightMargin = 40.0
           printInfo.bottomMargin = 40.0
           printInfo.isVerticallyCentered = false
-          
+
           let printOp = NSPrintOperation(view: wv.mainFrame.frameView.documentView, printInfo: printInfo)
           printOp.showsPrintPanel = false
           printOp.showsProgressPanel = false
@@ -59,7 +59,7 @@ struct PDFExporter: Exporter {
 
 struct HTMLExporter: Exporter {
   static var filetype = "html"
-  
+
   static func export<T>(from view: T) {
     // we expect the view to be a webview from which we can get HTML
     let webview = view as! WKWebView

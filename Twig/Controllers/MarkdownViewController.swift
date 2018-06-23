@@ -17,7 +17,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
 
   private var debouncedGeneratePreview: Debouncer!
   private let highlightr = Highlightr()!
-  
+
   // Cocoa binding for text inside markdownTextView
   @objc var attributedMarkdownTextInput: NSAttributedString {
     get {
@@ -32,63 +32,63 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+
     // Setup notification observer for theme change
     NotificationCenter.receive("preferencesChanged", instance: self, selector: #selector(self.reloadUI))
     // Setup notification observer for system dark/light mode change
     NotificationCenter.receive("appearanceChanged", instance: self, selector: #selector(self.reGeneratePreview))
-    
+
     debouncedGeneratePreview = Debouncer(delay: 0.2) {
       self.generatePreview(self.markdownTextView.string)
     }
-    
+
     if let preview = getSplitViewController()?.splitViewItems.last {
       preview.isCollapsed = !preferences.showPreviewOnStartup
     }
-    
+
     markdownTextView.delegate = self
     markdownTextView.font = preferences.font
     markdownTextView.insertionPointColor = .gray
     markdownTextView.textContainerInset = NSSize(width: 10.0, height: 10.0)
   }
-  
+
   override func viewDidAppear() {
     highlightr.setTheme(to: theme.syntax)
     theme.background = highlightr.theme.themeBackgroundColor
     reloadUI()
   }
-  
+
   override var acceptsFirstResponder: Bool {
     return true
   }
-  
+
   @IBAction func togglePreview(sender: NSMenuItem) {
     if let preview = getSplitViewController()?.splitViewItems.last {
       preview.collapseBehavior = .preferResizingSplitViewWithFixedSiblings
       preview.animator().isCollapsed = !preview.isCollapsed
     }
   }
-  
+
   @IBAction func exportPDF(sender: NSMenuItem) {
     if let pvc = getPreviewViewController() {
       PDFExporter.export(from: pvc.webPreview)
     }
   }
-  
+
   @IBAction func exportHTML(sender: NSMenuItem) {
     if let pvc = getPreviewViewController() {
       HTMLExporter.export(from: pvc.webPreview)
     }
   }
-  
+
   // Syntax highlight the given markdown string and insert into text view
   private func syntaxHighlight(_ string: String) {
     highlightr.setTheme(to: theme.syntax)
     theme.background = highlightr.theme.themeBackgroundColor
-    
+
     DispatchQueue.global(qos: .userInitiated).async {
       let highlightedCode = self.highlightr.highlight(string, as: "markdown")
-      
+
       if let syntaxHighlighted = highlightedCode {
         let code = NSMutableAttributedString(attributedString: syntaxHighlighted)
         code.withFont(preferences.font)
@@ -98,23 +98,23 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
           self.markdownTextView.textStorage?.beginEditing()
           self.markdownTextView.textStorage?.setAttributedString(code)
           self.markdownTextView.textStorage?.endEditing()
-          self.markdownTextView.setSelectedRange(NSMakeRange(cursorPosition, 0))
+          self.markdownTextView.setSelectedRange(NSRange(location: cursorPosition, length: 0))
         }
       }
     }
   }
-  
+
   private func generatePreview(_ string: String) {
     if let svc = self.getSplitViewController(),
       let preview = svc.splitViewItems.last {
       let previewViewController = preview.viewController as? PreviewViewController
-      
+
       if preview.isCollapsed { return }
 
       DispatchQueue.global(qos: .userInitiated).async {
         if let parsed = Node(markdown: string)?.html {
           DispatchQueue.main.async {
-            previewViewController?.captureScroll() {
+            previewViewController?.captureScroll {
               previewViewController?.webPreview.loadHTMLString(html.getHTML(with: parsed), baseURL: nil)
             }
           }
@@ -128,17 +128,17 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
     self.view.updateLayer()
     reGeneratePreview()
   }
-  
+
   @objc private func reGeneratePreview() {
     generatePreview(markdownTextView.string)
   }
-  
+
   private func setWordCount() {
     let wordCountView = self.view.window?.titlebarAccessoryViewControllers.first?.view.subviews.first as? NSTextField
     guard let wordCount = self.markdownTextView.textStorage?.words.count else { return }
-    
+
     var countString = String(describing: wordCount) + " word"
-    
+
     if wordCount > 1 {
       countString += "s"
     } else if wordCount < 1 {

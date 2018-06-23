@@ -10,69 +10,69 @@ import Cocoa
 
 class Preferences {
   static let sharedInstance = Preferences()
-  
+
   private init() {
     if defaults.object(forKey: "showPreviewOnStartup") != nil {
       self.showPreviewOnStartup = defaults.bool(forKey: "showPreviewOnStartup")
     }
-    
+
     if defaults.object(forKey: "openNewDocumentOnStartup") != nil {
       self.openNewDocumentOnStartup = defaults.bool(forKey: "openNewDocumentOnStartup")
     }
-    
+
     if defaults.object(forKey: "autosaveDocument") != nil {
       self.autosaveDocument = defaults.bool(forKey: "autosaveDocument")
     }
-    
+
     if defaults.object(forKey: "verticalSplitView") != nil {
       self.verticalSplitView = defaults.bool(forKey: "verticalSplitView")
     }
-    
+
     if defaults.object(forKey: "modernTitlebar") != nil {
       self.modernTitlebar = defaults.bool(forKey: "modernTitlebar")
     }
-    
+
     if defaults.object(forKey: "useSystemAppearance") != nil {
       self.useSystemAppearance = defaults.bool(forKey: "useSystemAppearance")
     }
   }
-  
+
   public var showPreviewOnStartup = true {
     willSet(newVal) {
       setDefaults(key: "showPreviewOnStartup", newVal)
     }
   }
-  
+
   public var openNewDocumentOnStartup = true {
     willSet(newVal) {
       setDefaults(key: "openNewDocumentOnStartup", newVal)
     }
   }
-  
+
   public var autosaveDocument = true {
     willSet(newVal) {
       setDefaults(key: "autosaveDocument", newVal)
     }
   }
-  
+
   public var verticalSplitView = true {
     willSet(newVal) {
       setDefaults(key: "verticalSplitView", newVal)
     }
   }
-  
+
   public var modernTitlebar = true {
     willSet(newVal) {
       setDefaults(key: "modernTitlebar", newVal)
     }
   }
-  
+
   public var useSystemAppearance = false {
     willSet(newVal) {
       setDefaults(key: "useSystemAppearance", newVal)
     }
   }
-  
+
   public var font: NSFont {
     get {
       let fontSize = defaults.double(forKey: "fontSize")
@@ -80,14 +80,14 @@ class Preferences {
         let font = NSFont(name: fontName, size: CGFloat(fontSize)) {
         return font
       }
-      
+
       // default font not found, try to use a few standard ones
       for fontName in ["Courier", "Monaco", "Menlo", "SF Mono"] {
         if let font = NSFont(name: fontName, size: CGFloat(18)) {
           return font
         }
       }
-      
+
       return NSFont.monospacedDigitSystemFont(ofSize: CGFloat(18), weight: .regular)
     }
     set {
@@ -95,11 +95,11 @@ class Preferences {
       setDefaults(key: "fontSize", newValue.pointSize)
     }
   }
-  
+
   private func setDefaults(key: String, _ val: Any) {
     defaults.setValue(val, forKey: key)
   }
-  
+
 }
 
 let preferences = Preferences.sharedInstance

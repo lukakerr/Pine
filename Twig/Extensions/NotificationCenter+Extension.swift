@@ -9,14 +9,14 @@
 import Foundation
 
 extension NotificationCenter {
-  
+
   static func send(_ key: String) {
     self.default.post(
       name: NSNotification.Name(rawValue: key),
       object: nil
     )
   }
-  
+
   static func receive(_ key: String, instance: Any, selector: Selector) {
     self.default.addObserver(
       instance,
@@ -25,5 +25,5 @@ extension NotificationCenter {
       object: nil
     )
   }
-  
+
 }

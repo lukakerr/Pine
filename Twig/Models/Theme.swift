@@ -10,25 +10,25 @@ import Cocoa
 
 class Theme {
   static let sharedInstance = Theme()
-  
+
   public var code: NSColor = .gray
   public var text: NSColor = .black
   public var background: NSColor = .white
-  
+
   private init() {
     // Restore default syntax theme
     if let defaultSyntax = defaults.string(forKey: "syntax") {
       self.syntax = defaultSyntax
     }
   }
-  
+
   // Default theme is gruvbox-dark
   public var syntax: String = "gruvbox-dark" {
     willSet(newSyntax) {
       defaults.setValue(newSyntax, forKey: "syntax")
     }
   }
-  
+
 }
 
 let theme = Theme.sharedInstance

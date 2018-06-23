@@ -1,0 +1,10 @@
+disabled_rules:
+  - identifier_name
+  - force_cast
+  - large_tuple
+
+# paths to ignore during linting
+excluded:
+  - Pods
+  - Resources
+  - Twig/Libraries

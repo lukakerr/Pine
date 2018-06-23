@@ -9,18 +9,18 @@
 import Cocoa
 
 class PreferencesWindowController: NSWindowController, NSWindowDelegate {
-  
+
   override func windowDidLoad() {
     super.windowDidLoad()
-    
+
     updateUI()
-    
+
     NotificationCenter.receive("preferencesChanged", instance: self, selector: #selector(self.updateUI))
 
     window?.center()
     window?.makeKeyAndOrderFront(nil)
   }
-  
+
   @objc private func updateUI() {
     if NSApp.effectiveAppearance.name == .darkAqua { return }
     window?.backgroundColor = theme.background
@@ -30,5 +30,5 @@ class PreferencesWindowController: NSWindowController, NSWindowDelegate {
       window?.appearance = NSAppearance(named: .aqua)
     }
   }
-  
+
 }

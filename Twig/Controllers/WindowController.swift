@@ -9,16 +9,18 @@
 import Cocoa
 
 class WindowController: NSWindowController {
-  
+
   override func windowDidLoad() {
     super.windowDidLoad()
-    
+
     // set word count label in titlebar
-    if let titlebarController = self.storyboard?.instantiateController(withIdentifier: "titlebarViewController") as? NSTitlebarAccessoryViewController {
-      titlebarController.layoutAttribute = .right
-      self.window?.addTitlebarAccessoryViewController(titlebarController)
-      self.showWindow(self.window)
-    }
+    guard let titlebarController = self.storyboard?.instantiateController(
+      withIdentifier: "titlebarViewController"
+    ) as? NSTitlebarAccessoryViewController else { return }
+
+    titlebarController.layoutAttribute = .right
+    self.window?.addTitlebarAccessoryViewController(titlebarController)
+    self.showWindow(self.window)
   }
 
 }

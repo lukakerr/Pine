@@ -9,7 +9,7 @@
 import Cocoa
 
 class Document: NSDocument {
-  
+
   fileprivate var markdownVC: MarkdownViewController?
   fileprivate var fileData: Data?
   fileprivate var fileUrl: URL?
@@ -17,7 +17,7 @@ class Document: NSDocument {
   override init() {
     super.init()
   }
-  
+
   // Autosaving
   override class var autosavesInPlace: Bool {
     return preferences.autosaveDocument
@@ -26,7 +26,7 @@ class Document: NSDocument {
   // Handles changes from another application
   override func presentedItemDidChange() {
   }
-  
+
   override func makeWindowControllers() {
     // Returns the Storyboard that contains your Document window.
     let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
@@ -45,14 +45,14 @@ class Document: NSDocument {
     }
     return data
   }
-  
+
   // Reads from a file URL and updates the class variable fileData
   override func read(from url: URL, ofType typeName: String) throws {
     let contents = try? String(contentsOf: url, encoding: .utf8)
     self.fileUrl = url
     self.fileData = contents?.data(using: .utf8)
   }
-  
+
   private func setContents() {
     if let data = self.fileData, let contents = String(data: data, encoding: .utf8) {
       self.markdownVC?.markdownTextView.string = contents
@@ -61,4 +61,3 @@ class Document: NSDocument {
   }
 
 }
-

@@ -9,7 +9,7 @@
 import Cocoa
 
 class MarkdownView: NSView {
-  
+
   override func updateLayer() {
     updateUI()
   }
@@ -17,18 +17,18 @@ class MarkdownView: NSView {
   private func updateUI() {
     let bg = theme.background
     let appearance = NSApp.effectiveAppearance.name
-    
+
     self.window?.titlebarAppearsTransparent = preferences.modernTitlebar
-    
+
     if appearance == .darkAqua || bg.isDark {
       theme.code = bg.lighter
       theme.text = .white
-      
+
       // using dark mode, so remove theme based appearance
       if appearance == .darkAqua {
         self.window?.backgroundColor = nil
       } else {
-        if !preferences.useSystemAppearance  {
+        if !preferences.useSystemAppearance {
           self.window?.appearance = NSAppearance(named: .darkAqua)
         }
         self.window?.backgroundColor = bg
@@ -41,7 +41,7 @@ class MarkdownView: NSView {
       }
       self.window?.backgroundColor = bg
     }
-    
+
     // remove appearance so when dark/light mode changed, updateLayer() is called
     if preferences.useSystemAppearance {
       self.window?.appearance = nil
@@ -49,5 +49,5 @@ class MarkdownView: NSView {
 
     NotificationCenter.send("appearanceChanged")
   }
-  
+
 }

@@ -13,14 +13,14 @@ import WebKit
 class PreviewViewController: NSViewController, WKNavigationDelegate {
 
   @IBOutlet weak var webPreview: WKWebView!
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
     webPreview.navigationDelegate = self
     webPreview.setValue(false, forKey: "drawsBackground")
 //    webPreview.configuration.preferences.setValue(true, forKey: "developerExtrasEnabled")
   }
-  
+
   public func captureScroll(completion: @escaping () -> Void) {
     webPreview.evaluateJavaScript("window.scrollY;") { (response, err) in
       if let pos = response as? Int {
@@ -29,7 +29,7 @@ class PreviewViewController: NSViewController, WKNavigationDelegate {
       }
     }
   }
-  
+
   // Open web links in browser, not webview
   public func webView(_ webView: WKWebView,
                       decidePolicyFor navigationAction: WKNavigationAction,
@@ -46,5 +46,5 @@ class PreviewViewController: NSViewController, WKNavigationDelegate {
       decisionHandler(.allow)
     }
   }
-  
+
 }
