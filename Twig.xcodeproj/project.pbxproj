@@ -83,6 +83,8 @@
 		A19828E520DBC2AA008C2364 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A19828B120DBC2AA008C2364 /* Info.plist */; };
 		A19828E620DBC2AA008C2364 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19828B220DBC2AA008C2364 /* Node.swift */; };
 		A19828E720DBC2AA008C2364 /* SwiftAST.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19828B320DBC2AA008C2364 /* SwiftAST.swift */; };
+		A1C65FB620DE2B0D00326C60 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C65FB520DE2B0D00326C60 /* Alert.swift */; };
+		A1C65FB920DE2CEE00326C60 /* SaveError+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C65FB820DE2CEE00326C60 /* SaveError+Extension.swift */; };
 		A1D5466420D4D9CC00D1221A /* Exporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D5466320D4D9CC00D1221A /* Exporter.swift */; };
 		A1E647DC20D1E9C000F32E55 /* EditorSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */; };
 		A1F122DF20DE0D27007DFD1A /* FileSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F122DE20DE0D27007DFD1A /* FileSaver.swift */; };
@@ -224,6 +226,8 @@
 		A19828B120DBC2AA008C2364 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A19828B220DBC2AA008C2364 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		A19828B320DBC2AA008C2364 /* SwiftAST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftAST.swift; sourceTree = "<group>"; };
+		A1C65FB520DE2B0D00326C60 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		A1C65FB820DE2CEE00326C60 /* SaveError+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SaveError+Extension.swift"; sourceTree = "<group>"; };
 		A1D5466320D4D9CC00D1221A /* Exporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exporter.swift; sourceTree = "<group>"; };
 		A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorSplitView.swift; sourceTree = "<group>"; };
 		A1F122DE20DE0D27007DFD1A /* FileSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSaver.swift; sourceTree = "<group>"; };
@@ -289,6 +293,7 @@
 				A1D5466320D4D9CC00D1221A /* Exporter.swift */,
 				A148C39F20914F0F00B1165C /* SyntaxThemes.swift */,
 				A1F122DE20DE0D27007DFD1A /* FileSaver.swift */,
+				A1C65FB520DE2B0D00326C60 /* Alert.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -364,6 +369,7 @@
 		A1682E85209097D500164D78 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A1C65FB720DE2CDC00326C60 /* Errors */,
 				A18A040920958EB6006F6B99 /* Int+Extension.swift */,
 				A106D58F20DB56DA00880B7D /* MarkdownViewController+Extension.swift */,
 				A198047420DB7B2E0066FDA6 /* NotificationCenter+Extension.swift */,
@@ -498,6 +504,14 @@
 				A198289420DBC2AA008C2364 /* utf8.h */,
 			);
 			path = include;
+			sourceTree = "<group>";
+		};
+		A1C65FB720DE2CDC00326C60 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				A1C65FB820DE2CEE00326C60 /* SaveError+Extension.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		AF85BB3E71369DF39A9597F6 /* Frameworks */ = {
@@ -714,6 +728,7 @@
 				A19828D020DBC2AA008C2364 /* render.c in Sources */,
 				A156AFAF209061D60098BBDD /* WindowController.swift in Sources */,
 				A148C3A22091522C00B1165C /* PreferencesViewController.swift in Sources */,
+				A1C65FB920DE2CEE00326C60 /* SaveError+Extension.swift in Sources */,
 				A19828CD20DBC2AA008C2364 /* plaintext.c in Sources */,
 				A19828DC20DBC2AA008C2364 /* registry.c in Sources */,
 				A19828D920DBC2AA008C2364 /* footnotes.c in Sources */,
@@ -725,6 +740,7 @@
 				A19828C820DBC2AA008C2364 /* case_fold_switch.h in Sources */,
 				A19828CE20DBC2AA008C2364 /* utf8.c in Sources */,
 				A182096E20919F6000016AD5 /* HTML.swift in Sources */,
+				A1C65FB620DE2B0D00326C60 /* Alert.swift in Sources */,
 				A156AFB120908ECE0098BBDD /* Theme.swift in Sources */,
 				A19828B920DBC2AA008C2364 /* xml.c in Sources */,
 				A19828D820DBC2AA008C2364 /* scanners.c in Sources */,

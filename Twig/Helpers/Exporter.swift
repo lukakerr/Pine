@@ -69,7 +69,13 @@ struct HTMLExporter: Exporter {
         let HTMLData = "<!DOCTYPE HTML>" + HTMLString
         if let data = HTMLData.data(using: .utf8) {
           let fileSaver = FileSaver(data: data, filetypes: [self.filetype])
-          fileSaver.save()
+          do {
+            try fileSaver.save()
+          } catch let error as SaveError {
+            Alert.display(error.description)
+          } catch {
+            return
+          }
         }
       }
     }
