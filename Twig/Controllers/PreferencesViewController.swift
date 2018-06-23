@@ -70,13 +70,6 @@ class PreferencesViewController: NSViewController {
     fontPanel.setPanelFont(preferences.font, isMultiple: false)
     fontPanel.makeKeyAndOrderFront(sender)
   }
-  
-  override func changeFont(_ sender: Any?) {
-    if let fontManager = sender as? NSFontManager {
-      preferences.font = fontManager.convert(preferences.font)
-      postNotification()
-    }
-  }
 
   @IBAction func changeModernTitlebar(_ sender: NSButton) {
     preferences.modernTitlebar = sender.state.rawValue.bool
@@ -86,6 +79,20 @@ class PreferencesViewController: NSViewController {
   @IBAction func changeUseSystemAppearance(_ sender: NSButton) {
     preferences.useSystemAppearance = sender.state.rawValue.bool
     postNotification()
+  }
+  
+  override func changeFont(_ sender: Any?) {
+    if let fontManager = sender as? NSFontManager {
+      preferences.font = fontManager.convert(preferences.font)
+      postNotification()
+    }
+  }
+  
+  @IBAction func revealThemes(_ sender: NSButton) {
+    if let folder =  FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first {
+      let styles = folder.appendingPathComponent("highlight-js/styles")
+      NSWorkspace.shared.activateFileViewerSelecting([styles])
+    }
   }
 
   private func postNotification() {
