@@ -70,6 +70,9 @@ static cmark_node *match(cmark_syntax_extension *self, cmark_parser *parser,
     checkbox->checked = character != ' ';
     checkbox->location = parent->origin_offset - leftBracket;
     checkbox->length = len;
+  
+    // use a custom checkbox item node
+    parent->parent->type = CMARK_NODE_CHECKBOX_ITEM;
 
     cmark_inline_parser_set_offset(inline_parser, leftBracket + len);
     // undo the left bracket being a text node

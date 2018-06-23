@@ -173,6 +173,11 @@ table tr th :last-child, table tr td :last-child {
   margin-bottom: 0;
 }
 
+ul .task-list-item {
+  list-style-type: none;
+  margin: 0 0.2em 0.25em -1.4em;
+}
+
 img {
   max-width: 100%;
 }
