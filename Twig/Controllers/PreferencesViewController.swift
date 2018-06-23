@@ -25,7 +25,7 @@ class PreferencesViewController: NSViewController {
 
     syntaxDropdown.removeAllItems()
 
-    for syntax in SYNTAX_THEMES {
+    for syntax in SyntaxThemes.ThemeList {
       syntaxDropdown.addItem(withTitle: syntax)
     }
 

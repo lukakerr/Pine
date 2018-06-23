@@ -11,7 +11,7 @@ import Foundation
 extension SaveError: CustomStringConvertible {
   var description: String {
     switch self {
-    case .UnableToWrite:
+    case .unableToWrite:
       return "Unable to write to file"
     case .URLNotFound:
       return "Directory not found"

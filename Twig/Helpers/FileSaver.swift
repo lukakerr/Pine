@@ -9,7 +9,7 @@
 import Cocoa
 
 enum SaveError: Error {
-  case UnableToWrite
+  case unableToWrite
   case URLNotFound
 }
 
@@ -42,7 +42,7 @@ class FileSaver {
       do {
         try self.data.write(to: url, options: .atomic)
       } catch {
-        throw SaveError.UnableToWrite
+        throw SaveError.unableToWrite
       }
     }
   }

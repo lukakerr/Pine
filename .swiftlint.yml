@@ -1,5 +1,4 @@
 disabled_rules:
-  - identifier_name
   - force_cast
   - large_tuple
 
@@ -8,3 +7,6 @@ excluded:
   - Pods
   - Resources
   - Twig/Libraries
+
+identifier_name:
+  min_length: 1

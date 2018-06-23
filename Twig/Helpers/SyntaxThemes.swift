@@ -8,22 +8,28 @@
 
 import Foundation
 
-// Read theme file names from application support directory
-// This allows users to create their own themes
-public var SYNTAX_THEMES: [String] {
-  if let supportFolder =  FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first {
-    let stylesFolder = supportFolder.appendingPathComponent("highlight-js/styles")
+struct SyntaxThemes {
 
-    let contents = try? FileManager.default.contentsOfDirectory(
-      at: stylesFolder,
-      includingPropertiesForKeys: nil,
-      options: []
-    )
+  public static let ThemeList: [String] = getThemes()
 
-    if let cssFiles = contents?
-      .filter({ $0.pathExtension == "css" })
-      .map({ $0.deletingPathExtension().lastPathComponent })
-      .sorted() { return cssFiles }
+  // Read theme file names from application support directory
+  // This allows users to create their own themes
+  private static func getThemes() -> [String] {
+    if let supportFolder =  FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first {
+      let stylesFolder = supportFolder.appendingPathComponent("highlight-js/styles")
+
+      let contents = try? FileManager.default.contentsOfDirectory(
+        at: stylesFolder,
+        includingPropertiesForKeys: nil,
+        options: []
+      )
+
+      if let cssFiles = contents?
+        .filter({ $0.pathExtension == "css" })
+        .map({ $0.deletingPathExtension().lastPathComponent })
+        .sorted() { return cssFiles }
+    }
+    return []
   }
-  return []
+
 }
