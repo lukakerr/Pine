@@ -10,10 +10,9 @@ import Cocoa
 
 class Document: NSDocument {
   
-  var markdownVC: MarkdownViewController?
-  
-  private var fileData: Data?
-  private var fileUrl: URL?
+  fileprivate var markdownVC: MarkdownViewController?
+  fileprivate var fileData: Data?
+  fileprivate var fileUrl: URL?
 
   override init() {
     super.init()
@@ -25,7 +24,8 @@ class Document: NSDocument {
   }
 
   // Handles changes from another application
-  override func presentedItemDidChange() {}
+  override func presentedItemDidChange() {
+  }
   
   override func makeWindowControllers() {
     // Returns the Storyboard that contains your Document window.

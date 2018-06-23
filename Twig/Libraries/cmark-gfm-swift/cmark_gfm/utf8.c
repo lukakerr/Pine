@@ -234,7 +234,7 @@ void cmark_utf8proc_case_fold(cmark_strbuf *dest, const uint8_t *str,
     bufsize_t char_len = cmark_utf8proc_iterate(str, len, &c);
 
     if (char_len >= 0) {
-#include "case_fold_switch.inc"
+#include "case_fold_switch.h"
     } else {
       encode_unknown(dest);
       char_len = -char_len;

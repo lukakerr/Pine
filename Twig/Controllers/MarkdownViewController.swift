@@ -71,13 +71,13 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   
   @IBAction func exportPDF(sender: NSMenuItem) {
     if let pvc = getPreviewViewController() {
-      Exporter.exportPDF(from: pvc.webPreview)
+      PDFExporter.export(from: pvc.webPreview)
     }
   }
   
   @IBAction func exportHTML(sender: NSMenuItem) {
     if let pvc = getPreviewViewController() {
-      Exporter.exportHTML(from: pvc.webPreview)
+      HTMLExporter.export(from: pvc.webPreview)
     }
   }
   

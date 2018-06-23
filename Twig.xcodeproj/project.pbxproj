@@ -51,8 +51,8 @@
 		A19828C520DBC2AA008C2364 /* latex.c in Sources */ = {isa = PBXBuildFile; fileRef = A198286D20DBC2AA008C2364 /* latex.c */; };
 		A19828C620DBC2AA008C2364 /* houdini_href_e.c in Sources */ = {isa = PBXBuildFile; fileRef = A198286E20DBC2AA008C2364 /* houdini_href_e.c */; };
 		A19828C720DBC2AA008C2364 /* syntax_extension.c in Sources */ = {isa = PBXBuildFile; fileRef = A198286F20DBC2AA008C2364 /* syntax_extension.c */; };
-		A19828C820DBC2AA008C2364 /* case_fold_switch.inc in Sources */ = {isa = PBXBuildFile; fileRef = A198287020DBC2AA008C2364 /* case_fold_switch.inc */; };
-		A19828C920DBC2AA008C2364 /* entities.inc in Sources */ = {isa = PBXBuildFile; fileRef = A198287120DBC2AA008C2364 /* entities.inc */; };
+		A19828C820DBC2AA008C2364 /* case_fold_switch.h in Sources */ = {isa = PBXBuildFile; fileRef = A198287020DBC2AA008C2364 /* case_fold_switch.h */; };
+		A19828C920DBC2AA008C2364 /* entities.h in Sources */ = {isa = PBXBuildFile; fileRef = A198287120DBC2AA008C2364 /* entities.h */; };
 		A19828CA20DBC2AA008C2364 /* ext_scanners.c in Sources */ = {isa = PBXBuildFile; fileRef = A198287220DBC2AA008C2364 /* ext_scanners.c */; };
 		A19828CB20DBC2AA008C2364 /* tagfilter.c in Sources */ = {isa = PBXBuildFile; fileRef = A198287320DBC2AA008C2364 /* tagfilter.c */; };
 		A19828CC20DBC2AA008C2364 /* houdini_html_e.c in Sources */ = {isa = PBXBuildFile; fileRef = A198287420DBC2AA008C2364 /* houdini_html_e.c */; };
@@ -85,6 +85,7 @@
 		A19828E720DBC2AA008C2364 /* SwiftAST.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19828B320DBC2AA008C2364 /* SwiftAST.swift */; };
 		A1D5466420D4D9CC00D1221A /* Exporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D5466320D4D9CC00D1221A /* Exporter.swift */; };
 		A1E647DC20D1E9C000F32E55 /* EditorSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */; };
+		A1F122DF20DE0D27007DFD1A /* FileSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F122DE20DE0D27007DFD1A /* FileSaver.swift */; };
 		A1FD269A20932CDD004D1C95 /* highlight-js in Resources */ = {isa = PBXBuildFile; fileRef = A1FD269820932CDC004D1C95 /* highlight-js */; };
 /* End PBXBuildFile section */
 
@@ -156,8 +157,8 @@
 		A198286D20DBC2AA008C2364 /* latex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = latex.c; sourceTree = "<group>"; };
 		A198286E20DBC2AA008C2364 /* houdini_href_e.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = houdini_href_e.c; sourceTree = "<group>"; };
 		A198286F20DBC2AA008C2364 /* syntax_extension.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = syntax_extension.c; sourceTree = "<group>"; };
-		A198287020DBC2AA008C2364 /* case_fold_switch.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = case_fold_switch.inc; sourceTree = "<group>"; };
-		A198287120DBC2AA008C2364 /* entities.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = entities.inc; sourceTree = "<group>"; };
+		A198287020DBC2AA008C2364 /* case_fold_switch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = case_fold_switch.h; sourceTree = "<group>"; };
+		A198287120DBC2AA008C2364 /* entities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = entities.h; sourceTree = "<group>"; };
 		A198287220DBC2AA008C2364 /* ext_scanners.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ext_scanners.c; sourceTree = "<group>"; };
 		A198287320DBC2AA008C2364 /* tagfilter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tagfilter.c; sourceTree = "<group>"; };
 		A198287420DBC2AA008C2364 /* houdini_html_e.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = houdini_html_e.c; sourceTree = "<group>"; };
@@ -225,6 +226,7 @@
 		A19828B320DBC2AA008C2364 /* SwiftAST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftAST.swift; sourceTree = "<group>"; };
 		A1D5466320D4D9CC00D1221A /* Exporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exporter.swift; sourceTree = "<group>"; };
 		A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorSplitView.swift; sourceTree = "<group>"; };
+		A1F122DE20DE0D27007DFD1A /* FileSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSaver.swift; sourceTree = "<group>"; };
 		A1FD269820932CDC004D1C95 /* highlight-js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "highlight-js"; sourceTree = "<group>"; };
 		B2BE6FC4D33EB0DD8E860B17 /* Pods-Twig.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twig.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Twig/Pods-Twig.debug.xcconfig"; sourceTree = "<group>"; };
 		B66B7DAE689A6827E658233B /* Pods_Twig.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twig.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -286,6 +288,7 @@
 				A18A0405209585C8006F6B99 /* Debouncer.swift */,
 				A1D5466320D4D9CC00D1221A /* Exporter.swift */,
 				A148C39F20914F0F00B1165C /* SyntaxThemes.swift */,
+				A1F122DE20DE0D27007DFD1A /* FileSaver.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -417,13 +420,11 @@
 				A198286720DBC2AA008C2364 /* autolink.c */,
 				A198286820DBC2AA008C2364 /* blocks.c */,
 				A198286620DBC2AA008C2364 /* buffer.c */,
-				A198287020DBC2AA008C2364 /* case_fold_switch.inc */,
 				A19828A520DBC2AA008C2364 /* checkbox.c */,
 				A198286920DBC2AA008C2364 /* cmark_ctype.c */,
 				A198286320DBC2AA008C2364 /* cmark.c */,
 				A198289E20DBC2AA008C2364 /* commonmark.c */,
 				A19828A920DBC2AA008C2364 /* core-extensions.c */,
-				A198287120DBC2AA008C2364 /* entities.inc */,
 				A198287220DBC2AA008C2364 /* ext_scanners.c */,
 				A19828A420DBC2AA008C2364 /* footnotes.c */,
 				A198286E20DBC2AA008C2364 /* houdini_href_e.c */,
@@ -460,6 +461,8 @@
 		A198287520DBC2AA008C2364 /* include */ = {
 			isa = PBXGroup;
 			children = (
+				A198287020DBC2AA008C2364 /* case_fold_switch.h */,
+				A198287120DBC2AA008C2364 /* entities.h */,
 				A198288620DBC2AA008C2364 /* autolink.h */,
 				A198288820DBC2AA008C2364 /* buffer.h */,
 				A198288520DBC2AA008C2364 /* checkbox.h */,
@@ -719,7 +722,7 @@
 				A19828BE20DBC2AA008C2364 /* buffer.c in Sources */,
 				A19828E020DBC2AA008C2364 /* ASTOperations.swift in Sources */,
 				A13C23FA209167F0008557D0 /* NSColor+Extension.swift in Sources */,
-				A19828C820DBC2AA008C2364 /* case_fold_switch.inc in Sources */,
+				A19828C820DBC2AA008C2364 /* case_fold_switch.h in Sources */,
 				A19828CE20DBC2AA008C2364 /* utf8.c in Sources */,
 				A182096E20919F6000016AD5 /* HTML.swift in Sources */,
 				A156AFB120908ECE0098BBDD /* Theme.swift in Sources */,
@@ -730,7 +733,7 @@
 				A19828E320DBC2AA008C2364 /* Block+ListElement.swift in Sources */,
 				A19828E420DBC2AA008C2364 /* Block+TextElement.swift in Sources */,
 				A19828E120DBC2AA008C2364 /* Node+Elements.swift in Sources */,
-				A19828C920DBC2AA008C2364 /* entities.inc in Sources */,
+				A19828C920DBC2AA008C2364 /* entities.h in Sources */,
 				A19828DA20DBC2AA008C2364 /* checkbox.c in Sources */,
 				A18A040820958C8B006F6B99 /* Preferences.swift in Sources */,
 				A19828DF20DBC2AA008C2364 /* Element.swift in Sources */,
@@ -739,6 +742,7 @@
 				A19828BD20DBC2AA008C2364 /* man.c in Sources */,
 				A19828C620DBC2AA008C2364 /* houdini_href_e.c in Sources */,
 				A19828CA20DBC2AA008C2364 /* ext_scanners.c in Sources */,
+				A1F122DF20DE0D27007DFD1A /* FileSaver.swift in Sources */,
 				A19828C120DBC2AA008C2364 /* cmark_ctype.c in Sources */,
 				A1682E87209097E700164D78 /* NSMutableAttributedString+Extension.swift in Sources */,
 				A198047320DB64BA0066FDA6 /* MarkdownView.swift in Sources */,

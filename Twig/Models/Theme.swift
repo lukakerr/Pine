@@ -11,9 +11,9 @@ import Cocoa
 class Theme {
   static let sharedInstance = Theme()
   
-  public var code: NSColor = .white
-  public var text: NSColor = .white
-  public var background: NSColor?
+  public var code: NSColor = .gray
+  public var text: NSColor = .black
+  public var background: NSColor = .white
   
   private init() {
     // Restore default syntax theme

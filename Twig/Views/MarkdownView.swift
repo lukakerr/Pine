@@ -15,7 +15,7 @@ class MarkdownView: NSView {
   }
 
   private func updateUI() {
-    guard let bg = theme.background else { return }
+    let bg = theme.background
     let appearance = NSApp.effectiveAppearance.name
     
     self.window?.titlebarAppearsTransparent = preferences.modernTitlebar

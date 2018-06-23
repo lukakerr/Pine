@@ -9,13 +9,25 @@
 import Cocoa
 import WebKit
 
-public class Exporter {
+/// A protocol that various exporters can conform to
+/// Must provide a filetype and generic method used to export
+protocol Exporter {
+  static var filetype: String { get }
   
-  /// Export PDF data from a webview
+  /// Export data from a view
   ///
   /// - Parameters:
-  ///   - webview: the instance of the webview
-  static func exportPDF(from webview: WKWebView) {
+  ///   - view: the instance of the view
+  static func export<T>(from view: T)
+}
+
+struct PDFExporter: Exporter {
+  static var filetype = "pdf"
+
+  static func export<T>(from view: T) {
+    // we expect the view to be a webview from which we can HTML and print from
+    let webview = view as! WKWebView
+
     webview.evaluateJavaScript("document.documentElement.outerHTML") { (response, err) in
       if let HTMLString = response as? String {
         let HTMLData = "<!DOCTYPE HTML>" + HTMLString
@@ -31,7 +43,7 @@ public class Exporter {
           printInfo.rightMargin = 40.0
           printInfo.bottomMargin = 40.0
           printInfo.isVerticallyCentered = false
-
+          
           let printOp = NSPrintOperation(view: wv.mainFrame.frameView.documentView, printInfo: printInfo)
           printOp.showsPrintPanel = false
           printOp.showsProgressPanel = false
@@ -42,41 +54,22 @@ public class Exporter {
       }
     }
   }
+
+}
+
+struct HTMLExporter: Exporter {
+  static var filetype = "html"
   
-  /// Export HTML data from a webview
-  ///
-  /// - Parameters:
-  ///   - webview: the instance of the webview
-  static func exportHTML(from webview: WKWebView) {
+  static func export<T>(from view: T) {
+    // we expect the view to be a webview from which we can get HTML
+    let webview = view as! WKWebView
+
     webview.evaluateJavaScript("document.documentElement.outerHTML") { (response, err) in
       if let HTMLString = response as? String {
         let HTMLData = "<!DOCTYPE HTML>" + HTMLString
         if let data = HTMLData.data(using: .utf8) {
-          save(data, filetypes: ["html"], type: "HTML")
-        }
-      }
-    }
-  }
-  
-  /// Save data to a user chosen location
-  ///
-  /// - Parameters:
-  ///   - data: the raw data to save
-  ///   - filetypes: allowed filetypes to save the data as
-  ///   - type: the type of file, used only in the popup title
-  private static func save(_ data: Data, filetypes: [String], type: String) {
-    let dialog = NSSavePanel()
-
-    dialog.title = "Export as \(type)"
-    dialog.allowedFileTypes = filetypes
-    dialog.canCreateDirectories = true
-
-    if (dialog.runModal() == .OK) {
-      if let result = dialog.url {
-        do {
-          try data.write(to: result, options: .atomic)
-        } catch {
-          print("error:", error)
+          let fileSaver = FileSaver(data: data, filetypes: [self.filetype])
+          fileSaver.save()
         }
       }
     }

@@ -30,7 +30,7 @@ class HTML {
   // The innerHTML contents are passed in here rather than stored
   // to prevent asynchronous race conditions changing the content on startup
   func getHTML(with contents: String) -> String {
-    let bg = theme.background ?? .white
+    let bg = theme.background
     
     return(
       """
@@ -81,10 +81,9 @@ class HTML {
   }
   
   func getApplicationSupportFolder() -> URL? {
-    guard let folder = FileManager.default.urls(
+    return FileManager.default.urls(
       for: .applicationSupportDirectory,
-      in: .userDomainMask).first else { return nil }
-    return folder
+      in: .userDomainMask).first
   }
   
   func loadJS() {

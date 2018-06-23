@@ -23,13 +23,11 @@ class PreferencesWindowController: NSWindowController, NSWindowDelegate {
   
   @objc private func updateUI() {
     if NSApp.effectiveAppearance.name == .darkAqua { return }
-    if let bg = theme.background {
-      window?.backgroundColor = bg
-      if bg.isDark {
-        window?.appearance = NSAppearance(named: .darkAqua)
-      } else {
-        window?.appearance = NSAppearance(named: .aqua)
-      }
+    window?.backgroundColor = theme.background
+    if theme.background.isDark {
+      window?.appearance = NSAppearance(named: .darkAqua)
+    } else {
+      window?.appearance = NSAppearance(named: .aqua)
     }
   }
   
