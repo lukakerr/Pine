@@ -1,5 +1,9 @@
 # Twig
 
+[![Swift 4.2](https://img.shields.io/badge/swift-4.2-orange.svg?style=flat)](https://github.com/apple/swift)
+[![Platform](http://img.shields.io/badge/platform-macOS-red.svg?style=flat)](https://developer.apple.com/macos/)
+[![Github](http://img.shields.io/badge/github-lukakerr-green.svg?style=flat)](https://github.com/lukakerr)
+
 <p align="center">
   <img src="./Twig/Assets.xcassets/AppIcon.appiconset/twig-512.png" width="200">
 </p>
