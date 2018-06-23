@@ -16,6 +16,7 @@ class PreferencesViewController: NSViewController {
   @IBOutlet weak var autosaveDocument: NSButton!
   @IBOutlet weak var verticalSplitView: NSButton!
   @IBOutlet weak var modernTitlebar: NSButton!
+  @IBOutlet weak var useSystemAppearance: NSButton!
   
   let wc = WindowController()
   
@@ -35,6 +36,7 @@ class PreferencesViewController: NSViewController {
     autosaveDocument.state = getState(preferences.autosaveDocument)
     verticalSplitView.state = getState(preferences.verticalSplitView)
     modernTitlebar.state = getState(preferences.modernTitlebar)
+    useSystemAppearance.state = getState(preferences.useSystemAppearance)
   }
   
   private func getState(_ state: Bool) -> NSControl.StateValue {
@@ -78,6 +80,11 @@ class PreferencesViewController: NSViewController {
 
   @IBAction func changeModernTitlebar(_ sender: NSButton) {
     preferences.modernTitlebar = sender.state.rawValue.bool
+    postNotification()
+  }
+  
+  @IBAction func changeUseSystemAppearance(_ sender: NSButton) {
+    preferences.useSystemAppearance = sender.state.rawValue.bool
     postNotification()
   }
 

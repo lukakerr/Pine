@@ -14,11 +14,6 @@ class MarkdownView: NSView {
     updateUI()
   }
 
-  // TODO: there is a catch 22 with having custom themes and supporting
-  // mojave dark mode. updateLayer() only gets called if the apps appearance hasn't
-  // been changed, but if we don't change the appearance then the titlebar text
-  // color won't match the user selected theme. Need a way to listen for dark mode
-  // being switched on/off that triggers no matter what the apps appearance is
   private func updateUI() {
     guard let bg = theme.background else { return }
     let appearance = NSApp.effectiveAppearance.name
@@ -33,14 +28,23 @@ class MarkdownView: NSView {
       if appearance == .darkAqua {
         self.window?.backgroundColor = nil
       } else {
-        self.window?.appearance = NSAppearance(named: .darkAqua)
+        if !preferences.useSystemAppearance  {
+          self.window?.appearance = NSAppearance(named: .darkAqua)
+        }
         self.window?.backgroundColor = bg
       }
     } else {
       theme.code = bg.darker
       theme.text = .black
-      self.window?.appearance = NSAppearance(named: .aqua)
+      if !preferences.useSystemAppearance {
+        self.window?.appearance = NSAppearance(named: .aqua)
+      }
       self.window?.backgroundColor = bg
+    }
+    
+    // remove appearance so when dark/light mode changed, updateLayer() is called
+    if preferences.useSystemAppearance {
+      self.window?.appearance = nil
     }
 
     NotificationCenter.send("appearanceChanged")

@@ -31,6 +31,10 @@ class Preferences {
     if defaults.object(forKey: "modernTitlebar") != nil {
       self.modernTitlebar = defaults.bool(forKey: "modernTitlebar")
     }
+    
+    if defaults.object(forKey: "useSystemAppearance") != nil {
+      self.useSystemAppearance = defaults.bool(forKey: "useSystemAppearance")
+    }
   }
   
   public var showPreviewOnStartup = true {
@@ -60,6 +64,12 @@ class Preferences {
   public var modernTitlebar = true {
     willSet(newVal) {
       setDefaults(key: "modernTitlebar", newVal)
+    }
+  }
+  
+  public var useSystemAppearance = false {
+    willSet(newVal) {
+      setDefaults(key: "useSystemAppearance", newVal)
     }
   }
   
