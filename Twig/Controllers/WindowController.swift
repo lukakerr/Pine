@@ -10,6 +10,10 @@ import Cocoa
 
 class WindowController: NSWindowController, NSWindowDelegate {
 
+  override var acceptsFirstResponder: Bool {
+    return true
+  }
+
   override func windowDidLoad() {
     super.windowDidLoad()
 
@@ -59,6 +63,29 @@ class WindowController: NSWindowController, NSWindowDelegate {
     if let doc = self.document as? Document {
       try? doc.read(from: file, ofType: file.pathExtension)
     }
+  }
+
+  // MARK: - First responder methods called by NSMenuItems
+
+  @IBAction func togglePreview(sender: NSMenuItem) {
+    guard
+      let svc = self.contentViewController as? NSSplitViewController,
+      let evc = svc.splitViewItems.last?.viewController as? NSSplitViewController,
+      let preview = evc.splitViewItems.last
+    else { return }
+
+    preview.collapseBehavior = .preferResizingSplitViewWithFixedSiblings
+    preview.animator().isCollapsed = !preview.isCollapsed
+  }
+
+  @IBAction func toggleSidebar(sender: NSMenuItem) {
+    guard
+      let svc = self.contentViewController as? NSSplitViewController,
+      let sidebar = svc.splitViewItems.first
+    else { return }
+
+    sidebar.collapseBehavior = .preferResizingSplitViewWithFixedSiblings
+    sidebar.animator().isCollapsed = !sidebar.isCollapsed
   }
 
 }

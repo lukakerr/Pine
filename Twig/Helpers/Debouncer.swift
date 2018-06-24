@@ -19,7 +19,7 @@ class Debouncer: NSObject {
     self.callback = callback
   }
 
-  func call() {
+  public func call() {
     timer?.invalidate()
     let nextTimer = Timer.scheduledTimer(
       timeInterval: delay,
@@ -31,7 +31,7 @@ class Debouncer: NSObject {
     timer = nextTimer
   }
 
-  @objc func fire() {
+  @objc private func fire() {
     self.callback()
   }
 

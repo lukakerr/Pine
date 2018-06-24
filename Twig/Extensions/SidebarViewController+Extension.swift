@@ -53,39 +53,25 @@ extension SidebarViewController: NSOutlineViewDataSource {
   func setRowColour(_ outlineView: NSOutlineView) {
     let rows = IndexSet(integersIn: 0..<outlineView.numberOfRows)
     let rowViews = rows.compactMap { outlineView.rowView(atRow: $0, makeIfNecessary: false) }
-    var initialLoad = true
 
     // Iterate over each row in the outlineView
     for rowView in rowViews {
-      if rowView.isSelected {
-        initialLoad = false
-      }
-
       rowView.backgroundColor = rowView.isSelected ? .selectedMenuItemColor : .clear
     }
-
-    if initialLoad {
-      self.setInitialRowColour()
-    }
-  }
-
-  func setInitialRowColour() {
-    sidebar.rowView(
-      atRow: 0,
-      makeIfNecessary: true
-      )?.backgroundColor = .selectedControlColor
   }
 
   // Remove default selection colour
   func outlineView(_ outlineView: NSOutlineView, didAdd rowView: NSTableRowView, forRow row: Int) {
     rowView.selectionHighlightStyle = .none
 
-    if let window = self.view.window?.windowController as? WindowController {
-      if let doc = window.document as? NSDocument {
-        for (index, item) in items.enumerated() where index == row && item.url == doc.fileURL {
-          rowView.isSelected = true
-        }
-      }
+    guard
+      let window = self.view.window?.windowController as? WindowController,
+      let doc = window.document as? NSDocument
+    else { return }
+
+    for (index, item) in items.enumerated()
+      where index == row && item.url == doc.fileURL && item.type != .header {
+        rowView.isSelected = true
     }
 
     setRowColour(outlineView)

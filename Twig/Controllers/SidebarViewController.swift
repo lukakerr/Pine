@@ -22,7 +22,7 @@ class SidebarViewController: NSViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    // Setup notification observer for theme change
+    // Setup notification observer for preferences change
     NotificationCenter.receive(
       "preferencesChanged",
       instance: self,

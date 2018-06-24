@@ -87,7 +87,7 @@ class Document: NSDocument {
     self.fileURL = url
   }
 
-  // MARK: - private helper methods
+  // MARK: - Private helper methods
 
   fileprivate func fileContentsDidChange() -> Bool {
     guard

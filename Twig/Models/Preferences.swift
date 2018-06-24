@@ -106,7 +106,7 @@ class Preferences {
     }
   }
 
-  private func setDefaults(key: String, _ val: Any) {
+  fileprivate func setDefaults(key: String, _ val: Any) {
     defaults.setValue(val, forKey: key)
   }
 
