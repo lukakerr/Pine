@@ -23,4 +23,18 @@ class WindowController: NSWindowController {
     self.showWindow(self.window)
   }
 
+  public func syncWindowSidebars() {
+    let windows = NSApplication.shared.windows.filter { $0.isVisible }
+
+    // Hackish way to get all sidebars and syncronize the sidebar data
+    // Iterate over all windows (tabs) and find the sidebar
+    for window in windows {
+      if let splitVC = window.contentViewController as? NSSplitViewController {
+        if let sidebarVC = splitVC.children.first as? SidebarViewController {
+          sidebarVC.updateDocuments()
+        }
+      }
+    }
+  }
+
 }

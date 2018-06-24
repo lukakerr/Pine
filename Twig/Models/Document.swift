@@ -33,9 +33,17 @@ class Document: NSDocument {
     let windowController = storyboard.instantiateController(
       withIdentifier: NSStoryboard.SceneIdentifier("Document Window Controller")
     ) as! NSWindowController
-    self.markdownVC = windowController.contentViewController?.children[0] as? MarkdownViewController
+    self.markdownVC = windowController.contentViewController?.children.last?.children.first as? MarkdownViewController
     self.addWindowController(windowController)
     self.setContents()
+
+    if let str = self.fileUrl?.lastPathComponent {
+      openDocuments.addDocument(name: str)
+    }
+
+    if let wc = windowController as? WindowController {
+      wc.syncWindowSidebars()
+    }
   }
 
   // Returns data used to save the file
