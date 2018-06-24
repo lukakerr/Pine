@@ -29,7 +29,7 @@ class HTML {
 
   // The innerHTML contents are passed in here rather than stored
   // to prevent asynchronous race conditions changing the content on startup
-  func getHTML(with contents: String) -> String {
+  public func getHTML(with contents: String) -> String {
     return(
       """
       <!DOCTYPE html>
@@ -68,13 +68,13 @@ class HTML {
     )
   }
 
-  func getApplicationSupportFolder() -> URL? {
+  fileprivate func getApplicationSupportFolder() -> URL? {
     return FileManager.default.urls(
       for: .applicationSupportDirectory,
       in: .userDomainMask).first
   }
 
-  func loadJS() {
+  fileprivate func loadJS() {
     guard let folder = getApplicationSupportFolder() else { return }
     let jsFile = folder.appendingPathComponent("highlight-js/highlight.js")
 
@@ -83,7 +83,7 @@ class HTML {
     self.js = jsResult
   }
 
-  func loadCSS() {
+  fileprivate func loadCSS() {
     guard let folder = getApplicationSupportFolder() else { return }
 
     let baseCSSFile = folder.appendingPathComponent("Markdown.css")
@@ -97,7 +97,7 @@ class HTML {
     self.baseCSS = baseCSSResult
   }
 
-  func copyFiles() {
+  fileprivate func copyFiles() {
     guard let folder = getApplicationSupportFolder() else { return }
     guard let cssFile = Bundle.main.path(forResource: "Markdown", ofType: "css") else { return }
     guard let bundlePath = Bundle.main.resourcePath else { return }

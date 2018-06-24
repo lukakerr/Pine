@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MarkdownViewController.swift
 //  Twig
 //
 //  Created by Luka Kerr on 25/4/18.
@@ -8,8 +8,6 @@
 
 import Cocoa
 import Highlightr
-//import Down
-//import cmark_gfm_swift
 
 class MarkdownViewController: NSViewController, NSTextViewDelegate {
 
@@ -30,10 +28,14 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
     }
   }
 
+  override var acceptsFirstResponder: Bool {
+    return true
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    // Setup notification observer for theme change
+    // Setup notification observer for preferences change
     NotificationCenter.receive("preferencesChanged", instance: self, selector: #selector(self.reloadUI))
     // Setup notification observer for system dark/light mode change
     NotificationCenter.receive("appearanceChanged", instance: self, selector: #selector(self.reGeneratePreview))
@@ -58,16 +60,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
     reloadUI()
   }
 
-  override var acceptsFirstResponder: Bool {
-    return true
-  }
-
-  @IBAction func togglePreview(sender: NSMenuItem) {
-    if let preview = getSplitViewController()?.splitViewItems.last {
-      preview.collapseBehavior = .preferResizingSplitViewWithFixedSiblings
-      preview.animator().isCollapsed = !preview.isCollapsed
-    }
-  }
+  // MARK: - First responder methods for exporting from WKWebView
 
   @IBAction func exportPDF(sender: NSMenuItem) {
     if let pvc = getPreviewViewController() {
@@ -80,6 +73,8 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
       HTMLExporter.export(from: pvc.webPreview)
     }
   }
+
+  // MARK: - Functions handling syntax highlighting and preview generation
 
   // Syntax highlight the given markdown string and insert into text view
   private func syntaxHighlight(_ string: String) {
@@ -122,6 +117,8 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
       }
     }
   }
+
+  // MARK: - Private functions for updating and setting view components
 
   @objc private func reloadUI() {
     syntaxHighlight(markdownTextView.string)
