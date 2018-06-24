@@ -35,6 +35,10 @@ class Preferences {
     if defaults.object(forKey: "useSystemAppearance") != nil {
       self.useSystemAppearance = defaults.bool(forKey: "useSystemAppearance")
     }
+
+    if defaults.object(forKey: "showSidebar") != nil {
+      self.showSidebar = defaults.bool(forKey: "showSidebar")
+    }
   }
 
   public var showPreviewOnStartup = true {
@@ -70,6 +74,12 @@ class Preferences {
   public var useSystemAppearance = false {
     willSet(newVal) {
       setDefaults(key: "useSystemAppearance", newVal)
+    }
+  }
+
+  public var showSidebar = true {
+    willSet(newVal) {
+      setDefaults(key: "showSidebar", newVal)
     }
   }
 

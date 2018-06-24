@@ -17,6 +17,7 @@ class PreferencesViewController: NSViewController {
   @IBOutlet weak var verticalSplitView: NSButton!
   @IBOutlet weak var modernTitlebar: NSButton!
   @IBOutlet weak var useSystemAppearance: NSButton!
+  @IBOutlet weak var showSidebar: NSButton!
 
   let wc = WindowController()
 
@@ -37,6 +38,7 @@ class PreferencesViewController: NSViewController {
     verticalSplitView.state = getState(preferences.verticalSplitView)
     modernTitlebar.state = getState(preferences.modernTitlebar)
     useSystemAppearance.state = getState(preferences.useSystemAppearance)
+    showSidebar.state = getState(preferences.showSidebar)
   }
 
   private func getState(_ state: Bool) -> NSControl.StateValue {
@@ -78,6 +80,11 @@ class PreferencesViewController: NSViewController {
 
   @IBAction func changeUseSystemAppearance(_ sender: NSButton) {
     preferences.useSystemAppearance = sender.state.rawValue.bool
+    postNotification()
+  }
+
+  @IBAction func showSidebarChanged(_ sender: NSButton) {
+    preferences.showSidebar = sender.state.rawValue.bool
     postNotification()
   }
 

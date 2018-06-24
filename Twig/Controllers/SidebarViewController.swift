@@ -15,13 +15,30 @@ class SidebarViewController: NSViewController {
   // Data used for sidebar rows
   var items: [SidebarDocument] = []
 
+  override func viewWillAppear() {
+    updateSidebarVisibility()
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    // Setup notification observer for theme change
+    NotificationCenter.receive(
+      "preferencesChanged",
+      instance: self,
+      selector: #selector(self.updateSidebarVisibility)
+    )
   }
 
   public func updateDocuments() {
     items = openDocuments.getDocuments()
     self.sidebar.reloadData()
+  }
+
+  @objc private func updateSidebarVisibility() {
+    if let svc = self.parent as? NSSplitViewController {
+      svc.splitViewItems.first?.isCollapsed = !preferences.showSidebar
+    }
   }
 
 }

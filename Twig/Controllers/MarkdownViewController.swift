@@ -33,7 +33,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    // Setup notification observer for theme change
+    // Setup notification observer for preferences change
     NotificationCenter.receive("preferencesChanged", instance: self, selector: #selector(self.reloadUI))
     // Setup notification observer for system dark/light mode change
     NotificationCenter.receive("appearanceChanged", instance: self, selector: #selector(self.reGeneratePreview))
@@ -67,6 +67,16 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
       preview.collapseBehavior = .preferResizingSplitViewWithFixedSiblings
       preview.animator().isCollapsed = !preview.isCollapsed
     }
+  }
+
+  @IBAction func toggleSidebar(sender: NSMenuItem) {
+    guard
+      let svc = getSplitViewController()?.parent as? NSSplitViewController,
+      let sidebarView = svc.splitViewItems.first
+    else { return }
+
+    sidebarView.collapseBehavior = .preferResizingSplitViewWithFixedSiblings
+    sidebarView.animator().isCollapsed = !sidebarView.isCollapsed
   }
 
   @IBAction func exportPDF(sender: NSMenuItem) {
