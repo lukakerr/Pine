@@ -25,6 +25,7 @@
 		A156AFA12090606D0098BBDD /* TwigUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFA02090606D0098BBDD /* TwigUITests.swift */; };
 		A156AFAF209061D60098BBDD /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFAE209061D60098BBDD /* WindowController.swift */; };
 		A156AFB120908ECE0098BBDD /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFB020908ECE0098BBDD /* Theme.swift */; };
+		A1610F4620DF9E4A00F66F5E /* SidebarViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1610F4520DF9E4A00F66F5E /* SidebarViewController+Extension.swift */; };
 		A1682E87209097E700164D78 /* NSMutableAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1682E86209097E700164D78 /* NSMutableAttributedString+Extension.swift */; };
 		A182096E20919F6000016AD5 /* HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = A182096D20919F6000016AD5 /* HTML.swift */; };
 		A189EA742091E4F300DB0559 /* Markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = A189EA732091E4E300DB0559 /* Markdown.css */; };
@@ -135,6 +136,7 @@
 		A156AFA22090606D0098BBDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A156AFAE209061D60098BBDD /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		A156AFB020908ECE0098BBDD /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		A1610F4520DF9E4A00F66F5E /* SidebarViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SidebarViewController+Extension.swift"; sourceTree = "<group>"; };
 		A1682E86209097E700164D78 /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extension.swift"; sourceTree = "<group>"; };
 		A182096D20919F6000016AD5 /* HTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTML.swift; sourceTree = "<group>"; };
 		A189EA732091E4E300DB0559 /* Markdown.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Markdown.css; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 				A198047420DB7B2E0066FDA6 /* NotificationCenter+Extension.swift */,
 				A13C23F9209167F0008557D0 /* NSColor+Extension.swift */,
 				A1682E86209097E700164D78 /* NSMutableAttributedString+Extension.swift */,
+				A1610F4520DF9E4A00F66F5E /* SidebarViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -800,6 +803,7 @@
 				A19828D120DBC2AA008C2364 /* iterator.c in Sources */,
 				A19828C020DBC2AA008C2364 /* blocks.c in Sources */,
 				A19828D520DBC2AA008C2364 /* map.c in Sources */,
+				A1610F4620DF9E4A00F66F5E /* SidebarViewController+Extension.swift in Sources */,
 				A106D59020DB56DA00880B7D /* MarkdownViewController+Extension.swift in Sources */,
 				A19828BA20DBC2AA008C2364 /* strikethrough.c in Sources */,
 				A19828C320DBC2AA008C2364 /* inlines.c in Sources */,

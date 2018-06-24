@@ -12,21 +12,39 @@ class Document: NSDocument {
 
   fileprivate var markdownVC: MarkdownViewController?
   fileprivate var fileData: Data?
-  fileprivate var fileUrl: URL?
+
+  override var fileURL: URL? {
+    didSet {
+      guard self.fileURL != oldValue else { return }
+    }
+  }
 
   override init() {
     super.init()
   }
 
-  // Autosaving
+  // Handles whether to autosave the document
   override class var autosavesInPlace: Bool {
     return preferences.autosaveDocument
   }
 
   // Handles changes from another application
   override func presentedItemDidChange() {
+    guard fileContentsDidChange() else { return }
+
+    if !isDocumentEdited {
+      DispatchQueue.main.async {
+        self.reloadFromFile()
+      }
+    }
   }
 
+  // Can read document on a background thread
+  override class func canConcurrentlyReadDocuments(ofType: String) -> Bool {
+    return true
+  }
+
+  // Creates a new window controller with the document being opened
   override func makeWindowControllers() {
     // Returns the Storyboard that contains your Document window.
     let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
@@ -37,8 +55,10 @@ class Document: NSDocument {
     self.addWindowController(windowController)
     self.setContents()
 
-    if let str = self.fileUrl?.lastPathComponent {
-      openDocuments.addDocument(name: str)
+    // Add opened document to sidebar
+    if let url = self.fileURL {
+      let newDocument = SidebarDocument(url: url, name: url.lastPathComponent, type: .file)
+      openDocuments.addDocument(newDocument)
     }
 
     if let wc = windowController as? WindowController {
@@ -57,11 +77,43 @@ class Document: NSDocument {
   // Reads from a file URL and updates the class variable fileData
   override func read(from url: URL, ofType typeName: String) throws {
     let contents = try? String(contentsOf: url, encoding: .utf8)
-    self.fileUrl = url
     self.fileData = contents?.data(using: .utf8)
+
+    // Don't set contents if file hasn't changed
+    if self.fileURL != url {
+      self.setContents()
+    }
+
+    self.fileURL = url
   }
 
-  private func setContents() {
+  // MARK: - private helper methods
+
+  fileprivate func fileContentsDidChange() -> Bool {
+    guard
+      let canonicalModificationDate = self.fileModificationDate,
+      let fileModificationDate = fileModificationDateOnDisk()
+      else { return false }
+
+    return fileModificationDate > canonicalModificationDate
+  }
+
+  fileprivate func fileModificationDateOnDisk() -> Date? {
+    guard let fileURL = self.fileURL else { return nil }
+
+    let fileAttrs = try? FileManager.default.attributesOfItem(atPath: fileURL.path)
+    let fileModificationDate = fileAttrs?[.modificationDate] as? Date
+    return fileModificationDate
+  }
+
+  fileprivate func reloadFromFile() {
+    if let fileURL = self.fileURL {
+      try? self.read(from: fileURL, ofType: fileURL.pathExtension)
+    }
+    self.setContents()
+  }
+
+  fileprivate func setContents() {
     if let data = self.fileData, let contents = String(data: data, encoding: .utf8) {
       self.markdownVC?.markdownTextView.string = contents
       self.markdownVC?.attributedMarkdownTextInput = NSAttributedString(string: contents)

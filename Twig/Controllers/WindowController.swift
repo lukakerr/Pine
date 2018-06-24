@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class WindowController: NSWindowController {
+class WindowController: NSWindowController, NSWindowDelegate {
 
   override func windowDidLoad() {
     super.windowDidLoad()
@@ -34,6 +34,30 @@ class WindowController: NSWindowController {
           sidebarVC.updateDocuments()
         }
       }
+    }
+  }
+
+  func windowWillClose(_ notification: Notification) {
+    // When a window is closed, a document is removed from the sidebar
+
+    if let url = (self.document as? Document)?.fileURL {
+      openDocuments.removeDocument(with: url)
+      self.syncWindowSidebars()
+    }
+  }
+
+  public func changeDocument(file: URL) {
+    // Check if document is already open in a tab first
+    let windows = NSApplication.shared.windows.filter { $0.isVisible }
+    for window in windows where window.windowController?.document?.fileURL == file {
+      window.makeKeyAndOrderFront(nil)
+      self.syncWindowSidebars()
+      return
+    }
+
+    // Otherwise open document in current tab
+    if let doc = self.document as? Document {
+      try? doc.read(from: file, ofType: file.pathExtension)
     }
   }
 
