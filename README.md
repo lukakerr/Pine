@@ -26,7 +26,7 @@ It is a [document based application](https://developer.apple.com/document-based-
 | Tab support                                | **Yes**                                   |
 | Workspace/folder support                   | No - [contribubte](./CONTRIBUTING.md)     |
 | Horizontal and vertical split view         | **Yes**                                   |
-| Ability to create custom `.css` themes     | No - [contribubte](./CONTRIBUTING.md)     |
+| Ability to create custom `.css` themes     | **Yes**                                   |
 | Sparkle auto updating framework            | No - [contribubte](./CONTRIBUTING.md)     |
 | Ability to share `.md` files               | **Yes**                                   |
 | Syntax highlighting for source and preview | **Yes**                                   |
