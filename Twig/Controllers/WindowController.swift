@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class WindowController: NSWindowController, NSWindowDelegate {
+class WindowController: NSWindowController, NSWindowDelegate, NSOpenSavePanelDelegate {
 
   override var acceptsFirstResponder: Bool {
     return true
@@ -93,6 +93,8 @@ class WindowController: NSWindowController, NSWindowDelegate {
 
     dialog.title = "Open a folder"
     dialog.allowsMultipleSelection = false
+    dialog.canChooseFiles = false
+    dialog.canCreateDirectories = true
     dialog.canChooseDirectories = true
 
     if dialog.runModal() == .OK {
