@@ -14,7 +14,7 @@
 			<key>CFBundleTypeIconFile</key>
 			<string></string>
 			<key>CFBundleTypeName</key>
-			<string>DocumentType</string>
+			<string>Markdown</string>
 			<key>CFBundleTypeOSTypes</key>
 			<array>
 				<string>????</string>

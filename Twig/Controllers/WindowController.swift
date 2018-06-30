@@ -88,4 +88,22 @@ class WindowController: NSWindowController, NSWindowDelegate {
     sidebar.animator().isCollapsed = !sidebar.isCollapsed
   }
 
+  @IBAction func openFolder(sender: NSMenuItem) {
+    let dialog = NSOpenPanel()
+
+    dialog.title = "Open a folder"
+    dialog.allowsMultipleSelection = false
+    dialog.canChooseDirectories = true
+
+    if dialog.runModal() == .OK {
+      if let result = dialog.url {
+        let parent = FileSystemItem.createParents(url: result)
+        let newItem = FileSystemItem(path: result.absoluteString, parent: parent)
+
+        openDocuments.addDocument(newItem)
+        self.syncWindowSidebars()
+      }
+    }
+  }
+
 }

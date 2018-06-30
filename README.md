@@ -24,7 +24,7 @@ It is a [document based application](https://developer.apple.com/document-based-
 | Toggleable split view                      | **Yes**                                   |
 | Full screen support                        | **Yes**                                   |
 | Tab support                                | **Yes**                                   |
-| Workspace/folder support                   | No - [contribubte](./CONTRIBUTING.md)     |
+| Workspace/folder support                   | Partly - [contribubte](./CONTRIBUTING.md) |
 | Horizontal and vertical split view         | **Yes**                                   |
 | Ability to create custom `.css` themes     | **Yes**                                   |
 | Sparkle auto updating framework            | No - [contribubte](./CONTRIBUTING.md)     |
@@ -59,5 +59,5 @@ $ open Twig.xcworkspace
 ### Screenshots
 
 <p align="center">
-  <img src="https://i.imgur.com/tTceR26.png">
+  <img src="https://i.imgur.com/EoNPcFZ.png">
 </p>

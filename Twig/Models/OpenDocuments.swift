@@ -8,46 +8,31 @@
 
 import Foundation
 
-enum SidebarDocumentType {
-  case file
-  case header
-  case folder
-}
-
-struct SidebarDocument {
-  var url: URL?
-  var name: String
-  var type: SidebarDocumentType
-
-  public init(url: URL?, name: String, type: SidebarDocumentType) {
-    self.url = url
-    self.name = name
-    self.type = type
-  }
-}
-
-class OpenDocuments {
+final class OpenDocuments {
 
   static let sharedInstance = OpenDocuments()
-
-  fileprivate var documents: [SidebarDocument]
+  fileprivate var documents: [FileSystemItem]
 
   private init() {
-    let header = SidebarDocument(url: nil, name: "OPEN FILES", type: .header)
-    documents = [header]
+    documents = []
   }
 
-  public func addDocument(_ doc: SidebarDocument) {
+  public func addDocument(_ doc: FileSystemItem) {
+    // Already exists
+    if documents.index(where: { $0.fullPath == doc.fullPath }) != nil {
+      return
+    }
+
     documents.append(doc)
   }
 
   public func removeDocument(with url: URL) {
-    if let index = documents.index(where: {$0.url == url}) {
+    if let index = documents.index(where: { $0.fullPath == url.relativePath }) {
       documents.remove(at: index)
     }
   }
 
-  public func getDocuments() -> [SidebarDocument] {
+  public func getDocuments() -> [FileSystemItem] {
     return documents
   }
 

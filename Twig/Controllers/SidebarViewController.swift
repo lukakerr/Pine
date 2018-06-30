@@ -13,7 +13,7 @@ class SidebarViewController: NSViewController {
   @IBOutlet weak var sidebar: NSOutlineView!
 
   // Data used for sidebar rows
-  var items: [SidebarDocument] = []
+  var items: [FileSystemItem] = []
 
   override func viewWillAppear() {
     updateSidebarVisibility()

@@ -79,6 +79,11 @@
                                                 <action selector="openDocument:" target="Ady-hI-5gd" id="bVn-NM-KNZ"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="Open Folder…" keyEquivalent="O" id="Y6L-4l-9ly">
+                                            <connections>
+                                                <action selector="openFolderWithSender:" target="Ady-hI-5gd" id="XIv-hk-Bm1"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem title="Open Recent" id="tXI-mr-wws">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <menu key="submenu" title="Open Recent" systemMenu="recentDocuments" id="oas-Oc-fiZ">
@@ -881,7 +886,7 @@
             <objects>
                 <splitViewController storyboardIdentifier="SidebarSplitViewController" id="82G-PR-Omh" sceneMemberID="viewController">
                     <splitViewItems>
-                        <splitViewItem canCollapse="YES" holdingPriority="750" id="0Ky-tF-mlE"/>
+                        <splitViewItem canCollapse="YES" id="0Ky-tF-mlE"/>
                         <splitViewItem id="iHo-gH-Ifu"/>
                     </splitViewItems>
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" id="gkl-rj-LdW">

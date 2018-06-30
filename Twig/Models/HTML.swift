@@ -75,32 +75,36 @@ class HTML {
   }
 
   fileprivate func loadJS() {
-    guard let folder = getApplicationSupportFolder() else { return }
-    let jsFile = folder.appendingPathComponent("highlight-js/highlight.js")
-
-    guard let jsResult = try? String(contentsOf: jsFile, encoding: .utf8) else { return }
+    guard
+      let jsFile = getApplicationSupportFolder()?.appendingPathComponent("highlight-js/highlight.js"),
+      let jsResult = try? String(contentsOf: jsFile, encoding: .utf8)
+    else { return }
 
     self.js = jsResult
   }
 
   fileprivate func loadCSS() {
-    guard let folder = getApplicationSupportFolder() else { return }
+    guard
+      let folder = getApplicationSupportFolder(),
+      let bundlePath = Bundle.main.resourcePath,
+      let baseCSSResult = try? String(contentsOf: folder.appendingPathComponent("Markdown.css"), encoding: .utf8)
+    else { return }
 
-    let baseCSSFile = folder.appendingPathComponent("Markdown.css")
-    guard let baseCSSResult = try? String(contentsOf: baseCSSFile, encoding: .utf8) else { return }
-
-    guard let bundlePath = Bundle.main.resourcePath else { return }
     let cssFolder = NSURL(fileURLWithPath: bundlePath + "/highlight-js/styles/\(theme.syntax).css")
-    guard let cssResult = try? String(contentsOf: cssFolder as URL, encoding: .utf8) else { return }
 
-    self.css = cssResult
-    self.baseCSS = baseCSSResult
+    if let cssResult = try? String(contentsOf: cssFolder as URL, encoding: .utf8) {
+      self.css = cssResult
+      self.baseCSS = baseCSSResult
+    }
   }
 
   fileprivate func copyFiles() {
-    guard let folder = getApplicationSupportFolder() else { return }
-    guard let cssFile = Bundle.main.path(forResource: "Markdown", ofType: "css") else { return }
-    guard let bundlePath = Bundle.main.resourcePath else { return }
+    guard
+      let folder = getApplicationSupportFolder(),
+      let cssFile = Bundle.main.path(forResource: "Markdown", ofType: "css"),
+      let bundlePath = Bundle.main.resourcePath
+    else { return }
+
     let highlightFolder = NSURL(fileURLWithPath: (String(describing: bundlePath) + "/highlight-js"))
 
     try? FileManager.default.copyItem(

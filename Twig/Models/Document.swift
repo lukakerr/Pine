@@ -57,8 +57,9 @@ class Document: NSDocument {
 
     // Add opened document to sidebar
     if let url = self.fileURL {
-      let newDocument = SidebarDocument(url: url, name: url.lastPathComponent, type: .file)
-      openDocuments.addDocument(newDocument)
+      let parent = FileSystemItem.createParents(url: url)
+      let newItem = FileSystemItem(path: url.absoluteString, parent: parent)
+      openDocuments.addDocument(newItem)
     }
 
     if let wc = windowController as? WindowController {

@@ -12,42 +12,38 @@ extension SidebarViewController: NSOutlineViewDataSource {
 
   // Number of items in the sidebar
   func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
-    return items.count
+    guard let tmpItem = item as? FileSystemItem else { return items.count }
+    return tmpItem.getNumberOfChildren()
   }
 
   // Items to be added to sidebar
   func outlineView(_ outlineView: NSOutlineView, child index: Int, ofItem item: Any?) -> Any {
-    return items[index]
+    guard let tmpItem = item as? FileSystemItem else { return items[index] }
+    return tmpItem.getChild(at: index)
   }
 
   // Whether rows are expandable by an arrow
   func outlineView(_ outlineView: NSOutlineView, isItemExpandable item: Any) -> Bool {
-    return false
+    guard let tmpItem = item as? FileSystemItem else { return false }
+    return tmpItem.getNumberOfChildren() != 0
   }
 
   // Height of each row
   func outlineView(_ outlineView: NSOutlineView, heightOfRowByItem item: Any) -> CGFloat {
-    if let item = item as? SidebarDocument {
-      if item.type == .header {
-        return 20.0
-      }
-    }
     return 30.0
   }
 
   // When a row is selected
   func outlineViewSelectionDidChange(_ notification: Notification) {
-    if let outlineView = notification.object as? NSOutlineView {
-      if let doc = outlineView.item(atRow: outlineView.selectedRow) as? SidebarDocument {
-        if doc.type == .header {
-          return
-        }
-        setRowColour(outlineView)
-        if let window = self.view.window?.windowController as? WindowController, let url = doc.url {
-          window.changeDocument(file: url)
-        }
-      }
-    }
+    guard
+      let outlineView = notification.object as? NSOutlineView,
+      let doc = outlineView.item(atRow: outlineView.selectedRow) as? FileSystemItem,
+      doc.getNumberOfChildren() == 0,
+      let window = self.view.window?.windowController as? WindowController
+    else { return }
+
+    setRowColour(outlineView)
+    window.changeDocument(file: doc.url)
   }
 
   func setRowColour(_ outlineView: NSOutlineView) {
@@ -70,7 +66,7 @@ extension SidebarViewController: NSOutlineViewDataSource {
     else { return }
 
     for (index, item) in items.enumerated()
-      where index == row && item.url == doc.fileURL && item.type != .header {
+      where index == row && item.fullPath == doc.fileURL?.relativePath {
         rowView.isSelected = true
     }
 
@@ -82,24 +78,13 @@ extension SidebarViewController: NSOutlineViewDataSource {
 extension SidebarViewController: NSOutlineViewDelegate {
 
   func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any) -> NSView? {
-    var view: NSTableCellView?
+    guard let item = item as? FileSystemItem else { return nil }
 
-    guard let item = item as? SidebarDocument else { return nil }
-
-    switch item.type {
-    case .header:
-      view = outlineView.makeView(
-        withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "HeaderCell"),
-        owner: self
-        ) as? NSTableCellView
-      view?.textField?.stringValue = item.name
-    default:
-      view = outlineView.makeView(
-        withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "ItemCell"),
-        owner: self
-        ) as? NSTableCellView
-      view?.textField?.stringValue = item.name
-    }
+    let view = outlineView.makeView(
+      withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "ItemCell"),
+      owner: self
+      ) as? NSTableCellView
+    view?.textField?.stringValue = item.relativePath
 
     return view
   }
