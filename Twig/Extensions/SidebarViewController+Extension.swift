@@ -83,8 +83,8 @@ extension SidebarViewController: NSOutlineViewDelegate {
     let view = outlineView.makeView(
       withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "ItemCell"),
       owner: self
-      ) as? NSTableCellView
-    view?.textField?.stringValue = item.relativePath
+    ) as? NSTableCellView
+    view?.textField?.stringValue = item.getName()
 
     return view
   }

@@ -94,7 +94,7 @@ class Document: NSDocument {
     guard
       let canonicalModificationDate = self.fileModificationDate,
       let fileModificationDate = fileModificationDateOnDisk()
-      else { return false }
+    else { return false }
 
     return fileModificationDate > canonicalModificationDate
   }
