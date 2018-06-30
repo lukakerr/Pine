@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class WindowController: NSWindowController, NSWindowDelegate, NSOpenSavePanelDelegate {
+class WindowController: NSWindowController, NSWindowDelegate {
 
   override var acceptsFirstResponder: Bool {
     return true
