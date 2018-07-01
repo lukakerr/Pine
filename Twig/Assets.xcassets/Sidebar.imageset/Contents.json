@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "mac",
-      "filename" : "right-arrow-light.png",
+      "filename" : "sidebar-light.png",
       "scale" : "1x"
     },
     {
       "idiom" : "mac",
-      "filename" : "right-arrow.png",
+      "filename" : "sidebar.png",
       "appearances" : [
         {
           "appearance" : "luminosity",
@@ -18,7 +18,7 @@
     },
     {
       "idiom" : "mac",
-      "filename" : "right-arrow-light-1.png",
+      "filename" : "sidebar-light-1.png",
       "appearances" : [
         {
           "appearance" : "luminosity",
@@ -29,12 +29,12 @@
     },
     {
       "idiom" : "mac",
-      "filename" : "right-arrow-light@2x.png",
+      "filename" : "sidebar-light@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "mac",
-      "filename" : "right-arrow@2x.png",
+      "filename" : "sidebar@2x.png",
       "appearances" : [
         {
           "appearance" : "luminosity",
@@ -45,7 +45,7 @@
     },
     {
       "idiom" : "mac",
-      "filename" : "right-arrow-light@2x-1.png",
+      "filename" : "sidebar-light@2x-1.png",
       "appearances" : [
         {
           "appearance" : "luminosity",

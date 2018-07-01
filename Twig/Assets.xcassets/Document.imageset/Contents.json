@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "mac",
-      "filename" : "icons8-document-480-513.png",
+      "filename" : "document-light.png",
       "scale" : "1x"
     },
     {
       "idiom" : "mac",
-      "filename" : "icons8-document-480-2-512.png",
+      "filename" : "document.png",
       "appearances" : [
         {
           "appearance" : "luminosity",
@@ -18,7 +18,7 @@
     },
     {
       "idiom" : "mac",
-      "filename" : "icons8-document-480-514.png",
+      "filename" : "document-light-1.png",
       "appearances" : [
         {
           "appearance" : "luminosity",
@@ -29,12 +29,12 @@
     },
     {
       "idiom" : "mac",
-      "filename" : "icons8-document-480-1024.png",
+      "filename" : "document-light@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "mac",
-      "filename" : "icons8-document-480-2-1024.png",
+      "filename" : "document@2x.png",
       "appearances" : [
         {
           "appearance" : "luminosity",
@@ -45,7 +45,7 @@
     },
     {
       "idiom" : "mac",
-      "filename" : "icons8-document-480-1024 11-19-04-22.png",
+      "filename" : "document-light@2x-1.png",
       "appearances" : [
         {
           "appearance" : "luminosity",
