@@ -58,7 +58,7 @@ extension SidebarViewController: NSOutlineViewDataSource {
 
     // Iterate over each row in the outlineView
     for rowView in rowViews {
-      rowView.backgroundColor = rowView.isSelected ? .selectedMenuItemColor : .clear
+      rowView.backgroundColor = rowView.isSelected ? .secondarySelectedControlColor : .clear
     }
   }
 

@@ -11,6 +11,7 @@
 		A104782520E7338800E0930A /* FileSystemItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A104782420E7338800E0930A /* FileSystemItem.swift */; };
 		A106D59020DB56DA00880B7D /* MarkdownViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106D58F20DB56DA00880B7D /* MarkdownViewController+Extension.swift */; };
 		A111013D20E85D9A001EBEDE /* SaveError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111013C20E85D9A001EBEDE /* SaveError.swift */; };
+		A111014120E8B8A4001EBEDE /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111014020E8B8A4001EBEDE /* SidebarView.swift */; };
 		A1150D2220E858E400536336 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1150D2120E858E400536336 /* String+Extension.swift */; };
 		A127E31E20DF0F8400E13795 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A127E31D20DF0F8400E13795 /* SidebarViewController.swift */; };
 		A127E32020DF13FA00E13795 /* OpenDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = A127E31F20DF13FA00E13795 /* OpenDocuments.swift */; };
@@ -119,6 +120,7 @@
 		A104782420E7338800E0930A /* FileSystemItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemItem.swift; sourceTree = "<group>"; };
 		A106D58F20DB56DA00880B7D /* MarkdownViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MarkdownViewController+Extension.swift"; sourceTree = "<group>"; };
 		A111013C20E85D9A001EBEDE /* SaveError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveError.swift; sourceTree = "<group>"; };
+		A111014020E8B8A4001EBEDE /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		A1150D2120E858E400536336 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		A127E31D20DF0F8400E13795 /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 		A127E31F20DF13FA00E13795 /* OpenDocuments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDocuments.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 			children = (
 				A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */,
 				A198047220DB64BA0066FDA6 /* MarkdownView.swift */,
+				A111014020E8B8A4001EBEDE /* SidebarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -827,6 +830,7 @@
 				A106D59020DB56DA00880B7D /* MarkdownViewController+Extension.swift in Sources */,
 				A19828BA20DBC2AA008C2364 /* strikethrough.c in Sources */,
 				A19828C320DBC2AA008C2364 /* inlines.c in Sources */,
+				A111014120E8B8A4001EBEDE /* SidebarView.swift in Sources */,
 				A19828C520DBC2AA008C2364 /* latex.c in Sources */,
 				A19828B420DBC2AA008C2364 /* ListElement.swift in Sources */,
 				A19828BF20DBC2AA008C2364 /* autolink.c in Sources */,
