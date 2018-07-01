@@ -13,12 +13,6 @@ class Document: NSDocument {
   fileprivate var markdownVC: MarkdownViewController?
   fileprivate var fileData: Data?
 
-  override var fileURL: URL? {
-    didSet {
-      guard self.fileURL != oldValue else { return }
-    }
-  }
-
   override init() {
     super.init()
   }
@@ -32,7 +26,7 @@ class Document: NSDocument {
   override func presentedItemDidChange() {
     guard fileContentsDidChange() else { return }
 
-    if !isDocumentEdited {
+    if !self.isDocumentEdited {
       DispatchQueue.main.async {
         self.reloadFromFile()
       }

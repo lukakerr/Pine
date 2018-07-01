@@ -38,7 +38,7 @@ class HTML {
         <style>
           \(self.css)
           \(self.baseCSS)
-          pre code, p code { background: \(theme.code.hex) !important }
+          code { background: \(theme.code.hex) !important }
           p, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, table, tr { color: \(theme.text.hex); }
           table tr { background: \(theme.background.hex); }
           table tr:nth-child(2n) { background: \(theme.background.darker.hex); }
@@ -90,7 +90,7 @@ class HTML {
       let baseCSSResult = try? String(contentsOf: folder.appendingPathComponent("Markdown.css"), encoding: .utf8)
     else { return }
 
-    let cssFolder = NSURL(fileURLWithPath: bundlePath + "/highlight-js/styles/\(theme.syntax).css")
+    let cssFolder = URL(fileURLWithPath: bundlePath + "/highlight-js/styles/\(theme.syntax).css")
 
     if let cssResult = try? String(contentsOf: cssFolder as URL, encoding: .utf8) {
       self.css = cssResult
@@ -105,7 +105,7 @@ class HTML {
       let bundlePath = Bundle.main.resourcePath
     else { return }
 
-    let highlightFolder = NSURL(fileURLWithPath: (String(describing: bundlePath) + "/highlight-js"))
+    let highlightFolder = URL(fileURLWithPath: (String(describing: bundlePath) + "/highlight-js"))
 
     try? FileManager.default.copyItem(
       at: highlightFolder as URL,

@@ -12,25 +12,31 @@ extension SidebarViewController: NSOutlineViewDataSource {
 
   // Number of items in the sidebar
   func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
-    guard let tmpItem = item as? FileSystemItem else { return items.count }
-    return tmpItem.getNumberOfChildren()
+    guard let item = item as? FileSystemItem else { return items.count }
+    return item.getNumberOfChildren()
   }
 
   // Items to be added to sidebar
   func outlineView(_ outlineView: NSOutlineView, child index: Int, ofItem item: Any?) -> Any {
-    guard let tmpItem = item as? FileSystemItem else { return items[index] }
-    return tmpItem.getChild(at: index)
+    guard let item = item as? FileSystemItem else { return items[index] }
+    return item.getChild(at: index)
   }
 
   // Whether rows are expandable by an arrow
   func outlineView(_ outlineView: NSOutlineView, isItemExpandable item: Any) -> Bool {
-    guard let tmpItem = item as? FileSystemItem else { return false }
-    return tmpItem.getNumberOfChildren() != 0
+    guard let item = item as? FileSystemItem else { return false }
+    return item.getNumberOfChildren() != 0
   }
 
   // Height of each row
   func outlineView(_ outlineView: NSOutlineView, heightOfRowByItem item: Any) -> CGFloat {
     return 30.0
+  }
+
+  // When a row is clicked on should it be selected
+  func outlineView(_ outlineView: NSOutlineView, shouldSelectItem item: Any) -> Bool {
+    guard let item = item as? FileSystemItem else { return false }
+    return !item.isDirectory
   }
 
   // When a row is selected
@@ -43,7 +49,7 @@ extension SidebarViewController: NSOutlineViewDataSource {
     else { return }
 
     setRowColour(outlineView)
-    window.changeDocument(file: doc.url)
+    window.changeDocument(file: doc.fileUrl)
   }
 
   func setRowColour(_ outlineView: NSOutlineView) {
@@ -77,6 +83,7 @@ extension SidebarViewController: NSOutlineViewDataSource {
 
 extension SidebarViewController: NSOutlineViewDelegate {
 
+  // Create a cell given an item and set its properties
   func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any) -> NSView? {
     guard let item = item as? FileSystemItem else { return nil }
 
@@ -85,6 +92,12 @@ extension SidebarViewController: NSOutlineViewDelegate {
       owner: self
     ) as? NSTableCellView
     view?.textField?.stringValue = item.getName()
+
+    if item.isDirectory {
+      view?.imageView?.image = NSImage(named: "Folder")
+    } else {
+      view?.imageView?.image = NSImage(named: "Document")
+    }
 
     return view
   }

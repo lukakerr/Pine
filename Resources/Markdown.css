@@ -23,6 +23,10 @@ h1 {
   border-bottom: 1px solid #eaecef;
 }
 
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+  padding: 0.05em 0.4em;
+}
+
 h2 {
   font-size: 24px;
   border-bottom: 1px solid #eaecef;
@@ -78,7 +82,6 @@ a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-
 }
 
 ul, ol {
-  line-height: 1;
   padding-left: 30px;
 }
 

@@ -8,11 +8,6 @@
 
 import Cocoa
 
-enum SaveError: Error {
-  case unableToWrite
-  case URLNotFound
-}
-
 class FileSaver {
 
   private var filetypes: [String]

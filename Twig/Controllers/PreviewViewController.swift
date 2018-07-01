@@ -35,13 +35,11 @@ class PreviewViewController: NSViewController, WKNavigationDelegate {
                       decidePolicyFor navigationAction: WKNavigationAction,
                       decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
 
-    let url = navigationAction.request.url
+    guard let url = navigationAction.request.url else { return }
 
-    if String(describing: url).contains("http") {
+    if url.absoluteString.isWebLink {
       decisionHandler(.cancel)
-      if let url = url {
-        NSWorkspace.shared.open(url)
-      }
+      NSWorkspace.shared.open(url)
     } else {
       decisionHandler(.allow)
     }
