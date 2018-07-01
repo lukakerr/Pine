@@ -47,7 +47,7 @@ class MarkdownView: NSView {
       self.window?.appearance = nil
     }
 
-    NotificationCenter.send("appearanceChanged")
+    NotificationCenter.send(.appearanceChanged)
   }
 
 }

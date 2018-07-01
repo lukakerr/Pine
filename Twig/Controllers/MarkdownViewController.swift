@@ -36,9 +36,9 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
     super.viewDidLoad()
 
     // Setup notification observer for preferences change
-    NotificationCenter.receive("preferencesChanged", instance: self, selector: #selector(self.reloadUI))
+    NotificationCenter.receive(.preferencesChanged, instance: self, selector: #selector(self.reloadUI))
     // Setup notification observer for system dark/light mode change
-    NotificationCenter.receive("appearanceChanged", instance: self, selector: #selector(self.reGeneratePreview))
+    NotificationCenter.receive(.appearanceChanged, instance: self, selector: #selector(self.reGeneratePreview))
 
     debouncedGeneratePreview = Debouncer(delay: 0.2) {
       self.generatePreview(self.markdownTextView.string)

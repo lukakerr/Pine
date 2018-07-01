@@ -10,20 +10,25 @@ import Foundation
 
 extension NotificationCenter {
 
-  static func send(_ key: String) {
+  static func send(_ key: Notification.Name) {
     self.default.post(
-      name: NSNotification.Name(rawValue: key),
+      name: key,
       object: nil
     )
   }
 
-  static func receive(_ key: String, instance: Any, selector: Selector) {
+  static func receive(_ key: Notification.Name, instance: Any, selector: Selector) {
     self.default.addObserver(
       instance,
       selector: selector,
-      name: NSNotification.Name(rawValue: key),
+      name: key,
       object: nil
     )
   }
 
+}
+
+extension Notification.Name {
+  static let preferencesChanged = Notification.Name("preferencesChanged")
+  static let appearanceChanged = Notification.Name("appearanceChanged")
 }

@@ -15,7 +15,7 @@ class PreferencesWindowController: NSWindowController, NSWindowDelegate {
 
     updateUI()
 
-    NotificationCenter.receive("preferencesChanged", instance: self, selector: #selector(self.updateUI))
+    NotificationCenter.receive(.preferencesChanged, instance: self, selector: #selector(self.updateUI))
 
     window?.center()
     window?.makeKeyAndOrderFront(nil)

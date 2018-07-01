@@ -24,7 +24,7 @@ class SidebarViewController: NSViewController {
 
     // Setup notification observer for preferences change
     NotificationCenter.receive(
-      "preferencesChanged",
+      .preferencesChanged,
       instance: self,
       selector: #selector(self.updateSidebarVisibility)
     )

@@ -103,7 +103,7 @@ class PreferencesViewController: NSViewController {
   }
 
   private func postNotification() {
-    NotificationCenter.send("preferencesChanged")
+    NotificationCenter.send(.preferencesChanged)
   }
 
 }
