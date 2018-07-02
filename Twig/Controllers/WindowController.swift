@@ -53,10 +53,18 @@ class WindowController: NSWindowController, NSWindowDelegate {
   public func changeDocument(file: URL) {
     // Check if document is already open in a tab first
     let windows = NSApplication.shared.windows.filter { $0.isVisible }
-    for window in windows where window.windowController?.document?.fileURL == file {
-      window.makeKeyAndOrderFront(nil)
-      self.syncWindowSidebars()
-      return
+
+    for window in windows {
+      guard
+        let doc = window.windowController?.document as? Document,
+        let url = doc.fileURL
+      else { continue }
+
+      if url == file {
+        window.makeKeyAndOrderFront(nil)
+        self.syncWindowSidebars()
+        return
+      }
     }
 
     // Otherwise open document in current tab

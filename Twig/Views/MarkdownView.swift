@@ -16,20 +16,25 @@ class MarkdownView: NSView {
 
   private func updateUI() {
     let bg = theme.background
-    let appearance = NSApp.effectiveAppearance.name
+
+    var appearance = self.window?.appearance?.name
+
+    if #available(OSX 10.14, *) {
+      appearance = NSApp.effectiveAppearance.name
+    }
 
     self.window?.titlebarAppearsTransparent = preferences.modernTitlebar
 
-    if appearance == .darkAqua || bg.isDark {
+    if appearance == .dark || bg.isDark {
       theme.code = bg.lighter
       theme.text = .white
 
       // using dark mode, so remove theme based appearance
-      if appearance == .darkAqua {
+      if appearance == .dark {
         self.window?.backgroundColor = nil
       } else {
         if !preferences.useSystemAppearance {
-          self.window?.appearance = NSAppearance(named: .darkAqua)
+          self.window?.appearance = NSAppearance(named: .dark)
         }
         self.window?.backgroundColor = bg
       }

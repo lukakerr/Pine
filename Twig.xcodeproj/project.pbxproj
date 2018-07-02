@@ -90,6 +90,7 @@
 		A19828E520DBC2AA008C2364 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A19828B120DBC2AA008C2364 /* Info.plist */; };
 		A19828E620DBC2AA008C2364 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19828B220DBC2AA008C2364 /* Node.swift */; };
 		A19828E720DBC2AA008C2364 /* SwiftAST.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19828B320DBC2AA008C2364 /* SwiftAST.swift */; };
+		A1A7C05420EA304A003D8DB6 /* NSAppearance+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A7C05320EA304A003D8DB6 /* NSAppearance+Extension.swift */; };
 		A1C65FB620DE2B0D00326C60 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C65FB520DE2B0D00326C60 /* Alert.swift */; };
 		A1C65FB920DE2CEE00326C60 /* SaveError+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C65FB820DE2CEE00326C60 /* SaveError+Extension.swift */; };
 		A1D5466420D4D9CC00D1221A /* Exporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D5466320D4D9CC00D1221A /* Exporter.swift */; };
@@ -240,6 +241,7 @@
 		A19828B120DBC2AA008C2364 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A19828B220DBC2AA008C2364 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		A19828B320DBC2AA008C2364 /* SwiftAST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftAST.swift; sourceTree = "<group>"; };
+		A1A7C05320EA304A003D8DB6 /* NSAppearance+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAppearance+Extension.swift"; sourceTree = "<group>"; };
 		A1C65FB520DE2B0D00326C60 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		A1C65FB820DE2CEE00326C60 /* SaveError+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SaveError+Extension.swift"; sourceTree = "<group>"; };
 		A1D5466320D4D9CC00D1221A /* Exporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exporter.swift; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 				A1682E86209097E700164D78 /* NSMutableAttributedString+Extension.swift */,
 				A1610F4520DF9E4A00F66F5E /* SidebarViewController+Extension.swift */,
 				A1150D2120E858E400536336 /* String+Extension.swift */,
+				A1A7C05320EA304A003D8DB6 /* NSAppearance+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -762,6 +765,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1A7C05420EA304A003D8DB6 /* NSAppearance+Extension.swift in Sources */,
 				A19828C220DBC2AA008C2364 /* table.c in Sources */,
 				A1150D2220E858E400536336 /* String+Extension.swift in Sources */,
 				A18A040A20958EB6006F6B99 /* Int+Extension.swift in Sources */,
@@ -1021,7 +1025,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.Twig;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1048,7 +1052,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.Twig;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
