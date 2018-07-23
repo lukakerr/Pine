@@ -54,12 +54,10 @@ extension SidebarViewController: NSOutlineViewDataSource {
 
   func setRowColour(_ outlineView: NSOutlineView) {
     let rows = IndexSet(integersIn: 0..<outlineView.numberOfRows)
-    let rowViews = rows.compactMap { outlineView.rowView(atRow: $0, makeIfNecessary: false) }
 
-    // Iterate over each row in the outlineView
-    for rowView in rowViews {
-      rowView.backgroundColor = rowView.isSelected ? .secondarySelectedControlColor : .clear
-    }
+    rows
+      .compactMap { outlineView.rowView(atRow: $0, makeIfNecessary: false) }
+      .forEach { $0.backgroundColor = $0.isSelected ? .secondarySelectedControlColor : .clear }
   }
 
   // Remove default selection colour

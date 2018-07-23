@@ -294,8 +294,8 @@
 				A148C3A12091522C00B1165C /* PreferencesViewController.swift */,
 				A13C23F7209153E1008557D0 /* PreferencesWindowController.swift */,
 				A13C23FB20919672008557D0 /* PreviewViewController.swift */,
-				A156AFAE209061D60098BBDD /* WindowController.swift */,
 				A127E31D20DF0F8400E13795 /* SidebarViewController.swift */,
+				A156AFAE209061D60098BBDD /* WindowController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
