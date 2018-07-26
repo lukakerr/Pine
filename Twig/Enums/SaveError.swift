@@ -19,7 +19,7 @@ extension SaveError: CustomStringConvertible {
     case .unableToWrite:
       return "Unable to write to file"
     case .URLNotFound:
-      return "Directory not found"
+      return "The file or directory cannot be found"
     }
   }
 }
