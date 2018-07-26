@@ -922,13 +922,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="200" height="404"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                         <subviews>
-                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="17" horizontalPageScroll="10" verticalLineScroll="17" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJX-pd-nWK">
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="30" horizontalPageScroll="10" verticalLineScroll="30" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJX-pd-nWK">
                                 <rect key="frame" x="0.0" y="40" width="200" height="364"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="leX-9o-K0T">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="364"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="14" outlineTableColumn="yMB-qM-qvc" id="16N-MH-33n" customClass="SidebarView" customModule="Twig" customModuleProvider="target">
+                                        <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="30" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="14" outlineTableColumn="yMB-qM-qvc" id="16N-MH-33n" customClass="SidebarView" customModule="Twig" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="364"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="0.0"/>
@@ -949,18 +949,18 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="ItemCell" id="ooL-k5-Ykk">
-                                                            <rect key="frame" x="1" y="0.0" width="197" height="17"/>
+                                                            <rect key="frame" x="1" y="0.0" width="197" height="30"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <imageView translatesAutoresizingMaskIntoConstraints="NO" id="gNL-hb-hhd">
-                                                                    <rect key="frame" x="3" y="0.0" width="17" height="18"/>
+                                                                    <rect key="frame" x="6" y="5" width="17" height="19"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="17" id="YTf-b4-zFY"/>
+                                                                        <constraint firstAttribute="width" constant="17" id="ilb-5i-oDX"/>
                                                                     </constraints>
-                                                                    <imageCell key="cell" refusesFirstResponder="YES" imageScaling="proportionallyDown" image="NSActionTemplate" id="chW-9g-7sj"/>
+                                                                    <imageCell key="cell" refusesFirstResponder="YES" imageScaling="proportionallyDown" image="Folder" id="chW-9g-7sj"/>
                                                                 </imageView>
                                                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jim-ka-AcL">
-                                                                    <rect key="frame" x="25" y="0.0" width="172" height="18"/>
+                                                                    <rect key="frame" x="28" y="6" width="96" height="19"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" drawsBackground="YES" id="h2R-C8-lff">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -969,12 +969,12 @@
                                                                 </textField>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="gNL-hb-hhd" firstAttribute="bottom" secondItem="jim-ka-AcL" secondAttribute="bottom" id="5HX-Ee-gOl"/>
-                                                                <constraint firstAttribute="trailing" secondItem="jim-ka-AcL" secondAttribute="trailing" id="ABL-ZB-Mwv"/>
-                                                                <constraint firstItem="gNL-hb-hhd" firstAttribute="centerY" secondItem="ooL-k5-Ykk" secondAttribute="centerY" id="Dzp-pv-4W4"/>
-                                                                <constraint firstItem="gNL-hb-hhd" firstAttribute="leading" secondItem="ooL-k5-Ykk" secondAttribute="leading" constant="3" id="fLG-cD-zFI"/>
-                                                                <constraint firstItem="jim-ka-AcL" firstAttribute="leading" secondItem="gNL-hb-hhd" secondAttribute="trailing" constant="5" id="k8f-tV-8lS"/>
-                                                                <constraint firstItem="gNL-hb-hhd" firstAttribute="top" secondItem="jim-ka-AcL" secondAttribute="top" id="oS3-cp-6GL"/>
+                                                                <constraint firstItem="gNL-hb-hhd" firstAttribute="top" secondItem="jim-ka-AcL" secondAttribute="top" constant="1" id="1Ea-TL-DGN"/>
+                                                                <constraint firstItem="gNL-hb-hhd" firstAttribute="bottom" secondItem="jim-ka-AcL" secondAttribute="bottom" constant="1" id="PEy-T9-X6c"/>
+                                                                <constraint firstItem="jim-ka-AcL" firstAttribute="leading" secondItem="gNL-hb-hhd" secondAttribute="trailing" constant="5" id="So7-Eq-gyB"/>
+                                                                <constraint firstItem="gNL-hb-hhd" firstAttribute="top" secondItem="ooL-k5-Ykk" secondAttribute="top" constant="6" id="Tso-Ui-KlG"/>
+                                                                <constraint firstAttribute="bottom" secondItem="gNL-hb-hhd" secondAttribute="bottom" constant="5" id="XWf-oB-fSl"/>
+                                                                <constraint firstItem="gNL-hb-hhd" firstAttribute="leading" secondItem="ooL-k5-Ykk" secondAttribute="leading" constant="6" id="ayJ-9i-eyO"/>
                                                             </constraints>
                                                             <connections>
                                                                 <outlet property="imageView" destination="gNL-hb-hhd" id="tCa-VK-3xW"/>
@@ -1004,7 +1004,7 @@
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="eLN-6f-YEp">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
                                 <subviews>
-                                    <visualEffectView blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="4Sx-zR-2zR">
+                                    <visualEffectView blendingMode="behindWindow" material="sidebar" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="4Sx-zR-2zR">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
                                         <subviews>
                                             <button translatesAutoresizingMaskIntoConstraints="NO" id="Twv-ap-Yes">
@@ -1073,7 +1073,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="NSActionTemplate" width="14" height="14"/>
+        <image name="Folder" width="512" height="512"/>
         <image name="NSLinenBackgroundPattern" width="256" height="256"/>
         <image name="Plus" width="64" height="64"/>
         <image name="Sidebar" width="64" height="64"/>

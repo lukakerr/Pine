@@ -37,6 +37,7 @@ class SidebarViewController: NSViewController {
     self.sidebar.reloadData()
   }
 
+  /// Called when the a row in the sidebar is double clicked
   @objc private func doubleClicked(_ sender: Any?) {
     let clickedRow = sidebar.item(atRow: sidebar.clickedRow)
 
@@ -91,7 +92,7 @@ extension SidebarViewController: NSOutlineViewDataSource {
       let outlineView = notification.object as? NSOutlineView,
       let doc = outlineView.item(atRow: outlineView.selectedRow) as? FileSystemItem,
       let window = self.view.window?.windowController as? WindowController
-      else { return }
+    else { return }
 
     setRowColour(outlineView)
 
@@ -115,7 +116,7 @@ extension SidebarViewController: NSOutlineViewDataSource {
     guard
       let window = self.view.window?.windowController as? WindowController,
       let doc = window.document as? NSDocument
-      else { return }
+    else { return }
 
     for (index, item) in items.enumerated()
       where index == row && item.fullPath == doc.fileURL?.relativePath {
@@ -136,7 +137,7 @@ extension SidebarViewController: NSOutlineViewDelegate {
     let view = outlineView.makeView(
       withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "ItemCell"),
       owner: self
-      ) as? NSTableCellView
+    ) as? NSTableCellView
     view?.textField?.stringValue = item.getName()
 
     if item.isDirectory {
