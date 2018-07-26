@@ -27,8 +27,12 @@ final class FileSystemItem {
     return URL(string: self.fullPath)!
   }
 
-  var fileUrl: URL {
-    return URL(string: "file://" + self.fullPath)!
+  var fileURL: URL {
+    return URL(fileURLWithPath: self.fullPath)
+  }
+
+  var fileType: String {
+    return self.fileURL.pathExtension
   }
 
   var isDirectory: Bool {
@@ -38,10 +42,10 @@ final class FileSystemItem {
   }
 
   convenience init() {
-    self.init(path: "/", parent: nil)
+    self.init(path: "/")
   }
 
-  init(path: String, parent: FileSystemItem?) {
+  init(path: String, parent: FileSystemItem? = nil) {
     self.relativePath = URL(fileURLWithPath: path).lastPathComponent
     self.parent = parent
   }
@@ -107,14 +111,14 @@ final class FileSystemItem {
   // MARK: - Static methods
 
   static func createParents(url: URL) -> FileSystemItem {
-    let parentUrl = url.deletingLastPathComponent()
-    let path = parentUrl.absoluteString
+    let parentURL = url.deletingLastPathComponent()
+    let path = parentURL.absoluteString
 
     if path.isBaseFile {
       return FileSystemItem()
     }
 
-    return FileSystemItem(path: path, parent: createParents(url: parentUrl))
+    return FileSystemItem(path: path, parent: createParents(url: parentURL))
   }
 
 }
