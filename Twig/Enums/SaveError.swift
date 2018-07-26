@@ -12,3 +12,14 @@ enum SaveError: Error {
   case unableToWrite
   case URLNotFound
 }
+
+extension SaveError: CustomStringConvertible {
+  var description: String {
+    switch self {
+    case .unableToWrite:
+      return "Unable to write to file"
+    case .URLNotFound:
+      return "Directory not found"
+    }
+  }
+}

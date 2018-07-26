@@ -13,9 +13,8 @@ extension NSAppearance.Name {
   static var dark: NSAppearance.Name {
     if #available(OSX 10.14, *) {
       return .darkAqua
-    } else {
-      return .vibrantDark
     }
+    return .vibrantDark
   }
 
   static let light: NSAppearance.Name = .aqua
