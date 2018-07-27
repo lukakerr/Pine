@@ -21,21 +21,22 @@ It is a [document based application](https://developer.apple.com/document-based-
 | Themeable                                  | **Yes**                                   |
 | Math support (LaTeX subset)                | **Yes**                                   |
 | Github flavored markdown                   | **Yes**                                   |
-| Exporting to PDF, HTML, TXT, RST, RTF      | Partly - [contribubte](./CONTRIBUTING.md) |
+| Exporting to PDF, HTML, TXT, RST, RTF      | Partly - [contribute](./CONTRIBUTING.md) |
 | Toggleable split view                      | **Yes**                                   |
 | Full screen support                        | **Yes**                                   |
 | Tab support                                | **Yes**                                   |
-| Workspace/folder support                   | Partly - [contribubte](./CONTRIBUTING.md) |
+| Workspace/folder support                   | Partly - [contribute](./CONTRIBUTING.md) |
 | Horizontal and vertical split view         | **Yes**                                   |
 | Ability to create custom `.css` themes     | **Yes**                                   |
-| Sparkle auto updating framework            | No - [contribubte](./CONTRIBUTING.md)     |
+| Sparkle auto updating framework            | No - [contribute](./CONTRIBUTING.md)     |
 | Ability to share `.md` files               | **Yes**                                   |
 | Syntax highlighting for source and preview | **Yes**                                   |
 | Autosaving                                 | **Yes**                                   |
 | Version control and history recovery       | **Yes**                                   |
-| Markdown shortcuts/auto pair               | **Yes**                                   |
+| Markdown shortcuts                         | **Yes**                                   |
+| Auto pair markdown tags                    | No - [contribute](./CONTRIBUTING.md)      |
 | Custom font                                | **Yes**                                   |
-| Ability to edit preview `.css`             | No - [contribubte](./CONTRIBUTING.md)     |
+| Ability to edit preview `.css`             | No - [contribute](./CONTRIBUTING.md)     |
 | Word count                                 | **Yes**                                   |
 
 ### Contributing

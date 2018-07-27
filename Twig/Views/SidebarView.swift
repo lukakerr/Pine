@@ -16,12 +16,10 @@ class SidebarView: NSOutlineView {
 
     if identifier == NSOutlineView.disclosureButtonIdentifier {
       if let btnView = view as? NSButton {
-        btnView.wantsLayer = true
-        btnView.layer?.backgroundColor = .clear
-//        btnView.image = NSImage(named: "RightArrow")
-//        btnView.image?.size = NSSize(width: 14.0, height: 14.0)
-//        btnView.alternateImage = NSImage(named: "DownArrow")
-//        btnView.alternateImage?.size = NSSize(width: 14.0, height: 14.0)
+        btnView.image = NSImage(named: "RightArrow")
+        btnView.image?.size = NSSize(width: 14.0, height: 14.0)
+        btnView.alternateImage = NSImage(named: "DownArrow")
+        btnView.alternateImage?.size = NSSize(width: 14.0, height: 14.0)
       }
     }
     return view
