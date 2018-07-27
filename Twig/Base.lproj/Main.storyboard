@@ -415,6 +415,80 @@
                                     </items>
                                 </menu>
                             </menuItem>
+                            <menuItem title="Format" id="Up1-aQ-XXZ">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Format" id="en2-qf-fIM">
+                                    <items>
+                                        <menuItem title="Bold" keyEquivalent="b" id="w1P-d7-7o6">
+                                            <connections>
+                                                <action selector="boldWithSender:" target="Ady-hI-5gd" id="XkQ-UV-bu4"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Italic" keyEquivalent="i" id="Nbm-Og-BPd">
+                                            <connections>
+                                                <action selector="italicWithSender:" target="Ady-hI-5gd" id="Drr-TY-mer"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Strikethrough" keyEquivalent="`" id="lsl-ZS-S4U">
+                                            <modifierMask key="keyEquivalentModifierMask" control="YES"/>
+                                            <connections>
+                                                <action selector="strikethroughWithSender:" target="Ady-hI-5gd" id="E3Y-EX-Clu"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Code" keyEquivalent="c" id="wrS-jV-I3o">
+                                            <modifierMask key="keyEquivalentModifierMask" control="YES"/>
+                                            <connections>
+                                                <action selector="codeWithSender:" target="Ady-hI-5gd" id="AHh-aJ-ocB"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Code Block" keyEquivalent="C" id="aO9-Bf-GNQ">
+                                            <modifierMask key="keyEquivalentModifierMask" control="YES"/>
+                                            <connections>
+                                                <action selector="codeBlockWithSender:" target="Ady-hI-5gd" id="7T2-Df-wa8"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="x8z-iT-USg"/>
+                                        <menuItem title="Heading 1" keyEquivalent="1" id="rzs-o7-WM2">
+                                            <connections>
+                                                <action selector="h1WithSender:" target="Ady-hI-5gd" id="umb-mi-i3S"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Heading 2" keyEquivalent="2" id="DKD-bl-n8K">
+                                            <connections>
+                                                <action selector="h2WithSender:" target="Ady-hI-5gd" id="tm9-QR-5RE"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Heading 3" keyEquivalent="3" id="9TD-Nb-ZRR">
+                                            <connections>
+                                                <action selector="h3WithSender:" target="Ady-hI-5gd" id="BAo-ir-X46"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Heading 4" keyEquivalent="4" id="DIk-MA-RbH">
+                                            <connections>
+                                                <action selector="h4WithSender:" target="Ady-hI-5gd" id="xUD-qm-2E5"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Heading 5" keyEquivalent="5" id="cE7-W7-Ivx">
+                                            <connections>
+                                                <action selector="h5WithSender:" target="Ady-hI-5gd" id="k1V-p7-TCj"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="sE2-tt-JAH"/>
+                                        <menuItem title="Math" keyEquivalent="m" id="lDB-Lf-ApR">
+                                            <modifierMask key="keyEquivalentModifierMask" control="YES"/>
+                                            <connections>
+                                                <action selector="mathWithSender:" target="Ady-hI-5gd" id="91Y-De-Ufe"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Math Block" keyEquivalent="M" id="oo0-4S-WYp">
+                                            <modifierMask key="keyEquivalentModifierMask" control="YES"/>
+                                            <connections>
+                                                <action selector="mathBlockWithSender:" target="Ady-hI-5gd" id="PPG-cC-Idc"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
                             <menuItem title="Window" id="aUF-d1-5bR">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
@@ -953,14 +1027,14 @@
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <imageView translatesAutoresizingMaskIntoConstraints="NO" id="gNL-hb-hhd">
-                                                                    <rect key="frame" x="6" y="5" width="17" height="19"/>
+                                                                    <rect key="frame" x="2" y="5" width="17" height="19"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="17" id="ilb-5i-oDX"/>
                                                                     </constraints>
-                                                                    <imageCell key="cell" refusesFirstResponder="YES" imageScaling="proportionallyDown" image="Folder" id="chW-9g-7sj"/>
+                                                                    <imageCell key="cell" refusesFirstResponder="YES" imageScaling="proportionallyDown" image="NSFolder" id="chW-9g-7sj"/>
                                                                 </imageView>
                                                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jim-ka-AcL">
-                                                                    <rect key="frame" x="28" y="6" width="96" height="19"/>
+                                                                    <rect key="frame" x="24" y="6" width="96" height="19"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" drawsBackground="YES" id="h2R-C8-lff">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -974,7 +1048,7 @@
                                                                 <constraint firstItem="jim-ka-AcL" firstAttribute="leading" secondItem="gNL-hb-hhd" secondAttribute="trailing" constant="5" id="So7-Eq-gyB"/>
                                                                 <constraint firstItem="gNL-hb-hhd" firstAttribute="top" secondItem="ooL-k5-Ykk" secondAttribute="top" constant="6" id="Tso-Ui-KlG"/>
                                                                 <constraint firstAttribute="bottom" secondItem="gNL-hb-hhd" secondAttribute="bottom" constant="5" id="XWf-oB-fSl"/>
-                                                                <constraint firstItem="gNL-hb-hhd" firstAttribute="leading" secondItem="ooL-k5-Ykk" secondAttribute="leading" constant="6" id="ayJ-9i-eyO"/>
+                                                                <constraint firstItem="gNL-hb-hhd" firstAttribute="leading" secondItem="ooL-k5-Ykk" secondAttribute="leading" constant="2" id="ayJ-9i-eyO"/>
                                                             </constraints>
                                                             <connections>
                                                                 <outlet property="imageView" destination="gNL-hb-hhd" id="tCa-VK-3xW"/>
@@ -1073,7 +1147,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Folder" width="512" height="512"/>
+        <image name="NSFolder" width="128" height="128"/>
         <image name="NSLinenBackgroundPattern" width="256" height="256"/>
         <image name="Plus" width="64" height="64"/>
         <image name="Sidebar" width="64" height="64"/>

@@ -26,15 +26,15 @@ class SidebarViewController: NSViewController {
     NotificationCenter.receive(
       .preferencesChanged,
       instance: self,
-      selector: #selector(self.updateSidebarVisibility)
+      selector: #selector(updateSidebarVisibility)
     )
 
-    sidebar.doubleAction = #selector(self.doubleClicked)
+    sidebar.doubleAction = #selector(doubleClicked)
   }
 
   public func updateDocuments() {
     items = openDocuments.getDocuments()
-    self.sidebar.reloadData()
+    sidebar.reloadData()
   }
 
   /// Called when the a row in the sidebar is double clicked
@@ -49,7 +49,7 @@ class SidebarViewController: NSViewController {
   }
 
   @objc private func updateSidebarVisibility() {
-    if let svc = self.parent as? NSSplitViewController {
+    if let svc = parent as? NSSplitViewController {
       svc.splitViewItems.first?.isCollapsed = !preferences.showSidebar
     }
   }
@@ -91,7 +91,7 @@ extension SidebarViewController: NSOutlineViewDataSource {
     guard
       let outlineView = notification.object as? NSOutlineView,
       let doc = outlineView.item(atRow: outlineView.selectedRow) as? FileSystemItem,
-      let window = self.view.window?.windowController as? WindowController
+      let window = view.window?.windowController as? WindowController
     else { return }
 
     setRowColour(outlineView)
@@ -106,7 +106,7 @@ extension SidebarViewController: NSOutlineViewDataSource {
 
     rows
       .compactMap { outlineView.rowView(atRow: $0, makeIfNecessary: false) }
-      .forEach { $0.backgroundColor = $0.isSelected ? .secondarySelectedControlColor : .clear }
+      .forEach { $0.backgroundColor = $0.isSelected ? .selectedControlColor : .clear }
   }
 
   // Remove default selection colour
@@ -114,7 +114,7 @@ extension SidebarViewController: NSOutlineViewDataSource {
     rowView.selectionHighlightStyle = .none
 
     guard
-      let window = self.view.window?.windowController as? WindowController,
+      let window = view.window?.windowController as? WindowController,
       let doc = window.document as? NSDocument
     else { return }
 
@@ -141,9 +141,9 @@ extension SidebarViewController: NSOutlineViewDelegate {
     view?.textField?.stringValue = item.getName()
 
     if item.isDirectory {
-      view?.imageView?.image = NSImage(named: "Folder")
+      view?.imageView?.image = NSImage(named: NSImage.folderName)
     } else {
-      view?.imageView?.image = NSImage(named: "Document")
+      view?.imageView?.image = NSWorkspace.shared.icon(forFileType: item.fileType)
     }
 
     return view

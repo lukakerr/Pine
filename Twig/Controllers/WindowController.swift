@@ -18,13 +18,13 @@ class WindowController: NSWindowController, NSWindowDelegate {
     super.windowDidLoad()
 
     // set word count label in titlebar
-    guard let titlebarController = self.storyboard?.instantiateController(
+    guard let titlebarController = storyboard?.instantiateController(
       withIdentifier: "titlebarViewController"
     ) as? NSTitlebarAccessoryViewController else { return }
 
     titlebarController.layoutAttribute = .right
-    self.window?.addTitlebarAccessoryViewController(titlebarController)
-    self.showWindow(self.window)
+    window?.addTitlebarAccessoryViewController(titlebarController)
+    showWindow(window)
   }
 
   public func syncWindowSidebars() {
@@ -44,9 +44,9 @@ class WindowController: NSWindowController, NSWindowDelegate {
   func windowWillClose(_ notification: Notification) {
     // When a window is closed, a document is removed from the sidebar
 
-    if let url = (self.document as? Document)?.fileURL {
+    if let url = (document as? Document)?.fileURL {
       openDocuments.removeDocument(with: url)
-      self.syncWindowSidebars()
+      syncWindowSidebars()
     }
   }
 
@@ -62,22 +62,22 @@ class WindowController: NSWindowController, NSWindowDelegate {
 
       if url == file {
         window.makeKeyAndOrderFront(nil)
-        self.syncWindowSidebars()
+        syncWindowSidebars()
         return
       }
     }
 
     // Otherwise open document in current tab
-    if let doc = self.document as? Document {
+    if let doc = document as? Document {
       try? doc.read(from: file, ofType: file.pathExtension)
     }
   }
 
-  // MARK: - First responder methods called by NSMenuItems
+  // MARK: - First responder methods called by NSMenuItems applicable to the current window
 
   @IBAction func togglePreview(sender: NSMenuItem) {
     guard
-      let svc = self.contentViewController as? NSSplitViewController,
+      let svc = contentViewController as? NSSplitViewController,
       let evc = svc.splitViewItems.last?.viewController as? NSSplitViewController,
       let preview = evc.splitViewItems.last
     else { return }
@@ -88,32 +88,12 @@ class WindowController: NSWindowController, NSWindowDelegate {
 
   @IBAction func toggleSidebar(sender: NSMenuItem) {
     guard
-      let svc = self.contentViewController as? NSSplitViewController,
+      let svc = contentViewController as? NSSplitViewController,
       let sidebar = svc.splitViewItems.first
     else { return }
 
     sidebar.collapseBehavior = .preferResizingSplitViewWithFixedSiblings
     sidebar.animator().isCollapsed = !sidebar.isCollapsed
-  }
-
-  @IBAction func openFolder(sender: NSMenuItem) {
-    let dialog = NSOpenPanel()
-
-    dialog.title = "Open a folder"
-    dialog.allowsMultipleSelection = false
-    dialog.canChooseFiles = false
-    dialog.canCreateDirectories = true
-    dialog.canChooseDirectories = true
-
-    if dialog.runModal() == .OK {
-      if let result = dialog.url {
-        let parent = FileSystemItem.createParents(url: result)
-        let newItem = FileSystemItem(path: result.absoluteString, parent: parent)
-
-        openDocuments.addDocument(newItem)
-        self.syncWindowSidebars()
-      }
-    }
   }
 
 }

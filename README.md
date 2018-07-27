@@ -33,7 +33,7 @@ It is a [document based application](https://developer.apple.com/document-based-
 | Syntax highlighting for source and preview | **Yes**                                   |
 | Autosaving                                 | **Yes**                                   |
 | Version control and history recovery       | **Yes**                                   |
-| Markdown shortcuts/auto pair               | No - [contribubte](./CONTRIBUTING.md)     |
+| Markdown shortcuts/auto pair               | **Yes**                                   |
 | Custom font                                | **Yes**                                   |
 | Ability to edit preview `.css`             | No - [contribubte](./CONTRIBUTING.md)     |
 | Word count                                 | **Yes**                                   |

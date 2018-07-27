@@ -11,7 +11,9 @@ import WebKit
 
 /// A protocol that various exporters can conform to
 /// Must provide a filetype and generic method used to export
-protocol Exporter {
+protocol Exportable {
+
+  /// The type of file being exported
   static var filetype: String { get }
 
   /// Export data from a view
@@ -19,13 +21,14 @@ protocol Exporter {
   /// - Parameters:
   ///   - view: the instance of the view
   static func export<T>(from view: T)
+
 }
 
-struct PDFExporter: Exporter {
+struct PDFExporter: Exportable {
   static var filetype = "pdf"
 
   static func export<T>(from view: T) {
-    // we expect the view to be a webview from which we can HTML and print from
+    // We expect the view to be a webview from which we can HTML and print from
     let webview = view as! WKWebView
 
     webview.evaluateJavaScript("document.documentElement.outerHTML") { (response, err) in
@@ -57,18 +60,18 @@ struct PDFExporter: Exporter {
 
 }
 
-struct HTMLExporter: Exporter {
+struct HTMLExporter: Exportable {
   static var filetype = "html"
 
   static func export<T>(from view: T) {
-    // we expect the view to be a webview from which we can get HTML
+    // We expect the view to be a webview from which we can get HTML
     let webview = view as! WKWebView
 
     webview.evaluateJavaScript("document.documentElement.outerHTML") { (response, err) in
       if let HTMLString = response as? String {
         let HTMLData = "<!DOCTYPE HTML>" + HTMLString
         if let data = HTMLData.data(using: .utf8) {
-          let fileSaver = FileSaver(data: data, filetypes: [self.filetype])
+          let fileSaver = FileSaver(data: data, filetypes: [filetype])
           do {
             try fileSaver.save()
           } catch let error as SaveError {

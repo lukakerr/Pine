@@ -12,32 +12,32 @@ final class FileSystemItem {
 
   fileprivate var relativePath: String!
   fileprivate var parent: FileSystemItem?
-  lazy fileprivate var children: [FileSystemItem] = self.getChildren()
+  lazy fileprivate var children: [FileSystemItem] = getChildren()
 
   var fullPath: String {
     guard
-      let parent = self.parent,
-      let url = URL(string: parent.fullPath)?.appendingPathComponent(self.relativePath)
-    else { return self.relativePath }
+      let parent = parent,
+      let url = URL(string: parent.fullPath)?.appendingPathComponent(relativePath)
+    else { return relativePath }
 
     return url.absoluteString
   }
 
   var url: URL {
-    return URL(string: self.fullPath)!
+    return URL(string: fullPath)!
   }
 
   var fileURL: URL {
-    return URL(fileURLWithPath: self.fullPath)
+    return URL(fileURLWithPath: fullPath)
   }
 
   var fileType: String {
-    return self.fileURL.pathExtension
+    return fileURL.pathExtension
   }
 
   var isDirectory: Bool {
     var isDir: ObjCBool = false
-    FileManager.default.fileExists(atPath: self.fullPath, isDirectory: &isDir)
+    FileManager.default.fileExists(atPath: fullPath, isDirectory: &isDir)
     return isDir.boolValue
   }
 
@@ -61,7 +61,7 @@ final class FileSystemItem {
   }
 
   public func getName() -> String {
-    return self.relativePath
+    return relativePath
   }
 
   // MARK: - Private methods
@@ -71,15 +71,15 @@ final class FileSystemItem {
     var isDirectory: ObjCBool = false
     var children = [FileSystemItem]()
 
-    let valid = fileManager.fileExists(atPath: self.fullPath, isDirectory: &isDirectory)
+    let valid = fileManager.fileExists(atPath: fullPath, isDirectory: &isDirectory)
 
     if valid && isDirectory.boolValue {
-      if let contents = try? fileManager.contentsOfDirectory(atPath: self.fullPath) {
+      if let contents = try? fileManager.contentsOfDirectory(atPath: fullPath) {
         contents.filter({
           // The child is a single markdown document
           if $0.isMarkdown { return true }
 
-          guard let path = URL(string: self.fullPath)?.appendingPathComponent($0) else { return false }
+          guard let path = URL(string: fullPath)?.appendingPathComponent($0) else { return false }
           let enumerator = fileManager.enumerator(atPath: path.absoluteString)
 
           // Iterate over all files/folders of the child, checking if at least one is a markdown document

@@ -17,7 +17,7 @@ class MarkdownView: NSView {
   private func updateUI() {
     let bg = theme.background
 
-    var appearance = self.window?.appearance?.name
+    var appearance = window?.appearance?.name
 
     if #available(OSX 10.14, *) {
       appearance = NSApp.effectiveAppearance.name
@@ -31,25 +31,25 @@ class MarkdownView: NSView {
 
       // using dark mode, so remove theme based appearance
       if appearance == .dark {
-        self.window?.backgroundColor = nil
+        window?.backgroundColor = nil
       } else {
         if !preferences.useSystemAppearance {
-          self.window?.appearance = NSAppearance(named: .dark)
+          window?.appearance = NSAppearance(named: .dark)
         }
-        self.window?.backgroundColor = bg
+        window?.backgroundColor = bg
       }
     } else {
       theme.code = bg.darker
       theme.text = .black
       if !preferences.useSystemAppearance {
-        self.window?.appearance = NSAppearance(named: .aqua)
+        window?.appearance = NSAppearance(named: .aqua)
       }
-      self.window?.backgroundColor = bg
+      window?.backgroundColor = bg
     }
 
     // remove appearance so when dark/light mode changed, updateLayer() is called
     if preferences.useSystemAppearance {
-      self.window?.appearance = nil
+      window?.appearance = nil
     }
 
     NotificationCenter.send(.appearanceChanged)

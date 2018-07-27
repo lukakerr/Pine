@@ -36,9 +36,9 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
     super.viewDidLoad()
 
     // Setup notification observer for preferences change
-    NotificationCenter.receive(.preferencesChanged, instance: self, selector: #selector(self.reloadUI))
+    NotificationCenter.receive(.preferencesChanged, instance: self, selector: #selector(reloadUI))
     // Setup notification observer for system dark/light mode change
-    NotificationCenter.receive(.appearanceChanged, instance: self, selector: #selector(self.reGeneratePreview))
+    NotificationCenter.receive(.appearanceChanged, instance: self, selector: #selector(reGeneratePreview))
 
     debouncedGeneratePreview = Debouncer(delay: 0.2) {
       self.generatePreview(self.markdownTextView.string)
@@ -100,7 +100,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   }
 
   private func generatePreview(_ string: String) {
-    if let svc = self.getSplitViewController(),
+    if let svc = getSplitViewController(),
       let preview = svc.splitViewItems.last {
       let previewViewController = preview.viewController as? PreviewViewController
 
@@ -118,11 +118,108 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
     }
   }
 
+  // MARK: - Markdown formatting shortcuts
+
+  @IBAction func bold(sender: NSMenuItem) {
+    replace(left: "**", right: "**")
+  }
+
+  @IBAction func italic(sender: NSMenuItem) {
+    replace(left: "_", right: "_")
+  }
+
+  @IBAction func strikethrough(sender: NSMenuItem) {
+    replace(left: "~~", right: "~~")
+  }
+
+  @IBAction func code(sender: NSMenuItem) {
+    replace(left: "`", right: "`")
+  }
+
+  @IBAction func codeBlock(sender: NSMenuItem) {
+    replace(left: "```\n", right: "\n```", newLineIfSelected: true)
+  }
+
+  @IBAction func h1(sender: NSMenuItem) {
+    replace(left: "# ", atLineStart: true)
+  }
+
+  @IBAction func h2(sender: NSMenuItem) {
+    replace(left: "## ", atLineStart: true)
+  }
+
+  @IBAction func h3(sender: NSMenuItem) {
+    replace(left: "### ", atLineStart: true)
+  }
+
+  @IBAction func h4(sender: NSMenuItem) {
+    replace(left: "#### ", atLineStart: true)
+  }
+
+  @IBAction func h5(sender: NSMenuItem) {
+    replace(left: "##### ", atLineStart: true)
+  }
+
+  @IBAction func math(sender: NSMenuItem) {
+    replace(left: "$", right: "$")
+  }
+
+  @IBAction func mathBlock(sender: NSMenuItem) {
+    replace(left: "$$\n", right: "\n$$", newLineIfSelected: true)
+  }
+
+  /// Inserts the given left and right characters on either side of selected text,
+  /// or creates a new string and inserts the cursor in the middle of it
+  ///
+  /// - Parameters:
+  ///   - left: the left characters
+  ///   - right: the right (optional) characters
+  ///   - atLineStart: whether the left character should be inserted at the start of the line
+  ///   - newLineIfSelected: whether to create a newline on the left and right if the text is selected
+  private func replace(
+    left: String,
+    right: String? = nil,
+    atLineStart: Bool = false,
+    newLineIfSelected: Bool = false
+  ) {
+    let range = markdownTextView.selectedRange()
+
+    var leftText = left
+    var rightText = right ?? ""
+
+    if newLineIfSelected {
+      leftText = "\n\(leftText)"
+      rightText = "\(rightText)\n"
+    }
+
+    let text = (markdownTextView.string as NSString).substring(with: range)
+
+    let replacement = "\(leftText)\(text)\(rightText)"
+    let cursorPosition = markdownTextView.selectedRanges[0].rangeValue.location
+
+    let newCursorPosition = cursorPosition + leftText.lengthOfBytes(using: .utf8)
+
+    // Let NSTextView know we are going to make a replacement
+    // This retains document history allowing for undo etc
+    markdownTextView.shouldChangeText(in: range, replacementString: replacement)
+
+    // Make replacement in range (length of 0 if nothing selected)
+    markdownTextView.replaceCharacters(in: range, with: replacement)
+
+    // Set cursor position to appropriate position if not replacing a selection
+    // If replacing a selection, the cursor goes to the end of the replaced text
+    if range.length == 0 {
+      markdownTextView.setSelectedRange(NSRange(location: newCursorPosition, length: 0))
+    }
+
+    reloadUI()
+  }
+
   // MARK: - Private functions for updating and setting view components
 
   @objc private func reloadUI() {
     syntaxHighlight(markdownTextView.string)
-    self.view.updateLayer()
+    view.updateLayer()
     reGeneratePreview()
   }
 
@@ -131,8 +228,8 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   }
 
   private func setWordCount() {
-    let wordCountView = self.view.window?.titlebarAccessoryViewControllers.first?.view.subviews.first as? NSTextField
-    guard let wordCount = self.markdownTextView.textStorage?.words.count else { return }
+    let wordCountView = view.window?.titlebarAccessoryViewControllers.first?.view.subviews.first as? NSTextField
+    guard let wordCount = markdownTextView.textStorage?.words.count else { return }
 
     var countString = String(describing: wordCount) + " word"
 
@@ -149,11 +246,11 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
 extension MarkdownViewController {
 
   public func getSplitViewController() -> NSSplitViewController? {
-    return self.parent as? NSSplitViewController
+    return parent as? NSSplitViewController
   }
 
   public func getPreviewViewController() -> PreviewViewController? {
-    return self.getSplitViewController()?.splitViewItems.last?.viewController as? PreviewViewController
+    return getSplitViewController()?.splitViewItems.last?.viewController as? PreviewViewController
   }
 
 }

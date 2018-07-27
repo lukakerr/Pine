@@ -32,7 +32,7 @@ class Debouncer: NSObject {
   }
 
   @objc private func fire() {
-    self.callback()
+    callback()
   }
 
 }

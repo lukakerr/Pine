@@ -13,31 +13,31 @@ class Preferences {
 
   private init() {
     if defaults.object(forKey: "showPreviewOnStartup") != nil {
-      self.showPreviewOnStartup = defaults.bool(forKey: "showPreviewOnStartup")
+      showPreviewOnStartup = defaults.bool(forKey: "showPreviewOnStartup")
     }
 
     if defaults.object(forKey: "openNewDocumentOnStartup") != nil {
-      self.openNewDocumentOnStartup = defaults.bool(forKey: "openNewDocumentOnStartup")
+      openNewDocumentOnStartup = defaults.bool(forKey: "openNewDocumentOnStartup")
     }
 
     if defaults.object(forKey: "autosaveDocument") != nil {
-      self.autosaveDocument = defaults.bool(forKey: "autosaveDocument")
+      autosaveDocument = defaults.bool(forKey: "autosaveDocument")
     }
 
     if defaults.object(forKey: "verticalSplitView") != nil {
-      self.verticalSplitView = defaults.bool(forKey: "verticalSplitView")
+      verticalSplitView = defaults.bool(forKey: "verticalSplitView")
     }
 
     if defaults.object(forKey: "modernTitlebar") != nil {
-      self.modernTitlebar = defaults.bool(forKey: "modernTitlebar")
+      modernTitlebar = defaults.bool(forKey: "modernTitlebar")
     }
 
     if defaults.object(forKey: "useSystemAppearance") != nil {
-      self.useSystemAppearance = defaults.bool(forKey: "useSystemAppearance")
+      useSystemAppearance = defaults.bool(forKey: "useSystemAppearance")
     }
 
     if defaults.object(forKey: "showSidebar") != nil {
-      self.showSidebar = defaults.bool(forKey: "showSidebar")
+      showSidebar = defaults.bool(forKey: "showSidebar")
     }
   }
 

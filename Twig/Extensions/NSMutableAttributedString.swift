@@ -11,10 +11,10 @@ import Cocoa
 extension NSMutableAttributedString {
 
   public func withAttribute(_ attribute: NSAttributedString.Key, _ value: Any, _ range: NSRange? = nil) {
-    return self.addAttribute(
+    return addAttribute(
       attribute,
       value: value,
-      range: range ?? NSRange(location: 0, length: self.length)
+      range: range ?? NSRange(location: 0, length: length)
     )
   }
 

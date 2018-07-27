@@ -36,15 +36,15 @@ class HTML {
       <html>
       <head>
         <style>
-          \(self.css)
-          \(self.baseCSS)
+          \(css)
+          \(baseCSS)
           code { background: \(theme.code.hex) !important }
           p, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, table, tr { color: \(theme.text.hex); }
           table tr { background: \(theme.background.hex); }
           table tr:nth-child(2n) { background: \(theme.background.darker.hex); }
           table tr th, table tr td { border-color: \(theme.background.lighter.hex) }
         </style>
-        <script>\(self.js)</script>
+        <script>\(js)</script>
         <script>hljs.initHighlightingOnLoad();</script>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
@@ -80,7 +80,7 @@ class HTML {
       let jsResult = try? String(contentsOf: jsFile, encoding: .utf8)
     else { return }
 
-    self.js = jsResult
+    js = jsResult
   }
 
   fileprivate func loadCSS() {
@@ -93,8 +93,8 @@ class HTML {
     let cssFolder = URL(fileURLWithPath: bundlePath + "/highlight-js/styles/\(theme.syntax).css")
 
     if let cssResult = try? String(contentsOf: cssFolder as URL, encoding: .utf8) {
-      self.css = cssResult
-      self.baseCSS = baseCSSResult
+      css = cssResult
+      baseCSS = baseCSSResult
     }
   }
 

@@ -11,7 +11,7 @@ import Foundation
 extension String {
 
   public var isMarkdown: Bool {
-    return self.hasSuffix(".md")
+    return hasSuffix(".md")
   }
 
   public var isBaseFile: Bool {
@@ -19,7 +19,7 @@ extension String {
   }
 
   public var isWebLink: Bool {
-    return self.contains("http")
+    return contains("http")
   }
 
 }

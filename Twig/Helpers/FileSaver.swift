@@ -28,14 +28,14 @@ class FileSaver {
     let dialog = NSSavePanel()
 
     dialog.title = "Export file"
-    dialog.allowedFileTypes = self.filetypes
+    dialog.allowedFileTypes = filetypes
     dialog.canCreateDirectories = true
 
     if dialog.runModal() == .OK {
       guard let url = dialog.url else { throw SaveError.URLNotFound }
 
       do {
-        try self.data.write(to: url, options: .atomic)
+        try data.write(to: url, options: .atomic)
       } catch {
         throw SaveError.unableToWrite
       }
