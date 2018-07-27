@@ -1027,14 +1027,14 @@
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <imageView translatesAutoresizingMaskIntoConstraints="NO" id="gNL-hb-hhd">
-                                                                    <rect key="frame" x="2" y="5" width="17" height="19"/>
+                                                                    <rect key="frame" x="2" y="5" width="17" height="20"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="17" id="ilb-5i-oDX"/>
                                                                     </constraints>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" imageScaling="proportionallyDown" image="NSFolder" id="chW-9g-7sj"/>
                                                                 </imageView>
                                                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jim-ka-AcL">
-                                                                    <rect key="frame" x="24" y="6" width="96" height="19"/>
+                                                                    <rect key="frame" x="24" y="5" width="96" height="19"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" drawsBackground="YES" id="h2R-C8-lff">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1043,10 +1043,11 @@
                                                                 </textField>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="gNL-hb-hhd" firstAttribute="top" secondItem="jim-ka-AcL" secondAttribute="top" constant="1" id="1Ea-TL-DGN"/>
-                                                                <constraint firstItem="gNL-hb-hhd" firstAttribute="bottom" secondItem="jim-ka-AcL" secondAttribute="bottom" constant="1" id="PEy-T9-X6c"/>
+                                                                <constraint firstItem="gNL-hb-hhd" firstAttribute="top" secondItem="jim-ka-AcL" secondAttribute="top" constant="-1" id="1Ea-TL-DGN"/>
+                                                                <constraint firstItem="jim-ka-AcL" firstAttribute="top" secondItem="ooL-k5-Ykk" secondAttribute="top" constant="6" id="EPg-9S-m0L"/>
+                                                                <constraint firstItem="gNL-hb-hhd" firstAttribute="bottom" secondItem="jim-ka-AcL" secondAttribute="bottom" id="PEy-T9-X6c"/>
                                                                 <constraint firstItem="jim-ka-AcL" firstAttribute="leading" secondItem="gNL-hb-hhd" secondAttribute="trailing" constant="5" id="So7-Eq-gyB"/>
-                                                                <constraint firstItem="gNL-hb-hhd" firstAttribute="top" secondItem="ooL-k5-Ykk" secondAttribute="top" constant="6" id="Tso-Ui-KlG"/>
+                                                                <constraint firstItem="gNL-hb-hhd" firstAttribute="top" secondItem="ooL-k5-Ykk" secondAttribute="top" constant="5" id="Tso-Ui-KlG"/>
                                                                 <constraint firstAttribute="bottom" secondItem="gNL-hb-hhd" secondAttribute="bottom" constant="5" id="XWf-oB-fSl"/>
                                                                 <constraint firstItem="gNL-hb-hhd" firstAttribute="leading" secondItem="ooL-k5-Ykk" secondAttribute="leading" constant="2" id="ayJ-9i-eyO"/>
                                                             </constraints>
