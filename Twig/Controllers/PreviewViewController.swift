@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-//import Down
 import WebKit
 
 class PreviewViewController: NSViewController, WKNavigationDelegate {
@@ -21,6 +20,7 @@ class PreviewViewController: NSViewController, WKNavigationDelegate {
 //    webPreview.configuration.preferences.setValue(true, forKey: "developerExtrasEnabled")
   }
 
+  /// A closure that returns the y scoll position of the webview
   public func captureScroll(completion: @escaping () -> Void) {
     webPreview.evaluateJavaScript("window.scrollY;") { (response, err) in
       if let pos = response as? Int {
@@ -31,10 +31,11 @@ class PreviewViewController: NSViewController, WKNavigationDelegate {
   }
 
   // Open web links in browser, not webview
-  public func webView(_ webView: WKWebView,
-                      decidePolicyFor navigationAction: WKNavigationAction,
-                      decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-
+  public func webView(
+    _ webView: WKWebView,
+    decidePolicyFor navigationAction: WKNavigationAction,
+    decisionHandler: @escaping (WKNavigationActionPolicy) -> Void
+  ) {
     guard let url = navigationAction.request.url else { return }
 
     if url.absoluteString.isWebLink {

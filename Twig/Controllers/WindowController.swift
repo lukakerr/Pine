@@ -10,6 +10,21 @@ import Cocoa
 
 class WindowController: NSWindowController, NSWindowDelegate {
 
+  /// The split view controller containing the SidebarViewController and editor split view controller
+  private var mainSplitViewController: NSSplitViewController? {
+    return contentViewController as? NSSplitViewController
+  }
+
+  /// The split view controller containing the MarkdownViewController and PreviewViewController
+  private var editorSplitViewController: NSSplitViewController? {
+    return mainSplitViewController?.splitViewItems.last?.viewController as? NSSplitViewController
+  }
+
+  /// The sidebar view controller
+  private var sidebarViewController: SidebarViewController? {
+    return mainSplitViewController?.splitViewItems.first?.viewController as? SidebarViewController
+  }
+
   override var acceptsFirstResponder: Bool {
     return true
   }
@@ -31,19 +46,12 @@ class WindowController: NSWindowController, NSWindowDelegate {
     let windows = NSApplication.shared.windows.filter { $0.isVisible }
 
     // Hackish way to get all sidebars and syncronize the sidebar data
-    // Iterate over all windows (tabs) and find the sidebar
-    for window in windows {
-      if let splitVC = window.contentViewController as? NSSplitViewController {
-        if let sidebarVC = splitVC.children.first as? SidebarViewController {
-          sidebarVC.updateDocuments()
-        }
-      }
-    }
+    // Map over all windows (tabs) and find the sidebar
+    windows.forEach { _ in sidebarViewController?.updateDocuments() }
   }
 
   func windowWillClose(_ notification: Notification) {
     // When a window is closed, a document is removed from the sidebar
-
     if let url = (document as? Document)?.fileURL {
       openDocuments.removeDocument(with: url)
       syncWindowSidebars()
@@ -55,12 +63,9 @@ class WindowController: NSWindowController, NSWindowDelegate {
     let windows = NSApplication.shared.windows.filter { $0.isVisible }
 
     for window in windows {
-      guard
-        let doc = window.windowController?.document as? Document,
-        let url = doc.fileURL
-      else { continue }
+      guard let doc = window.windowController?.document as? Document else { continue }
 
-      if url == file {
+      if doc.fileURL == file {
         window.makeKeyAndOrderFront(nil)
         syncWindowSidebars()
         return
@@ -76,21 +81,19 @@ class WindowController: NSWindowController, NSWindowDelegate {
   // MARK: - First responder methods called by NSMenuItems applicable to the current window
 
   @IBAction func togglePreview(sender: NSMenuItem) {
-    guard
-      let svc = contentViewController as? NSSplitViewController,
-      let evc = svc.splitViewItems.last?.viewController as? NSSplitViewController,
-      let preview = evc.splitViewItems.last
-    else { return }
+    guard let preview = editorSplitViewController?.splitViewItems.last else { return }
 
     preview.collapseBehavior = .preferResizingSplitViewWithFixedSiblings
     preview.animator().isCollapsed = !preview.isCollapsed
+
+    // If the preview is open after toggling, send a notification to re-generate the preview
+    if !preview.isCollapsed {
+      NotificationCenter.send(.appearanceChanged)
+    }
   }
 
   @IBAction func toggleSidebar(sender: NSMenuItem) {
-    guard
-      let svc = contentViewController as? NSSplitViewController,
-      let sidebar = svc.splitViewItems.first
-    else { return }
+    guard let sidebar = mainSplitViewController?.splitViewItems.first else { return }
 
     sidebar.collapseBehavior = .preferResizingSplitViewWithFixedSiblings
     sidebar.animator().isCollapsed = !sidebar.isCollapsed

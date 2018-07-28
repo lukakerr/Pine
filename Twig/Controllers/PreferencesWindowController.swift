@@ -27,6 +27,7 @@ class PreferencesWindowController: NSWindowController, NSWindowDelegate {
     }
 
     window?.backgroundColor = theme.background
+
     if theme.background.isDark {
       window?.appearance = NSAppearance(named: .dark)
     } else {

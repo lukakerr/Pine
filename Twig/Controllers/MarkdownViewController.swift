@@ -16,13 +16,23 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   private var debouncedGeneratePreview: Debouncer!
   private let highlightr = Highlightr()!
 
-  // Cocoa binding for text inside markdownTextView
+  /// The split view controller holding this markdown view controller
+  private var splitViewController: NSSplitViewController? {
+    return parent as? NSSplitViewController
+  }
+
+  /// The preview view controller for this markdown view controller
+  private var previewViewController: PreviewViewController? {
+    return splitViewController?.splitViewItems.last?.viewController as? PreviewViewController
+  }
+
+  /// Cocoa binding for text inside markdownTextView
   @objc var attributedMarkdownTextInput: NSAttributedString {
     get {
       return NSAttributedString(string: markdownTextView.string)
     }
     set {
-      syntaxHighlight(newValue.string)
+      syntaxHighlight()
       debouncedGeneratePreview.call()
       setWordCount()
     }
@@ -40,11 +50,12 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
     // Setup notification observer for system dark/light mode change
     NotificationCenter.receive(.appearanceChanged, instance: self, selector: #selector(reGeneratePreview))
 
+    // Setup a 200ms debouncer for generating the markdown preview
     debouncedGeneratePreview = Debouncer(delay: 0.2) {
-      self.generatePreview(self.markdownTextView.string)
+      self.generatePreview()
     }
 
-    if let preview = getSplitViewController()?.splitViewItems.last {
+    if let preview = splitViewController?.splitViewItems.last {
       preview.isCollapsed = !preferences.showPreviewOnStartup
     }
 
@@ -63,62 +74,18 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   // MARK: - First responder methods for exporting from WKWebView
 
   @IBAction func exportPDF(sender: NSMenuItem) {
-    if let pvc = getPreviewViewController() {
+    if let pvc = previewViewController {
       PDFExporter.export(from: pvc.webPreview)
     }
   }
 
   @IBAction func exportHTML(sender: NSMenuItem) {
-    if let pvc = getPreviewViewController() {
+    if let pvc = previewViewController {
       HTMLExporter.export(from: pvc.webPreview)
     }
   }
 
-  // MARK: - Functions handling syntax highlighting and preview generation
-
-  // Syntax highlight the given markdown string and insert into text view
-  private func syntaxHighlight(_ string: String) {
-    highlightr.setTheme(to: theme.syntax)
-    theme.background = highlightr.theme.themeBackgroundColor
-
-    DispatchQueue.global(qos: .userInitiated).async {
-      let highlightedCode = self.highlightr.highlight(string, as: "markdown")
-
-      if let syntaxHighlighted = highlightedCode {
-        let code = NSMutableAttributedString(attributedString: syntaxHighlighted)
-        code.withFont(preferences.font)
-
-        DispatchQueue.main.async {
-          let cursorPosition = self.markdownTextView.selectedRanges[0].rangeValue.location
-          self.markdownTextView.textStorage?.beginEditing()
-          self.markdownTextView.textStorage?.setAttributedString(code)
-          self.markdownTextView.textStorage?.endEditing()
-          self.markdownTextView.setSelectedRange(NSRange(location: cursorPosition, length: 0))
-        }
-      }
-    }
-  }
-
-  private func generatePreview(_ string: String) {
-    if let svc = getSplitViewController(),
-      let preview = svc.splitViewItems.last {
-      let previewViewController = preview.viewController as? PreviewViewController
-
-      if preview.isCollapsed { return }
-
-      DispatchQueue.global(qos: .userInitiated).async {
-        if let parsed = Node(markdown: string)?.html {
-          DispatchQueue.main.async {
-            previewViewController?.captureScroll {
-              previewViewController?.webPreview.loadHTMLString(html.getHTML(with: parsed), baseURL: nil)
-            }
-          }
-        }
-      }
-    }
-  }
-
-  // MARK: - Markdown formatting shortcuts
+  // MARK: - First responder methods for various markdown formatting shortcuts
 
   @IBAction func bold(sender: NSMenuItem) {
     replace(left: "**", right: "**")
@@ -166,6 +133,51 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
 
   @IBAction func mathBlock(sender: NSMenuItem) {
     replace(left: "$$\n", right: "\n$$", newLineIfSelected: true)
+  }
+
+  // MARK: - Functions handling markdown editing
+
+  /// Syntax highlight the markdownTextView contents
+  private func syntaxHighlight() {
+    highlightr.setTheme(to: theme.syntax)
+    theme.background = highlightr.theme.themeBackgroundColor
+
+    let markdownText = markdownTextView.string
+
+    DispatchQueue.global(qos: .userInitiated).async {
+      let highlightedCode = self.highlightr.highlight(markdownText, as: "markdown")
+
+      if let syntaxHighlighted = highlightedCode {
+        let code = NSMutableAttributedString(attributedString: syntaxHighlighted)
+        code.withFont(preferences.font)
+
+        DispatchQueue.main.async {
+          let cursorPosition = self.markdownTextView.selectedRanges[0].rangeValue.location
+          self.markdownTextView.textStorage?.beginEditing()
+          self.markdownTextView.textStorage?.setAttributedString(code)
+          self.markdownTextView.textStorage?.endEditing()
+          self.markdownTextView.setSelectedRange(NSRange(location: cursorPosition, length: 0))
+        }
+      }
+    }
+  }
+
+  /// Parse the markdownTextView contents into HTML and load it into the webview
+  private func generatePreview() {
+    // If preview is collapsed, return
+    guard let preview = splitViewController?.splitViewItems.last, !preview.isCollapsed else { return }
+
+    let markdownText = markdownTextView.string
+
+    DispatchQueue.global(qos: .userInitiated).async {
+      if let parsed = Node(markdown: markdownText)?.html {
+        DispatchQueue.main.async {
+          self.previewViewController?.captureScroll {
+            self.previewViewController?.webPreview.loadHTMLString(html.getHTML(with: parsed), baseURL: nil)
+          }
+        }
+      }
+    }
   }
 
   /// Inserts the given left and right characters on either side of selected text,
@@ -217,16 +229,18 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
 
   // MARK: - Private functions for updating and setting view components
 
+  /// Update any UI related components
   @objc private func reloadUI() {
-    syntaxHighlight(markdownTextView.string)
+    syntaxHighlight()
     view.updateLayer()
     reGeneratePreview()
   }
 
   @objc private func reGeneratePreview() {
-    generatePreview(markdownTextView.string)
+    generatePreview()
   }
 
+  /// Sets the word count in the titlebar word count accessory
   private func setWordCount() {
     let wordCountView = view.window?.titlebarAccessoryViewControllers.first?.view.subviews.first as? NSTextField
     guard let wordCount = markdownTextView.textStorage?.words.count else { return }
@@ -239,18 +253,6 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
       countString = ""
     }
     wordCountView?.stringValue = countString
-  }
-
-}
-
-extension MarkdownViewController {
-
-  public func getSplitViewController() -> NSSplitViewController? {
-    return parent as? NSSplitViewController
-  }
-
-  public func getPreviewViewController() -> PreviewViewController? {
-    return getSplitViewController()?.splitViewItems.last?.viewController as? PreviewViewController
   }
 
 }

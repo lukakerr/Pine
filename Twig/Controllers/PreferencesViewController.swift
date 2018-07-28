@@ -19,16 +19,12 @@ class PreferencesViewController: NSViewController {
   @IBOutlet weak var useSystemAppearance: NSButton!
   @IBOutlet weak var showSidebar: NSButton!
 
-  let wc = WindowController()
-
   override func viewDidLoad() {
     super.viewDidLoad()
 
     syntaxDropdown.removeAllItems()
 
-    for syntax in SyntaxThemes.ThemeList {
-      syntaxDropdown.addItem(withTitle: syntax)
-    }
+    SyntaxThemes.ThemeList.forEach { syntaxDropdown.addItem(withTitle: $0) }
 
     syntaxDropdown.selectItem(withTitle: theme.syntax)
 

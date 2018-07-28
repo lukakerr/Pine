@@ -23,12 +23,9 @@ class SidebarViewController: NSViewController {
     super.viewDidLoad()
 
     // Setup notification observer for preferences change
-    NotificationCenter.receive(
-      .preferencesChanged,
-      instance: self,
-      selector: #selector(updateSidebarVisibility)
-    )
+    NotificationCenter.receive(.preferencesChanged, instance: self, selector: #selector(updateSidebarVisibility))
 
+    // Setup selector for when row in sidebar is double clicked
     sidebar.doubleAction = #selector(doubleClicked)
   }
 
@@ -49,9 +46,7 @@ class SidebarViewController: NSViewController {
   }
 
   @objc private func updateSidebarVisibility() {
-    if let svc = parent as? NSSplitViewController {
-      svc.splitViewItems.first?.isCollapsed = !preferences.showSidebar
-    }
+    (parent as? NSSplitViewController)?.splitViewItems.first?.isCollapsed = !preferences.showSidebar
   }
 
 }
@@ -89,12 +84,11 @@ extension SidebarViewController: NSOutlineViewDataSource {
   // When a row is selected
   func outlineViewSelectionDidChange(_ notification: Notification) {
     guard
-      let outlineView = notification.object as? NSOutlineView,
-      let doc = outlineView.item(atRow: outlineView.selectedRow) as? FileSystemItem,
+      let doc = sidebar.item(atRow: sidebar.selectedRow) as? FileSystemItem,
       let window = view.window?.windowController as? WindowController
     else { return }
 
-    setRowColour(outlineView)
+    setRowColour(sidebar)
 
     if doc.isDirectory { return }
 
@@ -115,7 +109,7 @@ extension SidebarViewController: NSOutlineViewDataSource {
 
     guard
       let window = view.window?.windowController as? WindowController,
-      let doc = window.document as? NSDocument
+      let doc = window.document as? Document
     else { return }
 
     for (index, item) in items.enumerated()
