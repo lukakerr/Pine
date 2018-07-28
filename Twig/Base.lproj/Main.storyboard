@@ -541,7 +541,7 @@
         <!--Window Controller-->
         <scene sceneID="UqC-3D-TJP">
             <objects>
-                <windowController id="Ul4-m2-Yud" customClass="PreferencesWindowController" customModule="Twig" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController showSeguePresentationStyle="single" id="Ul4-m2-Yud" customClass="PreferencesWindowController" customModule="Twig" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="alertPanel" frameAutosaveName="" titlebarAppearsTransparent="YES" id="GdU-QC-Lde">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
