@@ -92,11 +92,4 @@ class WindowController: NSWindowController, NSWindowDelegate {
     }
   }
 
-  @IBAction func toggleSidebar(sender: NSMenuItem) {
-    guard let sidebar = mainSplitViewController?.splitViewItems.first else { return }
-
-    sidebar.collapseBehavior = .preferResizingSplitViewWithFixedSiblings
-    sidebar.animator().isCollapsed = !sidebar.isCollapsed
-  }
-
 }

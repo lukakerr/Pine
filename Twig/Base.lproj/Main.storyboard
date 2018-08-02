@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14306.4"/>
-        <plugIn identifier="com.apple.WebKit2IBPlugin" version="14306.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.3.2"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="14313.3.2"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -388,9 +388,9 @@
                                                 <action selector="togglePreviewWithSender:" target="Ady-hI-5gd" id="98T-ho-mLk"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Toggle Sidebar" keyEquivalent="l" id="fqn-9F-7fK">
+                                        <menuItem title="Hide Sidebar" keyEquivalent="l" id="fqn-9F-7fK">
                                             <connections>
-                                                <action selector="toggleSidebarWithSender:" target="Ady-hI-5gd" id="uP6-tJ-D7h"/>
+                                                <action selector="toggleSidebar:" target="Ady-hI-5gd" id="888-8e-YNx"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Customize Toolbar…" id="1UK-8n-QPP">
