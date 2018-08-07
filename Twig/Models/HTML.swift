@@ -38,6 +38,7 @@ class HTML {
         <style>
           \(css)
           \(baseCSS)
+          html, body { background: \(theme.background.hex); }
           code { background: \(theme.code.hex) !important }
           p, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, table, tr { color: \(theme.text.hex); }
           table tr { background: \(theme.background.hex); }
