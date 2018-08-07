@@ -388,6 +388,11 @@
                                                 <action selector="togglePreviewWithSender:" target="Ady-hI-5gd" id="98T-ho-mLk"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="Toggle Editor" keyEquivalent="e" id="FEt-FA-N8C">
+                                            <connections>
+                                                <action selector="toggleEditorWithSender:" target="Ady-hI-5gd" id="vaH-cd-iQ9"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem title="Hide Sidebar" keyEquivalent="l" id="fqn-9F-7fK">
                                             <connections>
                                                 <action selector="toggleSidebar:" target="Ady-hI-5gd" id="888-8e-YNx"/>

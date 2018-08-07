@@ -92,4 +92,17 @@ class WindowController: NSWindowController, NSWindowDelegate {
     }
   }
 
+  @IBAction func toggleEditor(sender: NSMenuItem) {
+    guard let editor = editorSplitViewController?.splitViewItems.first else { return }
+
+    editor.collapseBehavior = .preferResizingSplitViewWithFixedSiblings
+    editor.animator().isCollapsed = !editor.isCollapsed
+
+    // If the editor is open after toggling, send a notification to re-generate the preview
+    if !editor.isCollapsed {
+      NotificationCenter.send(.appearanceChanged)
+    }
+  }
+
+
 }
