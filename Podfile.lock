@@ -2,15 +2,20 @@ PODS:
   - Highlightr (2.0.1)
 
 DEPENDENCIES:
-  - Highlightr
+  - Highlightr (from `https://github.com/raspu/Highlightr.git`)
 
-SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - Highlightr
+EXTERNAL SOURCES:
+  Highlightr:
+    :git: https://github.com/raspu/Highlightr.git
+
+CHECKOUT OPTIONS:
+  Highlightr:
+    :commit: bd57404c28527b4d40ee15ce9f61fad734ad50a1
+    :git: https://github.com/raspu/Highlightr.git
 
 SPEC CHECKSUMS:
-  Highlightr: 65655134dd0d5e1320afdd8a9d880c9e9dc0b437
+  Highlightr: 8162b4faba588963fb8852390ea9a78f166a6b99
 
-PODFILE CHECKSUM: fb8de94265e5b9d0266cb8f734e342d1f6173077
+PODFILE CHECKSUM: 9c5bcd1991e4dff130ba4f25d12de88e93f38fc7
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

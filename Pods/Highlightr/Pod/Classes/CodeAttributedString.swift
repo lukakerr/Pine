@@ -40,14 +40,27 @@ open class CodeAttributedString : NSTextStorage
     let stringStorage = NSTextStorage()
 
     /// Highlightr instace used internally for highlighting. Use this for configuring the theme.
-    open let highlightr = Highlightr()!
+    public let highlightr: Highlightr
     
     /// This object will be notified before and after the highlighting.
     open var highlightDelegate : HighlightDelegate?
 
-    /// Initialize the CodeAttributedString
-    public override init()
+    /**
+     Initialize the CodeAttributedString
+
+     - parameter highlightr: The highlightr instance to use. Defaults to `Highlightr()`.
+
+     */
+    public init(highlightr: Highlightr = Highlightr()!)
     {
+        self.highlightr = highlightr
+        super.init()
+        setupListeners()
+    }
+
+    /// Initialize the CodeAttributedString
+    public override init() {
+        self.highlightr = Highlightr()!
         super.init()
         setupListeners()
     }
@@ -55,6 +68,7 @@ open class CodeAttributedString : NSTextStorage
     /// Initialize the CodeAttributedString
     required public init?(coder aDecoder: NSCoder)
     {
+        self.highlightr = Highlightr()!
         super.init(coder: aDecoder)
         setupListeners()
     }
@@ -63,6 +77,7 @@ open class CodeAttributedString : NSTextStorage
     /// Initialize the CodeAttributedString
     required public init?(pasteboardPropertyList propertyList: Any, ofType type: NSPasteboard.PasteboardType)
     {
+        self.highlightr = Highlightr()!
         super.init(pasteboardPropertyList: propertyList, ofType: type)
         setupListeners()
     }
@@ -94,7 +109,7 @@ open class CodeAttributedString : NSTextStorage
      
      - returns: Attributes
      */
-    open override func attributes(at location: Int, effectiveRange range: NSRangePointer?) -> [NSAttributedString.Key : Any]
+    open override func attributes(at location: Int, effectiveRange range: NSRangePointer?) -> [AttributedStringKey : Any]
     {
         return stringStorage.attributes(at: location, effectiveRange: range)
     }
@@ -108,7 +123,7 @@ open class CodeAttributedString : NSTextStorage
     open override func replaceCharacters(in range: NSRange, with str: String)
     {
         stringStorage.replaceCharacters(in: range, with: str)
-        self.edited(NSTextStorageEditActions.editedCharacters, range: range, changeInLength: (str as NSString).length - range.length)
+        self.edited(TextStorageEditActions.editedCharacters, range: range, changeInLength: (str as NSString).length - range.length)
     }
     
     /**
@@ -117,10 +132,10 @@ open class CodeAttributedString : NSTextStorage
      - parameter attrs: [String : AnyObject]
      - parameter range: NSRange
      */
-    open override func setAttributes(_ attrs: [NSAttributedString.Key : Any]?, range: NSRange)
+    open override func setAttributes(_ attrs: [AttributedStringKey : Any]?, range: NSRange)
     {
         stringStorage.setAttributes(attrs, range: range)
-        self.edited(NSTextStorageEditActions.editedAttributes, range: range, changeInLength: 0)
+        self.edited(TextStorageEditActions.editedAttributes, range: range, changeInLength: 0)
     }
     
     /// Called internally everytime the string is modified.
@@ -181,7 +196,7 @@ open class CodeAttributedString : NSTextStorage
                     self.stringStorage.setAttributes(attrs, range: fixedRange)
                 })
                 self.endEditing()
-                self.edited(NSTextStorageEditActions.editedAttributes, range: range, changeInLength: 0)
+                self.edited(TextStorageEditActions.editedAttributes, range: range, changeInLength: 0)
                 self.highlightDelegate?.didHighlight?(range, success: true)
             })
             

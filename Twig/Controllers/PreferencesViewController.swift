@@ -84,12 +84,14 @@ class PreferencesViewController: NSViewController {
     postNotification()
   }
 
-  override func changeFont(_ sender: Any?) {
-    if let fontManager = sender as? NSFontManager {
-      preferences.font = fontManager.convert(preferences.font)
-      postNotification()
-    }
-  }
+  // TODO: For some reason in macOS 10.14 beta this method is deprecated
+  // will need to listen to font changes some other way
+//  override func changeFont(_ sender: Any?) {
+//    if let fontManager = sender as? NSFontManager {
+//      preferences.font = fontManager.convert(preferences.font)
+//      postNotification()
+//    }
+//  }
 
   @IBAction func revealThemes(_ sender: NSButton) {
     if let folder =  FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first {

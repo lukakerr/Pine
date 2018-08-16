@@ -3,5 +3,5 @@ use_frameworks!
 platform :osx, '10.13'
 
 target 'Twig' do
-  pod 'Highlightr'
+  pod 'Highlightr', :git => 'https://github.com/raspu/Highlightr.git'
 end

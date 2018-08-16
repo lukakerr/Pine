@@ -135,11 +135,11 @@ open class Theme {
         
         if styleList.count > 0
         {
-            var attrs = [NSAttributedString.Key: Any]()
-            attrs[NSAttributedString.Key.font] = codeFont
+            var attrs = [AttributedStringKey: Any]()
+            attrs[.font] = codeFont
             for style in styleList
             {
-                if let themeStyle = themeDict[style] as? [NSAttributedString.Key: Any]
+                if let themeStyle = themeDict[style] as? [AttributedStringKey: Any]
                 {
                     for (attrName, attrValue) in themeStyle
                     {
@@ -152,7 +152,7 @@ open class Theme {
         }
         else
         {
-            returnString = NSAttributedString(string: string, attributes:[NSAttributedString.Key.font:codeFont] )
+            returnString = NSAttributedString(string: string, attributes:[AttributedStringKey.font:codeFont] )
         }
         
         return returnString
@@ -236,7 +236,7 @@ open class Theme {
         var returnTheme = RPThemeDict()
         for (className, props) in theme
         {
-            var keyProps = [NSAttributedString.Key: AnyObject]()
+            var keyProps = [AttributedStringKey: AnyObject]()
             for (key, prop) in props
             {
                 switch key
@@ -279,19 +279,19 @@ open class Theme {
         }
     }
     
-    private func attributeForCSSKey(_ key: String) -> NSAttributedString.Key
+    private func attributeForCSSKey(_ key: String) -> AttributedStringKey
     {
         switch key {
         case "color":
-            return NSAttributedString.Key.foregroundColor
+            return .foregroundColor
         case "font-weight":
-            return NSAttributedString.Key.font
+            return .font
         case "font-style":
-            return NSAttributedString.Key.font
+            return .font
         case "background-color":
-            return NSAttributedString.Key.backgroundColor
+            return .backgroundColor
         default:
-            return NSAttributedString.Key.font
+            return .font
         }
     }
     
