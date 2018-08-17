@@ -86,6 +86,10 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
     }
   }
 
+  @IBAction func exportLatex(sender: NSMenuItem) {
+    LatexExporter.export(from: markdownTextView)
+  }
+
   // MARK: - First responder methods for various markdown formatting shortcuts
 
   @IBAction func bold(sender: NSMenuItem) {
@@ -166,7 +170,10 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   /// Parse the markdownTextView contents into HTML and load it into the webview
   private func generatePreview() {
     // If preview is collapsed, return
-    guard let preview = splitViewController?.splitViewItems.last, !preview.isCollapsed else { return }
+    guard
+      let preview = splitViewController?.splitViewItems.last,
+      !preview.isCollapsed
+    else { return }
 
     let markdownText = markdownTextView.string
 

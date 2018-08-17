@@ -8,6 +8,7 @@
 
 import Cocoa
 import WebKit
+import cmark_gfm_swift
 
 /// A protocol that various exporters can conform to
 /// Must provide a filetype and generic method used to export
@@ -76,12 +77,37 @@ struct HTMLExporter: Exportable {
             try fileSaver.save()
           } catch let error as SaveError {
             Alert.display(error.description)
-          } catch {
-            return
-          }
+          } catch {}
         }
       }
     }
   }
 
+}
+
+struct LatexExporter: Exportable {
+  static var filetype = "tex"
+
+  static func export<T>(from view: T) {
+    // We expect the view to be a text view
+    let markdownTextView = view as! NSTextView
+
+    if let l = Node(markdown: markdownTextView.string)?.latex {
+      let latex = """
+      \\documentclass[12pt]{article}
+      \\begin{document}
+      \(l)
+      \\end{document}
+      """
+
+      if let data = latex.data(using: .utf8) {
+        let fileSaver = FileSaver(data: data, filetypes: [filetype])
+        do {
+          try fileSaver.save()
+        } catch let error as SaveError {
+          Alert.display(error.description)
+        } catch {}
+      }
+    }
+  }
 }
