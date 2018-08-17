@@ -5,7 +5,7 @@
 #include "buffer.h"
 #include "houdini.h"
 #include "utf8.h"
-#include "entities.h"
+#include "entities.inc"
 
 /* Binary tree lookup code for entities added by JGM */
 

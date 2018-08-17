@@ -1,7 +1,7 @@
 #include "autolink.h"
 #include "parser.h"
 #include <string.h>
-#include "utf8.h"
+#include <utf8.h>
 
 #if defined(_WIN32)
 #define strncasecmp _strnicmp

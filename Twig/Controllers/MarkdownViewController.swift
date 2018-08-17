@@ -8,6 +8,7 @@
 
 import Cocoa
 import Highlightr
+import cmark_gfm_swift
 
 class MarkdownViewController: NSViewController, NSTextViewDelegate {
 

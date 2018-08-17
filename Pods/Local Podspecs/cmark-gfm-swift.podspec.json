@@ -1,0 +1,28 @@
+{
+  "name": "cmark-gfm-swift",
+  "version": "0.1.0",
+  "summary": "A short description of cmark-gfm-swift.",
+  "homepage": "https://github.com/githawkapp/cmark-gfm-swift",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Ryan Nystrom": "rnystrom@whoisryannystrom.com"
+  },
+  "source": {
+    "git": "https://github.com/githawkapp/cmark-gfm-swift.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0",
+    "osx": "10.12"
+  },
+  "source_files": "Source/**/*",
+  "public_header_files": "Source/*.h",
+  "exclude_files": "Source/Info.plist",
+  "preserve_paths": "cmark-gfm-swift/Source/cmark_gfm/module.modulemap",
+  "pod_target_xcconfig": {
+    "SWIFT_INCLUDE_PATHS": "$(SRCROOT)/cmark-gfm-swift/Source/cmark_gfm/**"
+  }
+}

@@ -1,21 +1,29 @@
 PODS:
+  - cmark-gfm-swift (0.1.0)
   - Highlightr (2.0.1)
 
 DEPENDENCIES:
+  - cmark-gfm-swift (from `https://github.com/lukakerr/cmark-gfm-swift.git`)
   - Highlightr (from `https://github.com/raspu/Highlightr.git`)
 
 EXTERNAL SOURCES:
+  cmark-gfm-swift:
+    :git: https://github.com/lukakerr/cmark-gfm-swift.git
   Highlightr:
     :git: https://github.com/raspu/Highlightr.git
 
 CHECKOUT OPTIONS:
+  cmark-gfm-swift:
+    :commit: ab62c87f1afecb05e045fe59a98f9697e3fb17f9
+    :git: https://github.com/lukakerr/cmark-gfm-swift.git
   Highlightr:
     :commit: bd57404c28527b4d40ee15ce9f61fad734ad50a1
     :git: https://github.com/raspu/Highlightr.git
 
 SPEC CHECKSUMS:
+  cmark-gfm-swift: 2d9490a9e562aca13fd95ffbb781ce4a87d9ce27
   Highlightr: 8162b4faba588963fb8852390ea9a78f166a6b99
 
-PODFILE CHECKSUM: 9c5bcd1991e4dff130ba4f25d12de88e93f38fc7
+PODFILE CHECKSUM: 2c99696728f270e3b87440c948c2a2549e692d9a
 
 COCOAPODS: 1.5.3

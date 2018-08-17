@@ -1,0 +1,6 @@
+framework module cmark_gfm_swift {
+  umbrella header "cmark-gfm-swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

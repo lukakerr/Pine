@@ -169,7 +169,7 @@ static int S_render_node(cmark_html_renderer *renderer, cmark_node *node,
       cmark_strbuf_puts(html, "</li>\n");
     }
     break;
-  
+      
   case CMARK_NODE_CHECKBOX_ITEM:
     if (entering) {
       cmark_html_render_cr(html);
@@ -424,6 +424,7 @@ static int S_render_node(cmark_html_renderer *renderer, cmark_node *node,
     break;
 
   default:
+    assert(false);
     break;
   }
 

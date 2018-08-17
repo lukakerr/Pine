@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-#include "cmark.h"
+#include <cmark.h>
 
 struct cmark_renderer;
 struct cmark_html_renderer;
