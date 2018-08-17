@@ -72,7 +72,7 @@ struct HTMLExporter: Exportable {
       if let HTMLString = response as? String {
         let HTMLData = "<!DOCTYPE HTML>" + HTMLString
         if let data = HTMLData.data(using: .utf8) {
-          let fileSaver = FileSaver(data: data, filetypes: [filetype])
+          let fileSaver = FileSaver(data: data, filetype: filetype)
           do {
             try fileSaver.save()
           } catch let error as SaveError {
@@ -101,7 +101,7 @@ struct LatexExporter: Exportable {
       """
 
       if let data = latex.data(using: .utf8) {
-        let fileSaver = FileSaver(data: data, filetypes: [filetype])
+        let fileSaver = FileSaver(data: data, filetype: filetype)
         do {
           try fileSaver.save()
         } catch let error as SaveError {
@@ -124,7 +124,7 @@ struct XMLExporter: Exportable {
       let data = xml.data(using: .utf8)
     else { return }
 
-    let fileSaver = FileSaver(data: data, filetypes: [filetype])
+    let fileSaver = FileSaver(data: data, filetype: filetype)
     do {
       try fileSaver.save()
     } catch let error as SaveError {

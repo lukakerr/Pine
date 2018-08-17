@@ -10,12 +10,12 @@ import Cocoa
 
 class FileSaver {
 
-  private var filetypes: [String]
+  private var filetype: String
   private var data: Data
 
-  init(data: Data, filetypes: [String]) {
+  init(data: Data, filetype: String) {
     self.data = data
-    self.filetypes = filetypes
+    self.filetype = filetype
   }
 
   /// Save data to a user chosen location
@@ -28,7 +28,7 @@ class FileSaver {
     let dialog = NSSavePanel()
 
     dialog.title = "Export file"
-    dialog.allowedFileTypes = filetypes
+    dialog.allowedFileTypes = [filetype]
     dialog.canCreateDirectories = true
 
     if dialog.runModal() == .OK {
