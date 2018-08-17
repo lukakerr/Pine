@@ -111,3 +111,24 @@ struct LatexExporter: Exportable {
     }
   }
 }
+
+struct XMLExporter: Exportable {
+  static var filetype = "xml"
+
+  static func export<T>(from view: T) {
+    // We expect the view to be a text view
+    let markdownTextView = view as! NSTextView
+
+    guard
+      let xml = Node(markdown: markdownTextView.string)?.xml,
+      let data = xml.data(using: .utf8)
+    else { return }
+
+    let fileSaver = FileSaver(data: data, filetypes: [filetype])
+    do {
+      try fileSaver.save()
+    } catch let error as SaveError {
+      Alert.display(error.description)
+    } catch {}
+  }
+}

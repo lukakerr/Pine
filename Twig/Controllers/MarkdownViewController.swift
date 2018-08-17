@@ -90,6 +90,10 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
     LatexExporter.export(from: markdownTextView)
   }
 
+  @IBAction func exportXML(sender: NSMenuItem) {
+    XMLExporter.export(from: markdownTextView)
+  }
+
   // MARK: - First responder methods for various markdown formatting shortcuts
 
   @IBAction func bold(sender: NSMenuItem) {
