@@ -179,7 +179,8 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
       !preview.isCollapsed
     else { return }
 
-    let markdownText = markdownTextView.string
+    // Don't escape a double backslash
+    let markdownText = markdownTextView.string.replacingOccurrences(of: "\\", with: "\\\\")
 
     DispatchQueue.global(qos: .userInitiated).async {
       if let parsed = Node(markdown: markdownText)?.html {
