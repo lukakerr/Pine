@@ -39,6 +39,10 @@ class Preferences {
     if defaults.object(forKey: "showSidebar") != nil {
       showSidebar = defaults.bool(forKey: "showSidebar")
     }
+
+    if defaults.object(forKey: "spellcheckEnabled") != nil {
+      spellcheckEnabled = defaults.bool(forKey: "spellcheckEnabled")
+    }
   }
 
   public var showPreviewOnStartup = true {
@@ -80,6 +84,12 @@ class Preferences {
   public var showSidebar = true {
     willSet(newVal) {
       setDefaults(key: "showSidebar", newVal)
+    }
+  }
+
+  public var spellcheckEnabled = true {
+    willSet(newVal) {
+      setDefaults(key: "spellcheckEnabled", newVal)
     }
   }
 

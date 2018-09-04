@@ -247,6 +247,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
     syntaxHighlight()
     view.updateLayer()
     reGeneratePreview()
+    self.markdownTextView.isContinuousSpellCheckingEnabled = preferences.spellcheckEnabled
   }
 
   @objc private func reGeneratePreview() {
