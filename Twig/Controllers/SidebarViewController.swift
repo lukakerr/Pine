@@ -16,14 +16,14 @@ class SidebarViewController: NSViewController {
   var items: [FileSystemItem] = []
 
   override func viewWillAppear() {
-    updateSidebarVisibility()
+    updateSidebarAppearance()
   }
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
     // Setup notification observer for preferences change
-    NotificationCenter.receive(.preferencesChanged, instance: self, selector: #selector(updateSidebarVisibility))
+    NotificationCenter.receive(.preferencesChanged, instance: self, selector: #selector(updateSidebarAppearance))
 
     // Setup selector for when row in sidebar is double clicked
     sidebar.doubleAction = #selector(doubleClicked)
@@ -45,8 +45,9 @@ class SidebarViewController: NSViewController {
     }
   }
 
-  @objc private func updateSidebarVisibility() {
+  @objc private func updateSidebarAppearance() {
     (parent as? NSSplitViewController)?.splitViewItems.first?.isCollapsed = !preferences.showSidebar
+    sidebar.backgroundColor = preferences.useThemeColorForSidebar ? theme.background : .clear
   }
 
 }
