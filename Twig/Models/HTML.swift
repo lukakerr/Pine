@@ -113,6 +113,8 @@ class HTML {
       to: folder.appendingPathComponent("highlight-js")
     )
 
+    try? FileManager.default.removeItem(at: folder.appendingPathComponent("Markdown.css"))
+
     try? FileManager.default.copyItem(
       at: URL(fileURLWithPath: cssFile),
       to: folder.appendingPathComponent("Markdown.css")
