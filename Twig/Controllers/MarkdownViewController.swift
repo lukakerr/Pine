@@ -97,51 +97,63 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   // MARK: - First responder methods for various markdown formatting shortcuts
 
   @IBAction func bold(sender: NSMenuItem) {
-    replace(left: "**", right: "**")
+    markdownTextView.replace(left: "**", right: "**")
+    reloadUI()
   }
 
   @IBAction func italic(sender: NSMenuItem) {
-    replace(left: "_", right: "_")
+    markdownTextView.replace(left: "_", right: "_")
+    reloadUI()
   }
 
   @IBAction func strikethrough(sender: NSMenuItem) {
-    replace(left: "~~", right: "~~")
+    markdownTextView.replace(left: "~~", right: "~~")
+    reloadUI()
   }
 
   @IBAction func code(sender: NSMenuItem) {
-    replace(left: "`", right: "`")
+    markdownTextView.replace(left: "`", right: "`")
+    reloadUI()
   }
 
   @IBAction func codeBlock(sender: NSMenuItem) {
-    replace(left: "```\n", right: "\n```", newLineIfSelected: true)
+    markdownTextView.replace(left: "```\n", right: "\n```", newLineIfSelected: true)
+    reloadUI()
   }
 
   @IBAction func h1(sender: NSMenuItem) {
-    replace(left: "# ", atLineStart: true)
+    markdownTextView.replace(left: "# ", atLineStart: true)
+    reloadUI()
   }
 
   @IBAction func h2(sender: NSMenuItem) {
-    replace(left: "## ", atLineStart: true)
+    markdownTextView.replace(left: "## ", atLineStart: true)
+    reloadUI()
   }
 
   @IBAction func h3(sender: NSMenuItem) {
-    replace(left: "### ", atLineStart: true)
+    markdownTextView.replace(left: "### ", atLineStart: true)
+    reloadUI()
   }
 
   @IBAction func h4(sender: NSMenuItem) {
-    replace(left: "#### ", atLineStart: true)
+    markdownTextView.replace(left: "#### ", atLineStart: true)
+    reloadUI()
   }
 
   @IBAction func h5(sender: NSMenuItem) {
-    replace(left: "##### ", atLineStart: true)
+    markdownTextView.replace(left: "##### ", atLineStart: true)
+    reloadUI()
   }
 
   @IBAction func math(sender: NSMenuItem) {
-    replace(left: "$", right: "$")
+    markdownTextView.replace(left: "$", right: "$")
+    reloadUI()
   }
 
   @IBAction func mathBlock(sender: NSMenuItem) {
-    replace(left: "$$\n", right: "\n$$", newLineIfSelected: true)
+    markdownTextView.replace(left: "$$\n", right: "\n$$", newLineIfSelected: true)
+    reloadUI()
   }
 
   // MARK: - Functions handling markdown editing
@@ -191,53 +203,6 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
         }
       }
     }
-  }
-
-  /// Inserts the given left and right characters on either side of selected text,
-  /// or creates a new string and inserts the cursor in the middle of it
-  ///
-  /// - Parameters:
-  ///   - left: the left characters
-  ///   - right: the right (optional) characters
-  ///   - atLineStart: whether the left character should be inserted at the start of the line
-  ///   - newLineIfSelected: whether to create a newline on the left and right if the text is selected
-  private func replace(
-    left: String,
-    right: String? = nil,
-    atLineStart: Bool = false,
-    newLineIfSelected: Bool = false
-  ) {
-    let range = markdownTextView.selectedRange()
-
-    var leftText = left
-    var rightText = right ?? ""
-
-    if newLineIfSelected {
-      leftText = "\n\(leftText)"
-      rightText = "\(rightText)\n"
-    }
-
-    let text = (markdownTextView.string as NSString).substring(with: range)
-
-    let replacement = "\(leftText)\(text)\(rightText)"
-    let cursorPosition = markdownTextView.selectedRanges[0].rangeValue.location
-
-    let newCursorPosition = cursorPosition + leftText.lengthOfBytes(using: .utf8)
-
-    // Let NSTextView know we are going to make a replacement
-    // This retains document history allowing for undo etc
-    markdownTextView.shouldChangeText(in: range, replacementString: replacement)
-
-    // Make replacement in range (length of 0 if nothing selected)
-    markdownTextView.replaceCharacters(in: range, with: replacement)
-
-    // Set cursor position to appropriate position if not replacing a selection
-    // If replacing a selection, the cursor goes to the end of the replaced text
-    if range.length == 0 {
-      markdownTextView.setSelectedRange(NSRange(location: newCursorPosition, length: 0))
-    }
-
-    reloadUI()
   }
 
   // MARK: - Private functions for updating and setting view components

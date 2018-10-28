@@ -105,7 +105,7 @@ class Preferences {
     }
   }
 
-  public var spellcheckEnabled = true {
+  public var spellcheckEnabled = false {
     willSet(newVal) {
       setDefaults(key: Keys.spellcheckEnabled, newVal)
     }
