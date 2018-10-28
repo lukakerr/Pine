@@ -7,13 +7,16 @@
 //
 
 import Cocoa
+import Highlightr
 
 class SidebarViewController: NSViewController {
 
   @IBOutlet weak var sidebar: NSOutlineView!
+  @IBOutlet weak var bottomBar: NSView!
 
   // Data used for sidebar rows
   var items: [FileSystemItem] = []
+  private let highlightr = Highlightr()!
 
   override func viewWillAppear() {
     updateSidebarAppearance()
@@ -47,9 +50,17 @@ class SidebarViewController: NSViewController {
 
   @objc private func updateSidebarAppearance() {
     (parent as? NSSplitViewController)?.splitViewItems.first?.isCollapsed = !preferences.showSidebar
-    sidebar.backgroundColor = preferences.useThemeColorForSidebar ? theme.background : .clear
+
+    highlightr.setTheme(to: theme.syntax)
+    setupThemeBackgroundColor(highlightr.theme.themeBackgroundColor)
   }
 
+  private func setupThemeBackgroundColor(_ color: NSColor) {
+    let backgroundColor = preferences.useThemeColorForSidebar ? color : .clear
+    sidebar.backgroundColor = backgroundColor
+    bottomBar.setBackgroundColor(backgroundColor)
+    sidebar.reloadData()
+  }
 }
 
 extension SidebarViewController: NSOutlineViewDataSource {
@@ -101,8 +112,18 @@ extension SidebarViewController: NSOutlineViewDataSource {
 
     rows
       .compactMap { outlineView.rowView(atRow: $0, makeIfNecessary: false) }
-      .forEach { $0.backgroundColor = $0.isSelected ? .selectedControlColor : .clear }
+      .forEach {
+        $0.backgroundColor = $0.isSelected ? .selectedControlColor : .clear
+        updateTextFieldTextColor(forRow: $0)
+    }
   }
+
+    private func updateTextFieldTextColor(forRow row: NSTableRowView) {
+        if let cell = row.view(atColumn: 0) as? NSTableCellView {
+            let textColor: NSColor = row.isSelected ? .white : sidebar.backgroundColor.isDark ? .white : .black
+            cell.textField?.textColor = textColor
+        }
+    }
 
   // Remove default selection colour
   func outlineView(_ outlineView: NSOutlineView, didAdd rowView: NSTableRowView, forRow row: Int) {

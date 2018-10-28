@@ -968,11 +968,11 @@
                                         </textView>
                                     </subviews>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="pla-W4-kOj">
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="pla-W4-kOj">
                                     <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="2Fr-Xo-YM2">
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="2Fr-Xo-YM2">
                                     <rect key="frame" x="484" y="0.0" width="16" height="600"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -1126,11 +1126,11 @@
                                     </subviews>
                                     <nil key="backgroundColor"/>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="ggZ-GP-oHW">
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="ggZ-GP-oHW">
                                     <rect key="frame" x="0.0" y="284" width="190" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="kpb-nv-Uvt">
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="kpb-nv-Uvt">
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -1198,6 +1198,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomBar" destination="eLN-6f-YEp" id="W9q-S0-7WV"/>
                         <outlet property="sidebar" destination="16N-MH-33n" id="xbl-BH-Xi4"/>
                     </connections>
                 </viewController>
@@ -1207,7 +1208,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="NSFolder" width="32" height="32"/>
+        <image name="NSFolder" width="128" height="128"/>
         <image name="NSLinenBackgroundPattern" width="256" height="256"/>
         <image name="Plus" width="64" height="64"/>
         <image name="Sidebar" width="64" height="64"/>
