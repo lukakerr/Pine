@@ -49,7 +49,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
     // Setup notification observer for preferences change
     NotificationCenter.receive(.preferencesChanged, instance: self, selector: #selector(reloadUI))
     // Setup notification observer for system dark/light mode change
-    NotificationCenter.receive(.appearanceChanged, instance: self, selector: #selector(reGeneratePreview))
+    NotificationCenter.receive(.appearanceChanged, instance: self, selector: #selector(generatePreview))
 
     // Setup a 200ms debouncer for generating the markdown preview
     debouncedGeneratePreview = Debouncer(delay: 0.2) {
@@ -184,7 +184,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   }
 
   /// Parse the markdownTextView contents into HTML and load it into the webview
-  private func generatePreview() {
+  @objc private func generatePreview() {
     // If preview is collapsed, return
     guard
       let preview = splitViewController?.splitViewItems.last,
@@ -211,12 +211,8 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   @objc private func reloadUI() {
     syntaxHighlight()
     view.updateLayer()
-    reGeneratePreview()
+    self.generatePreview()
     self.markdownTextView.isContinuousSpellCheckingEnabled = preferences.spellcheckEnabled
-  }
-
-  @objc private func reGeneratePreview() {
-    generatePreview()
   }
 
   /// Sets the word count in the titlebar word count accessory
