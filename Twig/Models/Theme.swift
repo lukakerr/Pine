@@ -7,9 +7,12 @@
 //
 
 import Cocoa
+import Highlightr
 
 class Theme {
   static let sharedInstance = Theme()
+
+  public var highlightr = Highlightr()!
 
   public var code: NSColor = .gray
   public var text: NSColor = .black

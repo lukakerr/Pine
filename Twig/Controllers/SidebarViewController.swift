@@ -11,19 +11,25 @@ import Cocoa
 class SidebarViewController: NSViewController {
 
   @IBOutlet weak var sidebar: NSOutlineView!
+  @IBOutlet weak var sidebarActionsView: NSView!
 
   // Data used for sidebar rows
   var items: [FileSystemItem] = []
 
+  /// The split view item holding this sidebar view controller
+  private var sidebarSplitViewItem: NSSplitViewItem? {
+    return (parent as? NSSplitViewController)?.splitViewItems.first
+  }
+
   override func viewWillAppear() {
-    updateSidebarVisibility()
+    updateSidebarAppearance()
   }
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
     // Setup notification observer for preferences change
-    NotificationCenter.receive(.preferencesChanged, instance: self, selector: #selector(updateSidebarVisibility))
+    NotificationCenter.receive(.preferencesChanged, instance: self, selector: #selector(updateSidebarAppearance))
 
     // Setup selector for when row in sidebar is double clicked
     sidebar.doubleAction = #selector(doubleClicked)
@@ -45,8 +51,20 @@ class SidebarViewController: NSViewController {
     }
   }
 
-  @objc private func updateSidebarVisibility() {
-    (parent as? NSSplitViewController)?.splitViewItems.first?.isCollapsed = !preferences.showSidebar
+  @objc private func updateSidebarAppearance() {
+    sidebarSplitViewItem?.isCollapsed = !preferences.showSidebar
+
+    theme.highlightr.setTheme(to: theme.syntax)
+
+    guard
+      let backgroundColor = preferences.useThemeColorForSidebar
+        ? theme.highlightr.theme.themeBackgroundColor
+        : .clear
+    else { return }
+
+    sidebar.backgroundColor = backgroundColor
+    sidebarActionsView.setBackgroundColor(backgroundColor)
+    sidebar.reloadData()
   }
 
 }
@@ -100,7 +118,19 @@ extension SidebarViewController: NSOutlineViewDataSource {
 
     rows
       .compactMap { outlineView.rowView(atRow: $0, makeIfNecessary: false) }
-      .forEach { $0.backgroundColor = $0.isSelected ? .selectedControlColor : .clear }
+      .forEach {
+        $0.backgroundColor = $0.isSelected ? .selectedControlColor : .clear
+        updateTextFieldTextColor(forRow: $0)
+      }
+  }
+
+  private func updateTextFieldTextColor(forRow row: NSTableRowView) {
+    if let cell = row.view(atColumn: 0) as? NSTableCellView {
+      let textColor: NSColor = row.isSelected || sidebar.backgroundColor.isDark
+        ? .white : .black
+
+      cell.textField?.textColor = textColor
+    }
   }
 
   // Remove default selection colour

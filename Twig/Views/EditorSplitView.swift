@@ -11,6 +11,7 @@ import Cocoa
 class EditorSplitView: NSSplitView {
 
   override func viewWillDraw() {
+    print("viewWillDraw()")
     // when isVertical is true, split views drawn as V | V
     isVertical = preferences.verticalSplitView
   }

@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import Highlightr
 import cmark_gfm_swift
 
 class MarkdownViewController: NSViewController, NSTextViewDelegate {
@@ -15,7 +14,6 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   @IBOutlet var markdownTextView: NSTextView!
 
   private var debouncedGeneratePreview: Debouncer!
-  private let highlightr = Highlightr()!
 
   /// The split view controller holding this markdown view controller
   private var splitViewController: NSSplitViewController? {
@@ -67,8 +65,8 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   }
 
   override func viewDidAppear() {
-    highlightr.setTheme(to: theme.syntax)
-    theme.background = highlightr.theme.themeBackgroundColor
+    theme.highlightr.setTheme(to: theme.syntax)
+    theme.background = theme.highlightr.theme.themeBackgroundColor
     reloadUI()
   }
 
@@ -160,13 +158,13 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
 
   /// Syntax highlight the markdownTextView contents
   private func syntaxHighlight() {
-    highlightr.setTheme(to: theme.syntax)
-    theme.background = highlightr.theme.themeBackgroundColor
+    theme.highlightr.setTheme(to: theme.syntax)
+    theme.background = theme.highlightr.theme.themeBackgroundColor
 
     let markdownText = markdownTextView.string
 
     DispatchQueue.global(qos: .userInitiated).async {
-      let highlightedCode = self.highlightr.highlight(markdownText, as: "markdown")
+      let highlightedCode = theme.highlightr.highlight(markdownText, as: "markdown")
 
       if let syntaxHighlighted = highlightedCode {
         let code = NSMutableAttributedString(attributedString: syntaxHighlighted)
