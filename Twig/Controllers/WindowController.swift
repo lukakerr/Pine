@@ -43,11 +43,9 @@ class WindowController: NSWindowController, NSWindowDelegate {
   }
 
   public func syncWindowSidebars() {
-    let windows = NSApplication.shared.windows.filter { $0.isVisible }
-
-    // Hackish way to get all sidebars and syncronize the sidebar data
+    // Hacky way to get all sidebars and syncronize the sidebar data
     // Map over all windows (tabs) and find the sidebar
-    windows.forEach { _ in sidebarViewController?.updateDocuments() }
+    getVisibleWindows().forEach { _ in sidebarViewController?.updateDocuments() }
   }
 
   func windowWillClose(_ notification: Notification) {
@@ -60,9 +58,7 @@ class WindowController: NSWindowController, NSWindowDelegate {
 
   public func changeDocument(file: URL) {
     // Check if document is already open in a tab first
-    let windows = NSApplication.shared.windows.filter { $0.isVisible }
-
-    for window in windows {
+    for window in getVisibleWindows() {
       guard let doc = window.windowController?.document as? Document else { continue }
 
       if doc.fileURL == file {
@@ -104,5 +100,10 @@ class WindowController: NSWindowController, NSWindowDelegate {
     }
   }
 
+  // MARK: - Private helper functions
+
+  private func getVisibleWindows() -> [NSWindow] {
+    return NSApplication.shared.windows.filter { $0.isVisible }
+  }
 
 }

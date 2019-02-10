@@ -38,7 +38,11 @@ class SidebarViewController: NSViewController {
   public func updateDocuments() {
     items = openDocuments.getDocuments()
     sidebar.reloadData()
+
+    syncSelectedRows()
   }
+
+  // MARK: - Private functions for updating the sidebar and its rows
 
   /// Called when the a row in the sidebar is double clicked
   @objc private func doubleClicked(_ sender: Any?) {
@@ -51,6 +55,7 @@ class SidebarViewController: NSViewController {
     }
   }
 
+  /// Update the sidebar appearance based on any preferences and the theme
   @objc private func updateSidebarAppearance() {
     sidebarSplitViewItem?.isCollapsed = !preferences.showSidebar
 
@@ -65,6 +70,39 @@ class SidebarViewController: NSViewController {
     sidebar.backgroundColor = backgroundColor
     sidebarActionsView.setBackgroundColor(backgroundColor)
     sidebar.reloadData()
+  }
+
+  /// Set each row's `isSelected` property based on if it is the current open document
+  private func syncSelectedRows() {
+    guard let docPath = getWindowDocument() else { return }
+
+    for row in getRows() {
+      guard
+        let rowItem = sidebar.item(atRow: row) as? FileSystemItem,
+        let rowView = sidebar.rowView(atRow: row, makeIfNecessary: true)
+      else { continue }
+
+      rowView.isSelected = rowItem.fullPath == docPath
+    }
+
+    setRowColour(sidebar)
+  }
+
+  // MARK: - Private helper functions
+
+  /// Get an `IndexSet` containing each row's index
+  private func getRows() -> IndexSet {
+    return IndexSet(integersIn: 0..<sidebar.numberOfRows)
+  }
+
+  /// Returns the current window's document path
+  private func getWindowDocument() -> String? {
+    guard
+      let window = view.window?.windowController as? WindowController,
+      let doc = window.document as? Document
+      else { return nil }
+
+    return doc.fileURL?.relativePath
   }
 
 }
@@ -113,18 +151,18 @@ extension SidebarViewController: NSOutlineViewDataSource {
     window.changeDocument(file: doc.fileURL)
   }
 
+  /// Given an `NSOutlineView` instance, set any selected rows to have a
+  /// background color and any non-selected rows to have a clear background color
   func setRowColour(_ outlineView: NSOutlineView) {
-    let rows = IndexSet(integersIn: 0..<outlineView.numberOfRows)
-
-    rows
+    getRows()
       .compactMap { outlineView.rowView(atRow: $0, makeIfNecessary: false) }
       .forEach {
         $0.backgroundColor = $0.isSelected ? .selectedControlColor : .clear
-        updateTextFieldTextColor(forRow: $0)
+        setRowTextColor(forRow: $0)
       }
   }
 
-  private func updateTextFieldTextColor(forRow row: NSTableRowView) {
+  private func setRowTextColor(forRow row: NSTableRowView) {
     if let cell = row.view(atColumn: 0) as? NSTableCellView {
       let textColor: NSColor = row.isSelected || sidebar.backgroundColor.isDark
         ? .white : .black
@@ -137,13 +175,9 @@ extension SidebarViewController: NSOutlineViewDataSource {
   func outlineView(_ outlineView: NSOutlineView, didAdd rowView: NSTableRowView, forRow row: Int) {
     rowView.selectionHighlightStyle = .none
 
-    guard
-      let window = view.window?.windowController as? WindowController,
-      let doc = window.document as? Document
-    else { return }
+    guard let docPath = getWindowDocument() else { return }
 
-    for (index, item) in items.enumerated()
-      where index == row && item.fullPath == doc.fileURL?.relativePath {
+    for (index, item) in items.enumerated() where index == row && item.fullPath == docPath {
         rowView.isSelected = true
     }
 
@@ -162,6 +196,7 @@ extension SidebarViewController: NSOutlineViewDelegate {
       withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "ItemCell"),
       owner: self
     ) as? NSTableCellView
+
     view?.textField?.stringValue = item.getName()
 
     if item.isDirectory {

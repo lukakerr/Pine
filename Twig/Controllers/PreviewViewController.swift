@@ -15,9 +15,14 @@ class PreviewViewController: NSViewController, WKNavigationDelegate {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+
     webPreview.navigationDelegate = self
     webPreview.setValue(false, forKey: "drawsBackground")
-//    webPreview.configuration.preferences.setValue(true, forKey: "developerExtrasEnabled")
+
+    #if DEBUG
+      // When developing we want to be able to inspect element in the preview
+      webPreview.configuration.preferences.setValue(true, forKey: "developerExtrasEnabled")
+    #endif
   }
 
   /// A closure that returns the y scoll position of the webview
