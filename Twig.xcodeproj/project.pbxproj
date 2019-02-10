@@ -30,6 +30,7 @@
 		A156AFB120908ECE0098BBDD /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFB020908ECE0098BBDD /* Theme.swift */; };
 		A1682E87209097E700164D78 /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1682E86209097E700164D78 /* NSMutableAttributedString.swift */; };
 		A1767B04220FC2DD00ED1A61 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1767B03220FC2DD00ED1A61 /* StringTests.swift */; };
+		A1767B06220FC44D00ED1A61 /* NSColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1767B05220FC44D00ED1A61 /* NSColorTests.swift */; };
 		A182096E20919F6000016AD5 /* HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = A182096D20919F6000016AD5 /* HTML.swift */; };
 		A182AFAF220F8D8000C14B2B /* NSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A182AFAE220F8D8000C14B2B /* NSView.swift */; };
 		A189EA742091E4F300DB0559 /* Markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = A189EA732091E4E300DB0559 /* Markdown.css */; };
@@ -94,6 +95,7 @@
 		A156AFB020908ECE0098BBDD /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		A1682E86209097E700164D78 /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
 		A1767B03220FC2DD00ED1A61 /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
+		A1767B05220FC44D00ED1A61 /* NSColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColorTests.swift; sourceTree = "<group>"; };
 		A182096D20919F6000016AD5 /* HTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTML.swift; sourceTree = "<group>"; };
 		A182AFAE220F8D8000C14B2B /* NSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSView.swift; sourceTree = "<group>"; };
 		A189EA732091E4E300DB0559 /* Markdown.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Markdown.css; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				A156AF972090606D0098BBDD /* Info.plist */,
 				A1767B03220FC2DD00ED1A61 /* StringTests.swift */,
 				A156AF952090606D0098BBDD /* TextViewTests.swift */,
+				A1767B05220FC44D00ED1A61 /* NSColorTests.swift */,
 			);
 			path = TwigTests;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1767B06220FC44D00ED1A61 /* NSColorTests.swift in Sources */,
 				A1767B04220FC2DD00ED1A61 /* StringTests.swift in Sources */,
 				A156AF962090606D0098BBDD /* TextViewTests.swift in Sources */,
 			);

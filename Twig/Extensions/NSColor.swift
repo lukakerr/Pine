@@ -39,7 +39,7 @@ extension NSColor {
 
   var lighter: NSColor {
     let (r, g, b) = getRGBComponents(self)
-    return NSColor(red: max(r + 0.1, 0.0), green: max(g + 0.1, 0.0), blue: max(b + 0.1, 0.0), alpha: 0)
+    return NSColor(red: min(r + 0.1, 1.0), green: min(g + 0.1, 1.0), blue: min(b + 0.1, 1.0), alpha: 0)
   }
 
   var darker: NSColor {
