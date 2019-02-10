@@ -104,7 +104,7 @@ class SidebarViewController: NSViewController {
     guard
       let window = view.window?.windowController as? WindowController,
       let doc = window.document as? Document
-      else { return nil }
+    else { return nil }
 
     return doc.fileURL?.relativePath
   }
