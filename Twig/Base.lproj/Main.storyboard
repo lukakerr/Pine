@@ -75,14 +75,9 @@
                                                 <action selector="newDocument:" target="Ady-hI-5gd" id="W8B-R5-8d8"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
+                                        <menuItem title="Open..." keyEquivalent="o" id="Y6L-4l-9ly">
                                             <connections>
-                                                <action selector="openDocument:" target="Ady-hI-5gd" id="bVn-NM-KNZ"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Open Folder…" keyEquivalent="O" id="Y6L-4l-9ly">
-                                            <connections>
-                                                <action selector="openFolderWithSender:" target="Ady-hI-5gd" id="XIv-hk-Bm1"/>
+                                                <action selector="openFileOrFolder:" target="Ady-hI-5gd" id="dPg-of-myh"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Open Recent" id="tXI-mr-wws">
@@ -400,9 +395,9 @@
                                                 <action selector="togglePreviewWithSender:" target="Ady-hI-5gd" id="98T-ho-mLk"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Toggle Editor" keyEquivalent="e" id="FEt-FA-N8C">
+                                        <menuItem title="Toggle Editor" keyEquivalent="|" id="ORX-dN-vYw">
                                             <connections>
-                                                <action selector="toggleEditorWithSender:" target="Ady-hI-5gd" id="vaH-cd-iQ9"/>
+                                                <action selector="toggleEditorWithSender:" target="Ady-hI-5gd" id="uAz-YI-Rhz"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Hide Sidebar" keyEquivalent="l" id="fqn-9F-7fK">
@@ -1162,7 +1157,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="toggleSidebarWithSender:" target="HhB-LD-BFq" id="dcv-6k-6aK"/>
+                                            <action selector="toggleSidebar:" target="KNo-ab-naa" id="qOT-xM-yNq"/>
                                         </connections>
                                     </button>
                                 </subviews>

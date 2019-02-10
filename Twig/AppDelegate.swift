@@ -13,6 +13,11 @@ let defaults = UserDefaults.standard
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+  /// The key window's `WindowController` instance
+  private var keyWindowController: WindowController? {
+    return NSApp.keyWindow?.windowController as? WindowController
+  }
+
   func applicationDidFinishLaunching(_ aNotification: Notification) {
   }
 
@@ -25,22 +30,51 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
   // MARK: - First responder methods that can be called anywhere in the application
 
-  @IBAction func openFolder(sender: NSMenuItem) {
+  @IBAction func openFileOrFolder(_ sender: Any?) {
     let dialog = NSOpenPanel()
 
-    dialog.title = "Open a folder"
     dialog.allowsMultipleSelection = false
-    dialog.canChooseFiles = false
+    dialog.canChooseFiles = true
+    dialog.showsHiddenFiles = true
     dialog.canCreateDirectories = true
     dialog.canChooseDirectories = true
+    dialog.allowedFileTypes = ["md"]
 
-    if dialog.runModal() == .OK {
-      if let result = dialog.url {
-        let parent = FileSystemItem.createParents(url: result)
-        let newItem = FileSystemItem(path: result.absoluteString, parent: parent)
+    guard
+      dialog.runModal() == .OK,
+      let result = dialog.url
+    else { return }
 
+    var isDirectory: ObjCBool = false
+
+    // Ensure the file or folder exists
+    guard FileManager.default.fileExists(
+      atPath: result.path,
+      isDirectory: &isDirectory
+    ) else { return }
+
+    DispatchQueue.global(qos: .userInitiated).async {
+      let parent = FileSystemItem.createParents(url: result)
+      let newItem = FileSystemItem(path: result.absoluteString, parent: parent)
+
+      DispatchQueue.main.async {
         openDocuments.addDocument(newItem)
-        (NSApplication.shared.keyWindow?.windowController as? WindowController)?.syncWindowSidebars()
+
+        if isDirectory.boolValue {
+          // Don't have a window open
+          if NSApp.keyWindow == nil {
+            NSDocumentController.shared.newDocument(nil)
+          } else {
+            self.keyWindowController?.syncWindowSidebars()
+          }
+        } else {
+          NSDocumentController.shared.openDocument(
+            withContentsOf: result,
+            display: true,
+            completionHandler: { (document, alreadyOpen, error) in
+              self.keyWindowController?.syncWindowSidebars()
+          });
+        }
       }
     }
   }

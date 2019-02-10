@@ -42,6 +42,10 @@ class SidebarViewController: NSViewController {
     syncSelectedRows()
   }
 
+  @IBAction func toggleSidebar(_ sender: NSButton) {
+    sidebarSplitViewItem?.isCollapsed.toggle()
+  }
+
   // MARK: - Private functions for updating the sidebar and its rows
 
   /// Called when the a row in the sidebar is double clicked
