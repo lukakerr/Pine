@@ -485,6 +485,11 @@
                                                 <action selector="h5WithSender:" target="Ady-hI-5gd" id="k1V-p7-TCj"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="Heading 6" keyEquivalent="6" id="hZl-Al-8hZ">
+                                            <connections>
+                                                <action selector="h6WithSender:" target="Ady-hI-5gd" id="C6m-fa-6CH"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="sE2-tt-JAH"/>
                                         <menuItem title="Math" keyEquivalent="m" id="lDB-Lf-ApR">
                                             <modifierMask key="keyEquivalentModifierMask" control="YES"/>

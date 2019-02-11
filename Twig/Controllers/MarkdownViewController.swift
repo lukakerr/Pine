@@ -144,6 +144,11 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
     reloadUI()
   }
 
+  @IBAction func h6(sender: NSMenuItem) {
+    markdownTextView.replace(left: "###### ", atLineStart: true)
+    reloadUI()
+  }
+
   @IBAction func math(sender: NSMenuItem) {
     markdownTextView.replace(left: "$", right: "$")
     reloadUI()
