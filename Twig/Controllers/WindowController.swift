@@ -100,6 +100,18 @@ class WindowController: NSWindowController, NSWindowDelegate {
     }
   }
 
+  // MARK: - Public static helper methods
+
+  /// Returns the current window's document path
+  public static func getCurrentDocument() -> String? {
+    guard
+      let window = NSApp.keyWindow?.windowController as? WindowController,
+      let doc = window.document as? Document
+    else { return nil }
+
+    return doc.fileURL?.relativePath
+  }
+
   // MARK: - Private helper functions
 
   private func getVisibleWindows() -> [NSWindow] {

@@ -63,17 +63,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if isDirectory.boolValue {
           // Don't have a window open
           if NSApp.keyWindow == nil {
-            NSDocumentController.shared.newDocument(nil)
+            DocumentController.shared.newDocument(nil)
           } else {
             self.keyWindowController?.syncWindowSidebars()
           }
         } else {
-          NSDocumentController.shared.openDocument(
+          DocumentController.shared.openDocument(
             withContentsOf: result,
             display: true,
-            completionHandler: { (document, alreadyOpen, error) in
-              self.keyWindowController?.syncWindowSidebars()
-          });
+            completionHandler: { _,_,_  in }
+          )
         }
       }
     }

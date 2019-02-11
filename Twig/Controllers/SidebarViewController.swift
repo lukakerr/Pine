@@ -78,7 +78,7 @@ class SidebarViewController: NSViewController {
 
   /// Set each row's `isSelected` property based on if it is the current open document
   private func syncSelectedRows() {
-    guard let docPath = getWindowDocument() else { return }
+    guard let docPath = WindowController.getCurrentDocument() else { return }
 
     for row in getRows() {
       guard
@@ -97,16 +97,6 @@ class SidebarViewController: NSViewController {
   /// Get an `IndexSet` containing each row's index
   private func getRows() -> IndexSet {
     return IndexSet(integersIn: 0..<sidebar.numberOfRows)
-  }
-
-  /// Returns the current window's document path
-  private func getWindowDocument() -> String? {
-    guard
-      let window = view.window?.windowController as? WindowController,
-      let doc = window.document as? Document
-    else { return nil }
-
-    return doc.fileURL?.relativePath
   }
 
 }
@@ -179,7 +169,7 @@ extension SidebarViewController: NSOutlineViewDataSource {
   func outlineView(_ outlineView: NSOutlineView, didAdd rowView: NSTableRowView, forRow row: Int) {
     rowView.selectionHighlightStyle = .none
 
-    guard let docPath = getWindowDocument() else { return }
+    guard let docPath = WindowController.getCurrentDocument() else { return }
 
     for (index, item) in items.enumerated() where index == row && item.fullPath == docPath {
         rowView.isSelected = true

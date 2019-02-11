@@ -43,9 +43,14 @@ class PreviewViewController: NSViewController, WKNavigationDelegate {
   ) {
     guard let url = navigationAction.request.url else { return }
 
-    if url.absoluteString.isWebLink {
+    let urlString = url.absoluteString
+
+    if urlString.isWebLink {
       decisionHandler(.cancel)
       NSWorkspace.shared.open(url)
+    } else if urlString.isMarkdown {
+      decisionHandler(.cancel)
+      DocumentController.openMarkdownFile(withContentsOf: url)
     } else {
       decisionHandler(.allow)
     }
