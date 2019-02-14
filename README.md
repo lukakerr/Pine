@@ -45,7 +45,32 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for details on how to contribute.
 
 ### Installing
 
-Visit the [releases page](https://github.com/lukakerr/twig/releases) to download. Twig is still in its very early stages, so if you encounter any bugs or have a feature request please raise an issue!
+Twig is still in its very early stages, so if you encounter any bugs or have a feature request please raise an issue!
+
+**Install via Homebrew Cask**
+
+```bash
+$ brew cask install twig
+```
+
+**Manual Download**
+
+Visit the [releases page](https://github.com/lukakerr/twig/releases) to download manually.
+
+### Uninstalling
+
+**Download via Homebrew Cask**
+
+```bash
+$ brew cask remove twig
+```
+
+**Downloaded Manually**
+
+```
+$ rm -r /Applications/Twig.app
+$ rm -r ~/Library/Caches/io.github.lukakerr.twig
+```
 
 ### Building
 
