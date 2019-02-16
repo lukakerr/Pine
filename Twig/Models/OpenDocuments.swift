@@ -19,12 +19,10 @@ final class OpenDocuments {
 
   /// Add a FileSystemItem to the open documents
   public func addDocument(_ doc: FileSystemItem) {
-    // Already exists
-    if documents.index(where: { $0.fullPath == doc.fullPath }) != nil {
-      return
+    // Doesn't already exist
+    if !contains(doc) {
+      documents.append(doc)
     }
-
-    documents.append(doc)
   }
 
   /// Remove an item from the open documents given a URL
