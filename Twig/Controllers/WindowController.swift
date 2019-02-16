@@ -45,7 +45,9 @@ class WindowController: NSWindowController, NSWindowDelegate {
   public func syncWindowSidebars() {
     // Hacky way to get all sidebars and syncronize the sidebar data
     // Map over all windows (tabs) and find the sidebar
-    getVisibleWindows().forEach { _ in sidebarViewController?.updateDocuments() }
+    getVisibleWindows().forEach {
+      ($0.windowController as? WindowController)?.sidebarViewController?.updateDocuments()
+    }
   }
 
   func windowWillClose(_ notification: Notification) {
