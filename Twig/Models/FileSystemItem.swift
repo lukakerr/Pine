@@ -14,6 +14,8 @@ final class FileSystemItem {
   fileprivate var parent: FileSystemItem?
   lazy fileprivate var children: [FileSystemItem] = getChildren()
 
+  public var isExpanded: Bool = false
+
   var fullPath: String {
     guard
       let parent = parent,

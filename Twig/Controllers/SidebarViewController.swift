@@ -16,6 +16,10 @@ class SidebarViewController: NSViewController {
   // Data used for sidebar rows
   var items: [FileSystemItem] = []
 
+  // Whether the sidebar's structure has been synced yet
+  // The structure is only set once on first load
+  var structureHasSynced: Bool = false
+
   /// The split view item holding this sidebar view controller
   private var sidebarSplitViewItem: NSSplitViewItem? {
     return (parent as? NSSplitViewController)?.splitViewItems.first
@@ -47,6 +51,11 @@ class SidebarViewController: NSViewController {
     items = openDocuments.getDocuments()
     sidebar.reloadData()
 
+    if !structureHasSynced {
+      syncSidebarStructure()
+      structureHasSynced = true
+    }
+
     syncSelectedRows()
   }
 
@@ -55,6 +64,46 @@ class SidebarViewController: NSViewController {
   }
 
   // MARK: - Private functions for controlling the sidebar view UI
+
+  /// Sync the expanded/collapsed structure of the sidebar
+  private func syncSidebarStructure() {
+    var row = 0
+
+    // A while loop is used since when an item is expanded,
+    // the numberOfRows increases and must be recalculated
+    while row < sidebar.numberOfRows {
+      guard
+        let rowItem = sidebar.item(atRow: row) as? FileSystemItem
+      else { continue }
+
+      syncItemStructure(rowItem)
+
+      row += 1
+    }
+  }
+
+  /// Recursive function that when given an item, expands it
+  /// and all of its nested children, if necessary
+  private func syncItemStructure(_ item: FileSystemItem) {
+    if item.isExpanded {
+      sidebar.expandItem(item)
+    } else {
+      return
+    }
+
+    let childIndexes = item.getNumberOfChildren() - 1
+
+    guard childIndexes >= 0 else { return }
+
+    for index in 0...childIndexes {
+      let child = item.getChild(at: index)
+
+      if child.isExpanded {
+        sidebar.expandItem(child)
+        syncItemStructure(child)
+      }
+    }
+  }
 
   /// Set a contextual menu (called on right click) for the sidebar
   private func setContextualMenu() {
@@ -161,6 +210,24 @@ extension SidebarViewController: NSOutlineViewDataSource {
 
   // When a row is clicked on should it be selected
   func outlineView(_ outlineView: NSOutlineView, shouldSelectItem item: Any) -> Bool {
+    return true
+  }
+
+  // Whether the row should be expanded
+  func outlineView(_ outlineView: NSOutlineView, shouldExpandItem item: Any) -> Bool {
+    guard let item = item as? FileSystemItem else { return false }
+
+    item.isExpanded = true
+
+    return true
+  }
+
+  // Whether a row should be collapsed
+  func outlineView(_ outlineView: NSOutlineView, shouldCollapseItem item: Any) -> Bool {
+    guard let item = item as? FileSystemItem else { return false }
+
+    item.isExpanded = false
+
     return true
   }
 
