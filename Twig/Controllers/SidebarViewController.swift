@@ -21,6 +21,11 @@ class SidebarViewController: NSViewController {
     return (parent as? NSSplitViewController)?.splitViewItems.first
   }
 
+  /// The sidebar view's window controller
+  private var windowController: WindowController? {
+    return view.window?.windowController as? WindowController
+  }
+
   override func viewWillAppear() {
     updateSidebarAppearance()
   }
@@ -33,6 +38,9 @@ class SidebarViewController: NSViewController {
 
     // Setup selector for when row in sidebar is double clicked
     sidebar.doubleAction = #selector(doubleClicked)
+
+    // Setup the contextual menus for sidebar items
+    setContextualMenu()
   }
 
   public func updateDocuments() {
@@ -46,7 +54,32 @@ class SidebarViewController: NSViewController {
     sidebarSplitViewItem?.isCollapsed.toggle()
   }
 
+  // MARK: - Private functions for controlling the sidebar view UI
+
+  /// Set a contextual menu (called on right click) for the sidebar
+  private func setContextualMenu() {
+    let menu = NSMenu()
+    menu.delegate = self
+
+    let removeItem = NSMenuItem()
+    removeItem.title = "Remove from sidebar"
+    removeItem.action = #selector(removeItemFromSidebar)
+
+    menu.addItem(removeItem)
+    sidebar.menu = menu
+  }
+
   // MARK: - Private functions for updating the sidebar and its rows
+
+  /// Called when the 'remove from sidebar' NSMenuItem is clicked
+  @objc private func removeItemFromSidebar(_ sender: NSMenuItem) {
+    guard
+      let itemToRemove = sidebar.item(atRow: sidebar.clickedRow) as? FileSystemItem
+    else { return }
+
+    openDocuments.removeDocument(with: itemToRemove.url)
+    windowController?.syncWindowSidebars()
+  }
 
   /// Called when the a row in the sidebar is double clicked
   @objc private func doubleClicked(_ sender: Any?) {
@@ -200,6 +233,22 @@ extension SidebarViewController: NSOutlineViewDelegate {
     }
 
     return view
+  }
+
+}
+
+extension SidebarViewController: NSMenuDelegate {
+
+  /// Called when the menu is about to open.
+  /// If the clicked item is not a top level item, we cancel the menu
+  func menuWillOpen(_ menu: NSMenu) {
+    guard
+      let itemToRemove = sidebar.item(atRow: sidebar.clickedRow) as? FileSystemItem
+    else { return }
+
+    if !openDocuments.contains(itemToRemove) {
+      menu.cancelTracking()
+    }
   }
 
 }

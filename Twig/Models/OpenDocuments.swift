@@ -17,6 +17,7 @@ final class OpenDocuments {
     documents = []
   }
 
+  /// Add a FileSystemItem to the open documents
   public func addDocument(_ doc: FileSystemItem) {
     // Already exists
     if documents.index(where: { $0.fullPath == doc.fullPath }) != nil {
@@ -26,12 +27,19 @@ final class OpenDocuments {
     documents.append(doc)
   }
 
+  /// Remove an item from the open documents given a URL
   public func removeDocument(with url: URL) {
     if let index = documents.index(where: { $0.fullPath == url.relativePath }) {
       documents.remove(at: index)
     }
   }
 
+  /// Returns whether the FileSystemItem given exists in the open documents
+  public func contains(_ doc: FileSystemItem) -> Bool {
+    return documents.contains(where: { $0.fullPath == doc.fullPath })
+  }
+
+  /// Get all open documents
   public func getDocuments() -> [FileSystemItem] {
     return documents
   }
