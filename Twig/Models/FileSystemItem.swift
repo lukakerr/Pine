@@ -22,7 +22,11 @@ final class FileSystemItem {
       let url = URL(string: parent.fullPath)?.appendingPathComponent(relativePath)
     else { return relativePath }
 
-    return url.absoluteString
+    guard let path = url.absoluteString.decodeURL() else {
+      return url.absoluteString
+    }
+
+    return path
   }
 
   var url: URL {

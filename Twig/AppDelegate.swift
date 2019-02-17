@@ -18,10 +18,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     return NSApp.keyWindow?.windowController as? WindowController
   }
 
-  func applicationDidFinishLaunching(_ aNotification: Notification) {
-  }
+  override init() {
+    // Hacky way to get in before NSDocumentController instantiates its shared instance.
+    // This way we can subclass NSDocumentController and use our class as the shared instance
+    _ = DocumentController.init()
 
-  func applicationWillTerminate(_ aNotification: Notification) {
+    super.init()
   }
 
   func applicationShouldOpenUntitledFile(_ sender: NSApplication) -> Bool {

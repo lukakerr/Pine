@@ -71,9 +71,7 @@ class WindowController: NSWindowController, NSWindowDelegate {
     }
 
     // Otherwise open document in current tab
-    if let doc = document as? Document {
-      try? doc.read(from: file, ofType: file.pathExtension)
-    }
+    DocumentController.replaceCurrentDocument(with: file)
   }
 
   // MARK: - First responder methods called by NSMenuItems applicable to the current window

@@ -13,6 +13,10 @@ class Document: NSDocument {
   fileprivate var markdownVC: MarkdownViewController?
   fileprivate var fileData: Data?
 
+  /// Whether the document is transient.
+  /// This is initially true until the document is modified
+  public var isTransient: Bool = true
+
   override init() {
     super.init()
   }
@@ -66,6 +70,7 @@ class Document: NSDocument {
     guard let data = self.markdownVC?.textStorage.string.data(using: .utf8) else {
       throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
     }
+
     return data
   }
 
@@ -80,6 +85,13 @@ class Document: NSDocument {
     }
 
     self.fileURL = url
+  }
+
+  override func updateChangeCount(_ change: NSDocument.ChangeType) {
+    // Whenever the change count changes, the document is no longer transient
+    self.isTransient = false
+
+    super.updateChangeCount(change)
   }
 
   // MARK: - Private helper methods

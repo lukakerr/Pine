@@ -10,25 +10,44 @@ import Cocoa
 
 class DocumentController: NSDocumentController {
 
-  private var keyWindowController: WindowController? {
+  private static func getCurrentWindowController() -> WindowController? {
     return NSApp.keyWindow?.windowController as? WindowController
   }
 
   override func openDocument(withContentsOf url: URL,
                              display displayDocument: Bool,
                              completionHandler: @escaping (NSDocument?, Bool, Error?) -> Void) {
-    super.openDocument(
-      withContentsOf: url,
-      display: displayDocument,
-      completionHandler: { (document, alreadyOpen, error) in
-        // If there was an error or the file is already open, don't do anything
-        guard error != nil && !alreadyOpen else { return }
+    guard
+      let currentWindowController = DocumentController.getCurrentWindowController()
+    else { return }
 
-        self.keyWindowController?.syncWindowSidebars()
-    });
+    let currentDocument = currentWindowController.document as? Document
+    let isTransient = currentDocument?.isTransient ?? false
+
+    // Is transient, so replace
+    if isTransient {
+      DocumentController.replaceCurrentDocument(with: url)
+    } else {
+      super.openDocument(
+        withContentsOf: url,
+        display: true,
+        completionHandler: { _,_,_  in }
+      );
+    }
+
+    currentWindowController.syncWindowSidebars()
   }
 
   // MARK: - Public static helper methods
+
+  /// Replace the currently opened document (if it exists) with the provided URL
+  public static func replaceCurrentDocument(with url: URL) {
+    guard let currentWindowController = DocumentController.getCurrentWindowController() else { return }
+
+    if let doc = currentWindowController.document as? Document {
+      try? doc.read(from: url, ofType: url.pathExtension)
+    }
+  }
 
   /// Try to open a markdown file given a URL.
   /// Accounts for both relative (to the currently open document) and absolute URL's
