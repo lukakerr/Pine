@@ -146,7 +146,6 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
 
     DispatchQueue.global(qos: .userInitiated).async {
       theme.setFont(to: preferences.font)
-//      self.textStorage.highlightr.theme.setCodeFont(preferences.font)
 
       guard
         let highlightedCode = self.textStorage.highlightr.highlight(markdownText, as: MARKDOWN_SYNTAX)
