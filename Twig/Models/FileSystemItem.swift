@@ -63,7 +63,7 @@ final class FileSystemItem {
   }
 
   public func getName() -> String {
-    return relativePath
+    return relativePath.removingPercentEncoding
   }
 
   // MARK: - Private methods

@@ -24,6 +24,10 @@ extension String {
     return contains("http")
   }
 
+  public var removingPercentEncoding: String {
+    return self.removingPercentEncoding ?? self
+  }
+
   /// Decode URL and convert ~ to Home directory
   public func decodeURL() -> String? {
     let fileManager = FileManager.default
