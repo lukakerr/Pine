@@ -944,51 +944,7 @@
                     <view key="view" wantsLayer="YES" id="ERx-hH-rdd" customClass="MarkdownView" customModule="Twig" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <scrollView focusRingType="none" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAD-f9-Lpr">
-                                <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
-                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="s9D-Lv-cP8">
-                                    <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <textView focusRingType="none" drawsBackground="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="bar" allowsUndo="YES" usesRuler="YES" smartInsertDelete="YES" id="SNH-fR-eeK">
-                                            <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="500" height="600"/>
-                                            <size key="maxSize" width="800" height="10000000"/>
-                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <connections>
-                                                <binding destination="5gI-5U-AMq" name="attributedString" keyPath="attributedMarkdownTextInput" id="NRg-aq-nt4">
-                                                    <dictionary key="options">
-                                                        <bool key="NSContinuouslyUpdatesValue" value="YES"/>
-                                                    </dictionary>
-                                                </binding>
-                                            </connections>
-                                        </textView>
-                                    </subviews>
-                                </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="pla-W4-kOj">
-                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </scroller>
-                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="2Fr-Xo-YM2">
-                                    <rect key="frame" x="484" y="0.0" width="16" height="600"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </scroller>
-                            </scrollView>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="LAD-f9-Lpr" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" id="1hl-zR-pdl"/>
-                            <constraint firstAttribute="bottom" secondItem="LAD-f9-Lpr" secondAttribute="bottom" id="91h-re-9b3"/>
-                            <constraint firstAttribute="trailing" secondItem="LAD-f9-Lpr" secondAttribute="trailing" id="B2C-hK-WSB"/>
-                            <constraint firstItem="LAD-f9-Lpr" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" id="QK6-F3-40T"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="markdownTextView" destination="SNH-fR-eeK" id="W8s-xh-NHu"/>
-                    </connections>
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="SCX-Ho-naq"/>

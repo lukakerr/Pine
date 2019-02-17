@@ -39,10 +39,16 @@ class Theme {
     }
   }
 
+  /// Set the theme given a theme name
   public func setTheme(to theme: String) {
     self.syntax = theme
     self.highlightr.setTheme(to: theme)
     self.background = self.highlightr.theme.themeBackgroundColor
+  }
+
+  /// Set the theme's font
+  public func setFont(to font: NSFont) {
+    self.highlightr.theme.setCodeFont(font)
   }
 
 }

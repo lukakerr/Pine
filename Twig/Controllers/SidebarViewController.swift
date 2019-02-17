@@ -149,6 +149,7 @@ class SidebarViewController: NSViewController {
 
     sidebar.backgroundColor = backgroundColor
     sidebarActionsView.setBackgroundColor(backgroundColor)
+    setRowColour(sidebar)
     sidebar.reloadData()
   }
 
@@ -252,8 +253,10 @@ extension SidebarViewController: NSOutlineViewDataSource {
 
   private func setRowTextColor(forRow row: NSTableRowView) {
     if let cell = row.view(atColumn: 0) as? NSTableCellView {
-      let textColor: NSColor = row.isSelected || sidebar.backgroundColor.isDark
-        ? .white : .black
+      let isDark = sidebar.backgroundColor.isDark
+      let selectedAndDark = row.isSelected && isDark
+
+      let textColor: NSColor = isDark || selectedAndDark ? .white : .black
 
       cell.textField?.textColor = textColor
     }

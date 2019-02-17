@@ -63,7 +63,7 @@ class Document: NSDocument {
 
   // Returns data used to save the file
   override func data(ofType typeName: String) throws -> Data {
-    guard let data = self.markdownVC?.markdownTextView.textStorage?.string.data(using: .utf8) else {
+    guard let data = self.markdownVC?.textStorage.string.data(using: .utf8) else {
       throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
     }
     return data
@@ -110,8 +110,7 @@ class Document: NSDocument {
 
   fileprivate func setContents() {
     if let data = self.fileData, let contents = String(data: data, encoding: .utf8) {
-      self.markdownVC?.markdownTextView.string = contents
-      self.markdownVC?.attributedMarkdownTextInput = NSAttributedString(string: contents)
+      self.markdownVC?.textStorage.setAttributedString(NSAttributedString(string: contents))
     }
   }
 

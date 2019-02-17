@@ -7,11 +7,18 @@
 //
 
 import Cocoa
+import Highlightr
 import cmark_gfm_swift
 
-class MarkdownViewController: NSViewController, NSTextViewDelegate {
+let MARKDOWN_SYNTAX = "Markdown"
 
-  @IBOutlet var markdownTextView: NSTextView!
+class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDelegate {
+
+  private var scrollView: NSScrollView!
+  private var markdownTextView: NSTextView!
+  private var layoutManager: NSLayoutManager!
+
+  public var textStorage: CodeAttributedString!
 
   private var debouncedGeneratePreview: Debouncer!
 
@@ -23,18 +30,6 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   /// The preview view controller for this markdown view controller
   private var previewViewController: PreviewViewController? {
     return splitViewController?.splitViewItems.last?.viewController as? PreviewViewController
-  }
-
-  /// Cocoa binding for text inside markdownTextView
-  @objc var attributedMarkdownTextInput: NSAttributedString {
-    get {
-      return NSAttributedString(string: markdownTextView.string)
-    }
-    set {
-      syntaxHighlight()
-      debouncedGeneratePreview.call()
-      setWordCount()
-    }
   }
 
   override var acceptsFirstResponder: Bool {
@@ -58,15 +53,140 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
       preview.isCollapsed = !preferences.showPreviewOnStartup
     }
 
+    self.setupTextStorage()
+    self.setupScrollView()
+    self.setupLayoutManager()
+    self.setupMarkdownTextView()
+
+    if let textContainer = markdownTextView.textContainer {
+      layoutManager.addTextContainer(textContainer)
+    }
+
+    scrollView.documentView = markdownTextView
+
+    view.addSubview(scrollView)
+  }
+
+  // MARK: - Private functions for updating and setting view components
+
+  func setupTextStorage() {
+    textStorage = CodeAttributedString(highlightr: theme.highlightr)
+    textStorage.highlightDelegate = self
+    textStorage.language = MARKDOWN_SYNTAX
+  }
+
+  func setupScrollView() {
+    scrollView = NSScrollView()
+    scrollView.frame = view.frame
+    scrollView.borderType = .noBorder
+    scrollView.drawsBackground = false
+    scrollView.hasVerticalScroller = true
+    scrollView.hasHorizontalScroller = false
+    scrollView.autoresizingMask = [.width, .height]
+  }
+
+  func setupLayoutManager() {
+    layoutManager = NSLayoutManager()
+    textStorage.addLayoutManager(layoutManager)
+  }
+
+  func setupMarkdownTextView() {
+    markdownTextView = NSTextView()
     markdownTextView.delegate = self
+    markdownTextView.allowsUndo = true
+    markdownTextView.isEditable = true
+    markdownTextView.usesFindBar = true
+    markdownTextView.isRichText = false
+    markdownTextView.isSelectable = true
+    markdownTextView.frame = view.bounds
     markdownTextView.font = preferences.font
+    markdownTextView.drawsBackground = false
+    markdownTextView.frame = scrollView.bounds
+    markdownTextView.autoresizingMask = [.width]
     markdownTextView.insertionPointColor = .gray
+    markdownTextView.isVerticallyResizable = true
+    markdownTextView.isHorizontallyResizable = false
     markdownTextView.textContainerInset = NSSize(width: 10.0, height: 10.0)
   }
 
-  override func viewDidAppear() {
-    reloadUI()
+  /// Update any UI related components
+  @objc private func reloadUI() {
+    syntaxHighlight()
+    view.updateLayer()
+    generatePreview()
+    markdownTextView.isContinuousSpellCheckingEnabled = preferences.spellcheckEnabled
   }
+
+  /// Sets the word count in the titlebar word count accessory
+  private func setWordCount() {
+    let wordCountView = view.window?.titlebarAccessoryViewControllers.first?.view.subviews.first as? NSTextField
+    guard let wordCount = markdownTextView.textStorage?.words.count else { return }
+
+    var countString = String(describing: wordCount) + " word"
+
+    if wordCount > 1 {
+      countString += "s"
+    } else if wordCount < 1 {
+      countString = ""
+    }
+    wordCountView?.stringValue = countString
+  }
+
+  // MARK: - Functions handling markdown editing
+
+  /// Called when the syntax highlighter finishes
+  func didHighlight(_ range: NSRange, success: Bool) {
+    setWordCount()
+    debouncedGeneratePreview.call()
+  }
+
+  /// Syntax highlight the entire markdownTextView contents
+  private func syntaxHighlight() {
+    let markdownText = markdownTextView.string
+
+    DispatchQueue.global(qos: .userInitiated).async {
+      theme.setFont(to: preferences.font)
+//      self.textStorage.highlightr.theme.setCodeFont(preferences.font)
+
+      guard
+        let highlightedCode = self.textStorage.highlightr.highlight(markdownText, as: MARKDOWN_SYNTAX)
+      else { return }
+
+      DispatchQueue.main.async {
+        let cursorPosition = self.markdownTextView.selectedRanges[0].rangeValue.location
+        self.textStorage.beginEditing()
+        self.textStorage.setAttributedString(highlightedCode)
+        self.textStorage.endEditing()
+        self.markdownTextView.setSelectedRange(NSRange(location: cursorPosition, length: 0))
+      }
+    }
+  }
+
+  /// Parse the markdownTextView contents into HTML and load it into the webview
+  @objc private func generatePreview() {
+    // If preview is collapsed, return
+    guard
+      let preview = splitViewController?.splitViewItems.last,
+      !preview.isCollapsed
+    else { return }
+
+    // Don't escape a double backslash
+    let markdownText = markdownTextView.string.replacingOccurrences(of: "\\", with: "\\\\")
+
+    DispatchQueue.global(qos: .userInitiated).async {
+      if let parsed = Node(markdown: markdownText)?.html {
+        DispatchQueue.main.async {
+          self.previewViewController?.captureScroll {
+            self.previewViewController?.webPreview.loadHTMLString(html.getHTML(with: parsed), baseURL: nil)
+          }
+        }
+      }
+    }
+  }
+
+}
+
+extension MarkdownViewController {
 
   // MARK: - First responder methods for exporting from WKWebView
 
@@ -89,6 +209,10 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   @IBAction func exportXML(sender: NSMenuItem) {
     XMLExporter.export(from: markdownTextView)
   }
+
+}
+
+extension MarkdownViewController {
 
   // MARK: - First responder methods for various markdown formatting shortcuts
 
@@ -155,77 +279,6 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   @IBAction func mathBlock(sender: NSMenuItem) {
     markdownTextView.replace(left: "$$\n", right: "\n$$", newLineIfSelected: true)
     reloadUI()
-  }
-
-  // MARK: - Functions handling markdown editing
-
-  /// Syntax highlight the markdownTextView contents
-  private func syntaxHighlight() {
-    let markdownText = markdownTextView.string
-
-    DispatchQueue.global(qos: .userInitiated).async {
-      let highlightedCode = theme.highlightr.highlight(markdownText, as: "markdown")
-
-      if let syntaxHighlighted = highlightedCode {
-        let code = NSMutableAttributedString(attributedString: syntaxHighlighted)
-        code.withFont(preferences.font)
-
-        DispatchQueue.main.async {
-          let cursorPosition = self.markdownTextView.selectedRanges[0].rangeValue.location
-          self.markdownTextView.textStorage?.beginEditing()
-          self.markdownTextView.textStorage?.setAttributedString(code)
-          self.markdownTextView.textStorage?.endEditing()
-          self.markdownTextView.setSelectedRange(NSRange(location: cursorPosition, length: 0))
-        }
-      }
-    }
-  }
-
-  /// Parse the markdownTextView contents into HTML and load it into the webview
-  @objc private func generatePreview() {
-    // If preview is collapsed, return
-    guard
-      let preview = splitViewController?.splitViewItems.last,
-      !preview.isCollapsed
-    else { return }
-
-    // Don't escape a double backslash
-    let markdownText = markdownTextView.string.replacingOccurrences(of: "\\", with: "\\\\")
-
-    DispatchQueue.global(qos: .userInitiated).async {
-      if let parsed = Node(markdown: markdownText)?.html {
-        DispatchQueue.main.async {
-          self.previewViewController?.captureScroll {
-            self.previewViewController?.webPreview.loadHTMLString(html.getHTML(with: parsed), baseURL: nil)
-          }
-        }
-      }
-    }
-  }
-
-  // MARK: - Private functions for updating and setting view components
-
-  /// Update any UI related components
-  @objc private func reloadUI() {
-    syntaxHighlight()
-    view.updateLayer()
-    self.generatePreview()
-    self.markdownTextView.isContinuousSpellCheckingEnabled = preferences.spellcheckEnabled
-  }
-
-  /// Sets the word count in the titlebar word count accessory
-  private func setWordCount() {
-    let wordCountView = view.window?.titlebarAccessoryViewControllers.first?.view.subviews.first as? NSTextField
-    guard let wordCount = markdownTextView.textStorage?.words.count else { return }
-
-    var countString = String(describing: wordCount) + " word"
-
-    if wordCount > 1 {
-      countString += "s"
-    } else if wordCount < 1 {
-      countString = ""
-    }
-    wordCountView?.stringValue = countString
   }
 
 }

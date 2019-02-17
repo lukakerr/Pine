@@ -61,6 +61,8 @@ class Preferences {
     if defaults.object(forKey: PreferencesKeys.useThemeColorForSidebar) != nil {
       useThemeColorForSidebar = defaults.bool(forKey: PreferencesKeys.useThemeColorForSidebar)
     }
+
+    theme.setFont(to: self.font)
   }
 
   public var showPreviewOnStartup = true {
@@ -136,6 +138,7 @@ class Preferences {
     }
 
     set {
+      theme.setFont(to: newValue)
       setDefaults(key: PreferencesKeys.fontName, newValue.fontName)
       setDefaults(key: PreferencesKeys.fontSize, newValue.pointSize)
     }
