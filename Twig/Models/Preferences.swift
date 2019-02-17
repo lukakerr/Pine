@@ -8,7 +8,7 @@
 
 import Cocoa
 
-enum Keys {
+enum PreferencesKeys {
   static let showPreviewOnStartup = "showPreviewOnStartup"
   static let openNewDocumentOnStartup = "openNewDocumentOnStartup"
   static let autosaveDocument = "autosaveDocument"
@@ -23,104 +23,104 @@ enum Keys {
 }
 
 class Preferences {
-  static let sharedInstance = Preferences()
+  static let shared = Preferences()
 
   private init() {
-    if defaults.object(forKey: Keys.showPreviewOnStartup) != nil {
-      showPreviewOnStartup = defaults.bool(forKey: Keys.showPreviewOnStartup)
+    if defaults.object(forKey: PreferencesKeys.showPreviewOnStartup) != nil {
+      showPreviewOnStartup = defaults.bool(forKey: PreferencesKeys.showPreviewOnStartup)
     }
 
-    if defaults.object(forKey: Keys.openNewDocumentOnStartup) != nil {
-      openNewDocumentOnStartup = defaults.bool(forKey: Keys.openNewDocumentOnStartup)
+    if defaults.object(forKey: PreferencesKeys.openNewDocumentOnStartup) != nil {
+      openNewDocumentOnStartup = defaults.bool(forKey: PreferencesKeys.openNewDocumentOnStartup)
     }
 
-    if defaults.object(forKey: Keys.autosaveDocument) != nil {
-      autosaveDocument = defaults.bool(forKey: Keys.autosaveDocument)
+    if defaults.object(forKey: PreferencesKeys.autosaveDocument) != nil {
+      autosaveDocument = defaults.bool(forKey: PreferencesKeys.autosaveDocument)
     }
 
-    if defaults.object(forKey: Keys.verticalSplitView) != nil {
-      verticalSplitView = defaults.bool(forKey: Keys.verticalSplitView)
+    if defaults.object(forKey: PreferencesKeys.verticalSplitView) != nil {
+      verticalSplitView = defaults.bool(forKey: PreferencesKeys.verticalSplitView)
     }
 
-    if defaults.object(forKey: Keys.modernTitlebar) != nil {
-      modernTitlebar = defaults.bool(forKey: Keys.modernTitlebar)
+    if defaults.object(forKey: PreferencesKeys.modernTitlebar) != nil {
+      modernTitlebar = defaults.bool(forKey: PreferencesKeys.modernTitlebar)
     }
 
-    if defaults.object(forKey: Keys.useSystemAppearance) != nil {
-      useSystemAppearance = defaults.bool(forKey: Keys.useSystemAppearance)
+    if defaults.object(forKey: PreferencesKeys.useSystemAppearance) != nil {
+      useSystemAppearance = defaults.bool(forKey: PreferencesKeys.useSystemAppearance)
     }
 
-    if defaults.object(forKey: Keys.showSidebar) != nil {
-      showSidebar = defaults.bool(forKey: Keys.showSidebar)
+    if defaults.object(forKey: PreferencesKeys.showSidebar) != nil {
+      showSidebar = defaults.bool(forKey: PreferencesKeys.showSidebar)
     }
 
-    if defaults.object(forKey: Keys.spellcheckEnabled) != nil {
-      spellcheckEnabled = defaults.bool(forKey: Keys.spellcheckEnabled)
+    if defaults.object(forKey: PreferencesKeys.spellcheckEnabled) != nil {
+      spellcheckEnabled = defaults.bool(forKey: PreferencesKeys.spellcheckEnabled)
     }
 
-    if defaults.object(forKey: Keys.useThemeColorForSidebar) != nil {
-      useThemeColorForSidebar = defaults.bool(forKey: Keys.useThemeColorForSidebar)
+    if defaults.object(forKey: PreferencesKeys.useThemeColorForSidebar) != nil {
+      useThemeColorForSidebar = defaults.bool(forKey: PreferencesKeys.useThemeColorForSidebar)
     }
   }
 
   public var showPreviewOnStartup = true {
     willSet(newVal) {
-      setDefaults(key: Keys.showPreviewOnStartup, newVal)
+      setDefaults(key: PreferencesKeys.showPreviewOnStartup, newVal)
     }
   }
 
   public var openNewDocumentOnStartup = true {
     willSet(newVal) {
-      setDefaults(key: Keys.openNewDocumentOnStartup, newVal)
+      setDefaults(key: PreferencesKeys.openNewDocumentOnStartup, newVal)
     }
   }
 
   public var autosaveDocument = true {
     willSet(newVal) {
-      setDefaults(key: Keys.autosaveDocument, newVal)
+      setDefaults(key: PreferencesKeys.autosaveDocument, newVal)
     }
   }
 
   public var verticalSplitView = true {
     willSet(newVal) {
-      setDefaults(key: Keys.verticalSplitView, newVal)
+      setDefaults(key: PreferencesKeys.verticalSplitView, newVal)
     }
   }
 
   public var modernTitlebar = true {
     willSet(newVal) {
-      setDefaults(key: Keys.modernTitlebar, newVal)
+      setDefaults(key: PreferencesKeys.modernTitlebar, newVal)
     }
   }
 
   public var useSystemAppearance = false {
     willSet(newVal) {
-      setDefaults(key: Keys.useSystemAppearance, newVal)
+      setDefaults(key: PreferencesKeys.useSystemAppearance, newVal)
     }
   }
 
   public var showSidebar = true {
     willSet(newVal) {
-      setDefaults(key: Keys.showSidebar, newVal)
+      setDefaults(key: PreferencesKeys.showSidebar, newVal)
     }
   }
 
   public var spellcheckEnabled = false {
     willSet(newVal) {
-      setDefaults(key: Keys.spellcheckEnabled, newVal)
+      setDefaults(key: PreferencesKeys.spellcheckEnabled, newVal)
     }
   }
 
   public var useThemeColorForSidebar = true {
     willSet(newVal) {
-      setDefaults(key: Keys.useThemeColorForSidebar, newVal)
+      setDefaults(key: PreferencesKeys.useThemeColorForSidebar, newVal)
     }
   }
 
   public var font: NSFont {
     get {
-      let fontSize = defaults.double(forKey: Keys.fontSize)
-      if let fontName = defaults.string(forKey: Keys.fontName),
+      let fontSize = defaults.double(forKey: PreferencesKeys.fontSize)
+      if let fontName = defaults.string(forKey: PreferencesKeys.fontName),
         let font = NSFont(name: fontName, size: CGFloat(fontSize)) {
         return font
       }
@@ -136,8 +136,8 @@ class Preferences {
     }
 
     set {
-      setDefaults(key: Keys.fontName, newValue.fontName)
-      setDefaults(key: Keys.fontSize, newValue.pointSize)
+      setDefaults(key: PreferencesKeys.fontName, newValue.fontName)
+      setDefaults(key: PreferencesKeys.fontSize, newValue.pointSize)
     }
   }
 
@@ -147,4 +147,4 @@ class Preferences {
 
 }
 
-let preferences = Preferences.sharedInstance
+let preferences = Preferences.shared

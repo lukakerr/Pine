@@ -9,8 +9,15 @@
 import Cocoa
 import Highlightr
 
+enum ThemeKeys {
+  static let syntax = "syntax"
+}
+
 class Theme {
-  static let sharedInstance = Theme()
+  static let shared = Theme()
+
+  // Default theme is ocean
+  static let defaultTheme = "ocean"
 
   public var highlightr = Highlightr()!
 
@@ -20,18 +27,24 @@ class Theme {
 
   private init() {
     // Restore default syntax theme
-    if let defaultSyntax = defaults.string(forKey: "syntax") {
+    if let defaultSyntax = defaults.string(forKey: ThemeKeys.syntax) {
       self.syntax = defaultSyntax
+      self.setTheme(to: self.syntax)
     }
   }
 
-  // Default theme is gruvbox-dark
-  public var syntax: String = "gruvbox-dark" {
+  public var syntax: String = Theme.defaultTheme {
     willSet(newSyntax) {
-      defaults.setValue(newSyntax, forKey: "syntax")
+      defaults.setValue(newSyntax, forKey: ThemeKeys.syntax)
     }
+  }
+
+  public func setTheme(to theme: String) {
+    self.syntax = theme
+    self.highlightr.setTheme(to: theme)
+    self.background = self.highlightr.theme.themeBackgroundColor
   }
 
 }
 
-let theme = Theme.sharedInstance
+let theme = Theme.shared

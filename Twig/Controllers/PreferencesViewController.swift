@@ -46,7 +46,7 @@ class PreferencesViewController: NSViewController, NSFontChanging {
   }
 
   @IBAction func syntaxChanged(_ sender: NSPopUpButton) {
-    theme.syntax = sender.title
+    theme.setTheme(to: sender.title)
     postNotification()
   }
 

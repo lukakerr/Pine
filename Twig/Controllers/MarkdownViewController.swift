@@ -65,8 +65,6 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
   }
 
   override func viewDidAppear() {
-    theme.highlightr.setTheme(to: theme.syntax)
-    theme.background = theme.highlightr.theme.themeBackgroundColor
     reloadUI()
   }
 
@@ -163,9 +161,6 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate {
 
   /// Syntax highlight the markdownTextView contents
   private func syntaxHighlight() {
-    theme.highlightr.setTheme(to: theme.syntax)
-    theme.background = theme.highlightr.theme.themeBackgroundColor
-
     let markdownText = markdownTextView.string
 
     DispatchQueue.global(qos: .userInitiated).async {

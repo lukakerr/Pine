@@ -10,7 +10,7 @@ import Foundation
 
 final class OpenDocuments {
 
-  static let sharedInstance = OpenDocuments()
+  static let shared = OpenDocuments()
   fileprivate var documents: [FileSystemItem]
 
   private init() {
@@ -44,4 +44,4 @@ final class OpenDocuments {
 
 }
 
-let openDocuments = OpenDocuments.sharedInstance
+let openDocuments = OpenDocuments.shared

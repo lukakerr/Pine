@@ -10,7 +10,7 @@ import Foundation
 
 class HTML {
 
-  static let sharedInstance = HTML()
+  static let shared = HTML()
 
   // Currently WKWebView doesn't allow local resources to be loaded (css, js)
   // via file:/// so we have to read from the file and insert it into the html inline
@@ -123,4 +123,4 @@ class HTML {
 
 }
 
-let html = HTML.sharedInstance
+let html = HTML.shared
