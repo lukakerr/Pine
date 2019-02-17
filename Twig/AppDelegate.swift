@@ -38,7 +38,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     dialog.showsHiddenFiles = true
     dialog.canCreateDirectories = true
     dialog.canChooseDirectories = true
-    dialog.allowedFileTypes = ["md"]
+    dialog.allowedFileTypes = ["md", "markdown"]
 
     guard
       dialog.runModal() == .OK,

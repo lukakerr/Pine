@@ -13,7 +13,7 @@ extension String {
   static var FilePrefix = "file://"
 
   public var isMarkdown: Bool {
-    return hasSuffix(".md")
+    return hasSuffix(".md") || hasSuffix(".markdown")
   }
 
   public var isBaseFile: Bool {

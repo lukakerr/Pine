@@ -10,6 +10,10 @@ import Cocoa
 
 class DocumentController: NSDocumentController {
 
+  private var keyWindowController: WindowController? {
+    return NSApp.keyWindow?.windowController as? WindowController
+  }
+
   override func openDocument(withContentsOf url: URL,
                              display displayDocument: Bool,
                              completionHandler: @escaping (NSDocument?, Bool, Error?) -> Void) {
@@ -20,7 +24,7 @@ class DocumentController: NSDocumentController {
         // If there was an error or the file is already open, don't do anything
         guard error != nil && !alreadyOpen else { return }
 
-        (NSApp.keyWindow?.windowController as? WindowController)?.syncWindowSidebars()
+        self.keyWindowController?.syncWindowSidebars()
     });
   }
 

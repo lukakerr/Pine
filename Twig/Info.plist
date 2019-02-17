@@ -9,6 +9,7 @@
 		<dict>
 			<key>CFBundleTypeExtensions</key>
 			<array>
+				<string>markdown</string>
 				<string>md</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
