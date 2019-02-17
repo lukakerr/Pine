@@ -32,6 +32,11 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
     return splitViewController?.splitViewItems.last?.viewController as? PreviewViewController
   }
 
+  /// The word count text field instance
+  private var wordCountTextField: NSTextField? {
+    return view.window?.titlebarAccessoryViewControllers.first?.view.subviews.first as? NSTextField
+  }
+
   override var acceptsFirstResponder: Bool {
     return true
   }
@@ -119,17 +124,17 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
 
   /// Sets the word count in the titlebar word count accessory
   private func setWordCount() {
-    let wordCountView = view.window?.titlebarAccessoryViewControllers.first?.view.subviews.first as? NSTextField
-    guard let wordCount = markdownTextView.textStorage?.words.count else { return }
+    guard let count = markdownTextView.textStorage?.words.count else { return }
 
-    var countString = String(describing: wordCount) + " word"
+    var countString = "\(count) word"
 
-    if wordCount > 1 {
+    if count > 1 {
       countString += "s"
-    } else if wordCount < 1 {
+    } else if count < 1 {
       countString = ""
     }
-    wordCountView?.stringValue = countString
+
+    wordCountTextField?.stringValue = countString
   }
 
   // MARK: - Functions handling markdown editing
