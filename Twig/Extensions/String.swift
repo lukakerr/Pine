@@ -29,7 +29,7 @@ extension String {
   }
 
   /// Decode URL and convert ~ to Home directory
-  public func decodeURL() -> String? {
+  public var decoded: String? {
     let fileManager = FileManager.default
 
     return self

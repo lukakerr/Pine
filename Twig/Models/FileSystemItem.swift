@@ -26,11 +26,9 @@ final class FileSystemItem: Equatable {
       let url = URL(string: parent.fullPath)?.appendingPathComponent(relativePath)
     else { return relativePath }
 
-    guard let path = url.absoluteString.decodeURL() else {
-      return url.absoluteString
-    }
+    let urlString = url.absoluteString
 
-    return path
+    return urlString.decoded ?? urlString
   }
 
   var url: URL {
