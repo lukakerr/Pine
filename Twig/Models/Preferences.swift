@@ -17,6 +17,7 @@ enum PreferencesKeys {
   static let useSystemAppearance = "useSystemAppearance"
   static let showSidebar = "showSidebar"
   static let spellcheckEnabled = "spellcheckEnabled"
+  static let autoPairSyntax = "autoPairSyntax"
   static let useThemeColorForSidebar = "useThemeColorForSidebar"
   static let fontSize = "fontSize"
   static let fontName = "fontName"
@@ -56,6 +57,10 @@ class Preferences {
 
     if defaults.object(forKey: PreferencesKeys.spellcheckEnabled) != nil {
       spellcheckEnabled = defaults.bool(forKey: PreferencesKeys.spellcheckEnabled)
+    }
+
+    if defaults.object(forKey: PreferencesKeys.autoPairSyntax) != nil {
+      autoPairSyntax = defaults.bool(forKey: PreferencesKeys.autoPairSyntax)
     }
 
     if defaults.object(forKey: PreferencesKeys.useThemeColorForSidebar) != nil {
@@ -110,6 +115,12 @@ class Preferences {
   public var spellcheckEnabled = false {
     willSet(newVal) {
       setDefaults(key: PreferencesKeys.spellcheckEnabled, newVal)
+    }
+  }
+
+  public var autoPairSyntax = true {
+    willSet(newVal) {
+      setDefaults(key: PreferencesKeys.autoPairSyntax, newVal)
     }
   }
 

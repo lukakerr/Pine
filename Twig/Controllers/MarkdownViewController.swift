@@ -49,6 +49,12 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
     // Setup notification observer for system dark/light mode change
     NotificationCenter.receive(.appearanceChanged, instance: self, selector: #selector(generatePreview))
 
+    // Setup keyDown event listener
+    NSEvent.addLocalMonitorForEvents(matching: .keyDown) { (event) -> NSEvent? in
+      self.keyDown(with: event)
+      return event
+    }
+
     // Setup a 200ms debouncer for generating the markdown preview
     debouncedGeneratePreview = Debouncer(delay: 0.2) {
       self.generatePreview()
@@ -138,6 +144,16 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
   }
 
   // MARK: - Functions handling markdown editing
+
+  // Perform any editing actions on keyDown
+  override func keyDown(with event: NSEvent) {
+    guard
+      preferences.autoPairSyntax,
+      let singleCharacter = event.characters?.first
+    else { return }
+
+    markdownTextView.pair(character: singleCharacter)
+  }
 
   /// Called when the syntax highlighter finishes
   func didHighlight(_ range: NSRange, success: Bool) {

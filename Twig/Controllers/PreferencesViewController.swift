@@ -19,6 +19,7 @@ class PreferencesViewController: NSViewController, NSFontChanging {
   @IBOutlet weak var useSystemAppearance: NSButton!
   @IBOutlet weak var showSidebar: NSButton!
   @IBOutlet weak var enableSpellcheck: NSButton!
+  @IBOutlet weak var autoPairSyntax: NSButton!
   @IBOutlet weak var useThemeColorForSidebar: NSButton!
 
   override func viewDidLoad() {
@@ -38,6 +39,7 @@ class PreferencesViewController: NSViewController, NSFontChanging {
     useSystemAppearance.state = getState(preferences.useSystemAppearance)
     showSidebar.state = getState(preferences.showSidebar)
     enableSpellcheck.state = getState(preferences.spellcheckEnabled)
+    autoPairSyntax.state = getState(preferences.autoPairSyntax)
     useThemeColorForSidebar.state = getState(preferences.useThemeColorForSidebar)
   }
 
@@ -90,6 +92,11 @@ class PreferencesViewController: NSViewController, NSFontChanging {
 
   @IBAction func enableSpellcheckChanged(_ sender: NSButton) {
     preferences.spellcheckEnabled = sender.state.rawValue.bool
+    postNotification()
+  }
+
+  @IBAction func autoPairSyntaxChanged(_ sender: NSButton) {
+    preferences.autoPairSyntax = sender.state.rawValue.bool
     postNotification()
   }
 

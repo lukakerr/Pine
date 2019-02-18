@@ -73,4 +73,23 @@ class StringTexts: XCTestCase {
     XCTAssertFalse(link.isWebLink)
   }
 
+  func testIsWhiteSpace() {
+    let str = "  \t\r\n   \n\n\t\r"
+
+    XCTAssertTrue(str.isWhiteSpace)
+  }
+
+  func testIsNotWhiteSpace() {
+    let str = "   abc"
+
+    XCTAssertFalse(str.isWhiteSpace)
+  }
+
+  func testIsDecoded() {
+    let str = "%E6%B5%8B%E8%AF%95%E8%A7%A3%E7%A0%81%EF%BC%9A123.456"
+    let expected = "测试解码：123.456"
+
+    XCTAssertEqual(str.decoded, expected)
+  }
+
 }

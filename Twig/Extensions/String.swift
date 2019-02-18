@@ -28,6 +28,10 @@ extension String {
     return self.removingPercentEncoding ?? self
   }
 
+  public var isWhiteSpace: Bool {
+    return self.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+  }
+
   /// Decode URL and convert ~ to Home directory
   public var decoded: String? {
     let fileManager = FileManager.default
