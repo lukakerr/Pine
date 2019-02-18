@@ -26,15 +26,22 @@ final class OpenDocuments {
   }
 
   /// Remove an item from the open documents given a URL
-  public func removeDocument(with url: URL) {
+  public func remove(itemWithUrl url: URL) {
     if let index = documents.index(where: { $0.fullPath == url.relativePath }) {
+      documents.remove(at: index)
+    }
+  }
+
+  /// Remove an item from the open documents given the item
+  public func remove(item doc: FileSystemItem) {
+    if let index = documents.index(where: { $0 == doc }) {
       documents.remove(at: index)
     }
   }
 
   /// Returns whether the FileSystemItem given exists in the open documents
   public func contains(_ doc: FileSystemItem) -> Bool {
-    return documents.contains(where: { $0.fullPath == doc.fullPath })
+    return documents.contains(doc)
   }
 
   /// Get all open documents

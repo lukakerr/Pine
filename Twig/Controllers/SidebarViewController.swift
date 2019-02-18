@@ -126,7 +126,7 @@ class SidebarViewController: NSViewController {
       let itemToRemove = sidebar.item(atRow: sidebar.clickedRow) as? FileSystemItem
     else { return }
 
-    openDocuments.removeDocument(with: itemToRemove.url)
+    openDocuments.remove(item: itemToRemove)
     windowController?.syncWindowSidebars()
   }
 

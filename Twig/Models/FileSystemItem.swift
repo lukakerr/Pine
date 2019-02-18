@@ -8,7 +8,11 @@
 
 import Cocoa
 
-final class FileSystemItem {
+func == (lhs: FileSystemItem, rhs: FileSystemItem) -> Bool {
+  return lhs.fullPath == rhs.fullPath
+}
+
+final class FileSystemItem: Equatable {
 
   fileprivate var relativePath: String!
   fileprivate var parent: FileSystemItem?

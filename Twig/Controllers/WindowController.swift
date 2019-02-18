@@ -53,7 +53,7 @@ class WindowController: NSWindowController, NSWindowDelegate {
   func windowWillClose(_ notification: Notification) {
     // When a window is closed, a document is removed from the sidebar
     if let url = (document as? Document)?.fileURL {
-      openDocuments.removeDocument(with: url)
+      openDocuments.remove(itemWithUrl: url)
       syncWindowSidebars()
     }
   }
