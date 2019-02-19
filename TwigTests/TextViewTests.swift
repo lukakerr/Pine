@@ -65,6 +65,19 @@ class TextViewTests: XCTestCase {
     XCTAssert(newContents == "##### ")
   }
 
+  func testReplaceAtStart() {
+    let contents = "this is some contents"
+    let range = NSRange(location: 0, length: contents.count)
+
+    textView.insertText(contents, replacementRange: range)
+
+    textView.replace(left: "##### ", atLineStart: true)
+
+    let newContents = textView.textStorage?.string
+
+    XCTAssert(newContents == "##### \(contents)")
+  }
+
   func testReplaceSingleChar() {
     let contents = "a"
     let range = NSRange(location: 0, length: 1)

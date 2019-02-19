@@ -21,6 +21,10 @@ let PAIRABLE_CHARACTERS: [Character: Character] = [
 
 extension NSTextView {
 
+  public var cursorLocation: Int {
+    return self.selectedRange().location
+  }
+
   /// Inserts the given left and right characters on either side of selected text,
   /// or creates a new string and inserts the cursor in the middle of it
   ///
@@ -39,8 +43,6 @@ extension NSTextView {
       return
     }
 
-    let range = self.selectedRange()
-
     var leftText = left ?? ""
     var rightText = right ?? ""
 
@@ -49,12 +51,19 @@ extension NSTextView {
       rightText = "\(rightText)\n"
     }
 
-    let text = (self.string as NSString).substring(with: range)
+    let str = self.string as NSString
+
+    var range = self.selectedRange()
+
+    if atLineStart {
+      range = str.lineRange(for: NSRange(location: range.location, length: 0))
+    }
+
+    let text = str.substring(with: range)
 
     let replacement = "\(leftText)\(text)\(rightText)"
-    let cursorPosition = self.selectedRanges[0].rangeValue.location
 
-    let newCursorPosition = cursorPosition + leftText.lengthOfBytes(using: .utf8)
+    let newCursorPosition = cursorLocation + leftText.lengthOfBytes(using: .utf8)
 
     // Let NSTextView know we are going to make a replacement
     // This retains document history allowing for undo etc
@@ -95,7 +104,7 @@ extension NSTextView {
       rightString = String(r)
     }
 
-    return self.replace(
+    self.replace(
       left: leftString,
       right: rightString,
       atLineStart: atLineStart,
@@ -126,23 +135,22 @@ extension NSTextView {
       return
     }
 
-    let cursorPosition = range.location
-
     let length = self.string.count
+    let str = self.string as NSString
 
     // If there exists a string
     if length > 0 {
-      let prevRange = NSRange(location: cursorPosition - 1, length: 1)
-      let prevChar = (self.string as NSString).substring(with: prevRange)
+      let prevRange = NSRange(location: cursorLocation - 1, length: 1)
+      let prevChar = str.substring(with: prevRange)
 
       if !prevChar.isWhiteSpace {
         return
       }
 
       // If there exists characters on the right hand side
-      if cursorPosition < length {
-        let nextRange = NSRange(location: cursorPosition, length: 1)
-        let nextChar = (self.string as NSString).substring(with: nextRange)
+      if cursorLocation < length {
+        let nextRange = NSRange(location: cursorLocation, length: 1)
+        let nextChar = str.substring(with: nextRange)
 
         if !nextChar.isWhiteSpace {
           return

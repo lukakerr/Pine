@@ -173,11 +173,11 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
       else { return }
 
       DispatchQueue.main.async {
-        let cursorPosition = self.markdownTextView.selectedRanges[0].rangeValue
+        let selectedRange = self.markdownTextView.selectedRange()
         self.textStorage.beginEditing()
         self.textStorage.setAttributedString(highlightedCode)
         self.textStorage.endEditing()
-        self.markdownTextView.setSelectedRange(cursorPosition)
+        self.markdownTextView.setSelectedRange(selectedRange)
       }
     }
   }
