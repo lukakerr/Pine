@@ -70,7 +70,6 @@
 /* Begin PBXFileReference section */
 		A104782420E7338800E0930A /* FileSystemItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemItem.swift; sourceTree = "<group>"; };
 		A10FEF4C221BC62300B4D977 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		A10FEF4F221BCD4800B4D977 /* Twig.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Twig.entitlements; sourceTree = "<group>"; };
 		A111013C20E85D9A001EBEDE /* SaveError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveError.swift; sourceTree = "<group>"; };
 		A111014020E8B8A4001EBEDE /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		A1150D2120E858E400536336 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -229,7 +228,6 @@
 		A156AF7F2090606C0098BBDD /* Twig */ = {
 			isa = PBXGroup;
 			children = (
-				A10FEF4F221BCD4800B4D977 /* Twig.entitlements */,
 				A156AF802090606C0098BBDD /* AppDelegate.swift */,
 				A156AF862090606C0098BBDD /* Assets.xcassets */,
 				A142C98020D67389002ED94F /* Controllers */,
