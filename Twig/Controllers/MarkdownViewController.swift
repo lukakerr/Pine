@@ -22,6 +22,11 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
 
   private var debouncedGeneratePreview: Debouncer!
 
+  /// The view's window controller
+  private var windowController: WindowController? {
+    return view.window?.windowController as? WindowController
+  }
+
   /// The split view controller holding this markdown view controller
   private var splitViewController: NSSplitViewController? {
     return parent as? NSSplitViewController
@@ -197,7 +202,11 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
       if let parsed = Node(markdown: markdownText)?.html {
         DispatchQueue.main.async {
           self.previewViewController?.captureScroll {
-            self.previewViewController?.webPreview.loadHTMLString(html.getHTML(with: parsed), baseURL: nil)
+            let doc = self.windowController?.document as? Document
+            let fileURL = doc?.fileURL ?? URL(fileURLWithPath: "/")
+
+            self.previewViewController?.setPermissions(for: fileURL)
+            self.previewViewController?.setContent(with: html.getHTML(with: parsed))
           }
         }
       }
@@ -298,6 +307,16 @@ extension MarkdownViewController {
 
   @IBAction func mathBlock(sender: NSMenuItem) {
     markdownTextView.replace(left: "$$\n", right: "\n$$", newLineIfSelected: true)
+    reloadUI()
+  }
+
+  @IBAction func image(sender: NSMenuItem) {
+    markdownTextView.replace(left: "![", right: "]()")
+    reloadUI()
+  }
+
+  @IBAction func HTMLImage(sender: NSMenuItem) {
+    markdownTextView.replace(left: "<img src=\"", right: "\" width=\"\">")
     reloadUI()
   }
 

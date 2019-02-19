@@ -503,6 +503,18 @@
                                                 <action selector="mathBlockWithSender:" target="Ady-hI-5gd" id="PPG-cC-Idc"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="hx9-Wd-Ldj"/>
+                                        <menuItem title="Image" keyEquivalent="I" id="uyC-IG-Nnd">
+                                            <connections>
+                                                <action selector="imageWithSender:" target="Ady-hI-5gd" id="oGE-dO-Luk"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="HTML Image" keyEquivalent="I" id="134-my-Mhs">
+                                            <modifierMask key="keyEquivalentModifierMask" control="YES"/>
+                                            <connections>
+                                                <action selector="HTMLImageWithSender:" target="Ady-hI-5gd" id="oYi-RG-595"/>
+                                            </connections>
+                                        </menuItem>
                                     </items>
                                 </menu>
                             </menuItem>

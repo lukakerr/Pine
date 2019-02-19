@@ -67,7 +67,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A104782320E7273300E0930A /* Twig.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Twig.entitlements; sourceTree = "<group>"; };
 		A104782420E7338800E0930A /* FileSystemItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemItem.swift; sourceTree = "<group>"; };
 		A111013C20E85D9A001EBEDE /* SaveError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveError.swift; sourceTree = "<group>"; };
 		A111014020E8B8A4001EBEDE /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
@@ -236,7 +235,6 @@
 				A156AF8B2090606D0098BBDD /* Info.plist */,
 				A156AF882090606D0098BBDD /* Main.storyboard */,
 				A142C98120D67389002ED94F /* Models */,
-				A104782320E7273300E0930A /* Twig.entitlements */,
 				A142C98320D673B0002ED94F /* Views */,
 			);
 			path = Twig;
@@ -375,8 +373,11 @@
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 1000;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 0;
+							};
 							com.apple.Sandbox = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -685,7 +686,6 @@
 			baseConfigurationReference = B2BE6FC4D33EB0DD8E860B17 /* Pods-Twig.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Twig/Twig.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -712,7 +712,6 @@
 			baseConfigurationReference = DE61D6DEDFEA5C5AF04564BE /* Pods-Twig.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Twig/Twig.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
