@@ -52,7 +52,7 @@ class DocumentController: NSDocumentController {
   /// Try to open a markdown file given a URL.
   /// Accounts for both relative (to the currently open document) and absolute URL's
   public static func openMarkdownFile(withContentsOf url: URL) {
-    guard let urlString = url.absoluteString.decoded else { return }
+    guard let urlString = url.path.decoded else { return }
 
     // Case where absolute file exists
     if FileManager.default.fileExists(atPath: urlString) {
