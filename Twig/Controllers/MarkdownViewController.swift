@@ -310,4 +310,14 @@ extension MarkdownViewController {
     reloadUI()
   }
 
+  @IBAction func image(sender: NSMenuItem) {
+    markdownTextView.replace(left: "![", right: "]()")
+    reloadUI()
+  }
+
+  @IBAction func HTMLImage(sender: NSMenuItem) {
+    markdownTextView.replace(left: "<img src=\"", right: "\" width=\"\">")
+    reloadUI()
+  }
+
 }
