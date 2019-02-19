@@ -13,6 +13,9 @@ class PreviewViewController: NSViewController, WKNavigationDelegate {
 
   @IBOutlet weak var webPreview: WKWebView!
 
+  /// The current directory that external assets can load from
+  private var permissionDirectory: URL?
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -33,6 +36,32 @@ class PreviewViewController: NSViewController, WKNavigationDelegate {
         completion()
       }
     }
+  }
+
+  /// Set the content of the preview to a HTML string
+  public func setContent(with html: String) {
+    self.webPreview.loadHTMLString(html, baseURL: self.permissionDirectory ?? nil)
+  }
+
+  /// Set the permissions of the preview for a given file
+  public func setPermissions(for url: URL) {
+    let base = url.deletingLastPathComponent()
+
+    if base == self.permissionDirectory {
+      return
+    }
+
+    // Set permissions directory
+    self.permissionDirectory = base
+
+    // Load permissions HTML template to set read access
+    guard
+      let permissionsHTML = Bundle.main.path(forResource: "index", ofType: "html")
+    else { return }
+
+    let file = URL(fileURLWithPath: permissionsHTML)
+
+    self.webPreview.loadFileURL(file, allowingReadAccessTo: url)
   }
 
   // Open web links in browser, not webview
