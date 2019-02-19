@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5EC2EB6C996D63F9FA158160 /* Pods_Twig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66B7DAE689A6827E658233B /* Pods_Twig.framework */; };
 		A104782520E7338800E0930A /* FileSystemItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A104782420E7338800E0930A /* FileSystemItem.swift */; };
-		A10FEF4D221BC62300B4D977 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = A10FEF4C221BC62300B4D977 /* index.html */; };
 		A111013D20E85D9A001EBEDE /* SaveError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111013C20E85D9A001EBEDE /* SaveError.swift */; };
 		A111014120E8B8A4001EBEDE /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111014020E8B8A4001EBEDE /* SidebarView.swift */; };
 		A1150D2220E858E400536336 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1150D2120E858E400536336 /* String.swift */; };
@@ -69,7 +68,6 @@
 
 /* Begin PBXFileReference section */
 		A104782420E7338800E0930A /* FileSystemItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemItem.swift; sourceTree = "<group>"; };
-		A10FEF4C221BC62300B4D977 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		A111013C20E85D9A001EBEDE /* SaveError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveError.swift; sourceTree = "<group>"; };
 		A111014020E8B8A4001EBEDE /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		A1150D2120E858E400536336 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -282,7 +280,6 @@
 			children = (
 				A1FD269820932CDC004D1C95 /* highlight-js */,
 				A189EA732091E4E300DB0559 /* Markdown.css */,
-				A10FEF4C221BC62300B4D977 /* index.html */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -425,7 +422,6 @@
 				A156AF872090606C0098BBDD /* Assets.xcassets in Resources */,
 				A1FD269A20932CDD004D1C95 /* highlight-js in Resources */,
 				A156AF8A2090606D0098BBDD /* Main.storyboard in Resources */,
-				A10FEF4D221BC62300B4D977 /* index.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

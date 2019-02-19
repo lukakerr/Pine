@@ -45,8 +45,10 @@ class PreviewViewController: NSViewController, WKNavigationDelegate {
 
   /// Set the permissions of the preview for a given file
   public func setPermissions(for url: URL) {
-    let base = url.deletingLastPathComponent()
+    let base = url.deletingLastPathComponent().standardizedFileURL
 
+    // If same permissions directory return early,
+    // we don't want to load another request if we don't have to
     if base == self.permissionDirectory {
       return
     }
@@ -54,14 +56,7 @@ class PreviewViewController: NSViewController, WKNavigationDelegate {
     // Set permissions directory
     self.permissionDirectory = base
 
-    // Load permissions HTML template to set read access
-    guard
-      let permissionsHTML = Bundle.main.path(forResource: "index", ofType: "html")
-    else { return }
-
-    let file = URL(fileURLWithPath: permissionsHTML)
-
-    self.webPreview.loadFileURL(file, allowingReadAccessTo: url)
+    self.webPreview.load(URLRequest(url: url))
   }
 
   // Open web links in browser, not webview
