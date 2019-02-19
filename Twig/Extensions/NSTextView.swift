@@ -103,22 +103,52 @@ extension NSTextView {
     )
   }
 
-  /// Given a typed character, try to auto pair its match
+  /// Given a typed character, try to auto pair its match.
+  /// Don't auto pair when there are characters to the left or right
+  /// and when there is a text selection.
+  ///
+  /// Examples (| denotes cursor position):
+  /// - Pair: "|"
+  /// - Pair: "abc |"
+  /// - Pair: "abc | "
+  /// - No Pair: "abc| "
+  /// - No Pair: "abc |e"
   ///
   /// - Parameters:
   ///   - character: the character typed to match with
   public func pair(character char: Character) {
     let match = PAIRABLE_CHARACTERS[char]
 
-    let cursorPosition = self.selectedRanges[0].rangeValue.location
+    let range = self.selectedRange()
 
-    if cursorPosition > 0 {
+    // For a selection, we don't pair
+    if range.length != 0 {
+      return
+    }
+
+    let cursorPosition = range.location
+
+    let length = self.string.count
+
+    // If there exists a string
+    if length > 0 {
       let prevRange = NSRange(location: cursorPosition - 1, length: 1)
       let prevChar = (self.string as NSString).substring(with: prevRange)
 
       if !prevChar.isWhiteSpace {
         return
       }
+
+      // If there exists characters on the right hand side
+      if cursorPosition < length {
+        let nextRange = NSRange(location: cursorPosition, length: 1)
+        let nextChar = (self.string as NSString).substring(with: nextRange)
+
+        if !nextChar.isWhiteSpace {
+          return
+        }
+      }
+
     }
 
     self.replace(right: match)
