@@ -390,6 +390,13 @@
                                                 <action selector="toggleToolbarShown:" target="Ady-hI-5gd" id="BXY-wc-z0C"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="Customize Toolbar…" id="1UK-8n-QPP">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="runToolbarCustomizationPalette:" target="Ady-hI-5gd" id="pQI-g3-MTW"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="hB3-LF-h0Y"/>
                                         <menuItem title="Toggle Preview" keyEquivalent="\" id="rnJ-91-chb">
                                             <connections>
                                                 <action selector="togglePreviewWithSender:" target="Ady-hI-5gd" id="98T-ho-mLk"/>
@@ -400,22 +407,17 @@
                                                 <action selector="toggleEditorWithSender:" target="Ady-hI-5gd" id="uAz-YI-Rhz"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Hide Sidebar" keyEquivalent="l" id="fqn-9F-7fK">
+                                        <menuItem isSeparatorItem="YES" id="XLK-Kv-cZG"/>
+                                        <menuItem title="Show Reference" keyEquivalent="." id="rcM-IH-2cI">
                                             <connections>
-                                                <action selector="toggleSidebar:" target="Ady-hI-5gd" id="888-8e-YNx"/>
+                                                <action selector="toggleEditorWithSender:" target="Ady-hI-5gd" id="45C-AK-90N"/>
+                                                <segue destination="fGI-8B-6KU" kind="show" id="NYy-J2-kSV"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Customize Toolbar…" id="1UK-8n-QPP">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem isSeparatorItem="YES" id="eJp-vR-5Uv"/>
+                                        <menuItem title="Hide Sidebar" keyEquivalent="l" id="JSY-3K-bUZ">
                                             <connections>
-                                                <action selector="runToolbarCustomizationPalette:" target="Ady-hI-5gd" id="pQI-g3-MTW"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="hB3-LF-h0Y"/>
-                                        <menuItem title="Show Sidebar" keyEquivalent="s" id="kIP-vf-haE">
-                                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
-                                            <connections>
-                                                <action selector="toggleSourceList:" target="Ady-hI-5gd" id="iwa-gc-5KM"/>
+                                                <action selector="toggleSidebar:" target="Ady-hI-5gd" id="DBZ-vm-TC3"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Enter Full Screen" keyEquivalent="f" id="4J7-dP-txa">
@@ -570,7 +572,7 @@
         <!--Window Controller-->
         <scene sceneID="UqC-3D-TJP">
             <objects>
-                <windowController showSeguePresentationStyle="single" id="Ul4-m2-Yud" customClass="PreferencesWindowController" customModule="Twig" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController showSeguePresentationStyle="single" id="Ul4-m2-Yud" customClass="ModalWindowController" customModule="Twig" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="alertPanel" frameAutosaveName="" titlebarAppearsTransparent="YES" id="GdU-QC-Lde">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -586,7 +588,59 @@
                 </windowController>
                 <customObject id="eVw-SX-Kgc" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="601" y="-319"/>
+            <point key="canvasLocation" x="666" y="-319"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="JHs-jo-5DT">
+            <objects>
+                <windowController id="fGI-8B-6KU" customClass="ModalWindowController" customModule="Twig" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Markdown Reference" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="alertPanel" frameAutosaveName="" titlebarAppearsTransparent="YES" id="4U8-ni-oT9">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="294" y="362" width="530" height="640"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+                        <connections>
+                            <outlet property="delegate" destination="fGI-8B-6KU" id="Xzy-Rf-fp6"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="TGo-0P-kQg" kind="relationship" relationship="window.shadowedContentViewController" id="SFP-Zp-36H"/>
+                    </connections>
+                </windowController>
+                <customObject id="9ey-ry-gtI" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="823" y="371"/>
+        </scene>
+        <!--Reference View Controller-->
+        <scene sceneID="7IY-2o-o0U">
+            <objects>
+                <viewController id="TGo-0P-kQg" customClass="ReferenceViewController" customModule="Twig" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="Uxb-h9-lLi">
+                        <rect key="frame" x="0.0" y="0.0" width="530" height="640"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l3m-ez-LJY">
+                                <rect key="frame" x="0.0" y="0.0" width="530" height="640"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences" javaScriptCanOpenWindowsAutomatically="NO" javaScriptEnabled="NO"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="l3m-ez-LJY" secondAttribute="bottom" id="MS3-YL-sek"/>
+                            <constraint firstAttribute="trailing" secondItem="l3m-ez-LJY" secondAttribute="trailing" id="QcB-yx-QOa"/>
+                            <constraint firstItem="l3m-ez-LJY" firstAttribute="top" secondItem="Uxb-h9-lLi" secondAttribute="top" id="fct-jp-hoF"/>
+                            <constraint firstItem="l3m-ez-LJY" firstAttribute="leading" secondItem="Uxb-h9-lLi" secondAttribute="leading" id="jYK-nz-M3y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="l3m-ez-LJY" id="5Zg-j9-RNG"/>
+                    </connections>
+                </viewController>
+                <customObject id="ve8-Pm-uWM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1472" y="371"/>
         </scene>
         <!--Preferences View Controller-->
         <scene sceneID="fpW-ne-h2d">
@@ -891,7 +945,7 @@
                 <customObject id="yyx-8C-T1R" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="wKS-Fq-Red"/>
             </objects>
-            <point key="canvasLocation" x="1261" y="-261.5"/>
+            <point key="canvasLocation" x="1261" y="-325"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">

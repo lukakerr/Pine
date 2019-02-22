@@ -1,5 +1,5 @@
 //
-//  PreferencesWindowController.swift
+//  ModalWindowController.swift
 //  Twig
 //
 //  Created by Luka Kerr on 26/4/18.
@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class PreferencesWindowController: NSWindowController, NSWindowDelegate {
+class ModalWindowController: NSWindowController, NSWindowDelegate {
 
   override func windowDidLoad() {
     super.windowDidLoad()

@@ -1,0 +1,106 @@
+<style>
+  h3:not(:first-of-type) {
+    margin-top: -25px !important;
+  }
+</style>
+
+<h1>Markdown Reference</h1>
+<h3>Headers</h3>
+<pre>
+<code class="language-markdown hljs"><span class="hljs-section"># H1</span>
+<span class="hljs-section">## H2</span>
+<span class="hljs-section">### H3</span>
+<span class="hljs-section">#### H4</span>
+<span class="hljs-section">##### H5</span>
+<span class="hljs-section">###### H6</span>
+</code>
+</pre>
+
+<h3>Text</h3>
+<pre>
+<code class="language-markdown hljs"><span class="hljs-emphasis">_italic_</span> or <span class="hljs-emphasis">*italic*</span>
+
+<span class="hljs-strong">**bold**</span> or <span class="hljs-strong">__bold__</span>
+
+~~strikethrough~~
+</code>
+</pre>
+
+<h3>Blockquotes</h3>
+<pre>
+<code class="language-markdown hljs"><span class="hljs-quote">&gt; This is a blockquote</span>
+</code>
+</pre>
+
+<h3>Horizontal Rule</h3>
+<pre>
+<code class="language-markdown hljs">---
+
+<span class="hljs-emphasis">***</span>
+
+<span class="hljs-emphasis">___</span>
+</code>
+</pre>
+
+<h3>Lists</h3>
+<pre>
+<code class="language-markdown hljs"><span class="hljs-bullet">1. </span>Ordered list
+<span class="hljs-bullet">2. </span>...
+
+<span class="hljs-bullet">- </span>Unordered list
+<span class="hljs-bullet">* </span>With *
+<span class="hljs-bullet">+ </span>With +
+</code>
+</pre>
+
+<h3>Links</h3>
+<pre>
+<code class="language-markdown hljs">[<span class="hljs-string">Inine</span>](<span class="hljs-link">https://a.com</span>)
+
+[<span class="hljs-string">Inline with title</span>](<span class="hljs-link">https://a.com "A title"</span>)
+
+[<span class="hljs-string">Reference</span>][<span class="hljs-symbol">1</span>]
+
+[<span class="hljs-string">Link to file</span>](<span class="hljs-link">./Docs/SETUP.md</span>)
+
+[<span class="hljs-symbol">1</span>]: <span class="hljs-link">https://a.com</span>
+</code>
+</pre>
+
+<h3>Images</h3>
+<pre>
+<code class="language-markdown hljs">![<span class="hljs-string">Inline</span>](<span class="hljs-link">https://a.com/logo.png</span>)
+
+![<span class="hljs-string">Reference</span>][<span class="hljs-symbol">logo</span>]
+
+[<span class="hljs-symbol">logo</span>]: <span class="hljs-link">https://a.com/logo.png</span>
+</code>
+</pre>
+
+<h3>Code</h3>
+<pre>
+<code class="language-markdown hljs"><span class="hljs-code">`Inline code`</span>
+
+<span class="hljs-code">```javascript
+const x = 5;
+const plusTwo = a =&gt; a + 2;
+```</span>
+</code>
+</pre>
+
+<h3>Tables</h3>
+<pre>
+<code class="language-markdown hljs">| Column 1      | Column 2      |  Column 3 |
+| ------------- |:-------------:| ---------:|
+| Col 3 is      | right-aligned | $1600     |
+| Col 2 is      | centered      |   $12     |
+| Tables        | are neat      |    $1     |
+</code>
+</pre>
+
+<h3>HTML</h3>
+<pre>
+<code class="language-markdown hljs"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://a.com"</span>&gt;</span></span>Link<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span>
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://a.com/logo.png"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"100"</span>&gt;</span></span>
+</code>
+</pre>
