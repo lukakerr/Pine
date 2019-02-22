@@ -128,6 +128,10 @@ extension NSTextView {
   public func pair(character char: Character) {
     let match = PAIRABLE_CHARACTERS[char]
 
+    if match == nil {
+      return
+    }
+
     let range = self.selectedRange()
 
     // For a selection, we don't pair
@@ -140,11 +144,13 @@ extension NSTextView {
 
     // If there exists a string
     if length > 0 {
-      let prevRange = NSRange(location: cursorLocation - 1, length: 1)
-      let prevChar = str.substring(with: prevRange)
+      if cursorLocation > 0 {
+        let prevRange = NSRange(location: cursorLocation - 1, length: 1)
+        let prevChar = str.substring(with: prevRange)
 
-      if !prevChar.isWhiteSpace {
-        return
+        if !prevChar.isWhiteSpace {
+          return
+        }
       }
 
       // If there exists characters on the right hand side
