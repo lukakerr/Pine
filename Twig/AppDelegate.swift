@@ -26,6 +26,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     super.init()
   }
 
+  func applicationDidFinishLaunching(_ notification: Notification) {
+    if #available(OSX 10.12.2, *) {
+      NSApp.isAutomaticCustomizeTouchBarMenuItemEnabled = true
+    }
+  }
+
   func applicationShouldOpenUntitledFile(_ sender: NSApplication) -> Bool {
     return preferences.openNewDocumentOnStartup
   }

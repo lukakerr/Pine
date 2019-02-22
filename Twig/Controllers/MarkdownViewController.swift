@@ -123,6 +123,10 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
     markdownTextView.isVerticallyResizable = true
     markdownTextView.isHorizontallyResizable = false
     markdownTextView.textContainerInset = NSSize(width: 10.0, height: 10.0)
+
+    if #available(OSX 10.12.2, *) {
+      markdownTextView.touchBar = self.makeTouchBar()
+    }
   }
 
   /// Update any UI related components
@@ -318,6 +322,75 @@ extension MarkdownViewController {
   @IBAction func HTMLImage(sender: NSMenuItem) {
     markdownTextView.replace(left: "<img src=\"", right: "\" width=\"\">")
     reloadUI()
+  }
+
+}
+
+@available(OSX 10.12.2, *)
+extension MarkdownViewController: NSTouchBarDelegate {
+
+  override func makeTouchBar() -> NSTouchBar? {
+    let touchBar = NSTouchBar()
+
+    let identifiers: [NSTouchBarItem.Identifier] = [.h1, .h2, .h3, .bold, .italic, .code, .math, .image]
+
+    touchBar.delegate = self
+    touchBar.customizationIdentifier = .editorBar
+    touchBar.defaultItemIdentifiers = identifiers
+    touchBar.customizationAllowedItemIdentifiers = identifiers
+
+    return touchBar
+  }
+
+  func touchBar(_ touchBar: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItem.Identifier) -> NSTouchBarItem? {
+    let item = NSCustomTouchBarItem(identifier: identifier)
+
+    switch identifier {
+    case .h1:
+      item.view = NSButton(title: "H1", target: self, action: #selector(h1))
+      item.customizationLabel = "Heading 1"
+      return item
+
+    case .h2:
+      item.view = NSButton(title: "H2", target: self, action: #selector(h2))
+      item.customizationLabel = "Heading 2"
+      return item
+
+    case .h3:
+      item.view = NSButton(title: "H3", target: self, action: #selector(h3))
+      item.customizationLabel = "Heading 3"
+      return item
+
+    case .bold:
+      guard let image = NSImage(named: NSImage.touchBarTextBoldTemplateName) else { return nil }
+      item.view = NSButton(image: image, target: self, action: #selector(bold))
+      item.customizationLabel = "Bold"
+      return item
+
+    case .italic:
+      guard let image = NSImage(named: NSImage.touchBarTextItalicTemplateName) else { return nil }
+      item.view = NSButton(image: image, target: self, action: #selector(italic))
+      item.customizationLabel = "Italic"
+      return item
+
+    case .code:
+      item.view = NSButton(title: "<>", target: self, action: #selector(codeBlock))
+      item.customizationLabel = "Code Block"
+      return item
+
+    case .math:
+      item.view = NSButton(title: "$$", target: self, action: #selector(mathBlock))
+      item.customizationLabel = "Math Block"
+      return item
+
+    case .image:
+      item.view = NSButton(title: "<img>", target: self, action: #selector(image))
+      item.customizationLabel = "Image"
+      return item
+
+    default:
+      return nil
+    }
   }
 
 }
