@@ -27,43 +27,43 @@ class Preferences {
   static let shared = Preferences()
 
   private init() {
-    if defaults.object(forKey: PreferencesKeys.showPreviewOnStartup) != nil {
+    if exists(PreferencesKeys.showPreviewOnStartup) {
       showPreviewOnStartup = defaults.bool(forKey: PreferencesKeys.showPreviewOnStartup)
     }
 
-    if defaults.object(forKey: PreferencesKeys.openNewDocumentOnStartup) != nil {
+    if exists(PreferencesKeys.openNewDocumentOnStartup) {
       openNewDocumentOnStartup = defaults.bool(forKey: PreferencesKeys.openNewDocumentOnStartup)
     }
 
-    if defaults.object(forKey: PreferencesKeys.autosaveDocument) != nil {
+    if exists(PreferencesKeys.autosaveDocument) {
       autosaveDocument = defaults.bool(forKey: PreferencesKeys.autosaveDocument)
     }
 
-    if defaults.object(forKey: PreferencesKeys.verticalSplitView) != nil {
+    if exists(PreferencesKeys.verticalSplitView) {
       verticalSplitView = defaults.bool(forKey: PreferencesKeys.verticalSplitView)
     }
 
-    if defaults.object(forKey: PreferencesKeys.modernTitlebar) != nil {
+    if exists(PreferencesKeys.modernTitlebar) {
       modernTitlebar = defaults.bool(forKey: PreferencesKeys.modernTitlebar)
     }
 
-    if defaults.object(forKey: PreferencesKeys.useSystemAppearance) != nil {
+    if exists(PreferencesKeys.useSystemAppearance) {
       useSystemAppearance = defaults.bool(forKey: PreferencesKeys.useSystemAppearance)
     }
 
-    if defaults.object(forKey: PreferencesKeys.showSidebar) != nil {
+    if exists(PreferencesKeys.showSidebar) {
       showSidebar = defaults.bool(forKey: PreferencesKeys.showSidebar)
     }
 
-    if defaults.object(forKey: PreferencesKeys.spellcheckEnabled) != nil {
+    if exists(PreferencesKeys.spellcheckEnabled) {
       spellcheckEnabled = defaults.bool(forKey: PreferencesKeys.spellcheckEnabled)
     }
 
-    if defaults.object(forKey: PreferencesKeys.autoPairSyntax) != nil {
+    if exists(PreferencesKeys.autoPairSyntax) {
       autoPairSyntax = defaults.bool(forKey: PreferencesKeys.autoPairSyntax)
     }
 
-    if defaults.object(forKey: PreferencesKeys.useThemeColorForSidebar) != nil {
+    if exists(PreferencesKeys.useThemeColorForSidebar) {
       useThemeColorForSidebar = defaults.bool(forKey: PreferencesKeys.useThemeColorForSidebar)
     }
 
@@ -157,6 +157,10 @@ class Preferences {
 
   fileprivate func setDefaults(key: String, _ val: Any) {
     defaults.setValue(val, forKey: key)
+  }
+
+  fileprivate func exists(_ key: String) -> Bool {
+    return UserDefaults.standard.object(forKey: key) != nil
   }
 
 }
