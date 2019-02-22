@@ -1,5 +1,3 @@
-# Markdown Reference
-
 ### Headers
 
 ```markdown
