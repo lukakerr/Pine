@@ -8,6 +8,8 @@
 
 import Cocoa
 
+let AUTOSAVE_NAME = "TwigWindow"
+
 class WindowController: NSWindowController, NSWindowDelegate {
 
   /// The split view controller containing the SidebarViewController and editor split view controller
@@ -32,14 +34,15 @@ class WindowController: NSWindowController, NSWindowDelegate {
   override func windowDidLoad() {
     super.windowDidLoad()
 
-    // set word count label in titlebar
+    self.window?.setFrameAutosaveName(AUTOSAVE_NAME)
+
+    // Set word count label in titlebar
     guard let titlebarController = storyboard?.instantiateController(
       withIdentifier: "titlebarViewController"
     ) as? NSTitlebarAccessoryViewController else { return }
 
     titlebarController.layoutAttribute = .right
     window?.addTitlebarAccessoryViewController(titlebarController)
-    showWindow(window)
   }
 
   public func syncWindowSidebars() {
