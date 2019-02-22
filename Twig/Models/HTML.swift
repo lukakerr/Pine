@@ -43,7 +43,7 @@ class HTML {
           p, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, table, tr { color: \(theme.text.hex); }
           table tr { background: \(theme.background.hex); }
           table tr:nth-child(2n) { background: \(theme.background.darker.hex); }
-          table tr th, table tr td { border-color: \(theme.background.lighter.hex) }
+          table tr th, table tr td { border-color: \(theme.code.hex) }
         </style>
         <script>\(js)</script>
         <script>hljs.initHighlightingOnLoad();</script>

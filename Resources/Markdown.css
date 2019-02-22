@@ -9,6 +9,11 @@ body {
 
 a {
   color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -46,7 +51,7 @@ h5, h6 {
   font-size: 14px;
 }
 
-p, blockquote, ul, ol, dl, li, table, pre {
+p, blockquote, ul, ol, dl, table, pre {
   margin: 15px 0;
 }
 
@@ -165,7 +170,6 @@ table tr th {
 
 table tr td {
   border: 1px solid #dfe2e5;
-  text-align: left;
   margin: 0;
   padding: 6px 13px;
 }
