@@ -1,6 +1,13 @@
 # Changelog
 
-## [Unreleased]
+[Unreleased]
+### New Features
+
+### Fixes
+
+### Other
+
+## [0.0.6] - 2019-02-24
 ### New Features
 - Add a markdown reference window accessed by `⌘ .`
 - Save window size and position across launches

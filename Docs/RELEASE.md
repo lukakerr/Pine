@@ -32,9 +32,8 @@ Let `x.x.x` represent the version number.
   - Upload Twig.x.x.x.zip
 10. Click 'Publish release'
 11. Download the Twig.x.x.x.zip from the newly created release
-12. Run `cd "$(brew --repository)"/Library/Taps/Homebrew/homebrew-cask`
+12. Open `lukakerr/homebrew-casks` repository
 13. Create a new branch if one already doesn't exist
 14. Run `shasum -a 256  ~/Downloads/Twig-x.x.x.zip` and copy the SHA-256 checksum
 15. Run `open Casks/twig.rb` and update the cask with the new version and checksum
 16. Create a git commit with the message `Update Twig to x.x.x` and push to remote
-17. Create a pull request at [Homebrew/homebrew-cask](https://github.com/Homebrew/homebrew-cask/pulls)
