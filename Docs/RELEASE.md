@@ -29,7 +29,7 @@ Let `x.x.x` represent the version number.
 
     - ...
     ```
-    - Upload Twig.x.x.x.zip
+  - Upload Twig.x.x.x.zip
 10. Click 'Publish release'
 11. Download the Twig.x.x.x.zip from the newly created release
 12. Run `cd "$(brew --repository)"/Library/Taps/Homebrew/homebrew-cask`

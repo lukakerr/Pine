@@ -14,10 +14,6 @@ Twig is lightweight macOS markdown editor. It's currently a work in progress.
 
 It is a [document based application](https://developer.apple.com/document-based-apps), and aims to follow Apple's [Human Interface Guidelines](https://developer.apple.com/macos/human-interface-guidelines)
 
-### Contributing
-
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for details on how to contribute.
-
 ### Installing
 
 Twig is still in its very early stages, so if you encounter any bugs or have a feature request please raise an issue!
@@ -56,33 +52,41 @@ $ cd twig
 $ open Twig.xcworkspace
 ```
 
-### Features/Todo
+### Contributing
 
-| Feature                                    | Completed?                               |
-| ------------------------------------------ | ---------------------------------------- |
-| Themeable                                  | **Yes**                                  |
-| Math support (LaTeX subset)                | **Yes**                                  |
-| Github flavored markdown                   | **Yes**                                  |
-| Exporting to PDF, HTML, TXT, RST, RTF      | Partly - [contribute](./CONTRIBUTING.md) |
-| Toggleable split view                      | **Yes**                                  |
-| Full screen support                        | **Yes**                                  |
-| Tab support                                | **Yes**                                  |
-| Folder support                             | **Yes**                                  |
-| Horizontal and vertical split view         | **Yes**                                  |
-| Ability to create custom `.css` themes     | **Yes**                                  |
-| Sparkle auto updating framework            | No - [contribute](./CONTRIBUTING.md)     |
-| Ability to share `.md` files               | **Yes**                                  |
-| Syntax highlighting for source and preview | **Yes**                                  |
-| Autosaving                                 | **Yes**                                  |
-| Version control and history recovery       | **Yes**                                  |
-| Markdown shortcuts                         | **Yes**                                  |
-| Auto pair markdown tags                    | **Yes**                                  |
-| Custom font                                | **Yes**                                  |
-| Ability to edit preview `.css`             | No - [contribute](./CONTRIBUTING.md)     |
-| Word count                                 | **Yes**                                  |
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for details on how to contribute.
+
+### Features
+
+- Themeable
+- Math support (LaTeX subset)
+- GitHub Flavored Markdown
+- Local image support
+- Toggleable split view (horizontal and vertical split)
+- Full screen support
+- Tab support
+- Folder support
+- Ability to create custom `.css` themes
+- Ability to share `.md` files
+- Syntax highlighting for source and preview
+- Autosaving
+- Version control and history recovery
+- Markdown shortcuts (keyboard and Touch Bar shortcuts)
+- Auto pair markdown tags
+- Custom font
+- Word count
+
+### Todo
+
+- Add more exporting formats (RST, RTF, TXT)
+- Add ability to edit preview `.css`
+- Improve sidebar
+  - Folder watching
+  - More actions in contextual menu
 
 ### Screenshots
 
 <p align="center">
-  <img src="https://i.imgur.com/wkB9u8W.png">
+  <img src="https://i.imgur.com/YPyYQQH.png">
+  <img src="https://i.imgur.com/rEPH0oR.png">
 </p>
