@@ -14,12 +14,11 @@ let MARKDOWN_SYNTAX = "Markdown"
 
 class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDelegate {
 
-  private var scrollView: NSScrollView!
-  private var markdownTextView: NSTextView!
-  private var layoutManager: NSLayoutManager!
-
+  public var markdownTextView: NSTextView!
   public var textStorage: CodeAttributedString!
 
+  private var scrollView: NSScrollView!
+  private var layoutManager: NSLayoutManager!
   private var debouncedGeneratePreview: Debouncer!
 
   /// The view's window controller
@@ -215,32 +214,6 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
         }
       }
     }
-  }
-
-}
-
-extension MarkdownViewController {
-
-  // MARK: - First responder methods for exporting from WKWebView
-
-  @IBAction func exportPDF(sender: NSMenuItem) {
-    if let pvc = previewViewController {
-      PDFExporter.export(from: pvc.webPreview)
-    }
-  }
-
-  @IBAction func exportHTML(sender: NSMenuItem) {
-    if let pvc = previewViewController {
-      HTMLExporter.export(from: pvc.webPreview)
-    }
-  }
-
-  @IBAction func exportLatex(sender: NSMenuItem) {
-    LatexExporter.export(from: markdownTextView)
-  }
-
-  @IBAction func exportXML(sender: NSMenuItem) {
-    XMLExporter.export(from: markdownTextView)
   }
 
 }

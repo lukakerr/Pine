@@ -137,6 +137,12 @@
                                                             <action selector="exportXMLWithSender:" target="Ady-hI-5gd" id="HCs-Pa-Bc4"/>
                                                         </connections>
                                                     </menuItem>
+                                                    <menuItem title="TXT" id="DOc-kh-Wep">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="exportTXTWithSender:" target="Ady-hI-5gd" id="vnd-uV-0AB"/>
+                                                        </connections>
+                                                    </menuItem>
                                                     <menuItem title="LaTeX" id="EQi-dn-6zG">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>

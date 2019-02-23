@@ -27,6 +27,16 @@ class WindowController: NSWindowController, NSWindowDelegate {
     return mainSplitViewController?.splitViewItems.first?.viewController as? SidebarViewController
   }
 
+  /// The markdown view controller instance for this window
+  private var markdownViewController: MarkdownViewController? {
+    return editorSplitViewController?.splitViewItems.first?.viewController as? MarkdownViewController
+  }
+
+  /// The preview view controller instance for this window
+  private var previewViewController: PreviewViewController? {
+    return editorSplitViewController?.splitViewItems.last?.viewController as? PreviewViewController
+  }
+
   override var acceptsFirstResponder: Bool {
     return true
   }
@@ -119,6 +129,32 @@ class WindowController: NSWindowController, NSWindowDelegate {
 
   private func getVisibleWindows() -> [NSWindow] {
     return NSApplication.shared.windows.filter { $0.isVisible }
+  }
+
+}
+
+extension WindowController {
+
+  // MARK: - First responder methods for exporting
+
+  @IBAction func exportPDF(sender: NSMenuItem) {
+    PDFExporter.export(from: previewViewController?.webPreview)
+  }
+
+  @IBAction func exportHTML(sender: NSMenuItem) {
+    HTMLExporter.export(from: previewViewController?.webPreview)
+  }
+
+  @IBAction func exportLatex(sender: NSMenuItem) {
+    LatexExporter.export(from: markdownViewController?.markdownTextView)
+  }
+
+  @IBAction func exportXML(sender: NSMenuItem) {
+    XMLExporter.export(from: markdownViewController?.markdownTextView)
+  }
+
+  @IBAction func exportTXT(sender: NSMenuItem) {
+    TXTExporter.export(from: markdownViewController?.markdownTextView)
   }
 
 }

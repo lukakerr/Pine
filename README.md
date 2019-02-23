@@ -78,7 +78,6 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for details on how to contribute.
 
 ### Todo
 
-- Add more exporting formats (RST, RTF, TXT)
 - Add ability to edit preview `.css`
 - Improve sidebar
   - Folder watching

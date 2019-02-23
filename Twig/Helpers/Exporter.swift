@@ -132,3 +132,23 @@ struct XMLExporter: Exportable {
     } catch {}
   }
 }
+
+struct TXTExporter: Exportable {
+  static var filetype = "txt"
+
+  static func export<T>(from view: T) {
+    // We expect the view to be a text view
+    let markdownTextView = view as! NSTextView
+
+    let txt = markdownTextView.string
+
+    guard let data = txt.data(using: .utf8) else { return }
+
+    let fileSaver = FileSaver(data: data, filetype: filetype)
+    do {
+      try fileSaver.save()
+    } catch let error as SaveError {
+      Alert.display(error.description)
+    } catch {}
+  }
+}
