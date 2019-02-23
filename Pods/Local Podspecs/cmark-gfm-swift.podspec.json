@@ -16,7 +16,7 @@
   },
   "platforms": {
     "ios": "8.0",
-    "osx": "10.12"
+    "osx": "10.10"
   },
   "source_files": "Source/**/*",
   "public_header_files": "Source/*.h",

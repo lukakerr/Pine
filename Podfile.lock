@@ -14,16 +14,16 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   cmark-gfm-swift:
-    :commit: ab62c87f1afecb05e045fe59a98f9697e3fb17f9
+    :commit: 46b82193740ba8779443f696171a7e97f25ef0a7
     :git: https://github.com/lukakerr/cmark-gfm-swift.git
   Highlightr:
     :commit: bd57404c28527b4d40ee15ce9f61fad734ad50a1
     :git: https://github.com/raspu/Highlightr.git
 
 SPEC CHECKSUMS:
-  cmark-gfm-swift: 2d9490a9e562aca13fd95ffbb781ce4a87d9ce27
+  cmark-gfm-swift: 9915dfe0cd7feda740ab01fc2a1882989b6d5128
   Highlightr: 8162b4faba588963fb8852390ea9a78f166a6b99
 
 PODFILE CHECKSUM: 2c99696728f270e3b87440c948c2a2549e692d9a
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.5.0

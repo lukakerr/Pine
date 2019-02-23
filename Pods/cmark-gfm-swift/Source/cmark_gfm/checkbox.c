@@ -70,7 +70,7 @@ static cmark_node *match(cmark_syntax_extension *self, cmark_parser *parser,
     checkbox->checked = character != ' ';
     checkbox->location = parent->origin_offset - leftBracket;
     checkbox->length = len;
-  
+
     // use a custom checkbox item node
     parent->parent->type = CMARK_NODE_CHECKBOX_ITEM;
 
@@ -94,7 +94,7 @@ static void html_render(cmark_syntax_extension *extension,
     }
 
     cmark_strbuf *html = renderer->html;
-    cmark_strbuf_puts(html, "<input type=\"checkbox\" ");
+    cmark_strbuf_puts(html, "<input type=\"checkbox\" disabled ");
     if (checked == 1) {
         cmark_strbuf_puts(html, "checked ");
     }
