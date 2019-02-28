@@ -1,5 +1,5 @@
 //
-//  WindowController.swift
+//  TwigWindowController.swift
 //  Twig
 //
 //  Created by Luka Kerr on 25/4/18.
@@ -10,7 +10,7 @@ import Cocoa
 
 let AUTOSAVE_NAME = "TwigWindow"
 
-class WindowController: NSWindowController, NSWindowDelegate {
+class TwigWindowController: NSWindowController, NSWindowDelegate {
 
   /// The split view controller containing the SidebarViewController and editor split view controller
   private var mainSplitViewController: NSSplitViewController? {
@@ -59,7 +59,7 @@ class WindowController: NSWindowController, NSWindowDelegate {
     // Hacky way to get all sidebars and syncronize the sidebar data
     // Map over all windows (tabs) and find the sidebar
     getVisibleWindows().forEach {
-      ($0.windowController as? WindowController)?.sidebarViewController?.updateDocuments()
+      ($0.windowController as? TwigWindowController)?.sidebarViewController?.updateDocuments()
     }
   }
 
@@ -118,7 +118,7 @@ class WindowController: NSWindowController, NSWindowDelegate {
   /// Returns the current window's document path
   public static func getCurrentDocument() -> String? {
     guard
-      let window = NSApp.keyWindow?.windowController as? WindowController,
+      let window = NSApp.keyWindow?.windowController as? TwigWindowController,
       let doc = window.document as? Document
     else { return nil }
 
@@ -133,7 +133,7 @@ class WindowController: NSWindowController, NSWindowDelegate {
 
 }
 
-extension WindowController {
+extension TwigWindowController {
 
   // MARK: - First responder methods for exporting
 

@@ -22,8 +22,8 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
   private var debouncedGeneratePreview: Debouncer!
 
   /// The view's window controller
-  private var windowController: WindowController? {
-    return view.window?.windowController as? WindowController
+  private var windowController: TwigWindowController? {
+    return view.window?.windowController as? TwigWindowController
   }
 
   /// The split view controller holding this markdown view controller

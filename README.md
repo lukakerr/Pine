@@ -88,5 +88,5 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for details on how to contribute.
 
 <p align="center">
   <img src="https://i.imgur.com/YPyYQQH.png">
-  <img src="https://i.imgur.com/rEPH0oR.png">
+  <img src="https://i.imgur.com/5LQ1Ll4.png">
 </p>

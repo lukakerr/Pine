@@ -10,8 +10,8 @@ import Cocoa
 
 class DocumentController: NSDocumentController {
 
-  private static func getCurrentWindowController() -> WindowController? {
-    return NSApp.keyWindow?.windowController as? WindowController
+  private static func getCurrentWindowController() -> TwigWindowController? {
+    return NSApp.keyWindow?.windowController as? TwigWindowController
   }
 
   override func openDocument(withContentsOf url: URL,
@@ -69,7 +69,7 @@ class DocumentController: NSDocumentController {
     }
 
     guard
-      let currentDocument = WindowController.getCurrentDocument(),
+      let currentDocument = TwigWindowController.getCurrentDocument(),
       let currentPath = URL(string: currentDocument)?.deletingLastPathComponent()
     else { return }
 

@@ -22,6 +22,7 @@ class SidebarView: NSOutlineView {
         btnView.alternateImage?.size = NSSize(width: 14.0, height: 14.0)
       }
     }
+
     return view
   }
 

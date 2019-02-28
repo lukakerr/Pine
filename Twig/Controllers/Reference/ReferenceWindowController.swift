@@ -1,5 +1,5 @@
 //
-//  ModalWindowController.swift
+//  ReferenceWindowController.swift
 //  Twig
 //
 //  Created by Luka Kerr on 26/4/18.
@@ -8,17 +8,18 @@
 
 import Cocoa
 
-class ModalWindowController: NSWindowController, NSWindowDelegate {
+let REFERENCE_AUTOSAVE_NAME = "ReferenceWindow"
+
+class ReferenceWindowController: NSWindowController, NSWindowDelegate {
 
   override func windowDidLoad() {
     super.windowDidLoad()
 
     updateUI()
 
-    NotificationCenter.receive(.preferencesChanged, instance: self, selector: #selector(updateUI))
+    self.window?.setFrameAutosaveName(REFERENCE_AUTOSAVE_NAME)
 
-    window?.center()
-    window?.makeKeyAndOrderFront(nil)
+    NotificationCenter.receive(.preferencesChanged, instance: self, selector: #selector(updateUI))
   }
 
   @objc private func updateUI() {
@@ -31,7 +32,7 @@ class ModalWindowController: NSWindowController, NSWindowDelegate {
     if theme.background.isDark {
       window?.appearance = NSAppearance(named: .dark)
     } else {
-      window?.appearance = NSAppearance(named: .aqua)
+      window?.appearance = NSAppearance(named: .light)
     }
   }
 

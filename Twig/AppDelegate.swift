@@ -14,8 +14,8 @@ let defaults = UserDefaults.standard
 class AppDelegate: NSObject, NSApplicationDelegate {
 
   /// The key window's `WindowController` instance
-  private var keyWindowController: WindowController? {
-    return NSApp.keyWindow?.windowController as? WindowController
+  private var keyWindowController: TwigWindowController? {
+    return NSApp.keyWindow?.windowController as? TwigWindowController
   }
 
   override init() {

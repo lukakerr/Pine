@@ -26,8 +26,8 @@ class SidebarViewController: NSViewController {
   }
 
   /// The sidebar view's window controller
-  private var windowController: WindowController? {
-    return view.window?.windowController as? WindowController
+  private var windowController: TwigWindowController? {
+    return view.window?.windowController as? TwigWindowController
   }
 
   override func viewWillAppear() {
@@ -155,7 +155,7 @@ class SidebarViewController: NSViewController {
 
   /// Set each row's `isSelected` property based on if it is the current open document
   private func syncSelectedRows() {
-    guard let docPath = WindowController.getCurrentDocument() else { return }
+    guard let docPath = TwigWindowController.getCurrentDocument() else { return }
 
     for row in getRows() {
       guard
@@ -230,7 +230,7 @@ extension SidebarViewController: NSOutlineViewDataSource {
   func outlineViewSelectionDidChange(_ notification: Notification) {
     guard
       let doc = sidebar.item(atRow: sidebar.selectedRow) as? FileSystemItem,
-      let window = view.window?.windowController as? WindowController
+      let window = view.window?.windowController as? TwigWindowController
     else { return }
 
     setRowColour(sidebar)
@@ -266,7 +266,7 @@ extension SidebarViewController: NSOutlineViewDataSource {
   func outlineView(_ outlineView: NSOutlineView, didAdd rowView: NSTableRowView, forRow row: Int) {
     rowView.selectionHighlightStyle = .none
 
-    guard let docPath = WindowController.getCurrentDocument() else { return }
+    guard let docPath = TwigWindowController.getCurrentDocument() else { return }
 
     for (index, item) in items.enumerated() where index == row && item.fullPath == docPath {
         rowView.isSelected = true

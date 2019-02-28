@@ -14,6 +14,7 @@ extension NSAppearance.Name {
     if #available(OSX 10.14, *) {
       return .darkAqua
     }
+
     return .vibrantDark
   }
 

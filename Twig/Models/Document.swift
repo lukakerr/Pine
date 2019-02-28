@@ -48,7 +48,7 @@ class Document: NSDocument {
     let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
     let windowController = storyboard.instantiateController(
       withIdentifier: NSStoryboard.SceneIdentifier("Document Window Controller")
-    ) as! NSWindowController
+    ) as! TwigWindowController
     self.markdownVC = windowController.contentViewController?.children.last?.children.first as? MarkdownViewController
     self.addWindowController(windowController)
     self.setContents()
@@ -60,9 +60,7 @@ class Document: NSDocument {
       openDocuments.addDocument(newItem)
     }
 
-    if let wc = windowController as? WindowController {
-      wc.syncWindowSidebars()
-    }
+    windowController.syncWindowSidebars()
   }
 
   // Returns data used to save the file

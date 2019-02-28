@@ -9,16 +9,18 @@
 /* Begin PBXBuildFile section */
 		5EC2EB6C996D63F9FA158160 /* Pods_Twig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66B7DAE689A6827E658233B /* Pods_Twig.framework */; };
 		A104782520E7338800E0930A /* FileSystemItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A104782420E7338800E0930A /* FileSystemItem.swift */; };
+		A10B86DD2227BB3E000656DD /* PreferencesSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B86DC2227BB3E000656DD /* PreferencesSplitViewController.swift */; };
+		A10B86DF2227BB6E000656DD /* PreferencesSidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B86DE2227BB6E000656DD /* PreferencesSidebarViewController.swift */; };
+		A10B86E12227BB8F000656DD /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B86E02227BB8F000656DD /* PreferencesViewController.swift */; };
 		A111013D20E85D9A001EBEDE /* SaveError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111013C20E85D9A001EBEDE /* SaveError.swift */; };
 		A111014120E8B8A4001EBEDE /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111014020E8B8A4001EBEDE /* SidebarView.swift */; };
 		A1150D2220E858E400536336 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1150D2120E858E400536336 /* String.swift */; };
 		A127E31E20DF0F8400E13795 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A127E31D20DF0F8400E13795 /* SidebarViewController.swift */; };
 		A127E32020DF13FA00E13795 /* OpenDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = A127E31F20DF13FA00E13795 /* OpenDocuments.swift */; };
-		A13C23F8209153E1008557D0 /* ModalWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C23F7209153E1008557D0 /* ModalWindowController.swift */; };
+		A13C23F8209153E1008557D0 /* ReferenceWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C23F7209153E1008557D0 /* ReferenceWindowController.swift */; };
 		A13C23FA209167F0008557D0 /* NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C23F9209167F0008557D0 /* NSColor.swift */; };
 		A13C23FC20919672008557D0 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C23FB20919672008557D0 /* PreviewViewController.swift */; };
 		A148C3A020914F0F00B1165C /* SyntaxThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148C39F20914F0F00B1165C /* SyntaxThemes.swift */; };
-		A148C3A22091522C00B1165C /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148C3A12091522C00B1165C /* PreferencesViewController.swift */; };
 		A156AF812090606C0098BBDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AF802090606C0098BBDD /* AppDelegate.swift */; };
 		A156AF832090606C0098BBDD /* MarkdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AF822090606C0098BBDD /* MarkdownViewController.swift */; };
 		A156AF852090606C0098BBDD /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AF842090606C0098BBDD /* Document.swift */; };
@@ -26,7 +28,7 @@
 		A156AF8A2090606D0098BBDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A156AF882090606D0098BBDD /* Main.storyboard */; };
 		A156AF962090606D0098BBDD /* TextViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AF952090606D0098BBDD /* TextViewTests.swift */; };
 		A156AFA12090606D0098BBDD /* TwigUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFA02090606D0098BBDD /* TwigUITests.swift */; };
-		A156AFAF209061D60098BBDD /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFAE209061D60098BBDD /* WindowController.swift */; };
+		A156AFAF209061D60098BBDD /* TwigWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFAE209061D60098BBDD /* TwigWindowController.swift */; };
 		A156AFB120908ECE0098BBDD /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFB020908ECE0098BBDD /* Theme.swift */; };
 		A1682E87209097E700164D78 /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1682E86209097E700164D78 /* NSMutableAttributedString.swift */; };
 		A1767B04220FC2DD00ED1A61 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1767B03220FC2DD00ED1A61 /* StringTests.swift */; };
@@ -37,6 +39,10 @@
 		A18A0406209585C8006F6B99 /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A0405209585C8006F6B99 /* Debouncer.swift */; };
 		A18A040820958C8B006F6B99 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A040720958C8B006F6B99 /* Preferences.swift */; };
 		A18A040A20958EB6006F6B99 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A040920958EB6006F6B99 /* Int.swift */; };
+		A1904E9E22288AB80004FB82 /* DocumentStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1904E9D22288AB80004FB82 /* DocumentStackView.swift */; };
+		A1904EA022289B510004FB82 /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1904E9F22289B510004FB82 /* Bool.swift */; };
+		A1904EA42228A06C0004FB82 /* PreferenceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1904EA32228A06C0004FB82 /* PreferenceCategory.swift */; };
+		A1904EA82228A6EF0004FB82 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1904EA72228A6EF0004FB82 /* PreferencesWindowController.swift */; };
 		A198047320DB64BA0066FDA6 /* MarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198047220DB64BA0066FDA6 /* MarkdownView.swift */; };
 		A198047520DB7B2E0066FDA6 /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198047420DB7B2E0066FDA6 /* NotificationCenter.swift */; };
 		A1A7C05420EA304A003D8DB6 /* NSAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A7C05320EA304A003D8DB6 /* NSAppearance.swift */; };
@@ -51,6 +57,11 @@
 		A1E647DC20D1E9C000F32E55 /* EditorSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */; };
 		A1EDC59F2183C231007153CA /* NSTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EDC59E2183C231007153CA /* NSTextView.swift */; };
 		A1F122DF20DE0D27007DFD1A /* FileSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F122DE20DE0D27007DFD1A /* FileSaver.swift */; };
+		A1FB7A9A2227DC5900DC2E0E /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FB7A992227DC5900DC2E0E /* UIStackView.swift */; };
+		A1FB7A9E2227DFCB00DC2E0E /* PreferencesStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FB7A9D2227DFCB00DC2E0E /* PreferencesStackView.swift */; };
+		A1FB7AA02227EE9300DC2E0E /* PreferencesRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FB7A9F2227EE9300DC2E0E /* PreferencesRoundedButton.swift */; };
+		A1FB7AA22227EEEF00DC2E0E /* PreferencesSwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FB7AA12227EEEF00DC2E0E /* PreferencesSwitchButton.swift */; };
+		A1FB7AA52227F5B100DC2E0E /* MarkdownStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FB7AA42227F5B100DC2E0E /* MarkdownStackView.swift */; };
 		A1FD269A20932CDD004D1C95 /* highlight-js in Resources */ = {isa = PBXBuildFile; fileRef = A1FD269820932CDC004D1C95 /* highlight-js */; };
 /* End PBXBuildFile section */
 
@@ -73,16 +84,18 @@
 
 /* Begin PBXFileReference section */
 		A104782420E7338800E0930A /* FileSystemItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemItem.swift; sourceTree = "<group>"; };
+		A10B86DC2227BB3E000656DD /* PreferencesSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSplitViewController.swift; sourceTree = "<group>"; };
+		A10B86DE2227BB6E000656DD /* PreferencesSidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSidebarViewController.swift; sourceTree = "<group>"; };
+		A10B86E02227BB8F000656DD /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		A111013C20E85D9A001EBEDE /* SaveError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveError.swift; sourceTree = "<group>"; };
 		A111014020E8B8A4001EBEDE /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		A1150D2120E858E400536336 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		A127E31D20DF0F8400E13795 /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 		A127E31F20DF13FA00E13795 /* OpenDocuments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDocuments.swift; sourceTree = "<group>"; };
-		A13C23F7209153E1008557D0 /* ModalWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalWindowController.swift; sourceTree = "<group>"; };
+		A13C23F7209153E1008557D0 /* ReferenceWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceWindowController.swift; sourceTree = "<group>"; };
 		A13C23F9209167F0008557D0 /* NSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
 		A13C23FB20919672008557D0 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		A148C39F20914F0F00B1165C /* SyntaxThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxThemes.swift; sourceTree = "<group>"; };
-		A148C3A12091522C00B1165C /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		A156AF7D2090606C0098BBDD /* Twig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A156AF802090606C0098BBDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A156AF822090606C0098BBDD /* MarkdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownViewController.swift; sourceTree = "<group>"; };
@@ -96,7 +109,7 @@
 		A156AF9C2090606D0098BBDD /* TwigUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwigUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A156AFA02090606D0098BBDD /* TwigUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwigUITests.swift; sourceTree = "<group>"; };
 		A156AFA22090606D0098BBDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A156AFAE209061D60098BBDD /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		A156AFAE209061D60098BBDD /* TwigWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwigWindowController.swift; sourceTree = "<group>"; };
 		A156AFB020908ECE0098BBDD /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		A1682E86209097E700164D78 /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
 		A1767B03220FC2DD00ED1A61 /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
@@ -107,6 +120,10 @@
 		A18A0405209585C8006F6B99 /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
 		A18A040720958C8B006F6B99 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		A18A040920958EB6006F6B99 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		A1904E9D22288AB80004FB82 /* DocumentStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentStackView.swift; sourceTree = "<group>"; };
+		A1904E9F22289B510004FB82 /* Bool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bool.swift; sourceTree = "<group>"; };
+		A1904EA32228A06C0004FB82 /* PreferenceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceCategory.swift; sourceTree = "<group>"; };
+		A1904EA72228A6EF0004FB82 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
 		A198047220DB64BA0066FDA6 /* MarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownView.swift; sourceTree = "<group>"; };
 		A198047420DB7B2E0066FDA6 /* NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
 		A1A7C05320EA304A003D8DB6 /* NSAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAppearance.swift; sourceTree = "<group>"; };
@@ -121,6 +138,11 @@
 		A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorSplitView.swift; sourceTree = "<group>"; };
 		A1EDC59E2183C231007153CA /* NSTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTextView.swift; sourceTree = "<group>"; };
 		A1F122DE20DE0D27007DFD1A /* FileSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSaver.swift; sourceTree = "<group>"; };
+		A1FB7A992227DC5900DC2E0E /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		A1FB7A9D2227DFCB00DC2E0E /* PreferencesStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesStackView.swift; sourceTree = "<group>"; };
+		A1FB7A9F2227EE9300DC2E0E /* PreferencesRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesRoundedButton.swift; sourceTree = "<group>"; };
+		A1FB7AA12227EEEF00DC2E0E /* PreferencesSwitchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSwitchButton.swift; sourceTree = "<group>"; };
+		A1FB7AA42227F5B100DC2E0E /* MarkdownStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownStackView.swift; sourceTree = "<group>"; };
 		A1FD269820932CDC004D1C95 /* highlight-js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "highlight-js"; sourceTree = "<group>"; };
 		B2BE6FC4D33EB0DD8E860B17 /* Pods-Twig.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twig.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Twig/Pods-Twig.debug.xcconfig"; sourceTree = "<group>"; };
 		B66B7DAE689A6827E658233B /* Pods_Twig.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twig.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,10 +175,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A10B86DB2227BB2E000656DD /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				A10B86DE2227BB6E000656DD /* PreferencesSidebarViewController.swift */,
+				A10B86DC2227BB3E000656DD /* PreferencesSplitViewController.swift */,
+				A10B86E02227BB8F000656DD /* PreferencesViewController.swift */,
+				A1904EA72228A6EF0004FB82 /* PreferencesWindowController.swift */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
 		A111013B20E85D87001EBEDE /* Enums */ = {
 			isa = PBXGroup;
 			children = (
 				A111013C20E85D9A001EBEDE /* SaveError.swift */,
+				A1904EA32228A06C0004FB82 /* PreferenceCategory.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -166,12 +200,11 @@
 			children = (
 				A1C65D81221179230053C422 /* DocumentController.swift */,
 				A156AF822090606C0098BBDD /* MarkdownViewController.swift */,
-				A13C23F7209153E1008557D0 /* ModalWindowController.swift */,
-				A148C3A12091522C00B1165C /* PreferencesViewController.swift */,
 				A13C23FB20919672008557D0 /* PreviewViewController.swift */,
-				A1C4020F221F868200E3DBCC /* ReferenceViewController.swift */,
 				A127E31D20DF0F8400E13795 /* SidebarViewController.swift */,
-				A156AFAE209061D60098BBDD /* WindowController.swift */,
+				A156AFAE209061D60098BBDD /* TwigWindowController.swift */,
+				A10B86DB2227BB2E000656DD /* Preferences */,
+				A1904EA92228A75A0004FB82 /* Reference */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -207,6 +240,7 @@
 				A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */,
 				A198047220DB64BA0066FDA6 /* MarkdownView.swift */,
 				A111014020E8B8A4001EBEDE /* SidebarView.swift */,
+				A1FB7AA32227F4E200DC2E0E /* Preferences */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -275,6 +309,7 @@
 		A1682E85209097D500164D78 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A1904E9F22289B510004FB82 /* Bool.swift */,
 				A18A040920958EB6006F6B99 /* Int.swift */,
 				A198047420DB7B2E0066FDA6 /* NotificationCenter.swift */,
 				A1A7C05320EA304A003D8DB6 /* NSAppearance.swift */,
@@ -298,6 +333,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		A1904EA92228A75A0004FB82 /* Reference */ = {
+			isa = PBXGroup;
+			children = (
+				A1C4020F221F868200E3DBCC /* ReferenceViewController.swift */,
+				A13C23F7209153E1008557D0 /* ReferenceWindowController.swift */,
+			);
+			path = Reference;
+			sourceTree = "<group>";
+		};
 		A1C2671E221F9CDF006B5116 /* Docs */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +349,19 @@
 				A1C26720221F9CDF006B5116 /* MARKDOWN_REFERENCE.md */,
 			);
 			path = Docs;
+			sourceTree = "<group>";
+		};
+		A1FB7AA32227F4E200DC2E0E /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				A1904E9D22288AB80004FB82 /* DocumentStackView.swift */,
+				A1FB7AA42227F5B100DC2E0E /* MarkdownStackView.swift */,
+				A1FB7A9F2227EE9300DC2E0E /* PreferencesRoundedButton.swift */,
+				A1FB7A9D2227DFCB00DC2E0E /* PreferencesStackView.swift */,
+				A1FB7AA12227EEEF00DC2E0E /* PreferencesSwitchButton.swift */,
+				A1FB7A992227DC5900DC2E0E /* UIStackView.swift */,
+			);
+			path = Preferences;
 			sourceTree = "<group>";
 		};
 		AF85BB3E71369DF39A9597F6 /* Frameworks */ = {
@@ -520,32 +577,43 @@
 				A1EDC59F2183C231007153CA /* NSTextView.swift in Sources */,
 				A148C3A020914F0F00B1165C /* SyntaxThemes.swift in Sources */,
 				A1C40210221F868200E3DBCC /* ReferenceViewController.swift in Sources */,
-				A156AFAF209061D60098BBDD /* WindowController.swift in Sources */,
-				A148C3A22091522C00B1165C /* PreferencesViewController.swift in Sources */,
+				A156AFAF209061D60098BBDD /* TwigWindowController.swift in Sources */,
 				A13C23FC20919672008557D0 /* PreviewViewController.swift in Sources */,
 				A1C65D82221179230053C422 /* DocumentController.swift in Sources */,
+				A10B86E12227BB8F000656DD /* PreferencesViewController.swift in Sources */,
 				A13C23FA209167F0008557D0 /* NSColor.swift in Sources */,
 				A182096E20919F6000016AD5 /* HTML.swift in Sources */,
 				A1C65FB620DE2B0D00326C60 /* Alert.swift in Sources */,
 				A127E32020DF13FA00E13795 /* OpenDocuments.swift in Sources */,
 				A182AFAF220F8D8000C14B2B /* NSView.swift in Sources */,
+				A1904E9E22288AB80004FB82 /* DocumentStackView.swift in Sources */,
 				A1AE9BA92220AD0E00560137 /* NSTouchBar.swift in Sources */,
+				A1FB7A9E2227DFCB00DC2E0E /* PreferencesStackView.swift in Sources */,
 				A156AFB120908ECE0098BBDD /* Theme.swift in Sources */,
 				A104782520E7338800E0930A /* FileSystemItem.swift in Sources */,
+				A1FB7A9A2227DC5900DC2E0E /* UIStackView.swift in Sources */,
+				A10B86DF2227BB6E000656DD /* PreferencesSidebarViewController.swift in Sources */,
 				A111013D20E85D9A001EBEDE /* SaveError.swift in Sources */,
+				A10B86DD2227BB3E000656DD /* PreferencesSplitViewController.swift in Sources */,
+				A1FB7AA02227EE9300DC2E0E /* PreferencesRoundedButton.swift in Sources */,
 				A18A040820958C8B006F6B99 /* Preferences.swift in Sources */,
 				A1F122DF20DE0D27007DFD1A /* FileSaver.swift in Sources */,
 				A1682E87209097E700164D78 /* NSMutableAttributedString.swift in Sources */,
 				A198047320DB64BA0066FDA6 /* MarkdownView.swift in Sources */,
-				A13C23F8209153E1008557D0 /* ModalWindowController.swift in Sources */,
+				A13C23F8209153E1008557D0 /* ReferenceWindowController.swift in Sources */,
 				A18A0406209585C8006F6B99 /* Debouncer.swift in Sources */,
 				A127E31E20DF0F8400E13795 /* SidebarViewController.swift in Sources */,
 				A156AF812090606C0098BBDD /* AppDelegate.swift in Sources */,
+				A1904EA82228A6EF0004FB82 /* PreferencesWindowController.swift in Sources */,
 				A1E647DC20D1E9C000F32E55 /* EditorSplitView.swift in Sources */,
 				A111014120E8B8A4001EBEDE /* SidebarView.swift in Sources */,
 				A198047520DB7B2E0066FDA6 /* NotificationCenter.swift in Sources */,
+				A1FB7AA22227EEEF00DC2E0E /* PreferencesSwitchButton.swift in Sources */,
 				A1D5466420D4D9CC00D1221A /* Exporter.swift in Sources */,
+				A1FB7AA52227F5B100DC2E0E /* MarkdownStackView.swift in Sources */,
 				A156AF852090606C0098BBDD /* Document.swift in Sources */,
+				A1904EA022289B510004FB82 /* Bool.swift in Sources */,
+				A1904EA42228A06C0004FB82 /* PreferenceCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
