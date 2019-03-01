@@ -76,7 +76,7 @@ struct HTMLExporter: Exportable {
           do {
             try fileSaver.save()
           } catch let error as SaveError {
-            Alert.display(error.description)
+            Alert.error(message: error.description)
           } catch {}
         }
       }
@@ -105,7 +105,7 @@ struct LatexExporter: Exportable {
         do {
           try fileSaver.save()
         } catch let error as SaveError {
-          Alert.display(error.description)
+          Alert.error(message: error.description)
         } catch {}
       }
     }
@@ -128,7 +128,7 @@ struct XMLExporter: Exportable {
     do {
       try fileSaver.save()
     } catch let error as SaveError {
-      Alert.display(error.description)
+      Alert.error(message: error.description)
     } catch {}
   }
 }
@@ -148,7 +148,7 @@ struct TXTExporter: Exportable {
     do {
       try fileSaver.save()
     } catch let error as SaveError {
-      Alert.display(error.description)
+      Alert.error(message: error.description)
     } catch {}
   }
 }

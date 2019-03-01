@@ -10,12 +10,24 @@ import Cocoa
 
 class Alert {
 
-  public static func display(_ message: String, title: String = "Error") {
+  private static func run(
+    message: String,
+    title: String,
+    style: NSAlert.Style
+  ) {
     let alert = NSAlert()
     alert.messageText = title
     alert.informativeText = message
     alert.alertStyle = .warning
     alert.runModal()
+  }
+
+  public static func error(message: String, title: String = "Error") {
+    Alert.run(message: message, title: title, style: .warning)
+  }
+
+  public static func success(message: String, title: String = "Success") {
+    Alert.run(message: message, title: title, style: .informational)
   }
 
 }

@@ -33,9 +33,25 @@ class MarkdownStackView: NSStackView, PreferenceStackView {
     return view
   }
 
+  private func getDefaultApplicationArea() -> NSStackView {
+    let view = PreferencesStackView(name: "Default Application:")
+
+    let setDefaultButton = PreferencesRoundedButton()
+    setDefaultButton.title = "Set Twig as the Default Application"
+    setDefaultButton.target = self
+    setDefaultButton.action = #selector(setDefaultApplication)
+
+    view.addPreferences([
+      setDefaultButton
+    ])
+
+    return view
+  }
+
   public func getViews() -> [NSView] {
     return [
-      getBehaviorArea()
+      getBehaviorArea(),
+      getDefaultApplicationArea()
     ]
   }
 
@@ -49,6 +65,12 @@ class MarkdownStackView: NSStackView, PreferenceStackView {
   @objc func spellcheckEnabledChanged(_ sender: NSButton) {
     preferences.spellcheckEnabled = sender.state.rawValue.bool
     NotificationCenter.send(.preferencesChanged)
+  }
+
+  // MARK: - Default application preference actions
+
+  @objc func setDefaultApplication(_ sender: NSButton) {
+    Utils.setDefaultApplication()
   }
 
 }
