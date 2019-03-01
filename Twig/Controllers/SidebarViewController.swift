@@ -291,10 +291,12 @@ extension SidebarViewController: NSOutlineViewDelegate {
     view?.textField?.stringValue = item.getName()
 
     if item.isDirectory {
-      view?.imageView?.image = NSImage(named: NSImage.folderName)
+      view?.imageView?.image = NSImage(named: "Folder")
     } else {
-      view?.imageView?.image = NSWorkspace.shared.icon(forFileType: item.fileType)
+      view?.imageView?.image = NSImage(named: "Markdown")
     }
+
+    view?.imageView?.image?.isTemplate = true
 
     return view
   }
