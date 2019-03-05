@@ -171,11 +171,11 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
 
   /// Syntax highlight the entire markdownTextView contents
   private func syntaxHighlight() {
+    theme.setFont(to: preferences.font)
+
     let markdownText = markdownTextView.string
 
     DispatchQueue.global(qos: .userInitiated).async {
-      theme.setFont(to: preferences.font)
-
       guard
         let highlightedCode = self.textStorage.highlightr.highlight(markdownText, as: MARKDOWN_SYNTAX)
       else { return }
