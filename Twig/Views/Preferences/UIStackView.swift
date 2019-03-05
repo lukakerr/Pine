@@ -140,6 +140,8 @@ class UIStackView: NSStackView, PreferenceStackView, NSFontChanging {
   // MARK: - Font preference actions
 
   @objc func fontChanged(_ sender: NSButton) {
+    NSFontManager.shared.target = self
+
     let fontPanel = NSFontPanel.shared
     fontPanel.setPanelFont(preferences.font, isMultiple: false)
     fontPanel.makeKeyAndOrderFront(sender)
