@@ -55,6 +55,13 @@ class TwigWindowController: NSWindowController, NSWindowDelegate {
     window?.addTitlebarAccessoryViewController(titlebarController)
   }
 
+  override func showWindow(_ sender: Any?) {
+    super.showWindow(sender)
+
+    // Sync window sidebar after window becomes visible
+    self.syncWindowSidebars()
+  }
+
   public func syncWindowSidebars() {
     // Hacky way to get all sidebars and syncronize the sidebar data
     // Map over all windows (tabs) and find the sidebar

@@ -59,8 +59,6 @@ class Document: NSDocument {
       let newItem = FileSystemItem(path: url.absoluteString, parent: parent)
       openDocuments.addDocument(newItem)
     }
-
-    windowController.syncWindowSidebars()
   }
 
   // Returns data used to save the file
