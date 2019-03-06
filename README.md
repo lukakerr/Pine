@@ -45,13 +45,33 @@ $ rm -r /Applications/Twig.app ~/Library/Caches/io.github.lukakerr.twig
 
 ### Building
 
-To build and run, clone this repository, open in Xcode and hit "Run".
+**Make**
+
+```bash
+$ git clone git@github.com:lukakerr/twig.git
+$ cd twig
+$ make
+```
+
+**Xcode**
 
 ```bash
 $ git clone git@github.com:lukakerr/twig.git
 $ cd twig
 $ open Twig.xcworkspace
 ```
+
+### Testing
+
+**Make**
+
+```bash
+$ make test
+```
+
+**Xcode**
+
+Hit <kbd>⌘</kbd> <kbd>U</kbd>
 
 ### Contributing
 
