@@ -116,6 +116,7 @@ static int S_render_node(cmark_renderer *renderer, cmark_node *node,
   case CMARK_NODE_LIST:
     break;
 
+  case CMARK_NODE_CHECKBOX_ITEM:
   case CMARK_NODE_ITEM:
     if (entering) {
       CR();

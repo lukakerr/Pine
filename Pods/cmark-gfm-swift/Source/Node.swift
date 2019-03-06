@@ -72,6 +72,10 @@ public class Node: CustomStringConvertible {
             cmark_parser_attach_syntax_extension(parser, ext)
         }
 
+        if let ext = cmark_find_syntax_extension("emoji") {
+            cmark_parser_attach_syntax_extension(parser, ext)
+        }
+
         cmark_parser_feed(parser, markdown, markdown.utf8.count)
         guard let node = cmark_parser_finish(parser) else { return nil }
         self.node = node

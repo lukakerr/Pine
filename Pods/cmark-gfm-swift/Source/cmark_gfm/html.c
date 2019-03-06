@@ -10,6 +10,7 @@
 #include "syntax_extension.h"
 #include "html.h"
 #include "render.h"
+#include "checkbox.h"
 
 // Functions to convert cmark_nodes to HTML strings.
 
@@ -169,7 +170,7 @@ static int S_render_node(cmark_html_renderer *renderer, cmark_node *node,
       cmark_strbuf_puts(html, "</li>\n");
     }
     break;
-      
+
   case CMARK_NODE_CHECKBOX_ITEM:
     if (entering) {
       cmark_html_render_cr(html);

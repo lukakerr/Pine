@@ -20,4 +20,5 @@ public enum TextElement {
     case strikethrough(children: [TextElement])
     case mention(login: String)
     case checkbox(checked: Bool, originalRange: NSRange)
+    case emoji(emoji: String)
 }

@@ -5,6 +5,9 @@
       location = "group:../twig/README.md">
    </FileRef>
    <FileRef
+      location = "group:CHANGELOG.md">
+   </FileRef>
+   <FileRef
       location = "group:Twig.xcodeproj">
    </FileRef>
    <FileRef

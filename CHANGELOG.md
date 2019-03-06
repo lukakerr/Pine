@@ -2,10 +2,16 @@
 
 [Unreleased]
 ### New Features
+- GitHub emoji support
+- New preferences layout
+- New icons used for sidebar files/folders
+- Button to set Twig as the default Markdown application
 
 ### Fixes
+- Fix possible crash when changing preferences
 
 ### Other
+- Add a Makefile to improve building/releasing
 
 ## [0.0.6] - 2019-02-24
 ### New Features

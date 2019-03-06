@@ -32,6 +32,8 @@ extension Inline {
             return .mention(login: login)
         case .checkbox(let checked, let originalRange):
             return .checkbox(checked: checked, originalRange: originalRange)
+        case .emoji(let emoji):
+          return .emoji(emoji: emoji)
         case .image, .html:
             return nil
         }

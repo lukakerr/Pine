@@ -82,6 +82,7 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for details on how to contribute.
 - Themeable
 - Math support (LaTeX subset)
 - GitHub Flavored Markdown
+- GitHub Emoji support
 - Local image support
 - Toggleable split view (horizontal and vertical split)
 - Full screen support

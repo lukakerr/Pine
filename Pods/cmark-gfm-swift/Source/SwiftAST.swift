@@ -30,6 +30,7 @@ public enum Inline {
     case strikethrough(children: [Inline])
     case mention(login: String)
     case checkbox(checked: Bool, originalRange: NSRange)
+    case emoji(emoji: String)
 }
 
 enum InlineType: String {
@@ -46,6 +47,7 @@ enum InlineType: String {
     case strikethrough
     case mention
     case checkbox
+    case emoji
 }
 
 extension Inline: ExpressibleByStringLiteral {
@@ -125,6 +127,8 @@ extension Inline {
             self = .strikethrough(children: inlineChildren())
         case .mention:
             self = .mention(login: node.login ?? "")
+        case .emoji:
+          self = .emoji(emoji: node.literal!)
         case .checkbox:
             self = .checkbox(checked: node.checked, originalRange: node.checkedRange)
         }
@@ -171,7 +175,7 @@ extension Block {
 extension Node {
     var listItem: [Block]? {
         switch type {
-        case CMARK_NODE_ITEM:
+        case CMARK_NODE_ITEM, CMARK_NODE_CHECKBOX_ITEM:
             return children.compactMap(Block.init)
         default:
             return nil

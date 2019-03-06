@@ -75,7 +75,7 @@ extension Inline {
     func fold(builder: InlineBuilder) {
         switch self {
         case .text, .softBreak, .lineBreak, .code, .emphasis, .strong,
-             .custom, .link, .strikethrough, .mention, .checkbox:
+             .custom, .link, .strikethrough, .mention, .checkbox, .emoji:
             if let el = textElement {
                 builder.text.append(el)
             }

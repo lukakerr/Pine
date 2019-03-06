@@ -25,6 +25,7 @@ extern cmark_node_type CMARK_NODE_STRIKETHROUGH;
 extern cmark_node_type CMARK_NODE_MENTION;
 extern const char *cmark_node_get_mention_login(cmark_node *node);
 extern cmark_node_type CMARK_NODE_CHECKBOX;
+extern cmark_node_type CMARK_NODE_EMOJI;
 extern int cmark_node_get_checkbox_checked(cmark_node *node);
 extern int cmark_node_get_checkbox_location(cmark_node *node);
 extern int cmark_node_get_checkbox_length(cmark_node *node);
