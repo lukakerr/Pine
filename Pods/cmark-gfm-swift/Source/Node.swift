@@ -49,7 +49,10 @@ public class Node: CustomStringConvertible {
     public init?(markdown: String) {
         core_extensions_ensure_registered()
 
-        guard let parser = cmark_parser_new(0) else { return nil }
+        var options = CMARK_OPT_DEFAULT
+        options |= CMARK_OPT_FOOTNOTES
+
+        guard let parser = cmark_parser_new(options) else { return nil }
         defer { cmark_parser_free(parser) }
 
         if let ext = cmark_find_syntax_extension("table") {

@@ -3,6 +3,7 @@
 [Unreleased]
 ### New Features
 - GitHub emoji support
+- Footnote support
 - New preferences layout
 - New icons used for sidebar files/folders
 - Button to set Twig as the default Markdown application
