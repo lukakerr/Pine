@@ -95,6 +95,7 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for details on how to contribute.
 - Version control and history recovery
 - Markdown shortcuts (keyboard and Touch Bar shortcuts)
 - Auto pair markdown tags
+- Enable/disable markdown extensions
 - Custom font
 - Word count
 
