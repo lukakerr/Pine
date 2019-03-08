@@ -11,11 +11,14 @@ import Cocoa
 class MarkdownTextView: NSTextView {
 
   override func paste(_ sender: Any?) {
-    if let fileURLs = NSPasteboard.general.readObjects(
+    let fileURLs = NSPasteboard.general.readObjects(
       forClasses: [NSURL.self],
-      options: [.urlReadingFileURLsOnly : 1]
-    ) as? [URL] {
-      let markdownImages = fileURLs.filter { $0.isImage }
+      options: [.urlReadingFileURLsOnly: 1]
+    ) as? [URL]
+
+    let images = fileURLs?.filter { $0.isImage }
+
+    if let markdownImages = images, markdownImages.count > 0 {
       self.pasteImages(markdownImages)
       return
     }
