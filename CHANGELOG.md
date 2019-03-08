@@ -6,6 +6,7 @@
 - Footnote support
 - New preferences layout
 - Preferences for enabling/disabling markdown extensions
+- Paste image(s) directly into the editor and have them be inserted in markdown format
 - New icons used for sidebar files/folders
 - Button to set Twig as the default Markdown application
 

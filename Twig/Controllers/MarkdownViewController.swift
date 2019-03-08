@@ -14,7 +14,7 @@ let MARKDOWN_SYNTAX = "Markdown"
 
 class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDelegate {
 
-  public var markdownTextView: NSTextView!
+  public var markdownTextView: MarkdownTextView!
   public var textStorage: CodeAttributedString!
 
   private var scrollView: NSScrollView!
@@ -106,7 +106,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
   }
 
   func setupMarkdownTextView() {
-    markdownTextView = NSTextView()
+    markdownTextView = MarkdownTextView()
     markdownTextView.delegate = self
     markdownTextView.allowsUndo = true
     markdownTextView.isEditable = true

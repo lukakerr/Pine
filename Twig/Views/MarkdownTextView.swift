@@ -1,0 +1,35 @@
+//
+//  MarkdownTextView.swift
+//  Twig
+//
+//  Created by Luka Kerr on 8/3/19.
+//  Copyright © 2019 Luka Kerr. All rights reserved.
+//
+
+import Cocoa
+
+class MarkdownTextView: NSTextView {
+
+  override func paste(_ sender: Any?) {
+    if let fileURLs = NSPasteboard.general.readObjects(
+      forClasses: [NSURL.self],
+      options: [.urlReadingFileURLsOnly : 1]
+    ) as? [URL] {
+      let markdownImages = fileURLs.filter { $0.isImage }
+      self.pasteImages(markdownImages)
+      return
+    }
+
+    super.paste(sender)
+  }
+
+  private func pasteImages(_ images: [URL]) {
+    for image in images {
+      let path = image.absoluteString
+      let name = image.lastPathComponent
+
+      self.replace(left: "![\(name)](\(path))\n")
+    }
+  }
+
+}

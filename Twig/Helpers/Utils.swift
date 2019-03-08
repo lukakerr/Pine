@@ -30,8 +30,8 @@ class Utils {
             kUTTagClassFilenameExtension,
             ext as CFString,
             nil
-            )?.takeUnretainedValue()
-          else { continue }
+          )?.takeUnretainedValue()
+        else { continue }
 
         let status = LSSetDefaultRoleHandlerForContentType(utiString, .all, bundleId)
 

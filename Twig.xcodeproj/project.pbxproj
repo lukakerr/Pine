@@ -17,6 +17,8 @@
 		A1150D2220E858E400536336 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1150D2120E858E400536336 /* String.swift */; };
 		A127E31E20DF0F8400E13795 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A127E31D20DF0F8400E13795 /* SidebarViewController.swift */; };
 		A127E32020DF13FA00E13795 /* OpenDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = A127E31F20DF13FA00E13795 /* OpenDocuments.swift */; };
+		A13B2E8B22322CBD00F24A84 /* MarkdownTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B2E8A22322CBD00F24A84 /* MarkdownTextView.swift */; };
+		A13B2E8D2232314000F24A84 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B2E8C2232314000F24A84 /* URL.swift */; };
 		A13C23F8209153E1008557D0 /* ReferenceWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C23F7209153E1008557D0 /* ReferenceWindowController.swift */; };
 		A13C23FA209167F0008557D0 /* NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C23F9209167F0008557D0 /* NSColor.swift */; };
 		A13C23FC20919672008557D0 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C23FB20919672008557D0 /* PreviewViewController.swift */; };
@@ -95,6 +97,8 @@
 		A1150D2120E858E400536336 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		A127E31D20DF0F8400E13795 /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 		A127E31F20DF13FA00E13795 /* OpenDocuments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDocuments.swift; sourceTree = "<group>"; };
+		A13B2E8A22322CBD00F24A84 /* MarkdownTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownTextView.swift; sourceTree = "<group>"; };
+		A13B2E8C2232314000F24A84 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		A13C23F7209153E1008557D0 /* ReferenceWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceWindowController.swift; sourceTree = "<group>"; };
 		A13C23F9209167F0008557D0 /* NSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
 		A13C23FB20919672008557D0 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
@@ -245,9 +249,10 @@
 			isa = PBXGroup;
 			children = (
 				A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */,
+				A13B2E8A22322CBD00F24A84 /* MarkdownTextView.swift */,
 				A198047220DB64BA0066FDA6 /* MarkdownView.swift */,
-				A111014020E8B8A4001EBEDE /* SidebarView.swift */,
 				A1FB7AA32227F4E200DC2E0E /* Preferences */,
+				A111014020E8B8A4001EBEDE /* SidebarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -336,6 +341,7 @@
 				A1AE9BA82220AD0E00560137 /* NSTouchBar.swift */,
 				A182AFAE220F8D8000C14B2B /* NSView.swift */,
 				A1150D2120E858E400536336 /* String.swift */,
+				A13B2E8C2232314000F24A84 /* URL.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -597,6 +603,7 @@
 				A156AFAF209061D60098BBDD /* TwigWindowController.swift in Sources */,
 				A13C23FC20919672008557D0 /* PreviewViewController.swift in Sources */,
 				A1C65D82221179230053C422 /* DocumentController.swift in Sources */,
+				A13B2E8D2232314000F24A84 /* URL.swift in Sources */,
 				A10B86E12227BB8F000656DD /* PreferencesViewController.swift in Sources */,
 				A13C23FA209167F0008557D0 /* NSColor.swift in Sources */,
 				A182096E20919F6000016AD5 /* HTML.swift in Sources */,
@@ -631,6 +638,7 @@
 				A148E4232231F066001AEAAC /* PreferenceKey.swift in Sources */,
 				A1D5466420D4D9CC00D1221A /* Exporter.swift in Sources */,
 				A1FB7AA52227F5B100DC2E0E /* MarkdownStackView.swift in Sources */,
+				A13B2E8B22322CBD00F24A84 /* MarkdownTextView.swift in Sources */,
 				A156AF852090606C0098BBDD /* Document.swift in Sources */,
 				A1904EA022289B510004FB82 /* Bool.swift in Sources */,
 				A1904EA42228A06C0004FB82 /* PreferenceCategory.swift in Sources */,
