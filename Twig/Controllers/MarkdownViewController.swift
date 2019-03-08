@@ -65,7 +65,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
     }
 
     if let preview = splitViewController?.splitViewItems.last {
-      preview.isCollapsed = !preferences.showPreviewOnStartup
+      preview.isCollapsed = !preferences[Preference.showPreviewOnStartup]
     }
 
     self.setupTextStorage()
@@ -133,7 +133,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
     syntaxHighlight()
     view.updateLayer()
     generatePreview()
-    markdownTextView.isContinuousSpellCheckingEnabled = preferences.spellcheckEnabled
+    markdownTextView.isContinuousSpellCheckingEnabled = preferences[Preference.spellcheckEnabled]
   }
 
   /// Sets the word count in the titlebar word count accessory
@@ -156,7 +156,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
   // Perform any editing actions on keyDown
   override func keyDown(with event: NSEvent) {
     guard
-      preferences.autoPairSyntax,
+      preferences[Preference.autoPairSyntax],
       let singleCharacter = event.characters?.first
     else { return }
 
@@ -202,7 +202,11 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
     let markdownText = markdownTextView.string.replacingOccurrences(of: "\\", with: "\\\\")
 
     DispatchQueue.global(qos: .userInitiated).async {
-      if let parsed = Node(markdown: markdownText)?.html {
+      if let parsed = Node(
+        markdown: markdownText,
+        options: preferences.markdownOptions,
+        extensions: preferences.markdownExtensions
+      )?.html {
         DispatchQueue.main.async {
           self.previewViewController?.captureScroll {
             let doc = self.windowController?.document as? Document

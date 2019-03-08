@@ -92,7 +92,11 @@ struct LatexExporter: Exportable {
     // We expect the view to be a text view
     let markdownTextView = view as! NSTextView
 
-    if let l = Node(markdown: markdownTextView.string)?.latex {
+    if let l = Node(
+      markdown: markdownTextView.string,
+      options: preferences.markdownOptions,
+      extensions: preferences.markdownExtensions
+    )?.latex {
       let latex = """
       \\documentclass[12pt]{article}
       \\begin{document}
@@ -120,7 +124,11 @@ struct XMLExporter: Exportable {
     let markdownTextView = view as! NSTextView
 
     guard
-      let xml = Node(markdown: markdownTextView.string)?.xml,
+      let xml = Node(
+        markdown: markdownTextView.string,
+        options: preferences.markdownOptions,
+        extensions: preferences.markdownExtensions
+      )?.xml,
       let data = xml.data(using: .utf8)
     else { return }
 

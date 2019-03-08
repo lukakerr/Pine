@@ -14,7 +14,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   cmark-gfm-swift:
-    :commit: cd5812e51d03dae9fc585c01097fc19ece3ae03a
+    :commit: 9e9f8dfba1a54fbe10f2acadfbea6b8252bd3cf0
     :git: https://github.com/lukakerr/cmark-gfm-swift.git
   Highlightr:
     :commit: bd57404c28527b4d40ee15ce9f61fad734ad50a1

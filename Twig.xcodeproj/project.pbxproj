@@ -21,6 +21,8 @@
 		A13C23FA209167F0008557D0 /* NSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C23F9209167F0008557D0 /* NSColor.swift */; };
 		A13C23FC20919672008557D0 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13C23FB20919672008557D0 /* PreviewViewController.swift */; };
 		A148C3A020914F0F00B1165C /* SyntaxThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148C39F20914F0F00B1165C /* SyntaxThemes.swift */; };
+		A148E4232231F066001AEAAC /* PreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148E4222231F066001AEAAC /* PreferenceKey.swift */; };
+		A148E4252231F7D7001AEAAC /* NSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148E4242231F7D7001AEAAC /* NSButton.swift */; };
 		A156AF812090606C0098BBDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AF802090606C0098BBDD /* AppDelegate.swift */; };
 		A156AF832090606C0098BBDD /* MarkdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AF822090606C0098BBDD /* MarkdownViewController.swift */; };
 		A156AF852090606C0098BBDD /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AF842090606C0098BBDD /* Document.swift */; };
@@ -97,6 +99,8 @@
 		A13C23F9209167F0008557D0 /* NSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColor.swift; sourceTree = "<group>"; };
 		A13C23FB20919672008557D0 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		A148C39F20914F0F00B1165C /* SyntaxThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxThemes.swift; sourceTree = "<group>"; };
+		A148E4222231F066001AEAAC /* PreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKey.swift; sourceTree = "<group>"; };
+		A148E4242231F7D7001AEAAC /* NSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSButton.swift; sourceTree = "<group>"; };
 		A156AF7D2090606C0098BBDD /* Twig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A156AF802090606C0098BBDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A156AF822090606C0098BBDD /* MarkdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownViewController.swift; sourceTree = "<group>"; };
@@ -214,11 +218,11 @@
 		A142C98120D67389002ED94F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A148E4212231F054001AEAAC /* Preferences */,
 				A156AF842090606C0098BBDD /* Document.swift */,
 				A104782420E7338800E0930A /* FileSystemItem.swift */,
 				A182096D20919F6000016AD5 /* HTML.swift */,
 				A127E31F20DF13FA00E13795 /* OpenDocuments.swift */,
-				A18A040720958C8B006F6B99 /* Preferences.swift */,
 				A156AFB020908ECE0098BBDD /* Theme.swift */,
 			);
 			path = Models;
@@ -246,6 +250,15 @@
 				A1FB7AA32227F4E200DC2E0E /* Preferences */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A148E4212231F054001AEAAC /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				A148E4222231F066001AEAAC /* PreferenceKey.swift */,
+				A18A040720958C8B006F6B99 /* Preferences.swift */,
+			);
+			path = Preferences;
 			sourceTree = "<group>";
 		};
 		A156AF742090606C0098BBDD = {
@@ -316,6 +329,7 @@
 				A18A040920958EB6006F6B99 /* Int.swift */,
 				A198047420DB7B2E0066FDA6 /* NotificationCenter.swift */,
 				A1A7C05320EA304A003D8DB6 /* NSAppearance.swift */,
+				A148E4242231F7D7001AEAAC /* NSButton.swift */,
 				A13C23F9209167F0008557D0 /* NSColor.swift */,
 				A1682E86209097E700164D78 /* NSMutableAttributedString.swift */,
 				A1EDC59E2183C231007153CA /* NSTextView.swift */,
@@ -609,10 +623,12 @@
 				A127E31E20DF0F8400E13795 /* SidebarViewController.swift in Sources */,
 				A156AF812090606C0098BBDD /* AppDelegate.swift in Sources */,
 				A1904EA82228A6EF0004FB82 /* PreferencesWindowController.swift in Sources */,
+				A148E4252231F7D7001AEAAC /* NSButton.swift in Sources */,
 				A1E647DC20D1E9C000F32E55 /* EditorSplitView.swift in Sources */,
 				A111014120E8B8A4001EBEDE /* SidebarView.swift in Sources */,
 				A198047520DB7B2E0066FDA6 /* NotificationCenter.swift in Sources */,
 				A1FB7AA22227EEEF00DC2E0E /* PreferencesSwitchButton.swift in Sources */,
+				A148E4232231F066001AEAAC /* PreferenceKey.swift in Sources */,
 				A1D5466420D4D9CC00D1221A /* Exporter.swift in Sources */,
 				A1FB7AA52227F5B100DC2E0E /* MarkdownStackView.swift in Sources */,
 				A156AF852090606C0098BBDD /* Document.swift in Sources */,

@@ -10,23 +10,35 @@ import Cocoa
 
 protocol PreferenceStackView {
 
+  /// Get a list of views to be used for each section in the preference category
   func getViews() -> [NSView]
 
 }
 
+typealias BoolPreferenceMap = [String: PreferenceKey<Bool>]
+
 class PreferencesStackView: NSStackView {
 
   private var name: String!
+  private var hasSection: Bool!
+  private var prefView: NSStackView!
 
   init(name: String) {
     super.init(frame: NSZeroRect)
 
     self.name = name
+    self.hasSection = false
     self.spacing = 0.0
     self.alignment = .left
     self.orientation = .horizontal
     self.distribution = .fillEqually
     self.edgeInsets = NSEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+
+    self.prefView = NSStackView()
+    self.prefView.spacing = 10.0
+    self.prefView.alignment = .left
+    self.prefView.orientation = .vertical
+    self.prefView.distribution = .fillEqually
   }
 
   override init(frame frameRect: NSRect) {
@@ -38,6 +50,16 @@ class PreferencesStackView: NSStackView {
   }
 
   public func addPreferences(_ views: [NSView]) {
+    if hasSection {
+      for v in views {
+        prefView.addArrangedSubview(v)
+      }
+
+      return
+    } else {
+      hasSection = true
+    }
+
     let title = NSTextField()
     title.isEditable = false
     title.isBezeled = false
@@ -60,18 +82,34 @@ class PreferencesStackView: NSStackView {
 
     self.addConstraint(titleMinWidthConstraint)
 
-    let prefView = NSStackView()
-    prefView.spacing = 10.0
-    prefView.alignment = .left
-    prefView.orientation = .vertical
-    prefView.distribution = .fillEqually
-
     for v in views {
       prefView.addArrangedSubview(v)
     }
 
     self.addArrangedSubview(title)
     self.addArrangedSubview(prefView)
+  }
+
+  public func addBooleanArea(
+    target: NSObject,
+    using map: BoolPreferenceMap,
+    selector: Selector
+  ) {
+    var preferenceViews: [NSView] = []
+
+    map
+      .sorted { $0.0.count < $1.0.count }
+      .forEach { (title, ext) in
+        let btn = PreferencesSwitchButton()
+        btn.title = title
+        btn.target = target
+        btn.action = selector
+        btn.state = preferences[ext].state
+
+        preferenceViews.append(btn)
+    }
+
+    self.addPreferences(preferenceViews)
   }
 
 }

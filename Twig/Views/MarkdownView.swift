@@ -23,17 +23,17 @@ class MarkdownView: NSView {
       appearance = NSApp.effectiveAppearance.name
     }
 
-    self.window?.titlebarAppearsTransparent = preferences.modernTitlebar
+    self.window?.titlebarAppearsTransparent = preferences[Preference.modernTitlebar]
 
     if appearance == .dark || bg.isDark {
       theme.code = bg.lighter
       theme.text = .white
 
-      // using dark mode, so remove theme based appearance
+      // Using dark mode, so remove theme based appearance
       if appearance == .dark {
         window?.backgroundColor = nil
       } else {
-        if !preferences.useSystemAppearance {
+        if !preferences[Preference.useSystemAppearance] {
           window?.appearance = NSAppearance(named: .dark)
         }
         window?.backgroundColor = bg
@@ -41,14 +41,14 @@ class MarkdownView: NSView {
     } else {
       theme.code = bg.darker
       theme.text = .black
-      if !preferences.useSystemAppearance {
+      if !preferences[Preference.useSystemAppearance] {
         window?.appearance = NSAppearance(named: .aqua)
       }
       window?.backgroundColor = bg
     }
 
-    // remove appearance so when dark/light mode changed, updateLayer() is called
-    if preferences.useSystemAppearance {
+    // Remove appearance so when dark/light mode changed, updateLayer() is called
+    if preferences[Preference.useSystemAppearance] {
       window?.appearance = nil
     }
 

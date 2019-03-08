@@ -33,7 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   }
 
   func applicationShouldOpenUntitledFile(_ sender: NSApplication) -> Bool {
-    return preferences.openNewDocumentOnStartup
+    return preferences[Preference.openNewDocumentOnStartup]
   }
 
   // MARK: - First responder methods that can be called anywhere in the application

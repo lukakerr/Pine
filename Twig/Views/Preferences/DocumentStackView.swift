@@ -10,25 +10,19 @@ import Cocoa
 
 class DocumentStackView: NSStackView, PreferenceStackView {
 
+  private let behaviourMap: BoolPreferenceMap = [
+    "Autosave document": Preference.autosaveDocument,
+    "Open new document on startup": Preference.openNewDocumentOnStartup
+  ]
+
   private func getBehaviorArea() -> NSStackView {
     let view = PreferencesStackView(name: "Behavior:")
 
-    let autosaveDocButton = PreferencesSwitchButton()
-    autosaveDocButton.title = "Autosave document"
-    autosaveDocButton.target = self
-    autosaveDocButton.action = #selector(autosaveDocumentChanged)
-    autosaveDocButton.state = preferences.autosaveDocument.state
-
-    let newDocOnStartButton = PreferencesSwitchButton()
-    newDocOnStartButton.title = "Open new document on startup"
-    newDocOnStartButton.target = self
-    newDocOnStartButton.action = #selector(openNewDocumentOnStartupChanged)
-    newDocOnStartButton.state = preferences.openNewDocumentOnStartup.state
-
-    view.addPreferences([
-      autosaveDocButton,
-      newDocOnStartButton
-    ])
+    view.addBooleanArea(
+      target: self,
+      using: behaviourMap,
+      selector: #selector(behaviorPreferenceChanged)
+    )
 
     return view
   }
@@ -41,14 +35,11 @@ class DocumentStackView: NSStackView, PreferenceStackView {
 
   // MARK: - Behavior preference actions
 
-  @objc func autosaveDocumentChanged(_ sender: NSButton) {
-    preferences.autosaveDocument = sender.state.rawValue.bool
-    NotificationCenter.send(.preferencesChanged)
-  }
-
-  @objc func openNewDocumentOnStartupChanged(_ sender: NSButton) {
-    preferences.openNewDocumentOnStartup = sender.state.rawValue.bool
-    NotificationCenter.send(.preferencesChanged)
+  @objc func behaviorPreferenceChanged(_ sender: NSButton) {
+    if let ext = behaviourMap[sender.title] {
+      preferences[ext] = sender.value
+      NotificationCenter.send(.preferencesChanged)
+    }
   }
 
 }

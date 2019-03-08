@@ -10,6 +10,21 @@ import Cocoa
 
 class UIStackView: NSStackView, PreferenceStackView, NSFontChanging {
 
+  private let appearanceMap: BoolPreferenceMap = [
+    "Use system appearance": Preference.useSystemAppearance
+  ]
+
+  private let windowMap: BoolPreferenceMap = [
+    "Show sidebar": Preference.showSidebar,
+    "Modern titlebar": Preference.modernTitlebar,
+    "Vertical split": Preference.verticalSplitView,
+    "Use theme color for sidebar": Preference.useThemeColorForSidebar
+  ]
+
+  private let behaviorMap: BoolPreferenceMap = [
+    "Show preview on startup": Preference.showPreviewOnStartup
+  ]
+
   private func getAppearanceArea() -> NSStackView {
     let view = PreferencesStackView(name: "Appearance:")
 
@@ -26,17 +41,16 @@ class UIStackView: NSStackView, PreferenceStackView, NSFontChanging {
     revealThemesButton.target = self
     revealThemesButton.action = #selector(revealThemes)
 
-    let useSystemAppearanceButton = PreferencesSwitchButton()
-    useSystemAppearanceButton.title = "Use system appearance"
-    useSystemAppearanceButton.target = self
-    useSystemAppearanceButton.action = #selector(useSystemAppearanceChanged)
-    useSystemAppearanceButton.state = preferences.useSystemAppearance.state
-
     view.addPreferences([
       syntaxDropdown,
       revealThemesButton,
-      useSystemAppearanceButton
     ])
+
+    view.addBooleanArea(
+      target: self,
+      using: appearanceMap,
+      selector: #selector(appearancePreferenceChanged)
+    )
 
     return view
   }
@@ -59,36 +73,11 @@ class UIStackView: NSStackView, PreferenceStackView, NSFontChanging {
   private func getWindowArea() -> NSStackView {
     let view = PreferencesStackView(name: "Window:")
 
-    let modernTitlebarButton = PreferencesSwitchButton()
-    modernTitlebarButton.title = "Modern titlebar"
-    modernTitlebarButton.target = self
-    modernTitlebarButton.action = #selector(modernTitlebarChanged)
-    modernTitlebarButton.state = preferences.modernTitlebar.state
-
-    let verticalSplitButton = PreferencesSwitchButton()
-    verticalSplitButton.title = "Vertical split"
-    verticalSplitButton.target = self
-    verticalSplitButton.action = #selector(verticalSplitViewChanged)
-    verticalSplitButton.state = preferences.verticalSplitView.state
-
-    let showSidebarButton = PreferencesSwitchButton()
-    showSidebarButton.title = "Show sidebar"
-    showSidebarButton.target = self
-    showSidebarButton.action = #selector(showSidebarChanged)
-    showSidebarButton.state = preferences.showSidebar.state
-
-    let sidebarThemeColorButton = PreferencesSwitchButton()
-    sidebarThemeColorButton.title = "Use theme color for sidebar"
-    sidebarThemeColorButton.target = self
-    sidebarThemeColorButton.action = #selector(useThemeColorForSidebarChanged)
-    sidebarThemeColorButton.state = preferences.useThemeColorForSidebar.state
-
-    view.addPreferences([
-      modernTitlebarButton,
-      verticalSplitButton,
-      showSidebarButton,
-      sidebarThemeColorButton
-    ])
+    view.addBooleanArea(
+      target: self,
+      using: windowMap,
+      selector: #selector(windowPreferenceChanged)
+    )
 
     return view
   }
@@ -96,15 +85,11 @@ class UIStackView: NSStackView, PreferenceStackView, NSFontChanging {
   private func getBehaviorArea() -> NSStackView {
     let view = PreferencesStackView(name: "Behavior:")
 
-    let previewOnStartupButton = PreferencesSwitchButton()
-    previewOnStartupButton.title = "Show preview on startup"
-    previewOnStartupButton.target = self
-    previewOnStartupButton.action = #selector(showPreviewOnStartupChanged)
-    previewOnStartupButton.state = preferences.showPreviewOnStartup.state
-
-    view.addPreferences([
-      previewOnStartupButton
-    ])
+    view.addBooleanArea(
+      target: self,
+      using: behaviorMap,
+      selector: #selector(behaviorPreferenceChanged)
+    )
 
     return view
   }
@@ -132,9 +117,11 @@ class UIStackView: NSStackView, PreferenceStackView, NSFontChanging {
     }
   }
 
-  @objc func useSystemAppearanceChanged(_ sender: NSButton) {
-    preferences.useSystemAppearance = sender.state.rawValue.bool
-    NotificationCenter.send(.preferencesChanged)
+  @objc func appearancePreferenceChanged(_ sender: NSButton) {
+    if let ext = appearanceMap[sender.title] {
+      preferences[ext] = sender.value
+      NotificationCenter.send(.preferencesChanged)
+    }
   }
 
   // MARK: - Font preference actions
@@ -156,31 +143,20 @@ class UIStackView: NSStackView, PreferenceStackView, NSFontChanging {
 
   // MARK: - Window preference actions
 
-  @objc func modernTitlebarChanged(_ sender: NSButton) {
-    preferences.modernTitlebar = sender.state.rawValue.bool
-    NotificationCenter.send(.preferencesChanged)
+  @objc func windowPreferenceChanged(_ sender: NSButton) {
+    if let ext = windowMap[sender.title] {
+      preferences[ext] = sender.value
+      NotificationCenter.send(.preferencesChanged)
+    }
   }
 
-  @objc func verticalSplitViewChanged(_ sender: NSButton) {
-    preferences.verticalSplitView = sender.state.rawValue.bool
-    NotificationCenter.send(.preferencesChanged)
-  }
+  // MARK: - Behavior preference actions
 
-  @objc func showSidebarChanged(_ sender: NSButton) {
-    preferences.showSidebar = sender.state.rawValue.bool
-    NotificationCenter.send(.preferencesChanged)
-  }
-
-  @objc func useThemeColorForSidebarChanged(_ sender: NSButton) {
-    preferences.useThemeColorForSidebar = sender.state.rawValue.bool
-    NotificationCenter.send(.preferencesChanged)
-  }
-
-  // MARK: Behavior preference actions
-
-  @objc func showPreviewOnStartupChanged(_ sender: NSButton) {
-    preferences.showPreviewOnStartup = sender.state.rawValue.bool
-    NotificationCenter.send(.preferencesChanged)
+  @objc func behaviorPreferenceChanged(_ sender: NSButton) {
+    if let ext = behaviorMap[sender.title] {
+      preferences[ext] = sender.value
+      NotificationCenter.send(.preferencesChanged)
+    }
   }
 
 }
