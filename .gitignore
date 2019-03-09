@@ -13,3 +13,4 @@ DerivedData/
 *.perspectivev3
 .DS_Store
 !default.perspectivev3
+Release/
