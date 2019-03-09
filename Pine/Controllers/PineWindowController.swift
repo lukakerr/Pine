@@ -125,7 +125,7 @@ class PineWindowController: NSWindowController, NSWindowDelegate {
   /// Returns the current window's document path
   public static func getCurrentDocument() -> String? {
     guard
-      let window = NSApp.keyWindow?.windowController as? PineWindowController,
+      let window = Utils.getCurrentMainWindowController(),
       let doc = window.document as? Document
     else { return nil }
 

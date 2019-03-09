@@ -6,9 +6,15 @@
 //  Copyright © 2019 Luka Kerr. All rights reserved.
 //
 
+import Cocoa
 import Foundation
 
 class Utils {
+
+  /// The current main window controller of the application
+  public static func getCurrentMainWindowController() -> PineWindowController? {
+    return NSApp.windows.filter({ $0.isVisible }).first?.windowController as? PineWindowController
+  }
 
   public static func setDefaultApplication() {
     guard

@@ -36,6 +36,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     return preferences[Preference.openNewDocumentOnStartup]
   }
 
+  func application(_ sender: NSApplication, openFiles filenames: [String]) {
+    let fileURLs = filenames.compactMap { URL(fileURLWithPath: $0) }
+    openFiles(files: fileURLs)
+
+    sender.reply(toOpenOrPrint: .success)
+  }
+
   // MARK: - First responder methods that can be called anywhere in the application
 
   @IBAction func openFileOrFolder(_ sender: Any?) {
@@ -53,34 +60,40 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       let result = dialog.url
     else { return }
 
-    var isDirectory: ObjCBool = false
+    openFiles(files: [result])
+  }
 
-    // Ensure the file or folder exists
-    guard FileManager.default.fileExists(
-      atPath: result.path,
-      isDirectory: &isDirectory
-    ) else { return }
+  private func openFiles(files: [URL]) {
+    for file in files {
+      var isDirectory: ObjCBool = false
 
-    DispatchQueue.global(qos: .userInitiated).async {
-      let parent = FileSystemItem.createParents(url: result)
-      let newItem = FileSystemItem(path: result.absoluteString, parent: parent)
+      // Ensure the file or folder exists
+      guard FileManager.default.fileExists(
+        atPath: file.path,
+        isDirectory: &isDirectory
+      ) else { continue }
 
-      DispatchQueue.main.async {
-        openDocuments.addDocument(newItem)
+      DispatchQueue.global(qos: .userInitiated).async {
+        let parent = FileSystemItem.createParents(url: file)
+        let newItem = FileSystemItem(path: file.absoluteString, parent: parent)
 
-        if isDirectory.boolValue {
-          // Don't have a window open
-          if NSApp.keyWindow == nil {
-            DocumentController.shared.newDocument(nil)
+        DispatchQueue.main.async {
+          openDocuments.addDocument(newItem)
+
+          if isDirectory.boolValue {
+            // Don't have a window open
+            if NSApp.keyWindow == nil {
+              DocumentController.shared.newDocument(nil)
+            } else {
+              self.keyWindowController?.syncWindowSidebars()
+            }
           } else {
-            self.keyWindowController?.syncWindowSidebars()
+            DocumentController.shared.openDocument(
+              withContentsOf: file,
+              display: true,
+              completionHandler: { _,_,_  in }
+            )
           }
-        } else {
-          DocumentController.shared.openDocument(
-            withContentsOf: result,
-            display: true,
-            completionHandler: { _,_,_  in }
-          )
         }
       }
     }
