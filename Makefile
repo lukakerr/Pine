@@ -4,19 +4,19 @@ all: build
 
 build:
 	xcodebuild clean build \
-		-scheme Twig \
-		-workspace ./Twig.xcworkspace
+		-scheme Pine \
+		-workspace ./Pine.xcworkspace
 
 test:
 	xcodebuild \
-		-scheme Twig \
+		-scheme Pine \
 		-configuration Debug test \
-		-workspace ./Twig.xcworkspace
+		-workspace ./Pine.xcworkspace
 
 release:
 	xcodebuild archive \
-		-scheme Twig \
-		-workspace ./Twig.xcworkspace \
+		-scheme Pine \
+		-workspace ./Pine.xcworkspace \
 		-archivePath Release/App.xcarchive
 
 	open Release/App.xcarchive/Products/Applications

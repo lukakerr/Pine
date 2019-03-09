@@ -1,6 +1,0 @@
-framework module Pods_Twig {
-  umbrella header "Pods-Twig-umbrella.h"
-
-  export *
-  module * { export * }
-}

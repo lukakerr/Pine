@@ -8,12 +8,13 @@
 - Preferences for enabling/disabling markdown extensions
 - Paste image(s) directly into the editor and have them be inserted in markdown format
 - New icons used for sidebar files/folders
-- Button to set Twig as the default Markdown application
+- Button to set Pine as the default Markdown application
 
 ### Fixes
 - Fix possible crash when changing preferences
 
 ### Other
+- Renamed to Pine
 - Add a Makefile to improve building/releasing
 
 ## [0.0.6] - 2019-02-24

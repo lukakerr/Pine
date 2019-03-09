@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for wanting to contribute to Twig!
+Thanks for wanting to contribute to Pine!
 
 A list of todo's exists in the [README.md](./README.md) and these should be focused on first before any other features are introduced. 
 

@@ -1,0 +1,6 @@
+framework module Pods_Pine {
+  umbrella header "Pods-Pine-umbrella.h"
+
+  export *
+  module * { export * }
+}

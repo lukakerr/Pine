@@ -1,46 +1,46 @@
-# Twig
+# Pine
 
 [![Swift 4.2](https://img.shields.io/badge/swift-4.2-orange.svg?style=flat)](https://github.com/apple/swift)
 [![Platform](http://img.shields.io/badge/platform-macOS-red.svg?style=flat)](https://developer.apple.com/macos/)
 [![Github](http://img.shields.io/badge/github-lukakerr-green.svg?style=flat)](https://github.com/lukakerr)
-![Github All Releases](https://img.shields.io/github/downloads/lukakerr/twig/total.svg)
+![Github All Releases](https://img.shields.io/github/downloads/lukakerr/pine/total.svg)
 
 <p align="center">
-  <img src="./Twig/Assets.xcassets/AppIcon.appiconset/twig-512.png" width="200">
+  <img src="./Pine/Assets.xcassets/AppIcon.appiconset/pine-512@1x.png" width="150">
 </p>
 
 
-Twig is lightweight macOS markdown editor. It's currently a work in progress.
+Pine is lightweight macOS markdown editor. It's currently a work in progress.
 
 It is a [document based application](https://developer.apple.com/document-based-apps), and aims to follow Apple's [Human Interface Guidelines](https://developer.apple.com/macos/human-interface-guidelines)
 
 ### Installing
 
-Twig is still in its very early stages, so if you encounter any bugs or have a feature request please raise an issue!
+Pine is still in its very early stages, so if you encounter any bugs or have a feature request please raise an issue!
 
 **Install via Homebrew Cask**
 
 ```bash
 $ brew tap lukakerr/casks
-$ brew cask install twig
+$ brew cask install pine
 ```
 
 **Manual Download**
 
-Visit the [releases page](https://github.com/lukakerr/twig/releases) to download manually.
+Visit the [releases page](https://github.com/lukakerr/pine/releases) to download manually.
 
 ### Uninstalling
 
 **Download via Homebrew Cask**
 
 ```bash
-$ brew cask remove twig
+$ brew cask remove pine
 ```
 
 **Downloaded Manually**
 
 ```
-$ rm -r /Applications/Twig.app ~/Library/Caches/io.github.lukakerr.twig
+$ rm -r /Applications/Pine.app ~/Library/Caches/io.github.lukakerr.pine
 ```
 
 ### Building
@@ -48,17 +48,17 @@ $ rm -r /Applications/Twig.app ~/Library/Caches/io.github.lukakerr.twig
 **Make**
 
 ```bash
-$ git clone git@github.com:lukakerr/twig.git
-$ cd twig
+$ git clone git@github.com:lukakerr/pine.git
+$ cd pine
 $ make
 ```
 
 **Xcode**
 
 ```bash
-$ git clone git@github.com:lukakerr/twig.git
-$ cd twig
-$ open Twig.xcworkspace
+$ git clone git@github.com:lukakerr/pine.git
+$ cd pine
+$ open Pine.xcworkspace
 ```
 
 ### Testing
@@ -109,6 +109,6 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for details on how to contribute.
 ### Screenshots
 
 <p align="center">
-  <img src="https://i.imgur.com/YPyYQQH.png">
+  <img src="https://i.imgur.com/vxAaNeX.png">
   <img src="https://i.imgur.com/5LQ1Ll4.png">
 </p>
