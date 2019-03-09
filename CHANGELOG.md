@@ -2,6 +2,13 @@
 
 [Unreleased]
 ### New Features
+
+### Fixes
+
+### Other
+
+[0.0.7] - 2019-03-09
+### New Features
 - GitHub emoji support
 - Footnote support
 - New preferences layout
