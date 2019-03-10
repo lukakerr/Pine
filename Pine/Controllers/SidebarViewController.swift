@@ -20,6 +20,9 @@ class SidebarViewController: NSViewController {
   // The structure is only set once on first load
   var structureHasSynced: Bool = false
 
+  // Whether to ignore the next row selection
+  var ignoreNextSelection: Bool = false
+
   /// The split view item holding this sidebar view controller
   private var sidebarSplitViewItem: NSSplitViewItem? {
     return (parent as? NSSplitViewController)?.splitViewItems.first
@@ -49,8 +52,6 @@ class SidebarViewController: NSViewController {
   }
 
   public func sync() {
-    let selectedRows = sidebar.selectedRowIndexes
-
     items = openDocuments.getDocuments()
     sidebar.reloadData()
 
@@ -59,7 +60,7 @@ class SidebarViewController: NSViewController {
       structureHasSynced = true
     }
 
-    sidebar.selectRowIndexes(selectedRows, byExtendingSelection: false)
+    syncSelectedRow()
   }
 
   @IBAction func toggleSidebar(_ sender: NSButton) {
@@ -108,6 +109,25 @@ class SidebarViewController: NSViewController {
     }
   }
 
+  private func syncSelectedRow() {
+    let doc = windowController?.document as? Document
+
+    var selectedRow: Int?
+
+    for row in IndexSet(integersIn: 0..<sidebar.numberOfRows) {
+      let rowItem = sidebar.item(atRow: row) as? FileSystemItem
+
+      if rowItem?.fullPath == doc?.fileURL?.relativePath {
+        selectedRow = row
+      }
+    }
+
+    if let selected = selectedRow {
+      ignoreNextSelection = true
+      sidebar.selectRowIndexes(IndexSet(integer: selected), byExtendingSelection: false)
+    }
+  }
+
   /// Set a contextual menu (called on right click) for the sidebar
   private func setupContextualMenu() {
     let menu = NSMenu()
@@ -151,12 +171,8 @@ class SidebarViewController: NSViewController {
 
     var backgroundColor: NSColor = .clear
 
-    if preferences[Preference.useThemeColorForSidebar] {
+    if preferences[Preference.useThemeColorForSidebar] && !preferences[Preference.useSystemAppearance] {
       backgroundColor = theme.background
-    }
-
-    if preferences[Preference.useSystemAppearance] {
-      backgroundColor = .clear
     }
 
     sidebar.backgroundColor = backgroundColor
@@ -215,14 +231,16 @@ extension SidebarViewController: NSOutlineViewDataSource {
 
   // When a row is selected
   func outlineViewSelectionDidChange(_ notification: Notification) {
-    guard
-      let doc = sidebar.item(atRow: sidebar.selectedRow) as? FileSystemItem,
-      let window = view.window?.windowController as? PineWindowController
-    else { return }
+    if ignoreNextSelection {
+      ignoreNextSelection = false
+      return
+    }
+
+    guard let doc = sidebar.item(atRow: sidebar.selectedRow) as? FileSystemItem else { return }
 
     if doc.isDirectory { return }
 
-    window.changeDocument(file: doc.fileURL)
+    windowController?.changeDocument(file: doc.fileURL)
   }
 
   /// The NSTableRowView instance to be used

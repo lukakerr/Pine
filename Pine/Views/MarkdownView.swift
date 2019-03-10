@@ -15,12 +15,6 @@ class MarkdownView: NSView {
   }
 
   private func updateUI() {
-    var appAppearance = window?.appearance?.name
-
-    if #available(OSX 10.14, *) {
-      appAppearance = NSApp.effectiveAppearance.name
-    }
-
     self.window?.titlebarAppearsTransparent = preferences[Preference.modernTitlebar]
 
     // Not using system appearance, so stick with theme
@@ -32,12 +26,10 @@ class MarkdownView: NSView {
         )
       }
     } else {
-      if let appearance = appAppearance {
-        setThemeAndWindowAppearance(
-          isDark: appearance == .dark,
-          color: NSColor.textBackgroundColor
-        )
-      }
+      setThemeAndWindowAppearance(
+        isDark: NSAppearance.Name.current == .dark,
+        color: NSColor.textBackgroundColor
+      )
 
       window?.appearance = nil
     }
