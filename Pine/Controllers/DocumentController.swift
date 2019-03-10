@@ -14,9 +14,11 @@ class DocumentController: NSDocumentController {
     return NSApp.keyWindow?.windowController as? PineWindowController
   }
 
-  override func openDocument(withContentsOf url: URL,
-                             display displayDocument: Bool,
-                             completionHandler: @escaping (NSDocument?, Bool, Error?) -> Void) {
+  override func openDocument(
+    withContentsOf url: URL,
+    display displayDocument: Bool,
+    completionHandler: @escaping (NSDocument?, Bool, Error?) -> Void
+  ) {
     guard let currentWindowController = Utils.getCurrentMainWindowController() else { return }
 
     let currentDocument = currentWindowController.document as? Document
