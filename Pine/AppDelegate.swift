@@ -94,6 +94,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
               completionHandler: { _,_,_  in }
             )
           }
+
+          Utils.getCurrentMainWindowController()?.window?.makeKeyAndOrderFront(nil)
         }
       }
     }

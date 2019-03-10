@@ -13,6 +13,10 @@ class Utils {
 
   /// The current main window controller of the application
   public static func getCurrentMainWindowController() -> PineWindowController? {
+    if let keyWindow = NSApp.keyWindow, keyWindow.isVisible {
+      return keyWindow.windowController as? PineWindowController
+    }
+
     return NSApp.windows.filter({ $0.isVisible }).first?.windowController as? PineWindowController
   }
 
