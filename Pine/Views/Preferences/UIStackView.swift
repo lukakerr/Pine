@@ -107,6 +107,7 @@ class UIStackView: NSStackView, PreferenceStackView, NSFontChanging {
 
   @objc func syntaxChanged(_ sender: NSPopUpButton) {
     theme.setTheme(to: sender.title)
+    html.updateSyntaxTheme()
     NotificationCenter.send(.preferencesChanged)
   }
 

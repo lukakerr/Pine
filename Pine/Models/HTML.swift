@@ -69,6 +69,12 @@ class HTML {
     )
   }
 
+  public func updateSyntaxTheme() {
+    self.loadCSS()
+  }
+
+  // MARK: - Private functions for setting up the HTML contents
+
   fileprivate func getApplicationSupportFolder() -> URL? {
     return FileManager.default.urls(
       for: .applicationSupportDirectory,
