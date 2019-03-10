@@ -15,44 +15,49 @@ class MarkdownView: NSView {
   }
 
   private func updateUI() {
-    let bg = theme.background
-
-    var appearance = window?.appearance?.name
+    var appAppearance = window?.appearance?.name
 
     if #available(OSX 10.14, *) {
-      appearance = NSApp.effectiveAppearance.name
+      appAppearance = NSApp.effectiveAppearance.name
     }
 
     self.window?.titlebarAppearsTransparent = preferences[Preference.modernTitlebar]
 
-    if appearance == .dark || bg.isDark {
-      theme.code = bg.lighter
-      theme.text = .white
-
-      // Using dark mode, so remove theme based appearance
-      if appearance == .dark {
-        window?.backgroundColor = nil
-      } else {
-        if !preferences[Preference.useSystemAppearance] {
-          window?.appearance = NSAppearance(named: .dark)
-        }
-        window?.backgroundColor = bg
+    // Not using system appearance, so stick with theme
+    if !preferences[Preference.useSystemAppearance] {
+      if let bg = theme.highlightr.theme.themeBackgroundColor {
+        setThemeAndWindowAppearance(
+          isDark: bg.isDark,
+          color: bg
+        )
       }
     } else {
-      theme.code = bg.darker
-      theme.text = .black
-      if !preferences[Preference.useSystemAppearance] {
-        window?.appearance = NSAppearance(named: .aqua)
+      if let appearance = appAppearance {
+        setThemeAndWindowAppearance(
+          isDark: appearance == .dark,
+          color: NSColor.textBackgroundColor
+        )
       }
-      window?.backgroundColor = bg
-    }
 
-    // Remove appearance so when dark/light mode changed, updateLayer() is called
-    if preferences[Preference.useSystemAppearance] {
       window?.appearance = nil
     }
 
     NotificationCenter.send(.appearanceChanged)
+  }
+
+  private func setThemeAndWindowAppearance(isDark: Bool, color: NSColor) {
+    if isDark {
+      theme.code = color.lighter
+      theme.text = .white
+      window?.appearance = NSAppearance(named: .dark)
+    } else {
+      theme.code = color.darker
+      theme.text = .black
+      window?.appearance = NSAppearance(named: .light)
+    }
+
+    theme.background = color
+    window?.backgroundColor = color
   }
 
 }

@@ -59,6 +59,7 @@
 		A1C40210221F868200E3DBCC /* ReferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C4020F221F868200E3DBCC /* ReferenceViewController.swift */; };
 		A1C65D82221179230053C422 /* DocumentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C65D81221179230053C422 /* DocumentController.swift */; };
 		A1C65FB620DE2B0D00326C60 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C65FB520DE2B0D00326C60 /* Alert.swift */; };
+		A1D4A0382234C77A00E2159A /* SidebarTableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A0372234C77A00E2159A /* SidebarTableRowView.swift */; };
 		A1D5466420D4D9CC00D1221A /* Exporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D5466320D4D9CC00D1221A /* Exporter.swift */; };
 		A1E647DC20D1E9C000F32E55 /* EditorSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */; };
 		A1EDC59F2183C231007153CA /* NSTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EDC59E2183C231007153CA /* NSTextView.swift */; };
@@ -148,6 +149,7 @@
 		A1C4020F221F868200E3DBCC /* ReferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceViewController.swift; sourceTree = "<group>"; };
 		A1C65D81221179230053C422 /* DocumentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentController.swift; sourceTree = "<group>"; };
 		A1C65FB520DE2B0D00326C60 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		A1D4A0372234C77A00E2159A /* SidebarTableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarTableRowView.swift; sourceTree = "<group>"; };
 		A1D5466320D4D9CC00D1221A /* Exporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exporter.swift; sourceTree = "<group>"; };
 		A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorSplitView.swift; sourceTree = "<group>"; };
 		A1EDC59E2183C231007153CA /* NSTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTextView.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				A13B2E8A22322CBD00F24A84 /* MarkdownTextView.swift */,
 				A198047220DB64BA0066FDA6 /* MarkdownView.swift */,
 				A1FB7AA32227F4E200DC2E0E /* Preferences */,
+				A1D4A0372234C77A00E2159A /* SidebarTableRowView.swift */,
 				A111014020E8B8A4001EBEDE /* SidebarView.swift */,
 			);
 			path = Views;
@@ -614,6 +617,7 @@
 				A13C23FC20919672008557D0 /* PreviewViewController.swift in Sources */,
 				A1C65D82221179230053C422 /* DocumentController.swift in Sources */,
 				A13B2E8D2232314000F24A84 /* URL.swift in Sources */,
+				A1D4A0382234C77A00E2159A /* SidebarTableRowView.swift in Sources */,
 				A10B86E12227BB8F000656DD /* PreferencesViewController.swift in Sources */,
 				A13C23FA209167F0008557D0 /* NSColor.swift in Sources */,
 				A182096E20919F6000016AD5 /* HTML.swift in Sources */,

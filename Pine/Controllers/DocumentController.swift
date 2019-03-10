@@ -10,6 +10,10 @@ import Cocoa
 
 class DocumentController: NSDocumentController {
 
+  private static func getCurrentWindowController() -> PineWindowController? {
+    return NSApp.keyWindow?.windowController as? PineWindowController
+  }
+
   override func openDocument(withContentsOf url: URL,
                              display displayDocument: Bool,
                              completionHandler: @escaping (NSDocument?, Bool, Error?) -> Void) {
@@ -36,7 +40,7 @@ class DocumentController: NSDocumentController {
 
   /// Replace the currently opened document (if it exists) with the provided URL
   public static func replaceCurrentDocument(with url: URL) {
-    guard let currentWindowController = Utils.getCurrentMainWindowController() else { return }
+    guard let currentWindowController = DocumentController.getCurrentWindowController() else { return }
 
     if let doc = currentWindowController.document as? Document {
       try? doc.read(from: url, ofType: url.pathExtension)

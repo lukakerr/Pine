@@ -62,19 +62,19 @@ class PineWindowController: NSWindowController, NSWindowDelegate {
     self.syncWindowSidebars()
   }
 
-  public func syncWindowSidebars() {
-    // Hacky way to get all sidebars and syncronize the sidebar data
-    // Map over all windows (tabs) and find the sidebar
-    getVisibleWindows().forEach {
-      ($0.windowController as? PineWindowController)?.sidebarViewController?.updateDocuments()
-    }
-  }
-
   func windowWillClose(_ notification: Notification) {
     // When a window is closed, a document is removed from the sidebar
     if let url = (document as? Document)?.fileURL {
       openDocuments.remove(itemWithUrl: url)
       syncWindowSidebars()
+    }
+  }
+
+  public func syncWindowSidebars() {
+    // Hacky way to get all sidebars and syncronize the sidebar data
+    // Map over all windows (tabs) and find the sidebar
+    getVisibleWindows().forEach {
+      ($0.windowController as? PineWindowController)?.sidebarViewController?.sync()
     }
   }
 
@@ -125,7 +125,7 @@ class PineWindowController: NSWindowController, NSWindowDelegate {
   /// Returns the current window's document path
   public static func getCurrentDocument() -> String? {
     guard
-      let window = Utils.getCurrentMainWindowController(),
+      let window = NSApp.keyWindow?.windowController as? PineWindowController,
       let doc = window.document as? Document
     else { return nil }
 
