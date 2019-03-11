@@ -31,7 +31,7 @@ class DocumentController: NSDocumentController {
       super.openDocument(
         withContentsOf: url,
         display: true,
-        completionHandler: { _,_,_  in }
+        completionHandler: completionHandler
       );
     }
 

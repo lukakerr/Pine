@@ -80,22 +80,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         DispatchQueue.main.async {
           openDocuments.addDocument(newItem)
 
+          // Don't have a window open
+          if NSApp.keyWindow == nil {
+            DocumentController.shared.newDocument(self)
+          }
+
           if isDirectory.boolValue {
-            // Don't have a window open
-            if NSApp.keyWindow == nil {
-              DocumentController.shared.newDocument(nil)
-            } else {
-              self.keyWindowController?.syncWindowSidebars()
-            }
+            self.keyWindowController?.syncWindowSidebars()
           } else {
             DocumentController.shared.openDocument(
               withContentsOf: file,
               display: true,
-              completionHandler: { _,_,_  in }
+              completionHandler: { _,_,_  in
+                Utils.getCurrentMainWindowController()?.window?.makeKeyAndOrderFront(nil)
+              }
             )
           }
-
-          Utils.getCurrentMainWindowController()?.window?.makeKeyAndOrderFront(nil)
         }
       }
     }
