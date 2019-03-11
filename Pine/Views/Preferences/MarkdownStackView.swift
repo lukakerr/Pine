@@ -17,6 +17,7 @@ class MarkdownStackView: NSStackView, PreferenceStackView {
     "GitHub @ Mentions": Preference.markdownMentions,
     "Footnotes": Preference.markdownFootnotes,
     "Checkboxes": Preference.markdownCheckboxes,
+    "WikiLinks": Preference.markdownWikilinks,
     "Strikethrough": Preference.markdownStrikethrough
   ]
 

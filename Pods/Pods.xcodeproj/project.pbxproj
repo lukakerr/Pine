@@ -7,189 +7,191 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		034CFE2C47B64DB8A38EACEADA6E8A07 /* solarized-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = F7801382BEFFA85780CEF129D96ABF6D /* solarized-light.min.css */; };
-		040F59E614BA660998C1BC6FA826DB6B /* TextElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD535D06129770D99CFE2E25BFFED99 /* TextElement.swift */; };
-		05B01ADEC8C5ABC32533C1F3B1E2B981 /* solarized-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 46E546519D32FFAD481039D43D40D5B2 /* solarized-dark.min.css */; };
-		070D3060FA127F69FF2FC010ACCAA0CD /* atelier-savanna-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 3C60E43B217861C2EA0FF14570BEDB4F /* atelier-savanna-light.min.css */; };
-		07807002166E92174CDF1220548E991A /* references.c in Sources */ = {isa = PBXBuildFile; fileRef = C8CC8E58A66B5A32393B85198254A5C0 /* references.c */; };
-		0A279F79F8E030623F17D6825174CCA6 /* parser.h in Headers */ = {isa = PBXBuildFile; fileRef = B33A7CC38B7EAC67510DC26A7F42F469 /* parser.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0B3A152979F0AE013CD7A6A2D6047573 /* libcmark_gfm.h in Headers */ = {isa = PBXBuildFile; fileRef = B08BE7D1AECFFEB9747E2548995A6D18 /* libcmark_gfm.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0E3E39E407D93D746B6BF95A25D67A8D /* atelier-lakeside-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 3D7C889BD6225D6394DF8D784F4ACA24 /* atelier-lakeside-dark.min.css */; };
-		0E92652CCDDE296D13ACDF5CB16721C1 /* plugin.c in Sources */ = {isa = PBXBuildFile; fileRef = EE5CED5FFD1B9EC078305BAD6C12AD74 /* plugin.c */; };
-		0EAC978A8F2C94C2E37C4AFBB0080EFE /* SwiftAST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7217901324BB333A7AE8633936F44BC8 /* SwiftAST.swift */; };
-		0EC403C1EE58D101938C6C0F9ADB9B06 /* ascetic.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 84907CF93E3AD8DA62D4E33059FDCB68 /* ascetic.min.css */; };
-		11AB03B40CCE38E1499460250DE5A30D /* tagfilter.c in Sources */ = {isa = PBXBuildFile; fileRef = 810737B92A5B69DA46705FE21416FB73 /* tagfilter.c */; };
-		157B35EAF77D26FB3D48C53BA4962C5D /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 5A51926B263179AF41394DD083174240 /* buffer.c */; };
-		16E412D9C1E88CB79AA05B5BE187D469 /* scanners.c in Sources */ = {isa = PBXBuildFile; fileRef = 03B6501AF9E01474ECF6AFA394B9A5AB /* scanners.c */; };
-		17E341A84188B755D5A2C4996FEE4612 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7425E47B7A878F2151163C4FC5ECD9F6 /* Theme.swift */; };
-		1962347C180F58D4ADEE209F80FB4513 /* syntax_extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FEF2432D683B2025E87461A0B9ABDBB /* syntax_extension.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1A40FE65F0AF89A5ACF226437B9D3DC2 /* purebasic.min.css in Resources */ = {isa = PBXBuildFile; fileRef = D490A0271963DE0CF26208E7199012B2 /* purebasic.min.css */; };
-		1A5B98453601BDF020C109B81ECB9C49 /* rainbow.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 2F14FBF1EA056315760A8038C81EC661 /* rainbow.min.css */; };
-		1B7458DC1F48D85A5702EF237A0AD410 /* vs.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 7F36793434A2F78A2737C179C9783A44 /* vs.min.css */; };
-		1BBC23A97D709016F332D8BCA8A080F9 /* utf8.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D688C0C50B0266DD5DBD4CDE18F04C9 /* utf8.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1C2DD3EC65D0B90419F02D445C58E87B /* atelier-heath-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = C9EA3FAB258AC77ACE556EDE27AEB1F7 /* atelier-heath-dark.min.css */; };
-		1CE88E980269484114C93E9E1464E79D /* paraiso-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 50A15F7C8E41BA9A9258FE8DCDE28913 /* paraiso-dark.min.css */; };
+		01A0D80707B56680A521F3797BDF59D8 /* cmark-gfm-swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F8EA842B9CB753606D1A8CA3BF1ED30E /* cmark-gfm-swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		034CFE2C47B64DB8A38EACEADA6E8A07 /* solarized-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = A8CBE7190E4CBC7F11EB4D286BB3BD95 /* solarized-light.min.css */; };
+		0468CA652F961A256A6F6F876EB418D3 /* cmark_export.h in Headers */ = {isa = PBXBuildFile; fileRef = 9827BDAEDE85AA0ABBC6049138229E9D /* cmark_export.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		05B01ADEC8C5ABC32533C1F3B1E2B981 /* solarized-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 597CBA8925167A08D2EF0954DC061C25 /* solarized-dark.min.css */; };
+		070D3060FA127F69FF2FC010ACCAA0CD /* atelier-savanna-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 1BA709E4A4B2F136A1794A7B8F9B17E7 /* atelier-savanna-light.min.css */; };
+		0A211DB9CFF99B4798FFDFE8F5479FC7 /* node.h in Headers */ = {isa = PBXBuildFile; fileRef = 45BCA587A3327320293D54A307AF50D5 /* node.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0E3E39E407D93D746B6BF95A25D67A8D /* atelier-lakeside-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = B2EC78B592AB266919CA086A873BF665 /* atelier-lakeside-dark.min.css */; };
+		0EC403C1EE58D101938C6C0F9ADB9B06 /* ascetic.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 6A4CC0277A71ED4B1BF23C72DA3E2A2B /* ascetic.min.css */; };
+		0F4CC877CA695F037BCE6990A050AB6D /* SwiftAST.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BFB652C912D80D206C8E6A9485021F /* SwiftAST.swift */; };
+		17E341A84188B755D5A2C4996FEE4612 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFA742076DB8EB8E3FC3551BC112D70 /* Theme.swift */; };
+		1A40FE65F0AF89A5ACF226437B9D3DC2 /* purebasic.min.css in Resources */ = {isa = PBXBuildFile; fileRef = FA1332BF67FFEF6CA45BBA6A28603856 /* purebasic.min.css */; };
+		1A5B98453601BDF020C109B81ECB9C49 /* rainbow.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 8D20451A1E27A4C2A01B6CD0649D24C0 /* rainbow.min.css */; };
+		1B7458DC1F48D85A5702EF237A0AD410 /* vs.min.css in Resources */ = {isa = PBXBuildFile; fileRef = DB0320F551748F2292225C9337C0FA31 /* vs.min.css */; };
+		1C2DD3EC65D0B90419F02D445C58E87B /* atelier-heath-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 4B756EE791911EC85E3D0B38BC335E84 /* atelier-heath-dark.min.css */; };
+		1CE88E980269484114C93E9E1464E79D /* paraiso-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 435CF1263A3676B562DA17362FFE1065 /* paraiso-dark.min.css */; };
 		1D98071AE6B85EB0E5055BE93F9B60C4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070ABAFE126777AC8FA808C7EF733C53 /* Cocoa.framework */; };
-		2133A8DE5EDAA7C2C72A199D24CEB016 /* emoji_list.h in Headers */ = {isa = PBXBuildFile; fileRef = 802DC5E41044287D0F8B2FE1B702E385 /* emoji_list.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2164CB004D5A5E96CA5977EA48D10F94 /* monokai-sublime.min.css in Resources */ = {isa = PBXBuildFile; fileRef = D4D0F2E27D13191152F40ECEF1BA8FFD /* monokai-sublime.min.css */; };
-		21E3C0C237B5A62959ECA63583B399F7 /* checkbox.c in Sources */ = {isa = PBXBuildFile; fileRef = FD0E8B5A47643546B3C7F080109DCE32 /* checkbox.c */; };
-		2357210329B8C8E01129A47C9E8876E5 /* arta.min.css in Resources */ = {isa = PBXBuildFile; fileRef = C6496083C538459557C76D68DA1D1B88 /* arta.min.css */; };
-		245CD80110A3EE78FB60390E42B6EBB5 /* default.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 7A26931659BD3E757E06C8C820566F99 /* default.min.css */; };
-		2BE96A2CFE78728DF0093557BF8F21D8 /* buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4660A61F728F0C1C54253D43E6953DE0 /* buffer.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2DC106CEE446A3A7BA645B955F7B69A1 /* houdini_html_e.c in Sources */ = {isa = PBXBuildFile; fileRef = BE7B62F9F4B0A277E5D00D455967CF45 /* houdini_html_e.c */; };
-		2E4F4E0A887E1533C4FB5095088F50C5 /* mention.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B0964DF429765FAF5D6A71FCE7C2DF /* mention.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		30B96DBA0D27648EC4E0EE0CC7E935E3 /* man.c in Sources */ = {isa = PBXBuildFile; fileRef = DA204DAA3F0E9A93BB1B774A58864768 /* man.c */; };
-		3254D3BCA1D769741EE0AED21E08E58F /* HTMLUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC85B2A02AB878D97A3B382D6038897 /* HTMLUtils.swift */; };
-		32638F8BB256B2A750813CA4D4A361DE /* footnotes.c in Sources */ = {isa = PBXBuildFile; fileRef = 4EC52418447650185E9FEC063EC19D21 /* footnotes.c */; };
-		335DD77AA680AD9F4DDA449C44C67B65 /* cmark_export.h in Headers */ = {isa = PBXBuildFile; fileRef = 92A57A14F4CA4C963504332B46CF833F /* cmark_export.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		38ABDA595CAC78E4854F6314CAA50517 /* scanners.re in Sources */ = {isa = PBXBuildFile; fileRef = 60D28FA7D544875AED1CCA11CEA0E251 /* scanners.re */; };
-		3953691C67986C495D1C505DED7964A4 /* mono-blue.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 68416B3B6FAFF38343AB217A5CAA4A5C /* mono-blue.min.css */; };
-		3AB9268FA8128B1A1B50F9053998E8FF /* highlight.min.js in Resources */ = {isa = PBXBuildFile; fileRef = A7329E1829A79829D011B480E25834A4 /* highlight.min.js */; };
-		3B55DD0CCEDFE93F160EFBFBFA96BD3A /* xcode.min.css in Resources */ = {isa = PBXBuildFile; fileRef = C929A017F962EABDFED13F6886B6EC36 /* xcode.min.css */; };
-		3BC4584241D74EDE085BB3A06479BD65 /* tomorrow-night.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 058DB5E8B86470CD0ECBCD57FFFD3583 /* tomorrow-night.min.css */; };
-		3BD67F7FE52F09F0A5E350A4686E5F6B /* checkbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AB6943AC0D1F921D9174C123C25E276 /* checkbox.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		40067CC9BB0D998E349F3E3C53C4377F /* ext_scanners.c in Sources */ = {isa = PBXBuildFile; fileRef = CF4022F052FAF7A9FF4A30EA64E11954 /* ext_scanners.c */; };
-		40C7AAE6919DA9568FE9BB4ED613F936 /* atelier-forest-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = B9E3A0C5263127CB26BC7B60EC511C9C /* atelier-forest-light.min.css */; };
-		41DBFC5942EE9D6A811396C52B61533F /* foundation.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 43AB2680931551D8E4EE3B70D7EED3DC /* foundation.min.css */; };
+		1F526D06D75617B3CE9E5B017B7A29BD /* cmark.c in Sources */ = {isa = PBXBuildFile; fileRef = EDE2971AB39E2D9633BB57074A9EFCCB /* cmark.c */; };
+		1FB1487B7291D1D344B518A943A57DB7 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = AEAD2875EADDE6710DE18C5BC0C0719A /* config.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		203550DBE46CD21337F0A1754CDA6C8C /* table.c in Sources */ = {isa = PBXBuildFile; fileRef = 69F0856E1305A4B12916741F6F9F689F /* table.c */; };
+		2164CB004D5A5E96CA5977EA48D10F94 /* monokai-sublime.min.css in Resources */ = {isa = PBXBuildFile; fileRef = B639B188D81ED2C3B978819CDBB1AB57 /* monokai-sublime.min.css */; };
+		234D22BBB3087726427D8CE8A34E2013 /* cmark_version.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EF2A977330CB7D9B76004218C08E92E /* cmark_version.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2357210329B8C8E01129A47C9E8876E5 /* arta.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 76464F9F1BE009DCADB58E67F35BE871 /* arta.min.css */; };
+		244DD8C848340EB35713EFB6DFA31A1F /* libcmark_gfm.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B820CBDE43A9C0FC705B2CDC4589DF4 /* libcmark_gfm.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		245CD80110A3EE78FB60390E42B6EBB5 /* default.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 7D56A4A7A83B4EC0FF25E40C3C54B787 /* default.min.css */; };
+		2991EDB76C66936ACC6BB0DFB0F1BDCF /* houdini_html_e.c in Sources */ = {isa = PBXBuildFile; fileRef = 5DE94F40369D271252E5952EFC7F2864 /* houdini_html_e.c */; };
+		3254D3BCA1D769741EE0AED21E08E58F /* HTMLUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B682994EBE85E7E5680C2D17D900AF /* HTMLUtils.swift */; };
+		32EF0DA119BDA93BFF06C65B23A5153C /* registry.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C7F9A759FFF9BF2A396FEDAF1C729E3 /* registry.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		36851BCAAC5AC99F3BC9A0C7338FD339 /* cmarkextensions_export.h in Headers */ = {isa = PBXBuildFile; fileRef = B31B8F21DB6A6946B6660EE28430405D /* cmarkextensions_export.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		391C82E8DFEF40D8835FA1DE1E9CB1EC /* houdini.h in Headers */ = {isa = PBXBuildFile; fileRef = C3D237558604343B4514B994E81036E6 /* houdini.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3953691C67986C495D1C505DED7964A4 /* mono-blue.min.css in Resources */ = {isa = PBXBuildFile; fileRef = F5577488612DD95E68231F9F6E279D7B /* mono-blue.min.css */; };
+		3A1D44DF319860AB6BBD76F73B8C4543 /* cmark_extension_api.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CA130B32B5721A0DBF449F18C4DE1FF /* cmark_extension_api.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3AB9268FA8128B1A1B50F9053998E8FF /* highlight.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 06D2E7BB03AB58D30AC4830109A1E5DC /* highlight.min.js */; };
+		3B55DD0CCEDFE93F160EFBFBFA96BD3A /* xcode.min.css in Resources */ = {isa = PBXBuildFile; fileRef = DF333A2724E3BD075D7088EE2D2359CA /* xcode.min.css */; };
+		3BC4584241D74EDE085BB3A06479BD65 /* tomorrow-night.min.css in Resources */ = {isa = PBXBuildFile; fileRef = B54DB37CD9F668000891088BD69426EB /* tomorrow-night.min.css */; };
+		3BE4744C55E7C454B71EDDF3F06F29AB /* ASTOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512222478010836EC7F39FF05EF4F56F /* ASTOperations.swift */; };
+		3E9CCA7EC2A5F6CAC215B25E44241081 /* strikethrough.h in Headers */ = {isa = PBXBuildFile; fileRef = C68001B357629098AC92DB792C4AD3B2 /* strikethrough.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3F091146B8612EA372505F1152D1340A /* syntax_extension.c in Sources */ = {isa = PBXBuildFile; fileRef = 85E8EA80B14BBD31454FBEFE0CE0D453 /* syntax_extension.c */; };
+		3F2C6057E894994FA5779D10CEED8485 /* module.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = 38747A296B59055CB80F982061F3BF39 /* module.modulemap */; };
+		406C9ED1252886D255A902A56CD7D156 /* scanners.re in Sources */ = {isa = PBXBuildFile; fileRef = AED57D5F702D4BA651A7073C695733F0 /* scanners.re */; };
+		408F0E812E9E6207A2A3BE0221A122A6 /* render.c in Sources */ = {isa = PBXBuildFile; fileRef = EA268CC5B861A63193C68D05545FB9B1 /* render.c */; };
+		40C7AAE6919DA9568FE9BB4ED613F936 /* atelier-forest-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 2C4618070ACADC18F56582BDA9BA9702 /* atelier-forest-light.min.css */; };
+		41DBFC5942EE9D6A811396C52B61533F /* foundation.min.css in Resources */ = {isa = PBXBuildFile; fileRef = EA16648BB1B9EB45509C707CA373FBF4 /* foundation.min.css */; };
+		42B0C7BD351F62BB69B7E7B109BAFAD1 /* utf8.c in Sources */ = {isa = PBXBuildFile; fileRef = 5F7135F241798C333A398D005A4C72AA /* utf8.c */; };
+		4467E3927D3D49A07CC7E9777ABBB237 /* xml.c in Sources */ = {isa = PBXBuildFile; fileRef = 439F449FC4920B579A1E8916DE231FFA /* xml.c */; };
 		44B72A73218FC3A6E848990C58418624 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CA6C8E627202D861B122CAC37427F4 /* AppKit.framework */; };
-		46267674789EF14E71FFF18B3270BA31 /* grayscale.min.css in Resources */ = {isa = PBXBuildFile; fileRef = A7784DFE292D837649D3D1508302D9C3 /* grayscale.min.css */; };
-		470393FA9F204C91599C699D265A8748 /* github.min.css in Resources */ = {isa = PBXBuildFile; fileRef = C3348FF1C63CD9D63394CB1D12324C03 /* github.min.css */; };
-		49CA720F9F6FCA7983B444A2C71CBB28 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57A5D79C73BB02F01C6D191149C4164 /* Element.swift */; };
-		4A98A661049E2374295DE28BAF1E751B /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 670BA8A46B327E63942BD17235C137BF /* config.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		4C26A23487DD79686F604753A007B476 /* atelier-dune-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 96ECF347C13E3EA5D81843FE86512EF3 /* atelier-dune-dark.min.css */; };
+		46267674789EF14E71FFF18B3270BA31 /* grayscale.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 760AD413B654D45C0903F89733DEE02C /* grayscale.min.css */; };
+		466A4F8B312B6FA2D7DEB31A8DCCD5F9 /* plugin.c in Sources */ = {isa = PBXBuildFile; fileRef = DC56458C4B3460160B51A7440725C110 /* plugin.c */; };
+		470393FA9F204C91599C699D265A8748 /* github.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 9BC289ED3649BFE1DB13F0C1665C48D3 /* github.min.css */; };
+		4C26A23487DD79686F604753A007B476 /* atelier-dune-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 81350D70FE0ACA00FFF373A93D37B16D /* atelier-dune-dark.min.css */; };
+		4CE574F0F49AB4028530FBFDD20BCA91 /* man.c in Sources */ = {isa = PBXBuildFile; fileRef = 7CC90A9876FA66FC010C94B85B001FD3 /* man.c */; };
+		4D2C2CD6B722F99D780FDD0F996E9707 /* strikethrough.c in Sources */ = {isa = PBXBuildFile; fileRef = 30D950FDEFF83D6C522F85CDE415829D /* strikethrough.c */; };
 		4E9454B5905B9BE281FDF8199E7745E6 /* Pods-Pine-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6CF7B7779283C39513E619B43E8B293 /* Pods-Pine-dummy.m */; };
-		4ED9C4A5263BB1F51E67C41B885E022F /* TableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31880FF8076E6B6AE5111171A590874 /* TableRow.swift */; };
-		5069C2390BDAC0DF956E93844D3A9DF3 /* houdini_href_e.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD5026E0A643C179CA960920759158 /* houdini_href_e.c */; };
-		50A891341CBEA36D0D64211345EBFD43 /* Highlightr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C642992BA52C372D148557E640F2378 /* Highlightr.swift */; };
-		51D77914D8E1403322F5EC20E7FE36FF /* Block+TableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C33C6E10F4586402DDA60B29A28AEB /* Block+TableRow.swift */; };
-		5340788D4C118661932A317C2917D16D /* cmark_ctype.h in Headers */ = {isa = PBXBuildFile; fileRef = A51ACFFA97B3C1E217DD40DA7FAF1222 /* cmark_ctype.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		53F59A7F7414336F0D446329C58EC7B3 /* registry.h in Headers */ = {isa = PBXBuildFile; fileRef = EADC1C4D4E0B8D67B29A175E096709B4 /* registry.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		53F63087CA9B31BA9D7A4615A598D8F2 /* houdini.h in Headers */ = {isa = PBXBuildFile; fileRef = 3340F6C6D2AD6215D9E2E0192F49D583 /* houdini.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		54AADBF676B30E78F59D490A00E6A127 /* html.c in Sources */ = {isa = PBXBuildFile; fileRef = 654D8C6E25EF458FBC3D835A4B901FB9 /* html.c */; };
-		55983C98B40C4B015045229FB1197471 /* ListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E4D8AB81DE8F676C67FB2FEF6702B8 /* ListElement.swift */; };
-		57AEAFA7265E4AD6231397E36B44788E /* autolink.c in Sources */ = {isa = PBXBuildFile; fileRef = 49F2B6BF19815670F68F0587D8653CBC /* autolink.c */; };
-		5842A5CC0D335E8EB124032B6FC8BCD0 /* tagfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 7054751567F0C6BE8459618F43E7A80C /* tagfilter.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		587AF90B0E2BC9E78C563BFDAF034A2B /* gruvbox-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = D56E0DC46ABB25DB15C9E5D0DC5DE230 /* gruvbox-dark.min.css */; };
-		58AE1C215CF274322155CC93CC068A62 /* tomorrow-night-blue.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 818F2B13B0F163AB49422CA88FDEB4EA /* tomorrow-night-blue.min.css */; };
-		58D7AE3DECE8E529617246A2B8984674 /* routeros.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 984B8EFA500FBDD78B0F9E198F3262D6 /* routeros.min.css */; };
-		5AD2FDA694613F9CC903BE0CB8FF61F5 /* strikethrough.c in Sources */ = {isa = PBXBuildFile; fileRef = 3C57E038394F3E25511D430F1F9F688A /* strikethrough.c */; };
-		5CD7F75F982EA8A5F2B3155A970F18FF /* cmark.c in Sources */ = {isa = PBXBuildFile; fileRef = F3A5BBB0DEA4995C7DE8261479A115C4 /* cmark.c */; };
-		5DD00DE0D5CE1B6D2F14BC14BC16FEE4 /* atelier-plateau-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 26587D1B1A16D4B5C5197BE880DB5737 /* atelier-plateau-dark.min.css */; };
-		600B1BA8B48F7014AA357861F2388419 /* latex.c in Sources */ = {isa = PBXBuildFile; fileRef = 62527635C16B5D5BC3E7F5921C3DFEA2 /* latex.c */; };
-		602F9FED01474B6EA2A2D9180496A9D9 /* CodeAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99639F9AFE49A012B16B5C4F50902A1 /* CodeAttributedString.swift */; };
-		61B5F1EFF00B06B0D824FCB36F567E6B /* case_fold_switch.inc in Sources */ = {isa = PBXBuildFile; fileRef = 6FD4D21A5848956AF18B50152DF11E2B /* case_fold_switch.inc */; };
-		64FF9CB09BD5C8B65F1AA75097CDAE3A /* module.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = D5742D4D33A3977B4AD7349DEE73CA9B /* module.modulemap */; };
-		6506D2EF5A4149FFAF92CAE7161F644A /* entities.inc in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E59EC9ECE3E31C06EF3F728D6FD71 /* entities.inc */; };
-		6847320B3C3B4D04AA650B13BC55103E /* blocks.c in Sources */ = {isa = PBXBuildFile; fileRef = DE8994A840E7A0865FC508207502E886 /* blocks.c */; };
-		68744BBC9DCA53C852A3F05C0D182222 /* emoji.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E7B4B9B522AAFCD62C93CA59045DBD5 /* emoji.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		68BB9F677FA224667778556968557942 /* color-brewer.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 7082BA4278418EDFE8D364B8CB43ADCB /* color-brewer.min.css */; };
-		68BC79124241175604D48BAD08D1761E /* atom-one-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 19982CECBEE84A582AF195BF3B78DB24 /* atom-one-dark.min.css */; };
-		69CADE3989D0C0644E2D64DC2F67639A /* registry.c in Sources */ = {isa = PBXBuildFile; fileRef = B54D2124FCDC3645538CE5A0126ADC11 /* registry.c */; };
-		6A8A070DD8F87C415A236AE765310BFF /* arduino-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 1BED51DA4A7D90E28C3DCE0FD7F00D77 /* arduino-light.min.css */; };
-		6DBFABAAAB3506970BFBC43EEAB33EFB /* node.h in Headers */ = {isa = PBXBuildFile; fileRef = C2DCA16DE188D9CCF5609921C8D5A032 /* node.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6EAA190FFB136FCD190A13B9FE9F751B /* map.h in Headers */ = {isa = PBXBuildFile; fileRef = 729606A9168A887084A1631A5ED961AC /* map.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6EFDC01E16B139D0A4E472F21AB9611E /* railscasts.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 07448155C6B2C98AF29F66316CEE8D52 /* railscasts.min.css */; };
-		712E9C1B1828A6ACB1FDC1DB19F1A72E /* plaintext.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F3684BE31EBC4DCF70F783EDF5F20C6 /* plaintext.c */; };
-		717D6D331246602A4323EBD5E88C854A /* render.h in Headers */ = {isa = PBXBuildFile; fileRef = 85631630539478AC20F55603C0A0E1DB /* render.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		73B3176D54EAE63D680AF1A2ADADA215 /* houdini_html_u.c in Sources */ = {isa = PBXBuildFile; fileRef = F4811E4F024C00F9A5942D5A98F7B73D /* houdini_html_u.c */; };
-		76427B01EB90E236215B0033F770D804 /* atelier-estuary-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 0A8DF986F563CB742CED8EF24C1F5AFC /* atelier-estuary-light.min.css */; };
-		776DE484C5FA3CAFB817C3B9F5996E79 /* emoji.c in Sources */ = {isa = PBXBuildFile; fileRef = 6C21F45AB8FF7BC2E5DE10C1D4E72273 /* emoji.c */; };
-		78CC2079282E81A787538BA6CFE880A3 /* qtcreator_light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = CE14E5315C8905B73D01E7A6F3F9D65D /* qtcreator_light.min.css */; };
-		796AF880B87D906EF670A82410B43BC6 /* obsidian.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 806ECBA0636C95271178BD0DD455F0D8 /* obsidian.min.css */; };
+		501DE201E6CC2ACCA9BD026938F4697C /* registry.c in Sources */ = {isa = PBXBuildFile; fileRef = BD43AE43D7494235DDF1B3F2C3691989 /* registry.c */; };
+		50A891341CBEA36D0D64211345EBFD43 /* Highlightr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B55B6241B439B9CC256C3F3172B30B1 /* Highlightr.swift */; };
+		56B5BEC838DB297BD0201429C1E42D7D /* emoji_list.h in Headers */ = {isa = PBXBuildFile; fileRef = EE5265C028FA0B8C69858B65798E0E16 /* emoji_list.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		587AF90B0E2BC9E78C563BFDAF034A2B /* gruvbox-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 6915933E631BE445DC9EEC4B7B3663B5 /* gruvbox-dark.min.css */; };
+		58AE1C215CF274322155CC93CC068A62 /* tomorrow-night-blue.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 934851B8949C66043FAA3F1B8AE50C7F /* tomorrow-night-blue.min.css */; };
+		58D7AE3DECE8E529617246A2B8984674 /* routeros.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 9724957891E8F9C6DCDA4365B4721D4D /* routeros.min.css */; };
+		5AC3685C443C91AADDA165BED5ACBB68 /* TextElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8459AD8543FC1EEDE332BB6B423C87 /* TextElement.swift */; };
+		5CD594F9AD5A5AAFA22E44033C89D044 /* utf8.h in Headers */ = {isa = PBXBuildFile; fileRef = 38832F8ED8C69472D41DC83E50A6BE1A /* utf8.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5D386D4598FA38C5D28CBC5D629C6014 /* Inline+TextElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42C08F1A9C4D8383E1643130EE6ABBD /* Inline+TextElement.swift */; };
+		5DD00DE0D5CE1B6D2F14BC14BC16FEE4 /* atelier-plateau-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 0890D6777BBF81F2B9CD3BEE3A80AE3E /* atelier-plateau-dark.min.css */; };
+		5E187FC91D92BF36EA1DACA56DC75844 /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = DA3FAB5FD849F2130D7614789E7D0C1B /* buffer.c */; };
+		602F9FED01474B6EA2A2D9180496A9D9 /* CodeAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3746365785982C0C92B5D1AC969193 /* CodeAttributedString.swift */; };
+		608DB6812D168C5791CE6F2A884ED384 /* references.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A9191769B8F3C0DBE4265856FE93216 /* references.c */; };
+		66FB331FA28EA9691364DE20F8FDA55B /* html.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA39DCF29F4C5EF1604DB98541AC814 /* html.c */; };
+		6838650E6DC1FF7CF2F6596A69E5238A /* emoji.c in Sources */ = {isa = PBXBuildFile; fileRef = 43C8F41A58FBD484D54845D3A5BBE615 /* emoji.c */; };
+		68BB9F677FA224667778556968557942 /* color-brewer.min.css in Resources */ = {isa = PBXBuildFile; fileRef = C51D83E1D849D5561078EDAA2406A144 /* color-brewer.min.css */; };
+		68BC79124241175604D48BAD08D1761E /* atom-one-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 7BC21785F4274E21DCD809C1D07DCACA /* atom-one-dark.min.css */; };
+		6A02596BE656C971DF768E9A98BB9107 /* checkbox.c in Sources */ = {isa = PBXBuildFile; fileRef = D3CE7845F8BF94A16AE8423AA8D79D37 /* checkbox.c */; };
+		6A54CF605CA2B93379129552336E04CB /* houdini_href_e.c in Sources */ = {isa = PBXBuildFile; fileRef = D940F30A4CB696184FB5A4D4E80DC142 /* houdini_href_e.c */; };
+		6A8A070DD8F87C415A236AE765310BFF /* arduino-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 00B9DE336524CE53A42BA448B80B53DD /* arduino-light.min.css */; };
+		6D7B821EA0862E88C003F5427E3093F7 /* cmark.h in Headers */ = {isa = PBXBuildFile; fileRef = D1379428C1CD93C5C6C244D413DE1A6D /* cmark.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6EFDC01E16B139D0A4E472F21AB9611E /* railscasts.min.css in Resources */ = {isa = PBXBuildFile; fileRef = A7CE74FB697A6AF56A66CF3EA0B6BE8A /* railscasts.min.css */; };
+		72FE858EAC5922EE582AB62F1E5C045D /* Block+ListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6F1CAF1709851715C92600D99CD8AD /* Block+ListElement.swift */; };
+		741464C7F2253A5C8CDE8B4FB6E4AEAE /* Block+TableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F926EFD68D4D25A2CFEA122E46FA29 /* Block+TableRow.swift */; };
+		76427B01EB90E236215B0033F770D804 /* atelier-estuary-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A7BFE1F9EA27E4B8CC15852F4A10C /* atelier-estuary-light.min.css */; };
+		78CC2079282E81A787538BA6CFE880A3 /* qtcreator_light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 52936A4E20AC86D74814FAB88B8301F1 /* qtcreator_light.min.css */; };
+		796AF880B87D906EF670A82410B43BC6 /* obsidian.min.css in Resources */ = {isa = PBXBuildFile; fileRef = AB3D29A090D05AC7572A12CB7EC22213 /* obsidian.min.css */; };
+		797D305A8FC85A761909CD64926A98FD /* mention.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4C04CBEC01EAA9E2F3F01B0EF8AF0A /* mention.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7AA0F37F9119D325FC7B07CE1E8E4C56 /* Node+Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E8DB97648F5649EB943C93D15D5D1F /* Node+Elements.swift */; };
 		7ADAE9D080F2FF6EF3B93160D24002A5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070ABAFE126777AC8FA808C7EF733C53 /* Cocoa.framework */; };
-		7D027F45FAAC4F87DA0F09514AD8B72F /* ASTOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC920F18BD9D0DD1E3498DFC36B4E0E /* ASTOperations.swift */; };
-		8014A2E25353EB6030E2371B3CC64D83 /* qtcreator_dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 59660E763E53194E5DA9C618CF62E4F1 /* qtcreator_dark.min.css */; };
-		807087A5B44558B4DD1FFD4872115199 /* docco.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 66C45A17B7DFB92AE19E41ABAF8E392D /* docco.min.css */; };
-		8236308B1BDDA1AC57935431CA95AA17 /* strikethrough.h in Headers */ = {isa = PBXBuildFile; fileRef = 22523C23B48E0111194E6697A6421719 /* strikethrough.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		82ED90F9DA98D2B73E38EEACD5105676 /* idea.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 9CA049C94F2A00C6D1C3A1B667C840F1 /* idea.min.css */; };
-		82F0D2B7894B928A367AB8C140CCC189 /* sunburst.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 53DCF3D44E578CD5766B89BE813C29BF /* sunburst.min.css */; };
-		87AB93BD59A063994E3509F9006D5355 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070ABAFE126777AC8FA808C7EF733C53 /* Cocoa.framework */; };
-		89A35BE9B15E6759A9B619AEF548B21C /* cmark-gfm-swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 84789CDE58D95FE60C6D862CC20EB6F3 /* cmark-gfm-swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		89B02AF79ECF0D6974146F3A3D24105E /* cmark_version.h in Headers */ = {isa = PBXBuildFile; fileRef = FCD5D70783356059952496A46BC535BD /* cmark_version.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8A4C18DE8BF914E411376B3E9175FD68 /* core-extensions.c in Sources */ = {isa = PBXBuildFile; fileRef = 28F5330DDAE4FFE20FB0505680CCAD8B /* core-extensions.c */; };
-		8A76D526C27FE7887BDC92FE82F38332 /* dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 48973A9A5AC1242B92AA6B2D9CF8E4FB /* dark.min.css */; };
-		8C7B3EE312F209D343E88E1D6B8B415F /* xt256.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 759E87135E0A093C363DA7F8E28A0850 /* xt256.min.css */; };
-		8E5B14DB7E467620C47F19073209F9CF /* inlines.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E6A7083C97FF2C6DE3FE085F8CCFA6D /* inlines.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		90D42CCA2BE7DFF50F11BF761A85C2C3 /* atelier-sulphurpool-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 73759B2E9B383D77AFBEF7F2063EDA84 /* atelier-sulphurpool-light.min.css */; };
-		916247F60D18A78595ECEFF742AFD48E /* ir-black.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 116F3504BC98BC481C611FF6B1239D16 /* ir-black.min.css */; };
-		929CBBD95D0E4F5A3DFB0042C5CBFF1D /* footnotes.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CA10E293C15F6B7E461C2573B0715E2 /* footnotes.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		92A62A1FA05B2392AD4E97B9180E03DD /* arena.c in Sources */ = {isa = PBXBuildFile; fileRef = AFB07F85CBA1F7594FD753A919F43CA5 /* arena.c */; };
-		92C38071A44D47EC15FC2CE7B6496E7F /* hybrid.min.css in Resources */ = {isa = PBXBuildFile; fileRef = B006443CA8403BDAD97D2F89DB2606E0 /* hybrid.min.css */; };
-		93060D5397704CE773C74FC0AC9144B9 /* kimbie.dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 5795FE346D759491A2AB27E0A56369EF /* kimbie.dark.min.css */; };
-		96FE867DB357BF65D5F00D34A5A5B384 /* Block+TextElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D6D12DE9BBEF416D244E171B6C2FA1 /* Block+TextElement.swift */; };
-		971866FE625BAB7859EFD3C05D712F4A /* cmark-gfm-swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BB122F0EE67A29E196A46DD75FA485A9 /* cmark-gfm-swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9792314ED341C1578B1B4E4641C1EE76 /* magula.min.css in Resources */ = {isa = PBXBuildFile; fileRef = A35EBF04B6764CA562C6DF1A67397942 /* magula.min.css */; };
-		991F32A8FCE770C46E61E80C83C805EB /* autolink.h in Headers */ = {isa = PBXBuildFile; fileRef = AAADA0588E28CC67490A0B0D0A91D6D8 /* autolink.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9A2406ACC3BB13015FD22C5493506A4D /* atelier-plateau-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 97F3374E267306EA9E14514DC28B5806 /* atelier-plateau-light.min.css */; };
+		7AF27C4E162A6CF4B30C91912ED1B6B3 /* references.h in Headers */ = {isa = PBXBuildFile; fileRef = 98C425396376E42898D9976376E2E6B3 /* references.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7F904D1A17AFCF8B776EF9DE351535FC /* scanners.c in Sources */ = {isa = PBXBuildFile; fileRef = BF49351E4B51DD5B0126EFE54109F346 /* scanners.c */; };
+		7FC626F4B823E33C1D7EEBD11E00C38A /* blocks.c in Sources */ = {isa = PBXBuildFile; fileRef = 2511DF693E7B3DFFF4A636811C19CF17 /* blocks.c */; };
+		8014A2E25353EB6030E2371B3CC64D83 /* qtcreator_dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 895D25A84D84B8FEFDA6FA5BA019D080 /* qtcreator_dark.min.css */; };
+		807087A5B44558B4DD1FFD4872115199 /* docco.min.css in Resources */ = {isa = PBXBuildFile; fileRef = F011F6887237BF83230640824B1C5772 /* docco.min.css */; };
+		81532A9063D55638382497B7F4832E13 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070ABAFE126777AC8FA808C7EF733C53 /* Cocoa.framework */; };
+		82C707682706E9271CBA83F6C549CBD9 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20231AE60B30B70325B6A22CFC3013D4 /* Node.swift */; };
+		82ED90F9DA98D2B73E38EEACD5105676 /* idea.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 6E0362D2885AE2FDCC2EA6DD3D2A3CC7 /* idea.min.css */; };
+		82F0D2B7894B928A367AB8C140CCC189 /* sunburst.min.css in Resources */ = {isa = PBXBuildFile; fileRef = E4B0BE20284A575E5C9DF4750B502A20 /* sunburst.min.css */; };
+		865B90F8F6B9A4830A6873C205BD9B59 /* entities.inc in Sources */ = {isa = PBXBuildFile; fileRef = 01D3F89DA133418CAA17BD629BFFF839 /* entities.inc */; };
+		8A76D526C27FE7887BDC92FE82F38332 /* dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 616742BD1941F29888A14DB281889F67 /* dark.min.css */; };
+		8C7B3EE312F209D343E88E1D6B8B415F /* xt256.min.css in Resources */ = {isa = PBXBuildFile; fileRef = B4883482970E2D975CE3C336E1705990 /* xt256.min.css */; };
+		8D422A2CD5685B73F85DF05016A3E1FA /* wikilink.h in Headers */ = {isa = PBXBuildFile; fileRef = 12AAE7EFF9958CCDC56533E6E83918D8 /* wikilink.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8EE4B0877375EF6F3ED031D3857C7F93 /* autolink.c in Sources */ = {isa = PBXBuildFile; fileRef = 651672880ECF62F303036FE2630D4468 /* autolink.c */; };
+		90D42CCA2BE7DFF50F11BF761A85C2C3 /* atelier-sulphurpool-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 136224C038C78391F8420B8654D820AD /* atelier-sulphurpool-light.min.css */; };
+		916247F60D18A78595ECEFF742AFD48E /* ir-black.min.css in Resources */ = {isa = PBXBuildFile; fileRef = F5F7DB257DC8C21087E9B2BFAD311D56 /* ir-black.min.css */; };
+		9230C0EBBC0588B8656B6E8879732020 /* mention.c in Sources */ = {isa = PBXBuildFile; fileRef = BBECD8CF341417E88CC133ABB1710ED8 /* mention.c */; };
+		92C38071A44D47EC15FC2CE7B6496E7F /* hybrid.min.css in Resources */ = {isa = PBXBuildFile; fileRef = E303A85CBEEACD6F900EFAF6E99939BA /* hybrid.min.css */; };
+		93060D5397704CE773C74FC0AC9144B9 /* kimbie.dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 4DCB666F7CA0FF1E4E605A3FFDA1618C /* kimbie.dark.min.css */; };
+		9759BBBEC7F2E56E4F928DCF7B25461F /* Block+TextElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB52D12F4F6C52EFC549A71FE446C67 /* Block+TextElement.swift */; };
+		9792314ED341C1578B1B4E4641C1EE76 /* magula.min.css in Resources */ = {isa = PBXBuildFile; fileRef = D0634420D7ED90F84B485BF62567BAE2 /* magula.min.css */; };
+		9A2406ACC3BB13015FD22C5493506A4D /* atelier-plateau-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = FA5DAF3FD1EA2AA12EC918B29B1B88A1 /* atelier-plateau-light.min.css */; };
 		9A6119E901D973C7E82D8B246067C2E8 /* Pods-Pine-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D72E93BE5F228BD2AA5125AC03CCB203 /* Pods-Pine-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9ABB2B7606D45079588D76054CB6515E /* Highlightr-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE67AC502A57E8DCE385AAEDBCD240CF /* Highlightr-dummy.m */; };
-		9DFD842A0FC617F5417FC730F3D8A8CA /* chunk.h in Headers */ = {isa = PBXBuildFile; fileRef = CFF1B926E89D006875C3E08C124F8EC7 /* chunk.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A08CA82011341D3C4E847CFA7A5DF5CF /* gruvbox-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 9A0395B9D16386058692B17FE4BF2810 /* gruvbox-light.min.css */; };
-		A1946DA23E1B8F36B6D11DDFDE9D004E /* syntax_extension.c in Sources */ = {isa = PBXBuildFile; fileRef = CC6C6C516B570C1C873A85204828EBE1 /* syntax_extension.c */; };
-		A27AE920093246E696C32821D156EB3D /* pojoaque.min.css in Resources */ = {isa = PBXBuildFile; fileRef = E884F6993F40EC868B2FE11F3E2CD159 /* pojoaque.min.css */; };
-		A2D6052184B194D5A5C8595B57BEDF7D /* iterator.h in Headers */ = {isa = PBXBuildFile; fileRef = 75A5EB02A7CE8E533F975E71D9EC40DC /* iterator.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A4ADC0A33851EB13B48B17EDA7249679 /* paraiso-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = CF267F8568F78D51DFCEA37A58206B5F /* paraiso-light.min.css */; };
-		A63AD7352162E3475488FA42830037F2 /* brown-paper.min.css in Resources */ = {isa = PBXBuildFile; fileRef = EEDC3AE9B517BE298E68F9807ED4FA91 /* brown-paper.min.css */; };
-		A6667D3B1A7C2F9537F6E06677009652 /* monokai.min.css in Resources */ = {isa = PBXBuildFile; fileRef = E871CA1F5229B46E4A93E7181BA93916 /* monokai.min.css */; };
-		A854432B62D2571EF4D1DC68AF489818 /* kimbie.light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 6EFE553D8E217C1F56BF0242381E8417 /* kimbie.light.min.css */; };
-		A95D431AED42BFBEFD928541CD5226EF /* references.h in Headers */ = {isa = PBXBuildFile; fileRef = A8334B8048F9791D9BA561F3B59CEA74 /* references.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		AAFE7C78B780DCB1B129D0950BAF5E90 /* tomorrow.min.css in Resources */ = {isa = PBXBuildFile; fileRef = FD0345912C30F0B6C0AE4A7FC2451A70 /* tomorrow.min.css */; };
-		AC6EEF61A1CD4B053366F0CF22F0A84A /* inlines.c in Sources */ = {isa = PBXBuildFile; fileRef = 0694FAD33BF07E5BDDBD82CDE19D810A /* inlines.c */; };
-		AC88BC87E388FB4D86D784FE9120AEE1 /* Inline+TextElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CD42DE0ACA408724FDB894BEAE973 /* Inline+TextElement.swift */; };
-		AD88AEC6A2BBE5DF8947DA818505F8B7 /* xml.c in Sources */ = {isa = PBXBuildFile; fileRef = BB8B870FD200AAE6B8F1EFEEAE851C71 /* xml.c */; };
-		AE867860BB5DCC1879D97400ED002BCF /* atelier-estuary-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 3A7B9840DC1FC479CA7675B7CECF5086 /* atelier-estuary-dark.min.css */; };
-		AEA768F759973F926089A90C20AE754B /* codepen-embed.min.css in Resources */ = {isa = PBXBuildFile; fileRef = FEBE8EB9AC8B10A6E98E32EF6BC6F50B /* codepen-embed.min.css */; };
-		AEE93CC231AF663ECE779E0AF21AD68E /* Node+Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2A00F6C82C060017922078CEE393BB /* Node+Elements.swift */; };
-		B102C02DC7309B983290A86220883E11 /* map.c in Sources */ = {isa = PBXBuildFile; fileRef = 7D8ED12403CDDDDC356AFFF3C81A615D /* map.c */; };
-		B2EC2A6BED450315186C1DBDF9021393 /* dracula.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 72FC300C5DE82FDA59C50D5EF9AF0829 /* dracula.min.css */; };
-		B4467FFB80702268F0B901625FE7EB1A /* atelier-cave-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = EF589F19B970E7DA04973B63D44DDA28 /* atelier-cave-light.min.css */; };
-		B45DB6F0B0197A40D4ED09100ADE5603 /* plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 03A43BEE383B78F4EF7BB346774EF2F7 /* plugin.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B7CD203452E6EB12B6F5B06F8CE02D9A /* atelier-seaside-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 8019D4D2A5382CFEE39414B84D3D9316 /* atelier-seaside-light.min.css */; };
-		BCC1D1ADDD8FA113EECBD2263ABD44A1 /* atelier-savanna-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 3B896DA02E50B0F2AAC110DBC7DEAC69 /* atelier-savanna-dark.min.css */; };
-		BE067901AD608450E0CDB949D133D1AD /* cmark_ctype.c in Sources */ = {isa = PBXBuildFile; fileRef = D9FFAF7A54FECB41C13734D695D989F3 /* cmark_ctype.c */; };
-		C01D7D1F990A985507E76C108E57DD21 /* scanners.h in Headers */ = {isa = PBXBuildFile; fileRef = AD1D64C2FB70E423B0E0252E9EB92114 /* scanners.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C058A7513B8357EE83E0417ABCFF14B0 /* zenburn.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 8040A89ABD4D99E53DCB66BDBADF782C /* zenburn.min.css */; };
-		C0EAAA70C1357E8991F8E57DEE74E0F8 /* utf8.c in Sources */ = {isa = PBXBuildFile; fileRef = 1EA8E1E6E50CD17DFE9E3ABC1C758D1D /* utf8.c */; };
-		C2619A0EA49A7C12C8928882FBA28FCB /* atelier-cave-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = C00DB264BE776A18A41677D3FEA886FC /* atelier-cave-dark.min.css */; };
-		C4E6618C393F9A19CC81A8AFF662CE2A /* cmark.h in Headers */ = {isa = PBXBuildFile; fileRef = B799DB4BF7A7D71A65ACD0F03C443FE1 /* cmark.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C56EE23BBDD267CA9C9C5A381837D854 /* atelier-heath-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 16A32D43AEFA6F11757A89B2B7C38263 /* atelier-heath-light.min.css */; };
-		CB7A8B0E4E8F610AD71238323B01F43A /* atom-one-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 103175D461C37193564DFA8BC136719A /* atom-one-light.min.css */; };
-		CCEE27D96B04FE9380E5CF11E91326C9 /* linked_list.c in Sources */ = {isa = PBXBuildFile; fileRef = D8D23CED626E1FE0FCB8F6F393E5EE9F /* linked_list.c */; };
-		CE4A3701F2DC569FFCC82ACC6182ADDC /* Shims.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409B3D9667F3CF50AF81717CA7F4859D /* Shims.swift */; };
-		D21718C43FBF543527AE3F4BC13E165E /* googlecode.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 4A79DB221DCBEE44A4DA9A9F3429B602 /* googlecode.min.css */; };
-		D360F03A40E5EADD40B0EAE5A432D67E /* androidstudio.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 882B02F9E16E594D0E9AECC441E6932D /* androidstudio.min.css */; };
-		D379E2FCC8B8A89AA49DE20AF178727B /* cmark_extension_api.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0A00FDE04B8E4E3FDB71FA1313A751 /* cmark_extension_api.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D59D9ED6D9780395E696FE1BAC35BC41 /* node.c in Sources */ = {isa = PBXBuildFile; fileRef = 792B493C7CA33B919975BE1283ED0FF3 /* node.c */; };
-		D61D7255B86BBCE00626E24F36EC7052 /* atelier-seaside-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 097CCCE625DE06ABF1DD953A2773F6D5 /* atelier-seaside-dark.min.css */; };
-		D6E1F41AE2DE84E55BAEA12983A4FF75 /* darkula.min.css in Resources */ = {isa = PBXBuildFile; fileRef = DAC4F6D421B6A58AD7605601A66FE439 /* darkula.min.css */; };
-		D80B56690B8EEF11DCEEBE277AE2CAAD /* atelier-lakeside-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = A20FA63487E41534A60B06BCF16C123C /* atelier-lakeside-light.min.css */; };
-		D8528167AABD13FFD31172DDE7B4A81A /* darcula.min.css in Resources */ = {isa = PBXBuildFile; fileRef = C6DA43A65A7AB053188F8013F945CA39 /* darcula.min.css */; };
-		D8C10E4584944FB43FC4AB33931DB358 /* commonmark.c in Sources */ = {isa = PBXBuildFile; fileRef = D80B353FB9848EDA478C91F06A351D06 /* commonmark.c */; };
-		D96FD22E92893EE11068F184A7A6349D /* cmarkextensions_export.h in Headers */ = {isa = PBXBuildFile; fileRef = 629F51BD6DCF1831FF21B88DEEFD6EF9 /* cmarkextensions_export.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DB75E36F8A9C868154CDDA1B61153D15 /* Block+ListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2609C5B1D9EBCBC95A3F9B132EE264 /* Block+ListElement.swift */; };
-		DC23EBAE92DF19AC63B85A22C157888D /* ext_scanners.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E1DE4A7570C865BBF620095CA183062 /* ext_scanners.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DCF8A41F308304D83D6BE124DC4C2087 /* school-book.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 5E0F084A45CE87EF20EE09EFFC145A3E /* school-book.min.css */; };
-		DDA1B5FA5F9F91B4AA28C773DAD4B468 /* table.c in Sources */ = {isa = PBXBuildFile; fileRef = 99A5251C98A4D650B1B07EE6CF63045B /* table.c */; };
-		DDE62528505AD53B616ED0143115DEBF /* render.c in Sources */ = {isa = PBXBuildFile; fileRef = EA343352693679BA0EA173E2EF692DB0 /* render.c */; };
-		DE657E69C0CCEA977A0E588E9F337825 /* atelier-sulphurpool-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = C7826B7BBD208CB73D088B8F6D30A647 /* atelier-sulphurpool-dark.min.css */; };
-		E22CAE008E5C6308E84E5CA3317627CD /* atelier-forest-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 61E4A15C48EB590017CD42537AD1D3F8 /* atelier-forest-dark.min.css */; };
-		E404BC1823C57038ACF9B52F4C840A09 /* mention.c in Sources */ = {isa = PBXBuildFile; fileRef = 4FE18C4365D14FAF43B5FA1670342D08 /* mention.c */; };
-		E61C740CD3C96769E54CA37A16032747 /* iterator.c in Sources */ = {isa = PBXBuildFile; fileRef = 26E25F9466FA7BAEDFEE65F5A0665C02 /* iterator.c */; };
-		E8419CFBD3F5EA92DAB13514EC888D1D /* Highlightr-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC73FC0C1D15D6A3AED5A1C57909C071 /* Highlightr-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E89E23F9DD0E02A5183352714741B630 /* github-gist.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 4E09081AAB7EB510B5AF5B970DA41951 /* github-gist.min.css */; };
-		E9A05F2623A37459803AFC64B100345C /* tomorrow-night-eighties.min.css in Resources */ = {isa = PBXBuildFile; fileRef = D39A5034CC1B2A00090774D4D3244AC4 /* tomorrow-night-eighties.min.css */; };
-		EB2774DB7AC888F7E4F6C44D5903A586 /* table.h in Headers */ = {isa = PBXBuildFile; fileRef = E7B3E98ADEC1C78B669115DFDECDC67F /* table.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		EC67471F3FAEEE7BA134AA9C918995ED /* core-extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = F6FB6B46B4C5DCAD3E09FFCB06390A25 /* core-extensions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		EC7D727B2BE90A46309434841091E428 /* cmark-gfm-swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BB1A11188E11194803D9193C210EEB /* cmark-gfm-swift-dummy.m */; };
-		ECA455DA19E3E459C62CB91C9A419879 /* atelier-dune-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 2DEFBDA7C20974C9E11D08E7816BFE6A /* atelier-dune-light.min.css */; };
-		ECEB0BDB72A1DC3DAA37B945DAB6BF95 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8311AA80DDC75C43D71F0A0C01A9DAA /* Node.swift */; };
-		ED33362771D16B6F99C6430BF97E21AC /* far.min.css in Resources */ = {isa = PBXBuildFile; fileRef = C6F9B7EF73B2648CA812BD7DA67C033D /* far.min.css */; };
-		F7CCEAD30050FEBCB5687541EBC80A59 /* ocean.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 575D342D898DECAE3AB6D8DE5002B617 /* ocean.min.css */; };
-		F91BCEE697060C7A7358F6B3AE5A1345 /* agate.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 8E3D42146FC32423E4D79E6C9908F423 /* agate.min.css */; };
-		F96D550E2E626D2A12D67B2AB89E02D7 /* tomorrow-night-bright.min.css in Resources */ = {isa = PBXBuildFile; fileRef = DB6B358F18D6B2004137B15AC5FB7F63 /* tomorrow-night-bright.min.css */; };
-		FC6722B962B4BE6B2C096A68858A3AAB /* hopscotch.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 8D338F2D976B04AC1DBD570BF960B88B /* hopscotch.min.css */; };
-		FC90B24B653B0FC1AF1177BEC194DD24 /* vs2015.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 12C350D9891E214AD9A951F0FB273C7C /* vs2015.min.css */; };
-		FDB645D26926E21A38CB56FFE888D95A /* html.h in Headers */ = {isa = PBXBuildFile; fileRef = E357426F7B98B8333500024251D1DCA8 /* html.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9ABB2B7606D45079588D76054CB6515E /* Highlightr-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD870EE7BE79858893DD1F744111E5C5 /* Highlightr-dummy.m */; };
+		9B9FFA8C5EE50E163D86EF725634C7D1 /* autolink.h in Headers */ = {isa = PBXBuildFile; fileRef = 0351438BB47C1A833F8E143D94EC7CE0 /* autolink.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9D834ADD4E904BBE94854E180A2C5D60 /* buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A98683F52508293AAA918C68D72324E /* buffer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9E9297DE9C4EEA7A1A47FCBCCAF4A402 /* case_fold_switch.inc in Sources */ = {isa = PBXBuildFile; fileRef = 846D83DB37A3210E02A1A364D015486C /* case_fold_switch.inc */; };
+		A08CA82011341D3C4E847CFA7A5DF5CF /* gruvbox-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 0930DCC85ED9480771B41814DF19644B /* gruvbox-light.min.css */; };
+		A27AE920093246E696C32821D156EB3D /* pojoaque.min.css in Resources */ = {isa = PBXBuildFile; fileRef = B40ACEF232F13FFA2A3CE682FBFE217C /* pojoaque.min.css */; };
+		A409CA3ED0D5210EC44AC873CD57A3BD /* core-extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 57B55B9DBEF16F0BC5BD81FD6FE83D42 /* core-extensions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A4ADC0A33851EB13B48B17EDA7249679 /* paraiso-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 714F21A2C9E1525F8F486E2929E96EDA /* paraiso-light.min.css */; };
+		A63AD7352162E3475488FA42830037F2 /* brown-paper.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 7B7A72DC3B3D142E451739D9F81916FB /* brown-paper.min.css */; };
+		A6667D3B1A7C2F9537F6E06677009652 /* monokai.min.css in Resources */ = {isa = PBXBuildFile; fileRef = C6CDD04A42AE04BC5A85EC16906D805E /* monokai.min.css */; };
+		A6FA9E151AC9BADD46B772D0A9BE4CE8 /* map.h in Headers */ = {isa = PBXBuildFile; fileRef = 70B71EDC4C5FA7307DECAB2B1FBDF4A4 /* map.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A854432B62D2571EF4D1DC68AF489818 /* kimbie.light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 4CEB7450F3077DE317486A44CEEA592A /* kimbie.light.min.css */; };
+		A8601A822FCC0615338D8839C87A56D5 /* map.c in Sources */ = {isa = PBXBuildFile; fileRef = 6FF84588777059AFE1B32BB67B2109C7 /* map.c */; };
+		A8886C851E15C66BF94C56F8EAF8492E /* plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5B7CC999C63A1D1D2CAB8372CAA715 /* plugin.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A8D78EBA34C795E48442F78E2D18FBB4 /* ListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E7770FBC8B77AC0D617296C0DD11D7 /* ListElement.swift */; };
+		AAFE7C78B780DCB1B129D0950BAF5E90 /* tomorrow.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 9C5111DA9AAEE6A901638565F50CBCA1 /* tomorrow.min.css */; };
+		ACA828952F2A54BBBBA20D23E463F6AE /* TableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A92F8D813368F499B0F5EA1761E28E /* TableRow.swift */; };
+		AE867860BB5DCC1879D97400ED002BCF /* atelier-estuary-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = F9039DE40A9ED44DE5222101AD787C07 /* atelier-estuary-dark.min.css */; };
+		AEA768F759973F926089A90C20AE754B /* codepen-embed.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 5E75245776DCF9D9A575A90718A92BDD /* codepen-embed.min.css */; };
+		B0A1B3DC2ADB02F1AB68FC08AD056DA8 /* footnotes.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E18EE74F72765468D103D36ADC3A4DF /* footnotes.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B1506621459CA42CC91D78D7A5BF888A /* cmark-gfm-swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D03107173B7659DF541AB64D7FE8621 /* cmark-gfm-swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2EC2A6BED450315186C1DBDF9021393 /* dracula.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 3156AFA693ACE6177A84A49E495EF7D9 /* dracula.min.css */; };
+		B4467FFB80702268F0B901625FE7EB1A /* atelier-cave-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 077BEF3C3F48F7193CC4482115286D3C /* atelier-cave-light.min.css */; };
+		B7CD203452E6EB12B6F5B06F8CE02D9A /* atelier-seaside-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 53177B6307A558F6568F773F7A448695 /* atelier-seaside-light.min.css */; };
+		B8CB64578269DAD1EC033435E08E4CA7 /* tagfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 97CE71C51E6B28CEB7E3F2C36BB4BF44 /* tagfilter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BCC1D1ADDD8FA113EECBD2263ABD44A1 /* atelier-savanna-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 3CDEF1AEBF63F64FA704C30A788627AF /* atelier-savanna-dark.min.css */; };
+		C058A7513B8357EE83E0417ABCFF14B0 /* zenburn.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 032F5155200FBD56E9A78F3A136D1202 /* zenburn.min.css */; };
+		C060344006B01AF2DDE84F408F6225D3 /* iterator.h in Headers */ = {isa = PBXBuildFile; fileRef = 35FBE9F99F52BA85A098A2B14B114AF0 /* iterator.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C2619A0EA49A7C12C8928882FBA28FCB /* atelier-cave-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 2894285E2D25FF1EC1A72836651E7A48 /* atelier-cave-dark.min.css */; };
+		C31A1FF6D90FCC7254984604117B94FC /* node.c in Sources */ = {isa = PBXBuildFile; fileRef = 253EE05D2A87F32F9BAD200BD77FDBB8 /* node.c */; };
+		C52CE37EAC1F85C00BF7A105CDC9F0C4 /* html.h in Headers */ = {isa = PBXBuildFile; fileRef = E718C34E8527D0F7D40EB9F1D4FCA14A /* html.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C56EE23BBDD267CA9C9C5A381837D854 /* atelier-heath-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = BB26278995CD66C060BA864AF1ED7BC4 /* atelier-heath-light.min.css */; };
+		CB0107EBB92D62E85813884707F707AE /* arena.c in Sources */ = {isa = PBXBuildFile; fileRef = 04EA1D49564FA315D2B737479BC8FC1F /* arena.c */; };
+		CB7A8B0E4E8F610AD71238323B01F43A /* atom-one-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 275F7422F79E0089DDCCB6BBB3F9ED86 /* atom-one-light.min.css */; };
+		CBD3115F374093706824273BDBD80E95 /* footnotes.c in Sources */ = {isa = PBXBuildFile; fileRef = 96034FDDACDD86171038954309B76D76 /* footnotes.c */; };
+		CD0F59A6BC836FA3B89C68CC52B0834A /* inlines.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F3D92DA5ACC08DFD684963A8A023D3A /* inlines.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CD2188F7CCCDD313ADD48DA85D5F3A64 /* plaintext.c in Sources */ = {isa = PBXBuildFile; fileRef = E3FE82708D988741B430BDEC668DE624 /* plaintext.c */; };
+		CE4A3701F2DC569FFCC82ACC6182ADDC /* Shims.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6A1E049633F42858BDF91C844D6327 /* Shims.swift */; };
+		CEFB7A6A327E06179138FEBCFD4E8DE1 /* parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 5873A98CB99D0435B43CF0ED384733F4 /* parser.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D182DA8E6E09BF3FE01A7AD1857A62ED /* wikilink.c in Sources */ = {isa = PBXBuildFile; fileRef = F85F8BB24F7E6BA4C03B328631CB8B56 /* wikilink.c */; };
+		D21718C43FBF543527AE3F4BC13E165E /* googlecode.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 96D729642075B335ABAA2BB5CD01E610 /* googlecode.min.css */; };
+		D3129F33C34181744553F5D89F95B674 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48173BE2CEF17D668A6DF7C24589835 /* Element.swift */; };
+		D360F03A40E5EADD40B0EAE5A432D67E /* androidstudio.min.css in Resources */ = {isa = PBXBuildFile; fileRef = A5F3AEAA340AA598FC7C22E1711DB94D /* androidstudio.min.css */; };
+		D402D6373FAE7F0C2498CE1EAE6A62A7 /* cmark_ctype.h in Headers */ = {isa = PBXBuildFile; fileRef = 845C3E8C1E631031A6DFD4E31F03E17D /* cmark_ctype.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D61D7255B86BBCE00626E24F36EC7052 /* atelier-seaside-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 11AB3C5FCE6D8AD76CBD17D1C1677405 /* atelier-seaside-dark.min.css */; };
+		D64FCDCD0AA8F299BDF2CA6050DFE639 /* checkbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B096F13046F3A8CC97AA6297A30920F /* checkbox.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D6E1F41AE2DE84E55BAEA12983A4FF75 /* darkula.min.css in Resources */ = {isa = PBXBuildFile; fileRef = BC91215ACCD7BBCFD991E9C67621EF3C /* darkula.min.css */; };
+		D80B56690B8EEF11DCEEBE277AE2CAAD /* atelier-lakeside-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 970A8E72D90526110E536890DF5A5AA2 /* atelier-lakeside-light.min.css */; };
+		D8528167AABD13FFD31172DDE7B4A81A /* darcula.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 38F62CD4367F6A5D6315498D9A1EC54D /* darcula.min.css */; };
+		D8B218FDB900F2A14751500004E7C3A4 /* inlines.c in Sources */ = {isa = PBXBuildFile; fileRef = 345DB5B90EFE8C308E749C2544E1F1BB /* inlines.c */; };
+		DBC65989E7FC49E4C50A1A749F3A1FA0 /* commonmark.c in Sources */ = {isa = PBXBuildFile; fileRef = 0FA543AD0DD6C77EDDB926415B891369 /* commonmark.c */; };
+		DCF8A41F308304D83D6BE124DC4C2087 /* school-book.min.css in Resources */ = {isa = PBXBuildFile; fileRef = AEB918082C82E19961816C8C9FCC4A2A /* school-book.min.css */; };
+		DE3F2FA36F91AC6D4D9214EA31B0506E /* table.h in Headers */ = {isa = PBXBuildFile; fileRef = FF52ABB37FD77859E120F9F6F501DACC /* table.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DE657E69C0CCEA977A0E588E9F337825 /* atelier-sulphurpool-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 2C273AB10AFF9829734E91B68F2A0C4D /* atelier-sulphurpool-dark.min.css */; };
+		DF3442453A122EE03F429BBD32A8992C /* cmark-gfm-swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 57546AF89BE26EF95A80B051550C7134 /* cmark-gfm-swift-dummy.m */; };
+		E22CAE008E5C6308E84E5CA3317627CD /* atelier-forest-dark.min.css in Resources */ = {isa = PBXBuildFile; fileRef = C396E3C8BD06CCBAA5A21727F8497785 /* atelier-forest-dark.min.css */; };
+		E32B7B5B8CD971FECA5FFB98F57DBE22 /* linked_list.c in Sources */ = {isa = PBXBuildFile; fileRef = E4AE0A36ED7DD363C9BEB2ED8AEECE9A /* linked_list.c */; };
+		E3A0BA0F29860A52B409D985A6CE3CCF /* emoji.h in Headers */ = {isa = PBXBuildFile; fileRef = 267BFF02C67A55C1B4FE7E6F656C07D1 /* emoji.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E62B2B8AFC7336EA4ACE166AB5C744E8 /* core-extensions.c in Sources */ = {isa = PBXBuildFile; fileRef = 0468B59FB1AF8C5383D5555966CF245D /* core-extensions.c */; };
+		E6D4ECC29A778A831BD82342AC00221A /* chunk.h in Headers */ = {isa = PBXBuildFile; fileRef = 605B4DBA02A61DF7D4DD9BC6384575D3 /* chunk.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E8419CFBD3F5EA92DAB13514EC888D1D /* Highlightr-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A8A8F24F284DB609C3716502184C4CFB /* Highlightr-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E89E23F9DD0E02A5183352714741B630 /* github-gist.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 52FD368F265BE2D6429ED8F9FDDCBC14 /* github-gist.min.css */; };
+		E9A05F2623A37459803AFC64B100345C /* tomorrow-night-eighties.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 13E6D47DDE9D846F164BF56599B952BD /* tomorrow-night-eighties.min.css */; };
+		EAEDCBA2C4CB259EE57B9C07A7FF97F5 /* houdini_html_u.c in Sources */ = {isa = PBXBuildFile; fileRef = 3C09DC33DB7ED615E29DE2E1456FE772 /* houdini_html_u.c */; };
+		ECA455DA19E3E459C62CB91C9A419879 /* atelier-dune-light.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 3037DB65FC87AFFBBD7B0EE0F9DFAC6C /* atelier-dune-light.min.css */; };
+		ED33362771D16B6F99C6430BF97E21AC /* far.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 29F2B8365476466B0877B77ABADE6D09 /* far.min.css */; };
+		ED6B1827FA6C427D9933669EC1DF5803 /* ext_scanners.c in Sources */ = {isa = PBXBuildFile; fileRef = C25698DACD2B854E3520C4DA5D33A8EF /* ext_scanners.c */; };
+		F06CC006BB03EEC5A355F84C296A409A /* ext_scanners.h in Headers */ = {isa = PBXBuildFile; fileRef = B95C1814BE6658DBE4FA5D803129762F /* ext_scanners.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F1BE64F20D157E3AF173A491857B9D1A /* syntax_extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 087DF934D9FAFEA0B1A60FAF43AF0ECF /* syntax_extension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F2B5B4CA790383A0CE7C06DF61EDE13A /* render.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F4175918F36FBDE00564456F8915E64 /* render.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F661E1D6FB3F0C7FA0BB4179DB479F66 /* iterator.c in Sources */ = {isa = PBXBuildFile; fileRef = 455ABC0F8202EF2F25BBCC2319C3DB1E /* iterator.c */; };
+		F79A8F6AF7A0900266C56A3B095E56D8 /* tagfilter.c in Sources */ = {isa = PBXBuildFile; fileRef = 8387D50076DFCA6D69C1649D1860495D /* tagfilter.c */; };
+		F7CCEAD30050FEBCB5687541EBC80A59 /* ocean.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 8B9871A5A19A29075812F745568ECB77 /* ocean.min.css */; };
+		F88EFD38EA2F8ADB519331EA42549FE8 /* cmark_ctype.c in Sources */ = {isa = PBXBuildFile; fileRef = 6C4728C389A7F005F057AD06A0B15B35 /* cmark_ctype.c */; };
+		F91BCEE697060C7A7358F6B3AE5A1345 /* agate.min.css in Resources */ = {isa = PBXBuildFile; fileRef = C76FF4307AA040FC46EB02456D41E0C6 /* agate.min.css */; };
+		F96D550E2E626D2A12D67B2AB89E02D7 /* tomorrow-night-bright.min.css in Resources */ = {isa = PBXBuildFile; fileRef = D4EC3D67FBB761FFFC5BFE8AF8849530 /* tomorrow-night-bright.min.css */; };
+		FA593092EBC3B36744D63E832B259E44 /* scanners.h in Headers */ = {isa = PBXBuildFile; fileRef = AD46B06AA5C23FF447338A4E8AE2036D /* scanners.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FC6722B962B4BE6B2C096A68858A3AAB /* hopscotch.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 0F372D141BAA8343A4E57AD4D80BC161 /* hopscotch.min.css */; };
+		FC90B24B653B0FC1AF1177BEC194DD24 /* vs2015.min.css in Resources */ = {isa = PBXBuildFile; fileRef = C598763D2C74DFC1B216CAD4C8E7E4A7 /* vs2015.min.css */; };
+		FE4B1E238FC1BE9774E9D145A2F3541E /* latex.c in Sources */ = {isa = PBXBuildFile; fileRef = 53991D6C3987DFB6C936AE1ACF2B407F /* latex.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,7 +199,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6D3EDCD13214AB29231730B20BAAD101;
+			remoteGlobalIDString = 7E400E6B6A7EF0D643453DF52B9878E5;
 			remoteInfo = "cmark-gfm-swift";
 		};
 		D3D06ED8CD824A9E82106DB65ED1E20E /* PBXContainerItemProxy */ = {
@@ -211,217 +213,211 @@
 
 /* Begin PBXFileReference section */
 		0094077D4593C8BCAFE4F8C4040053F6 /* Pods-Pine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Pine.release.xcconfig"; sourceTree = "<group>"; };
-		03A43BEE383B78F4EF7BB346774EF2F7 /* plugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = plugin.h; path = Source/cmark_gfm/include/plugin.h; sourceTree = "<group>"; };
-		03B6501AF9E01474ECF6AFA394B9A5AB /* scanners.c */ = {isa = PBXFileReference; includeInIndex = 1; name = scanners.c; path = Source/cmark_gfm/scanners.c; sourceTree = "<group>"; };
-		04A56ACC4748723EA60E749F7A60E609 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04E40C435AB3447134D4BBA7301504B7 /* Highlightr.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Highlightr.xcconfig; sourceTree = "<group>"; };
-		058DB5E8B86470CD0ECBCD57FFFD3583 /* tomorrow-night.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "tomorrow-night.min.css"; path = "Pod/Assets/styles/tomorrow-night.min.css"; sourceTree = "<group>"; };
-		0694FAD33BF07E5BDDBD82CDE19D810A /* inlines.c */ = {isa = PBXFileReference; includeInIndex = 1; name = inlines.c; path = Source/cmark_gfm/inlines.c; sourceTree = "<group>"; };
+		00B9DE336524CE53A42BA448B80B53DD /* arduino-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "arduino-light.min.css"; path = "Pod/Assets/styles/arduino-light.min.css"; sourceTree = "<group>"; };
+		01D3F89DA133418CAA17BD629BFFF839 /* entities.inc */ = {isa = PBXFileReference; includeInIndex = 1; name = entities.inc; path = Source/cmark_gfm/entities.inc; sourceTree = "<group>"; };
+		032F5155200FBD56E9A78F3A136D1202 /* zenburn.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = zenburn.min.css; path = Pod/Assets/styles/zenburn.min.css; sourceTree = "<group>"; };
+		0351438BB47C1A833F8E143D94EC7CE0 /* autolink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = autolink.h; path = Source/cmark_gfm/include/autolink.h; sourceTree = "<group>"; };
+		0468B59FB1AF8C5383D5555966CF245D /* core-extensions.c */ = {isa = PBXFileReference; includeInIndex = 1; name = "core-extensions.c"; path = "Source/cmark_gfm/core-extensions.c"; sourceTree = "<group>"; };
+		04EA1D49564FA315D2B737479BC8FC1F /* arena.c */ = {isa = PBXFileReference; includeInIndex = 1; name = arena.c; path = Source/cmark_gfm/arena.c; sourceTree = "<group>"; };
+		06D2E7BB03AB58D30AC4830109A1E5DC /* highlight.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = highlight.min.js; path = Pod/Assets/Highlighter/highlight.min.js; sourceTree = "<group>"; };
 		070ABAFE126777AC8FA808C7EF733C53 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		07448155C6B2C98AF29F66316CEE8D52 /* railscasts.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = railscasts.min.css; path = Pod/Assets/styles/railscasts.min.css; sourceTree = "<group>"; };
-		097CCCE625DE06ABF1DD953A2773F6D5 /* atelier-seaside-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-seaside-dark.min.css"; path = "Pod/Assets/styles/atelier-seaside-dark.min.css"; sourceTree = "<group>"; };
-		0A8DF986F563CB742CED8EF24C1F5AFC /* atelier-estuary-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-estuary-light.min.css"; path = "Pod/Assets/styles/atelier-estuary-light.min.css"; sourceTree = "<group>"; };
-		0AB6943AC0D1F921D9174C123C25E276 /* checkbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = checkbox.h; path = Source/cmark_gfm/include/checkbox.h; sourceTree = "<group>"; };
-		0D688C0C50B0266DD5DBD4CDE18F04C9 /* utf8.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = utf8.h; path = Source/cmark_gfm/include/utf8.h; sourceTree = "<group>"; };
-		103175D461C37193564DFA8BC136719A /* atom-one-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atom-one-light.min.css"; path = "Pod/Assets/styles/atom-one-light.min.css"; sourceTree = "<group>"; };
-		116F3504BC98BC481C611FF6B1239D16 /* ir-black.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "ir-black.min.css"; path = "Pod/Assets/styles/ir-black.min.css"; sourceTree = "<group>"; };
-		12C33C6E10F4586402DDA60B29A28AEB /* Block+TableRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Block+TableRow.swift"; path = "Source/Block+TableRow.swift"; sourceTree = "<group>"; };
-		12C350D9891E214AD9A951F0FB273C7C /* vs2015.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = vs2015.min.css; path = Pod/Assets/styles/vs2015.min.css; sourceTree = "<group>"; };
-		16A32D43AEFA6F11757A89B2B7C38263 /* atelier-heath-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-heath-light.min.css"; path = "Pod/Assets/styles/atelier-heath-light.min.css"; sourceTree = "<group>"; };
-		19982CECBEE84A582AF195BF3B78DB24 /* atom-one-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atom-one-dark.min.css"; path = "Pod/Assets/styles/atom-one-dark.min.css"; sourceTree = "<group>"; };
-		1BED51DA4A7D90E28C3DCE0FD7F00D77 /* arduino-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "arduino-light.min.css"; path = "Pod/Assets/styles/arduino-light.min.css"; sourceTree = "<group>"; };
-		1EA8E1E6E50CD17DFE9E3ABC1C758D1D /* utf8.c */ = {isa = PBXFileReference; includeInIndex = 1; name = utf8.c; path = Source/cmark_gfm/utf8.c; sourceTree = "<group>"; };
-		1FEF2432D683B2025E87461A0B9ABDBB /* syntax_extension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = syntax_extension.h; path = Source/cmark_gfm/include/syntax_extension.h; sourceTree = "<group>"; };
-		22523C23B48E0111194E6697A6421719 /* strikethrough.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = strikethrough.h; path = Source/cmark_gfm/include/strikethrough.h; sourceTree = "<group>"; };
-		233E547EC25D8FCF4EECD9DE324F25B3 /* Highlightr.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Highlightr.modulemap; sourceTree = "<group>"; };
+		077BEF3C3F48F7193CC4482115286D3C /* atelier-cave-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-cave-light.min.css"; path = "Pod/Assets/styles/atelier-cave-light.min.css"; sourceTree = "<group>"; };
+		087DF934D9FAFEA0B1A60FAF43AF0ECF /* syntax_extension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = syntax_extension.h; path = Source/cmark_gfm/include/syntax_extension.h; sourceTree = "<group>"; };
+		0890D6777BBF81F2B9CD3BEE3A80AE3E /* atelier-plateau-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-plateau-dark.min.css"; path = "Pod/Assets/styles/atelier-plateau-dark.min.css"; sourceTree = "<group>"; };
+		0930DCC85ED9480771B41814DF19644B /* gruvbox-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "gruvbox-light.min.css"; path = "Pod/Assets/styles/gruvbox-light.min.css"; sourceTree = "<group>"; };
+		0C3746365785982C0C92B5D1AC969193 /* CodeAttributedString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CodeAttributedString.swift; path = Pod/Classes/CodeAttributedString.swift; sourceTree = "<group>"; };
+		0D03107173B7659DF541AB64D7FE8621 /* cmark-gfm-swift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "cmark-gfm-swift.h"; path = "Source/cmark-gfm-swift.h"; sourceTree = "<group>"; };
+		0F372D141BAA8343A4E57AD4D80BC161 /* hopscotch.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = hopscotch.min.css; path = Pod/Assets/styles/hopscotch.min.css; sourceTree = "<group>"; };
+		0FA543AD0DD6C77EDDB926415B891369 /* commonmark.c */ = {isa = PBXFileReference; includeInIndex = 1; name = commonmark.c; path = Source/cmark_gfm/commonmark.c; sourceTree = "<group>"; };
+		11AB3C5FCE6D8AD76CBD17D1C1677405 /* atelier-seaside-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-seaside-dark.min.css"; path = "Pod/Assets/styles/atelier-seaside-dark.min.css"; sourceTree = "<group>"; };
+		12AAE7EFF9958CCDC56533E6E83918D8 /* wikilink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = wikilink.h; path = Source/cmark_gfm/include/wikilink.h; sourceTree = "<group>"; };
+		136224C038C78391F8420B8654D820AD /* atelier-sulphurpool-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-sulphurpool-light.min.css"; path = "Pod/Assets/styles/atelier-sulphurpool-light.min.css"; sourceTree = "<group>"; };
+		13E6D47DDE9D846F164BF56599B952BD /* tomorrow-night-eighties.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "tomorrow-night-eighties.min.css"; path = "Pod/Assets/styles/tomorrow-night-eighties.min.css"; sourceTree = "<group>"; };
+		158C38E1217E4DBF57F9B940E76E8CD9 /* Highlightr-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Highlightr-prefix.pch"; sourceTree = "<group>"; };
+		1A9191769B8F3C0DBE4265856FE93216 /* references.c */ = {isa = PBXFileReference; includeInIndex = 1; name = references.c; path = Source/cmark_gfm/references.c; sourceTree = "<group>"; };
+		1BA709E4A4B2F136A1794A7B8F9B17E7 /* atelier-savanna-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-savanna-light.min.css"; path = "Pod/Assets/styles/atelier-savanna-light.min.css"; sourceTree = "<group>"; };
+		1EF2A977330CB7D9B76004218C08E92E /* cmark_version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cmark_version.h; path = Source/cmark_gfm/include/cmark_version.h; sourceTree = "<group>"; };
+		20231AE60B30B70325B6A22CFC3013D4 /* Node.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Node.swift; path = Source/Node.swift; sourceTree = "<group>"; };
 		23CA6C8E627202D861B122CAC37427F4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
-		26587D1B1A16D4B5C5197BE880DB5737 /* atelier-plateau-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-plateau-dark.min.css"; path = "Pod/Assets/styles/atelier-plateau-dark.min.css"; sourceTree = "<group>"; };
-		26E25F9466FA7BAEDFEE65F5A0665C02 /* iterator.c */ = {isa = PBXFileReference; includeInIndex = 1; name = iterator.c; path = Source/cmark_gfm/iterator.c; sourceTree = "<group>"; };
+		2511DF693E7B3DFFF4A636811C19CF17 /* blocks.c */ = {isa = PBXFileReference; includeInIndex = 1; name = blocks.c; path = Source/cmark_gfm/blocks.c; sourceTree = "<group>"; };
+		253EE05D2A87F32F9BAD200BD77FDBB8 /* node.c */ = {isa = PBXFileReference; includeInIndex = 1; name = node.c; path = Source/cmark_gfm/node.c; sourceTree = "<group>"; };
+		267BFF02C67A55C1B4FE7E6F656C07D1 /* emoji.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = emoji.h; path = Source/cmark_gfm/include/emoji.h; sourceTree = "<group>"; };
+		275F7422F79E0089DDCCB6BBB3F9ED86 /* atom-one-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atom-one-light.min.css"; path = "Pod/Assets/styles/atom-one-light.min.css"; sourceTree = "<group>"; };
 		280AC27E431079C5491133ED9ABC9EA6 /* Pods_Pine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Pine.framework; path = "Pods-Pine.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		28F5330DDAE4FFE20FB0505680CCAD8B /* core-extensions.c */ = {isa = PBXFileReference; includeInIndex = 1; name = "core-extensions.c"; path = "Source/cmark_gfm/core-extensions.c"; sourceTree = "<group>"; };
-		2B2609C5B1D9EBCBC95A3F9B132EE264 /* Block+ListElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Block+ListElement.swift"; path = "Source/Block+ListElement.swift"; sourceTree = "<group>"; };
-		2C642992BA52C372D148557E640F2378 /* Highlightr.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Highlightr.swift; path = Pod/Classes/Highlightr.swift; sourceTree = "<group>"; };
-		2DEFBDA7C20974C9E11D08E7816BFE6A /* atelier-dune-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-dune-light.min.css"; path = "Pod/Assets/styles/atelier-dune-light.min.css"; sourceTree = "<group>"; };
-		2F14FBF1EA056315760A8038C81EC661 /* rainbow.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = rainbow.min.css; path = Pod/Assets/styles/rainbow.min.css; sourceTree = "<group>"; };
-		3340F6C6D2AD6215D9E2E0192F49D583 /* houdini.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = houdini.h; path = Source/cmark_gfm/include/houdini.h; sourceTree = "<group>"; };
-		3A7B9840DC1FC479CA7675B7CECF5086 /* atelier-estuary-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-estuary-dark.min.css"; path = "Pod/Assets/styles/atelier-estuary-dark.min.css"; sourceTree = "<group>"; };
+		2894285E2D25FF1EC1A72836651E7A48 /* atelier-cave-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-cave-dark.min.css"; path = "Pod/Assets/styles/atelier-cave-dark.min.css"; sourceTree = "<group>"; };
+		29F2B8365476466B0877B77ABADE6D09 /* far.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = far.min.css; path = Pod/Assets/styles/far.min.css; sourceTree = "<group>"; };
+		2BB52D12F4F6C52EFC549A71FE446C67 /* Block+TextElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Block+TextElement.swift"; path = "Source/Block+TextElement.swift"; sourceTree = "<group>"; };
+		2C273AB10AFF9829734E91B68F2A0C4D /* atelier-sulphurpool-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-sulphurpool-dark.min.css"; path = "Pod/Assets/styles/atelier-sulphurpool-dark.min.css"; sourceTree = "<group>"; };
+		2C4618070ACADC18F56582BDA9BA9702 /* atelier-forest-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-forest-light.min.css"; path = "Pod/Assets/styles/atelier-forest-light.min.css"; sourceTree = "<group>"; };
+		3037DB65FC87AFFBBD7B0EE0F9DFAC6C /* atelier-dune-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-dune-light.min.css"; path = "Pod/Assets/styles/atelier-dune-light.min.css"; sourceTree = "<group>"; };
+		30D950FDEFF83D6C522F85CDE415829D /* strikethrough.c */ = {isa = PBXFileReference; includeInIndex = 1; name = strikethrough.c; path = Source/cmark_gfm/strikethrough.c; sourceTree = "<group>"; };
+		310A316C976621207D387A6762D29557 /* Highlightr.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Highlightr.xcconfig; sourceTree = "<group>"; };
+		3156AFA693ACE6177A84A49E495EF7D9 /* dracula.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = dracula.min.css; path = Pod/Assets/styles/dracula.min.css; sourceTree = "<group>"; };
+		345DB5B90EFE8C308E749C2544E1F1BB /* inlines.c */ = {isa = PBXFileReference; includeInIndex = 1; name = inlines.c; path = Source/cmark_gfm/inlines.c; sourceTree = "<group>"; };
+		35FBE9F99F52BA85A098A2B14B114AF0 /* iterator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iterator.h; path = Source/cmark_gfm/include/iterator.h; sourceTree = "<group>"; };
+		38747A296B59055CB80F982061F3BF39 /* module.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = module.modulemap; path = Source/cmark_gfm/module.modulemap; sourceTree = "<group>"; };
+		38832F8ED8C69472D41DC83E50A6BE1A /* utf8.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = utf8.h; path = Source/cmark_gfm/include/utf8.h; sourceTree = "<group>"; };
+		38F62CD4367F6A5D6315498D9A1EC54D /* darcula.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = darcula.min.css; path = Pod/Assets/styles/darcula.min.css; sourceTree = "<group>"; };
 		3AD45EDFE5CD1B6A2A3FF34A5E1893B7 /* Pods-Pine-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Pine-frameworks.sh"; sourceTree = "<group>"; };
-		3B896DA02E50B0F2AAC110DBC7DEAC69 /* atelier-savanna-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-savanna-dark.min.css"; path = "Pod/Assets/styles/atelier-savanna-dark.min.css"; sourceTree = "<group>"; };
-		3C57E038394F3E25511D430F1F9F688A /* strikethrough.c */ = {isa = PBXFileReference; includeInIndex = 1; name = strikethrough.c; path = Source/cmark_gfm/strikethrough.c; sourceTree = "<group>"; };
-		3C60E43B217861C2EA0FF14570BEDB4F /* atelier-savanna-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-savanna-light.min.css"; path = "Pod/Assets/styles/atelier-savanna-light.min.css"; sourceTree = "<group>"; };
-		3CA10E293C15F6B7E461C2573B0715E2 /* footnotes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = footnotes.h; path = Source/cmark_gfm/include/footnotes.h; sourceTree = "<group>"; };
-		3D7C889BD6225D6394DF8D784F4ACA24 /* atelier-lakeside-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-lakeside-dark.min.css"; path = "Pod/Assets/styles/atelier-lakeside-dark.min.css"; sourceTree = "<group>"; };
-		3FD535D06129770D99CFE2E25BFFED99 /* TextElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextElement.swift; path = Source/TextElement.swift; sourceTree = "<group>"; };
-		409B3D9667F3CF50AF81717CA7F4859D /* Shims.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shims.swift; path = Pod/Classes/Shims.swift; sourceTree = "<group>"; };
-		41870B6F16B72535B5EC38BBC253A39D /* Highlightr-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Highlightr-prefix.pch"; sourceTree = "<group>"; };
-		43AB2680931551D8E4EE3B70D7EED3DC /* foundation.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = foundation.min.css; path = Pod/Assets/styles/foundation.min.css; sourceTree = "<group>"; };
-		4660A61F728F0C1C54253D43E6953DE0 /* buffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = buffer.h; path = Source/cmark_gfm/include/buffer.h; sourceTree = "<group>"; };
-		46E546519D32FFAD481039D43D40D5B2 /* solarized-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "solarized-dark.min.css"; path = "Pod/Assets/styles/solarized-dark.min.css"; sourceTree = "<group>"; };
-		48973A9A5AC1242B92AA6B2D9CF8E4FB /* dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = dark.min.css; path = Pod/Assets/styles/dark.min.css; sourceTree = "<group>"; };
-		49F2B6BF19815670F68F0587D8653CBC /* autolink.c */ = {isa = PBXFileReference; includeInIndex = 1; name = autolink.c; path = Source/cmark_gfm/autolink.c; sourceTree = "<group>"; };
-		4A79DB221DCBEE44A4DA9A9F3429B602 /* googlecode.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = googlecode.min.css; path = Pod/Assets/styles/googlecode.min.css; sourceTree = "<group>"; };
-		4D0A00FDE04B8E4E3FDB71FA1313A751 /* cmark_extension_api.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cmark_extension_api.h; path = Source/cmark_gfm/include/cmark_extension_api.h; sourceTree = "<group>"; };
-		4E09081AAB7EB510B5AF5B970DA41951 /* github-gist.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "github-gist.min.css"; path = "Pod/Assets/styles/github-gist.min.css"; sourceTree = "<group>"; };
-		4EC52418447650185E9FEC063EC19D21 /* footnotes.c */ = {isa = PBXFileReference; includeInIndex = 1; name = footnotes.c; path = Source/cmark_gfm/footnotes.c; sourceTree = "<group>"; };
-		4F3684BE31EBC4DCF70F783EDF5F20C6 /* plaintext.c */ = {isa = PBXFileReference; includeInIndex = 1; name = plaintext.c; path = Source/cmark_gfm/plaintext.c; sourceTree = "<group>"; };
-		4FE18C4365D14FAF43B5FA1670342D08 /* mention.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mention.c; path = Source/cmark_gfm/mention.c; sourceTree = "<group>"; };
-		50A15F7C8E41BA9A9258FE8DCDE28913 /* paraiso-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "paraiso-dark.min.css"; path = "Pod/Assets/styles/paraiso-dark.min.css"; sourceTree = "<group>"; };
+		3B55B6241B439B9CC256C3F3172B30B1 /* Highlightr.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Highlightr.swift; path = Pod/Classes/Highlightr.swift; sourceTree = "<group>"; };
+		3C09DC33DB7ED615E29DE2E1456FE772 /* houdini_html_u.c */ = {isa = PBXFileReference; includeInIndex = 1; name = houdini_html_u.c; path = Source/cmark_gfm/houdini_html_u.c; sourceTree = "<group>"; };
+		3CDEF1AEBF63F64FA704C30A788627AF /* atelier-savanna-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-savanna-dark.min.css"; path = "Pod/Assets/styles/atelier-savanna-dark.min.css"; sourceTree = "<group>"; };
+		3F4175918F36FBDE00564456F8915E64 /* render.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = render.h; path = Source/cmark_gfm/include/render.h; sourceTree = "<group>"; };
+		435CF1263A3676B562DA17362FFE1065 /* paraiso-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "paraiso-dark.min.css"; path = "Pod/Assets/styles/paraiso-dark.min.css"; sourceTree = "<group>"; };
+		439F449FC4920B579A1E8916DE231FFA /* xml.c */ = {isa = PBXFileReference; includeInIndex = 1; name = xml.c; path = Source/cmark_gfm/xml.c; sourceTree = "<group>"; };
+		43C8F41A58FBD484D54845D3A5BBE615 /* emoji.c */ = {isa = PBXFileReference; includeInIndex = 1; name = emoji.c; path = Source/cmark_gfm/emoji.c; sourceTree = "<group>"; };
+		455ABC0F8202EF2F25BBCC2319C3DB1E /* iterator.c */ = {isa = PBXFileReference; includeInIndex = 1; name = iterator.c; path = Source/cmark_gfm/iterator.c; sourceTree = "<group>"; };
+		45BCA587A3327320293D54A307AF50D5 /* node.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = node.h; path = Source/cmark_gfm/include/node.h; sourceTree = "<group>"; };
+		4B096F13046F3A8CC97AA6297A30920F /* checkbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = checkbox.h; path = Source/cmark_gfm/include/checkbox.h; sourceTree = "<group>"; };
+		4B756EE791911EC85E3D0B38BC335E84 /* atelier-heath-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-heath-dark.min.css"; path = "Pod/Assets/styles/atelier-heath-dark.min.css"; sourceTree = "<group>"; };
+		4CEB7450F3077DE317486A44CEEA592A /* kimbie.light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = kimbie.light.min.css; path = Pod/Assets/styles/kimbie.light.min.css; sourceTree = "<group>"; };
+		4DCB666F7CA0FF1E4E605A3FFDA1618C /* kimbie.dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = kimbie.dark.min.css; path = Pod/Assets/styles/kimbie.dark.min.css; sourceTree = "<group>"; };
+		512222478010836EC7F39FF05EF4F56F /* ASTOperations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ASTOperations.swift; path = Source/ASTOperations.swift; sourceTree = "<group>"; };
+		5280435847D76A84DAA455E28B5E5555 /* cmark-gfm-swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "cmark-gfm-swift.xcconfig"; sourceTree = "<group>"; };
+		52936A4E20AC86D74814FAB88B8301F1 /* qtcreator_light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = qtcreator_light.min.css; path = Pod/Assets/styles/qtcreator_light.min.css; sourceTree = "<group>"; };
+		52FD368F265BE2D6429ED8F9FDDCBC14 /* github-gist.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "github-gist.min.css"; path = "Pod/Assets/styles/github-gist.min.css"; sourceTree = "<group>"; };
 		5315DA05F2C46FA95A0752DBD28CD7E4 /* Highlightr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Highlightr.framework; path = Highlightr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		53DCF3D44E578CD5766B89BE813C29BF /* sunburst.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = sunburst.min.css; path = Pod/Assets/styles/sunburst.min.css; sourceTree = "<group>"; };
-		575D342D898DECAE3AB6D8DE5002B617 /* ocean.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = ocean.min.css; path = Pod/Assets/styles/ocean.min.css; sourceTree = "<group>"; };
-		5795FE346D759491A2AB27E0A56369EF /* kimbie.dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = kimbie.dark.min.css; path = Pod/Assets/styles/kimbie.dark.min.css; sourceTree = "<group>"; };
+		53177B6307A558F6568F773F7A448695 /* atelier-seaside-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-seaside-light.min.css"; path = "Pod/Assets/styles/atelier-seaside-light.min.css"; sourceTree = "<group>"; };
+		53991D6C3987DFB6C936AE1ACF2B407F /* latex.c */ = {isa = PBXFileReference; includeInIndex = 1; name = latex.c; path = Source/cmark_gfm/latex.c; sourceTree = "<group>"; };
+		57546AF89BE26EF95A80B051550C7134 /* cmark-gfm-swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "cmark-gfm-swift-dummy.m"; sourceTree = "<group>"; };
+		57B55B9DBEF16F0BC5BD81FD6FE83D42 /* core-extensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "core-extensions.h"; path = "Source/cmark_gfm/include/core-extensions.h"; sourceTree = "<group>"; };
 		584612F41E6AAD751B64445F47EA32C3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		59660E763E53194E5DA9C618CF62E4F1 /* qtcreator_dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = qtcreator_dark.min.css; path = Pod/Assets/styles/qtcreator_dark.min.css; sourceTree = "<group>"; };
-		5A51926B263179AF41394DD083174240 /* buffer.c */ = {isa = PBXFileReference; includeInIndex = 1; name = buffer.c; path = Source/cmark_gfm/buffer.c; sourceTree = "<group>"; };
-		5D82E6C523655291B557B3FF12F8BB87 /* cmark-gfm-swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "cmark-gfm-swift.modulemap"; sourceTree = "<group>"; };
-		5E0F084A45CE87EF20EE09EFFC145A3E /* school-book.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "school-book.min.css"; path = "Pod/Assets/styles/school-book.min.css"; sourceTree = "<group>"; };
-		5E6A7083C97FF2C6DE3FE085F8CCFA6D /* inlines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = inlines.h; path = Source/cmark_gfm/include/inlines.h; sourceTree = "<group>"; };
-		60D28FA7D544875AED1CCA11CEA0E251 /* scanners.re */ = {isa = PBXFileReference; includeInIndex = 1; name = scanners.re; path = Source/cmark_gfm/scanners.re; sourceTree = "<group>"; };
-		61E4A15C48EB590017CD42537AD1D3F8 /* atelier-forest-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-forest-dark.min.css"; path = "Pod/Assets/styles/atelier-forest-dark.min.css"; sourceTree = "<group>"; };
-		62527635C16B5D5BC3E7F5921C3DFEA2 /* latex.c */ = {isa = PBXFileReference; includeInIndex = 1; name = latex.c; path = Source/cmark_gfm/latex.c; sourceTree = "<group>"; };
-		629F51BD6DCF1831FF21B88DEEFD6EF9 /* cmarkextensions_export.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cmarkextensions_export.h; path = Source/cmark_gfm/include/cmarkextensions_export.h; sourceTree = "<group>"; };
-		654D8C6E25EF458FBC3D835A4B901FB9 /* html.c */ = {isa = PBXFileReference; includeInIndex = 1; name = html.c; path = Source/cmark_gfm/html.c; sourceTree = "<group>"; };
-		66C45A17B7DFB92AE19E41ABAF8E392D /* docco.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = docco.min.css; path = Pod/Assets/styles/docco.min.css; sourceTree = "<group>"; };
-		670BA8A46B327E63942BD17235C137BF /* config.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = config.h; path = Source/cmark_gfm/include/config.h; sourceTree = "<group>"; };
-		68416B3B6FAFF38343AB217A5CAA4A5C /* mono-blue.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "mono-blue.min.css"; path = "Pod/Assets/styles/mono-blue.min.css"; sourceTree = "<group>"; };
+		5873A98CB99D0435B43CF0ED384733F4 /* parser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = parser.h; path = Source/cmark_gfm/include/parser.h; sourceTree = "<group>"; };
+		597CBA8925167A08D2EF0954DC061C25 /* solarized-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "solarized-dark.min.css"; path = "Pod/Assets/styles/solarized-dark.min.css"; sourceTree = "<group>"; };
+		5DE94F40369D271252E5952EFC7F2864 /* houdini_html_e.c */ = {isa = PBXFileReference; includeInIndex = 1; name = houdini_html_e.c; path = Source/cmark_gfm/houdini_html_e.c; sourceTree = "<group>"; };
+		5E75245776DCF9D9A575A90718A92BDD /* codepen-embed.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "codepen-embed.min.css"; path = "Pod/Assets/styles/codepen-embed.min.css"; sourceTree = "<group>"; };
+		5F1A7BFE1F9EA27E4B8CC15852F4A10C /* atelier-estuary-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-estuary-light.min.css"; path = "Pod/Assets/styles/atelier-estuary-light.min.css"; sourceTree = "<group>"; };
+		5F7135F241798C333A398D005A4C72AA /* utf8.c */ = {isa = PBXFileReference; includeInIndex = 1; name = utf8.c; path = Source/cmark_gfm/utf8.c; sourceTree = "<group>"; };
+		5FFA742076DB8EB8E3FC3551BC112D70 /* Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = Pod/Classes/Theme.swift; sourceTree = "<group>"; };
+		605B4DBA02A61DF7D4DD9BC6384575D3 /* chunk.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = chunk.h; path = Source/cmark_gfm/include/chunk.h; sourceTree = "<group>"; };
+		616742BD1941F29888A14DB281889F67 /* dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = dark.min.css; path = Pod/Assets/styles/dark.min.css; sourceTree = "<group>"; };
+		651672880ECF62F303036FE2630D4468 /* autolink.c */ = {isa = PBXFileReference; includeInIndex = 1; name = autolink.c; path = Source/cmark_gfm/autolink.c; sourceTree = "<group>"; };
+		6915933E631BE445DC9EEC4B7B3663B5 /* gruvbox-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "gruvbox-dark.min.css"; path = "Pod/Assets/styles/gruvbox-dark.min.css"; sourceTree = "<group>"; };
+		69F0856E1305A4B12916741F6F9F689F /* table.c */ = {isa = PBXFileReference; includeInIndex = 1; name = table.c; path = Source/cmark_gfm/table.c; sourceTree = "<group>"; };
 		6A1699380E8F6C69A9B1EA3B251B6500 /* Pods-Pine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Pine.debug.xcconfig"; sourceTree = "<group>"; };
-		6C21F45AB8FF7BC2E5DE10C1D4E72273 /* emoji.c */ = {isa = PBXFileReference; includeInIndex = 1; name = emoji.c; path = Source/cmark_gfm/emoji.c; sourceTree = "<group>"; };
-		6DBD5026E0A643C179CA960920759158 /* houdini_href_e.c */ = {isa = PBXFileReference; includeInIndex = 1; name = houdini_href_e.c; path = Source/cmark_gfm/houdini_href_e.c; sourceTree = "<group>"; };
-		6EFE553D8E217C1F56BF0242381E8417 /* kimbie.light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = kimbie.light.min.css; path = Pod/Assets/styles/kimbie.light.min.css; sourceTree = "<group>"; };
-		6FD4D21A5848956AF18B50152DF11E2B /* case_fold_switch.inc */ = {isa = PBXFileReference; includeInIndex = 1; name = case_fold_switch.inc; path = Source/cmark_gfm/case_fold_switch.inc; sourceTree = "<group>"; };
-		7054751567F0C6BE8459618F43E7A80C /* tagfilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tagfilter.h; path = Source/cmark_gfm/include/tagfilter.h; sourceTree = "<group>"; };
-		7082BA4278418EDFE8D364B8CB43ADCB /* color-brewer.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "color-brewer.min.css"; path = "Pod/Assets/styles/color-brewer.min.css"; sourceTree = "<group>"; };
-		70D6D12DE9BBEF416D244E171B6C2FA1 /* Block+TextElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Block+TextElement.swift"; path = "Source/Block+TextElement.swift"; sourceTree = "<group>"; };
-		7217901324BB333A7AE8633936F44BC8 /* SwiftAST.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftAST.swift; path = Source/SwiftAST.swift; sourceTree = "<group>"; };
-		729606A9168A887084A1631A5ED961AC /* map.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = map.h; path = Source/cmark_gfm/include/map.h; sourceTree = "<group>"; };
-		72FC300C5DE82FDA59C50D5EF9AF0829 /* dracula.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = dracula.min.css; path = Pod/Assets/styles/dracula.min.css; sourceTree = "<group>"; };
-		73759B2E9B383D77AFBEF7F2063EDA84 /* atelier-sulphurpool-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-sulphurpool-light.min.css"; path = "Pod/Assets/styles/atelier-sulphurpool-light.min.css"; sourceTree = "<group>"; };
-		7425E47B7A878F2151163C4FC5ECD9F6 /* Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = Pod/Classes/Theme.swift; sourceTree = "<group>"; };
-		759E87135E0A093C363DA7F8E28A0850 /* xt256.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = xt256.min.css; path = Pod/Assets/styles/xt256.min.css; sourceTree = "<group>"; };
-		75A5EB02A7CE8E533F975E71D9EC40DC /* iterator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iterator.h; path = Source/cmark_gfm/include/iterator.h; sourceTree = "<group>"; };
-		792B493C7CA33B919975BE1283ED0FF3 /* node.c */ = {isa = PBXFileReference; includeInIndex = 1; name = node.c; path = Source/cmark_gfm/node.c; sourceTree = "<group>"; };
-		7A26931659BD3E757E06C8C820566F99 /* default.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = default.min.css; path = Pod/Assets/styles/default.min.css; sourceTree = "<group>"; };
-		7D8ED12403CDDDDC356AFFF3C81A615D /* map.c */ = {isa = PBXFileReference; includeInIndex = 1; name = map.c; path = Source/cmark_gfm/map.c; sourceTree = "<group>"; };
-		7E1DE4A7570C865BBF620095CA183062 /* ext_scanners.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ext_scanners.h; path = Source/cmark_gfm/include/ext_scanners.h; sourceTree = "<group>"; };
-		7E6E59EC9ECE3E31C06EF3F728D6FD71 /* entities.inc */ = {isa = PBXFileReference; includeInIndex = 1; name = entities.inc; path = Source/cmark_gfm/entities.inc; sourceTree = "<group>"; };
-		7E7B4B9B522AAFCD62C93CA59045DBD5 /* emoji.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = emoji.h; path = Source/cmark_gfm/include/emoji.h; sourceTree = "<group>"; };
-		7F36793434A2F78A2737C179C9783A44 /* vs.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = vs.min.css; path = Pod/Assets/styles/vs.min.css; sourceTree = "<group>"; };
-		8019D4D2A5382CFEE39414B84D3D9316 /* atelier-seaside-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-seaside-light.min.css"; path = "Pod/Assets/styles/atelier-seaside-light.min.css"; sourceTree = "<group>"; };
-		802DC5E41044287D0F8B2FE1B702E385 /* emoji_list.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = emoji_list.h; path = Source/cmark_gfm/include/emoji_list.h; sourceTree = "<group>"; };
-		8040A89ABD4D99E53DCB66BDBADF782C /* zenburn.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = zenburn.min.css; path = Pod/Assets/styles/zenburn.min.css; sourceTree = "<group>"; };
-		806ECBA0636C95271178BD0DD455F0D8 /* obsidian.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = obsidian.min.css; path = Pod/Assets/styles/obsidian.min.css; sourceTree = "<group>"; };
-		810737B92A5B69DA46705FE21416FB73 /* tagfilter.c */ = {isa = PBXFileReference; includeInIndex = 1; name = tagfilter.c; path = Source/cmark_gfm/tagfilter.c; sourceTree = "<group>"; };
-		818F2B13B0F163AB49422CA88FDEB4EA /* tomorrow-night-blue.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "tomorrow-night-blue.min.css"; path = "Pod/Assets/styles/tomorrow-night-blue.min.css"; sourceTree = "<group>"; };
-		84789CDE58D95FE60C6D862CC20EB6F3 /* cmark-gfm-swift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "cmark-gfm-swift.h"; path = "Source/cmark-gfm-swift.h"; sourceTree = "<group>"; };
-		84907CF93E3AD8DA62D4E33059FDCB68 /* ascetic.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = ascetic.min.css; path = Pod/Assets/styles/ascetic.min.css; sourceTree = "<group>"; };
-		85631630539478AC20F55603C0A0E1DB /* render.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = render.h; path = Source/cmark_gfm/include/render.h; sourceTree = "<group>"; };
-		882B02F9E16E594D0E9AECC441E6932D /* androidstudio.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = androidstudio.min.css; path = Pod/Assets/styles/androidstudio.min.css; sourceTree = "<group>"; };
-		8D338F2D976B04AC1DBD570BF960B88B /* hopscotch.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = hopscotch.min.css; path = Pod/Assets/styles/hopscotch.min.css; sourceTree = "<group>"; };
-		8E3D42146FC32423E4D79E6C9908F423 /* agate.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = agate.min.css; path = Pod/Assets/styles/agate.min.css; sourceTree = "<group>"; };
-		92A57A14F4CA4C963504332B46CF833F /* cmark_export.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cmark_export.h; path = Source/cmark_gfm/include/cmark_export.h; sourceTree = "<group>"; };
+		6A4CC0277A71ED4B1BF23C72DA3E2A2B /* ascetic.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = ascetic.min.css; path = Pod/Assets/styles/ascetic.min.css; sourceTree = "<group>"; };
+		6A98683F52508293AAA918C68D72324E /* buffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = buffer.h; path = Source/cmark_gfm/include/buffer.h; sourceTree = "<group>"; };
+		6C4728C389A7F005F057AD06A0B15B35 /* cmark_ctype.c */ = {isa = PBXFileReference; includeInIndex = 1; name = cmark_ctype.c; path = Source/cmark_gfm/cmark_ctype.c; sourceTree = "<group>"; };
+		6E0362D2885AE2FDCC2EA6DD3D2A3CC7 /* idea.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = idea.min.css; path = Pod/Assets/styles/idea.min.css; sourceTree = "<group>"; };
+		6FF84588777059AFE1B32BB67B2109C7 /* map.c */ = {isa = PBXFileReference; includeInIndex = 1; name = map.c; path = Source/cmark_gfm/map.c; sourceTree = "<group>"; };
+		70603B74881C391490156F076C82D066 /* cmark-gfm-swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "cmark-gfm-swift.modulemap"; sourceTree = "<group>"; };
+		70B71EDC4C5FA7307DECAB2B1FBDF4A4 /* map.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = map.h; path = Source/cmark_gfm/include/map.h; sourceTree = "<group>"; };
+		714F21A2C9E1525F8F486E2929E96EDA /* paraiso-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "paraiso-light.min.css"; path = "Pod/Assets/styles/paraiso-light.min.css"; sourceTree = "<group>"; };
+		760AD413B654D45C0903F89733DEE02C /* grayscale.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = grayscale.min.css; path = Pod/Assets/styles/grayscale.min.css; sourceTree = "<group>"; };
+		76464F9F1BE009DCADB58E67F35BE871 /* arta.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = arta.min.css; path = Pod/Assets/styles/arta.min.css; sourceTree = "<group>"; };
+		7B7A72DC3B3D142E451739D9F81916FB /* brown-paper.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "brown-paper.min.css"; path = "Pod/Assets/styles/brown-paper.min.css"; sourceTree = "<group>"; };
+		7B820CBDE43A9C0FC705B2CDC4589DF4 /* libcmark_gfm.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = libcmark_gfm.h; path = Source/cmark_gfm/include/libcmark_gfm.h; sourceTree = "<group>"; };
+		7BC21785F4274E21DCD809C1D07DCACA /* atom-one-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atom-one-dark.min.css"; path = "Pod/Assets/styles/atom-one-dark.min.css"; sourceTree = "<group>"; };
+		7CC90A9876FA66FC010C94B85B001FD3 /* man.c */ = {isa = PBXFileReference; includeInIndex = 1; name = man.c; path = Source/cmark_gfm/man.c; sourceTree = "<group>"; };
+		7D56A4A7A83B4EC0FF25E40C3C54B787 /* default.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = default.min.css; path = Pod/Assets/styles/default.min.css; sourceTree = "<group>"; };
+		81350D70FE0ACA00FFF373A93D37B16D /* atelier-dune-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-dune-dark.min.css"; path = "Pod/Assets/styles/atelier-dune-dark.min.css"; sourceTree = "<group>"; };
+		8387D50076DFCA6D69C1649D1860495D /* tagfilter.c */ = {isa = PBXFileReference; includeInIndex = 1; name = tagfilter.c; path = Source/cmark_gfm/tagfilter.c; sourceTree = "<group>"; };
+		845C3E8C1E631031A6DFD4E31F03E17D /* cmark_ctype.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cmark_ctype.h; path = Source/cmark_gfm/include/cmark_ctype.h; sourceTree = "<group>"; };
+		846D83DB37A3210E02A1A364D015486C /* case_fold_switch.inc */ = {isa = PBXFileReference; includeInIndex = 1; name = case_fold_switch.inc; path = Source/cmark_gfm/case_fold_switch.inc; sourceTree = "<group>"; };
+		85E8EA80B14BBD31454FBEFE0CE0D453 /* syntax_extension.c */ = {isa = PBXFileReference; includeInIndex = 1; name = syntax_extension.c; path = Source/cmark_gfm/syntax_extension.c; sourceTree = "<group>"; };
+		895D25A84D84B8FEFDA6FA5BA019D080 /* qtcreator_dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = qtcreator_dark.min.css; path = Pod/Assets/styles/qtcreator_dark.min.css; sourceTree = "<group>"; };
+		89A92F8D813368F499B0F5EA1761E28E /* TableRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableRow.swift; path = Source/TableRow.swift; sourceTree = "<group>"; };
+		8B9871A5A19A29075812F745568ECB77 /* ocean.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = ocean.min.css; path = Pod/Assets/styles/ocean.min.css; sourceTree = "<group>"; };
+		8C7F9A759FFF9BF2A396FEDAF1C729E3 /* registry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = registry.h; path = Source/cmark_gfm/include/registry.h; sourceTree = "<group>"; };
+		8D20451A1E27A4C2A01B6CD0649D24C0 /* rainbow.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = rainbow.min.css; path = Pod/Assets/styles/rainbow.min.css; sourceTree = "<group>"; };
+		8D4C04CBEC01EAA9E2F3F01B0EF8AF0A /* mention.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mention.h; path = Source/cmark_gfm/include/mention.h; sourceTree = "<group>"; };
+		8D6A1E049633F42858BDF91C844D6327 /* Shims.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shims.swift; path = Pod/Classes/Shims.swift; sourceTree = "<group>"; };
+		8E18EE74F72765468D103D36ADC3A4DF /* footnotes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = footnotes.h; path = Source/cmark_gfm/include/footnotes.h; sourceTree = "<group>"; };
+		8F3D92DA5ACC08DFD684963A8A023D3A /* inlines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = inlines.h; path = Source/cmark_gfm/include/inlines.h; sourceTree = "<group>"; };
+		934851B8949C66043FAA3F1B8AE50C7F /* tomorrow-night-blue.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "tomorrow-night-blue.min.css"; path = "Pod/Assets/styles/tomorrow-night-blue.min.css"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93B0964DF429765FAF5D6A71FCE7C2DF /* mention.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mention.h; path = Source/cmark_gfm/include/mention.h; sourceTree = "<group>"; };
-		947703C5793665C90966AC934C655467 /* cmark-gfm-swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "cmark-gfm-swift-prefix.pch"; sourceTree = "<group>"; };
-		96ECF347C13E3EA5D81843FE86512EF3 /* atelier-dune-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-dune-dark.min.css"; path = "Pod/Assets/styles/atelier-dune-dark.min.css"; sourceTree = "<group>"; };
-		97789690B0ED81A19D3596D48AFAB973 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		97F3374E267306EA9E14514DC28B5806 /* atelier-plateau-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-plateau-light.min.css"; path = "Pod/Assets/styles/atelier-plateau-light.min.css"; sourceTree = "<group>"; };
-		984B8EFA500FBDD78B0F9E198F3262D6 /* routeros.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = routeros.min.css; path = Pod/Assets/styles/routeros.min.css; sourceTree = "<group>"; };
-		99A5251C98A4D650B1B07EE6CF63045B /* table.c */ = {isa = PBXFileReference; includeInIndex = 1; name = table.c; path = Source/cmark_gfm/table.c; sourceTree = "<group>"; };
-		9A0395B9D16386058692B17FE4BF2810 /* gruvbox-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "gruvbox-light.min.css"; path = "Pod/Assets/styles/gruvbox-light.min.css"; sourceTree = "<group>"; };
-		9B2A00F6C82C060017922078CEE393BB /* Node+Elements.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Node+Elements.swift"; path = "Source/Node+Elements.swift"; sourceTree = "<group>"; };
-		9CA049C94F2A00C6D1C3A1B667C840F1 /* idea.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = idea.min.css; path = Pod/Assets/styles/idea.min.css; sourceTree = "<group>"; };
-		9EC920F18BD9D0DD1E3498DFC36B4E0E /* ASTOperations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ASTOperations.swift; path = Source/ASTOperations.swift; sourceTree = "<group>"; };
-		A20FA63487E41534A60B06BCF16C123C /* atelier-lakeside-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-lakeside-light.min.css"; path = "Pod/Assets/styles/atelier-lakeside-light.min.css"; sourceTree = "<group>"; };
-		A35EBF04B6764CA562C6DF1A67397942 /* magula.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = magula.min.css; path = Pod/Assets/styles/magula.min.css; sourceTree = "<group>"; };
-		A3BB1A11188E11194803D9193C210EEB /* cmark-gfm-swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "cmark-gfm-swift-dummy.m"; sourceTree = "<group>"; };
-		A51ACFFA97B3C1E217DD40DA7FAF1222 /* cmark_ctype.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cmark_ctype.h; path = Source/cmark_gfm/include/cmark_ctype.h; sourceTree = "<group>"; };
-		A7329E1829A79829D011B480E25834A4 /* highlight.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = highlight.min.js; path = Pod/Assets/Highlighter/highlight.min.js; sourceTree = "<group>"; };
-		A7784DFE292D837649D3D1508302D9C3 /* grayscale.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = grayscale.min.css; path = Pod/Assets/styles/grayscale.min.css; sourceTree = "<group>"; };
-		A8334B8048F9791D9BA561F3B59CEA74 /* references.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = references.h; path = Source/cmark_gfm/include/references.h; sourceTree = "<group>"; };
-		AAADA0588E28CC67490A0B0D0A91D6D8 /* autolink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = autolink.h; path = Source/cmark_gfm/include/autolink.h; sourceTree = "<group>"; };
-		AD1D64C2FB70E423B0E0252E9EB92114 /* scanners.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = scanners.h; path = Source/cmark_gfm/include/scanners.h; sourceTree = "<group>"; };
-		AFB07F85CBA1F7594FD753A919F43CA5 /* arena.c */ = {isa = PBXFileReference; includeInIndex = 1; name = arena.c; path = Source/cmark_gfm/arena.c; sourceTree = "<group>"; };
-		B006443CA8403BDAD97D2F89DB2606E0 /* hybrid.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = hybrid.min.css; path = Pod/Assets/styles/hybrid.min.css; sourceTree = "<group>"; };
-		B08BE7D1AECFFEB9747E2548995A6D18 /* libcmark_gfm.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = libcmark_gfm.h; path = Source/cmark_gfm/include/libcmark_gfm.h; sourceTree = "<group>"; };
-		B33A7CC38B7EAC67510DC26A7F42F469 /* parser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = parser.h; path = Source/cmark_gfm/include/parser.h; sourceTree = "<group>"; };
-		B54D2124FCDC3645538CE5A0126ADC11 /* registry.c */ = {isa = PBXFileReference; includeInIndex = 1; name = registry.c; path = Source/cmark_gfm/registry.c; sourceTree = "<group>"; };
-		B799DB4BF7A7D71A65ACD0F03C443FE1 /* cmark.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cmark.h; path = Source/cmark_gfm/include/cmark.h; sourceTree = "<group>"; };
-		B8311AA80DDC75C43D71F0A0C01A9DAA /* Node.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Node.swift; path = Source/Node.swift; sourceTree = "<group>"; };
-		B9E3A0C5263127CB26BC7B60EC511C9C /* atelier-forest-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-forest-light.min.css"; path = "Pod/Assets/styles/atelier-forest-light.min.css"; sourceTree = "<group>"; };
-		BB122F0EE67A29E196A46DD75FA485A9 /* cmark-gfm-swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "cmark-gfm-swift-umbrella.h"; sourceTree = "<group>"; };
-		BB8B870FD200AAE6B8F1EFEEAE851C71 /* xml.c */ = {isa = PBXFileReference; includeInIndex = 1; name = xml.c; path = Source/cmark_gfm/xml.c; sourceTree = "<group>"; };
-		BCC85B2A02AB878D97A3B382D6038897 /* HTMLUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTMLUtils.swift; path = Pod/Classes/HTMLUtils.swift; sourceTree = "<group>"; };
-		BE7B62F9F4B0A277E5D00D455967CF45 /* houdini_html_e.c */ = {isa = PBXFileReference; includeInIndex = 1; name = houdini_html_e.c; path = Source/cmark_gfm/houdini_html_e.c; sourceTree = "<group>"; };
+		96034FDDACDD86171038954309B76D76 /* footnotes.c */ = {isa = PBXFileReference; includeInIndex = 1; name = footnotes.c; path = Source/cmark_gfm/footnotes.c; sourceTree = "<group>"; };
+		96D729642075B335ABAA2BB5CD01E610 /* googlecode.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = googlecode.min.css; path = Pod/Assets/styles/googlecode.min.css; sourceTree = "<group>"; };
+		970A8E72D90526110E536890DF5A5AA2 /* atelier-lakeside-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-lakeside-light.min.css"; path = "Pod/Assets/styles/atelier-lakeside-light.min.css"; sourceTree = "<group>"; };
+		9724957891E8F9C6DCDA4365B4721D4D /* routeros.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = routeros.min.css; path = Pod/Assets/styles/routeros.min.css; sourceTree = "<group>"; };
+		97CE71C51E6B28CEB7E3F2C36BB4BF44 /* tagfilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tagfilter.h; path = Source/cmark_gfm/include/tagfilter.h; sourceTree = "<group>"; };
+		9827BDAEDE85AA0ABBC6049138229E9D /* cmark_export.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cmark_export.h; path = Source/cmark_gfm/include/cmark_export.h; sourceTree = "<group>"; };
+		98C425396376E42898D9976376E2E6B3 /* references.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = references.h; path = Source/cmark_gfm/include/references.h; sourceTree = "<group>"; };
+		99B682994EBE85E7E5680C2D17D900AF /* HTMLUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTMLUtils.swift; path = Pod/Classes/HTMLUtils.swift; sourceTree = "<group>"; };
+		9BC289ED3649BFE1DB13F0C1665C48D3 /* github.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = github.min.css; path = Pod/Assets/styles/github.min.css; sourceTree = "<group>"; };
+		9C5111DA9AAEE6A901638565F50CBCA1 /* tomorrow.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = tomorrow.min.css; path = Pod/Assets/styles/tomorrow.min.css; sourceTree = "<group>"; };
+		9CA130B32B5721A0DBF449F18C4DE1FF /* cmark_extension_api.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cmark_extension_api.h; path = Source/cmark_gfm/include/cmark_extension_api.h; sourceTree = "<group>"; };
+		A2BFB652C912D80D206C8E6A9485021F /* SwiftAST.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftAST.swift; path = Source/SwiftAST.swift; sourceTree = "<group>"; };
+		A2F926EFD68D4D25A2CFEA122E46FA29 /* Block+TableRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Block+TableRow.swift"; path = "Source/Block+TableRow.swift"; sourceTree = "<group>"; };
+		A5F3AEAA340AA598FC7C22E1711DB94D /* androidstudio.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = androidstudio.min.css; path = Pod/Assets/styles/androidstudio.min.css; sourceTree = "<group>"; };
+		A7CE74FB697A6AF56A66CF3EA0B6BE8A /* railscasts.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = railscasts.min.css; path = Pod/Assets/styles/railscasts.min.css; sourceTree = "<group>"; };
+		A7E7770FBC8B77AC0D617296C0DD11D7 /* ListElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ListElement.swift; path = Source/ListElement.swift; sourceTree = "<group>"; };
+		A8A8F24F284DB609C3716502184C4CFB /* Highlightr-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Highlightr-umbrella.h"; sourceTree = "<group>"; };
+		A8CBE7190E4CBC7F11EB4D286BB3BD95 /* solarized-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "solarized-light.min.css"; path = "Pod/Assets/styles/solarized-light.min.css"; sourceTree = "<group>"; };
+		AB3D29A090D05AC7572A12CB7EC22213 /* obsidian.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = obsidian.min.css; path = Pod/Assets/styles/obsidian.min.css; sourceTree = "<group>"; };
+		AD46B06AA5C23FF447338A4E8AE2036D /* scanners.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = scanners.h; path = Source/cmark_gfm/include/scanners.h; sourceTree = "<group>"; };
+		AEAD2875EADDE6710DE18C5BC0C0719A /* config.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = config.h; path = Source/cmark_gfm/include/config.h; sourceTree = "<group>"; };
+		AEB918082C82E19961816C8C9FCC4A2A /* school-book.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "school-book.min.css"; path = "Pod/Assets/styles/school-book.min.css"; sourceTree = "<group>"; };
+		AED57D5F702D4BA651A7073C695733F0 /* scanners.re */ = {isa = PBXFileReference; includeInIndex = 1; name = scanners.re; path = Source/cmark_gfm/scanners.re; sourceTree = "<group>"; };
+		B2EC78B592AB266919CA086A873BF665 /* atelier-lakeside-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-lakeside-dark.min.css"; path = "Pod/Assets/styles/atelier-lakeside-dark.min.css"; sourceTree = "<group>"; };
+		B31B8F21DB6A6946B6660EE28430405D /* cmarkextensions_export.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cmarkextensions_export.h; path = Source/cmark_gfm/include/cmarkextensions_export.h; sourceTree = "<group>"; };
+		B40ACEF232F13FFA2A3CE682FBFE217C /* pojoaque.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = pojoaque.min.css; path = Pod/Assets/styles/pojoaque.min.css; sourceTree = "<group>"; };
+		B4883482970E2D975CE3C336E1705990 /* xt256.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = xt256.min.css; path = Pod/Assets/styles/xt256.min.css; sourceTree = "<group>"; };
+		B54DB37CD9F668000891088BD69426EB /* tomorrow-night.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "tomorrow-night.min.css"; path = "Pod/Assets/styles/tomorrow-night.min.css"; sourceTree = "<group>"; };
+		B639B188D81ED2C3B978819CDBB1AB57 /* monokai-sublime.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "monokai-sublime.min.css"; path = "Pod/Assets/styles/monokai-sublime.min.css"; sourceTree = "<group>"; };
+		B95C1814BE6658DBE4FA5D803129762F /* ext_scanners.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ext_scanners.h; path = Source/cmark_gfm/include/ext_scanners.h; sourceTree = "<group>"; };
+		BB26278995CD66C060BA864AF1ED7BC4 /* atelier-heath-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-heath-light.min.css"; path = "Pod/Assets/styles/atelier-heath-light.min.css"; sourceTree = "<group>"; };
+		BBECD8CF341417E88CC133ABB1710ED8 /* mention.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mention.c; path = Source/cmark_gfm/mention.c; sourceTree = "<group>"; };
+		BC91215ACCD7BBCFD991E9C67621EF3C /* darkula.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = darkula.min.css; path = Pod/Assets/styles/darkula.min.css; sourceTree = "<group>"; };
+		BD43AE43D7494235DDF1B3F2C3691989 /* registry.c */ = {isa = PBXFileReference; includeInIndex = 1; name = registry.c; path = Source/cmark_gfm/registry.c; sourceTree = "<group>"; };
 		BEC43988686899DAE18AB7991798B5EA /* Pods-Pine-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Pine-resources.sh"; sourceTree = "<group>"; };
 		BF4219073D603E0803F59659F20F85CE /* Pods-Pine-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Pine-acknowledgements.plist"; sourceTree = "<group>"; };
-		C00DB264BE776A18A41677D3FEA886FC /* atelier-cave-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-cave-dark.min.css"; path = "Pod/Assets/styles/atelier-cave-dark.min.css"; sourceTree = "<group>"; };
-		C2DCA16DE188D9CCF5609921C8D5A032 /* node.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = node.h; path = Source/cmark_gfm/include/node.h; sourceTree = "<group>"; };
-		C31880FF8076E6B6AE5111171A590874 /* TableRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableRow.swift; path = Source/TableRow.swift; sourceTree = "<group>"; };
-		C3348FF1C63CD9D63394CB1D12324C03 /* github.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = github.min.css; path = Pod/Assets/styles/github.min.css; sourceTree = "<group>"; };
-		C6496083C538459557C76D68DA1D1B88 /* arta.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = arta.min.css; path = Pod/Assets/styles/arta.min.css; sourceTree = "<group>"; };
+		BF49351E4B51DD5B0126EFE54109F346 /* scanners.c */ = {isa = PBXFileReference; includeInIndex = 1; name = scanners.c; path = Source/cmark_gfm/scanners.c; sourceTree = "<group>"; };
+		C25698DACD2B854E3520C4DA5D33A8EF /* ext_scanners.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ext_scanners.c; path = Source/cmark_gfm/ext_scanners.c; sourceTree = "<group>"; };
+		C396E3C8BD06CCBAA5A21727F8497785 /* atelier-forest-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-forest-dark.min.css"; path = "Pod/Assets/styles/atelier-forest-dark.min.css"; sourceTree = "<group>"; };
+		C3D237558604343B4514B994E81036E6 /* houdini.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = houdini.h; path = Source/cmark_gfm/include/houdini.h; sourceTree = "<group>"; };
+		C51D83E1D849D5561078EDAA2406A144 /* color-brewer.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "color-brewer.min.css"; path = "Pod/Assets/styles/color-brewer.min.css"; sourceTree = "<group>"; };
+		C598763D2C74DFC1B216CAD4C8E7E4A7 /* vs2015.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = vs2015.min.css; path = Pod/Assets/styles/vs2015.min.css; sourceTree = "<group>"; };
 		C64F786BB967A433E82C0EAD9F86150A /* cmark_gfm_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = cmark_gfm_swift.framework; path = "cmark-gfm-swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6DA43A65A7AB053188F8013F945CA39 /* darcula.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = darcula.min.css; path = Pod/Assets/styles/darcula.min.css; sourceTree = "<group>"; };
-		C6F9B7EF73B2648CA812BD7DA67C033D /* far.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = far.min.css; path = Pod/Assets/styles/far.min.css; sourceTree = "<group>"; };
-		C7826B7BBD208CB73D088B8F6D30A647 /* atelier-sulphurpool-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-sulphurpool-dark.min.css"; path = "Pod/Assets/styles/atelier-sulphurpool-dark.min.css"; sourceTree = "<group>"; };
-		C8CC8E58A66B5A32393B85198254A5C0 /* references.c */ = {isa = PBXFileReference; includeInIndex = 1; name = references.c; path = Source/cmark_gfm/references.c; sourceTree = "<group>"; };
-		C929A017F962EABDFED13F6886B6EC36 /* xcode.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = xcode.min.css; path = Pod/Assets/styles/xcode.min.css; sourceTree = "<group>"; };
-		C99639F9AFE49A012B16B5C4F50902A1 /* CodeAttributedString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CodeAttributedString.swift; path = Pod/Classes/CodeAttributedString.swift; sourceTree = "<group>"; };
-		C9EA3FAB258AC77ACE556EDE27AEB1F7 /* atelier-heath-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-heath-dark.min.css"; path = "Pod/Assets/styles/atelier-heath-dark.min.css"; sourceTree = "<group>"; };
-		CC6C6C516B570C1C873A85204828EBE1 /* syntax_extension.c */ = {isa = PBXFileReference; includeInIndex = 1; name = syntax_extension.c; path = Source/cmark_gfm/syntax_extension.c; sourceTree = "<group>"; };
-		CE14E5315C8905B73D01E7A6F3F9D65D /* qtcreator_light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = qtcreator_light.min.css; path = Pod/Assets/styles/qtcreator_light.min.css; sourceTree = "<group>"; };
-		CF267F8568F78D51DFCEA37A58206B5F /* paraiso-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "paraiso-light.min.css"; path = "Pod/Assets/styles/paraiso-light.min.css"; sourceTree = "<group>"; };
-		CF4022F052FAF7A9FF4A30EA64E11954 /* ext_scanners.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ext_scanners.c; path = Source/cmark_gfm/ext_scanners.c; sourceTree = "<group>"; };
-		CFF1B926E89D006875C3E08C124F8EC7 /* chunk.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = chunk.h; path = Source/cmark_gfm/include/chunk.h; sourceTree = "<group>"; };
-		D39A5034CC1B2A00090774D4D3244AC4 /* tomorrow-night-eighties.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "tomorrow-night-eighties.min.css"; path = "Pod/Assets/styles/tomorrow-night-eighties.min.css"; sourceTree = "<group>"; };
-		D46CD42DE0ACA408724FDB894BEAE973 /* Inline+TextElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Inline+TextElement.swift"; path = "Source/Inline+TextElement.swift"; sourceTree = "<group>"; };
-		D490A0271963DE0CF26208E7199012B2 /* purebasic.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = purebasic.min.css; path = Pod/Assets/styles/purebasic.min.css; sourceTree = "<group>"; };
-		D4D0F2E27D13191152F40ECEF1BA8FFD /* monokai-sublime.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "monokai-sublime.min.css"; path = "Pod/Assets/styles/monokai-sublime.min.css"; sourceTree = "<group>"; };
-		D56E0DC46ABB25DB15C9E5D0DC5DE230 /* gruvbox-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "gruvbox-dark.min.css"; path = "Pod/Assets/styles/gruvbox-dark.min.css"; sourceTree = "<group>"; };
-		D5742D4D33A3977B4AD7349DEE73CA9B /* module.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = module.modulemap; path = Source/cmark_gfm/module.modulemap; sourceTree = "<group>"; };
+		C68001B357629098AC92DB792C4AD3B2 /* strikethrough.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = strikethrough.h; path = Source/cmark_gfm/include/strikethrough.h; sourceTree = "<group>"; };
+		C6CDD04A42AE04BC5A85EC16906D805E /* monokai.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = monokai.min.css; path = Pod/Assets/styles/monokai.min.css; sourceTree = "<group>"; };
+		C76FF4307AA040FC46EB02456D41E0C6 /* agate.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = agate.min.css; path = Pod/Assets/styles/agate.min.css; sourceTree = "<group>"; };
+		CD870EE7BE79858893DD1F744111E5C5 /* Highlightr-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Highlightr-dummy.m"; sourceTree = "<group>"; };
+		CFD89CBEF54048639FBBD638926D84C3 /* Highlightr.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Highlightr.modulemap; sourceTree = "<group>"; };
+		D0634420D7ED90F84B485BF62567BAE2 /* magula.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = magula.min.css; path = Pod/Assets/styles/magula.min.css; sourceTree = "<group>"; };
+		D1379428C1CD93C5C6C244D413DE1A6D /* cmark.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cmark.h; path = Source/cmark_gfm/include/cmark.h; sourceTree = "<group>"; };
+		D3CE7845F8BF94A16AE8423AA8D79D37 /* checkbox.c */ = {isa = PBXFileReference; includeInIndex = 1; name = checkbox.c; path = Source/cmark_gfm/checkbox.c; sourceTree = "<group>"; };
+		D48173BE2CEF17D668A6DF7C24589835 /* Element.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Element.swift; path = Source/Element.swift; sourceTree = "<group>"; };
+		D4EC3D67FBB761FFFC5BFE8AF8849530 /* tomorrow-night-bright.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "tomorrow-night-bright.min.css"; path = "Pod/Assets/styles/tomorrow-night-bright.min.css"; sourceTree = "<group>"; };
 		D5DFBFD9AC28191042040132B7BDA6CB /* Pods-Pine.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Pine.modulemap"; sourceTree = "<group>"; };
-		D5EED8AB5E22E84CCB84F480A3A2C55A /* cmark-gfm-swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "cmark-gfm-swift.xcconfig"; sourceTree = "<group>"; };
 		D72E93BE5F228BD2AA5125AC03CCB203 /* Pods-Pine-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Pine-umbrella.h"; sourceTree = "<group>"; };
-		D80B353FB9848EDA478C91F06A351D06 /* commonmark.c */ = {isa = PBXFileReference; includeInIndex = 1; name = commonmark.c; path = Source/cmark_gfm/commonmark.c; sourceTree = "<group>"; };
-		D8D23CED626E1FE0FCB8F6F393E5EE9F /* linked_list.c */ = {isa = PBXFileReference; includeInIndex = 1; name = linked_list.c; path = Source/cmark_gfm/linked_list.c; sourceTree = "<group>"; };
-		D9FFAF7A54FECB41C13734D695D989F3 /* cmark_ctype.c */ = {isa = PBXFileReference; includeInIndex = 1; name = cmark_ctype.c; path = Source/cmark_gfm/cmark_ctype.c; sourceTree = "<group>"; };
-		DA204DAA3F0E9A93BB1B774A58864768 /* man.c */ = {isa = PBXFileReference; includeInIndex = 1; name = man.c; path = Source/cmark_gfm/man.c; sourceTree = "<group>"; };
-		DAC4F6D421B6A58AD7605601A66FE439 /* darkula.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = darkula.min.css; path = Pod/Assets/styles/darkula.min.css; sourceTree = "<group>"; };
+		D940F30A4CB696184FB5A4D4E80DC142 /* houdini_href_e.c */ = {isa = PBXFileReference; includeInIndex = 1; name = houdini_href_e.c; path = Source/cmark_gfm/houdini_href_e.c; sourceTree = "<group>"; };
+		DA3FAB5FD849F2130D7614789E7D0C1B /* buffer.c */ = {isa = PBXFileReference; includeInIndex = 1; name = buffer.c; path = Source/cmark_gfm/buffer.c; sourceTree = "<group>"; };
+		DAA39DCF29F4C5EF1604DB98541AC814 /* html.c */ = {isa = PBXFileReference; includeInIndex = 1; name = html.c; path = Source/cmark_gfm/html.c; sourceTree = "<group>"; };
+		DB0320F551748F2292225C9337C0FA31 /* vs.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = vs.min.css; path = Pod/Assets/styles/vs.min.css; sourceTree = "<group>"; };
 		DB26A3C7B06D1AB23CF892F81AC9FC5D /* Pods-Pine-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Pine-acknowledgements.markdown"; sourceTree = "<group>"; };
-		DB6B358F18D6B2004137B15AC5FB7F63 /* tomorrow-night-bright.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "tomorrow-night-bright.min.css"; path = "Pod/Assets/styles/tomorrow-night-bright.min.css"; sourceTree = "<group>"; };
-		DE67AC502A57E8DCE385AAEDBCD240CF /* Highlightr-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Highlightr-dummy.m"; sourceTree = "<group>"; };
-		DE8994A840E7A0865FC508207502E886 /* blocks.c */ = {isa = PBXFileReference; includeInIndex = 1; name = blocks.c; path = Source/cmark_gfm/blocks.c; sourceTree = "<group>"; };
-		E0E4D8AB81DE8F676C67FB2FEF6702B8 /* ListElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ListElement.swift; path = Source/ListElement.swift; sourceTree = "<group>"; };
-		E357426F7B98B8333500024251D1DCA8 /* html.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = html.h; path = Source/cmark_gfm/include/html.h; sourceTree = "<group>"; };
-		E7B3E98ADEC1C78B669115DFDECDC67F /* table.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = table.h; path = Source/cmark_gfm/include/table.h; sourceTree = "<group>"; };
-		E871CA1F5229B46E4A93E7181BA93916 /* monokai.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = monokai.min.css; path = Pod/Assets/styles/monokai.min.css; sourceTree = "<group>"; };
-		E884F6993F40EC868B2FE11F3E2CD159 /* pojoaque.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = pojoaque.min.css; path = Pod/Assets/styles/pojoaque.min.css; sourceTree = "<group>"; };
-		EA343352693679BA0EA173E2EF692DB0 /* render.c */ = {isa = PBXFileReference; includeInIndex = 1; name = render.c; path = Source/cmark_gfm/render.c; sourceTree = "<group>"; };
-		EADC1C4D4E0B8D67B29A175E096709B4 /* registry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = registry.h; path = Source/cmark_gfm/include/registry.h; sourceTree = "<group>"; };
-		EC73FC0C1D15D6A3AED5A1C57909C071 /* Highlightr-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Highlightr-umbrella.h"; sourceTree = "<group>"; };
-		EE5CED5FFD1B9EC078305BAD6C12AD74 /* plugin.c */ = {isa = PBXFileReference; includeInIndex = 1; name = plugin.c; path = Source/cmark_gfm/plugin.c; sourceTree = "<group>"; };
-		EEDC3AE9B517BE298E68F9807ED4FA91 /* brown-paper.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "brown-paper.min.css"; path = "Pod/Assets/styles/brown-paper.min.css"; sourceTree = "<group>"; };
-		EF589F19B970E7DA04973B63D44DDA28 /* atelier-cave-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-cave-light.min.css"; path = "Pod/Assets/styles/atelier-cave-light.min.css"; sourceTree = "<group>"; };
-		F3A5BBB0DEA4995C7DE8261479A115C4 /* cmark.c */ = {isa = PBXFileReference; includeInIndex = 1; name = cmark.c; path = Source/cmark_gfm/cmark.c; sourceTree = "<group>"; };
-		F4811E4F024C00F9A5942D5A98F7B73D /* houdini_html_u.c */ = {isa = PBXFileReference; includeInIndex = 1; name = houdini_html_u.c; path = Source/cmark_gfm/houdini_html_u.c; sourceTree = "<group>"; };
-		F57A5D79C73BB02F01C6D191149C4164 /* Element.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Element.swift; path = Source/Element.swift; sourceTree = "<group>"; };
+		DB5B7CC999C63A1D1D2CAB8372CAA715 /* plugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = plugin.h; path = Source/cmark_gfm/include/plugin.h; sourceTree = "<group>"; };
+		DC56458C4B3460160B51A7440725C110 /* plugin.c */ = {isa = PBXFileReference; includeInIndex = 1; name = plugin.c; path = Source/cmark_gfm/plugin.c; sourceTree = "<group>"; };
+		DF333A2724E3BD075D7088EE2D2359CA /* xcode.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = xcode.min.css; path = Pod/Assets/styles/xcode.min.css; sourceTree = "<group>"; };
+		E2B25696D74F4E4CD47483DCDBF6BEBD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E303A85CBEEACD6F900EFAF6E99939BA /* hybrid.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = hybrid.min.css; path = Pod/Assets/styles/hybrid.min.css; sourceTree = "<group>"; };
+		E3FE82708D988741B430BDEC668DE624 /* plaintext.c */ = {isa = PBXFileReference; includeInIndex = 1; name = plaintext.c; path = Source/cmark_gfm/plaintext.c; sourceTree = "<group>"; };
+		E42C08F1A9C4D8383E1643130EE6ABBD /* Inline+TextElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Inline+TextElement.swift"; path = "Source/Inline+TextElement.swift"; sourceTree = "<group>"; };
+		E4AE0A36ED7DD363C9BEB2ED8AEECE9A /* linked_list.c */ = {isa = PBXFileReference; includeInIndex = 1; name = linked_list.c; path = Source/cmark_gfm/linked_list.c; sourceTree = "<group>"; };
+		E4B0BE20284A575E5C9DF4750B502A20 /* sunburst.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = sunburst.min.css; path = Pod/Assets/styles/sunburst.min.css; sourceTree = "<group>"; };
+		E5E8DB97648F5649EB943C93D15D5D1F /* Node+Elements.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Node+Elements.swift"; path = "Source/Node+Elements.swift"; sourceTree = "<group>"; };
+		E718C34E8527D0F7D40EB9F1D4FCA14A /* html.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = html.h; path = Source/cmark_gfm/include/html.h; sourceTree = "<group>"; };
+		E7F428B1B1BDFD1E81BCE290F9DC574A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA16648BB1B9EB45509C707CA373FBF4 /* foundation.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = foundation.min.css; path = Pod/Assets/styles/foundation.min.css; sourceTree = "<group>"; };
+		EA268CC5B861A63193C68D05545FB9B1 /* render.c */ = {isa = PBXFileReference; includeInIndex = 1; name = render.c; path = Source/cmark_gfm/render.c; sourceTree = "<group>"; };
+		EC8459AD8543FC1EEDE332BB6B423C87 /* TextElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextElement.swift; path = Source/TextElement.swift; sourceTree = "<group>"; };
+		EDE2971AB39E2D9633BB57074A9EFCCB /* cmark.c */ = {isa = PBXFileReference; includeInIndex = 1; name = cmark.c; path = Source/cmark_gfm/cmark.c; sourceTree = "<group>"; };
+		EE5265C028FA0B8C69858B65798E0E16 /* emoji_list.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = emoji_list.h; path = Source/cmark_gfm/include/emoji_list.h; sourceTree = "<group>"; };
+		EE6F1CAF1709851715C92600D99CD8AD /* Block+ListElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Block+ListElement.swift"; path = "Source/Block+ListElement.swift"; sourceTree = "<group>"; };
+		F011F6887237BF83230640824B1C5772 /* docco.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = docco.min.css; path = Pod/Assets/styles/docco.min.css; sourceTree = "<group>"; };
+		F5577488612DD95E68231F9F6E279D7B /* mono-blue.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "mono-blue.min.css"; path = "Pod/Assets/styles/mono-blue.min.css"; sourceTree = "<group>"; };
+		F5F7DB257DC8C21087E9B2BFAD311D56 /* ir-black.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "ir-black.min.css"; path = "Pod/Assets/styles/ir-black.min.css"; sourceTree = "<group>"; };
 		F6CF7B7779283C39513E619B43E8B293 /* Pods-Pine-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Pine-dummy.m"; sourceTree = "<group>"; };
-		F6FB6B46B4C5DCAD3E09FFCB06390A25 /* core-extensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "core-extensions.h"; path = "Source/cmark_gfm/include/core-extensions.h"; sourceTree = "<group>"; };
-		F7801382BEFFA85780CEF129D96ABF6D /* solarized-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "solarized-light.min.css"; path = "Pod/Assets/styles/solarized-light.min.css"; sourceTree = "<group>"; };
-		FCD5D70783356059952496A46BC535BD /* cmark_version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cmark_version.h; path = Source/cmark_gfm/include/cmark_version.h; sourceTree = "<group>"; };
-		FD0345912C30F0B6C0AE4A7FC2451A70 /* tomorrow.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = tomorrow.min.css; path = Pod/Assets/styles/tomorrow.min.css; sourceTree = "<group>"; };
-		FD0E8B5A47643546B3C7F080109DCE32 /* checkbox.c */ = {isa = PBXFileReference; includeInIndex = 1; name = checkbox.c; path = Source/cmark_gfm/checkbox.c; sourceTree = "<group>"; };
-		FEBE8EB9AC8B10A6E98E32EF6BC6F50B /* codepen-embed.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "codepen-embed.min.css"; path = "Pod/Assets/styles/codepen-embed.min.css"; sourceTree = "<group>"; };
+		F85F8BB24F7E6BA4C03B328631CB8B56 /* wikilink.c */ = {isa = PBXFileReference; includeInIndex = 1; name = wikilink.c; path = Source/cmark_gfm/wikilink.c; sourceTree = "<group>"; };
+		F8EA842B9CB753606D1A8CA3BF1ED30E /* cmark-gfm-swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "cmark-gfm-swift-umbrella.h"; sourceTree = "<group>"; };
+		F9039DE40A9ED44DE5222101AD787C07 /* atelier-estuary-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-estuary-dark.min.css"; path = "Pod/Assets/styles/atelier-estuary-dark.min.css"; sourceTree = "<group>"; };
+		FA1332BF67FFEF6CA45BBA6A28603856 /* purebasic.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = purebasic.min.css; path = Pod/Assets/styles/purebasic.min.css; sourceTree = "<group>"; };
+		FA5DAF3FD1EA2AA12EC918B29B1B88A1 /* atelier-plateau-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-plateau-light.min.css"; path = "Pod/Assets/styles/atelier-plateau-light.min.css"; sourceTree = "<group>"; };
+		FF0F31E34C3EDF8948022EE6DFCB0E4F /* cmark-gfm-swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "cmark-gfm-swift-prefix.pch"; sourceTree = "<group>"; };
+		FF52ABB37FD77859E120F9F6F501DACC /* table.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = table.h; path = Source/cmark_gfm/include/table.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		061B91F28C6B459AAD7E063EA387C9FA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				87AB93BD59A063994E3509F9006D5355 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6C2CDB5AE8C071F1F6DB99DB5AD39551 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -439,120 +435,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EF452BD70D0C904D214E8DF8E74F2578 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81532A9063D55638382497B7F4832E13 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01BBC48C02A67F7950384E0BE69F1DF1 /* cmark-gfm-swift */ = {
-			isa = PBXGroup;
-			children = (
-				AFB07F85CBA1F7594FD753A919F43CA5 /* arena.c */,
-				9EC920F18BD9D0DD1E3498DFC36B4E0E /* ASTOperations.swift */,
-				49F2B6BF19815670F68F0587D8653CBC /* autolink.c */,
-				AAADA0588E28CC67490A0B0D0A91D6D8 /* autolink.h */,
-				2B2609C5B1D9EBCBC95A3F9B132EE264 /* Block+ListElement.swift */,
-				12C33C6E10F4586402DDA60B29A28AEB /* Block+TableRow.swift */,
-				70D6D12DE9BBEF416D244E171B6C2FA1 /* Block+TextElement.swift */,
-				DE8994A840E7A0865FC508207502E886 /* blocks.c */,
-				5A51926B263179AF41394DD083174240 /* buffer.c */,
-				4660A61F728F0C1C54253D43E6953DE0 /* buffer.h */,
-				6FD4D21A5848956AF18B50152DF11E2B /* case_fold_switch.inc */,
-				FD0E8B5A47643546B3C7F080109DCE32 /* checkbox.c */,
-				0AB6943AC0D1F921D9174C123C25E276 /* checkbox.h */,
-				CFF1B926E89D006875C3E08C124F8EC7 /* chunk.h */,
-				F3A5BBB0DEA4995C7DE8261479A115C4 /* cmark.c */,
-				B799DB4BF7A7D71A65ACD0F03C443FE1 /* cmark.h */,
-				84789CDE58D95FE60C6D862CC20EB6F3 /* cmark-gfm-swift.h */,
-				D9FFAF7A54FECB41C13734D695D989F3 /* cmark_ctype.c */,
-				A51ACFFA97B3C1E217DD40DA7FAF1222 /* cmark_ctype.h */,
-				92A57A14F4CA4C963504332B46CF833F /* cmark_export.h */,
-				4D0A00FDE04B8E4E3FDB71FA1313A751 /* cmark_extension_api.h */,
-				FCD5D70783356059952496A46BC535BD /* cmark_version.h */,
-				629F51BD6DCF1831FF21B88DEEFD6EF9 /* cmarkextensions_export.h */,
-				D80B353FB9848EDA478C91F06A351D06 /* commonmark.c */,
-				670BA8A46B327E63942BD17235C137BF /* config.h */,
-				28F5330DDAE4FFE20FB0505680CCAD8B /* core-extensions.c */,
-				F6FB6B46B4C5DCAD3E09FFCB06390A25 /* core-extensions.h */,
-				F57A5D79C73BB02F01C6D191149C4164 /* Element.swift */,
-				6C21F45AB8FF7BC2E5DE10C1D4E72273 /* emoji.c */,
-				7E7B4B9B522AAFCD62C93CA59045DBD5 /* emoji.h */,
-				802DC5E41044287D0F8B2FE1B702E385 /* emoji_list.h */,
-				7E6E59EC9ECE3E31C06EF3F728D6FD71 /* entities.inc */,
-				CF4022F052FAF7A9FF4A30EA64E11954 /* ext_scanners.c */,
-				7E1DE4A7570C865BBF620095CA183062 /* ext_scanners.h */,
-				4EC52418447650185E9FEC063EC19D21 /* footnotes.c */,
-				3CA10E293C15F6B7E461C2573B0715E2 /* footnotes.h */,
-				3340F6C6D2AD6215D9E2E0192F49D583 /* houdini.h */,
-				6DBD5026E0A643C179CA960920759158 /* houdini_href_e.c */,
-				BE7B62F9F4B0A277E5D00D455967CF45 /* houdini_html_e.c */,
-				F4811E4F024C00F9A5942D5A98F7B73D /* houdini_html_u.c */,
-				654D8C6E25EF458FBC3D835A4B901FB9 /* html.c */,
-				E357426F7B98B8333500024251D1DCA8 /* html.h */,
-				D46CD42DE0ACA408724FDB894BEAE973 /* Inline+TextElement.swift */,
-				0694FAD33BF07E5BDDBD82CDE19D810A /* inlines.c */,
-				5E6A7083C97FF2C6DE3FE085F8CCFA6D /* inlines.h */,
-				26E25F9466FA7BAEDFEE65F5A0665C02 /* iterator.c */,
-				75A5EB02A7CE8E533F975E71D9EC40DC /* iterator.h */,
-				62527635C16B5D5BC3E7F5921C3DFEA2 /* latex.c */,
-				B08BE7D1AECFFEB9747E2548995A6D18 /* libcmark_gfm.h */,
-				D8D23CED626E1FE0FCB8F6F393E5EE9F /* linked_list.c */,
-				E0E4D8AB81DE8F676C67FB2FEF6702B8 /* ListElement.swift */,
-				DA204DAA3F0E9A93BB1B774A58864768 /* man.c */,
-				7D8ED12403CDDDDC356AFFF3C81A615D /* map.c */,
-				729606A9168A887084A1631A5ED961AC /* map.h */,
-				4FE18C4365D14FAF43B5FA1670342D08 /* mention.c */,
-				93B0964DF429765FAF5D6A71FCE7C2DF /* mention.h */,
-				D5742D4D33A3977B4AD7349DEE73CA9B /* module.modulemap */,
-				792B493C7CA33B919975BE1283ED0FF3 /* node.c */,
-				C2DCA16DE188D9CCF5609921C8D5A032 /* node.h */,
-				B8311AA80DDC75C43D71F0A0C01A9DAA /* Node.swift */,
-				9B2A00F6C82C060017922078CEE393BB /* Node+Elements.swift */,
-				B33A7CC38B7EAC67510DC26A7F42F469 /* parser.h */,
-				4F3684BE31EBC4DCF70F783EDF5F20C6 /* plaintext.c */,
-				EE5CED5FFD1B9EC078305BAD6C12AD74 /* plugin.c */,
-				03A43BEE383B78F4EF7BB346774EF2F7 /* plugin.h */,
-				C8CC8E58A66B5A32393B85198254A5C0 /* references.c */,
-				A8334B8048F9791D9BA561F3B59CEA74 /* references.h */,
-				B54D2124FCDC3645538CE5A0126ADC11 /* registry.c */,
-				EADC1C4D4E0B8D67B29A175E096709B4 /* registry.h */,
-				EA343352693679BA0EA173E2EF692DB0 /* render.c */,
-				85631630539478AC20F55603C0A0E1DB /* render.h */,
-				03B6501AF9E01474ECF6AFA394B9A5AB /* scanners.c */,
-				AD1D64C2FB70E423B0E0252E9EB92114 /* scanners.h */,
-				60D28FA7D544875AED1CCA11CEA0E251 /* scanners.re */,
-				3C57E038394F3E25511D430F1F9F688A /* strikethrough.c */,
-				22523C23B48E0111194E6697A6421719 /* strikethrough.h */,
-				7217901324BB333A7AE8633936F44BC8 /* SwiftAST.swift */,
-				CC6C6C516B570C1C873A85204828EBE1 /* syntax_extension.c */,
-				1FEF2432D683B2025E87461A0B9ABDBB /* syntax_extension.h */,
-				99A5251C98A4D650B1B07EE6CF63045B /* table.c */,
-				E7B3E98ADEC1C78B669115DFDECDC67F /* table.h */,
-				C31880FF8076E6B6AE5111171A590874 /* TableRow.swift */,
-				810737B92A5B69DA46705FE21416FB73 /* tagfilter.c */,
-				7054751567F0C6BE8459618F43E7A80C /* tagfilter.h */,
-				3FD535D06129770D99CFE2E25BFFED99 /* TextElement.swift */,
-				1EA8E1E6E50CD17DFE9E3ABC1C758D1D /* utf8.c */,
-				0D688C0C50B0266DD5DBD4CDE18F04C9 /* utf8.h */,
-				BB8B870FD200AAE6B8F1EFEEAE851C71 /* xml.c */,
-				8EAF22AD825362929236CCB9A967DFD9 /* Support Files */,
-			);
-			name = "cmark-gfm-swift";
-			path = "cmark-gfm-swift";
-			sourceTree = "<group>";
-		};
-		107845E38831558A657213E205F20ADA /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				233E547EC25D8FCF4EECD9DE324F25B3 /* Highlightr.modulemap */,
-				04E40C435AB3447134D4BBA7301504B7 /* Highlightr.xcconfig */,
-				DE67AC502A57E8DCE385AAEDBCD240CF /* Highlightr-dummy.m */,
-				41870B6F16B72535B5EC38BBC253A39D /* Highlightr-prefix.pch */,
-				EC73FC0C1D15D6A3AED5A1C57909C071 /* Highlightr-umbrella.h */,
-				97789690B0ED81A19D3596D48AFAB973 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Highlightr";
-			sourceTree = "<group>";
-		};
 		1F78CCF8E766227AAF5B5AB63A05E501 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -561,98 +454,125 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		586ED6E6343E99E8E8B6D54DB6419AAB /* Resources */ = {
+		2DE1C49126E3B3F009A4B09C8B563857 /* cmark-gfm-swift */ = {
 			isa = PBXGroup;
 			children = (
-				8E3D42146FC32423E4D79E6C9908F423 /* agate.min.css */,
-				882B02F9E16E594D0E9AECC441E6932D /* androidstudio.min.css */,
-				1BED51DA4A7D90E28C3DCE0FD7F00D77 /* arduino-light.min.css */,
-				C6496083C538459557C76D68DA1D1B88 /* arta.min.css */,
-				84907CF93E3AD8DA62D4E33059FDCB68 /* ascetic.min.css */,
-				C00DB264BE776A18A41677D3FEA886FC /* atelier-cave-dark.min.css */,
-				EF589F19B970E7DA04973B63D44DDA28 /* atelier-cave-light.min.css */,
-				96ECF347C13E3EA5D81843FE86512EF3 /* atelier-dune-dark.min.css */,
-				2DEFBDA7C20974C9E11D08E7816BFE6A /* atelier-dune-light.min.css */,
-				3A7B9840DC1FC479CA7675B7CECF5086 /* atelier-estuary-dark.min.css */,
-				0A8DF986F563CB742CED8EF24C1F5AFC /* atelier-estuary-light.min.css */,
-				61E4A15C48EB590017CD42537AD1D3F8 /* atelier-forest-dark.min.css */,
-				B9E3A0C5263127CB26BC7B60EC511C9C /* atelier-forest-light.min.css */,
-				C9EA3FAB258AC77ACE556EDE27AEB1F7 /* atelier-heath-dark.min.css */,
-				16A32D43AEFA6F11757A89B2B7C38263 /* atelier-heath-light.min.css */,
-				3D7C889BD6225D6394DF8D784F4ACA24 /* atelier-lakeside-dark.min.css */,
-				A20FA63487E41534A60B06BCF16C123C /* atelier-lakeside-light.min.css */,
-				26587D1B1A16D4B5C5197BE880DB5737 /* atelier-plateau-dark.min.css */,
-				97F3374E267306EA9E14514DC28B5806 /* atelier-plateau-light.min.css */,
-				3B896DA02E50B0F2AAC110DBC7DEAC69 /* atelier-savanna-dark.min.css */,
-				3C60E43B217861C2EA0FF14570BEDB4F /* atelier-savanna-light.min.css */,
-				097CCCE625DE06ABF1DD953A2773F6D5 /* atelier-seaside-dark.min.css */,
-				8019D4D2A5382CFEE39414B84D3D9316 /* atelier-seaside-light.min.css */,
-				C7826B7BBD208CB73D088B8F6D30A647 /* atelier-sulphurpool-dark.min.css */,
-				73759B2E9B383D77AFBEF7F2063EDA84 /* atelier-sulphurpool-light.min.css */,
-				19982CECBEE84A582AF195BF3B78DB24 /* atom-one-dark.min.css */,
-				103175D461C37193564DFA8BC136719A /* atom-one-light.min.css */,
-				EEDC3AE9B517BE298E68F9807ED4FA91 /* brown-paper.min.css */,
-				FEBE8EB9AC8B10A6E98E32EF6BC6F50B /* codepen-embed.min.css */,
-				7082BA4278418EDFE8D364B8CB43ADCB /* color-brewer.min.css */,
-				C6DA43A65A7AB053188F8013F945CA39 /* darcula.min.css */,
-				48973A9A5AC1242B92AA6B2D9CF8E4FB /* dark.min.css */,
-				DAC4F6D421B6A58AD7605601A66FE439 /* darkula.min.css */,
-				7A26931659BD3E757E06C8C820566F99 /* default.min.css */,
-				66C45A17B7DFB92AE19E41ABAF8E392D /* docco.min.css */,
-				72FC300C5DE82FDA59C50D5EF9AF0829 /* dracula.min.css */,
-				C6F9B7EF73B2648CA812BD7DA67C033D /* far.min.css */,
-				43AB2680931551D8E4EE3B70D7EED3DC /* foundation.min.css */,
-				4E09081AAB7EB510B5AF5B970DA41951 /* github-gist.min.css */,
-				C3348FF1C63CD9D63394CB1D12324C03 /* github.min.css */,
-				4A79DB221DCBEE44A4DA9A9F3429B602 /* googlecode.min.css */,
-				A7784DFE292D837649D3D1508302D9C3 /* grayscale.min.css */,
-				D56E0DC46ABB25DB15C9E5D0DC5DE230 /* gruvbox-dark.min.css */,
-				9A0395B9D16386058692B17FE4BF2810 /* gruvbox-light.min.css */,
-				A7329E1829A79829D011B480E25834A4 /* highlight.min.js */,
-				8D338F2D976B04AC1DBD570BF960B88B /* hopscotch.min.css */,
-				B006443CA8403BDAD97D2F89DB2606E0 /* hybrid.min.css */,
-				9CA049C94F2A00C6D1C3A1B667C840F1 /* idea.min.css */,
-				116F3504BC98BC481C611FF6B1239D16 /* ir-black.min.css */,
-				5795FE346D759491A2AB27E0A56369EF /* kimbie.dark.min.css */,
-				6EFE553D8E217C1F56BF0242381E8417 /* kimbie.light.min.css */,
-				A35EBF04B6764CA562C6DF1A67397942 /* magula.min.css */,
-				68416B3B6FAFF38343AB217A5CAA4A5C /* mono-blue.min.css */,
-				D4D0F2E27D13191152F40ECEF1BA8FFD /* monokai-sublime.min.css */,
-				E871CA1F5229B46E4A93E7181BA93916 /* monokai.min.css */,
-				806ECBA0636C95271178BD0DD455F0D8 /* obsidian.min.css */,
-				575D342D898DECAE3AB6D8DE5002B617 /* ocean.min.css */,
-				50A15F7C8E41BA9A9258FE8DCDE28913 /* paraiso-dark.min.css */,
-				CF267F8568F78D51DFCEA37A58206B5F /* paraiso-light.min.css */,
-				E884F6993F40EC868B2FE11F3E2CD159 /* pojoaque.min.css */,
-				D490A0271963DE0CF26208E7199012B2 /* purebasic.min.css */,
-				59660E763E53194E5DA9C618CF62E4F1 /* qtcreator_dark.min.css */,
-				CE14E5315C8905B73D01E7A6F3F9D65D /* qtcreator_light.min.css */,
-				07448155C6B2C98AF29F66316CEE8D52 /* railscasts.min.css */,
-				2F14FBF1EA056315760A8038C81EC661 /* rainbow.min.css */,
-				984B8EFA500FBDD78B0F9E198F3262D6 /* routeros.min.css */,
-				5E0F084A45CE87EF20EE09EFFC145A3E /* school-book.min.css */,
-				46E546519D32FFAD481039D43D40D5B2 /* solarized-dark.min.css */,
-				F7801382BEFFA85780CEF129D96ABF6D /* solarized-light.min.css */,
-				53DCF3D44E578CD5766B89BE813C29BF /* sunburst.min.css */,
-				818F2B13B0F163AB49422CA88FDEB4EA /* tomorrow-night-blue.min.css */,
-				DB6B358F18D6B2004137B15AC5FB7F63 /* tomorrow-night-bright.min.css */,
-				D39A5034CC1B2A00090774D4D3244AC4 /* tomorrow-night-eighties.min.css */,
-				058DB5E8B86470CD0ECBCD57FFFD3583 /* tomorrow-night.min.css */,
-				FD0345912C30F0B6C0AE4A7FC2451A70 /* tomorrow.min.css */,
-				7F36793434A2F78A2737C179C9783A44 /* vs.min.css */,
-				12C350D9891E214AD9A951F0FB273C7C /* vs2015.min.css */,
-				C929A017F962EABDFED13F6886B6EC36 /* xcode.min.css */,
-				759E87135E0A093C363DA7F8E28A0850 /* xt256.min.css */,
-				8040A89ABD4D99E53DCB66BDBADF782C /* zenburn.min.css */,
+				04EA1D49564FA315D2B737479BC8FC1F /* arena.c */,
+				512222478010836EC7F39FF05EF4F56F /* ASTOperations.swift */,
+				651672880ECF62F303036FE2630D4468 /* autolink.c */,
+				0351438BB47C1A833F8E143D94EC7CE0 /* autolink.h */,
+				EE6F1CAF1709851715C92600D99CD8AD /* Block+ListElement.swift */,
+				A2F926EFD68D4D25A2CFEA122E46FA29 /* Block+TableRow.swift */,
+				2BB52D12F4F6C52EFC549A71FE446C67 /* Block+TextElement.swift */,
+				2511DF693E7B3DFFF4A636811C19CF17 /* blocks.c */,
+				DA3FAB5FD849F2130D7614789E7D0C1B /* buffer.c */,
+				6A98683F52508293AAA918C68D72324E /* buffer.h */,
+				846D83DB37A3210E02A1A364D015486C /* case_fold_switch.inc */,
+				D3CE7845F8BF94A16AE8423AA8D79D37 /* checkbox.c */,
+				4B096F13046F3A8CC97AA6297A30920F /* checkbox.h */,
+				605B4DBA02A61DF7D4DD9BC6384575D3 /* chunk.h */,
+				EDE2971AB39E2D9633BB57074A9EFCCB /* cmark.c */,
+				D1379428C1CD93C5C6C244D413DE1A6D /* cmark.h */,
+				0D03107173B7659DF541AB64D7FE8621 /* cmark-gfm-swift.h */,
+				6C4728C389A7F005F057AD06A0B15B35 /* cmark_ctype.c */,
+				845C3E8C1E631031A6DFD4E31F03E17D /* cmark_ctype.h */,
+				9827BDAEDE85AA0ABBC6049138229E9D /* cmark_export.h */,
+				9CA130B32B5721A0DBF449F18C4DE1FF /* cmark_extension_api.h */,
+				1EF2A977330CB7D9B76004218C08E92E /* cmark_version.h */,
+				B31B8F21DB6A6946B6660EE28430405D /* cmarkextensions_export.h */,
+				0FA543AD0DD6C77EDDB926415B891369 /* commonmark.c */,
+				AEAD2875EADDE6710DE18C5BC0C0719A /* config.h */,
+				0468B59FB1AF8C5383D5555966CF245D /* core-extensions.c */,
+				57B55B9DBEF16F0BC5BD81FD6FE83D42 /* core-extensions.h */,
+				D48173BE2CEF17D668A6DF7C24589835 /* Element.swift */,
+				43C8F41A58FBD484D54845D3A5BBE615 /* emoji.c */,
+				267BFF02C67A55C1B4FE7E6F656C07D1 /* emoji.h */,
+				EE5265C028FA0B8C69858B65798E0E16 /* emoji_list.h */,
+				01D3F89DA133418CAA17BD629BFFF839 /* entities.inc */,
+				C25698DACD2B854E3520C4DA5D33A8EF /* ext_scanners.c */,
+				B95C1814BE6658DBE4FA5D803129762F /* ext_scanners.h */,
+				96034FDDACDD86171038954309B76D76 /* footnotes.c */,
+				8E18EE74F72765468D103D36ADC3A4DF /* footnotes.h */,
+				C3D237558604343B4514B994E81036E6 /* houdini.h */,
+				D940F30A4CB696184FB5A4D4E80DC142 /* houdini_href_e.c */,
+				5DE94F40369D271252E5952EFC7F2864 /* houdini_html_e.c */,
+				3C09DC33DB7ED615E29DE2E1456FE772 /* houdini_html_u.c */,
+				DAA39DCF29F4C5EF1604DB98541AC814 /* html.c */,
+				E718C34E8527D0F7D40EB9F1D4FCA14A /* html.h */,
+				E42C08F1A9C4D8383E1643130EE6ABBD /* Inline+TextElement.swift */,
+				345DB5B90EFE8C308E749C2544E1F1BB /* inlines.c */,
+				8F3D92DA5ACC08DFD684963A8A023D3A /* inlines.h */,
+				455ABC0F8202EF2F25BBCC2319C3DB1E /* iterator.c */,
+				35FBE9F99F52BA85A098A2B14B114AF0 /* iterator.h */,
+				53991D6C3987DFB6C936AE1ACF2B407F /* latex.c */,
+				7B820CBDE43A9C0FC705B2CDC4589DF4 /* libcmark_gfm.h */,
+				E4AE0A36ED7DD363C9BEB2ED8AEECE9A /* linked_list.c */,
+				A7E7770FBC8B77AC0D617296C0DD11D7 /* ListElement.swift */,
+				7CC90A9876FA66FC010C94B85B001FD3 /* man.c */,
+				6FF84588777059AFE1B32BB67B2109C7 /* map.c */,
+				70B71EDC4C5FA7307DECAB2B1FBDF4A4 /* map.h */,
+				BBECD8CF341417E88CC133ABB1710ED8 /* mention.c */,
+				8D4C04CBEC01EAA9E2F3F01B0EF8AF0A /* mention.h */,
+				38747A296B59055CB80F982061F3BF39 /* module.modulemap */,
+				253EE05D2A87F32F9BAD200BD77FDBB8 /* node.c */,
+				45BCA587A3327320293D54A307AF50D5 /* node.h */,
+				20231AE60B30B70325B6A22CFC3013D4 /* Node.swift */,
+				E5E8DB97648F5649EB943C93D15D5D1F /* Node+Elements.swift */,
+				5873A98CB99D0435B43CF0ED384733F4 /* parser.h */,
+				E3FE82708D988741B430BDEC668DE624 /* plaintext.c */,
+				DC56458C4B3460160B51A7440725C110 /* plugin.c */,
+				DB5B7CC999C63A1D1D2CAB8372CAA715 /* plugin.h */,
+				1A9191769B8F3C0DBE4265856FE93216 /* references.c */,
+				98C425396376E42898D9976376E2E6B3 /* references.h */,
+				BD43AE43D7494235DDF1B3F2C3691989 /* registry.c */,
+				8C7F9A759FFF9BF2A396FEDAF1C729E3 /* registry.h */,
+				EA268CC5B861A63193C68D05545FB9B1 /* render.c */,
+				3F4175918F36FBDE00564456F8915E64 /* render.h */,
+				BF49351E4B51DD5B0126EFE54109F346 /* scanners.c */,
+				AD46B06AA5C23FF447338A4E8AE2036D /* scanners.h */,
+				AED57D5F702D4BA651A7073C695733F0 /* scanners.re */,
+				30D950FDEFF83D6C522F85CDE415829D /* strikethrough.c */,
+				C68001B357629098AC92DB792C4AD3B2 /* strikethrough.h */,
+				A2BFB652C912D80D206C8E6A9485021F /* SwiftAST.swift */,
+				85E8EA80B14BBD31454FBEFE0CE0D453 /* syntax_extension.c */,
+				087DF934D9FAFEA0B1A60FAF43AF0ECF /* syntax_extension.h */,
+				69F0856E1305A4B12916741F6F9F689F /* table.c */,
+				FF52ABB37FD77859E120F9F6F501DACC /* table.h */,
+				89A92F8D813368F499B0F5EA1761E28E /* TableRow.swift */,
+				8387D50076DFCA6D69C1649D1860495D /* tagfilter.c */,
+				97CE71C51E6B28CEB7E3F2C36BB4BF44 /* tagfilter.h */,
+				EC8459AD8543FC1EEDE332BB6B423C87 /* TextElement.swift */,
+				5F7135F241798C333A398D005A4C72AA /* utf8.c */,
+				38832F8ED8C69472D41DC83E50A6BE1A /* utf8.h */,
+				F85F8BB24F7E6BA4C03B328631CB8B56 /* wikilink.c */,
+				12AAE7EFF9958CCDC56533E6E83918D8 /* wikilink.h */,
+				439F449FC4920B579A1E8916DE231FFA /* xml.c */,
+				85D281F9656BEC5A515A9E7AF3CBB503 /* Support Files */,
 			);
-			name = Resources;
+			name = "cmark-gfm-swift";
+			path = "cmark-gfm-swift";
 			sourceTree = "<group>";
 		};
-		790FB77E2704A94D44B2F54A9577A75C /* Pods */ = {
+		3C8DAF3734C75DB20654BEA9963E7F75 /* Highlightr */ = {
 			isa = PBXGroup;
 			children = (
-				01BBC48C02A67F7950384E0BE69F1DF1 /* cmark-gfm-swift */,
-				98E8D0573C00D88F356A9BA9C98E59EF /* Highlightr */,
+				0C3746365785982C0C92B5D1AC969193 /* CodeAttributedString.swift */,
+				3B55B6241B439B9CC256C3F3172B30B1 /* Highlightr.swift */,
+				99B682994EBE85E7E5680C2D17D900AF /* HTMLUtils.swift */,
+				8D6A1E049633F42858BDF91C844D6327 /* Shims.swift */,
+				5FFA742076DB8EB8E3FC3551BC112D70 /* Theme.swift */,
+				8FC563C574BDED6D373DEBA297E1B093 /* Resources */,
+				AE05D3395595827EF12B9815BD1CD08C /* Support Files */,
+			);
+			name = Highlightr;
+			path = Highlightr;
+			sourceTree = "<group>";
+		};
+		44522A48DDB19BD44D827104E8275B1F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2DE1C49126E3B3F009A4B09C8B563857 /* cmark-gfm-swift */,
+				3C8DAF3734C75DB20654BEA9963E7F75 /* Highlightr */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -662,10 +582,24 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				D648CE86F139C7CCFD55D5B8A03BE74B /* Frameworks */,
-				790FB77E2704A94D44B2F54A9577A75C /* Pods */,
+				44522A48DDB19BD44D827104E8275B1F /* Pods */,
 				89E08F58693B5D50B1E08661C2115DD9 /* Products */,
 				1F78CCF8E766227AAF5B5AB63A05E501 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		85D281F9656BEC5A515A9E7AF3CBB503 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				70603B74881C391490156F076C82D066 /* cmark-gfm-swift.modulemap */,
+				5280435847D76A84DAA455E28B5E5555 /* cmark-gfm-swift.xcconfig */,
+				57546AF89BE26EF95A80B051550C7134 /* cmark-gfm-swift-dummy.m */,
+				FF0F31E34C3EDF8948022EE6DFCB0E4F /* cmark-gfm-swift-prefix.pch */,
+				F8EA842B9CB753606D1A8CA3BF1ED30E /* cmark-gfm-swift-umbrella.h */,
+				E7F428B1B1BDFD1E81BCE290F9DC574A /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/cmark-gfm-swift";
 			sourceTree = "<group>";
 		};
 		89E08F58693B5D50B1E08661C2115DD9 /* Products */ = {
@@ -678,20 +612,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8EAF22AD825362929236CCB9A967DFD9 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				5D82E6C523655291B557B3FF12F8BB87 /* cmark-gfm-swift.modulemap */,
-				D5EED8AB5E22E84CCB84F480A3A2C55A /* cmark-gfm-swift.xcconfig */,
-				A3BB1A11188E11194803D9193C210EEB /* cmark-gfm-swift-dummy.m */,
-				947703C5793665C90966AC934C655467 /* cmark-gfm-swift-prefix.pch */,
-				BB122F0EE67A29E196A46DD75FA485A9 /* cmark-gfm-swift-umbrella.h */,
-				04A56ACC4748723EA60E749F7A60E609 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/cmark-gfm-swift";
-			sourceTree = "<group>";
-		};
 		8F48BDD6FB854FF981DF5F2372190A4D /* OS X */ = {
 			isa = PBXGroup;
 			children = (
@@ -701,19 +621,105 @@
 			name = "OS X";
 			sourceTree = "<group>";
 		};
-		98E8D0573C00D88F356A9BA9C98E59EF /* Highlightr */ = {
+		8FC563C574BDED6D373DEBA297E1B093 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C99639F9AFE49A012B16B5C4F50902A1 /* CodeAttributedString.swift */,
-				2C642992BA52C372D148557E640F2378 /* Highlightr.swift */,
-				BCC85B2A02AB878D97A3B382D6038897 /* HTMLUtils.swift */,
-				409B3D9667F3CF50AF81717CA7F4859D /* Shims.swift */,
-				7425E47B7A878F2151163C4FC5ECD9F6 /* Theme.swift */,
-				586ED6E6343E99E8E8B6D54DB6419AAB /* Resources */,
-				107845E38831558A657213E205F20ADA /* Support Files */,
+				C76FF4307AA040FC46EB02456D41E0C6 /* agate.min.css */,
+				A5F3AEAA340AA598FC7C22E1711DB94D /* androidstudio.min.css */,
+				00B9DE336524CE53A42BA448B80B53DD /* arduino-light.min.css */,
+				76464F9F1BE009DCADB58E67F35BE871 /* arta.min.css */,
+				6A4CC0277A71ED4B1BF23C72DA3E2A2B /* ascetic.min.css */,
+				2894285E2D25FF1EC1A72836651E7A48 /* atelier-cave-dark.min.css */,
+				077BEF3C3F48F7193CC4482115286D3C /* atelier-cave-light.min.css */,
+				81350D70FE0ACA00FFF373A93D37B16D /* atelier-dune-dark.min.css */,
+				3037DB65FC87AFFBBD7B0EE0F9DFAC6C /* atelier-dune-light.min.css */,
+				F9039DE40A9ED44DE5222101AD787C07 /* atelier-estuary-dark.min.css */,
+				5F1A7BFE1F9EA27E4B8CC15852F4A10C /* atelier-estuary-light.min.css */,
+				C396E3C8BD06CCBAA5A21727F8497785 /* atelier-forest-dark.min.css */,
+				2C4618070ACADC18F56582BDA9BA9702 /* atelier-forest-light.min.css */,
+				4B756EE791911EC85E3D0B38BC335E84 /* atelier-heath-dark.min.css */,
+				BB26278995CD66C060BA864AF1ED7BC4 /* atelier-heath-light.min.css */,
+				B2EC78B592AB266919CA086A873BF665 /* atelier-lakeside-dark.min.css */,
+				970A8E72D90526110E536890DF5A5AA2 /* atelier-lakeside-light.min.css */,
+				0890D6777BBF81F2B9CD3BEE3A80AE3E /* atelier-plateau-dark.min.css */,
+				FA5DAF3FD1EA2AA12EC918B29B1B88A1 /* atelier-plateau-light.min.css */,
+				3CDEF1AEBF63F64FA704C30A788627AF /* atelier-savanna-dark.min.css */,
+				1BA709E4A4B2F136A1794A7B8F9B17E7 /* atelier-savanna-light.min.css */,
+				11AB3C5FCE6D8AD76CBD17D1C1677405 /* atelier-seaside-dark.min.css */,
+				53177B6307A558F6568F773F7A448695 /* atelier-seaside-light.min.css */,
+				2C273AB10AFF9829734E91B68F2A0C4D /* atelier-sulphurpool-dark.min.css */,
+				136224C038C78391F8420B8654D820AD /* atelier-sulphurpool-light.min.css */,
+				7BC21785F4274E21DCD809C1D07DCACA /* atom-one-dark.min.css */,
+				275F7422F79E0089DDCCB6BBB3F9ED86 /* atom-one-light.min.css */,
+				7B7A72DC3B3D142E451739D9F81916FB /* brown-paper.min.css */,
+				5E75245776DCF9D9A575A90718A92BDD /* codepen-embed.min.css */,
+				C51D83E1D849D5561078EDAA2406A144 /* color-brewer.min.css */,
+				38F62CD4367F6A5D6315498D9A1EC54D /* darcula.min.css */,
+				616742BD1941F29888A14DB281889F67 /* dark.min.css */,
+				BC91215ACCD7BBCFD991E9C67621EF3C /* darkula.min.css */,
+				7D56A4A7A83B4EC0FF25E40C3C54B787 /* default.min.css */,
+				F011F6887237BF83230640824B1C5772 /* docco.min.css */,
+				3156AFA693ACE6177A84A49E495EF7D9 /* dracula.min.css */,
+				29F2B8365476466B0877B77ABADE6D09 /* far.min.css */,
+				EA16648BB1B9EB45509C707CA373FBF4 /* foundation.min.css */,
+				52FD368F265BE2D6429ED8F9FDDCBC14 /* github-gist.min.css */,
+				9BC289ED3649BFE1DB13F0C1665C48D3 /* github.min.css */,
+				96D729642075B335ABAA2BB5CD01E610 /* googlecode.min.css */,
+				760AD413B654D45C0903F89733DEE02C /* grayscale.min.css */,
+				6915933E631BE445DC9EEC4B7B3663B5 /* gruvbox-dark.min.css */,
+				0930DCC85ED9480771B41814DF19644B /* gruvbox-light.min.css */,
+				06D2E7BB03AB58D30AC4830109A1E5DC /* highlight.min.js */,
+				0F372D141BAA8343A4E57AD4D80BC161 /* hopscotch.min.css */,
+				E303A85CBEEACD6F900EFAF6E99939BA /* hybrid.min.css */,
+				6E0362D2885AE2FDCC2EA6DD3D2A3CC7 /* idea.min.css */,
+				F5F7DB257DC8C21087E9B2BFAD311D56 /* ir-black.min.css */,
+				4DCB666F7CA0FF1E4E605A3FFDA1618C /* kimbie.dark.min.css */,
+				4CEB7450F3077DE317486A44CEEA592A /* kimbie.light.min.css */,
+				D0634420D7ED90F84B485BF62567BAE2 /* magula.min.css */,
+				F5577488612DD95E68231F9F6E279D7B /* mono-blue.min.css */,
+				B639B188D81ED2C3B978819CDBB1AB57 /* monokai-sublime.min.css */,
+				C6CDD04A42AE04BC5A85EC16906D805E /* monokai.min.css */,
+				AB3D29A090D05AC7572A12CB7EC22213 /* obsidian.min.css */,
+				8B9871A5A19A29075812F745568ECB77 /* ocean.min.css */,
+				435CF1263A3676B562DA17362FFE1065 /* paraiso-dark.min.css */,
+				714F21A2C9E1525F8F486E2929E96EDA /* paraiso-light.min.css */,
+				B40ACEF232F13FFA2A3CE682FBFE217C /* pojoaque.min.css */,
+				FA1332BF67FFEF6CA45BBA6A28603856 /* purebasic.min.css */,
+				895D25A84D84B8FEFDA6FA5BA019D080 /* qtcreator_dark.min.css */,
+				52936A4E20AC86D74814FAB88B8301F1 /* qtcreator_light.min.css */,
+				A7CE74FB697A6AF56A66CF3EA0B6BE8A /* railscasts.min.css */,
+				8D20451A1E27A4C2A01B6CD0649D24C0 /* rainbow.min.css */,
+				9724957891E8F9C6DCDA4365B4721D4D /* routeros.min.css */,
+				AEB918082C82E19961816C8C9FCC4A2A /* school-book.min.css */,
+				597CBA8925167A08D2EF0954DC061C25 /* solarized-dark.min.css */,
+				A8CBE7190E4CBC7F11EB4D286BB3BD95 /* solarized-light.min.css */,
+				E4B0BE20284A575E5C9DF4750B502A20 /* sunburst.min.css */,
+				934851B8949C66043FAA3F1B8AE50C7F /* tomorrow-night-blue.min.css */,
+				D4EC3D67FBB761FFFC5BFE8AF8849530 /* tomorrow-night-bright.min.css */,
+				13E6D47DDE9D846F164BF56599B952BD /* tomorrow-night-eighties.min.css */,
+				B54DB37CD9F668000891088BD69426EB /* tomorrow-night.min.css */,
+				9C5111DA9AAEE6A901638565F50CBCA1 /* tomorrow.min.css */,
+				DB0320F551748F2292225C9337C0FA31 /* vs.min.css */,
+				C598763D2C74DFC1B216CAD4C8E7E4A7 /* vs2015.min.css */,
+				DF333A2724E3BD075D7088EE2D2359CA /* xcode.min.css */,
+				B4883482970E2D975CE3C336E1705990 /* xt256.min.css */,
+				032F5155200FBD56E9A78F3A136D1202 /* zenburn.min.css */,
 			);
-			name = Highlightr;
-			path = Highlightr;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		AE05D3395595827EF12B9815BD1CD08C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CFD89CBEF54048639FBBD638926D84C3 /* Highlightr.modulemap */,
+				310A316C976621207D387A6762D29557 /* Highlightr.xcconfig */,
+				CD870EE7BE79858893DD1F744111E5C5 /* Highlightr-dummy.m */,
+				158C38E1217E4DBF57F9B940E76E8CD9 /* Highlightr-prefix.pch */,
+				A8A8F24F284DB609C3716502184C4CFB /* Highlightr-umbrella.h */,
+				E2B25696D74F4E4CD47483DCDBF6BEBD /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Highlightr";
 			sourceTree = "<group>";
 		};
 		D648CE86F139C7CCFD55D5B8A03BE74B /* Frameworks */ = {
@@ -745,55 +751,56 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		37E0CBB5FCA57E0A17E745F8BA553A59 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B9FFA8C5EE50E163D86EF725634C7D1 /* autolink.h in Headers */,
+				9D834ADD4E904BBE94854E180A2C5D60 /* buffer.h in Headers */,
+				D64FCDCD0AA8F299BDF2CA6050DFE639 /* checkbox.h in Headers */,
+				E6D4ECC29A778A831BD82342AC00221A /* chunk.h in Headers */,
+				01A0D80707B56680A521F3797BDF59D8 /* cmark-gfm-swift-umbrella.h in Headers */,
+				B1506621459CA42CC91D78D7A5BF888A /* cmark-gfm-swift.h in Headers */,
+				6D7B821EA0862E88C003F5427E3093F7 /* cmark.h in Headers */,
+				D402D6373FAE7F0C2498CE1EAE6A62A7 /* cmark_ctype.h in Headers */,
+				0468CA652F961A256A6F6F876EB418D3 /* cmark_export.h in Headers */,
+				3A1D44DF319860AB6BBD76F73B8C4543 /* cmark_extension_api.h in Headers */,
+				234D22BBB3087726427D8CE8A34E2013 /* cmark_version.h in Headers */,
+				36851BCAAC5AC99F3BC9A0C7338FD339 /* cmarkextensions_export.h in Headers */,
+				1FB1487B7291D1D344B518A943A57DB7 /* config.h in Headers */,
+				A409CA3ED0D5210EC44AC873CD57A3BD /* core-extensions.h in Headers */,
+				E3A0BA0F29860A52B409D985A6CE3CCF /* emoji.h in Headers */,
+				56B5BEC838DB297BD0201429C1E42D7D /* emoji_list.h in Headers */,
+				F06CC006BB03EEC5A355F84C296A409A /* ext_scanners.h in Headers */,
+				B0A1B3DC2ADB02F1AB68FC08AD056DA8 /* footnotes.h in Headers */,
+				391C82E8DFEF40D8835FA1DE1E9CB1EC /* houdini.h in Headers */,
+				C52CE37EAC1F85C00BF7A105CDC9F0C4 /* html.h in Headers */,
+				CD0F59A6BC836FA3B89C68CC52B0834A /* inlines.h in Headers */,
+				C060344006B01AF2DDE84F408F6225D3 /* iterator.h in Headers */,
+				244DD8C848340EB35713EFB6DFA31A1F /* libcmark_gfm.h in Headers */,
+				A6FA9E151AC9BADD46B772D0A9BE4CE8 /* map.h in Headers */,
+				797D305A8FC85A761909CD64926A98FD /* mention.h in Headers */,
+				0A211DB9CFF99B4798FFDFE8F5479FC7 /* node.h in Headers */,
+				CEFB7A6A327E06179138FEBCFD4E8DE1 /* parser.h in Headers */,
+				A8886C851E15C66BF94C56F8EAF8492E /* plugin.h in Headers */,
+				7AF27C4E162A6CF4B30C91912ED1B6B3 /* references.h in Headers */,
+				32EF0DA119BDA93BFF06C65B23A5153C /* registry.h in Headers */,
+				F2B5B4CA790383A0CE7C06DF61EDE13A /* render.h in Headers */,
+				FA593092EBC3B36744D63E832B259E44 /* scanners.h in Headers */,
+				3E9CCA7EC2A5F6CAC215B25E44241081 /* strikethrough.h in Headers */,
+				F1BE64F20D157E3AF173A491857B9D1A /* syntax_extension.h in Headers */,
+				DE3F2FA36F91AC6D4D9214EA31B0506E /* table.h in Headers */,
+				B8CB64578269DAD1EC033435E08E4CA7 /* tagfilter.h in Headers */,
+				5CD594F9AD5A5AAFA22E44033C89D044 /* utf8.h in Headers */,
+				8D422A2CD5685B73F85DF05016A3E1FA /* wikilink.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		591CB63DB3A173206ACD0F335118D428 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9A6119E901D973C7E82D8B246067C2E8 /* Pods-Pine-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		840FC128101660D3D345F17F7B174A0A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				991F32A8FCE770C46E61E80C83C805EB /* autolink.h in Headers */,
-				2BE96A2CFE78728DF0093557BF8F21D8 /* buffer.h in Headers */,
-				3BD67F7FE52F09F0A5E350A4686E5F6B /* checkbox.h in Headers */,
-				9DFD842A0FC617F5417FC730F3D8A8CA /* chunk.h in Headers */,
-				971866FE625BAB7859EFD3C05D712F4A /* cmark-gfm-swift-umbrella.h in Headers */,
-				89A35BE9B15E6759A9B619AEF548B21C /* cmark-gfm-swift.h in Headers */,
-				C4E6618C393F9A19CC81A8AFF662CE2A /* cmark.h in Headers */,
-				5340788D4C118661932A317C2917D16D /* cmark_ctype.h in Headers */,
-				335DD77AA680AD9F4DDA449C44C67B65 /* cmark_export.h in Headers */,
-				D379E2FCC8B8A89AA49DE20AF178727B /* cmark_extension_api.h in Headers */,
-				89B02AF79ECF0D6974146F3A3D24105E /* cmark_version.h in Headers */,
-				D96FD22E92893EE11068F184A7A6349D /* cmarkextensions_export.h in Headers */,
-				4A98A661049E2374295DE28BAF1E751B /* config.h in Headers */,
-				EC67471F3FAEEE7BA134AA9C918995ED /* core-extensions.h in Headers */,
-				68744BBC9DCA53C852A3F05C0D182222 /* emoji.h in Headers */,
-				2133A8DE5EDAA7C2C72A199D24CEB016 /* emoji_list.h in Headers */,
-				DC23EBAE92DF19AC63B85A22C157888D /* ext_scanners.h in Headers */,
-				929CBBD95D0E4F5A3DFB0042C5CBFF1D /* footnotes.h in Headers */,
-				53F63087CA9B31BA9D7A4615A598D8F2 /* houdini.h in Headers */,
-				FDB645D26926E21A38CB56FFE888D95A /* html.h in Headers */,
-				8E5B14DB7E467620C47F19073209F9CF /* inlines.h in Headers */,
-				A2D6052184B194D5A5C8595B57BEDF7D /* iterator.h in Headers */,
-				0B3A152979F0AE013CD7A6A2D6047573 /* libcmark_gfm.h in Headers */,
-				6EAA190FFB136FCD190A13B9FE9F751B /* map.h in Headers */,
-				2E4F4E0A887E1533C4FB5095088F50C5 /* mention.h in Headers */,
-				6DBFABAAAB3506970BFBC43EEAB33EFB /* node.h in Headers */,
-				0A279F79F8E030623F17D6825174CCA6 /* parser.h in Headers */,
-				B45DB6F0B0197A40D4ED09100ADE5603 /* plugin.h in Headers */,
-				A95D431AED42BFBEFD928541CD5226EF /* references.h in Headers */,
-				53F59A7F7414336F0D446329C58EC7B3 /* registry.h in Headers */,
-				717D6D331246602A4323EBD5E88C854A /* render.h in Headers */,
-				C01D7D1F990A985507E76C108E57DD21 /* scanners.h in Headers */,
-				8236308B1BDDA1AC57935431CA95AA17 /* strikethrough.h in Headers */,
-				1962347C180F58D4ADEE209F80FB4513 /* syntax_extension.h in Headers */,
-				EB2774DB7AC888F7E4F6C44D5903A586 /* table.h in Headers */,
-				5842A5CC0D335E8EB124032B6FC8BCD0 /* tagfilter.h in Headers */,
-				1BBC23A97D709016F332D8BCA8A080F9 /* utf8.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -826,23 +833,6 @@
 			productReference = 5315DA05F2C46FA95A0752DBD28CD7E4 /* Highlightr.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		6D3EDCD13214AB29231730B20BAAD101 /* cmark-gfm-swift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 99E60CFEDC2430D70AC1EF06CEB33D1A /* Build configuration list for PBXNativeTarget "cmark-gfm-swift" */;
-			buildPhases = (
-				50F0D281DFC86B83CA802FC29E4A8860 /* Sources */,
-				061B91F28C6B459AAD7E063EA387C9FA /* Frameworks */,
-				840FC128101660D3D345F17F7B174A0A /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "cmark-gfm-swift";
-			productName = "cmark-gfm-swift";
-			productReference = C64F786BB967A433E82C0EAD9F86150A /* cmark_gfm_swift.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		7DFD0E1C9266227D8EFD8694B5DC57F8 /* Pods-Pine */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25A5D9E75512954857BAC5335E0FC395 /* Build configuration list for PBXNativeTarget "Pods-Pine" */;
@@ -860,6 +850,23 @@
 			name = "Pods-Pine";
 			productName = "Pods-Pine";
 			productReference = 280AC27E431079C5491133ED9ABC9EA6 /* Pods_Pine.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7E400E6B6A7EF0D643453DF52B9878E5 /* cmark-gfm-swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8759AB477FC8552737C37C1B9139D95 /* Build configuration list for PBXNativeTarget "cmark-gfm-swift" */;
+			buildPhases = (
+				899194CE8376FC158A01A8E2FA217AD5 /* Sources */,
+				EF452BD70D0C904D214E8DF8E74F2578 /* Frameworks */,
+				37E0CBB5FCA57E0A17E745F8BA553A59 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "cmark-gfm-swift";
+			productName = "cmark-gfm-swift";
+			productReference = C64F786BB967A433E82C0EAD9F86150A /* cmark_gfm_swift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -883,7 +890,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6D3EDCD13214AB29231730B20BAAD101 /* cmark-gfm-swift */,
+				7E400E6B6A7EF0D643453DF52B9878E5 /* cmark-gfm-swift */,
 				3A0CA05F1082330119E8B172F16B0242 /* Highlightr */,
 				7DFD0E1C9266227D8EFD8694B5DC57F8 /* Pods-Pine */,
 			);
@@ -989,63 +996,64 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		50F0D281DFC86B83CA802FC29E4A8860 /* Sources */ = {
+		899194CE8376FC158A01A8E2FA217AD5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92A62A1FA05B2392AD4E97B9180E03DD /* arena.c in Sources */,
-				7D027F45FAAC4F87DA0F09514AD8B72F /* ASTOperations.swift in Sources */,
-				57AEAFA7265E4AD6231397E36B44788E /* autolink.c in Sources */,
-				DB75E36F8A9C868154CDDA1B61153D15 /* Block+ListElement.swift in Sources */,
-				51D77914D8E1403322F5EC20E7FE36FF /* Block+TableRow.swift in Sources */,
-				96FE867DB357BF65D5F00D34A5A5B384 /* Block+TextElement.swift in Sources */,
-				6847320B3C3B4D04AA650B13BC55103E /* blocks.c in Sources */,
-				157B35EAF77D26FB3D48C53BA4962C5D /* buffer.c in Sources */,
-				61B5F1EFF00B06B0D824FCB36F567E6B /* case_fold_switch.inc in Sources */,
-				21E3C0C237B5A62959ECA63583B399F7 /* checkbox.c in Sources */,
-				EC7D727B2BE90A46309434841091E428 /* cmark-gfm-swift-dummy.m in Sources */,
-				5CD7F75F982EA8A5F2B3155A970F18FF /* cmark.c in Sources */,
-				BE067901AD608450E0CDB949D133D1AD /* cmark_ctype.c in Sources */,
-				D8C10E4584944FB43FC4AB33931DB358 /* commonmark.c in Sources */,
-				8A4C18DE8BF914E411376B3E9175FD68 /* core-extensions.c in Sources */,
-				49CA720F9F6FCA7983B444A2C71CBB28 /* Element.swift in Sources */,
-				776DE484C5FA3CAFB817C3B9F5996E79 /* emoji.c in Sources */,
-				6506D2EF5A4149FFAF92CAE7161F644A /* entities.inc in Sources */,
-				40067CC9BB0D998E349F3E3C53C4377F /* ext_scanners.c in Sources */,
-				32638F8BB256B2A750813CA4D4A361DE /* footnotes.c in Sources */,
-				5069C2390BDAC0DF956E93844D3A9DF3 /* houdini_href_e.c in Sources */,
-				2DC106CEE446A3A7BA645B955F7B69A1 /* houdini_html_e.c in Sources */,
-				73B3176D54EAE63D680AF1A2ADADA215 /* houdini_html_u.c in Sources */,
-				54AADBF676B30E78F59D490A00E6A127 /* html.c in Sources */,
-				AC88BC87E388FB4D86D784FE9120AEE1 /* Inline+TextElement.swift in Sources */,
-				AC6EEF61A1CD4B053366F0CF22F0A84A /* inlines.c in Sources */,
-				E61C740CD3C96769E54CA37A16032747 /* iterator.c in Sources */,
-				600B1BA8B48F7014AA357861F2388419 /* latex.c in Sources */,
-				CCEE27D96B04FE9380E5CF11E91326C9 /* linked_list.c in Sources */,
-				55983C98B40C4B015045229FB1197471 /* ListElement.swift in Sources */,
-				30B96DBA0D27648EC4E0EE0CC7E935E3 /* man.c in Sources */,
-				B102C02DC7309B983290A86220883E11 /* map.c in Sources */,
-				E404BC1823C57038ACF9B52F4C840A09 /* mention.c in Sources */,
-				64FF9CB09BD5C8B65F1AA75097CDAE3A /* module.modulemap in Sources */,
-				AEE93CC231AF663ECE779E0AF21AD68E /* Node+Elements.swift in Sources */,
-				D59D9ED6D9780395E696FE1BAC35BC41 /* node.c in Sources */,
-				ECEB0BDB72A1DC3DAA37B945DAB6BF95 /* Node.swift in Sources */,
-				712E9C1B1828A6ACB1FDC1DB19F1A72E /* plaintext.c in Sources */,
-				0E92652CCDDE296D13ACDF5CB16721C1 /* plugin.c in Sources */,
-				07807002166E92174CDF1220548E991A /* references.c in Sources */,
-				69CADE3989D0C0644E2D64DC2F67639A /* registry.c in Sources */,
-				DDE62528505AD53B616ED0143115DEBF /* render.c in Sources */,
-				16E412D9C1E88CB79AA05B5BE187D469 /* scanners.c in Sources */,
-				38ABDA595CAC78E4854F6314CAA50517 /* scanners.re in Sources */,
-				5AD2FDA694613F9CC903BE0CB8FF61F5 /* strikethrough.c in Sources */,
-				0EAC978A8F2C94C2E37C4AFBB0080EFE /* SwiftAST.swift in Sources */,
-				A1946DA23E1B8F36B6D11DDFDE9D004E /* syntax_extension.c in Sources */,
-				DDA1B5FA5F9F91B4AA28C773DAD4B468 /* table.c in Sources */,
-				4ED9C4A5263BB1F51E67C41B885E022F /* TableRow.swift in Sources */,
-				11AB03B40CCE38E1499460250DE5A30D /* tagfilter.c in Sources */,
-				040F59E614BA660998C1BC6FA826DB6B /* TextElement.swift in Sources */,
-				C0EAAA70C1357E8991F8E57DEE74E0F8 /* utf8.c in Sources */,
-				AD88AEC6A2BBE5DF8947DA818505F8B7 /* xml.c in Sources */,
+				CB0107EBB92D62E85813884707F707AE /* arena.c in Sources */,
+				3BE4744C55E7C454B71EDDF3F06F29AB /* ASTOperations.swift in Sources */,
+				8EE4B0877375EF6F3ED031D3857C7F93 /* autolink.c in Sources */,
+				72FE858EAC5922EE582AB62F1E5C045D /* Block+ListElement.swift in Sources */,
+				741464C7F2253A5C8CDE8B4FB6E4AEAE /* Block+TableRow.swift in Sources */,
+				9759BBBEC7F2E56E4F928DCF7B25461F /* Block+TextElement.swift in Sources */,
+				7FC626F4B823E33C1D7EEBD11E00C38A /* blocks.c in Sources */,
+				5E187FC91D92BF36EA1DACA56DC75844 /* buffer.c in Sources */,
+				9E9297DE9C4EEA7A1A47FCBCCAF4A402 /* case_fold_switch.inc in Sources */,
+				6A02596BE656C971DF768E9A98BB9107 /* checkbox.c in Sources */,
+				DF3442453A122EE03F429BBD32A8992C /* cmark-gfm-swift-dummy.m in Sources */,
+				1F526D06D75617B3CE9E5B017B7A29BD /* cmark.c in Sources */,
+				F88EFD38EA2F8ADB519331EA42549FE8 /* cmark_ctype.c in Sources */,
+				DBC65989E7FC49E4C50A1A749F3A1FA0 /* commonmark.c in Sources */,
+				E62B2B8AFC7336EA4ACE166AB5C744E8 /* core-extensions.c in Sources */,
+				D3129F33C34181744553F5D89F95B674 /* Element.swift in Sources */,
+				6838650E6DC1FF7CF2F6596A69E5238A /* emoji.c in Sources */,
+				865B90F8F6B9A4830A6873C205BD9B59 /* entities.inc in Sources */,
+				ED6B1827FA6C427D9933669EC1DF5803 /* ext_scanners.c in Sources */,
+				CBD3115F374093706824273BDBD80E95 /* footnotes.c in Sources */,
+				6A54CF605CA2B93379129552336E04CB /* houdini_href_e.c in Sources */,
+				2991EDB76C66936ACC6BB0DFB0F1BDCF /* houdini_html_e.c in Sources */,
+				EAEDCBA2C4CB259EE57B9C07A7FF97F5 /* houdini_html_u.c in Sources */,
+				66FB331FA28EA9691364DE20F8FDA55B /* html.c in Sources */,
+				5D386D4598FA38C5D28CBC5D629C6014 /* Inline+TextElement.swift in Sources */,
+				D8B218FDB900F2A14751500004E7C3A4 /* inlines.c in Sources */,
+				F661E1D6FB3F0C7FA0BB4179DB479F66 /* iterator.c in Sources */,
+				FE4B1E238FC1BE9774E9D145A2F3541E /* latex.c in Sources */,
+				E32B7B5B8CD971FECA5FFB98F57DBE22 /* linked_list.c in Sources */,
+				A8D78EBA34C795E48442F78E2D18FBB4 /* ListElement.swift in Sources */,
+				4CE574F0F49AB4028530FBFDD20BCA91 /* man.c in Sources */,
+				A8601A822FCC0615338D8839C87A56D5 /* map.c in Sources */,
+				9230C0EBBC0588B8656B6E8879732020 /* mention.c in Sources */,
+				3F2C6057E894994FA5779D10CEED8485 /* module.modulemap in Sources */,
+				7AA0F37F9119D325FC7B07CE1E8E4C56 /* Node+Elements.swift in Sources */,
+				C31A1FF6D90FCC7254984604117B94FC /* node.c in Sources */,
+				82C707682706E9271CBA83F6C549CBD9 /* Node.swift in Sources */,
+				CD2188F7CCCDD313ADD48DA85D5F3A64 /* plaintext.c in Sources */,
+				466A4F8B312B6FA2D7DEB31A8DCCD5F9 /* plugin.c in Sources */,
+				608DB6812D168C5791CE6F2A884ED384 /* references.c in Sources */,
+				501DE201E6CC2ACCA9BD026938F4697C /* registry.c in Sources */,
+				408F0E812E9E6207A2A3BE0221A122A6 /* render.c in Sources */,
+				7F904D1A17AFCF8B776EF9DE351535FC /* scanners.c in Sources */,
+				406C9ED1252886D255A902A56CD7D156 /* scanners.re in Sources */,
+				4D2C2CD6B722F99D780FDD0F996E9707 /* strikethrough.c in Sources */,
+				0F4CC877CA695F037BCE6990A050AB6D /* SwiftAST.swift in Sources */,
+				3F091146B8612EA372505F1152D1340A /* syntax_extension.c in Sources */,
+				203550DBE46CD21337F0A1754CDA6C8C /* table.c in Sources */,
+				ACA828952F2A54BBBBA20D23E463F6AE /* TableRow.swift in Sources */,
+				F79A8F6AF7A0900266C56A3B095E56D8 /* tagfilter.c in Sources */,
+				5AC3685C443C91AADDA165BED5ACBB68 /* TextElement.swift in Sources */,
+				42B0C7BD351F62BB69B7E7B109BAFAD1 /* utf8.c in Sources */,
+				D182DA8E6E09BF3FE01A7AD1857A62ED /* wikilink.c in Sources */,
+				4467E3927D3D49A07CC7E9777ABBB237 /* xml.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1074,7 +1082,7 @@
 		F4BCB4DB7CA7DC8704AF4119E811C2DC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "cmark-gfm-swift";
-			target = 6D3EDCD13214AB29231730B20BAAD101 /* cmark-gfm-swift */;
+			target = 7E400E6B6A7EF0D643453DF52B9878E5 /* cmark-gfm-swift */;
 			targetProxy = 9C13C9298DC3E61227C568C44304EBE2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1117,9 +1125,9 @@
 			};
 			name = Debug;
 		};
-		4EF4C319ECA20CD4C76C52CF899585BC /* Debug */ = {
+		69C857F551B185AB605B839C1837FCC3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5EED8AB5E22E84CCB84F480A3A2C55A /* cmark-gfm-swift.xcconfig */;
+			baseConfigurationReference = 5280435847D76A84DAA455E28B5E5555 /* cmark-gfm-swift.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1144,12 +1152,12 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		885072FBE917853E9C621EA32511C1DA /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1214,9 +1222,43 @@
 			};
 			name = Debug;
 		};
+		88AC9A64BA29559169CA86F6106D6C49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5280435847D76A84DAA455E28B5E5555 /* cmark-gfm-swift.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/cmark-gfm-swift/cmark-gfm-swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/cmark-gfm-swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/cmark-gfm-swift/cmark-gfm-swift.modulemap";
+				PRODUCT_MODULE_NAME = cmark_gfm_swift;
+				PRODUCT_NAME = cmark_gfm_swift;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		B025A495ADA75846BE9E494454D9576F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04E40C435AB3447134D4BBA7301504B7 /* Highlightr.xcconfig */;
+			baseConfigurationReference = 310A316C976621207D387A6762D29557 /* Highlightr.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1286,7 +1328,7 @@
 		};
 		CA661B581FE7A739F4B15A9B754BE00B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04E40C435AB3447134D4BBA7301504B7 /* Highlightr.xcconfig */;
+			baseConfigurationReference = 310A316C976621207D387A6762D29557 /* Highlightr.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1317,40 +1359,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		DC8C9A406FECD9553E439312646ED9EC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5EED8AB5E22E84CCB84F480A3A2C55A /* cmark-gfm-swift.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/cmark-gfm-swift/cmark-gfm-swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/cmark-gfm-swift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/cmark-gfm-swift/cmark-gfm-swift.modulemap";
-				PRODUCT_MODULE_NAME = cmark_gfm_swift;
-				PRODUCT_NAME = cmark_gfm_swift;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		E574923E2959CFEF4FEBC7B272DBC6AD /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1431,20 +1439,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		99E60CFEDC2430D70AC1EF06CEB33D1A /* Build configuration list for PBXNativeTarget "cmark-gfm-swift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4EF4C319ECA20CD4C76C52CF899585BC /* Debug */,
-				DC8C9A406FECD9553E439312646ED9EC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		A44778616AA386069EE4172A51301061 /* Build configuration list for PBXNativeTarget "Highlightr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA661B581FE7A739F4B15A9B754BE00B /* Debug */,
 				B025A495ADA75846BE9E494454D9576F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8759AB477FC8552737C37C1B9139D95 /* Build configuration list for PBXNativeTarget "cmark-gfm-swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88AC9A64BA29559169CA86F6106D6C49 /* Debug */,
+				69C857F551B185AB605B839C1837FCC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

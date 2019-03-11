@@ -1297,11 +1297,6 @@ static int parse_inline(cmark_parser *parser, subject *subj, cmark_node *parent,
   case '.':
     new_inl = handle_period(subj, (options & CMARK_OPT_SMART) != 0);
     break;
-  case '[':
-    advance(subj);
-    new_inl = make_str(subj, subj->pos - 1, subj->pos - 1, cmark_chunk_literal("["));
-    push_bracket(subj, false, new_inl);
-    break;
   case ']':
     new_inl = handle_close_bracket(parser, subj);
     break;
@@ -1315,6 +1310,15 @@ static int parse_inline(cmark_parser *parser, subject *subj, cmark_node *parent,
       new_inl = make_str(subj, subj->pos - 1, subj->pos - 1, cmark_chunk_literal("!"));
     }
     break;
+  case '[':
+    if (peek_char_n(subj, 1) != '[') {
+      advance(subj);
+      new_inl = make_str(subj, subj->pos - 1, subj->pos - 1, cmark_chunk_literal("["));
+      push_bracket(subj, false, new_inl);
+      break;
+    } else {
+      // Don't break, fall through to extensions for wikilinks
+    }
   default:
     new_inl = try_extensions(parser, parent, c, subj);
     if (new_inl != NULL)

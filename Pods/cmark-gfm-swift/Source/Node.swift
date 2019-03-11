@@ -56,11 +56,12 @@ public struct MarkdownExtensions: OptionSet {
   public static let table = MarkdownExtensions(rawValue: 1 << 1)
   public static let mention = MarkdownExtensions(rawValue: 1 << 2)
   public static let checkbox = MarkdownExtensions(rawValue: 1 << 3)
-  public static let autolink = MarkdownExtensions(rawValue: 1 << 4)
-  public static let strikethrough = MarkdownExtensions(rawValue: 1 << 5)
+  public static let wikilink = MarkdownExtensions(rawValue: 1 << 4)
+  public static let autolink = MarkdownExtensions(rawValue: 1 << 5)
+  public static let strikethrough = MarkdownExtensions(rawValue: 1 << 6)
 
   public static let all: [MarkdownExtensions] = [
-    .emoji, .table, .mention,
+    .emoji, .table, .mention, .wikilink,
     .checkbox, .autolink, .strikethrough
   ]
 }
@@ -111,6 +112,10 @@ public class Node: CustomStringConvertible {
         }
 
         if extensions.contains(.emoji), let ext = cmark_find_syntax_extension("emoji") {
+            cmark_parser_attach_syntax_extension(parser, ext)
+        }
+
+        if extensions.contains(.wikilink), let ext = cmark_find_syntax_extension("wikilink") {
             cmark_parser_attach_syntax_extension(parser, ext)
         }
 

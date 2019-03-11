@@ -30,8 +30,9 @@ enum Preference {
   static let markdownTables = PreferenceKey<Bool>("markdownTables", defaultValue: true)
   static let markdownAutolink = PreferenceKey<Bool>("markdownAutolink", defaultValue: true)
   static let markdownMentions = PreferenceKey<Bool>("markdownMentions", defaultValue: true)
-  static let markdownFootnotes = PreferenceKey<Bool>("markdownFootnotes", defaultValue: true)
+  static let markdownFootnotes = PreferenceKey<Bool>("markdownFootnotes", defaultValue: false)
   static let markdownCheckboxes = PreferenceKey<Bool>("markdownCheckboxes", defaultValue: true)
+  static let markdownWikilinks = PreferenceKey<Bool>("markdownWikilinks", defaultValue: false)
   static let markdownStrikethrough = PreferenceKey<Bool>("markdownStrikethrough", defaultValue: true)
 }
 
@@ -93,6 +94,10 @@ class Preferences {
 
     if self[Preference.markdownCheckboxes] {
       extensions.append(.checkbox)
+    }
+
+    if self[Preference.markdownWikilinks] {
+      extensions.append(.wikilink)
     }
 
     if self[Preference.markdownStrikethrough] {

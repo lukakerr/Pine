@@ -2,12 +2,25 @@
 
 [Unreleased]
 ### New Features
+- Added support for WikiLink (`[[Description|./path/to/note.md]]`) markdown extensions
 
 ### Fixes
+- Fix some themes having incorrect colors
+- Fix `open -a` not working at times
+
+### Other
+- Refactored sidebar and tabs
+
+## [0.0.8] - 2019-03-10
+### New Features
+- Ability to open files and folders via `open -a /Applications/Pine.app file.md folder/`
+
+### Fixes
+- Set syntax highlighting theme when changed in preview
 
 ### Other
 
-[0.0.7] - 2019-03-09
+## [0.0.7] - 2019-03-09
 ### New Features
 - GitHub emoji support
 - Footnote support
