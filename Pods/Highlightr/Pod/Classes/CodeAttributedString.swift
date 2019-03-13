@@ -100,7 +100,7 @@ open class CodeAttributedString : NSTextStorage
             return stringStorage.string
         }
     }
-    
+
     /**
      Returns the attributes for the character at a given index.
      
@@ -113,7 +113,7 @@ open class CodeAttributedString : NSTextStorage
     {
         return stringStorage.attributes(at: location, effectiveRange: range)
     }
-    
+
     /**
      Replaces the characters at the given range with the provided string.
      
@@ -125,7 +125,7 @@ open class CodeAttributedString : NSTextStorage
         stringStorage.replaceCharacters(in: range, with: str)
         self.edited(TextStorageEditActions.editedCharacters, range: range, changeInLength: (str as NSString).length - range.length)
     }
-    
+
     /**
      Sets the attributes for the characters in the specified range to the given attributes.
      
@@ -168,6 +168,14 @@ open class CodeAttributedString : NSTextStorage
             }
         }
 
+        var writingDirection: NSWritingDirection = .natural
+
+        #if os(OSX)
+        if let textView = self.layoutManagers.first?.firstTextView
+        {
+            writingDirection = textView.baseWritingDirection
+        }
+        #endif
         
         let string = (self.string as NSString)
         let line = string.substring(with: range)
@@ -197,6 +205,14 @@ open class CodeAttributedString : NSTextStorage
                 })
                 self.endEditing()
                 self.edited(TextStorageEditActions.editedAttributes, range: range, changeInLength: 0)
+
+                #if os(OSX)
+                self.stringStorage.setBaseWritingDirection(
+                    writingDirection,
+                    range: NSRange(location: 0, length: self.stringStorage.length)
+                )
+                #endif
+
                 self.highlightDelegate?.didHighlight?(range, success: true)
             })
             

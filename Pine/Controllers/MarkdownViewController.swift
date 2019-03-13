@@ -212,12 +212,27 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
             let doc = self.windowController?.document as? Document
             let fileURL = doc?.fileURL ?? URL(fileURLWithPath: "/")
 
+            let styledHTML = html.getHTML(
+              with: parsed,
+              direction: self.markdownTextView.baseWritingDirection
+            )
+
             self.previewViewController?.setPermissions(for: fileURL)
-            self.previewViewController?.setContent(with: html.getHTML(with: parsed))
+            self.previewViewController?.setContent(with: styledHTML)
           }
         }
       }
     }
+  }
+
+  /// Whenever typing attributes in the text view are changed, regenerate the preview
+  func textView(
+    _ textView: NSTextView,
+    shouldChangeTypingAttributes oldTypingAttributes: [String : Any] = [:],
+    toAttributes newTypingAttributes: [NSAttributedString.Key : Any] = [:]) -> [NSAttributedString.Key : Any]
+  {
+    self.generatePreview()
+    return newTypingAttributes
   }
 
 }

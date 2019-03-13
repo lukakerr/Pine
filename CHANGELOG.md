@@ -3,13 +3,26 @@
 [Unreleased]
 ### New Features
 - Added support for WikiLink (`[[Description|./path/to/note.md]]`) markdown extensions
+- Added RTL writing direction support in editor and preview
+- Added 9 new themes:
+  - a11y-dark
+  - a11y-light
+  - an-old-hope
+  - gml
+  - isbl-editor-dark
+  - isbl-editor-light
+  - lightfair
+  - nord
+  - shades-of-purple
 
 ### Fixes
 - Fix some themes having incorrect colors
 - Fix `open -a` not working at times
+- Fix indented markdown lists not getting syntax highlighted
 
 ### Other
 - Refactored sidebar and tabs
+- Now using [custom Highlightr fork](https://github.com/lukakerr/Highlightr)
 
 ## [0.0.8] - 2019-03-10
 ### New Features

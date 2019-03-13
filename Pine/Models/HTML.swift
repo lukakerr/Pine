@@ -6,6 +6,7 @@
 //  Copyright © 2018 Luka Kerr. All rights reserved.
 //
 
+import Cocoa
 import Foundation
 
 class HTML {
@@ -17,7 +18,6 @@ class HTML {
   // This file IO only happens when the singleton is instantiated, but the WKWebView
   // has to re-parse the entire HTML returned from getHTML()
   private init() {
-    self.copyFiles()
     self.loadCSS()
     self.loadJS()
   }
@@ -29,9 +29,12 @@ class HTML {
 
   // The innerHTML contents are passed in here rather than stored
   // to prevent asynchronous race conditions changing the content on startup
-  public func getHTML(with contents: String) -> String {
+  public func getHTML(with contents: String, direction: NSWritingDirection? = .natural) -> String {
     // If using system appearance, let window background control the color used
     let bodyBackground = preferences[Preference.useSystemAppearance] ? "transparent" : theme.background.hex
+
+    // Direction of text, by default is auto
+    let dir = direction == .rightToLeft ? "rtl" : "auto"
 
     return(
       """
@@ -55,7 +58,7 @@ class HTML {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc/katex.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc/contrib/auto-render.min.js"></script>
       </head>
-      <body>
+      <body dir="\(dir)">
         \(contents)
         <script>
           window.scrollTo(0, \(y));
@@ -78,16 +81,10 @@ class HTML {
 
   // MARK: - Private functions for setting up the HTML contents
 
-  fileprivate func getApplicationSupportFolder() -> URL? {
-    return FileManager.default.urls(
-      for: .applicationSupportDirectory,
-      in: .userDomainMask).first
-  }
-
   fileprivate func loadJS() {
     guard
-      let jsFile = getApplicationSupportFolder()?.appendingPathComponent("highlight-js/highlight.js"),
-      let jsResult = try? String(contentsOf: jsFile, encoding: .utf8)
+      let jsFile = Bundle.main.path(forResource: "highlight-js/highlight", ofType: "js"),
+      let jsResult = try? String(contentsOf: URL(fileURLWithPath: jsFile), encoding: .utf8)
     else { return }
 
     js = jsResult
@@ -95,39 +92,14 @@ class HTML {
 
   fileprivate func loadCSS() {
     guard
-      let folder = getApplicationSupportFolder(),
-      let bundlePath = Bundle.main.resourcePath,
-      let baseCSSResult = try? String(contentsOf: folder.appendingPathComponent("Markdown.css"), encoding: .utf8)
-    else { return }
-
-    let cssFolder = URL(fileURLWithPath: bundlePath + "/highlight-js/styles/\(theme.syntax).css")
-
-    if let cssResult = try? String(contentsOf: cssFolder as URL, encoding: .utf8) {
-      css = cssResult
-      baseCSS = baseCSSResult
-    }
-  }
-
-  fileprivate func copyFiles() {
-    guard
-      let folder = getApplicationSupportFolder(),
       let cssFile = Bundle.main.path(forResource: "Markdown", ofType: "css"),
-      let bundlePath = Bundle.main.resourcePath
+      let cssThemeFile = Bundle.main.path(forResource: "/highlight-js/styles/\(theme.syntax)", ofType: "css"),
+      let cssContents = try? String(contentsOf: URL(fileURLWithPath: cssFile), encoding: .utf8),
+      let cssThemeContents = try? String(contentsOf: URL(fileURLWithPath: cssThemeFile), encoding: .utf8)
     else { return }
 
-    let highlightFolder = URL(fileURLWithPath: (String(describing: bundlePath) + "/highlight-js"))
-
-    try? FileManager.default.copyItem(
-      at: highlightFolder as URL,
-      to: folder.appendingPathComponent("highlight-js")
-    )
-
-    try? FileManager.default.removeItem(at: folder.appendingPathComponent("Markdown.css"))
-
-    try? FileManager.default.copyItem(
-      at: URL(fileURLWithPath: cssFile),
-      to: folder.appendingPathComponent("Markdown.css")
-    )
+    css = cssThemeContents
+    baseCSS = cssContents
   }
 
 }

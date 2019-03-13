@@ -12,23 +12,21 @@ struct SyntaxThemes {
 
   public static let ThemeList: [String] = getThemes()
 
-  // Read theme file names from application support directory
-  // This allows users to create their own themes
+  // Read theme file names from resources directory
   private static func getThemes() -> [String] {
-    if let supportFolder =  FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first {
-      let stylesFolder = supportFolder.appendingPathComponent("highlight-js/styles")
-
+    if let stylesFolder = Bundle.main.path(forResource: "highlight-js/styles", ofType: nil) {
       let contents = try? FileManager.default.contentsOfDirectory(
-        at: stylesFolder,
+        at: URL(fileURLWithPath: stylesFolder),
         includingPropertiesForKeys: nil,
         options: []
       )
 
-      if let cssFiles = contents?
+      return contents?
         .filter({ $0.pathExtension == "css" })
         .map({ $0.deletingPathExtension().lastPathComponent })
-        .sorted() { return cssFiles }
+        .sorted() ?? []
     }
+
     return []
   }
 

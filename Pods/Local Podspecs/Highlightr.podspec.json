@@ -1,6 +1,6 @@
 {
   "name": "Highlightr",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "summary": "iOS & macOS Syntax Highlighter.",
   "description": "Highlightr is an iOS & macOS syntax highlighter built with Swift. It uses highlight.js as it core, supports 176 languages and comes with 79 styles.",
   "homepage": "http://github.com/raspu/Highlightr",
@@ -14,13 +14,14 @@
   },
   "source": {
     "git": "https://github.com/raspu/Highlightr.git",
-    "tag": "2.0.1",
+    "tag": "2.1.0",
     "submodules": true
   },
   "platforms": {
     "osx": "10.11",
     "ios": "8.0"
   },
+  "swift_version": "4.2",
   "requires_arc": true,
   "source_files": "Pod/Classes/**/*.{swift}",
   "resources": "Pod/Assets/**/*.{css,js}",

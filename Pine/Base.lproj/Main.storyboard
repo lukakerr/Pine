@@ -523,29 +523,61 @@
                                                 <action selector="HTMLImageWithSender:" target="Ady-hI-5gd" id="oYi-RG-595"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="B5f-vr-Mjt"/>
+                                        <menuItem title="Writing Direction" id="ZcV-iK-7Qq">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Writing Direction" id="6xY-VH-WYX">
+                                                <items>
+                                                    <menuItem title="Paragraph" enabled="NO" id="HPh-FH-2cG">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem id="br4-5E-o8d">
+                                                        <string key="title">	Default</string>
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="makeBaseWritingDirectionNatural:" target="Ady-hI-5gd" id="b7q-nf-Odu"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem id="gyK-rZ-Ygc">
+                                                        <string key="title">	Left to Right</string>
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="makeBaseWritingDirectionLeftToRight:" target="Ady-hI-5gd" id="fG8-kc-xwl"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem id="IVV-m1-iqq">
+                                                        <string key="title">	Right to Left</string>
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="makeBaseWritingDirectionRightToLeft:" target="Ady-hI-5gd" id="8rR-kw-MNt"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
+                                        </menuItem>
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="Window" id="aUF-d1-5bR">
+                            <menuItem title="Window" id="zcS-xL-2Wp">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
+                                <menu key="submenu" title="Window" systemMenu="window" id="asC-cO-ILV">
                                     <items>
-                                        <menuItem title="Minimize" keyEquivalent="m" id="OY7-WF-poV">
+                                        <menuItem title="Minimize" keyEquivalent="m" id="w79-Ym-U7w">
                                             <connections>
-                                                <action selector="performMiniaturize:" target="Ady-hI-5gd" id="VwT-WD-YPe"/>
+                                                <action selector="performMiniaturize:" target="Ady-hI-5gd" id="VDN-Oc-YbE"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Zoom" id="R4o-n2-Eq4">
+                                        <menuItem title="Zoom" id="W2h-fi-Yqy">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="performZoom:" target="Ady-hI-5gd" id="DIl-cC-cCs"/>
+                                                <action selector="performZoom:" target="Ady-hI-5gd" id="Xxo-zx-Tts"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="eu3-7i-yIM"/>
-                                        <menuItem title="Bring All to Front" id="LE2-aR-0XJ">
+                                        <menuItem isSeparatorItem="YES" id="uFE-Uu-iox"/>
+                                        <menuItem title="Bring All to Front" id="mz7-LD-Mau">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="arrangeInFront:" target="Ady-hI-5gd" id="DRN-fu-gQh"/>
+                                                <action selector="arrangeInFront:" target="Ady-hI-5gd" id="CHi-QZ-5rl"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -982,13 +1014,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="200" height="404"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                         <subviews>
-                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="17" horizontalPageScroll="10" verticalLineScroll="17" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJX-pd-nWK">
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="30" horizontalPageScroll="10" verticalLineScroll="30" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJX-pd-nWK">
                                 <rect key="frame" x="0.0" y="40" width="200" height="364"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="leX-9o-K0T">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="364"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" autosaveName="" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="14" outlineTableColumn="yMB-qM-qvc" id="16N-MH-33n" customClass="SidebarView" customModule="Pine" customModuleProvider="target">
+                                        <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" autosaveName="" rowHeight="30" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="14" outlineTableColumn="yMB-qM-qvc" id="16N-MH-33n" customClass="SidebarView" customModule="Pine" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="364"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="0.0"/>
@@ -1126,7 +1158,7 @@
     <resources>
         <image name="NSFolder" width="32" height="32"/>
         <image name="NSLinenBackgroundPattern" width="256" height="256"/>
-        <image name="Plus" width="64" height="64"/>
-        <image name="Sidebar" width="64" height="64"/>
+        <image name="Plus" width="75" height="75"/>
+        <image name="Sidebar" width="75" height="75"/>
     </resources>
 </document>
