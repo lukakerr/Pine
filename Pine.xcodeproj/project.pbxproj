@@ -33,7 +33,7 @@
 		A156AF872090606C0098BBDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A156AF862090606C0098BBDD /* Assets.xcassets */; };
 		A156AF8A2090606D0098BBDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A156AF882090606D0098BBDD /* Main.storyboard */; };
 		A156AF962090606D0098BBDD /* TextViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AF952090606D0098BBDD /* TextViewTests.swift */; };
-		A156AFA12090606D0098BBDD /* PineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFA02090606D0098BBDD /* PineUITests.swift */; };
+		A156AFA12090606D0098BBDD /* InitialOpenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFA02090606D0098BBDD /* InitialOpenUITests.swift */; };
 		A156AFAF209061D60098BBDD /* PineWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFAE209061D60098BBDD /* PineWindowController.swift */; };
 		A156AFB120908ECE0098BBDD /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFB020908ECE0098BBDD /* Theme.swift */; };
 		A1682E87209097E700164D78 /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1682E86209097E700164D78 /* NSMutableAttributedString.swift */; };
@@ -122,7 +122,7 @@
 		A156AF952090606D0098BBDD /* TextViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTests.swift; sourceTree = "<group>"; };
 		A156AF972090606D0098BBDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A156AF9C2090606D0098BBDD /* PineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A156AFA02090606D0098BBDD /* PineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PineUITests.swift; sourceTree = "<group>"; };
+		A156AFA02090606D0098BBDD /* InitialOpenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialOpenUITests.swift; sourceTree = "<group>"; };
 		A156AFA22090606D0098BBDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A156AFAE209061D60098BBDD /* PineWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PineWindowController.swift; sourceTree = "<group>"; };
 		A156AFB020908ECE0098BBDD /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -332,7 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				A156AFA22090606D0098BBDD /* Info.plist */,
-				A156AFA02090606D0098BBDD /* PineUITests.swift */,
+				A156AFA02090606D0098BBDD /* InitialOpenUITests.swift */,
 			);
 			path = PineUITests;
 			sourceTree = "<group>";
@@ -675,7 +675,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A156AFA12090606D0098BBDD /* PineUITests.swift in Sources */,
+				A156AFA12090606D0098BBDD /* InitialOpenUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -835,7 +835,10 @@
 					"$(PROJECT_DIR)/Pine",
 				);
 				INFOPLIST_FILE = Pine/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.Pine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -859,7 +862,10 @@
 					"$(PROJECT_DIR)/Pine",
 				);
 				INFOPLIST_FILE = Pine/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.Pine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -877,7 +883,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = PineTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.PineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -895,7 +905,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = PineTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.PineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -912,7 +926,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = PineUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.PineUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -929,7 +947,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = PineUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.PineUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
