@@ -9,7 +9,7 @@
 import Cocoa
 
 class PreferencesViewController: NSViewController {
-  
+
   @IBOutlet weak var scrollView: NSScrollView!
 
   private var stackView: NSStackView!
@@ -65,20 +65,17 @@ class PreferencesViewController: NSViewController {
     switch category {
     case .ui:
       views = uiStackView.getViews()
-      break
     case .markdown:
       views = markdownStackView.getViews()
-      break
     case .document:
       views = documentStackView.getViews()
-      break
     }
 
     for (index, view) in views.enumerated() {
       stackView.addArrangedSubview(view)
 
       // Add a seperator underneath all views except last
-      if (index != views.count - 1) {
+      if index != views.count - 1 {
         let hr = NSBox()
         hr.boxType = .separator
 
@@ -104,5 +101,5 @@ class PreferencesViewController: NSViewController {
 
     NSLayoutConstraint.activate(stackViewConstraints)
   }
-  
+
 }

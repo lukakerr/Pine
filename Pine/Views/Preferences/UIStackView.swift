@@ -43,7 +43,7 @@ class UIStackView: NSStackView, PreferenceStackView, NSFontChanging {
 
     view.addPreferences([
       syntaxDropdown,
-      revealThemesButton,
+      revealThemesButton
     ])
 
     view.addBooleanArea(

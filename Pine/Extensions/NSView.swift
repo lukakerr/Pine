@@ -14,5 +14,5 @@ extension NSView {
     wantsLayer = true
     layer?.backgroundColor = color.cgColor
   }
-  
+
 }

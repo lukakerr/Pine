@@ -24,7 +24,7 @@ class PreferencesStackView: NSStackView {
   private var prefView: NSStackView!
 
   init(name: String) {
-    super.init(frame: NSZeroRect)
+    super.init(frame: .zero)
 
     self.name = name
     self.hasSection = false

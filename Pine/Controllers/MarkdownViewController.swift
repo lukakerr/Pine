@@ -228,9 +228,9 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
   /// Whenever typing attributes in the text view are changed, regenerate the preview
   func textView(
     _ textView: NSTextView,
-    shouldChangeTypingAttributes oldTypingAttributes: [String : Any] = [:],
-    toAttributes newTypingAttributes: [NSAttributedString.Key : Any] = [:]) -> [NSAttributedString.Key : Any]
-  {
+    shouldChangeTypingAttributes oldTypingAttributes: [String: Any] = [:],
+    toAttributes newTypingAttributes: [NSAttributedString.Key: Any] = [:]
+  ) -> [NSAttributedString.Key: Any] {
     self.generatePreview()
     return newTypingAttributes
   }
@@ -334,7 +334,10 @@ extension MarkdownViewController: NSTouchBarDelegate {
     return touchBar
   }
 
-  func touchBar(_ touchBar: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItem.Identifier) -> NSTouchBarItem? {
+  func touchBar(
+    _ touchBar: NSTouchBar,
+    makeItemForIdentifier identifier: NSTouchBarItem.Identifier
+  ) -> NSTouchBarItem? {
     let item = NSCustomTouchBarItem(identifier: identifier)
 
     switch identifier {

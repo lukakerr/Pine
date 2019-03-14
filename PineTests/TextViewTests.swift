@@ -48,7 +48,7 @@ class TextViewTests: XCTestCase {
     textView.replace(left: "```\n", right: "\n```", newLineIfSelected: true)
 
     let newContents = textView.textStorage?.string
-    
+
     XCTAssert(newContents == "\n```\n\n```\n")
   }
 

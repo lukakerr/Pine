@@ -246,7 +246,7 @@ extension SidebarViewController: NSOutlineViewDataSource {
 
   /// The NSTableRowView instance to be used
   func outlineView(_ outlineView: NSOutlineView, rowViewForItem item: Any) -> NSTableRowView? {
-    return SidebarTableRowView(frame: NSZeroRect)
+    return SidebarTableRowView(frame: .zero)
   }
 
 }
@@ -290,4 +290,3 @@ extension SidebarViewController: NSMenuDelegate {
   }
 
 }
-

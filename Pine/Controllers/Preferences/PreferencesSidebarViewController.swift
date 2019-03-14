@@ -18,7 +18,7 @@ class PreferencesSidebarViewController: NSViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+
     sidebar.delegate = self
     sidebar.dataSource = self
 

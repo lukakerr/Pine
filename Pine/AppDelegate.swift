@@ -91,7 +91,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             DocumentController.shared.openDocument(
               withContentsOf: file,
               display: true,
-              completionHandler: { _,_,_  in
+              completionHandler: { _, _, _  in
                 Utils.getCurrentMainWindowController()?.window?.makeKeyAndOrderFront(nil)
               }
             )

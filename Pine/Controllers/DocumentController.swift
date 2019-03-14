@@ -32,7 +32,7 @@ class DocumentController: NSDocumentController {
         withContentsOf: url,
         display: true,
         completionHandler: completionHandler
-      );
+      )
     }
 
     currentWindowController.syncWindowSidebars()
@@ -62,7 +62,7 @@ class DocumentController: NSDocumentController {
       DocumentController.shared.openDocument(
         withContentsOf: fileAsURL,
         display: true,
-        completionHandler: { _,_,_ in }
+        completionHandler: { _, _, _ in }
       )
 
       return
@@ -83,7 +83,7 @@ class DocumentController: NSDocumentController {
       DocumentController.shared.openDocument(
         withContentsOf: filePathURL,
         display: true,
-        completionHandler: { _,_,_ in }
+        completionHandler: { _, _, _ in }
       )
 
       return

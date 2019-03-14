@@ -12,12 +12,12 @@ class SidebarTableRowView: NSTableRowView {
 
   // Draw a custom selection
   override func drawSelection(in dirtyRect: NSRect) {
-    let selectionRect = NSInsetRect(self.bounds, 0, 0)
+    let selectionRect = self.bounds
 
     NSColor.selectedControlColor.setStroke()
     NSColor.selectedControlColor.setFill()
 
-    let selectionPath = NSBezierPath.init(roundedRect: selectionRect, xRadius: 0, yRadius: 0)
+    let selectionPath = NSBezierPath(roundedRect: selectionRect, xRadius: 0, yRadius: 0)
     selectionPath.fill()
     selectionPath.stroke()
   }

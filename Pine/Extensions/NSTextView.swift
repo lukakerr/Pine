@@ -93,8 +93,8 @@ extension NSTextView {
     atLineStart: Bool = false,
     newLineIfSelected: Bool = false
   ) {
-    var leftString: String? = nil
-    var rightString: String? = nil
+    var leftString: String?
+    var rightString: String?
 
     if let l = left {
       leftString = String(l)
@@ -167,5 +167,5 @@ extension NSTextView {
 
     self.replace(right: match)
   }
-  
+
 }
