@@ -1044,30 +1044,32 @@
                                                             <rect key="frame" x="1" y="0.0" width="197" height="30"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <imageView translatesAutoresizingMaskIntoConstraints="NO" id="gNL-hb-hhd">
-                                                                    <rect key="frame" x="2" y="5" width="17" height="20"/>
+                                                                <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jim-ka-AcL">
+                                                                    <rect key="frame" x="28" y="6" width="163" height="18"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="17" id="ilb-5i-oDX"/>
+                                                                        <constraint firstAttribute="height" constant="18" id="8bu-pc-hyx"/>
                                                                     </constraints>
-                                                                    <imageCell key="cell" refusesFirstResponder="YES" imageScaling="proportionallyDown" image="NSFolder" id="chW-9g-7sj"/>
-                                                                </imageView>
-                                                                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jim-ka-AcL">
-                                                                    <rect key="frame" x="24" y="6" width="96" height="19"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" drawsBackground="YES" id="h2R-C8-lff">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Folder" drawsBackground="YES" id="h2R-C8-lff">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </textFieldCell>
                                                                 </textField>
+                                                                <imageView translatesAutoresizingMaskIntoConstraints="NO" id="gNL-hb-hhd">
+                                                                    <rect key="frame" x="4" y="6" width="18" height="18"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="18" id="aYh-kV-Fdl"/>
+                                                                        <constraint firstAttribute="width" constant="18" id="b19-4U-x7M"/>
+                                                                    </constraints>
+                                                                    <imageCell key="cell" refusesFirstResponder="YES" imageScaling="proportionallyDown" image="Folder" id="chW-9g-7sj"/>
+                                                                </imageView>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="gNL-hb-hhd" firstAttribute="top" secondItem="jim-ka-AcL" secondAttribute="top" id="1Ea-TL-DGN"/>
-                                                                <constraint firstItem="jim-ka-AcL" firstAttribute="top" secondItem="ooL-k5-Ykk" secondAttribute="top" constant="5" id="EPg-9S-m0L"/>
-                                                                <constraint firstItem="gNL-hb-hhd" firstAttribute="bottom" secondItem="jim-ka-AcL" secondAttribute="bottom" constant="1" id="PEy-T9-X6c"/>
-                                                                <constraint firstItem="jim-ka-AcL" firstAttribute="leading" secondItem="gNL-hb-hhd" secondAttribute="trailing" constant="5" id="So7-Eq-gyB"/>
-                                                                <constraint firstItem="gNL-hb-hhd" firstAttribute="top" secondItem="ooL-k5-Ykk" secondAttribute="top" constant="5" id="Tso-Ui-KlG"/>
-                                                                <constraint firstAttribute="bottom" secondItem="gNL-hb-hhd" secondAttribute="bottom" constant="5" id="XWf-oB-fSl"/>
-                                                                <constraint firstItem="gNL-hb-hhd" firstAttribute="leading" secondItem="ooL-k5-Ykk" secondAttribute="leading" constant="2" id="ayJ-9i-eyO"/>
+                                                                <constraint firstItem="gNL-hb-hhd" firstAttribute="leading" secondItem="ooL-k5-Ykk" secondAttribute="leading" constant="4" id="0X8-30-f7C"/>
+                                                                <constraint firstItem="gNL-hb-hhd" firstAttribute="centerY" secondItem="ooL-k5-Ykk" secondAttribute="centerY" id="24A-CS-Wh4"/>
+                                                                <constraint firstItem="jim-ka-AcL" firstAttribute="leading" secondItem="gNL-hb-hhd" secondAttribute="trailing" constant="4" id="5jM-Nb-xy6"/>
+                                                                <constraint firstItem="jim-ka-AcL" firstAttribute="centerY" secondItem="ooL-k5-Ykk" secondAttribute="centerY" id="Co4-eQ-BHn"/>
+                                                                <constraint firstAttribute="trailing" secondItem="jim-ka-AcL" secondAttribute="trailing" constant="4" id="mrQ-nf-Wqt"/>
                                                             </constraints>
                                                             <connections>
                                                                 <outlet property="imageView" destination="gNL-hb-hhd" id="tCa-VK-3xW"/>
@@ -1156,6 +1158,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Folder" width="75" height="75"/>
         <image name="NSFolder" width="32" height="32"/>
         <image name="NSLinenBackgroundPattern" width="256" height="256"/>
         <image name="Plus" width="75" height="75"/>
