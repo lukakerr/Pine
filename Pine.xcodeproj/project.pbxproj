@@ -27,6 +27,7 @@
 		A148C3A020914F0F00B1165C /* SyntaxThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148C39F20914F0F00B1165C /* SyntaxThemes.swift */; };
 		A148E4232231F066001AEAAC /* PreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148E4222231F066001AEAAC /* PreferenceKey.swift */; };
 		A148E4252231F7D7001AEAAC /* NSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148E4242231F7D7001AEAAC /* NSButton.swift */; };
+		A14C1B24223B8888002E0827 /* MenuItemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C1B23223B8888002E0827 /* MenuItemUITests.swift */; };
 		A156AF812090606C0098BBDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AF802090606C0098BBDD /* AppDelegate.swift */; };
 		A156AF832090606C0098BBDD /* MarkdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AF822090606C0098BBDD /* MarkdownViewController.swift */; };
 		A156AF852090606C0098BBDD /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AF842090606C0098BBDD /* Document.swift */; };
@@ -111,6 +112,7 @@
 		A148C39F20914F0F00B1165C /* SyntaxThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxThemes.swift; sourceTree = "<group>"; };
 		A148E4222231F066001AEAAC /* PreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKey.swift; sourceTree = "<group>"; };
 		A148E4242231F7D7001AEAAC /* NSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSButton.swift; sourceTree = "<group>"; };
+		A14C1B23223B8888002E0827 /* MenuItemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemUITests.swift; sourceTree = "<group>"; };
 		A156AF7D2090606C0098BBDD /* Pine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A156AF802090606C0098BBDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A156AF822090606C0098BBDD /* MarkdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownViewController.swift; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 			children = (
 				A156AFA22090606D0098BBDD /* Info.plist */,
 				A156AFA02090606D0098BBDD /* InitialOpenUITests.swift */,
+				A14C1B23223B8888002E0827 /* MenuItemUITests.swift */,
 			);
 			path = PineUITests;
 			sourceTree = "<group>";
@@ -676,6 +679,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A156AFA12090606D0098BBDD /* InitialOpenUITests.swift in Sources */,
+				A14C1B24223B8888002E0827 /* MenuItemUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

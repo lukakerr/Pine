@@ -20,10 +20,6 @@ class InitialOpenUITests: XCTestCase {
     XCUIApplication().launch()
   }
 
-  override func tearDown() {
-    super.tearDown()
-  }
-
   func testEmptyTextViewOpened() {
     let app = XCUIApplication()
     let textview = app.textViews.firstMatch
