@@ -187,7 +187,7 @@ ul .task-list-item {
   margin: 0 0.2em 0.25em -1.4em;
 }
 
-img {
+img, video {
   max-width: 100%;
 }
 
