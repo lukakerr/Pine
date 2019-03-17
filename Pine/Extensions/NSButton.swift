@@ -11,7 +11,7 @@ import Cocoa
 extension NSButton {
 
   var value: Bool {
-    return self.state.rawValue.bool
+    return self.state.rawValue != 0 ? true : false
   }
 
 }

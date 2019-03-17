@@ -14,7 +14,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   cmark-gfm-swift:
-    :commit: a8f6fcf3eecc6292f8876ac7a825e9651f0297b7
+    :commit: 958fa1050ea2561659f9e4d9bc4ac2266896eef4
     :git: https://github.com/lukakerr/cmark-gfm-swift.git
   Highlightr:
     :commit: b32a617fef4822ab7ae6818a7d3e47765feecdf0
@@ -26,4 +26,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: d78e2fa1bb6f326685c91947eace08ae217e92ce
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.6.1

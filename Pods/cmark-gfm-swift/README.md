@@ -1,8 +1,58 @@
 # cmark-gfm-swift
 
-⚠️ WIP ⚠
-
 A Swift wrapper of cmark with GitHub Flavored Markdown extensions.
+
+### Usage
+
+**Import the framework**
+
+```swift
+import cmark_gfm_swift
+```
+
+**Render Markdown to HTML**
+
+```swift
+let markdownText = """
+## Heading
+"""
+
+if let parsed = Node(markdown: markdownText)?.html {
+  print("HTML parsed: \(parsed)")
+}
+```
+
+**Enabling Markdown extensions and options**
+
+```swift
+let markdownText = """
+## Heading
+"""
+
+// List of markdown options
+var options: [MarkdownOptions] = [
+  .footnotes // Footnote syntax
+]
+
+// List of markdown extensions
+var extensions: [MarkdownExtensions] = [
+  .emoji, // GitHub emojis
+  .table, // Tables
+  .autolink, // Autolink URLs
+  .mention, // GitHub @ mentions
+  .checkbox, // Checkboxes
+  .wikilink, // WikiLinks
+  .strikethrough // Strikethrough
+]
+
+if let parsed = Node(
+  markdown: markdownText,
+  options: options,
+  extensions: extensions
+)?.html {
+  print("HTML parsed: \(parsed)")
+}
+```
 
 ### Resources
 

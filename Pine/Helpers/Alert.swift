@@ -18,7 +18,7 @@ class Alert {
     let alert = NSAlert()
     alert.messageText = title
     alert.informativeText = message
-    alert.alertStyle = .warning
+    alert.alertStyle = style
     alert.runModal()
   }
 

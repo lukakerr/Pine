@@ -31,16 +31,8 @@ final class FileSystemItem: Equatable {
     return urlString.decoded ?? urlString
   }
 
-  var url: URL {
-    return URL(string: fullPath)!
-  }
-
   var fileURL: URL {
     return URL(fileURLWithPath: fullPath)
-  }
-
-  var fileType: String {
-    return fileURL.pathExtension
   }
 
   var isDirectory: Bool {

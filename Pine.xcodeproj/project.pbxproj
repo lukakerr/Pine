@@ -39,7 +39,6 @@
 		A156AFB120908ECE0098BBDD /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFB020908ECE0098BBDD /* Theme.swift */; };
 		A165D1F6223DB66500A00821 /* autocomplete in Resources */ = {isa = PBXBuildFile; fileRef = A165D1F5223DB66500A00821 /* autocomplete */; };
 		A165D1F8223DC73200A00821 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = A165D1F7223DC73200A00821 /* Character.swift */; };
-		A1682E87209097E700164D78 /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1682E86209097E700164D78 /* NSMutableAttributedString.swift */; };
 		A1767B04220FC2DD00ED1A61 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1767B03220FC2DD00ED1A61 /* StringTests.swift */; };
 		A1767B06220FC44D00ED1A61 /* NSColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1767B05220FC44D00ED1A61 /* NSColorTests.swift */; };
 		A182096E20919F6000016AD5 /* HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = A182096D20919F6000016AD5 /* HTML.swift */; };
@@ -47,7 +46,6 @@
 		A189EA742091E4F300DB0559 /* Markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = A189EA732091E4E300DB0559 /* Markdown.css */; };
 		A18A0406209585C8006F6B99 /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A0405209585C8006F6B99 /* Debouncer.swift */; };
 		A18A040820958C8B006F6B99 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A040720958C8B006F6B99 /* Preferences.swift */; };
-		A18A040A20958EB6006F6B99 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A040920958EB6006F6B99 /* Int.swift */; };
 		A1904E9E22288AB80004FB82 /* DocumentStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1904E9D22288AB80004FB82 /* DocumentStackView.swift */; };
 		A1904EA022289B510004FB82 /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1904E9F22289B510004FB82 /* Bool.swift */; };
 		A1904EA42228A06C0004FB82 /* PreferenceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1904EA32228A06C0004FB82 /* PreferenceCategory.swift */; };
@@ -133,7 +131,6 @@
 		A156AFB020908ECE0098BBDD /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		A165D1F5223DB66500A00821 /* autocomplete */ = {isa = PBXFileReference; lastKnownFileType = folder; path = autocomplete; sourceTree = "<group>"; };
 		A165D1F7223DC73200A00821 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
-		A1682E86209097E700164D78 /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
 		A1767B03220FC2DD00ED1A61 /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		A1767B05220FC44D00ED1A61 /* NSColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColorTests.swift; sourceTree = "<group>"; };
 		A182096D20919F6000016AD5 /* HTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTML.swift; sourceTree = "<group>"; };
@@ -141,7 +138,6 @@
 		A189EA732091E4E300DB0559 /* Markdown.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Markdown.css; sourceTree = "<group>"; };
 		A18A0405209585C8006F6B99 /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
 		A18A040720958C8B006F6B99 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
-		A18A040920958EB6006F6B99 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		A1904E9D22288AB80004FB82 /* DocumentStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentStackView.swift; sourceTree = "<group>"; };
 		A1904E9F22289B510004FB82 /* Bool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bool.swift; sourceTree = "<group>"; };
 		A1904EA32228A06C0004FB82 /* PreferenceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceCategory.swift; sourceTree = "<group>"; };
@@ -352,12 +348,10 @@
 			children = (
 				A1904E9F22289B510004FB82 /* Bool.swift */,
 				A165D1F7223DC73200A00821 /* Character.swift */,
-				A18A040920958EB6006F6B99 /* Int.swift */,
 				A198047420DB7B2E0066FDA6 /* NotificationCenter.swift */,
 				A1A7C05320EA304A003D8DB6 /* NSAppearance.swift */,
 				A148E4242231F7D7001AEAAC /* NSButton.swift */,
 				A13C23F9209167F0008557D0 /* NSColor.swift */,
-				A1682E86209097E700164D78 /* NSMutableAttributedString.swift */,
 				A1EDC59E2183C231007153CA /* NSTextView.swift */,
 				A1AE9BA82220AD0E00560137 /* NSTouchBar.swift */,
 				A182AFAE220F8D8000C14B2B /* NSView.swift */,
@@ -600,7 +594,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Pine/Pods-Pine-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Pine/Pods-Pine-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Highlightr/Highlightr.framework",
 				"${BUILT_PRODUCTS_DIR}/cmark-gfm-swift/cmark_gfm_swift.framework",
 			);
@@ -611,7 +605,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pine/Pods-Pine-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pine/Pods-Pine-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -623,7 +617,6 @@
 			files = (
 				A1A7C05420EA304A003D8DB6 /* NSAppearance.swift in Sources */,
 				A1150D2220E858E400536336 /* String.swift in Sources */,
-				A18A040A20958EB6006F6B99 /* Int.swift in Sources */,
 				A156AF832090606C0098BBDD /* MarkdownViewController.swift in Sources */,
 				A1EDC59F2183C231007153CA /* NSTextView.swift in Sources */,
 				A148C3A020914F0F00B1165C /* SyntaxThemes.swift in Sources */,
@@ -652,7 +645,6 @@
 				A1FB7AA02227EE9300DC2E0E /* PreferencesRoundedButton.swift in Sources */,
 				A18A040820958C8B006F6B99 /* Preferences.swift in Sources */,
 				A1F122DF20DE0D27007DFD1A /* FileSaver.swift in Sources */,
-				A1682E87209097E700164D78 /* NSMutableAttributedString.swift in Sources */,
 				A198047320DB64BA0066FDA6 /* MarkdownView.swift in Sources */,
 				A13C23F8209153E1008557D0 /* ReferenceWindowController.swift in Sources */,
 				A18A0406209585C8006F6B99 /* Debouncer.swift in Sources */,
