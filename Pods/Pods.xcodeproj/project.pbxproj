@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -226,214 +226,214 @@
 		050D533D09FBF89AE94CF0679815D747 /* checkbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = checkbox.h; path = Source/cmark_gfm/include/checkbox.h; sourceTree = "<group>"; };
 		07123DF2C1FD81A4DAC953D55DE9E1B5 /* TextElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextElement.swift; path = Source/TextElement.swift; sourceTree = "<group>"; };
 		0793649F171D822942B3D98B9B271109 /* cmark-gfm-swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "cmark-gfm-swift-Info.plist"; sourceTree = "<group>"; };
-		08BB931404E606A53236547E055CB414 /* blocks.c */ = {isa = PBXFileReference; includeInIndex = 1; name = blocks.c; path = Source/cmark_gfm/blocks.c; sourceTree = "<group>"; };
+		08BB931404E606A53236547E055CB414 /* blocks.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = blocks.c; path = Source/cmark_gfm/blocks.c; sourceTree = "<group>"; };
 		09A7AA92FDFEF61A859FD3FB5E23315D /* Pods-Pine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Pine.debug.xcconfig"; sourceTree = "<group>"; };
-		0BBC56D5FA1E430340B606A825B6E70A /* routeros.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = routeros.min.css; path = Pod/Assets/styles/routeros.min.css; sourceTree = "<group>"; };
-		0C8934885273C0C097EB5BFD6D07FF5E /* vs2015.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = vs2015.min.css; path = Pod/Assets/styles/vs2015.min.css; sourceTree = "<group>"; };
+		0BBC56D5FA1E430340B606A825B6E70A /* routeros.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = routeros.min.css; path = Pod/Assets/styles/routeros.min.css; sourceTree = "<group>"; };
+		0C8934885273C0C097EB5BFD6D07FF5E /* vs2015.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = vs2015.min.css; path = Pod/Assets/styles/vs2015.min.css; sourceTree = "<group>"; };
 		103444F40F957CB694002F8E35770D3D /* Pods-Pine-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Pine-frameworks.sh"; sourceTree = "<group>"; };
-		10F7BD0037B12D69012CFBC23E762F2E /* atelier-seaside-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-seaside-dark.min.css"; path = "Pod/Assets/styles/atelier-seaside-dark.min.css"; sourceTree = "<group>"; };
-		111659D66F0A9EECF5008A75811B1ACF /* checkbox.c */ = {isa = PBXFileReference; includeInIndex = 1; name = checkbox.c; path = Source/cmark_gfm/checkbox.c; sourceTree = "<group>"; };
+		10F7BD0037B12D69012CFBC23E762F2E /* atelier-seaside-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "atelier-seaside-dark.min.css"; path = "Pod/Assets/styles/atelier-seaside-dark.min.css"; sourceTree = "<group>"; };
+		111659D66F0A9EECF5008A75811B1ACF /* checkbox.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = checkbox.c; path = Source/cmark_gfm/checkbox.c; sourceTree = "<group>"; };
 		11332AE9A6777C362816AAB545122703 /* strikethrough.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = strikethrough.h; path = Source/cmark_gfm/include/strikethrough.h; sourceTree = "<group>"; };
 		114FB60CB2E411855C3AADDBB579F343 /* node.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = node.h; path = Source/cmark_gfm/include/node.h; sourceTree = "<group>"; };
-		12F5BA756C6964CD36B8DB6CD97BF67D /* scanners.c */ = {isa = PBXFileReference; includeInIndex = 1; name = scanners.c; path = Source/cmark_gfm/scanners.c; sourceTree = "<group>"; };
-		1336960B4AE4FD58CE90789B25FC1E7A /* gruvbox-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "gruvbox-dark.min.css"; path = "Pod/Assets/styles/gruvbox-dark.min.css"; sourceTree = "<group>"; };
-		15633D186FEE0A71043DB5DCB2F812AE /* references.c */ = {isa = PBXFileReference; includeInIndex = 1; name = references.c; path = Source/cmark_gfm/references.c; sourceTree = "<group>"; };
-		168A1D98D121D45499191BF53559BD5A /* xt256.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = xt256.min.css; path = Pod/Assets/styles/xt256.min.css; sourceTree = "<group>"; };
-		19C14BF5BAD04ACAFF60B48AD8242476 /* tomorrow-night.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "tomorrow-night.min.css"; path = "Pod/Assets/styles/tomorrow-night.min.css"; sourceTree = "<group>"; };
+		12F5BA756C6964CD36B8DB6CD97BF67D /* scanners.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = scanners.c; path = Source/cmark_gfm/scanners.c; sourceTree = "<group>"; };
+		1336960B4AE4FD58CE90789B25FC1E7A /* gruvbox-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "gruvbox-dark.min.css"; path = "Pod/Assets/styles/gruvbox-dark.min.css"; sourceTree = "<group>"; };
+		15633D186FEE0A71043DB5DCB2F812AE /* references.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = references.c; path = Source/cmark_gfm/references.c; sourceTree = "<group>"; };
+		168A1D98D121D45499191BF53559BD5A /* xt256.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = xt256.min.css; path = Pod/Assets/styles/xt256.min.css; sourceTree = "<group>"; };
+		19C14BF5BAD04ACAFF60B48AD8242476 /* tomorrow-night.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "tomorrow-night.min.css"; path = "Pod/Assets/styles/tomorrow-night.min.css"; sourceTree = "<group>"; };
 		1A12F0F931F52BCD81F968FDF1AB2862 /* cmark_extension_api.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cmark_extension_api.h; path = Source/cmark_gfm/include/cmark_extension_api.h; sourceTree = "<group>"; };
 		1A6A2D27AAC89969ABB438AA365561DA /* emoji_list.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = emoji_list.h; path = Source/cmark_gfm/include/emoji_list.h; sourceTree = "<group>"; };
 		1AE79863E4BEDE200D43A33350AABED0 /* cmark-gfm-swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "cmark-gfm-swift.modulemap"; sourceTree = "<group>"; };
 		1B568A9EFA03FEFD9F24AA1C5C7951E7 /* map.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = map.h; path = Source/cmark_gfm/include/map.h; sourceTree = "<group>"; };
-		1B5BEAF4B5CD32337E6A6BF269C4A37E /* buffer.c */ = {isa = PBXFileReference; includeInIndex = 1; name = buffer.c; path = Source/cmark_gfm/buffer.c; sourceTree = "<group>"; };
+		1B5BEAF4B5CD32337E6A6BF269C4A37E /* buffer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = buffer.c; path = Source/cmark_gfm/buffer.c; sourceTree = "<group>"; };
 		1B868E8551B08F2E3BDFCE8019345196 /* ext_scanners.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ext_scanners.h; path = Source/cmark_gfm/include/ext_scanners.h; sourceTree = "<group>"; };
-		1BB6E45848A7222966DABDB5E55A2CB8 /* cmark_ctype.c */ = {isa = PBXFileReference; includeInIndex = 1; name = cmark_ctype.c; path = Source/cmark_gfm/cmark_ctype.c; sourceTree = "<group>"; };
-		1BEAE996C52DE06C9082D5D6B5D34F49 /* arduino-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "arduino-light.min.css"; path = "Pod/Assets/styles/arduino-light.min.css"; sourceTree = "<group>"; };
-		1C0E616EB47371A400907F80038A4C42 /* xml.c */ = {isa = PBXFileReference; includeInIndex = 1; name = xml.c; path = Source/cmark_gfm/xml.c; sourceTree = "<group>"; };
-		1C8A53CB4DB27F3603F61433B9D6B916 /* atelier-dune-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-dune-dark.min.css"; path = "Pod/Assets/styles/atelier-dune-dark.min.css"; sourceTree = "<group>"; };
-		1DCE74356615127A1F3BA371F84E1D71 /* kimbie.dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = kimbie.dark.min.css; path = Pod/Assets/styles/kimbie.dark.min.css; sourceTree = "<group>"; };
-		1FD28DB8D34B64497355B7D2E097F4AB /* darcula.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = darcula.min.css; path = Pod/Assets/styles/darcula.min.css; sourceTree = "<group>"; };
+		1BB6E45848A7222966DABDB5E55A2CB8 /* cmark_ctype.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = cmark_ctype.c; path = Source/cmark_gfm/cmark_ctype.c; sourceTree = "<group>"; };
+		1BEAE996C52DE06C9082D5D6B5D34F49 /* arduino-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "arduino-light.min.css"; path = "Pod/Assets/styles/arduino-light.min.css"; sourceTree = "<group>"; };
+		1C0E616EB47371A400907F80038A4C42 /* xml.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = xml.c; path = Source/cmark_gfm/xml.c; sourceTree = "<group>"; };
+		1C8A53CB4DB27F3603F61433B9D6B916 /* atelier-dune-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "atelier-dune-dark.min.css"; path = "Pod/Assets/styles/atelier-dune-dark.min.css"; sourceTree = "<group>"; };
+		1DCE74356615127A1F3BA371F84E1D71 /* kimbie.dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = kimbie.dark.min.css; path = Pod/Assets/styles/kimbie.dark.min.css; sourceTree = "<group>"; };
+		1FD28DB8D34B64497355B7D2E097F4AB /* darcula.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = darcula.min.css; path = Pod/Assets/styles/darcula.min.css; sourceTree = "<group>"; };
 		1FE03493E89D573401621B044B185CE1 /* references.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = references.h; path = Source/cmark_gfm/include/references.h; sourceTree = "<group>"; };
-		212D893042BC98A6D8E0C65FA80C4C80 /* zenburn.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = zenburn.min.css; path = Pod/Assets/styles/zenburn.min.css; sourceTree = "<group>"; };
+		212D893042BC98A6D8E0C65FA80C4C80 /* zenburn.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = zenburn.min.css; path = Pod/Assets/styles/zenburn.min.css; sourceTree = "<group>"; };
 		21B516CB482D9041295A1D2F4B9B78D6 /* html.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = html.h; path = Source/cmark_gfm/include/html.h; sourceTree = "<group>"; };
 		22C880CCF07308F63DDCB81A924D02AE /* cmark.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cmark.h; path = Source/cmark_gfm/include/cmark.h; sourceTree = "<group>"; };
-		230E27C4BD7B99127A97046C73F12AF5 /* atelier-estuary-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-estuary-dark.min.css"; path = "Pod/Assets/styles/atelier-estuary-dark.min.css"; sourceTree = "<group>"; };
-		24406BDEC806A2D40BAB6407D3A41281 /* render.c */ = {isa = PBXFileReference; includeInIndex = 1; name = render.c; path = Source/cmark_gfm/render.c; sourceTree = "<group>"; };
-		2586F9606CA4E1F72880A96849B2363D /* cmark_gfm_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = cmark_gfm_swift.framework; path = "cmark-gfm-swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		26428934B2E10E2B4E322ABC0CB1872C /* atelier-lakeside-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-lakeside-dark.min.css"; path = "Pod/Assets/styles/atelier-lakeside-dark.min.css"; sourceTree = "<group>"; };
+		230E27C4BD7B99127A97046C73F12AF5 /* atelier-estuary-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "atelier-estuary-dark.min.css"; path = "Pod/Assets/styles/atelier-estuary-dark.min.css"; sourceTree = "<group>"; };
+		24406BDEC806A2D40BAB6407D3A41281 /* render.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = render.c; path = Source/cmark_gfm/render.c; sourceTree = "<group>"; };
+		2586F9606CA4E1F72880A96849B2363D /* cmark_gfm_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = cmark_gfm_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26428934B2E10E2B4E322ABC0CB1872C /* atelier-lakeside-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "atelier-lakeside-dark.min.css"; path = "Pod/Assets/styles/atelier-lakeside-dark.min.css"; sourceTree = "<group>"; };
 		28241CBC197A14D9F46FDA6EB5EF7EED /* tagfilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tagfilter.h; path = Source/cmark_gfm/include/tagfilter.h; sourceTree = "<group>"; };
 		28286F27A2121D0584B3B462B52328E7 /* cmark_ctype.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cmark_ctype.h; path = Source/cmark_gfm/include/cmark_ctype.h; sourceTree = "<group>"; };
 		28AA8B285ED0CB2F5A173AA9AE351FC9 /* iterator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iterator.h; path = Source/cmark_gfm/include/iterator.h; sourceTree = "<group>"; };
-		2D60D09FCDEB5D4C48C91A24A0952E82 /* inlines.c */ = {isa = PBXFileReference; includeInIndex = 1; name = inlines.c; path = Source/cmark_gfm/inlines.c; sourceTree = "<group>"; };
+		2D60D09FCDEB5D4C48C91A24A0952E82 /* inlines.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = inlines.c; path = Source/cmark_gfm/inlines.c; sourceTree = "<group>"; };
 		2F2054D0428FFC58B8CFBBE10E810E32 /* utf8.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = utf8.h; path = Source/cmark_gfm/include/utf8.h; sourceTree = "<group>"; };
-		315FDB822CFF7F6A6522DE7531714316 /* latex.c */ = {isa = PBXFileReference; includeInIndex = 1; name = latex.c; path = Source/cmark_gfm/latex.c; sourceTree = "<group>"; };
-		33125DEC557DA76CF816199E2C7086D6 /* isbl-editor-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "isbl-editor-light.min.css"; path = "Pod/Assets/styles/isbl-editor-light.min.css"; sourceTree = "<group>"; };
+		315FDB822CFF7F6A6522DE7531714316 /* latex.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = latex.c; path = Source/cmark_gfm/latex.c; sourceTree = "<group>"; };
+		33125DEC557DA76CF816199E2C7086D6 /* isbl-editor-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "isbl-editor-light.min.css"; path = "Pod/Assets/styles/isbl-editor-light.min.css"; sourceTree = "<group>"; };
 		35F6DE67B6F4D17A3D57A24E3AD17544 /* cmark-gfm-swift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "cmark-gfm-swift.h"; path = "Source/cmark-gfm-swift.h"; sourceTree = "<group>"; };
-		36F73BC3B0FD4531ABEE6C382E3E68FC /* nord.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = nord.min.css; path = Pod/Assets/styles/nord.min.css; sourceTree = "<group>"; };
-		37B69B15084925048EB69AFF97A28DBC /* an-old-hope.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "an-old-hope.min.css"; path = "Pod/Assets/styles/an-old-hope.min.css"; sourceTree = "<group>"; };
-		382FE2BCE09857333DA40FAEBF89236D /* mention.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mention.c; path = Source/cmark_gfm/mention.c; sourceTree = "<group>"; };
-		3AAD31B4C2963A80E0E97F67743E49EC /* atelier-heath-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-heath-light.min.css"; path = "Pod/Assets/styles/atelier-heath-light.min.css"; sourceTree = "<group>"; };
-		3C9792752EE604F30D434AE1719049A4 /* arta.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = arta.min.css; path = Pod/Assets/styles/arta.min.css; sourceTree = "<group>"; };
-		3D0B5BF1535E58E4901FA50C68D2CB96 /* monokai-sublime.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "monokai-sublime.min.css"; path = "Pod/Assets/styles/monokai-sublime.min.css"; sourceTree = "<group>"; };
-		3E1AECA7D4111F3722040BD5E789E105 /* docco.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = docco.min.css; path = Pod/Assets/styles/docco.min.css; sourceTree = "<group>"; };
+		36F73BC3B0FD4531ABEE6C382E3E68FC /* nord.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = nord.min.css; path = Pod/Assets/styles/nord.min.css; sourceTree = "<group>"; };
+		37B69B15084925048EB69AFF97A28DBC /* an-old-hope.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "an-old-hope.min.css"; path = "Pod/Assets/styles/an-old-hope.min.css"; sourceTree = "<group>"; };
+		382FE2BCE09857333DA40FAEBF89236D /* mention.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mention.c; path = Source/cmark_gfm/mention.c; sourceTree = "<group>"; };
+		3AAD31B4C2963A80E0E97F67743E49EC /* atelier-heath-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "atelier-heath-light.min.css"; path = "Pod/Assets/styles/atelier-heath-light.min.css"; sourceTree = "<group>"; };
+		3C9792752EE604F30D434AE1719049A4 /* arta.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = arta.min.css; path = Pod/Assets/styles/arta.min.css; sourceTree = "<group>"; };
+		3D0B5BF1535E58E4901FA50C68D2CB96 /* monokai-sublime.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "monokai-sublime.min.css"; path = "Pod/Assets/styles/monokai-sublime.min.css"; sourceTree = "<group>"; };
+		3E1AECA7D4111F3722040BD5E789E105 /* docco.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = docco.min.css; path = Pod/Assets/styles/docco.min.css; sourceTree = "<group>"; };
 		3E39F51534908F4CEBD18800336FDC01 /* Pods-Pine-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Pine-dummy.m"; sourceTree = "<group>"; };
-		4138CB014ABB498BBCF51DFB964AAA08 /* hybrid.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = hybrid.min.css; path = Pod/Assets/styles/hybrid.min.css; sourceTree = "<group>"; };
-		418040D16810954026766BD44F02764A /* purebasic.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = purebasic.min.css; path = Pod/Assets/styles/purebasic.min.css; sourceTree = "<group>"; };
-		4196D5FA9BC31185ECF60F92C8565A08 /* lightfair.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = lightfair.min.css; path = Pod/Assets/styles/lightfair.min.css; sourceTree = "<group>"; };
+		4138CB014ABB498BBCF51DFB964AAA08 /* hybrid.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = hybrid.min.css; path = Pod/Assets/styles/hybrid.min.css; sourceTree = "<group>"; };
+		418040D16810954026766BD44F02764A /* purebasic.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = purebasic.min.css; path = Pod/Assets/styles/purebasic.min.css; sourceTree = "<group>"; };
+		4196D5FA9BC31185ECF60F92C8565A08 /* lightfair.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = lightfair.min.css; path = Pod/Assets/styles/lightfair.min.css; sourceTree = "<group>"; };
 		42063CCA8DB4A0AE454C513D91A492DD /* libcmark_gfm.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = libcmark_gfm.h; path = Source/cmark_gfm/include/libcmark_gfm.h; sourceTree = "<group>"; };
-		425DDDDC8B9E4B5DF6BEA6894E5B427A /* atelier-sulphurpool-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-sulphurpool-dark.min.css"; path = "Pod/Assets/styles/atelier-sulphurpool-dark.min.css"; sourceTree = "<group>"; };
-		4446ABA5E3C95894B313EAF6430F54DD /* commonmark.c */ = {isa = PBXFileReference; includeInIndex = 1; name = commonmark.c; path = Source/cmark_gfm/commonmark.c; sourceTree = "<group>"; };
-		464C2660635011B5376045157819E956 /* atom-one-dark-reasonable.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atom-one-dark-reasonable.min.css"; path = "Pod/Assets/styles/atom-one-dark-reasonable.min.css"; sourceTree = "<group>"; };
-		46B80F957B8E61AE3F5F7D047AAAE8A0 /* atelier-savanna-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-savanna-dark.min.css"; path = "Pod/Assets/styles/atelier-savanna-dark.min.css"; sourceTree = "<group>"; };
+		425DDDDC8B9E4B5DF6BEA6894E5B427A /* atelier-sulphurpool-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "atelier-sulphurpool-dark.min.css"; path = "Pod/Assets/styles/atelier-sulphurpool-dark.min.css"; sourceTree = "<group>"; };
+		4446ABA5E3C95894B313EAF6430F54DD /* commonmark.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = commonmark.c; path = Source/cmark_gfm/commonmark.c; sourceTree = "<group>"; };
+		464C2660635011B5376045157819E956 /* atom-one-dark-reasonable.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "atom-one-dark-reasonable.min.css"; path = "Pod/Assets/styles/atom-one-dark-reasonable.min.css"; sourceTree = "<group>"; };
+		46B80F957B8E61AE3F5F7D047AAAE8A0 /* atelier-savanna-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "atelier-savanna-dark.min.css"; path = "Pod/Assets/styles/atelier-savanna-dark.min.css"; sourceTree = "<group>"; };
 		46BC15629B0ED415595727C39065619C /* mention.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mention.h; path = Source/cmark_gfm/include/mention.h; sourceTree = "<group>"; };
 		47A8B5A2053376961D7AECEB1F8439D9 /* ASTOperations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ASTOperations.swift; path = Source/ASTOperations.swift; sourceTree = "<group>"; };
 		489B7B674E7C3DD18CA03AC132DDC664 /* Highlightr-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Highlightr-dummy.m"; sourceTree = "<group>"; };
-		48AF98CFBE7C10A9145047260E35EF69 /* core-extensions.c */ = {isa = PBXFileReference; includeInIndex = 1; name = "core-extensions.c"; path = "Source/cmark_gfm/core-extensions.c"; sourceTree = "<group>"; };
-		4997BA40F20C909C097F4FA14B3FD4B1 /* ir-black.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "ir-black.min.css"; path = "Pod/Assets/styles/ir-black.min.css"; sourceTree = "<group>"; };
-		4BF4B9E02A890F75A1612A5FD292CEDD /* mono-blue.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "mono-blue.min.css"; path = "Pod/Assets/styles/mono-blue.min.css"; sourceTree = "<group>"; };
+		48AF98CFBE7C10A9145047260E35EF69 /* core-extensions.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = "core-extensions.c"; path = "Source/cmark_gfm/core-extensions.c"; sourceTree = "<group>"; };
+		4997BA40F20C909C097F4FA14B3FD4B1 /* ir-black.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "ir-black.min.css"; path = "Pod/Assets/styles/ir-black.min.css"; sourceTree = "<group>"; };
+		4BF4B9E02A890F75A1612A5FD292CEDD /* mono-blue.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "mono-blue.min.css"; path = "Pod/Assets/styles/mono-blue.min.css"; sourceTree = "<group>"; };
 		4C5A0612B56A3EBC5D89282E3A8ABE9B /* Pods-Pine.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Pine.modulemap"; sourceTree = "<group>"; };
-		4CA0E76FD13052FBE5AEF827E1308F41 /* color-brewer.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "color-brewer.min.css"; path = "Pod/Assets/styles/color-brewer.min.css"; sourceTree = "<group>"; };
-		4EF98B9D856697C23A9C8D49D95D52A6 /* kimbie.light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = kimbie.light.min.css; path = Pod/Assets/styles/kimbie.light.min.css; sourceTree = "<group>"; };
-		4FFB47D79132D8CE773F5FB12728EC35 /* node.c */ = {isa = PBXFileReference; includeInIndex = 1; name = node.c; path = Source/cmark_gfm/node.c; sourceTree = "<group>"; };
+		4CA0E76FD13052FBE5AEF827E1308F41 /* color-brewer.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "color-brewer.min.css"; path = "Pod/Assets/styles/color-brewer.min.css"; sourceTree = "<group>"; };
+		4EF98B9D856697C23A9C8D49D95D52A6 /* kimbie.light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = kimbie.light.min.css; path = Pod/Assets/styles/kimbie.light.min.css; sourceTree = "<group>"; };
+		4FFB47D79132D8CE773F5FB12728EC35 /* node.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = node.c; path = Source/cmark_gfm/node.c; sourceTree = "<group>"; };
 		50A1F06919FADE84718377914FEDCBEE /* cmarkextensions_export.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cmarkextensions_export.h; path = Source/cmark_gfm/include/cmarkextensions_export.h; sourceTree = "<group>"; };
-		50C320C3227CEE9F04AB3546BAB31CDA /* table.c */ = {isa = PBXFileReference; includeInIndex = 1; name = table.c; path = Source/cmark_gfm/table.c; sourceTree = "<group>"; };
-		536168C00D5EF18D5B0B42C32DB3E266 /* entities.inc */ = {isa = PBXFileReference; includeInIndex = 1; name = entities.inc; path = Source/cmark_gfm/entities.inc; sourceTree = "<group>"; };
-		55BAD4D0598BEC4186C1C627B9359337 /* atom-one-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atom-one-light.min.css"; path = "Pod/Assets/styles/atom-one-light.min.css"; sourceTree = "<group>"; };
-		5701A67B2E45E6F826C19C10DEAE1D5F /* a11y-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "a11y-light.min.css"; path = "Pod/Assets/styles/a11y-light.min.css"; sourceTree = "<group>"; };
-		57C6AB6A13F6B0531211C333B7759DAE /* github-gist.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "github-gist.min.css"; path = "Pod/Assets/styles/github-gist.min.css"; sourceTree = "<group>"; };
-		5AE49B111DA235F4F45B3A66A83705A3 /* cmark.c */ = {isa = PBXFileReference; includeInIndex = 1; name = cmark.c; path = Source/cmark_gfm/cmark.c; sourceTree = "<group>"; };
+		50C320C3227CEE9F04AB3546BAB31CDA /* table.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = table.c; path = Source/cmark_gfm/table.c; sourceTree = "<group>"; };
+		536168C00D5EF18D5B0B42C32DB3E266 /* entities.inc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.pascal; name = entities.inc; path = Source/cmark_gfm/entities.inc; sourceTree = "<group>"; };
+		55BAD4D0598BEC4186C1C627B9359337 /* atom-one-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "atom-one-light.min.css"; path = "Pod/Assets/styles/atom-one-light.min.css"; sourceTree = "<group>"; };
+		5701A67B2E45E6F826C19C10DEAE1D5F /* a11y-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "a11y-light.min.css"; path = "Pod/Assets/styles/a11y-light.min.css"; sourceTree = "<group>"; };
+		57C6AB6A13F6B0531211C333B7759DAE /* github-gist.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "github-gist.min.css"; path = "Pod/Assets/styles/github-gist.min.css"; sourceTree = "<group>"; };
+		5AE49B111DA235F4F45B3A66A83705A3 /* cmark.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = cmark.c; path = Source/cmark_gfm/cmark.c; sourceTree = "<group>"; };
 		5AE5771D430438FA6C0AABA37F0638C8 /* cmark_version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cmark_version.h; path = Source/cmark_gfm/include/cmark_version.h; sourceTree = "<group>"; };
 		5AF69EC1C5DD119E07226930B2F80671 /* Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = Pod/Classes/Theme.swift; sourceTree = "<group>"; };
-		5B4BD67282D899D4B1282BC58EC078A2 /* atelier-forest-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-forest-light.min.css"; path = "Pod/Assets/styles/atelier-forest-light.min.css"; sourceTree = "<group>"; };
-		5BB0FEA6CC3F29D21DCD420144DED6F0 /* hopscotch.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = hopscotch.min.css; path = Pod/Assets/styles/hopscotch.min.css; sourceTree = "<group>"; };
-		5C7406B08DB8140A95BA08F31361A7F9 /* school-book.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "school-book.min.css"; path = "Pod/Assets/styles/school-book.min.css"; sourceTree = "<group>"; };
-		5C9DED496FB003E46390313D6CFF6A1B /* androidstudio.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = androidstudio.min.css; path = Pod/Assets/styles/androidstudio.min.css; sourceTree = "<group>"; };
+		5B4BD67282D899D4B1282BC58EC078A2 /* atelier-forest-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "atelier-forest-light.min.css"; path = "Pod/Assets/styles/atelier-forest-light.min.css"; sourceTree = "<group>"; };
+		5BB0FEA6CC3F29D21DCD420144DED6F0 /* hopscotch.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = hopscotch.min.css; path = Pod/Assets/styles/hopscotch.min.css; sourceTree = "<group>"; };
+		5C7406B08DB8140A95BA08F31361A7F9 /* school-book.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "school-book.min.css"; path = "Pod/Assets/styles/school-book.min.css"; sourceTree = "<group>"; };
+		5C9DED496FB003E46390313D6CFF6A1B /* androidstudio.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = androidstudio.min.css; path = Pod/Assets/styles/androidstudio.min.css; sourceTree = "<group>"; };
 		5CD09E183E21CB05896CE1D7E0E7A72F /* Highlightr.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Highlightr.swift; path = Pod/Classes/Highlightr.swift; sourceTree = "<group>"; };
 		5DD69610E2929D10C14154FCC2E79F11 /* Node+Elements.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Node+Elements.swift"; path = "Source/Node+Elements.swift"; sourceTree = "<group>"; };
-		6076CB8B4B315FD16F39587D94BB5B2E /* tomorrow-night-eighties.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "tomorrow-night-eighties.min.css"; path = "Pod/Assets/styles/tomorrow-night-eighties.min.css"; sourceTree = "<group>"; };
+		6076CB8B4B315FD16F39587D94BB5B2E /* tomorrow-night-eighties.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "tomorrow-night-eighties.min.css"; path = "Pod/Assets/styles/tomorrow-night-eighties.min.css"; sourceTree = "<group>"; };
 		60BD1CE62CF6A5FC78612CF6998F860A /* autolink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = autolink.h; path = Source/cmark_gfm/include/autolink.h; sourceTree = "<group>"; };
-		6123647E55145A02062908E9D7DA1AD0 /* gruvbox-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "gruvbox-light.min.css"; path = "Pod/Assets/styles/gruvbox-light.min.css"; sourceTree = "<group>"; };
+		6123647E55145A02062908E9D7DA1AD0 /* gruvbox-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "gruvbox-light.min.css"; path = "Pod/Assets/styles/gruvbox-light.min.css"; sourceTree = "<group>"; };
 		618C1D233BC36EF2EBF02B3633909308 /* Pods-Pine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Pine.release.xcconfig"; sourceTree = "<group>"; };
 		61DBC6AF904E92A75936D5F1BFB68547 /* Highlightr-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Highlightr-Info.plist"; sourceTree = "<group>"; };
-		62CDD90A800AA679DBC1C80BAEFEC1FA /* scanners.re */ = {isa = PBXFileReference; includeInIndex = 1; name = scanners.re; path = Source/cmark_gfm/scanners.re; sourceTree = "<group>"; };
-		62E396BE290C47855D0B4C0987C7348B /* registry.c */ = {isa = PBXFileReference; includeInIndex = 1; name = registry.c; path = Source/cmark_gfm/registry.c; sourceTree = "<group>"; };
+		62CDD90A800AA679DBC1C80BAEFEC1FA /* scanners.re */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = scanners.re; path = Source/cmark_gfm/scanners.re; sourceTree = "<group>"; };
+		62E396BE290C47855D0B4C0987C7348B /* registry.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = registry.c; path = Source/cmark_gfm/registry.c; sourceTree = "<group>"; };
 		62E517999F47350EA2DD3E6DB74162DD /* cmark-gfm-swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "cmark-gfm-swift-umbrella.h"; sourceTree = "<group>"; };
 		638189266FAF96B4628C910FF1AC9CB8 /* houdini.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = houdini.h; path = Source/cmark_gfm/include/houdini.h; sourceTree = "<group>"; };
 		63F917801C3445FBB31F4F90EE7E3D85 /* Node.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Node.swift; path = Source/Node.swift; sourceTree = "<group>"; };
-		6402ED3955EA0218F7A0FF8DD57750B7 /* atelier-plateau-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-plateau-dark.min.css"; path = "Pod/Assets/styles/atelier-plateau-dark.min.css"; sourceTree = "<group>"; };
-		64181ED6E006AC88D04265CDDED6BDED /* default.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = default.min.css; path = Pod/Assets/styles/default.min.css; sourceTree = "<group>"; };
-		64D107E93088ACAF7DE7BB61D8F3CB8E /* emoji.c */ = {isa = PBXFileReference; includeInIndex = 1; name = emoji.c; path = Source/cmark_gfm/emoji.c; sourceTree = "<group>"; };
-		64E7448F61B0772E722CA910B6E95658 /* ocean.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = ocean.min.css; path = Pod/Assets/styles/ocean.min.css; sourceTree = "<group>"; };
-		65D8171780B55BB089F6781DE1F1DF40 /* atelier-sulphurpool-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-sulphurpool-light.min.css"; path = "Pod/Assets/styles/atelier-sulphurpool-light.min.css"; sourceTree = "<group>"; };
+		6402ED3955EA0218F7A0FF8DD57750B7 /* atelier-plateau-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "atelier-plateau-dark.min.css"; path = "Pod/Assets/styles/atelier-plateau-dark.min.css"; sourceTree = "<group>"; };
+		64181ED6E006AC88D04265CDDED6BDED /* default.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = default.min.css; path = Pod/Assets/styles/default.min.css; sourceTree = "<group>"; };
+		64D107E93088ACAF7DE7BB61D8F3CB8E /* emoji.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = emoji.c; path = Source/cmark_gfm/emoji.c; sourceTree = "<group>"; };
+		64E7448F61B0772E722CA910B6E95658 /* ocean.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = ocean.min.css; path = Pod/Assets/styles/ocean.min.css; sourceTree = "<group>"; };
+		65D8171780B55BB089F6781DE1F1DF40 /* atelier-sulphurpool-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "atelier-sulphurpool-light.min.css"; path = "Pod/Assets/styles/atelier-sulphurpool-light.min.css"; sourceTree = "<group>"; };
 		6896DC62FF437389C835EC8BF7655FED /* emoji.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = emoji.h; path = Source/cmark_gfm/include/emoji.h; sourceTree = "<group>"; };
-		6AF96AAD8EC86CEE6DC8B02155151488 /* ext_scanners.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ext_scanners.c; path = Source/cmark_gfm/ext_scanners.c; sourceTree = "<group>"; };
-		6B5E143C11968C7EDD2EB5D38F38B8A1 /* ascetic.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = ascetic.min.css; path = Pod/Assets/styles/ascetic.min.css; sourceTree = "<group>"; };
+		6AF96AAD8EC86CEE6DC8B02155151488 /* ext_scanners.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = ext_scanners.c; path = Source/cmark_gfm/ext_scanners.c; sourceTree = "<group>"; };
+		6B5E143C11968C7EDD2EB5D38F38B8A1 /* ascetic.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = ascetic.min.css; path = Pod/Assets/styles/ascetic.min.css; sourceTree = "<group>"; };
 		6BCEE42D64B19F1DF8B93B2959BE9557 /* Pods-Pine-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Pine-umbrella.h"; sourceTree = "<group>"; };
-		6CF59B889C0456E839FFE96409AAE1CD /* atelier-forest-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-forest-dark.min.css"; path = "Pod/Assets/styles/atelier-forest-dark.min.css"; sourceTree = "<group>"; };
-		71620DFECF7BD6EE95CE01B18AEBA907 /* solarized-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "solarized-light.min.css"; path = "Pod/Assets/styles/solarized-light.min.css"; sourceTree = "<group>"; };
+		6CF59B889C0456E839FFE96409AAE1CD /* atelier-forest-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "atelier-forest-dark.min.css"; path = "Pod/Assets/styles/atelier-forest-dark.min.css"; sourceTree = "<group>"; };
+		71620DFECF7BD6EE95CE01B18AEBA907 /* solarized-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "solarized-light.min.css"; path = "Pod/Assets/styles/solarized-light.min.css"; sourceTree = "<group>"; };
 		71AD57626EFA1ED041688FFFB2201CA8 /* cmark-gfm-swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "cmark-gfm-swift-prefix.pch"; sourceTree = "<group>"; };
 		77801601C9DCF9387655B97BEBB7A263 /* Pods-Pine-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Pine-acknowledgements.plist"; sourceTree = "<group>"; };
 		784FC32E291C0558A90EAD6008A75B00 /* cmark-gfm-swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "cmark-gfm-swift-dummy.m"; sourceTree = "<group>"; };
-		7B8EAD370ABCD9E46576E5D72B7B81FC /* footnotes.c */ = {isa = PBXFileReference; includeInIndex = 1; name = footnotes.c; path = Source/cmark_gfm/footnotes.c; sourceTree = "<group>"; };
-		7BA2AC26286EFB3D0F05B9A15DEE3B76 /* solarized-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "solarized-dark.min.css"; path = "Pod/Assets/styles/solarized-dark.min.css"; sourceTree = "<group>"; };
-		7BF253233694C86017E21C0D97B072D7 /* man.c */ = {isa = PBXFileReference; includeInIndex = 1; name = man.c; path = Source/cmark_gfm/man.c; sourceTree = "<group>"; };
-		7D26C3AEDD1E6552E63BE4B9C29F8380 /* linked_list.c */ = {isa = PBXFileReference; includeInIndex = 1; name = linked_list.c; path = Source/cmark_gfm/linked_list.c; sourceTree = "<group>"; };
-		7DB5F1CDA1AB1B98DF42120DC5E65968 /* atelier-savanna-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-savanna-light.min.css"; path = "Pod/Assets/styles/atelier-savanna-light.min.css"; sourceTree = "<group>"; };
+		7B8EAD370ABCD9E46576E5D72B7B81FC /* footnotes.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = footnotes.c; path = Source/cmark_gfm/footnotes.c; sourceTree = "<group>"; };
+		7BA2AC26286EFB3D0F05B9A15DEE3B76 /* solarized-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "solarized-dark.min.css"; path = "Pod/Assets/styles/solarized-dark.min.css"; sourceTree = "<group>"; };
+		7BF253233694C86017E21C0D97B072D7 /* man.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = man.c; path = Source/cmark_gfm/man.c; sourceTree = "<group>"; };
+		7D26C3AEDD1E6552E63BE4B9C29F8380 /* linked_list.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = linked_list.c; path = Source/cmark_gfm/linked_list.c; sourceTree = "<group>"; };
+		7DB5F1CDA1AB1B98DF42120DC5E65968 /* atelier-savanna-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "atelier-savanna-light.min.css"; path = "Pod/Assets/styles/atelier-savanna-light.min.css"; sourceTree = "<group>"; };
 		7EA9308A72ED331B2A37574B1F496D7B /* Highlightr-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Highlightr-umbrella.h"; sourceTree = "<group>"; };
 		7EAE3AD3C0B80481584AEBC00662140C /* Highlightr-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Highlightr-prefix.pch"; sourceTree = "<group>"; };
-		7F389DDFB1E92AB173164A03C62A7874 /* atelier-estuary-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-estuary-light.min.css"; path = "Pod/Assets/styles/atelier-estuary-light.min.css"; sourceTree = "<group>"; };
+		7F389DDFB1E92AB173164A03C62A7874 /* atelier-estuary-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "atelier-estuary-light.min.css"; path = "Pod/Assets/styles/atelier-estuary-light.min.css"; sourceTree = "<group>"; };
 		84D6987EE6B34D6F32FC1290FB846350 /* cmark-gfm-swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "cmark-gfm-swift.xcconfig"; sourceTree = "<group>"; };
-		86CC68C504D338C220734EF822B2054F /* dracula.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = dracula.min.css; path = Pod/Assets/styles/dracula.min.css; sourceTree = "<group>"; };
-		86F5987D658D4CF323BB6DB7AA6EC0EF /* github.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = github.min.css; path = Pod/Assets/styles/github.min.css; sourceTree = "<group>"; };
+		86CC68C504D338C220734EF822B2054F /* dracula.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = dracula.min.css; path = Pod/Assets/styles/dracula.min.css; sourceTree = "<group>"; };
+		86F5987D658D4CF323BB6DB7AA6EC0EF /* github.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = github.min.css; path = Pod/Assets/styles/github.min.css; sourceTree = "<group>"; };
 		8706BF3C4364F81B58A71C86617FDC50 /* chunk.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = chunk.h; path = Source/cmark_gfm/include/chunk.h; sourceTree = "<group>"; };
 		88D6A90D1B6C9E3EEDA925EBB0B69186 /* parser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = parser.h; path = Source/cmark_gfm/include/parser.h; sourceTree = "<group>"; };
-		8984DCCC8522B7601081A49BE362C52A /* rainbow.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = rainbow.min.css; path = Pod/Assets/styles/rainbow.min.css; sourceTree = "<group>"; };
-		8B2158E8B78D1E595012B1A9A5226B6D /* shades-of-purple.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "shades-of-purple.min.css"; path = "Pod/Assets/styles/shades-of-purple.min.css"; sourceTree = "<group>"; };
-		8D4BBE19E04745FC8E97A364BE776E74 /* grayscale.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = grayscale.min.css; path = Pod/Assets/styles/grayscale.min.css; sourceTree = "<group>"; };
+		8984DCCC8522B7601081A49BE362C52A /* rainbow.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = rainbow.min.css; path = Pod/Assets/styles/rainbow.min.css; sourceTree = "<group>"; };
+		8B2158E8B78D1E595012B1A9A5226B6D /* shades-of-purple.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "shades-of-purple.min.css"; path = "Pod/Assets/styles/shades-of-purple.min.css"; sourceTree = "<group>"; };
+		8D4BBE19E04745FC8E97A364BE776E74 /* grayscale.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = grayscale.min.css; path = Pod/Assets/styles/grayscale.min.css; sourceTree = "<group>"; };
 		8DBC813F499C36FA3B62AAA90C86B179 /* module.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = module.modulemap; path = Source/cmark_gfm/module.modulemap; sourceTree = "<group>"; };
-		924BB9F090B26C21690D244D8AE44B1B /* tomorrow-night-bright.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "tomorrow-night-bright.min.css"; path = "Pod/Assets/styles/tomorrow-night-bright.min.css"; sourceTree = "<group>"; };
-		95BFBDE579269B122992EB4ABFA53DCC /* autolink.c */ = {isa = PBXFileReference; includeInIndex = 1; name = autolink.c; path = Source/cmark_gfm/autolink.c; sourceTree = "<group>"; };
-		96923821E8975F1D55DE8E6269EFEE95 /* Highlightr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Highlightr.framework; path = Highlightr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		924BB9F090B26C21690D244D8AE44B1B /* tomorrow-night-bright.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "tomorrow-night-bright.min.css"; path = "Pod/Assets/styles/tomorrow-night-bright.min.css"; sourceTree = "<group>"; };
+		95BFBDE579269B122992EB4ABFA53DCC /* autolink.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = autolink.c; path = Source/cmark_gfm/autolink.c; sourceTree = "<group>"; };
+		96923821E8975F1D55DE8E6269EFEE95 /* Highlightr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Highlightr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D5A5BD8BB807749D586961D64DFA61 /* Element.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Element.swift; path = Source/Element.swift; sourceTree = "<group>"; };
 		99464D1BD8A2A25BAFD1343872096DE6 /* ListElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ListElement.swift; path = Source/ListElement.swift; sourceTree = "<group>"; };
-		9BF269FB7D1835D03563FA3B6A8976CC /* vs.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = vs.min.css; path = Pod/Assets/styles/vs.min.css; sourceTree = "<group>"; };
-		9CA539DB7879B6A43F836AFD432F6246 /* map.c */ = {isa = PBXFileReference; includeInIndex = 1; name = map.c; path = Source/cmark_gfm/map.c; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9BF269FB7D1835D03563FA3B6A8976CC /* vs.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = vs.min.css; path = Pod/Assets/styles/vs.min.css; sourceTree = "<group>"; };
+		9CA539DB7879B6A43F836AFD432F6246 /* map.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = map.c; path = Source/cmark_gfm/map.c; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DA1A33E2952E6A1FBEF17DBD486B066 /* registry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = registry.h; path = Source/cmark_gfm/include/registry.h; sourceTree = "<group>"; };
-		9EFA3054689AFD796A834C51E9B5B294 /* obsidian.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = obsidian.min.css; path = Pod/Assets/styles/obsidian.min.css; sourceTree = "<group>"; };
-		A00C8C40E1CF4129880606BD7867E55B /* arena.c */ = {isa = PBXFileReference; includeInIndex = 1; name = arena.c; path = Source/cmark_gfm/arena.c; sourceTree = "<group>"; };
+		9EFA3054689AFD796A834C51E9B5B294 /* obsidian.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = obsidian.min.css; path = Pod/Assets/styles/obsidian.min.css; sourceTree = "<group>"; };
+		A00C8C40E1CF4129880606BD7867E55B /* arena.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = arena.c; path = Source/cmark_gfm/arena.c; sourceTree = "<group>"; };
 		A78E1ACD305113C08E872701DF83F552 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		A7E5CBE9B9902F0EAFEAEC96E717EFA5 /* houdini_html_e.c */ = {isa = PBXFileReference; includeInIndex = 1; name = houdini_html_e.c; path = Source/cmark_gfm/houdini_html_e.c; sourceTree = "<group>"; };
-		AA6173BDD02D1754E7D0E6522CB9A063 /* atelier-cave-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-cave-dark.min.css"; path = "Pod/Assets/styles/atelier-cave-dark.min.css"; sourceTree = "<group>"; };
-		AA632F348A47B4B864ED3FB6A79B233C /* atelier-plateau-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-plateau-light.min.css"; path = "Pod/Assets/styles/atelier-plateau-light.min.css"; sourceTree = "<group>"; };
-		AE1828475C2B03ED55526E030F791BC7 /* monokai.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = monokai.min.css; path = Pod/Assets/styles/monokai.min.css; sourceTree = "<group>"; };
-		B220453B6A9FF49F3838B8468C9CC2F1 /* iterator.c */ = {isa = PBXFileReference; includeInIndex = 1; name = iterator.c; path = Source/cmark_gfm/iterator.c; sourceTree = "<group>"; };
+		A7E5CBE9B9902F0EAFEAEC96E717EFA5 /* houdini_html_e.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = houdini_html_e.c; path = Source/cmark_gfm/houdini_html_e.c; sourceTree = "<group>"; };
+		AA6173BDD02D1754E7D0E6522CB9A063 /* atelier-cave-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "atelier-cave-dark.min.css"; path = "Pod/Assets/styles/atelier-cave-dark.min.css"; sourceTree = "<group>"; };
+		AA632F348A47B4B864ED3FB6A79B233C /* atelier-plateau-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "atelier-plateau-light.min.css"; path = "Pod/Assets/styles/atelier-plateau-light.min.css"; sourceTree = "<group>"; };
+		AE1828475C2B03ED55526E030F791BC7 /* monokai.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = monokai.min.css; path = Pod/Assets/styles/monokai.min.css; sourceTree = "<group>"; };
+		B220453B6A9FF49F3838B8468C9CC2F1 /* iterator.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = iterator.c; path = Source/cmark_gfm/iterator.c; sourceTree = "<group>"; };
 		B22310C726738282E7A25F31230000E8 /* table.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = table.h; path = Source/cmark_gfm/include/table.h; sourceTree = "<group>"; };
-		B23572EB5AC22A9704C7823D460D82A0 /* wikilink.c */ = {isa = PBXFileReference; includeInIndex = 1; name = wikilink.c; path = Source/cmark_gfm/wikilink.c; sourceTree = "<group>"; };
-		B34115B8C3ECD799F561671767130F43 /* strikethrough.c */ = {isa = PBXFileReference; includeInIndex = 1; name = strikethrough.c; path = Source/cmark_gfm/strikethrough.c; sourceTree = "<group>"; };
+		B23572EB5AC22A9704C7823D460D82A0 /* wikilink.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = wikilink.c; path = Source/cmark_gfm/wikilink.c; sourceTree = "<group>"; };
+		B34115B8C3ECD799F561671767130F43 /* strikethrough.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = strikethrough.c; path = Source/cmark_gfm/strikethrough.c; sourceTree = "<group>"; };
 		B419DBCAAB88DC0B030771E66B33CD40 /* wikilink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = wikilink.h; path = Source/cmark_gfm/include/wikilink.h; sourceTree = "<group>"; };
-		B676762F761AF00EB29DF531DE0D3DFA /* utf8.c */ = {isa = PBXFileReference; includeInIndex = 1; name = utf8.c; path = Source/cmark_gfm/utf8.c; sourceTree = "<group>"; };
-		B6A844089F805AEDC389C8103D9B6045 /* a11y-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "a11y-dark.min.css"; path = "Pod/Assets/styles/a11y-dark.min.css"; sourceTree = "<group>"; };
-		B75DB7B2AF2BAD167314C6A698EC2592 /* paraiso-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "paraiso-dark.min.css"; path = "Pod/Assets/styles/paraiso-dark.min.css"; sourceTree = "<group>"; };
+		B676762F761AF00EB29DF531DE0D3DFA /* utf8.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = utf8.c; path = Source/cmark_gfm/utf8.c; sourceTree = "<group>"; };
+		B6A844089F805AEDC389C8103D9B6045 /* a11y-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "a11y-dark.min.css"; path = "Pod/Assets/styles/a11y-dark.min.css"; sourceTree = "<group>"; };
+		B75DB7B2AF2BAD167314C6A698EC2592 /* paraiso-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "paraiso-dark.min.css"; path = "Pod/Assets/styles/paraiso-dark.min.css"; sourceTree = "<group>"; };
 		BA4B06BF421592AC8E7E2FCC5A26750A /* inlines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = inlines.h; path = Source/cmark_gfm/include/inlines.h; sourceTree = "<group>"; };
-		BDDDCB0EBAC3E27448B8801DD60D5FF4 /* darkula.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = darkula.min.css; path = Pod/Assets/styles/darkula.min.css; sourceTree = "<group>"; };
-		BF3A4CB6A37A18B961ED387A5EB2E46C /* xcode.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = xcode.min.css; path = Pod/Assets/styles/xcode.min.css; sourceTree = "<group>"; };
-		BFDA825CDB5AC38070AFF051FF5F60C3 /* agate.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = agate.min.css; path = Pod/Assets/styles/agate.min.css; sourceTree = "<group>"; };
-		BFE9F8CB5863967AD8CC733B2BCC74AD /* foundation.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = foundation.min.css; path = Pod/Assets/styles/foundation.min.css; sourceTree = "<group>"; };
+		BDDDCB0EBAC3E27448B8801DD60D5FF4 /* darkula.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = darkula.min.css; path = Pod/Assets/styles/darkula.min.css; sourceTree = "<group>"; };
+		BF3A4CB6A37A18B961ED387A5EB2E46C /* xcode.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = xcode.min.css; path = Pod/Assets/styles/xcode.min.css; sourceTree = "<group>"; };
+		BFDA825CDB5AC38070AFF051FF5F60C3 /* agate.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = agate.min.css; path = Pod/Assets/styles/agate.min.css; sourceTree = "<group>"; };
+		BFE9F8CB5863967AD8CC733B2BCC74AD /* foundation.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = foundation.min.css; path = Pod/Assets/styles/foundation.min.css; sourceTree = "<group>"; };
 		C20F0EE5BEE8B6EEC046BE9AAE6ABC11 /* syntax_extension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = syntax_extension.h; path = Source/cmark_gfm/include/syntax_extension.h; sourceTree = "<group>"; };
-		C54922276B88ACD8C08F1412A299663A /* highlight.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = highlight.min.js; path = Pod/Assets/Highlighter/highlight.min.js; sourceTree = "<group>"; };
+		C54922276B88ACD8C08F1412A299663A /* highlight.min.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = highlight.min.js; path = Pod/Assets/Highlighter/highlight.min.js; sourceTree = "<group>"; };
 		C5B2CBC51E9ECFA9919C552CB170057F /* Block+TextElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Block+TextElement.swift"; path = "Source/Block+TextElement.swift"; sourceTree = "<group>"; };
-		C9415DD95857BE261648BCEDD438633D /* houdini_html_u.c */ = {isa = PBXFileReference; includeInIndex = 1; name = houdini_html_u.c; path = Source/cmark_gfm/houdini_html_u.c; sourceTree = "<group>"; };
-		CA9ED309DB02B481A8A63B31A4BBF7D0 /* dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = dark.min.css; path = Pod/Assets/styles/dark.min.css; sourceTree = "<group>"; };
+		C9415DD95857BE261648BCEDD438633D /* houdini_html_u.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = houdini_html_u.c; path = Source/cmark_gfm/houdini_html_u.c; sourceTree = "<group>"; };
+		CA9ED309DB02B481A8A63B31A4BBF7D0 /* dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = dark.min.css; path = Pod/Assets/styles/dark.min.css; sourceTree = "<group>"; };
 		CB526E08C39CD474E610C523D8C9EC86 /* SwiftAST.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftAST.swift; path = Source/SwiftAST.swift; sourceTree = "<group>"; };
 		CBD21A351F1F0D727E2BAE047550FEDD /* buffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = buffer.h; path = Source/cmark_gfm/include/buffer.h; sourceTree = "<group>"; };
 		CBF9E3F6AE108ED9FA20278F04D07DCB /* plugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = plugin.h; path = Source/cmark_gfm/include/plugin.h; sourceTree = "<group>"; };
-		CD6C1FC70B32ACF50AC1DF66D804C990 /* syntax_extension.c */ = {isa = PBXFileReference; includeInIndex = 1; name = syntax_extension.c; path = Source/cmark_gfm/syntax_extension.c; sourceTree = "<group>"; };
-		D056BA86FC46B081BE5D3321442B0D5A /* codepen-embed.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "codepen-embed.min.css"; path = "Pod/Assets/styles/codepen-embed.min.css"; sourceTree = "<group>"; };
-		D101F632C01C603568D0CFE0A7F56A98 /* magula.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = magula.min.css; path = Pod/Assets/styles/magula.min.css; sourceTree = "<group>"; };
-		D103CC56B3946BEFAA588F89E2583F48 /* pojoaque.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = pojoaque.min.css; path = Pod/Assets/styles/pojoaque.min.css; sourceTree = "<group>"; };
-		D1D483B9F15578026FB74916C9A660B5 /* atom-one-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atom-one-dark.min.css"; path = "Pod/Assets/styles/atom-one-dark.min.css"; sourceTree = "<group>"; };
+		CD6C1FC70B32ACF50AC1DF66D804C990 /* syntax_extension.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = syntax_extension.c; path = Source/cmark_gfm/syntax_extension.c; sourceTree = "<group>"; };
+		D056BA86FC46B081BE5D3321442B0D5A /* codepen-embed.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "codepen-embed.min.css"; path = "Pod/Assets/styles/codepen-embed.min.css"; sourceTree = "<group>"; };
+		D101F632C01C603568D0CFE0A7F56A98 /* magula.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = magula.min.css; path = Pod/Assets/styles/magula.min.css; sourceTree = "<group>"; };
+		D103CC56B3946BEFAA588F89E2583F48 /* pojoaque.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = pojoaque.min.css; path = Pod/Assets/styles/pojoaque.min.css; sourceTree = "<group>"; };
+		D1D483B9F15578026FB74916C9A660B5 /* atom-one-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "atom-one-dark.min.css"; path = "Pod/Assets/styles/atom-one-dark.min.css"; sourceTree = "<group>"; };
 		D380343A9B8F3DFB3B8C1D3849D7E27A /* Highlightr.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Highlightr.modulemap; sourceTree = "<group>"; };
-		D51A4C307713E518E2374131A8365314 /* googlecode.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = googlecode.min.css; path = Pod/Assets/styles/googlecode.min.css; sourceTree = "<group>"; };
-		D6172C2C391E2B643B1412C0DC79489C /* qtcreator_light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = qtcreator_light.min.css; path = Pod/Assets/styles/qtcreator_light.min.css; sourceTree = "<group>"; };
+		D51A4C307713E518E2374131A8365314 /* googlecode.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = googlecode.min.css; path = Pod/Assets/styles/googlecode.min.css; sourceTree = "<group>"; };
+		D6172C2C391E2B643B1412C0DC79489C /* qtcreator_light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = qtcreator_light.min.css; path = Pod/Assets/styles/qtcreator_light.min.css; sourceTree = "<group>"; };
 		D632AEDA60FC2BE89479F41EA34E5DC1 /* Inline+TextElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Inline+TextElement.swift"; path = "Source/Inline+TextElement.swift"; sourceTree = "<group>"; };
 		D72AAE00A9754026DD34A462E27579A8 /* core-extensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "core-extensions.h"; path = "Source/cmark_gfm/include/core-extensions.h"; sourceTree = "<group>"; };
-		D980246BF25C3BE6A56167A3CACD2E0C /* idea.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = idea.min.css; path = Pod/Assets/styles/idea.min.css; sourceTree = "<group>"; };
-		D9C230B0DBECDA58133AD546C07CED86 /* Pods_Pine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Pine.framework; path = "Pods-Pine.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D980246BF25C3BE6A56167A3CACD2E0C /* idea.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = idea.min.css; path = Pod/Assets/styles/idea.min.css; sourceTree = "<group>"; };
+		D9C230B0DBECDA58133AD546C07CED86 /* Pods_Pine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F08260D09C79D5DA79390BAED18108 /* Block+TableRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Block+TableRow.swift"; path = "Source/Block+TableRow.swift"; sourceTree = "<group>"; };
 		DC76B726D00D792C6E07E5B2CCEE0487 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
-		DD18935ECA7A022A0F8F606FA9CCC5FE /* atelier-seaside-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-seaside-light.min.css"; path = "Pod/Assets/styles/atelier-seaside-light.min.css"; sourceTree = "<group>"; };
-		DD7CCB431950CD0CF13EC45F7BE949E8 /* atelier-dune-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-dune-light.min.css"; path = "Pod/Assets/styles/atelier-dune-light.min.css"; sourceTree = "<group>"; };
-		DF0AD316044E239FD3809D9FC4441919 /* tomorrow-night-blue.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "tomorrow-night-blue.min.css"; path = "Pod/Assets/styles/tomorrow-night-blue.min.css"; sourceTree = "<group>"; };
-		DF44A291EDA1060D2730623D022508F0 /* tagfilter.c */ = {isa = PBXFileReference; includeInIndex = 1; name = tagfilter.c; path = Source/cmark_gfm/tagfilter.c; sourceTree = "<group>"; };
+		DD18935ECA7A022A0F8F606FA9CCC5FE /* atelier-seaside-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "atelier-seaside-light.min.css"; path = "Pod/Assets/styles/atelier-seaside-light.min.css"; sourceTree = "<group>"; };
+		DD7CCB431950CD0CF13EC45F7BE949E8 /* atelier-dune-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "atelier-dune-light.min.css"; path = "Pod/Assets/styles/atelier-dune-light.min.css"; sourceTree = "<group>"; };
+		DF0AD316044E239FD3809D9FC4441919 /* tomorrow-night-blue.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "tomorrow-night-blue.min.css"; path = "Pod/Assets/styles/tomorrow-night-blue.min.css"; sourceTree = "<group>"; };
+		DF44A291EDA1060D2730623D022508F0 /* tagfilter.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = tagfilter.c; path = Source/cmark_gfm/tagfilter.c; sourceTree = "<group>"; };
 		E0B5F8CD3455C2281C874EC3C9C8B4CD /* HTMLUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTMLUtils.swift; path = Pod/Classes/HTMLUtils.swift; sourceTree = "<group>"; };
-		E1D7EC574AFF8BE472FBB9D4D4772428 /* gml.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = gml.min.css; path = Pod/Assets/styles/gml.min.css; sourceTree = "<group>"; };
+		E1D7EC574AFF8BE472FBB9D4D4772428 /* gml.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = gml.min.css; path = Pod/Assets/styles/gml.min.css; sourceTree = "<group>"; };
 		E1FAB9692E94C09E5589E720052FB423 /* footnotes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = footnotes.h; path = Source/cmark_gfm/include/footnotes.h; sourceTree = "<group>"; };
-		E27BC0F19E71FCA364F6715E58D68401 /* railscasts.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = railscasts.min.css; path = Pod/Assets/styles/railscasts.min.css; sourceTree = "<group>"; };
+		E27BC0F19E71FCA364F6715E58D68401 /* railscasts.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = railscasts.min.css; path = Pod/Assets/styles/railscasts.min.css; sourceTree = "<group>"; };
 		E8F1AC21BF223635ED826908D9F5C18E /* TableRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableRow.swift; path = Source/TableRow.swift; sourceTree = "<group>"; };
 		E9148D5B8EF5B7E6172AD3322CB9ECBF /* Pods-Pine-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Pine-acknowledgements.markdown"; sourceTree = "<group>"; };
 		EA013D915038F210B309E100F6200D22 /* config.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = config.h; path = Source/cmark_gfm/include/config.h; sourceTree = "<group>"; };
 		EA04AB8644847E5E10D3DE1642370664 /* CodeAttributedString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CodeAttributedString.swift; path = Pod/Classes/CodeAttributedString.swift; sourceTree = "<group>"; };
-		EBC2811E6BCBA29DF2A59C34B281303E /* sunburst.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = sunburst.min.css; path = Pod/Assets/styles/sunburst.min.css; sourceTree = "<group>"; };
+		EBC2811E6BCBA29DF2A59C34B281303E /* sunburst.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = sunburst.min.css; path = Pod/Assets/styles/sunburst.min.css; sourceTree = "<group>"; };
 		EC1B7245D8D6B721DEF47A72C1581492 /* Pods-Pine-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Pine-Info.plist"; sourceTree = "<group>"; };
-		ECEF41BDDFE59EDC81ED35CDAFEA34C4 /* plaintext.c */ = {isa = PBXFileReference; includeInIndex = 1; name = plaintext.c; path = Source/cmark_gfm/plaintext.c; sourceTree = "<group>"; };
-		EDD07A9FDF9E206A9067D2D909980280 /* qtcreator_dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = qtcreator_dark.min.css; path = Pod/Assets/styles/qtcreator_dark.min.css; sourceTree = "<group>"; };
-		EE2348904E081871B699B9CC48927B3D /* atelier-cave-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-cave-light.min.css"; path = "Pod/Assets/styles/atelier-cave-light.min.css"; sourceTree = "<group>"; };
-		EE9F5549BE9457B1AA48386372058CAF /* tomorrow.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = tomorrow.min.css; path = Pod/Assets/styles/tomorrow.min.css; sourceTree = "<group>"; };
-		EF3C0387084074BE44E6B0B398667E97 /* far.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = far.min.css; path = Pod/Assets/styles/far.min.css; sourceTree = "<group>"; };
-		EF89C025512C39BECDA38FC89873E794 /* houdini_href_e.c */ = {isa = PBXFileReference; includeInIndex = 1; name = houdini_href_e.c; path = Source/cmark_gfm/houdini_href_e.c; sourceTree = "<group>"; };
-		F0736D6ACBD98B18209D9FC9870E7F76 /* atelier-heath-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-heath-dark.min.css"; path = "Pod/Assets/styles/atelier-heath-dark.min.css"; sourceTree = "<group>"; };
-		F1D4C587EF1D54F8F2781AF56F08F7F9 /* case_fold_switch.inc */ = {isa = PBXFileReference; includeInIndex = 1; name = case_fold_switch.inc; path = Source/cmark_gfm/case_fold_switch.inc; sourceTree = "<group>"; };
+		ECEF41BDDFE59EDC81ED35CDAFEA34C4 /* plaintext.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = plaintext.c; path = Source/cmark_gfm/plaintext.c; sourceTree = "<group>"; };
+		EDD07A9FDF9E206A9067D2D909980280 /* qtcreator_dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = qtcreator_dark.min.css; path = Pod/Assets/styles/qtcreator_dark.min.css; sourceTree = "<group>"; };
+		EE2348904E081871B699B9CC48927B3D /* atelier-cave-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "atelier-cave-light.min.css"; path = "Pod/Assets/styles/atelier-cave-light.min.css"; sourceTree = "<group>"; };
+		EE9F5549BE9457B1AA48386372058CAF /* tomorrow.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = tomorrow.min.css; path = Pod/Assets/styles/tomorrow.min.css; sourceTree = "<group>"; };
+		EF3C0387084074BE44E6B0B398667E97 /* far.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = far.min.css; path = Pod/Assets/styles/far.min.css; sourceTree = "<group>"; };
+		EF89C025512C39BECDA38FC89873E794 /* houdini_href_e.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = houdini_href_e.c; path = Source/cmark_gfm/houdini_href_e.c; sourceTree = "<group>"; };
+		F0736D6ACBD98B18209D9FC9870E7F76 /* atelier-heath-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "atelier-heath-dark.min.css"; path = "Pod/Assets/styles/atelier-heath-dark.min.css"; sourceTree = "<group>"; };
+		F1D4C587EF1D54F8F2781AF56F08F7F9 /* case_fold_switch.inc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.pascal; name = case_fold_switch.inc; path = Source/cmark_gfm/case_fold_switch.inc; sourceTree = "<group>"; };
 		F213F18F0AC366F7FAD9C8D95864C243 /* Shims.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shims.swift; path = Pod/Classes/Shims.swift; sourceTree = "<group>"; };
 		F2CB65E2391DD3946EA91CC55408C568 /* cmark_export.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cmark_export.h; path = Source/cmark_gfm/include/cmark_export.h; sourceTree = "<group>"; };
-		F2D37B6ABF1937A5E9AE2BD9D1DEED4B /* plugin.c */ = {isa = PBXFileReference; includeInIndex = 1; name = plugin.c; path = Source/cmark_gfm/plugin.c; sourceTree = "<group>"; };
+		F2D37B6ABF1937A5E9AE2BD9D1DEED4B /* plugin.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = plugin.c; path = Source/cmark_gfm/plugin.c; sourceTree = "<group>"; };
 		F428B672943E2CF6AABA5AD0FB119FBB /* Highlightr.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Highlightr.xcconfig; sourceTree = "<group>"; };
-		F455001E07CD02AFFF922326683A3916 /* brown-paper.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "brown-paper.min.css"; path = "Pod/Assets/styles/brown-paper.min.css"; sourceTree = "<group>"; };
+		F455001E07CD02AFFF922326683A3916 /* brown-paper.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "brown-paper.min.css"; path = "Pod/Assets/styles/brown-paper.min.css"; sourceTree = "<group>"; };
 		F545CF89690DB93F7D362E311D73A63F /* render.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = render.h; path = Source/cmark_gfm/include/render.h; sourceTree = "<group>"; };
 		F648DA9EF2296E268B37EFAA71EF507B /* scanners.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = scanners.h; path = Source/cmark_gfm/include/scanners.h; sourceTree = "<group>"; };
-		F6E5736C1F28EB875C3311B5ADD7114C /* atelier-lakeside-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "atelier-lakeside-light.min.css"; path = "Pod/Assets/styles/atelier-lakeside-light.min.css"; sourceTree = "<group>"; };
-		F755DA390803617AAD85A1470535587C /* html.c */ = {isa = PBXFileReference; includeInIndex = 1; name = html.c; path = Source/cmark_gfm/html.c; sourceTree = "<group>"; };
-		F95389DBFD6A56B7D87EE212C56AF467 /* isbl-editor-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "isbl-editor-dark.min.css"; path = "Pod/Assets/styles/isbl-editor-dark.min.css"; sourceTree = "<group>"; };
-		FC714E429FFF2CDD92B73ECD82171144 /* paraiso-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; name = "paraiso-light.min.css"; path = "Pod/Assets/styles/paraiso-light.min.css"; sourceTree = "<group>"; };
+		F6E5736C1F28EB875C3311B5ADD7114C /* atelier-lakeside-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "atelier-lakeside-light.min.css"; path = "Pod/Assets/styles/atelier-lakeside-light.min.css"; sourceTree = "<group>"; };
+		F755DA390803617AAD85A1470535587C /* html.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = html.c; path = Source/cmark_gfm/html.c; sourceTree = "<group>"; };
+		F95389DBFD6A56B7D87EE212C56AF467 /* isbl-editor-dark.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "isbl-editor-dark.min.css"; path = "Pod/Assets/styles/isbl-editor-dark.min.css"; sourceTree = "<group>"; };
+		FC714E429FFF2CDD92B73ECD82171144 /* paraiso-light.min.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = "paraiso-light.min.css"; path = "Pod/Assets/styles/paraiso-light.min.css"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -499,7 +499,6 @@
 				C65CA761F67246F94843B5D198A43C2D /* Resources */,
 				2476FC195B5A7C1CE6EE878587AD24BD /* Support Files */,
 			);
-			name = Highlightr;
 			path = Highlightr;
 			sourceTree = "<group>";
 		};
@@ -637,7 +636,6 @@
 				1C0E616EB47371A400907F80038A4C42 /* xml.c */,
 				8F108BFE3FA9F97482AEB5053DDD860A /* Support Files */,
 			);
-			name = "cmark-gfm-swift";
 			path = "cmark-gfm-swift";
 			sourceTree = "<group>";
 		};
@@ -908,7 +906,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1010;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1146,7 +1144,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 84D6987EE6B34D6F32FC1290FB846350 /* cmark-gfm-swift.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1162,11 +1159,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/cmark-gfm-swift/cmark-gfm-swift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/cmark-gfm-swift/cmark-gfm-swift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MODULEMAP_FILE = "Target Support Files/cmark-gfm-swift/cmark-gfm-swift.modulemap";
 				PRODUCT_MODULE_NAME = cmark_gfm_swift;
@@ -1185,7 +1178,6 @@
 			baseConfigurationReference = 09A7AA92FDFEF61A859FD3FB5E23315D /* Pods-Pine.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1200,11 +1192,7 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "Target Support Files/Pods-Pine/Pods-Pine-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MODULEMAP_FILE = "Target Support Files/Pods-Pine/Pods-Pine.modulemap";
@@ -1224,7 +1212,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 84D6987EE6B34D6F32FC1290FB846350 /* cmark-gfm-swift.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1240,11 +1227,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/cmark-gfm-swift/cmark-gfm-swift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/cmark-gfm-swift/cmark-gfm-swift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MODULEMAP_FILE = "Target Support Files/cmark-gfm-swift/cmark-gfm-swift.modulemap";
 				PRODUCT_MODULE_NAME = cmark_gfm_swift;
@@ -1311,8 +1294,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -1322,7 +1304,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F428B672943E2CF6AABA5AD0FB119FBB /* Highlightr.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1338,11 +1319,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Highlightr/Highlightr-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Highlightr/Highlightr-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MODULEMAP_FILE = "Target Support Files/Highlightr/Highlightr.modulemap";
 				PRODUCT_MODULE_NAME = Highlightr;
@@ -1361,7 +1338,6 @@
 			baseConfigurationReference = 618C1D233BC36EF2EBF02B3633909308 /* Pods-Pine.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1376,11 +1352,7 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "Target Support Files/Pods-Pine/Pods-Pine-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MODULEMAP_FILE = "Target Support Files/Pods-Pine/Pods-Pine.modulemap";
@@ -1400,7 +1372,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F428B672943E2CF6AABA5AD0FB119FBB /* Highlightr.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1416,11 +1387,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Highlightr/Highlightr-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Highlightr/Highlightr-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MODULEMAP_FILE = "Target Support Files/Highlightr/Highlightr.modulemap";
 				PRODUCT_MODULE_NAME = Highlightr;

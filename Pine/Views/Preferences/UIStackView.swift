@@ -22,7 +22,8 @@ class UIStackView: NSStackView, PreferenceStackView, NSFontChanging {
   ]
 
   private let behaviorMap: BoolPreferenceMap = [
-    "Show preview on startup": Preference.showPreviewOnStartup
+    "Show preview on startup": Preference.showPreviewOnStartup,
+    "Sync editor and preview": Preference.syncEditorAndPreview
   ]
 
   private func getAppearanceArea() -> NSStackView {

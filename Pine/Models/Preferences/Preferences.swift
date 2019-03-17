@@ -20,6 +20,7 @@ enum Preference {
   static let spellcheckEnabled = PreferenceKey<Bool>("spellcheckEnabled", defaultValue: false)
   static let autoPairSyntax = PreferenceKey<Bool>("autoPairSyntax", defaultValue: true)
   static let useThemeColorForSidebar = PreferenceKey<Bool>("useThemeColorForSidebar", defaultValue: true)
+  static let syncEditorAndPreview = PreferenceKey<Bool>("syncEditorAndPreview", defaultValue: false)
 
   // Font options
   static let fontSize = PreferenceKey<CGFloat>("fontSize", defaultValue: 14)

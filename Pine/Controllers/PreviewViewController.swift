@@ -38,6 +38,16 @@ class PreviewViewController: NSViewController, WKNavigationDelegate {
     }
   }
 
+  public func scrollTo(percentage: Float) {
+    let jsString = """
+      var height = document.body.clientHeight - window.innerHeight + 30;
+
+      window.scrollTo(0, height * \(percentage));
+    """
+
+    webPreview.evaluateJavaScript(jsString) { (_, _) in }
+  }
+
   /// Set the content of the preview to a HTML string
   public func setContent(with html: String) {
     self.webPreview.loadHTMLString(html, baseURL: self.permissionDirectory ?? nil)

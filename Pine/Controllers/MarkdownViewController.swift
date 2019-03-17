@@ -50,8 +50,12 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
 
     // Setup notification observer for preferences change
     NotificationCenter.receive(.preferencesChanged, instance: self, selector: #selector(reloadUI))
+
     // Setup notification observer for system dark/light mode change
     NotificationCenter.receive(.appearanceChanged, instance: self, selector: #selector(generatePreview))
+
+    // Setup notification observer for when scroll view scrolls
+    NotificationCenter.receive(.scrollViewScrolled, instance: self, selector: #selector(scrollViewDidScroll))
 
     // Setup a 200ms debouncer for generating the markdown preview
     debouncedGeneratePreview = Debouncer(delay: 0.2) {
@@ -78,13 +82,13 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
 
   // MARK: - Private functions for updating and setting view components
 
-  func setupTextStorage() {
+  private func setupTextStorage() {
     textStorage = CodeAttributedString(highlightr: theme.highlightr)
     textStorage.highlightDelegate = self
     textStorage.language = MARKDOWN_SYNTAX
   }
 
-  func setupScrollView() {
+  private func setupScrollView() {
     scrollView = NSScrollView()
     scrollView.frame = view.frame
     scrollView.borderType = .noBorder
@@ -92,14 +96,15 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
     scrollView.hasVerticalScroller = true
     scrollView.hasHorizontalScroller = false
     scrollView.autoresizingMask = [.width, .height]
+    scrollView.contentView.postsBoundsChangedNotifications = true
   }
 
-  func setupLayoutManager() {
+  private func setupLayoutManager() {
     layoutManager = NSLayoutManager()
     textStorage.addLayoutManager(layoutManager)
   }
 
-  func setupMarkdownTextView() {
+  private func setupMarkdownTextView() {
     markdownTextView = MarkdownTextView()
     markdownTextView.delegate = self
     markdownTextView.allowsUndo = true
@@ -128,6 +133,21 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
     view.updateLayer()
     generatePreview()
     markdownTextView.isContinuousSpellCheckingEnabled = preferences[Preference.spellcheckEnabled]
+  }
+
+  /// When the scroll view scrolls, sync the preview if enabled in preferences
+  @objc private func scrollViewDidScroll() {
+    guard
+      preferences[Preference.syncEditorAndPreview],
+      let documentView = scrollView.documentView
+    else { return }
+
+    let visibleRect = documentView.visibleRect
+
+    let yPos = visibleRect.origin.y
+    let height = documentView.frame.size.height - visibleRect.height
+
+    self.previewViewController?.scrollTo(percentage: Float(yPos / height))
   }
 
   /// Sets the word count in the titlebar word count accessory
