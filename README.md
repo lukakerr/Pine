@@ -83,6 +83,7 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for details on how to contribute.
 - Math support (LaTeX subset)
 - GitHub Flavored Markdown
 - GitHub Emoji support
+- LaTeX, Markdown and HTML autocomplete
 - Local image support
 - Toggleable split view (horizontal and vertical split)
 - Full screen support

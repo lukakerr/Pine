@@ -10,8 +10,9 @@ import Cocoa
 
 class PreferencesViewController: NSViewController {
 
-  @IBOutlet weak var scrollView: NSScrollView!
+  private let FIXED_HEIGHT: CGFloat = 400
 
+  private var scrollView: NSScrollView!
   private var stackView: NSStackView!
   private var currentCategory: PreferenceCategory!
 
@@ -24,6 +25,8 @@ class PreferencesViewController: NSViewController {
 
     setupStackView()
     setupScrollView()
+
+    view.addSubview(scrollView)
 
     uiStackView = UIStackView()
     markdownStackView = MarkdownStackView()
@@ -50,6 +53,9 @@ class PreferencesViewController: NSViewController {
   }
 
   private func setupScrollView() {
+    scrollView = NSScrollView()
+    scrollView.drawsBackground = false
+    scrollView.translatesAutoresizingMaskIntoConstraints = false
     scrollView.documentView = stackView
   }
 
@@ -92,13 +98,27 @@ class PreferencesViewController: NSViewController {
   }
 
   private func setupConstraints() {
-    let stackViewConstraints = [
-      stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-      stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-      stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-      stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor)
+    let viewConstraints = [
+      view.heightAnchor.constraint(equalToConstant: FIXED_HEIGHT)
     ]
 
+    let scrollViewConstraints = [
+      scrollView.topAnchor.constraint(equalTo: view.topAnchor),
+      scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+      scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+    ]
+
+    let stackViewConstraints = [
+      stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+      stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+      stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+      stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+      stackView.heightAnchor.constraint(greaterThanOrEqualToConstant: FIXED_HEIGHT)
+    ]
+
+    NSLayoutConstraint.activate(viewConstraints)
+    NSLayoutConstraint.activate(scrollViewConstraints)
     NSLayoutConstraint.activate(stackViewConstraints)
   }
 

@@ -34,6 +34,11 @@ enum Preference {
   static let markdownCheckboxes = PreferenceKey<Bool>("markdownCheckboxes", defaultValue: true)
   static let markdownWikilinks = PreferenceKey<Bool>("markdownWikilinks", defaultValue: false)
   static let markdownStrikethrough = PreferenceKey<Bool>("markdownStrikethrough", defaultValue: true)
+
+  // Autocomplete options
+  static let htmlAutocomplete = PreferenceKey<Bool>("htmlAutocomplete", defaultValue: false)
+  static let latexAutocomplete = PreferenceKey<Bool>("latexAutocomplete", defaultValue: false)
+  static let markdownAutocomplete = PreferenceKey<Bool>("markdownAutocomplete", defaultValue: false)
 }
 
 class Preferences {

@@ -2,6 +2,7 @@
 
 [Unreleased]
 ### New Features
+- Added autocomplete support for LaTeX, HTML and markdown with preferences to disable each
 - Added support for WikiLink (`[[Description|./path/to/note.md]]`) markdown extensions
 - Added RTL writing direction support in editor and preview
 - Added 9 new themes:

@@ -37,6 +37,8 @@
 		A156AFA12090606D0098BBDD /* InitialOpenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFA02090606D0098BBDD /* InitialOpenUITests.swift */; };
 		A156AFAF209061D60098BBDD /* PineWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFAE209061D60098BBDD /* PineWindowController.swift */; };
 		A156AFB120908ECE0098BBDD /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFB020908ECE0098BBDD /* Theme.swift */; };
+		A165D1F6223DB66500A00821 /* autocomplete in Resources */ = {isa = PBXBuildFile; fileRef = A165D1F5223DB66500A00821 /* autocomplete */; };
+		A165D1F8223DC73200A00821 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = A165D1F7223DC73200A00821 /* Character.swift */; };
 		A1682E87209097E700164D78 /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1682E86209097E700164D78 /* NSMutableAttributedString.swift */; };
 		A1767B04220FC2DD00ED1A61 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1767B03220FC2DD00ED1A61 /* StringTests.swift */; };
 		A1767B06220FC44D00ED1A61 /* NSColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1767B05220FC44D00ED1A61 /* NSColorTests.swift */; };
@@ -61,6 +63,7 @@
 		A1C40210221F868200E3DBCC /* ReferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C4020F221F868200E3DBCC /* ReferenceViewController.swift */; };
 		A1C65D82221179230053C422 /* DocumentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C65D81221179230053C422 /* DocumentController.swift */; };
 		A1C65FB620DE2B0D00326C60 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C65FB520DE2B0D00326C60 /* Alert.swift */; };
+		A1CFDA6E223D04D800ECFFA7 /* Autocomplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CFDA6D223D04D800ECFFA7 /* Autocomplete.swift */; };
 		A1D4A0382234C77A00E2159A /* SidebarTableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A0372234C77A00E2159A /* SidebarTableRowView.swift */; };
 		A1D5466420D4D9CC00D1221A /* Exporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D5466320D4D9CC00D1221A /* Exporter.swift */; };
 		A1E647DC20D1E9C000F32E55 /* EditorSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */; };
@@ -128,6 +131,8 @@
 		A156AFA22090606D0098BBDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A156AFAE209061D60098BBDD /* PineWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PineWindowController.swift; sourceTree = "<group>"; };
 		A156AFB020908ECE0098BBDD /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		A165D1F5223DB66500A00821 /* autocomplete */ = {isa = PBXFileReference; lastKnownFileType = folder; path = autocomplete; sourceTree = "<group>"; };
+		A165D1F7223DC73200A00821 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		A1682E86209097E700164D78 /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
 		A1767B03220FC2DD00ED1A61 /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		A1767B05220FC44D00ED1A61 /* NSColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColorTests.swift; sourceTree = "<group>"; };
@@ -152,6 +157,7 @@
 		A1C4020F221F868200E3DBCC /* ReferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceViewController.swift; sourceTree = "<group>"; };
 		A1C65D81221179230053C422 /* DocumentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentController.swift; sourceTree = "<group>"; };
 		A1C65FB520DE2B0D00326C60 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		A1CFDA6D223D04D800ECFFA7 /* Autocomplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autocomplete.swift; sourceTree = "<group>"; };
 		A1D4A0372234C77A00E2159A /* SidebarTableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarTableRowView.swift; sourceTree = "<group>"; };
 		A1D5466320D4D9CC00D1221A /* Exporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exporter.swift; sourceTree = "<group>"; };
 		A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorSplitView.swift; sourceTree = "<group>"; };
@@ -233,11 +239,12 @@
 		A142C98120D67389002ED94F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A148E4212231F054001AEAAC /* Preferences */,
+				A1CFDA6D223D04D800ECFFA7 /* Autocomplete.swift */,
 				A156AF842090606C0098BBDD /* Document.swift */,
 				A104782420E7338800E0930A /* FileSystemItem.swift */,
 				A182096D20919F6000016AD5 /* HTML.swift */,
 				A127E31F20DF13FA00E13795 /* OpenDocuments.swift */,
+				A148E4212231F054001AEAAC /* Preferences */,
 				A156AFB020908ECE0098BBDD /* Theme.swift */,
 			);
 			path = Models;
@@ -344,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				A1904E9F22289B510004FB82 /* Bool.swift */,
+				A165D1F7223DC73200A00821 /* Character.swift */,
 				A18A040920958EB6006F6B99 /* Int.swift */,
 				A198047420DB7B2E0066FDA6 /* NotificationCenter.swift */,
 				A1A7C05320EA304A003D8DB6 /* NSAppearance.swift */,
@@ -362,6 +370,7 @@
 		A189EA722091E4E300DB0559 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A165D1F5223DB66500A00821 /* autocomplete */,
 				A124783B2233356300CA7A67 /* File.icns */,
 				A1FD269820932CDC004D1C95 /* highlight-js */,
 				A189EA732091E4E300DB0559 /* Markdown.css */,
@@ -541,6 +550,7 @@
 				A1C26721221F9CE0006B5116 /* RELEASE.md in Resources */,
 				A1C4020C221F851B00E3DBCC /* Reference.html in Resources */,
 				A1C26722221F9CE0006B5116 /* MARKDOWN_REFERENCE.md in Resources */,
+				A165D1F6223DB66500A00821 /* autocomplete in Resources */,
 				A189EA742091E4F300DB0559 /* Markdown.css in Resources */,
 				A124783C2233356400CA7A67 /* File.icns in Resources */,
 				A156AF872090606C0098BBDD /* Assets.xcassets in Resources */,
@@ -650,6 +660,7 @@
 				A156AF812090606C0098BBDD /* AppDelegate.swift in Sources */,
 				A1904EA82228A6EF0004FB82 /* PreferencesWindowController.swift in Sources */,
 				A148E4252231F7D7001AEAAC /* NSButton.swift in Sources */,
+				A165D1F8223DC73200A00821 /* Character.swift in Sources */,
 				A1E647DC20D1E9C000F32E55 /* EditorSplitView.swift in Sources */,
 				A111014120E8B8A4001EBEDE /* SidebarView.swift in Sources */,
 				A198047520DB7B2E0066FDA6 /* NotificationCenter.swift in Sources */,
@@ -657,6 +668,7 @@
 				A148E4232231F066001AEAAC /* PreferenceKey.swift in Sources */,
 				A1D5466420D4D9CC00D1221A /* Exporter.swift in Sources */,
 				A1FB7AA52227F5B100DC2E0E /* MarkdownStackView.swift in Sources */,
+				A1CFDA6E223D04D800ECFFA7 /* Autocomplete.swift in Sources */,
 				A13B2E8B22322CBD00F24A84 /* MarkdownTextView.swift in Sources */,
 				A156AF852090606C0098BBDD /* Document.swift in Sources */,
 				A1904EA022289B510004FB82 /* Bool.swift in Sources */,

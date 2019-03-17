@@ -26,6 +26,12 @@ class MarkdownStackView: NSStackView, PreferenceStackView {
     "Enable spellcheck": Preference.spellcheckEnabled
   ]
 
+  private let autocompleteMap: BoolPreferenceMap = [
+    "HTML": Preference.htmlAutocomplete,
+    "LaTeX": Preference.latexAutocomplete,
+    "Markdown": Preference.markdownAutocomplete
+  ]
+
   private func getBehaviorArea() -> NSStackView {
     let view = PreferencesStackView(name: "Behavior:")
 
@@ -33,6 +39,18 @@ class MarkdownStackView: NSStackView, PreferenceStackView {
       target: self,
       using: behaviourMap,
       selector: #selector(behaviourPreferenceChanged)
+    )
+
+    return view
+  }
+
+  private func getAutocompleteArea() -> NSStackView {
+    let view = PreferencesStackView(name: "Autocomplete:")
+
+    view.addBooleanArea(
+      target: self,
+      using: autocompleteMap,
+      selector: #selector(autocompletePreferenceChanged)
     )
 
     return view
@@ -68,6 +86,7 @@ class MarkdownStackView: NSStackView, PreferenceStackView {
   public func getViews() -> [NSView] {
     return [
       getBehaviorArea(),
+      getAutocompleteArea(),
       getExtensionsArea(),
       getDefaultApplicationArea()
     ]
@@ -77,6 +96,15 @@ class MarkdownStackView: NSStackView, PreferenceStackView {
 
   @objc func behaviourPreferenceChanged(_ sender: NSButton) {
     if let ext = behaviourMap[sender.title] {
+      preferences[ext] = sender.value
+      NotificationCenter.send(.preferencesChanged)
+    }
+  }
+
+  // MARK: - Autocomplete preference actions
+
+  @objc func autocompletePreferenceChanged(_ sender: NSButton) {
+    if let ext = autocompleteMap[sender.title] {
       preferences[ext] = sender.value
       NotificationCenter.send(.preferencesChanged)
     }

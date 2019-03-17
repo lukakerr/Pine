@@ -12,6 +12,10 @@ extension String {
 
   static var FilePrefix = "file://"
 
+  subscript (i: Int) -> Character {
+    return self[index(startIndex, offsetBy: i)]
+  }
+
   public var isMarkdown: Bool {
     return hasSuffix(".md") || hasSuffix(".markdown")
   }
