@@ -60,15 +60,18 @@ class HTML {
       </head>
       <body dir="\(dir)">
         \(contents)
-        <script>
-          window.scrollTo(0, \(y));
-        </script>
-        <script>
-          renderMathInElement(document.body, {delimiters: [
-            {left: "$$", right: "$$", display: true},
-            {left: "$", right: "$", display: false},
-          ]});
-        </script>
+
+        <div>
+          <script>
+            window.scrollTo(0, \(y));
+          </script>
+          <script>
+            renderMathInElement(document.body, {delimiters: [
+              {left: "$$", right: "$$", display: true},
+              {left: "$", right: "$", display: false},
+            ]});
+          </script>
+        </div>
       </body>
       </html>
       """
