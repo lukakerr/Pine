@@ -361,14 +361,14 @@ extension MarkdownViewController: NSTouchBarDelegate {
       return item
 
     case .bold:
-      guard let image = NSImage(named: NSImage.touchBarTextBoldTemplateName) else { return nil }
-      item.view = NSButton(image: image, target: self, action: #selector(bold))
+      guard let img = NSImage(named: NSImage.touchBarTextBoldTemplateName) else { return nil }
+      item.view = NSButton(image: img, target: self, action: #selector(bold))
       item.customizationLabel = "Bold"
       return item
 
     case .italic:
-      guard let image = NSImage(named: NSImage.touchBarTextItalicTemplateName) else { return nil }
-      item.view = NSButton(image: image, target: self, action: #selector(italic))
+      guard let img = NSImage(named: NSImage.touchBarTextItalicTemplateName) else { return nil }
+      item.view = NSButton(image: img, target: self, action: #selector(italic))
       item.customizationLabel = "Italic"
       return item
 
@@ -383,7 +383,8 @@ extension MarkdownViewController: NSTouchBarDelegate {
       return item
 
     case .image:
-      item.view = NSButton(title: "<img>", target: self, action: #selector(image))
+      guard let img = NSImage(named: "Image") else { return nil }
+      item.view = NSButton(image: img, target: self, action: #selector(image))
       item.customizationLabel = "Image"
       return item
 

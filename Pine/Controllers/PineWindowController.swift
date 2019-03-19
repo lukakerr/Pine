@@ -12,6 +12,11 @@ let AUTOSAVE_NAME = "PineWindow"
 
 class PineWindowController: NSWindowController, NSWindowDelegate {
 
+  private var toolbar: NSToolbar?
+  private var toolbarData = ToolbarData()
+
+  private var titlebarAccessoryController: NSTitlebarAccessoryViewController!
+
   /// The split view controller containing the SidebarViewController and editor split view controller
   private var mainSplitViewController: NSSplitViewController? {
     return contentViewController as? NSSplitViewController
@@ -44,15 +49,21 @@ class PineWindowController: NSWindowController, NSWindowDelegate {
   override func windowDidLoad() {
     super.windowDidLoad()
 
+    // Setup notification observer for preferences change
+    NotificationCenter.receive(.preferencesChanged, instance: self, selector: #selector(reloadUI))
+
     self.window?.setFrameAutosaveName(AUTOSAVE_NAME)
 
     // Set word count label in titlebar
-    guard let titlebarController = storyboard?.instantiateController(
+    titlebarAccessoryController = storyboard?.instantiateController(
       withIdentifier: "titlebarViewController"
-    ) as? NSTitlebarAccessoryViewController else { return }
+    ) as? NSTitlebarAccessoryViewController
 
-    titlebarController.layoutAttribute = .right
-    window?.addTitlebarAccessoryViewController(titlebarController)
+    titlebarAccessoryController.layoutAttribute = .right
+    window?.addTitlebarAccessoryViewController(titlebarAccessoryController)
+
+    reloadUI()
+    setupConstraints()
   }
 
   override func showWindow(_ sender: Any?) {
@@ -60,6 +71,32 @@ class PineWindowController: NSWindowController, NSWindowDelegate {
 
     // Sync window sidebar after window becomes visible
     self.syncWindowSidebars()
+  }
+
+  private func setupToolbar() {
+    toolbar = NSToolbar(identifier: "PineToolbar")
+    toolbar?.delegate = self
+    toolbar?.isVisible = true
+    toolbar?.displayMode = .iconOnly
+    toolbar?.allowsUserCustomization = true
+    toolbar?.autosavesConfiguration = true
+
+    window?.toolbar = toolbar
+  }
+
+  @objc private func reloadUI() {
+    if preferences[Preference.showToolbar] {
+      self.setupToolbar()
+    } else {
+      window?.toolbar = nil
+    }
+  }
+
+  private func setupConstraints() {
+    titlebarAccessoryController.view.subviews.first?.topAnchor.constraint(
+      equalTo: titlebarAccessoryController.view.topAnchor,
+      constant: 2.5
+    ).isActive = true
   }
 
   func windowWillClose(_ notification: Notification) {
@@ -136,6 +173,85 @@ class PineWindowController: NSWindowController, NSWindowDelegate {
 
   private func getVisibleWindows() -> [NSWindow] {
     return NSApplication.shared.windows.filter { $0.isVisible }
+  }
+
+}
+
+extension PineWindowController: NSToolbarDelegate {
+
+  func toolbar(
+    _ toolbar: NSToolbar,
+    itemForItemIdentifier itemIdentifier: NSToolbarItem.Identifier,
+    willBeInsertedIntoToolbar flag: Bool
+  ) -> NSToolbarItem? {
+    guard
+      let toolbarItemInfo = toolbarData.toolbarItems.filter({ $0.identifier == itemIdentifier }).first
+    else { return nil }
+
+    var toolbarItem: NSToolbarItem
+
+    if toolbarItemInfo.isSegmented, let children = toolbarItemInfo.children, let title = toolbarItemInfo.title {
+      let group = NSToolbarItemGroup(itemIdentifier: itemIdentifier)
+
+      let segmented = NSSegmentedControl()
+      segmented.segmentStyle = .texturedRounded
+      segmented.trackingMode = .momentary
+      segmented.segmentCount = children.count
+
+      var items: [NSToolbarItem] = []
+
+      for (index, child) in children.enumerated() {
+        if let icon = child.icon, let image = NSImage(named: icon) {
+          segmented.setImage(image, forSegment: index)
+          segmented.setWidth(40, forSegment: index)
+        } else if let iconTitle = child.iconTitle {
+          segmented.setLabel(iconTitle, forSegment: index)
+        }
+
+        items.append(makeToolbarItem(using: child))
+      }
+
+      group.paletteLabel = title
+      group.subitems = items
+      group.view = segmented
+
+      toolbarItem = group
+    } else {
+      toolbarItem = makeToolbarItem(using: toolbarItemInfo)
+    }
+
+    return toolbarItem
+  }
+
+  func toolbarAllowedItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
+    return toolbarData.uniqueToolbarIdentifiers
+  }
+
+  func toolbarDefaultItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
+    return toolbarData.toolbarIdentifiers
+  }
+
+  private func makeToolbarItem(using item: ToolbarItemInfo) -> NSToolbarItem {
+    let toolbarItem = NSToolbarItem(itemIdentifier: item.identifier)
+
+    if let title = item.title {
+      toolbarItem.label = title
+    }
+
+    let button = NSButton()
+    button.bezelStyle = .texturedRounded
+    button.action = item.action
+
+    if let icon = item.icon {
+      let image = NSImage(named: icon)
+      button.image = image
+    } else if let iconTitle = item.iconTitle {
+      button.title = iconTitle
+    }
+
+    toolbarItem.view = button
+
+    return toolbarItem
   }
 
 }
