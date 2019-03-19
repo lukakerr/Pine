@@ -18,6 +18,7 @@
 		A1150D2220E858E400536336 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1150D2120E858E400536336 /* String.swift */; };
 		A116F20D22405EBD00041BAC /* NSToolbarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A116F20C22405EBD00041BAC /* NSToolbarItem.swift */; };
 		A116F20F22405ED800041BAC /* ToolbarItemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A116F20E22405ED800041BAC /* ToolbarItemInfo.swift */; };
+		A116F211224077BC00041BAC /* ToolbarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A116F210224077BC00041BAC /* ToolbarData.swift */; };
 		A124783C2233356400CA7A67 /* File.icns in Resources */ = {isa = PBXBuildFile; fileRef = A124783B2233356300CA7A67 /* File.icns */; };
 		A127E31E20DF0F8400E13795 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A127E31D20DF0F8400E13795 /* SidebarViewController.swift */; };
 		A127E32020DF13FA00E13795 /* OpenDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = A127E31F20DF13FA00E13795 /* OpenDocuments.swift */; };
@@ -106,6 +107,7 @@
 		A1150D2120E858E400536336 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		A116F20C22405EBD00041BAC /* NSToolbarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSToolbarItem.swift; sourceTree = "<group>"; };
 		A116F20E22405ED800041BAC /* ToolbarItemInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarItemInfo.swift; sourceTree = "<group>"; };
+		A116F210224077BC00041BAC /* ToolbarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarData.swift; sourceTree = "<group>"; };
 		A124783B2233356300CA7A67 /* File.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = File.icns; sourceTree = "<group>"; };
 		A127E31D20DF0F8400E13795 /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 		A127E31F20DF13FA00E13795 /* OpenDocuments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDocuments.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				A127E31F20DF13FA00E13795 /* OpenDocuments.swift */,
 				A148E4212231F054001AEAAC /* Preferences */,
 				A156AFB020908ECE0098BBDD /* Theme.swift */,
+				A116F210224077BC00041BAC /* ToolbarData.swift */,
 				A116F20E22405ED800041BAC /* ToolbarItemInfo.swift */,
 			);
 			path = Models;
@@ -661,6 +664,7 @@
 				A148E4252231F7D7001AEAAC /* NSButton.swift in Sources */,
 				A116F20F22405ED800041BAC /* ToolbarItemInfo.swift in Sources */,
 				A165D1F8223DC73200A00821 /* Character.swift in Sources */,
+				A116F211224077BC00041BAC /* ToolbarData.swift in Sources */,
 				A1E647DC20D1E9C000F32E55 /* EditorSplitView.swift in Sources */,
 				A111014120E8B8A4001EBEDE /* SidebarView.swift in Sources */,
 				A198047520DB7B2E0066FDA6 /* NotificationCenter.swift in Sources */,

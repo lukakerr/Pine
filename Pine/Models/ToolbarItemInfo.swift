@@ -15,9 +15,19 @@ struct ToolbarItemInfo {
   var iconTitle: String?
   var action: Selector?
   var identifier: NSToolbarItem.Identifier
+  var isSegmented: Bool
+  var children: [ToolbarItemInfo]?
 
   init(identifier: NSToolbarItem.Identifier) {
+    self.isSegmented = false
     self.identifier = identifier
+  }
+
+  init(title: String, identifier: NSToolbarItem.Identifier, children: [ToolbarItemInfo]) {
+    self.init(identifier: identifier)
+    self.title = title
+    self.isSegmented = true
+    self.children = children
   }
 
   init(
