@@ -4,7 +4,7 @@ body {
   line-height: 1.6;
   padding: 0 10px;
   tab-size: 2;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 a {
