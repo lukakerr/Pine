@@ -85,9 +85,16 @@ final class ToolbarData {
     ),
     ToolbarItemInfo(
       title: "Image",
-      iconTitle: "<img>",
+      icon: NSImage.Name(stringLiteral: "Image"),
       action: #selector(MarkdownViewController.image),
       identifier: .image
+    ),
+    ToolbarItemInfo(identifier: .flexibleSpace),
+    ToolbarItemInfo(
+      title: "Preview",
+      icon: NSImage.listViewTemplateName,
+      action: #selector(PineWindowController.togglePreview),
+      identifier: .togglePreview
     )
   ]
 

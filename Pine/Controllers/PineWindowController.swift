@@ -15,6 +15,8 @@ class PineWindowController: NSWindowController, NSWindowDelegate {
   private var toolbar: NSToolbar?
   private var toolbarData = ToolbarData()
 
+  private var titlebarAccessoryController: NSTitlebarAccessoryViewController!
+
   /// The split view controller containing the SidebarViewController and editor split view controller
   private var mainSplitViewController: NSSplitViewController? {
     return contentViewController as? NSSplitViewController
@@ -52,15 +54,16 @@ class PineWindowController: NSWindowController, NSWindowDelegate {
 
     self.window?.setFrameAutosaveName(AUTOSAVE_NAME)
 
-    reloadUI()
-
     // Set word count label in titlebar
-    guard let titlebarController = storyboard?.instantiateController(
+    titlebarAccessoryController = storyboard?.instantiateController(
       withIdentifier: "titlebarViewController"
-    ) as? NSTitlebarAccessoryViewController else { return }
+    ) as? NSTitlebarAccessoryViewController
 
-    titlebarController.layoutAttribute = .right
-    window?.addTitlebarAccessoryViewController(titlebarController)
+    titlebarAccessoryController.layoutAttribute = .right
+    window?.addTitlebarAccessoryViewController(titlebarAccessoryController)
+
+    reloadUI()
+    setupConstraints()
   }
 
   override func showWindow(_ sender: Any?) {
@@ -87,6 +90,13 @@ class PineWindowController: NSWindowController, NSWindowDelegate {
     } else {
       window?.toolbar = nil
     }
+  }
+
+  private func setupConstraints() {
+    titlebarAccessoryController.view.subviews.first?.topAnchor.constraint(
+      equalTo: titlebarAccessoryController.view.topAnchor,
+      constant: 2.5
+    ).isActive = true
   }
 
   func windowWillClose(_ notification: Notification) {

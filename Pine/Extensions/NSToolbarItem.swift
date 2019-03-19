@@ -32,4 +32,6 @@ extension NSToolbarItem.Identifier {
   static let math = NSToolbarItem.Identifier("\(IDENTIFIER).math")
   static let image = NSToolbarItem.Identifier("\(IDENTIFIER).image")
 
+  static let togglePreview = NSToolbarItem.Identifier("\(IDENTIFIER).togglePreview")
+
 }
