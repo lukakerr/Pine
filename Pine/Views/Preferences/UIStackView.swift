@@ -15,6 +15,7 @@ class UIStackView: NSStackView, PreferenceStackView, NSFontChanging {
   ]
 
   private let windowMap: BoolPreferenceMap = [
+    "Show toolbar": Preference.showToolbar,
     "Show sidebar": Preference.showSidebar,
     "Modern titlebar": Preference.modernTitlebar,
     "Vertical split": Preference.verticalSplitView,

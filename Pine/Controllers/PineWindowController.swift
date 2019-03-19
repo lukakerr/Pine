@@ -12,6 +12,63 @@ let AUTOSAVE_NAME = "PineWindow"
 
 class PineWindowController: NSWindowController, NSWindowDelegate {
 
+  private var toolbar: NSToolbar?
+
+  private lazy var toolbarItems: [ToolbarItemInfo] = [
+    ToolbarItemInfo(identifier: .toggleSidebar),
+    ToolbarItemInfo(identifier: .space),
+    ToolbarItemInfo(
+      title: "Heading 1",
+      iconTitle: "H1",
+      action: #selector(MarkdownViewController.h1),
+      identifier: .h1
+    ),
+    ToolbarItemInfo(
+      title: "Heading 2",
+      iconTitle: "H2",
+      action: #selector(MarkdownViewController.h2),
+      identifier: .h2
+    ),
+    ToolbarItemInfo(
+      title: "Heading 3",
+      iconTitle: "H3",
+      action: #selector(MarkdownViewController.h3),
+      identifier: .h3
+    ),
+    ToolbarItemInfo(identifier: .space),
+    ToolbarItemInfo(
+      title: "Bold",
+      icon: NSImage.Name(stringLiteral: "Bold"),
+      action: #selector(MarkdownViewController.bold),
+      identifier: .bold
+    ),
+    ToolbarItemInfo(
+      title: "Italic",
+      icon: NSImage.Name(stringLiteral: "Italic"),
+      action: #selector(MarkdownViewController.italic),
+      identifier: .italic
+    ),
+    ToolbarItemInfo(identifier: .space),
+    ToolbarItemInfo(
+      title: "Code",
+      iconTitle: "<>",
+      action: #selector(MarkdownViewController.code),
+      identifier: .code
+    ),
+    ToolbarItemInfo(
+      title: "Math",
+      iconTitle: "$$",
+      action: #selector(MarkdownViewController.math),
+      identifier: .math
+    ),
+    ToolbarItemInfo(
+      title: "Image",
+      iconTitle: "<img>",
+      action: #selector(MarkdownViewController.image),
+      identifier: .image
+    ),
+  ]
+
   /// The split view controller containing the SidebarViewController and editor split view controller
   private var mainSplitViewController: NSSplitViewController? {
     return contentViewController as? NSSplitViewController
@@ -44,7 +101,12 @@ class PineWindowController: NSWindowController, NSWindowDelegate {
   override func windowDidLoad() {
     super.windowDidLoad()
 
+    // Setup notification observer for preferences change
+    NotificationCenter.receive(.preferencesChanged, instance: self, selector: #selector(reloadUI))
+
     self.window?.setFrameAutosaveName(AUTOSAVE_NAME)
+
+    reloadUI()
 
     // Set word count label in titlebar
     guard let titlebarController = storyboard?.instantiateController(
@@ -60,6 +122,25 @@ class PineWindowController: NSWindowController, NSWindowDelegate {
 
     // Sync window sidebar after window becomes visible
     self.syncWindowSidebars()
+  }
+
+  private func setupToolbar() {
+    toolbar = NSToolbar(identifier: "PineToolbar")
+    toolbar?.delegate = self
+    toolbar?.isVisible = true
+    toolbar?.displayMode = .iconOnly
+    toolbar?.allowsUserCustomization = true
+    toolbar?.autosavesConfiguration = true
+
+    window?.toolbar = toolbar
+  }
+
+  @objc private func reloadUI() {
+    if preferences[Preference.showToolbar] {
+      self.setupToolbar()
+    } else {
+      window?.toolbar = nil
+    }
   }
 
   func windowWillClose(_ notification: Notification) {
@@ -138,6 +219,53 @@ class PineWindowController: NSWindowController, NSWindowDelegate {
     return NSApplication.shared.windows.filter { $0.isVisible }
   }
 
+}
+
+extension PineWindowController: NSToolbarDelegate {
+
+  var toolbarIdentifiers: [NSToolbarItem.Identifier] {
+    return toolbarItems.compactMap { $0.identifier }
+  }
+
+  func toolbar(
+    _ toolbar: NSToolbar,
+    itemForItemIdentifier itemIdentifier: NSToolbarItem.Identifier,
+    willBeInsertedIntoToolbar flag: Bool
+  ) -> NSToolbarItem? {
+    guard
+      let toolbarItemInfo = toolbarItems.filter({ $0.identifier == itemIdentifier }).first
+    else { return nil }
+
+    let toolbarItem = NSToolbarItem(itemIdentifier: itemIdentifier)
+
+    if let title = toolbarItemInfo.title {
+      toolbarItem.label = title
+    }
+
+    let button = NSButton()
+    button.bezelStyle = .texturedRounded
+    button.action = toolbarItemInfo.action
+
+    if let icon = toolbarItemInfo.icon {
+      let image = NSImage(named: icon)
+      button.image = image
+    } else if let iconTitle = toolbarItemInfo.iconTitle {
+      button.title = iconTitle
+    }
+
+    toolbarItem.view = button
+
+    return toolbarItem
+  }
+
+  func toolbarAllowedItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
+    // Only want unique identifiers
+    return Array(Set(toolbarIdentifiers))
+  }
+
+  func toolbarDefaultItemIdentifiers(_ toolbar: NSToolbar) -> [NSToolbarItem.Identifier] {
+    return toolbarIdentifiers
+  }
 }
 
 extension PineWindowController {
