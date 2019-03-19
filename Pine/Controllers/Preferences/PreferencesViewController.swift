@@ -54,9 +54,10 @@ class PreferencesViewController: NSViewController {
 
   private func setupScrollView() {
     scrollView = NSScrollView()
+    scrollView.hasVerticalScroller = true
     scrollView.drawsBackground = false
-    scrollView.translatesAutoresizingMaskIntoConstraints = false
     scrollView.documentView = stackView
+    scrollView.translatesAutoresizingMaskIntoConstraints = false
   }
 
   private func setupPreferenceViews() {
