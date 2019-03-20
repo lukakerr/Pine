@@ -63,7 +63,6 @@ class PineWindowController: NSWindowController, NSWindowDelegate {
     window?.addTitlebarAccessoryViewController(titlebarAccessoryController)
 
     reloadUI()
-    setupConstraints()
   }
 
   override func showWindow(_ sender: Any?) {
@@ -90,13 +89,6 @@ class PineWindowController: NSWindowController, NSWindowDelegate {
     } else {
       window?.toolbar = nil
     }
-  }
-
-  private func setupConstraints() {
-    titlebarAccessoryController.view.subviews.first?.topAnchor.constraint(
-      equalTo: titlebarAccessoryController.view.topAnchor,
-      constant: 2.5
-    ).isActive = true
   }
 
   func windowWillClose(_ notification: Notification) {
@@ -191,16 +183,9 @@ extension PineWindowController: NSToolbarDelegate {
     var toolbarItem: NSToolbarItem
 
     if toolbarItemInfo.isSegmented, let children = toolbarItemInfo.children, let title = toolbarItemInfo.title {
-      let group = NSToolbarItemGroup(itemIdentifier: itemIdentifier)
+      let segmented = ToolbarSegmentedControl(segments: children)
 
-      let segmented = NSSegmentedControl()
-      segmented.segmentStyle = .texturedRounded
-      segmented.trackingMode = .momentary
-      segmented.segmentCount = children.count
-
-      var items: [NSToolbarItem] = []
-
-      for (index, child) in children.enumerated() {
+      let items: [NSToolbarItem] = children.enumerated().map { (index, child) in
         if let icon = child.icon, let image = NSImage(named: icon) {
           segmented.setImage(image, forSegment: index)
           segmented.setWidth(40, forSegment: index)
@@ -208,9 +193,10 @@ extension PineWindowController: NSToolbarDelegate {
           segmented.setLabel(iconTitle, forSegment: index)
         }
 
-        items.append(makeToolbarItem(using: child))
+        return makeToolbarItem(using: child)
       }
 
+      let group = NSToolbarItemGroup(itemIdentifier: itemIdentifier)
       group.paletteLabel = title
       group.subitems = items
       group.view = segmented

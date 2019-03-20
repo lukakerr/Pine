@@ -925,11 +925,11 @@
             <objects>
                 <viewController storyboardIdentifier="titlebarViewController" id="y8f-Tv-q7B" customClass="NSTitlebarAccessoryViewController" sceneMemberID="viewController">
                     <view key="view" id="edG-Rc-DPX">
-                        <rect key="frame" x="0.0" y="0.0" width="120" height="33"/>
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="22"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZn-oo-QSr">
-                                <rect key="frame" x="6" y="8" width="108" height="17"/>
+                                <rect key="frame" x="6" y="3" width="108" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="charWrapping" refusesFirstResponder="YES" allowsUndo="NO" focusRingType="none" alignment="right" title="0 Words" usesSingleLineMode="YES" id="gHe-60-NLZ">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" patternImage="NSLinenBackgroundPattern" colorSpace="pattern"/>
@@ -941,6 +941,7 @@
                             <constraint firstItem="WZn-oo-QSr" firstAttribute="leading" secondItem="edG-Rc-DPX" secondAttribute="leading" constant="8" id="J9H-5e-Vjg"/>
                             <constraint firstItem="WZn-oo-QSr" firstAttribute="centerX" secondItem="edG-Rc-DPX" secondAttribute="centerX" id="bkm-jV-JjN"/>
                             <constraint firstItem="WZn-oo-QSr" firstAttribute="centerY" secondItem="edG-Rc-DPX" secondAttribute="centerY" id="cnM-LX-Lxh"/>
+                            <constraint firstItem="WZn-oo-QSr" firstAttribute="top" secondItem="edG-Rc-DPX" secondAttribute="top" constant="2.5" id="uQI-2k-x0i"/>
                         </constraints>
                     </view>
                 </viewController>
