@@ -5,6 +5,9 @@
 - Added autocomplete support for LaTeX, HTML and markdown with preferences to disable each
 - Added support for WikiLink (`[[Description|./path/to/note.md]]`) markdown extensions
 - Added RTL writing direction support in editor and preview
+- Added preference to show invisible characters
+- Added preference to show a toolbar on the window
+- Added preferences to sync scroll position between editor and preview
 - Added 9 new themes:
   - a11y-dark
   - a11y-light
@@ -19,11 +22,16 @@
 ### Fixes
 - Fix some themes having incorrect colors
 - Fix `open -a` not working at times
+- Set a max width for `<video>` HTML elements so they don't overflow
 - Fix indented markdown lists not getting syntax highlighted
+- Fix words breaking on any character, now breaking on words
+- Fix vertical scrollbar not showing in preferences when scrolled
 
 ### Other
 - Refactored sidebar and tabs
 - Now using [custom Highlightr fork](https://github.com/lukakerr/Highlightr)
+- Added library licenses to the 'About' window
+- Added new UI tests
 
 ## [0.0.8] - 2019-03-10
 ### New Features
