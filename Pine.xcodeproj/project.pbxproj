@@ -30,6 +30,7 @@
 		A148C3A020914F0F00B1165C /* SyntaxThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148C39F20914F0F00B1165C /* SyntaxThemes.swift */; };
 		A148E4232231F066001AEAAC /* PreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148E4222231F066001AEAAC /* PreferenceKey.swift */; };
 		A148E4252231F7D7001AEAAC /* NSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148E4242231F7D7001AEAAC /* NSButton.swift */; };
+		A14BF5942241C4E600ED250D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A14BF5932241C4E600ED250D /* Credits.rtf */; };
 		A14C1B24223B8888002E0827 /* MenuItemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C1B23223B8888002E0827 /* MenuItemUITests.swift */; };
 		A156AF812090606C0098BBDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AF802090606C0098BBDD /* AppDelegate.swift */; };
 		A156AF832090606C0098BBDD /* MarkdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AF822090606C0098BBDD /* MarkdownViewController.swift */; };
@@ -119,6 +120,7 @@
 		A148C39F20914F0F00B1165C /* SyntaxThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxThemes.swift; sourceTree = "<group>"; };
 		A148E4222231F066001AEAAC /* PreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKey.swift; sourceTree = "<group>"; };
 		A148E4242231F7D7001AEAAC /* NSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSButton.swift; sourceTree = "<group>"; };
+		A14BF5932241C4E600ED250D /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		A14C1B23223B8888002E0827 /* MenuItemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemUITests.swift; sourceTree = "<group>"; };
 		A156AF7D2090606C0098BBDD /* Pine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A156AF802090606C0098BBDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 				A1FD269820932CDC004D1C95 /* highlight-js */,
 				A189EA732091E4E300DB0559 /* Markdown.css */,
 				A1C4020B221F851B00E3DBCC /* Reference.html */,
+				A14BF5932241C4E600ED250D /* Credits.rtf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				A1C26722221F9CE0006B5116 /* MARKDOWN_REFERENCE.md in Resources */,
 				A165D1F6223DB66500A00821 /* autocomplete in Resources */,
 				A189EA742091E4F300DB0559 /* Markdown.css in Resources */,
+				A14BF5942241C4E600ED250D /* Credits.rtf in Resources */,
 				A124783C2233356400CA7A67 /* File.icns in Resources */,
 				A156AF872090606C0098BBDD /* Assets.xcassets in Resources */,
 				A1FD269A20932CDD004D1C95 /* highlight-js in Resources */,
