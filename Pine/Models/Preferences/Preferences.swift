@@ -22,6 +22,7 @@ enum Preference {
   static let useThemeColorForSidebar = PreferenceKey<Bool>("useThemeColorForSidebar", defaultValue: true)
   static let syncEditorAndPreview = PreferenceKey<Bool>("syncEditorAndPreview", defaultValue: false)
   static let showToolbar = PreferenceKey<Bool>("showToolbar", defaultValue: false)
+  static let showInvisibles = PreferenceKey<Bool>("showInvisibles", defaultValue: false)
 
   // Font options
   static let fontSize = PreferenceKey<CGFloat>("fontSize", defaultValue: 14)

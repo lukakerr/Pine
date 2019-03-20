@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class UIStackView: NSStackView, PreferenceStackView, NSFontChanging {
+class UIStackView: NSStackView, PreferenceStackView {
 
   private let appearanceMap: BoolPreferenceMap = [
     "Use system appearance": Preference.useSystemAppearance
@@ -57,21 +57,6 @@ class UIStackView: NSStackView, PreferenceStackView, NSFontChanging {
     return view
   }
 
-  private func getFontArea() -> NSStackView {
-    let view = PreferencesStackView(name: "Font:")
-
-    let button = PreferencesRoundedButton()
-    button.title = "Change"
-    button.target = self
-    button.action = #selector(self.fontChanged)
-
-    view.addPreferences([
-      button
-    ])
-
-    return view
-  }
-
   private func getWindowArea() -> NSStackView {
     let view = PreferencesStackView(name: "Window:")
 
@@ -99,7 +84,6 @@ class UIStackView: NSStackView, PreferenceStackView, NSFontChanging {
   public func getViews() -> [NSView] {
     return [
       getAppearanceArea(),
-      getFontArea(),
       getWindowArea(),
       getBehaviorArea()
     ]
@@ -123,23 +107,6 @@ class UIStackView: NSStackView, PreferenceStackView, NSFontChanging {
   @objc func appearancePreferenceChanged(_ sender: NSButton) {
     if let ext = appearanceMap[sender.title] {
       preferences[ext] = sender.value
-      NotificationCenter.send(.preferencesChanged)
-    }
-  }
-
-  // MARK: - Font preference actions
-
-  @objc func fontChanged(_ sender: NSButton) {
-    NSFontManager.shared.target = self
-
-    let fontPanel = NSFontPanel.shared
-    fontPanel.setPanelFont(preferences.font, isMultiple: false)
-    fontPanel.makeKeyAndOrderFront(sender)
-  }
-
-  func changeFont(_ sender: NSFontManager?) {
-    if let fontManager = sender {
-      preferences.font = fontManager.convert(preferences.font)
       NotificationCenter.send(.preferencesChanged)
     }
   }

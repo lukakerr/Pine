@@ -16,9 +16,10 @@ class PreferencesViewController: NSViewController {
   private var stackView: NSStackView!
   private var currentCategory: PreferenceCategory!
 
-  private var uiStackView: UIStackView!
-  private var markdownStackView: MarkdownStackView!
-  private var documentStackView: DocumentStackView!
+  private lazy var uiStackView = UIStackView()
+  private lazy var editorStackView = EditorStackView()
+  private lazy var markdownStackView = MarkdownStackView()
+  private lazy var documentStackView = DocumentStackView()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -27,10 +28,6 @@ class PreferencesViewController: NSViewController {
     setupScrollView()
 
     view.addSubview(scrollView)
-
-    uiStackView = UIStackView()
-    markdownStackView = MarkdownStackView()
-    documentStackView = DocumentStackView()
 
     setupPreferenceViews()
     setupConstraints()
@@ -72,6 +69,8 @@ class PreferencesViewController: NSViewController {
     switch category {
     case .ui:
       views = uiStackView.getViews()
+    case .editor:
+      views = editorStackView.getViews()
     case .markdown:
       views = markdownStackView.getViews()
     case .document:

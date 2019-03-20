@@ -18,7 +18,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
   public var textStorage: CodeAttributedString!
 
   private var scrollView: NSScrollView!
-  private var layoutManager: NSLayoutManager!
+  private var layoutManager: MarkdownLayoutManager!
   private var debouncedGeneratePreview: Debouncer!
 
   /// The view's window controller
@@ -100,7 +100,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
   }
 
   private func setupLayoutManager() {
-    layoutManager = NSLayoutManager()
+    layoutManager = MarkdownLayoutManager()
     textStorage.addLayoutManager(layoutManager)
   }
 
@@ -132,6 +132,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
     syntaxHighlight()
     view.updateLayer()
     generatePreview()
+    layoutManager.fontDidUpdate()
     markdownTextView.isContinuousSpellCheckingEnabled = preferences[Preference.spellcheckEnabled]
   }
 
