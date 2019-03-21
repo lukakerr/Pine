@@ -23,6 +23,7 @@ enum Preference {
   static let syncEditorAndPreview = PreferenceKey<Bool>("syncEditorAndPreview", defaultValue: false)
   static let showToolbar = PreferenceKey<Bool>("showToolbar", defaultValue: false)
   static let showInvisibles = PreferenceKey<Bool>("showInvisibles", defaultValue: false)
+  static let scrollPastEnd = PreferenceKey<Bool>("scrollPastEnd", defaultValue: false)
 
   // Font options
   static let fontSize = PreferenceKey<CGFloat>("fontSize", defaultValue: 14)
@@ -77,6 +78,14 @@ class Preferences {
   /// Set a preference given a key and value
   public func set<T>(_ preferenceKey: PreferenceKey<T>, value: Any) {
     defaults.setValue(value, forKey: preferenceKey.key)
+  }
+
+  /// Given a boolean preference map, a key and value, set the value if found in the map
+  public func setFromBoolMap(_ map: BoolPreferenceMap, key: String, value: Bool) {
+    if let ext = map[key] {
+      self[ext] = value
+      NotificationCenter.send(.preferencesChanged)
+    }
   }
 
   // MARK: - Dynamic preferences

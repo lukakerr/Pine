@@ -31,5 +31,6 @@ extension NotificationCenter {
 extension Notification.Name {
   static let preferencesChanged = Notification.Name("preferencesChanged")
   static let appearanceChanged = Notification.Name("appearanceChanged")
-  static let scrollViewScrolled = NSView.boundsDidChangeNotification
+  static let boundsDidChange = NSView.boundsDidChangeNotification
+  static let frameDidChange = NSView.frameDidChangeNotification
 }

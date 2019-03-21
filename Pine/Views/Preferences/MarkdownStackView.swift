@@ -95,28 +95,19 @@ class MarkdownStackView: NSStackView, PreferenceStackView {
   // MARK: - Behavior preference actions
 
   @objc func behaviourPreferenceChanged(_ sender: NSButton) {
-    if let ext = behaviourMap[sender.title] {
-      preferences[ext] = sender.value
-      NotificationCenter.send(.preferencesChanged)
-    }
+    preferences.setFromBoolMap(behaviourMap, key: sender.title, value: sender.value)
   }
 
   // MARK: - Autocomplete preference actions
 
   @objc func autocompletePreferenceChanged(_ sender: NSButton) {
-    if let ext = autocompleteMap[sender.title] {
-      preferences[ext] = sender.value
-      NotificationCenter.send(.preferencesChanged)
-    }
+    preferences.setFromBoolMap(autocompleteMap, key: sender.title, value: sender.value)
   }
 
   // MARK: - Markdown extension preference actions
 
   @objc func extensionPreferenceChanged(_ sender: NSButton) {
-    if let ext = extensionsMap[sender.title] {
-      preferences[ext] = sender.value
-      NotificationCenter.send(.preferencesChanged)
-    }
+    preferences.setFromBoolMap(extensionsMap, key: sender.title, value: sender.value)
   }
 
   // MARK: - Default application preference actions

@@ -7,6 +7,7 @@
 - Added RTL writing direction support in editor and preview
 - Added preference to show invisible characters
 - Added preference to show a toolbar on the window
+- Added preference to scroll past end of editor
 - Added preferences to sync scroll position between editor and preview
 - Added 9 new themes:
   - a11y-dark

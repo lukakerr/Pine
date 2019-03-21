@@ -10,6 +10,9 @@ import Cocoa
 
 class MarkdownTextView: NSTextView {
 
+  private let CONTAINER_INSET: CGFloat = 10.0
+
+  private var overscroll: CGFloat = 0
   private var needsRecompletion: Bool = false
   private var partialAutocompleteWord: String?
 
@@ -17,26 +20,16 @@ class MarkdownTextView: NSTextView {
     [unowned self] in self.performCompletion()
   })
 
-  override func keyDown(with event: NSEvent) {
-    if let singleCharacter = event.characters?.first, preferences[Preference.autoPairSyntax] {
-      self.pair(character: singleCharacter)
+  override var isContinuousSpellCheckingEnabled: Bool {
+    get {
+      return preferences[Preference.spellcheckEnabled]
     }
 
-    super.keyDown(with: event)
+    set {}
   }
 
-  override func insertText(_ string: Any, replacementRange: NSRange) {
-    super.insertText(string, replacementRange: replacementRange)
-    self.autocompletionTask.call()
-  }
-
-  override func didChangeText() {
-    super.didChangeText()
-
-    if self.needsRecompletion {
-      self.needsRecompletion = false
-      self.autocompletionTask.call()
-    }
+  override var textContainerOrigin: NSPoint {
+    return NSPoint(x: CONTAINER_INSET, y: CONTAINER_INSET)
   }
 
   override var rangeForUserCompletion: NSRange {
@@ -59,6 +52,33 @@ class MarkdownTextView: NSTextView {
     }
 
     return NSRange(location: location, length: cursorLocation - location)
+  }
+
+  override func viewDidMoveToWindow() {
+    // Setup notification for when scrollview frame changes
+    NotificationCenter.receive(.frameDidChange, instance: self, selector: #selector(setOverscroll))
+  }
+
+  override func keyDown(with event: NSEvent) {
+    if let singleCharacter = event.characters?.first, preferences[Preference.autoPairSyntax] {
+      self.pair(character: singleCharacter)
+    }
+
+    super.keyDown(with: event)
+  }
+
+  override func insertText(_ string: Any, replacementRange: NSRange) {
+    super.insertText(string, replacementRange: replacementRange)
+    self.autocompletionTask.call()
+  }
+
+  override func didChangeText() {
+    super.didChangeText()
+
+    if self.needsRecompletion {
+      self.needsRecompletion = false
+      self.autocompletionTask.call()
+    }
   }
 
   override func completions(
@@ -129,6 +149,22 @@ class MarkdownTextView: NSTextView {
     }
 
     super.paste(sender)
+  }
+
+  // MARK: - Public methods
+
+  @objc public func setOverscroll() {
+    guard
+      let font = self.font,
+      let scrollView = self.enclosingScrollView,
+      let lineHeight = layoutManager?.defaultLineHeight(for: font)
+    else { return }
+
+    let ratio: CGFloat = preferences[Preference.scrollPastEnd] ? 0.5 : 0
+
+    let inset = ratio * (scrollView.documentVisibleRect.height - lineHeight)
+
+    self.textContainerInset.height = max(floor(inset / 2), CONTAINER_INSET)
   }
 
   // MARK: - Private helper methods

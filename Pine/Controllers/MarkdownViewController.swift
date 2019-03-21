@@ -55,7 +55,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
     NotificationCenter.receive(.appearanceChanged, instance: self, selector: #selector(generatePreview))
 
     // Setup notification observer for when scroll view scrolls
-    NotificationCenter.receive(.scrollViewScrolled, instance: self, selector: #selector(scrollViewDidScroll))
+    NotificationCenter.receive(.boundsDidChange, instance: self, selector: #selector(scrollViewDidScroll))
 
     // Setup a 200ms debouncer for generating the markdown preview
     debouncedGeneratePreview = Debouncer(delay: 0.2) {
@@ -120,7 +120,6 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
     markdownTextView.insertionPointColor = .gray
     markdownTextView.isVerticallyResizable = true
     markdownTextView.isHorizontallyResizable = false
-    markdownTextView.textContainerInset = NSSize(width: 10.0, height: 10.0)
 
     if #available(OSX 10.12.2, *) {
       markdownTextView.touchBar = self.makeTouchBar()
@@ -133,11 +132,11 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
     view.updateLayer()
     generatePreview()
     layoutManager.fontDidUpdate()
-    markdownTextView.isContinuousSpellCheckingEnabled = preferences[Preference.spellcheckEnabled]
+    markdownTextView.setOverscroll()
   }
 
   /// When the scroll view scrolls, sync the preview if enabled in preferences
-  @objc private func scrollViewDidScroll() {
+  @objc private func scrollViewDidScroll() {    
     guard
       preferences[Preference.syncEditorAndPreview],
       let documentView = scrollView.documentView

@@ -105,28 +105,19 @@ class UIStackView: NSStackView, PreferenceStackView {
   }
 
   @objc func appearancePreferenceChanged(_ sender: NSButton) {
-    if let ext = appearanceMap[sender.title] {
-      preferences[ext] = sender.value
-      NotificationCenter.send(.preferencesChanged)
-    }
+    preferences.setFromBoolMap(appearanceMap, key: sender.title, value: sender.value)
   }
 
   // MARK: - Window preference actions
 
   @objc func windowPreferenceChanged(_ sender: NSButton) {
-    if let ext = windowMap[sender.title] {
-      preferences[ext] = sender.value
-      NotificationCenter.send(.preferencesChanged)
-    }
+    preferences.setFromBoolMap(windowMap, key: sender.title, value: sender.value)
   }
 
   // MARK: - Behavior preference actions
 
   @objc func behaviorPreferenceChanged(_ sender: NSButton) {
-    if let ext = behaviorMap[sender.title] {
-      preferences[ext] = sender.value
-      NotificationCenter.send(.preferencesChanged)
-    }
+    preferences.setFromBoolMap(behaviorMap, key: sender.title, value: sender.value)
   }
 
 }

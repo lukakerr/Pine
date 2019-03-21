@@ -36,10 +36,7 @@ class DocumentStackView: NSStackView, PreferenceStackView {
   // MARK: - Behavior preference actions
 
   @objc func behaviorPreferenceChanged(_ sender: NSButton) {
-    if let ext = behaviourMap[sender.title] {
-      preferences[ext] = sender.value
-      NotificationCenter.send(.preferencesChanged)
-    }
+    preferences.setFromBoolMap(behaviourMap, key: sender.title, value: sender.value)
   }
 
 }

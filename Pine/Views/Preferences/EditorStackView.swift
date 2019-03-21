@@ -14,6 +14,10 @@ class EditorStackView: NSStackView, PreferenceStackView, NSFontChanging {
     "Show invisibles": Preference.showInvisibles
   ]
 
+  private let behaviourMap: BoolPreferenceMap = [
+    "Scroll past end": Preference.scrollPastEnd
+  ]
+
   private func getAppearanceArea() -> NSStackView {
     let view = PreferencesStackView(name: "Appearance:")
 
@@ -21,6 +25,18 @@ class EditorStackView: NSStackView, PreferenceStackView, NSFontChanging {
       target: self,
       using: appearanceMap,
       selector: #selector(appearancePreferenceChanged)
+    )
+
+    return view
+  }
+
+  private func getBehaviorArea() -> NSStackView {
+    let view = PreferencesStackView(name: "Behavior:")
+
+    view.addBooleanArea(
+      target: self,
+      using: behaviourMap,
+      selector: #selector(behaviorPreferenceChanged)
     )
 
     return view
@@ -44,17 +60,21 @@ class EditorStackView: NSStackView, PreferenceStackView, NSFontChanging {
   public func getViews() -> [NSView] {
     return [
       getAppearanceArea(),
+      getBehaviorArea(),
       getFontArea()
     ]
   }
 
-  // MARK: - Behavior preference actions
+  // MARK: - Appearance preference actions
 
   @objc func appearancePreferenceChanged(_ sender: NSButton) {
-    if let ext = appearanceMap[sender.title] {
-      preferences[ext] = sender.value
-      NotificationCenter.send(.preferencesChanged)
-    }
+    preferences.setFromBoolMap(appearanceMap, key: sender.title, value: sender.value)
+  }
+
+  // MARK: - Behavior preference actions
+
+  @objc func behaviorPreferenceChanged(_ sender: NSButton) {
+    preferences.setFromBoolMap(behaviourMap, key: sender.title, value: sender.value)
   }
 
   // MARK: - Font preference actions
