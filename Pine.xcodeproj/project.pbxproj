@@ -75,7 +75,7 @@
 		A1CFDA6E223D04D800ECFFA7 /* Autocomplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CFDA6D223D04D800ECFFA7 /* Autocomplete.swift */; };
 		A1D4A0382234C77A00E2159A /* SidebarTableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A0372234C77A00E2159A /* SidebarTableRowView.swift */; };
 		A1D5466420D4D9CC00D1221A /* Exporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D5466320D4D9CC00D1221A /* Exporter.swift */; };
-		A1E647DC20D1E9C000F32E55 /* EditorSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */; };
+		A1E647DC20D1E9C000F32E55 /* PineSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E647DB20D1E9C000F32E55 /* PineSplitView.swift */; };
 		A1F122DF20DE0D27007DFD1A /* FileSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F122DE20DE0D27007DFD1A /* FileSaver.swift */; };
 		A1FB7A9A2227DC5900DC2E0E /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FB7A992227DC5900DC2E0E /* UIStackView.swift */; };
 		A1FB7A9E2227DFCB00DC2E0E /* PreferencesStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FB7A9D2227DFCB00DC2E0E /* PreferencesStackView.swift */; };
@@ -177,7 +177,7 @@
 		A1CFDA6D223D04D800ECFFA7 /* Autocomplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autocomplete.swift; sourceTree = "<group>"; };
 		A1D4A0372234C77A00E2159A /* SidebarTableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarTableRowView.swift; sourceTree = "<group>"; };
 		A1D5466320D4D9CC00D1221A /* Exporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exporter.swift; sourceTree = "<group>"; };
-		A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorSplitView.swift; sourceTree = "<group>"; };
+		A1E647DB20D1E9C000F32E55 /* PineSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PineSplitView.swift; sourceTree = "<group>"; };
 		A1F122DE20DE0D27007DFD1A /* FileSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSaver.swift; sourceTree = "<group>"; };
 		A1FB7A992227DC5900DC2E0E /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		A1FB7A9D2227DFCB00DC2E0E /* PreferencesStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesStackView.swift; sourceTree = "<group>"; };
@@ -285,9 +285,9 @@
 		A142C98320D673B0002ED94F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A1E647DB20D1E9C000F32E55 /* EditorSplitView.swift */,
 				A13B2E8A22322CBD00F24A84 /* MarkdownTextView.swift */,
 				A198047220DB64BA0066FDA6 /* MarkdownView.swift */,
+				A1E647DB20D1E9C000F32E55 /* PineSplitView.swift */,
 				A1FB7AA32227F4E200DC2E0E /* Preferences */,
 				A1D4A0372234C77A00E2159A /* SidebarTableRowView.swift */,
 				A111014020E8B8A4001EBEDE /* SidebarView.swift */,
@@ -715,7 +715,7 @@
 				A1BC8B172242164000623917 /* CGPoint.swift in Sources */,
 				A116F211224077BC00041BAC /* ToolbarData.swift in Sources */,
 				A1BC8B152242162C00623917 /* CTLine.swift in Sources */,
-				A1E647DC20D1E9C000F32E55 /* EditorSplitView.swift in Sources */,
+				A1E647DC20D1E9C000F32E55 /* PineSplitView.swift in Sources */,
 				A1BC8B12224214AF00623917 /* NSTextView.swift in Sources */,
 				A111014120E8B8A4001EBEDE /* SidebarView.swift in Sources */,
 				A1FB7AA22227EEEF00DC2E0E /* PreferencesSwitchButton.swift in Sources */,

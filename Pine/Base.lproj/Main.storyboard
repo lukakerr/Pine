@@ -858,7 +858,7 @@
                         <splitViewItem id="lV3-gA-f3R"/>
                         <splitViewItem id="fdr-H4-RuV"/>
                     </splitViewItems>
-                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="C6s-QO-K51" customClass="EditorSplitView" customModule="Pine" customModuleProvider="target">
+                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="C6s-QO-K51" customClass="PineSplitView" customModule="Pine" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <connections>
