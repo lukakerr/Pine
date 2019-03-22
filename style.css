@@ -101,6 +101,14 @@ footer section {
   min-height: 35rem;
 }
 
+.intro-section .split-1 {
+  width: 40%;
+}
+
+.intro-section  .split-2 {
+  width: 59%;
+}
+
 .intro-section .app-heading {
   font-weight: 300;
   font-size: 3.5rem;
