@@ -9,7 +9,7 @@
 import Cocoa
 import cmark_gfm_swift
 
-enum Preference {
+extension PreferenceKeys {
   static let showPreviewOnStartup = PreferenceKey<Bool>("showPreviewOnStartup", defaultValue: true)
   static let openNewDocumentOnStartup = PreferenceKey<Bool>("openNewDocumentOnStartup", defaultValue: true)
   static let autosaveDocument = PreferenceKey<Bool>("autosaveDocument", defaultValue: true)
@@ -93,31 +93,31 @@ class Preferences {
   public var markdownExtensions: [MarkdownExtensions] {
     var extensions: [MarkdownExtensions] = []
 
-    if self[Preference.markdownEmojis] {
+    if self[.markdownEmojis] {
       extensions.append(.emoji)
     }
 
-    if self[Preference.markdownTables] {
+    if self[.markdownTables] {
       extensions.append(.table)
     }
 
-    if self[Preference.markdownAutolink] {
+    if self[.markdownAutolink] {
       extensions.append(.autolink)
     }
 
-    if self[Preference.markdownMentions] {
+    if self[.markdownMentions] {
       extensions.append(.mention)
     }
 
-    if self[Preference.markdownCheckboxes] {
+    if self[.markdownCheckboxes] {
       extensions.append(.checkbox)
     }
 
-    if self[Preference.markdownWikilinks] {
+    if self[.markdownWikilinks] {
       extensions.append(.wikilink)
     }
 
-    if self[Preference.markdownStrikethrough] {
+    if self[.markdownStrikethrough] {
       extensions.append(.strikethrough)
     }
 
@@ -127,7 +127,7 @@ class Preferences {
   public var markdownOptions: [MarkdownOptions] {
     var options: [MarkdownOptions] = []
 
-    if self[Preference.markdownFootnotes] {
+    if self[.markdownFootnotes] {
       options.append(.footnotes)
     }
 
@@ -136,30 +136,30 @@ class Preferences {
 
   public var font: NSFont {
     get {
-      let fontSize = self[Preference.fontSize]
-      let fontName = self[Preference.fontName]
+      let fontSize = CGFloat(self[.fontSize])
+      let fontName = self[.fontName]
 
-      if let font = NSFont(name: fontName, size: CGFloat(fontSize)) {
+      if let font = NSFont(name: fontName, size: fontSize) {
         return font
       }
 
       // Default font not found, try to use a few standard ones
       for fontName in ["Courier", "Monaco", "Menlo", "SF Mono"] {
-        if let font = NSFont(name: fontName, size: CGFloat(Preference.fontSize.defaultValue)) {
+        if let font = NSFont(name: fontName, size: fontSize) {
           return font
         }
       }
 
       return NSFont.monospacedDigitSystemFont(
-        ofSize: CGFloat(Preference.fontSize.defaultValue),
+        ofSize: fontSize,
         weight: .regular
       )
     }
 
     set {
       theme.setFont(to: newValue)
-      self[Preference.fontName] = newValue.fontName
-      self[Preference.fontSize] = newValue.pointSize
+      self[.fontName] = newValue.fontName
+      self[.fontSize] = newValue.pointSize
     }
   }
 

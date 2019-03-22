@@ -11,25 +11,25 @@ import Cocoa
 class MarkdownStackView: NSStackView, PreferenceStackView {
 
   private let extensionsMap: BoolPreferenceMap = [
-    "GitHub Emoji's": Preference.markdownEmojis,
-    "Tables": Preference.markdownTables,
-    "Autolink URL's": Preference.markdownAutolink,
-    "GitHub @ Mentions": Preference.markdownMentions,
-    "Footnotes": Preference.markdownFootnotes,
-    "Checkboxes": Preference.markdownCheckboxes,
-    "WikiLinks": Preference.markdownWikilinks,
-    "Strikethrough": Preference.markdownStrikethrough
+    "GitHub Emoji's": .markdownEmojis,
+    "Tables": .markdownTables,
+    "Autolink URL's": .markdownAutolink,
+    "GitHub @ Mentions": .markdownMentions,
+    "Footnotes": .markdownFootnotes,
+    "Checkboxes": .markdownCheckboxes,
+    "WikiLinks": .markdownWikilinks,
+    "Strikethrough": .markdownStrikethrough
   ]
 
   private let behaviourMap: BoolPreferenceMap = [
-    "Auto pair syntax": Preference.autoPairSyntax,
-    "Enable spellcheck": Preference.spellcheckEnabled
+    "Auto pair syntax": .autoPairSyntax,
+    "Enable spellcheck": .spellcheckEnabled
   ]
 
   private let autocompleteMap: BoolPreferenceMap = [
-    "HTML": Preference.htmlAutocomplete,
-    "LaTeX": Preference.latexAutocomplete,
-    "Markdown": Preference.markdownAutocomplete
+    "HTML": .htmlAutocomplete,
+    "LaTeX": .latexAutocomplete,
+    "Markdown": .markdownAutocomplete
   ]
 
   private func getBehaviorArea() -> NSStackView {

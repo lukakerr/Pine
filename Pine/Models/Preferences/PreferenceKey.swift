@@ -8,7 +8,11 @@
 
 import Foundation
 
-struct PreferenceKey<T> {
+public class PreferenceKeys {
+  fileprivate init() {}
+}
+
+public class PreferenceKey<T>: PreferenceKeys {
 
   public let key: String
   public let defaultValue: T

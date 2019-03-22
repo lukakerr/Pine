@@ -31,7 +31,7 @@ class HTML {
   // to prevent asynchronous race conditions changing the content on startup
   public func getHTML(with contents: String, direction: NSWritingDirection? = .natural) -> String {
     // If using system appearance, let window background control the color used
-    let bodyBackground = preferences[Preference.useSystemAppearance] ? "transparent" : theme.background.hex
+    let bodyBackground = preferences[.useSystemAppearance] ? "transparent" : theme.background.hex
 
     // Direction of text, by default is auto
     let dir = direction == .rightToLeft ? "rtl" : "auto"

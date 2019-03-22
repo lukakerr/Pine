@@ -11,11 +11,11 @@ import Cocoa
 class EditorStackView: NSStackView, PreferenceStackView, NSFontChanging {
 
   private let appearanceMap: BoolPreferenceMap = [
-    "Show invisibles": Preference.showInvisibles
+    "Show invisibles": .showInvisibles
   ]
 
   private let behaviourMap: BoolPreferenceMap = [
-    "Scroll past end": Preference.scrollPastEnd
+    "Scroll past end": .scrollPastEnd
   ]
 
   private func getAppearanceArea() -> NSStackView {

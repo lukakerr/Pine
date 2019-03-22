@@ -20,7 +20,7 @@ class PineSplitView: NSSplitView {
 
   @objc private func updateUI() {
     // when isVertical is true, split views drawn as V | V
-    isVertical = preferences[Preference.verticalSplitView]
+    isVertical = preferences[.verticalSplitView]
   }
 
 }

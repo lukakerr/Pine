@@ -11,8 +11,8 @@ import Cocoa
 class DocumentStackView: NSStackView, PreferenceStackView {
 
   private let behaviourMap: BoolPreferenceMap = [
-    "Autosave document": Preference.autosaveDocument,
-    "Open new document on startup": Preference.openNewDocumentOnStartup
+    "Autosave document": .autosaveDocument,
+    "Open new document on startup": .openNewDocumentOnStartup
   ]
 
   private func getBehaviorArea() -> NSStackView {

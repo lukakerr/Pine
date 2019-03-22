@@ -33,7 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   }
 
   func applicationShouldOpenUntitledFile(_ sender: NSApplication) -> Bool {
-    return preferences[Preference.openNewDocumentOnStartup]
+    return preferences[.openNewDocumentOnStartup]
   }
 
   func application(_ sender: NSApplication, openFiles filenames: [String]) {

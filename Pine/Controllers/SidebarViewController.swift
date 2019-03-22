@@ -168,11 +168,11 @@ class SidebarViewController: NSViewController {
   @objc private func updateSidebarAppearance() {
     sidebar.appearance = NSAppearance(named: .current)
     sidebarActionsView.appearance = NSAppearance(named: .current)
-    sidebarSplitViewItem?.isCollapsed = !preferences[Preference.showSidebar]
+    sidebarSplitViewItem?.isCollapsed = !preferences[.showSidebar]
 
     var backgroundColor: NSColor = .clear
 
-    if preferences[Preference.useThemeColorForSidebar] && !preferences[Preference.useSystemAppearance] {
+    if preferences[.useThemeColorForSidebar] && !preferences[.useSystemAppearance] {
       backgroundColor = theme.background
     }
 

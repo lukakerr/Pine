@@ -22,7 +22,7 @@ class MarkdownTextView: NSTextView {
 
   override var isContinuousSpellCheckingEnabled: Bool {
     get {
-      return preferences[Preference.spellcheckEnabled]
+      return preferences[.spellcheckEnabled]
     }
 
     set {}
@@ -60,7 +60,7 @@ class MarkdownTextView: NSTextView {
   }
 
   override func keyDown(with event: NSEvent) {
-    if let singleCharacter = event.characters?.first, preferences[Preference.autoPairSyntax] {
+    if let singleCharacter = event.characters?.first, preferences[.autoPairSyntax] {
       self.pair(character: singleCharacter)
     }
 
@@ -160,7 +160,7 @@ class MarkdownTextView: NSTextView {
       let lineHeight = layoutManager?.defaultLineHeight(for: font)
     else { return }
 
-    let ratio: CGFloat = preferences[Preference.scrollPastEnd] ? 0.5 : 0
+    let ratio: CGFloat = preferences[.scrollPastEnd] ? 0.5 : 0
 
     let inset = ratio * (scrollView.documentVisibleRect.height - lineHeight)
 

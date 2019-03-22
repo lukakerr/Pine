@@ -47,15 +47,15 @@ class Autocomplete {
       return arr.filter { $0.starts(with: string) && $0 != string }
     }
 
-    if preferences[Preference.markdownAutocomplete] {
+    if preferences[.markdownAutocomplete] {
       matches.append(contentsOf: filtered(markdownWords))
     }
 
-    if preferences[Preference.latexAutocomplete] {
+    if preferences[.latexAutocomplete] {
       matches.append(contentsOf: filtered(latexWords))
     }
 
-    if preferences[Preference.htmlAutocomplete] {
+    if preferences[.htmlAutocomplete] {
       matches.append(contentsOf: filtered(htmlWords))
     }
 

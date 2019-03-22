@@ -63,7 +63,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
     }
 
     if let preview = splitViewController?.splitViewItems.last {
-      preview.isCollapsed = !preferences[Preference.showPreviewOnStartup]
+      preview.isCollapsed = !preferences[.showPreviewOnStartup]
     }
 
     self.setupTextStorage()
@@ -138,7 +138,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
   /// When the scroll view scrolls, sync the preview if enabled in preferences
   @objc private func scrollViewDidScroll() {    
     guard
-      preferences[Preference.syncEditorAndPreview],
+      preferences[.syncEditorAndPreview],
       let documentView = scrollView.documentView
     else { return }
 

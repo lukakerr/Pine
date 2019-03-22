@@ -84,7 +84,7 @@ class PineWindowController: NSWindowController, NSWindowDelegate {
   }
 
   @objc private func reloadUI() {
-    if preferences[Preference.showToolbar] {
+    if preferences[.showToolbar] {
       self.setupToolbar()
     } else {
       window?.toolbar = nil

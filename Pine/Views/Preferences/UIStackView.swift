@@ -11,20 +11,20 @@ import Cocoa
 class UIStackView: NSStackView, PreferenceStackView {
 
   private let appearanceMap: BoolPreferenceMap = [
-    "Use system appearance": Preference.useSystemAppearance
+    "Use system appearance": .useSystemAppearance
   ]
 
   private let windowMap: BoolPreferenceMap = [
-    "Show toolbar": Preference.showToolbar,
-    "Show sidebar": Preference.showSidebar,
-    "Modern titlebar": Preference.modernTitlebar,
-    "Vertical split": Preference.verticalSplitView,
-    "Use theme color for sidebar": Preference.useThemeColorForSidebar
+    "Show toolbar": .showToolbar,
+    "Show sidebar": .showSidebar,
+    "Modern titlebar": .modernTitlebar,
+    "Vertical split": .verticalSplitView,
+    "Use theme color for sidebar": .useThemeColorForSidebar
   ]
 
   private let behaviorMap: BoolPreferenceMap = [
-    "Show preview on startup": Preference.showPreviewOnStartup,
-    "Sync editor and preview": Preference.syncEditorAndPreview
+    "Show preview on startup": .showPreviewOnStartup,
+    "Sync editor and preview": .syncEditorAndPreview
   ]
 
   private func getAppearanceArea() -> NSStackView {

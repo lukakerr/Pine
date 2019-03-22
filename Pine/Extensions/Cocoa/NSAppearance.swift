@@ -11,7 +11,7 @@ import Cocoa
 extension NSAppearance.Name {
 
   static var current: NSAppearance.Name {
-    if !preferences[Preference.useSystemAppearance] {
+    if !preferences[.useSystemAppearance] {
       return theme.background.isDark ? .dark : .light
     }
 

@@ -15,10 +15,10 @@ class MarkdownView: NSView {
   }
 
   private func updateUI() {
-    self.window?.titlebarAppearsTransparent = preferences[Preference.modernTitlebar]
+    self.window?.titlebarAppearsTransparent = preferences[.modernTitlebar]
 
     // Not using system appearance, so stick with theme
-    if !preferences[Preference.useSystemAppearance] {
+    if !preferences[.useSystemAppearance] {
       if let bg = theme.highlightr.theme.themeBackgroundColor {
         setThemeAndWindowAppearance(
           isDark: bg.isDark,

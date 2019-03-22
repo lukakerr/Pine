@@ -77,7 +77,7 @@ final class MarkdownLayoutManager: NSLayoutManager {
 
     let context = currentContext.cgContext
 
-    if preferences[Preference.showInvisibles] {
+    if preferences[.showInvisibles] {
       if currentContext.isFlipped {
         context.textMatrix = CGAffineTransform(scaleX: 1.0, y: -1.0)
       }
