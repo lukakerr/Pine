@@ -1,0 +1,181 @@
+body, html {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #FFF;
+  height: 100%;
+  margin: 0;
+  color: #404040;
+}
+
+a {
+  text-decoration: none;
+  color: #016BEC;
+}
+
+.btn {
+  border: none;
+  color: #666;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 1.25rem;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  box-shadow: -2px 6px 15px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+}
+
+.link {
+  color: #404040;
+  font-size: 1rem;
+  padding: 0.75rem;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+nav {
+  width: 100%;
+  height: 4rem;
+  background-color: #FEFEFE;
+  border-bottom: 1px solid #DDD;
+  margin-bottom: 10rem;
+}
+
+nav img {
+  height: 80%;
+  top: 10%;
+  position: relative;
+  margin-left: 1rem;
+}
+
+nav .nav-right {
+  height: 100%;
+  float: right;
+  margin-top: 1.25rem;
+  margin-right: 1rem;
+}
+
+footer {
+  width: 100%;
+  height: 4rem;
+  background-color: #FEFEFE;
+  border-top: 1px solid #DDD;
+  margin-top: 6rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+footer section {
+  border-top: none;
+  margin-top: 1.5rem;
+}
+
+.container {
+  width: 80%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.split-1, .split-2 {
+  vertical-align: middle;
+  height: 100%;
+  display: inline-block;
+}
+
+.split-1 {
+  text-align: left;
+  width: 49%;
+}
+
+.split-2 {
+  text-align: right;
+  width: 49%;
+}
+
+.split-2 img, .split-1 img {
+  width: 100%;
+}
+
+.intro-section {
+  min-height: 35rem;
+}
+
+.intro-section .app-heading {
+  font-weight: 300;
+  font-size: 3.5rem;
+  margin-bottom: 0;
+  background: -webkit-linear-gradient(#CCC, #404040);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro-section .app-subtitle {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  color: #606060;
+}
+
+.intro-section .app-requirement {
+  margin-top: 2rem;
+  font-weight: 400;
+  color: #888;
+}
+
+.intro-section .btn {
+  margin: 0.75rem 1.25rem 0.75rem 0;
+}
+
+section {
+  margin-top: 4rem;
+  border-top: 1px solid #eee;
+}
+
+section .section-header-left, section .section-header-right {
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+section .section-header-left {
+  text-align: left;
+}
+
+section .section-header-right {
+  text-align: right;
+}
+
+section .section-description {
+  font-size: 1.25rem;
+}
+
+section img {
+  height: auto; 
+  width: auto; 
+  max-width: 600px; 
+  max-height: 800px;
+}
+
+@media only screen and (max-width: 900px) {
+  nav {
+    margin-bottom: 4rem;
+  }
+
+  .intro-section .btn {
+    margin: 0.75rem 1.25rem !important;
+  }
+
+  .split-1, .split-2 {
+    display: block;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  section .section-header-left, section .section-header-right {
+    text-align: center !important;
+  }
+
+  section ul {
+    text-align: left;
+  }
+}
