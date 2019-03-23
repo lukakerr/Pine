@@ -84,7 +84,7 @@ class PreviewViewController: NSViewController, WKNavigationDelegate {
       NSWorkspace.shared.open(url)
     } else if urlString.isMarkdown {
       decisionHandler(.cancel)
-      DocumentController.openMarkdownFile(withContentsOf: url)
+      (DocumentController.shared as? DocumentController)?.openMarkdownFile(withContentsOf: url)
     } else {
       decisionHandler(.allow)
     }

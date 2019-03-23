@@ -120,7 +120,7 @@ class PineWindowController: NSWindowController, NSWindowDelegate {
     }
 
     // Otherwise open document in current tab
-    DocumentController.replaceCurrentDocument(with: file)
+    (DocumentController.shared as? DocumentController)?.replaceCurrentDocument(with: file)
   }
 
   // MARK: - First responder methods called by NSMenuItems applicable to the current window

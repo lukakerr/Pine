@@ -10,8 +10,26 @@ import Cocoa
 
 class DocumentController: NSDocumentController {
 
-  private static func getCurrentWindowController() -> PineWindowController? {
+  private let documentLock = NSLock()
+  private var deferredDocuments = [NSDocument]()
+
+  private var currentWindowController: PineWindowController? {
     return NSApp.keyWindow?.windowController as? PineWindowController
+  }
+
+  private var transientDocumentToReplace: Document? {
+    let document = currentDocumentToReplace
+
+    guard
+      document?.isTransient ?? false,
+      document?.windowForSheet?.attachedSheet == nil
+    else { return nil }
+
+    return document
+  }
+
+  private var currentDocumentToReplace: Document? {
+    return currentWindowController?.document as? Document
   }
 
   override func openDocument(
@@ -19,39 +37,49 @@ class DocumentController: NSDocumentController {
     display displayDocument: Bool,
     completionHandler: @escaping (NSDocument?, Bool, Error?) -> Void
   ) {
-    guard let currentWindowController = Utils.getCurrentMainWindowController() else { return }
+    self.documentLock.lock()
 
-    let currentDocument = currentWindowController.document as? Document
-    let isTransient = currentDocument?.isTransient ?? false
+    let transientDocument = self.transientDocumentToReplace
 
-    // Is transient, so replace
-    if isTransient {
-      DocumentController.replaceCurrentDocument(with: url)
-    } else {
-      super.openDocument(
-        withContentsOf: url,
-        display: true,
-        completionHandler: completionHandler
-      )
+    if let transientDocument = transientDocument {
+      transientDocument.isTransient = false
+      self.deferredDocuments = []
     }
 
-    currentWindowController.syncWindowSidebars()
+    self.documentLock.unlock()
+
+    self.openAndReplaceDocument(
+      for: url,
+      toReplace: transientDocument,
+      displayDocument: true,
+      completionHandler: completionHandler
+    )
   }
 
-  // MARK: - Public static helper methods
-
   /// Replace the currently opened document (if it exists) with the provided URL
-  public static func replaceCurrentDocument(with url: URL) {
-    guard let currentWindowController = DocumentController.getCurrentWindowController() else { return }
+  public func replaceCurrentDocument(with url: URL) {
+    self.documentLock.lock()
 
-    if let doc = currentWindowController.document as? Document {
-      try? doc.read(from: url, ofType: url.pathExtension)
+    let currentDocument = self.currentDocumentToReplace
+
+    if let currentDocument = currentDocument {
+      currentDocument.savePresentedItemChanges(completionHandler: { _ in })
+      self.deferredDocuments = []
     }
+
+    self.documentLock.unlock()
+
+    self.openAndReplaceDocument(
+      for: url,
+      toReplace: currentDocument,
+      displayDocument: true,
+      completionHandler: { _, _, _ in}
+    )
   }
 
   /// Try to open a markdown file given a URL.
   /// Accounts for both relative (to the currently open document) and absolute URL's
-  public static func openMarkdownFile(withContentsOf url: URL) {
+  public func openMarkdownFile(withContentsOf url: URL) {
     guard let urlString = url.path.decoded else { return }
 
     // Case where absolute file exists
@@ -88,6 +116,53 @@ class DocumentController: NSDocumentController {
 
       return
     }
+  }
+
+  // MARK: - Private methods
+
+  private func openAndReplaceDocument(
+    for url: URL,
+    toReplace: Document?,
+    displayDocument: Bool,
+    completionHandler: @escaping (NSDocument?, Bool, Error?) -> Void
+  ) {
+    super.openDocument(withContentsOf: url, display: false) { (document, alreadyOpen, error) in
+      if let toReplace = toReplace, let document = document as? Document {
+        self.replaceDocument(toReplace, with: document)
+
+        if displayDocument {
+          document.makeWindowControllers()
+          document.showWindows()
+        }
+
+        for deferredDocument in self.deferredDocuments {
+          deferredDocument.makeWindowControllers()
+          deferredDocument.showWindows()
+        }
+
+        self.deferredDocuments = []
+      } else if let document = document {
+        if self.deferredDocuments.isEmpty {
+          document.makeWindowControllers()
+          document.showWindows()
+        } else {
+          self.deferredDocuments.append(document)
+        }
+      }
+
+      completionHandler(document, alreadyOpen, error)
+    }
+  }
+
+  private func replaceDocument(_ document: Document, with replacement: Document) {
+    guard Thread.isMainThread else { return }
+
+    for controller in document.windowControllers {
+      replacement.addWindowController(controller)
+      document.removeWindowController(controller)
+    }
+
+    document.close()
   }
 
 }

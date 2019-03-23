@@ -10,8 +10,12 @@ import Cocoa
 
 class Document: NSDocument {
 
-  fileprivate var markdownVC: MarkdownViewController?
   fileprivate var fileData: Data?
+
+  fileprivate var markdownViewController: MarkdownViewController? {
+    let wc = self.windowControllers.first as? PineWindowController
+    return wc?.contentViewController?.children.last?.children.first as? MarkdownViewController
+  }
 
   /// Whether the document is transient.
   /// This is initially true until the document is modified
@@ -44,26 +48,24 @@ class Document: NSDocument {
 
   // Creates a new window controller with the document being opened
   override func makeWindowControllers() {
+    defer {
+      self.setContents()
+    }
+
+    guard self.windowControllers.isEmpty else { return }
+
     // Returns the Storyboard that contains your Document window.
     let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
     let windowController = storyboard.instantiateController(
       withIdentifier: NSStoryboard.SceneIdentifier("Document Window Controller")
     ) as! PineWindowController
-    self.markdownVC = windowController.contentViewController?.children.last?.children.first as? MarkdownViewController
-    self.addWindowController(windowController)
-    self.setContents()
 
-    // Add opened document to sidebar
-    if let url = self.fileURL {
-      let parent = FileSystemItem.createParents(url: url)
-      let newItem = FileSystemItem(path: url.absoluteString, parent: parent)
-      openDocuments.addDocument(newItem)
-    }
+    self.addWindowController(windowController)
   }
 
   // Returns data used to save the file
   override func data(ofType typeName: String) throws -> Data {
-    guard let data = self.markdownVC?.textStorage.string.data(using: .utf8) else {
+    guard let data = self.markdownViewController?.textStorage.string.data(using: .utf8) else {
       throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
     }
 
@@ -74,6 +76,9 @@ class Document: NSDocument {
   override func read(from url: URL, ofType typeName: String) throws {
     let contents = try? String(contentsOf: url, encoding: .utf8)
     self.fileData = contents?.data(using: .utf8)
+
+    // After reading we no longer declare the document as transient
+    self.isTransient = false
 
     // Don't set contents if file hasn't changed
     if self.fileURL != url {
@@ -113,12 +118,13 @@ class Document: NSDocument {
     if let fileURL = self.fileURL {
       try? self.read(from: fileURL, ofType: fileURL.pathExtension)
     }
+
     self.setContents()
   }
 
   fileprivate func setContents() {
     if let data = self.fileData, let contents = String(data: data, encoding: .utf8) {
-      self.markdownVC?.textStorage.setAttributedString(NSAttributedString(string: contents))
+      self.markdownViewController?.textStorage.setAttributedString(NSAttributedString(string: contents))
     }
   }
 

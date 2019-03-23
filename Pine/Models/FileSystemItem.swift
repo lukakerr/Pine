@@ -16,7 +16,7 @@ final class FileSystemItem: Equatable {
 
   fileprivate var relativePath: String!
   fileprivate var parent: FileSystemItem?
-  lazy fileprivate var children: [FileSystemItem] = getChildren()
+  fileprivate lazy var children: [FileSystemItem] = getChildren()
 
   public var isExpanded: Bool = false
 
@@ -46,8 +46,8 @@ final class FileSystemItem: Equatable {
   }
 
   init(path: String, parent: FileSystemItem? = nil) {
-    self.relativePath = URL(fileURLWithPath: path).lastPathComponent
     self.parent = parent
+    self.relativePath = URL(fileURLWithPath: path.decoded ?? path).lastPathComponent
   }
 
   // MARK: - Public methods
