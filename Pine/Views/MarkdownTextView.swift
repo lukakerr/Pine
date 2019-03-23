@@ -35,7 +35,7 @@ class MarkdownTextView: NSTextView {
   override var rangeForUserCompletion: NSRange {
     var location = cursorLocation - 1
 
-    if location < 0 {
+    if location < 0 || location >= self.string.count {
       return NSRange(location: 0, length: 0)
     }
 
