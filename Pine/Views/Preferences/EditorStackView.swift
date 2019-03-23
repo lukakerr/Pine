@@ -18,6 +18,12 @@ class EditorStackView: NSStackView, PreferenceStackView, NSFontChanging {
     "Scroll past end": .scrollPastEnd
   ]
 
+  private let writingDirectionMap: [String: NSWritingDirection] = [
+    "Default": NSWritingDirection.natural,
+    "Left to Right": NSWritingDirection.leftToRight,
+    "Right to Left": NSWritingDirection.rightToLeft
+  ]
+
   private func getAppearanceArea() -> NSStackView {
     let view = PreferencesStackView(name: "Appearance:")
 
@@ -42,6 +48,26 @@ class EditorStackView: NSStackView, PreferenceStackView, NSFontChanging {
     return view
   }
 
+  private func getWritingDirectionArea() -> NSStackView {
+    let view = PreferencesStackView(name: "Writing Direction:")
+
+    let writingDirectionDropdown = NSPopUpButton()
+    writingDirectionDropdown.target = self
+    writingDirectionDropdown.action = #selector(self.writingDirectionChanged)
+
+    writingDirectionMap.keys.sorted().forEach { writingDirectionDropdown.addItem(withTitle: $0) }
+
+    if let selected = writingDirectionMap.first(where: { $1 == preferences.writingDirection })?.key {
+      writingDirectionDropdown.selectItem(withTitle: selected)
+    }
+
+    view.addPreferences([
+      writingDirectionDropdown
+    ])
+
+    return view
+  }
+
   private func getFontArea() -> NSStackView {
     let view = PreferencesStackView(name: "Font:")
 
@@ -61,7 +87,8 @@ class EditorStackView: NSStackView, PreferenceStackView, NSFontChanging {
     return [
       getAppearanceArea(),
       getBehaviorArea(),
-      getFontArea()
+      getFontArea(),
+      getWritingDirectionArea()
     ]
   }
 
@@ -75,6 +102,15 @@ class EditorStackView: NSStackView, PreferenceStackView, NSFontChanging {
 
   @objc func behaviorPreferenceChanged(_ sender: NSButton) {
     preferences.setFromBoolMap(behaviourMap, key: sender.title, value: sender.value)
+  }
+
+  // MARK: Writing direction preference actions
+
+  @objc func writingDirectionChanged(_ sender: NSPopUpButton) {
+    if let direction = writingDirectionMap[sender.title] {
+      preferences.writingDirection = direction
+      NotificationCenter.send(.preferencesChanged)
+    }
   }
 
   // MARK: - Font preference actions

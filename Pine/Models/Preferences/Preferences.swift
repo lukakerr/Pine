@@ -24,6 +24,7 @@ extension PreferenceKeys {
   static let showToolbar = PreferenceKey<Bool>("showToolbar", defaultValue: false)
   static let showInvisibles = PreferenceKey<Bool>("showInvisibles", defaultValue: false)
   static let scrollPastEnd = PreferenceKey<Bool>("scrollPastEnd", defaultValue: false)
+  static let writingDirection = PreferenceKey<Int>("writingDirection", defaultValue: NSWritingDirection.natural.rawValue)
 
   // Font options
   static let fontSize = PreferenceKey<CGFloat>("fontSize", defaultValue: 14)
@@ -160,6 +161,17 @@ class Preferences {
       theme.setFont(to: newValue)
       self[.fontName] = newValue.fontName
       self[.fontSize] = newValue.pointSize
+    }
+  }
+
+  public var writingDirection: NSWritingDirection {
+    get {
+      let value = self[.writingDirection]
+      return NSWritingDirection(rawValue: value) ?? .natural
+    }
+
+    set {
+      self[.writingDirection] = newValue.rawValue
     }
   }
 

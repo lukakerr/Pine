@@ -120,6 +120,8 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
     markdownTextView.insertionPointColor = .gray
     markdownTextView.isVerticallyResizable = true
     markdownTextView.isHorizontallyResizable = false
+    markdownTextView.textContainerInset = NSSize(width: 10.0, height: 10.0)
+    markdownTextView.baseWritingDirection = preferences.writingDirection
 
     if #available(OSX 10.12.2, *) {
       markdownTextView.touchBar = self.makeTouchBar()
@@ -133,6 +135,7 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
     generatePreview()
     layoutManager.fontDidUpdate()
     markdownTextView.setOverscroll()
+    markdownTextView.baseWritingDirection = preferences.writingDirection
   }
 
   /// When the scroll view scrolls, sync the preview if enabled in preferences
