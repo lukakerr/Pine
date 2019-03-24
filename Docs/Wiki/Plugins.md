@@ -8,7 +8,7 @@ Creating a preview plugin is easy. Follow the steps below to get started:
 At this point a directory named `Plugins` will appear. This is where all the active plugins are stored. 
 
 Plugins are written in JavaScript and loaded directly into the preview window.
-This means you can do almost an manipulation you want to the elements displayed in the preview.
+This means you can do almost any manipulation you want to the elements displayed in the preview.
 
 ### An Example
 
@@ -26,7 +26,7 @@ Lets write a quick plugin to make all header elements appear green in color.
   }
   ```
 
-What this does it find every `<h..>` element and set its color to green.
+What this does is find every `<h..>` element and set its color to green.
 
 3. Close and re-open Pine, and type `# A Green Heading!` into the editor, you'll now notice
   the heading is shown as green in the preview.
