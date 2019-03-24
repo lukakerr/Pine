@@ -11,12 +11,14 @@ import Foundation
 enum PreferenceCategory: String, CaseIterable {
   case ui = "UI"
   case editor = "Editor"
+  case preview = "Preview"
   case markdown = "Markdown"
   case document = "Document"
 
   static let categories = [
     ui,
     editor,
+    preview,
     markdown,
     document
   ]

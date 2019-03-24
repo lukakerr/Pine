@@ -58,4 +58,34 @@ class Utils {
     }
   }
 
+  public static func getApplicationSupportDirectory(for directory: SupportDirectory? = nil) -> URL? {
+    let applicationSupportURL = try? FileManager.default.url(
+      for: .applicationSupportDirectory,
+      in: .userDomainMask,
+      appropriateFor: nil,
+      create: true
+    )
+
+    guard
+      let applicationName = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String,
+      let applicationFolder = applicationSupportURL?.appendingPathComponent(applicationName, isDirectory: true)
+    else { return nil }
+
+    if !FileManager.default.fileExists(atPath: applicationFolder.path) {
+      try? FileManager.default.createDirectory(at: applicationFolder, withIntermediateDirectories: true, attributes: nil)
+    }
+
+    if let dir = directory {
+      let directoryPath = applicationFolder.appendingPathComponent(dir.rawValue)
+
+      if !FileManager.default.fileExists(atPath: directoryPath.path) {
+        try? FileManager.default.createDirectory(at: directoryPath, withIntermediateDirectories: true, attributes: nil)
+      }
+
+      return directoryPath
+    }
+
+    return applicationFolder
+  }
+
 }

@@ -65,8 +65,6 @@
 		A1BC8B13224214AF00623917 /* NSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC8B07224214AF00623917 /* NSView.swift */; };
 		A1BC8B152242162C00623917 /* CTLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC8B142242162C00623917 /* CTLine.swift */; };
 		A1BC8B172242164000623917 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC8B162242164000623917 /* CGPoint.swift */; };
-		A1C26721221F9CE0006B5116 /* RELEASE.md in Resources */ = {isa = PBXBuildFile; fileRef = A1C2671F221F9CDF006B5116 /* RELEASE.md */; };
-		A1C26722221F9CE0006B5116 /* MARKDOWN_REFERENCE.md in Resources */ = {isa = PBXBuildFile; fileRef = A1C26720221F9CDF006B5116 /* MARKDOWN_REFERENCE.md */; };
 		A1C4020C221F851B00E3DBCC /* Reference.html in Resources */ = {isa = PBXBuildFile; fileRef = A1C4020B221F851B00E3DBCC /* Reference.html */; };
 		A1C40210221F868200E3DBCC /* ReferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C4020F221F868200E3DBCC /* ReferenceViewController.swift */; };
 		A1C65D82221179230053C422 /* DocumentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C65D81221179230053C422 /* DocumentController.swift */; };
@@ -74,6 +72,10 @@
 		A1CFDA6E223D04D800ECFFA7 /* Autocomplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CFDA6D223D04D800ECFFA7 /* Autocomplete.swift */; };
 		A1D4A0382234C77A00E2159A /* SidebarTableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A0372234C77A00E2159A /* SidebarTableRowView.swift */; };
 		A1D5466420D4D9CC00D1221A /* Exporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D5466320D4D9CC00D1221A /* Exporter.swift */; };
+		A1D7173D2247573C003BE7BC /* PreviewStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D7173C2247573C003BE7BC /* PreviewStackView.swift */; };
+		A1D7173F2247584F003BE7BC /* SupportDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D7173E2247584F003BE7BC /* SupportDirectory.swift */; };
+		A1D7174522475B21003BE7BC /* RELEASE.md in Resources */ = {isa = PBXBuildFile; fileRef = A1D7174222475B21003BE7BC /* RELEASE.md */; };
+		A1D7174622475B21003BE7BC /* MARKDOWN_REFERENCE.md in Resources */ = {isa = PBXBuildFile; fileRef = A1D7174322475B21003BE7BC /* MARKDOWN_REFERENCE.md */; };
 		A1E647DC20D1E9C000F32E55 /* PineSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E647DB20D1E9C000F32E55 /* PineSplitView.swift */; };
 		A1F122DF20DE0D27007DFD1A /* FileSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F122DE20DE0D27007DFD1A /* FileSaver.swift */; };
 		A1FB7A9A2227DC5900DC2E0E /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FB7A992227DC5900DC2E0E /* UIStackView.swift */; };
@@ -167,8 +169,6 @@
 		A1BC8B07224214AF00623917 /* NSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSView.swift; sourceTree = "<group>"; };
 		A1BC8B142242162C00623917 /* CTLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTLine.swift; sourceTree = "<group>"; };
 		A1BC8B162242164000623917 /* CGPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
-		A1C2671F221F9CDF006B5116 /* RELEASE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = RELEASE.md; sourceTree = "<group>"; };
-		A1C26720221F9CDF006B5116 /* MARKDOWN_REFERENCE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = MARKDOWN_REFERENCE.md; sourceTree = "<group>"; };
 		A1C4020B221F851B00E3DBCC /* Reference.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Reference.html; sourceTree = "<group>"; };
 		A1C4020F221F868200E3DBCC /* ReferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceViewController.swift; sourceTree = "<group>"; };
 		A1C65D81221179230053C422 /* DocumentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentController.swift; sourceTree = "<group>"; };
@@ -176,6 +176,11 @@
 		A1CFDA6D223D04D800ECFFA7 /* Autocomplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autocomplete.swift; sourceTree = "<group>"; };
 		A1D4A0372234C77A00E2159A /* SidebarTableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarTableRowView.swift; sourceTree = "<group>"; };
 		A1D5466320D4D9CC00D1221A /* Exporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exporter.swift; sourceTree = "<group>"; };
+		A1D7173C2247573C003BE7BC /* PreviewStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewStackView.swift; sourceTree = "<group>"; };
+		A1D7173E2247584F003BE7BC /* SupportDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportDirectory.swift; sourceTree = "<group>"; };
+		A1D7174222475B21003BE7BC /* RELEASE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = RELEASE.md; sourceTree = "<group>"; };
+		A1D7174322475B21003BE7BC /* MARKDOWN_REFERENCE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = MARKDOWN_REFERENCE.md; sourceTree = "<group>"; };
+		A1D7174722475B2A003BE7BC /* Plugins.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Plugins.md; sourceTree = "<group>"; };
 		A1E647DB20D1E9C000F32E55 /* PineSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PineSplitView.swift; sourceTree = "<group>"; };
 		A1F122DE20DE0D27007DFD1A /* FileSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSaver.swift; sourceTree = "<group>"; };
 		A1FB7A992227DC5900DC2E0E /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
@@ -233,6 +238,7 @@
 				A1BC8AF6224203B100623917 /* Invisible.swift */,
 				A1904EA32228A06C0004FB82 /* PreferenceCategory.swift */,
 				A111013C20E85D9A001EBEDE /* SaveError.swift */,
+				A1D7173E2247584F003BE7BC /* SupportDirectory.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -306,7 +312,7 @@
 		A156AF742090606C0098BBDD = {
 			isa = PBXGroup;
 			children = (
-				A1C2671E221F9CDF006B5116 /* Docs */,
+				A1D7174022475B21003BE7BC /* Docs */,
 				AF85BB3E71369DF39A9597F6 /* Frameworks */,
 				E4FB2329AC3DC77FB4340593 /* Pods */,
 				A156AF7E2090606C0098BBDD /* Products */,
@@ -433,13 +439,30 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		A1C2671E221F9CDF006B5116 /* Docs */ = {
+		A1D7174022475B21003BE7BC /* Docs */ = {
 			isa = PBXGroup;
 			children = (
-				A1C2671F221F9CDF006B5116 /* RELEASE.md */,
-				A1C26720221F9CDF006B5116 /* MARKDOWN_REFERENCE.md */,
+				A1D7174122475B21003BE7BC /* Development */,
+				A1D7174422475B21003BE7BC /* WIki */,
 			);
 			path = Docs;
+			sourceTree = "<group>";
+		};
+		A1D7174122475B21003BE7BC /* Development */ = {
+			isa = PBXGroup;
+			children = (
+				A1D7174222475B21003BE7BC /* RELEASE.md */,
+				A1D7174322475B21003BE7BC /* MARKDOWN_REFERENCE.md */,
+			);
+			path = Development;
+			sourceTree = "<group>";
+		};
+		A1D7174422475B21003BE7BC /* WIki */ = {
+			isa = PBXGroup;
+			children = (
+				A1D7174722475B2A003BE7BC /* Plugins.md */,
+			);
+			path = WIki;
 			sourceTree = "<group>";
 		};
 		A1FB7AA32227F4E200DC2E0E /* Preferences */ = {
@@ -451,6 +474,7 @@
 				A1FB7A9F2227EE9300DC2E0E /* PreferencesRoundedButton.swift */,
 				A1FB7A9D2227DFCB00DC2E0E /* PreferencesStackView.swift */,
 				A1FB7AA12227EEEF00DC2E0E /* PreferencesSwitchButton.swift */,
+				A1D7173C2247573C003BE7BC /* PreviewStackView.swift */,
 				A1FB7A992227DC5900DC2E0E /* UIStackView.swift */,
 			);
 			path = Preferences;
@@ -593,14 +617,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1C26721221F9CE0006B5116 /* RELEASE.md in Resources */,
 				A1C4020C221F851B00E3DBCC /* Reference.html in Resources */,
-				A1C26722221F9CE0006B5116 /* MARKDOWN_REFERENCE.md in Resources */,
 				A165D1F6223DB66500A00821 /* autocomplete in Resources */,
 				A189EA742091E4F300DB0559 /* Markdown.css in Resources */,
 				A14BF5942241C4E600ED250D /* Credits.rtf in Resources */,
 				A124783C2233356400CA7A67 /* File.icns in Resources */,
+				A1D7174622475B21003BE7BC /* MARKDOWN_REFERENCE.md in Resources */,
 				A156AF872090606C0098BBDD /* Assets.xcassets in Resources */,
+				A1D7174522475B21003BE7BC /* RELEASE.md in Resources */,
 				A1FD269A20932CDD004D1C95 /* highlight-js in Resources */,
 				A156AF8A2090606D0098BBDD /* Main.storyboard in Resources */,
 			);
@@ -675,7 +699,9 @@
 				A156AF832090606C0098BBDD /* MarkdownViewController.swift in Sources */,
 				A1BC8AF52241FE0600623917 /* MarkdownLayoutManager.swift in Sources */,
 				A148C3A020914F0F00B1165C /* SyntaxThemes.swift in Sources */,
+				A1D7173F2247584F003BE7BC /* SupportDirectory.swift in Sources */,
 				A1BC8B10224214AF00623917 /* NSButton.swift in Sources */,
+				A1D7173D2247573C003BE7BC /* PreviewStackView.swift in Sources */,
 				A1C40210221F868200E3DBCC /* ReferenceViewController.swift in Sources */,
 				A156AFAF209061D60098BBDD /* PineWindowController.swift in Sources */,
 				A13C23FC20919672008557D0 /* PreviewViewController.swift in Sources */,

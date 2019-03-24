@@ -38,14 +38,8 @@ class UIStackView: NSStackView, PreferenceStackView {
 
     syntaxDropdown.selectItem(withTitle: theme.syntax)
 
-    let revealThemesButton = PreferencesRoundedButton()
-    revealThemesButton.title = "Reveal Themes"
-    revealThemesButton.target = self
-    revealThemesButton.action = #selector(revealThemes)
-
     view.addPreferences([
-      syntaxDropdown,
-      revealThemesButton
+      syntaxDropdown
     ])
 
     view.addBooleanArea(
@@ -95,13 +89,6 @@ class UIStackView: NSStackView, PreferenceStackView {
     theme.setTheme(to: sender.title)
     html.updateSyntaxTheme()
     NotificationCenter.send(.preferencesChanged)
-  }
-
-  @objc func revealThemes(_ sender: NSButton) {
-    if let folder =  FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first {
-      let styles = folder.appendingPathComponent("highlight-js/styles")
-      NSWorkspace.shared.activateFileViewerSelecting([styles])
-    }
   }
 
   @objc func appearancePreferenceChanged(_ sender: NSButton) {

@@ -20,12 +20,15 @@ class HTML {
   private init() {
     self.loadCSS()
     self.loadJS()
+    self.loadPluginScripts()
   }
 
   var baseCSS: String = ""
   var css: String = ""
   var js: String = ""
   var y: Int = 0
+
+  var pluginScripts: [String] = []
 
   // The innerHTML contents are passed in here rather than stored
   // to prevent asynchronous race conditions changing the content on startup
@@ -71,6 +74,7 @@ class HTML {
               {left: "$", right: "$", display: false},
             ]});
           </script>
+          \(pluginScripts.joined(separator: " "))
         </div>
       </body>
       </html>
@@ -103,6 +107,22 @@ class HTML {
 
     css = cssThemeContents
     baseCSS = cssContents
+  }
+
+  fileprivate func loadPluginScripts() {
+    guard let applicationSupportDirectory = Utils.getApplicationSupportDirectory(for: .plugins) else { return }
+
+    let contents = try? FileManager.default.contentsOfDirectory(
+      at: applicationSupportDirectory,
+      includingPropertiesForKeys: nil,
+      options: []
+    )
+
+    let scriptNames = contents?
+      .filter { $0.pathExtension == "js" }
+      .compactMap { $0.absoluteString.decoded } ?? []
+
+    self.pluginScripts = scriptNames.map { "<script src='\($0)'></script>" }
   }
 
 }

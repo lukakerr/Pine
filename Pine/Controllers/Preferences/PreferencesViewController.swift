@@ -18,6 +18,7 @@ class PreferencesViewController: NSViewController {
 
   private lazy var uiStackView = UIStackView()
   private lazy var editorStackView = EditorStackView()
+  private lazy var previewStackView = PreviewStackView()
   private lazy var markdownStackView = MarkdownStackView()
   private lazy var documentStackView = DocumentStackView()
 
@@ -71,6 +72,8 @@ class PreferencesViewController: NSViewController {
       views = uiStackView.getViews()
     case .editor:
       views = editorStackView.getViews()
+    case .preview:
+      views = previewStackView.getViews()
     case .markdown:
       views = markdownStackView.getViews()
     case .document:
