@@ -69,7 +69,7 @@ class PreviewViewController: NSViewController, WKNavigationDelegate {
     self.webPreview.load(URLRequest(url: url))
   }
 
-  // Open web links in browser, not webview
+  // Handle when a link is clicked
   public func webView(
     _ webView: WKWebView,
     decidePolicyFor navigationAction: WKNavigationAction,

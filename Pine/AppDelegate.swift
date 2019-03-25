@@ -36,6 +36,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     return preferences[.openNewDocumentOnStartup]
   }
 
+  func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+    return preferences[.terminateAfterLastWindowClosed]
+  }
+
   func application(_ sender: NSApplication, openFiles filenames: [String]) {
     let fileURLs = filenames.compactMap { URL(fileURLWithPath: $0) }
     openFiles(files: fileURLs)

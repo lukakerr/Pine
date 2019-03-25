@@ -21,10 +21,6 @@ class Document: NSDocument {
   /// This is initially true until the document is modified
   public var isTransient: Bool = true
 
-  override init() {
-    super.init()
-  }
-
   // Handles whether to autosave the document
   override class var autosavesInPlace: Bool {
     return preferences[.autosaveDocument]

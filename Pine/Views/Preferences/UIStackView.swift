@@ -23,7 +23,6 @@ class UIStackView: NSStackView, PreferenceStackView {
   ]
 
   private let behaviorMap: BoolPreferenceMap = [
-    "Show preview on startup": .showPreviewOnStartup,
     "Sync editor and preview": .syncEditorAndPreview
   ]
 

@@ -14,7 +14,7 @@ class EditorStackView: NSStackView, PreferenceStackView, NSFontChanging {
     "Show invisibles": .showInvisibles
   ]
 
-  private let behaviourMap: BoolPreferenceMap = [
+  private let behaviorMap: BoolPreferenceMap = [
     "Scroll past end": .scrollPastEnd
   ]
 
@@ -41,7 +41,7 @@ class EditorStackView: NSStackView, PreferenceStackView, NSFontChanging {
 
     view.addBooleanArea(
       target: self,
-      using: behaviourMap,
+      using: behaviorMap,
       selector: #selector(behaviorPreferenceChanged)
     )
 
@@ -101,7 +101,7 @@ class EditorStackView: NSStackView, PreferenceStackView, NSFontChanging {
   // MARK: - Behavior preference actions
 
   @objc func behaviorPreferenceChanged(_ sender: NSButton) {
-    preferences.setFromBoolMap(behaviourMap, key: sender.title, value: sender.value)
+    preferences.setFromBoolMap(behaviorMap, key: sender.title, value: sender.value)
   }
 
   // MARK: Writing direction preference actions

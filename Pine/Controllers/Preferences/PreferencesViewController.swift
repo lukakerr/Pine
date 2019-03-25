@@ -16,6 +16,7 @@ class PreferencesViewController: NSViewController {
   private var stackView: NSStackView!
   private var currentCategory: PreferenceCategory!
 
+  private lazy var generalStackView = GeneralStackView()
   private lazy var uiStackView = UIStackView()
   private lazy var editorStackView = EditorStackView()
   private lazy var previewStackView = PreviewStackView()
@@ -68,6 +69,8 @@ class PreferencesViewController: NSViewController {
     var views: [NSView]
 
     switch category {
+    case .general:
+      views = generalStackView.getViews()
     case .ui:
       views = uiStackView.getViews()
     case .editor:

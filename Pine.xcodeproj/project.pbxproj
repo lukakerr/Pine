@@ -80,6 +80,7 @@
 		A1D7174622475B21003BE7BC /* MARKDOWN_REFERENCE.md in Resources */ = {isa = PBXBuildFile; fileRef = A1D7174322475B21003BE7BC /* MARKDOWN_REFERENCE.md */; };
 		A1E647DC20D1E9C000F32E55 /* PineSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E647DB20D1E9C000F32E55 /* PineSplitView.swift */; };
 		A1F122DF20DE0D27007DFD1A /* FileSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F122DE20DE0D27007DFD1A /* FileSaver.swift */; };
+		A1F818B222499058006A4C10 /* GeneralStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F818B122499058006A4C10 /* GeneralStackView.swift */; };
 		A1FB7A9A2227DC5900DC2E0E /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FB7A992227DC5900DC2E0E /* UIStackView.swift */; };
 		A1FB7A9E2227DFCB00DC2E0E /* PreferencesStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FB7A9D2227DFCB00DC2E0E /* PreferencesStackView.swift */; };
 		A1FB7AA02227EE9300DC2E0E /* PreferencesRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FB7A9F2227EE9300DC2E0E /* PreferencesRoundedButton.swift */; };
@@ -186,6 +187,7 @@
 		A1D7174722475B2A003BE7BC /* Plugins.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Plugins.md; sourceTree = "<group>"; };
 		A1E647DB20D1E9C000F32E55 /* PineSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PineSplitView.swift; sourceTree = "<group>"; };
 		A1F122DE20DE0D27007DFD1A /* FileSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSaver.swift; sourceTree = "<group>"; };
+		A1F818B122499058006A4C10 /* GeneralStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralStackView.swift; sourceTree = "<group>"; };
 		A1FB7A992227DC5900DC2E0E /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		A1FB7A9D2227DFCB00DC2E0E /* PreferencesStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesStackView.swift; sourceTree = "<group>"; };
 		A1FB7A9F2227EE9300DC2E0E /* PreferencesRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesRoundedButton.swift; sourceTree = "<group>"; };
@@ -475,6 +477,7 @@
 			children = (
 				A1904E9D22288AB80004FB82 /* DocumentStackView.swift */,
 				A1BC8AF8224212F400623917 /* EditorStackView.swift */,
+				A1F818B122499058006A4C10 /* GeneralStackView.swift */,
 				A1FB7AA42227F5B100DC2E0E /* MarkdownStackView.swift */,
 				A1FB7A9F2227EE9300DC2E0E /* PreferencesRoundedButton.swift */,
 				A1FB7A9D2227DFCB00DC2E0E /* PreferencesStackView.swift */,
@@ -723,6 +726,7 @@
 				A1FB7A9E2227DFCB00DC2E0E /* PreferencesStackView.swift in Sources */,
 				A156AFB120908ECE0098BBDD /* Theme.swift in Sources */,
 				A1904EAB2228B6A40004FB82 /* Utils.swift in Sources */,
+				A1F818B222499058006A4C10 /* GeneralStackView.swift in Sources */,
 				A104782520E7338800E0930A /* FileSystemItem.swift in Sources */,
 				A1FB7A9A2227DC5900DC2E0E /* UIStackView.swift in Sources */,
 				A10B86DF2227BB6E000656DD /* PreferencesSidebarViewController.swift in Sources */,

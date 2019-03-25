@@ -9,6 +9,7 @@
 import Foundation
 
 enum PreferenceCategory: String, CaseIterable {
+  case general = "General"
   case ui = "UI"
   case editor = "Editor"
   case preview = "Preview"
@@ -16,6 +17,7 @@ enum PreferenceCategory: String, CaseIterable {
   case document = "Document"
 
   static let categories = [
+    general,
     ui,
     editor,
     preview,

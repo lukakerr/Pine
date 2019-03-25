@@ -11,7 +11,6 @@ import cmark_gfm_swift
 
 extension PreferenceKeys {
   static let showPreviewOnStartup = PreferenceKey<Bool>("showPreviewOnStartup", defaultValue: true)
-  static let openNewDocumentOnStartup = PreferenceKey<Bool>("openNewDocumentOnStartup", defaultValue: true)
   static let autosaveDocument = PreferenceKey<Bool>("autosaveDocument", defaultValue: true)
   static let verticalSplitView = PreferenceKey<Bool>("verticalSplitView", defaultValue: true)
   static let modernTitlebar = PreferenceKey<Bool>("modernTitlebar", defaultValue: true)
@@ -25,6 +24,10 @@ extension PreferenceKeys {
   static let showInvisibles = PreferenceKey<Bool>("showInvisibles", defaultValue: false)
   static let scrollPastEnd = PreferenceKey<Bool>("scrollPastEnd", defaultValue: false)
   static let writingDirection = PreferenceKey<Int>("writingDirection", defaultValue: NSWritingDirection.natural.rawValue)
+
+  // AppDelegate options
+  static let openNewDocumentOnStartup = PreferenceKey<Bool>("openNewDocumentOnStartup", defaultValue: true)
+  static let terminateAfterLastWindowClosed = PreferenceKey<Bool>("terminateAfterLastWindowClosed", defaultValue: false)
 
   // Font options
   static let fontSize = PreferenceKey<CGFloat>("fontSize", defaultValue: 14)

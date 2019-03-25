@@ -21,7 +21,7 @@ class MarkdownStackView: NSStackView, PreferenceStackView {
     "Strikethrough": .markdownStrikethrough
   ]
 
-  private let behaviourMap: BoolPreferenceMap = [
+  private let behaviorMap: BoolPreferenceMap = [
     "Auto pair syntax": .autoPairSyntax,
     "Enable spellcheck": .spellcheckEnabled
   ]
@@ -37,8 +37,8 @@ class MarkdownStackView: NSStackView, PreferenceStackView {
 
     view.addBooleanArea(
       target: self,
-      using: behaviourMap,
-      selector: #selector(behaviourPreferenceChanged)
+      using: behaviorMap,
+      selector: #selector(behaviorMapPreferenceChanged)
     )
 
     return view
@@ -94,8 +94,8 @@ class MarkdownStackView: NSStackView, PreferenceStackView {
 
   // MARK: - Behavior preference actions
 
-  @objc func behaviourPreferenceChanged(_ sender: NSButton) {
-    preferences.setFromBoolMap(behaviourMap, key: sender.title, value: sender.value)
+  @objc func behaviorMapPreferenceChanged(_ sender: NSButton) {
+    preferences.setFromBoolMap(behaviorMap, key: sender.title, value: sender.value)
   }
 
   // MARK: - Autocomplete preference actions

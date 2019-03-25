@@ -1,17 +1,19 @@
 //
-//  DocumentStackView.swift
+//  GeneralStackView.swift
 //  Pine
 //
-//  Created by Luka Kerr on 1/3/19.
+//  Created by Luka Kerr on 26/3/19.
 //  Copyright © 2019 Luka Kerr. All rights reserved.
 //
 
 import Cocoa
 
-class DocumentStackView: NSStackView, PreferenceStackView {
+class GeneralStackView: NSStackView, PreferenceStackView {
 
   private let behaviorMap: BoolPreferenceMap = [
-    "Autosave document": .autosaveDocument
+    "Show preview on startup": .showPreviewOnStartup,
+    "Open new document on startup": .openNewDocumentOnStartup,
+    "Terminate after last window closed": .terminateAfterLastWindowClosed
   ]
 
   private func getBehaviorArea() -> NSStackView {
