@@ -1,5 +1,5 @@
 //
-//  TextViewTests.swift
+//  NSTextViewTests.swift
 //  PineTests
 //
 //  Created by Luka Kerr on 25/4/18.
@@ -10,7 +10,7 @@ import XCTest
 import Cocoa
 @testable import Pine
 
-class TextViewTests: XCTestCase {
+class NSTextViewTests: XCTestCase {
 
   var textView: NSTextView!
 

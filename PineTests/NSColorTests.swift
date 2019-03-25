@@ -11,14 +11,6 @@ import XCTest
 
 class NSColorTests: XCTestCase {
 
-  override func setUp() {
-    super.setUp()
-  }
-
-  override func tearDown() {
-    super.tearDown()
-  }
-
   func testIsDark() {
     let color = NSColor.black
 

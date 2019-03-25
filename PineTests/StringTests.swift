@@ -11,14 +11,6 @@ import XCTest
 
 class StringTexts: XCTestCase {
 
-  override func setUp() {
-    super.setUp()
-  }
-
-  override func tearDown() {
-    super.tearDown()
-  }
-
   func testIsMarkdown() {
     let str = "MyFile.md"
 

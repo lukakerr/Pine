@@ -32,7 +32,7 @@
 		A156AF852090606C0098BBDD /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AF842090606C0098BBDD /* Document.swift */; };
 		A156AF872090606C0098BBDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A156AF862090606C0098BBDD /* Assets.xcassets */; };
 		A156AF8A2090606D0098BBDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A156AF882090606D0098BBDD /* Main.storyboard */; };
-		A156AF962090606D0098BBDD /* TextViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AF952090606D0098BBDD /* TextViewTests.swift */; };
+		A156AF962090606D0098BBDD /* NSTextViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AF952090606D0098BBDD /* NSTextViewTests.swift */; };
 		A156AFA12090606D0098BBDD /* InitialOpenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFA02090606D0098BBDD /* InitialOpenUITests.swift */; };
 		A156AFAF209061D60098BBDD /* PineWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFAE209061D60098BBDD /* PineWindowController.swift */; };
 		A156AFB120908ECE0098BBDD /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156AFB020908ECE0098BBDD /* Theme.swift */; };
@@ -69,6 +69,7 @@
 		A1C40210221F868200E3DBCC /* ReferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C4020F221F868200E3DBCC /* ReferenceViewController.swift */; };
 		A1C65D82221179230053C422 /* DocumentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C65D81221179230053C422 /* DocumentController.swift */; };
 		A1C65FB620DE2B0D00326C60 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C65FB520DE2B0D00326C60 /* Alert.swift */; };
+		A1CB4A0C2248D80300CA10A9 /* URLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB4A0B2248D80300CA10A9 /* URLTests.swift */; };
 		A1CFDA6E223D04D800ECFFA7 /* Autocomplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CFDA6D223D04D800ECFFA7 /* Autocomplete.swift */; };
 		A1D4A0382234C77A00E2159A /* SidebarTableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D4A0372234C77A00E2159A /* SidebarTableRowView.swift */; };
 		A1D5466420D4D9CC00D1221A /* Exporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D5466320D4D9CC00D1221A /* Exporter.swift */; };
@@ -133,7 +134,7 @@
 		A156AF892090606D0098BBDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A156AF8B2090606D0098BBDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A156AF912090606D0098BBDD /* PineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A156AF952090606D0098BBDD /* TextViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTests.swift; sourceTree = "<group>"; };
+		A156AF952090606D0098BBDD /* NSTextViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTextViewTests.swift; sourceTree = "<group>"; };
 		A156AF972090606D0098BBDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A156AF9C2090606D0098BBDD /* PineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A156AFA02090606D0098BBDD /* InitialOpenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialOpenUITests.swift; sourceTree = "<group>"; };
@@ -173,6 +174,7 @@
 		A1C4020F221F868200E3DBCC /* ReferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceViewController.swift; sourceTree = "<group>"; };
 		A1C65D81221179230053C422 /* DocumentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentController.swift; sourceTree = "<group>"; };
 		A1C65FB520DE2B0D00326C60 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		A1CB4A0B2248D80300CA10A9 /* URLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLTests.swift; sourceTree = "<group>"; };
 		A1CFDA6D223D04D800ECFFA7 /* Autocomplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autocomplete.swift; sourceTree = "<group>"; };
 		A1D4A0372234C77A00E2159A /* SidebarTableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarTableRowView.swift; sourceTree = "<group>"; };
 		A1D5466320D4D9CC00D1221A /* Exporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exporter.swift; sourceTree = "<group>"; };
@@ -357,7 +359,8 @@
 				A156AF972090606D0098BBDD /* Info.plist */,
 				A1767B05220FC44D00ED1A61 /* NSColorTests.swift */,
 				A1767B03220FC2DD00ED1A61 /* StringTests.swift */,
-				A156AF952090606D0098BBDD /* TextViewTests.swift */,
+				A156AF952090606D0098BBDD /* NSTextViewTests.swift */,
+				A1CB4A0B2248D80300CA10A9 /* URLTests.swift */,
 			);
 			path = PineTests;
 			sourceTree = "<group>";
@@ -762,7 +765,8 @@
 			files = (
 				A1767B06220FC44D00ED1A61 /* NSColorTests.swift in Sources */,
 				A1767B04220FC2DD00ED1A61 /* StringTests.swift in Sources */,
-				A156AF962090606D0098BBDD /* TextViewTests.swift in Sources */,
+				A156AF962090606D0098BBDD /* NSTextViewTests.swift in Sources */,
+				A1CB4A0C2248D80300CA10A9 /* URLTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
