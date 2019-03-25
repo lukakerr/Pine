@@ -27,14 +27,14 @@ final class OpenDocuments {
 
   /// Remove an item from the open documents given a URL
   public func remove(itemWithUrl url: URL) {
-    if let index = documents.index(where: { $0.fullPath == url.relativePath }) {
+    if let index = documents.firstIndex(where: { $0.fullPath == url.relativePath }) {
       documents.remove(at: index)
     }
   }
 
   /// Remove an item from the open documents given the item
   public func remove(item doc: FileSystemItem) {
-    if let index = documents.index(where: { $0 == doc }) {
+    if let index = documents.firstIndex(where: { $0 == doc }) {
       documents.remove(at: index)
     }
   }

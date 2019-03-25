@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
-        <plugIn identifier="com.apple.WebKit2IBPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="14490.70"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -1126,10 +1126,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Folder" width="75" height="75"/>
+        <image name="Folder" width="50" height="50"/>
         <image name="NSFolder" width="32" height="32"/>
         <image name="NSLinenBackgroundPattern" width="256" height="256"/>
-        <image name="Plus" width="75" height="75"/>
-        <image name="Sidebar" width="75" height="75"/>
+        <image name="Plus" width="50" height="50"/>
+        <image name="Sidebar" width="50" height="50"/>
     </resources>
 </document>

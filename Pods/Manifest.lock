@@ -14,10 +14,10 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   cmark-gfm-swift:
-    :commit: 958fa1050ea2561659f9e4d9bc4ac2266896eef4
+    :commit: 4102c78d08ea44036dab3a623389827f3532e9ea
     :git: https://github.com/lukakerr/cmark-gfm-swift.git
   Highlightr:
-    :commit: b32a617fef4822ab7ae6818a7d3e47765feecdf0
+    :commit: 31e3d89c9635ec2967ec7bf7f3d14a4a85041bbf
     :git: https://github.com/lukakerr/Highlightr.git
 
 SPEC CHECKSUMS:
