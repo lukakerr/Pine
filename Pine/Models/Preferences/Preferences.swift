@@ -61,7 +61,7 @@ class Preferences {
       return self.get(key)
     }
 
-    set(newValue) {
+    set {
       self.set(key, value: newValue)
     }
   }
