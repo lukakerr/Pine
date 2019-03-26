@@ -1,4 +1,4 @@
-.PHONY: all build test release clean clean-release clean-build
+.PHONY: all build test tag release clean clean-release clean-build
 
 all: build
 
@@ -12,6 +12,13 @@ test:
 		-scheme Pine \
 		-configuration Debug test \
 		-workspace ./Pine.xcworkspace
+
+tag:
+ifdef PINE_VERSION
+	/usr/libexec/Plistbuddy -c "Set CFBundleShortVersionString $(PINE_VERSION)" ./Pine/Info.plist
+else
+	@echo 'PINE_VERSION is not set'
+endif
 
 release:
 	xcodebuild archive \
