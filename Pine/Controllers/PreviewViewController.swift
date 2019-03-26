@@ -11,7 +11,7 @@ import WebKit
 
 class PreviewViewController: NSViewController, WKNavigationDelegate {
 
-  @IBOutlet weak private var webPreview: WKWebView!
+  @IBOutlet weak var webPreview: WKWebView!
 
   /// The current directory that external assets can load from
   private var permissionDirectory: URL?
@@ -45,7 +45,7 @@ class PreviewViewController: NSViewController, WKNavigationDelegate {
       window.scrollTo(0, height * \(percentage));
     """
 
-    webPreview.evaluateJavaScript(jsString) { (_, _) in }
+    webPreview.evaluateJavaScript(jsString)
   }
 
   /// Set the content of the preview to a HTML string
