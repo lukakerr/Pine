@@ -236,6 +236,15 @@
 			path = "Core Text";
 			sourceTree = "<group>";
 		};
+		A10378532249CFFB00E6F3C6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A1FB7A9F2227EE9300DC2E0E /* PreferencesRoundedButton.swift */,
+				A1FB7AA12227EEEF00DC2E0E /* PreferencesSwitchButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		A10B86DB2227BB2E000656DD /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,13 +492,12 @@
 		A1FB7AA32227F4E200DC2E0E /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
+				A10378532249CFFB00E6F3C6 /* Components */,
 				A1904E9D22288AB80004FB82 /* DocumentStackView.swift */,
 				A1BC8AF8224212F400623917 /* EditorStackView.swift */,
 				A1F818B122499058006A4C10 /* GeneralStackView.swift */,
 				A1FB7AA42227F5B100DC2E0E /* MarkdownStackView.swift */,
-				A1FB7A9F2227EE9300DC2E0E /* PreferencesRoundedButton.swift */,
 				A1FB7A9D2227DFCB00DC2E0E /* PreferencesStackView.swift */,
-				A1FB7AA12227EEEF00DC2E0E /* PreferencesSwitchButton.swift */,
 				A1D7173C2247573C003BE7BC /* PreviewStackView.swift */,
 				A1FB7A992227DC5900DC2E0E /* UIStackView.swift */,
 			);
