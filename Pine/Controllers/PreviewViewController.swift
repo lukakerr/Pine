@@ -11,7 +11,7 @@ import WebKit
 
 class PreviewViewController: NSViewController, WKNavigationDelegate {
 
-  @IBOutlet weak var webPreview: WKWebView!
+  @IBOutlet weak private var webPreview: WKWebView!
 
   /// The current directory that external assets can load from
   private var permissionDirectory: URL?

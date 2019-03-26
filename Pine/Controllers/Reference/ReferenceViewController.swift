@@ -11,7 +11,7 @@ import WebKit
 
 class ReferenceViewController: NSViewController {
 
-  @IBOutlet weak var webView: WKWebView!
+  @IBOutlet weak private var webView: WKWebView!
 
   override func viewDidLoad() {
     super.viewDidLoad()

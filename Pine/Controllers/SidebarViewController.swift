@@ -10,8 +10,8 @@ import Cocoa
 
 class SidebarViewController: NSViewController {
 
-  @IBOutlet weak var sidebar: NSOutlineView!
-  @IBOutlet weak var sidebarActionsView: NSView!
+  @IBOutlet weak private var sidebar: NSOutlineView!
+  @IBOutlet weak private var sidebarActionsView: NSView!
 
   // Data used for sidebar rows
   var items: [FileSystemItem] = []

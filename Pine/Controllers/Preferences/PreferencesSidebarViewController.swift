@@ -14,7 +14,7 @@ class PreferencesSidebarViewController: NSViewController {
     return parent as? PreferencesSplitViewController
   }
 
-  @IBOutlet weak var sidebar: NSOutlineView!
+  @IBOutlet weak private var sidebar: NSOutlineView!
 
   override func viewDidLoad() {
     super.viewDidLoad()
