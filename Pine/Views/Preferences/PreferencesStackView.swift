@@ -41,10 +41,6 @@ class PreferencesStackView: NSStackView {
     self.prefView.distribution = .fillEqually
   }
 
-  override init(frame frameRect: NSRect) {
-    super.init(frame: frameRect)
-  }
-
   required init?(coder decoder: NSCoder) {
     super.init(coder: decoder)
   }
