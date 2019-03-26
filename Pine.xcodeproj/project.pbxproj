@@ -227,6 +227,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A10378522249CF2700E6F3C6 /* Core Text */ = {
+			isa = PBXGroup;
+			children = (
+				A1BC8B162242164000623917 /* CGPoint.swift */,
+				A1BC8B142242162C00623917 /* CTLine.swift */,
+			);
+			path = "Core Text";
+			sourceTree = "<group>";
+		};
 		A10B86DB2227BB2E000656DD /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +391,7 @@
 		A1682E85209097D500164D78 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A10378522249CF2700E6F3C6 /* Core Text */,
 				A1BC8AFF224214AF00623917 /* Cocoa */,
 				A1BC8AFA224214AF00623917 /* Foundation */,
 			);
@@ -413,10 +423,11 @@
 		A1BC8AFA224214AF00623917 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				A1BC8AFB224214AF00623917 /* Character.swift */,
-				A1BC8AFC224214AF00623917 /* URL.swift */,
-				A1BC8AFD224214AF00623917 /* String.swift */,
 				A1BC8AFE224214AF00623917 /* Bool.swift */,
+				A1BC8AFB224214AF00623917 /* Character.swift */,
+				A1BC8B03224214AF00623917 /* NotificationCenter.swift */,
+				A1BC8AFD224214AF00623917 /* String.swift */,
+				A1BC8AFC224214AF00623917 /* URL.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -424,9 +435,6 @@
 		A1BC8AFF224214AF00623917 /* Cocoa */ = {
 			isa = PBXGroup;
 			children = (
-				A1BC8B162242164000623917 /* CGPoint.swift */,
-				A1BC8B142242162C00623917 /* CTLine.swift */,
-				A1BC8B03224214AF00623917 /* NotificationCenter.swift */,
 				A1BC8B02224214AF00623917 /* NSAppearance.swift */,
 				A1BC8B04224214AF00623917 /* NSButton.swift */,
 				A1BC8B00224214AF00623917 /* NSColor.swift */,
