@@ -103,7 +103,8 @@ final class FileSystemItem: Equatable {
           }
         })
       }
-      return children
+
+      return children.sorted(by: { $0.getName() < $1.getName() })
     }
     return []
   }
