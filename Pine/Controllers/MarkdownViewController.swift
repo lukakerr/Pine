@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import WebKit
 import Highlightr
 import cmark_gfm_swift
 
@@ -16,6 +17,14 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
 
   public var markdownTextView: MarkdownTextView!
   public var textStorage: CodeAttributedString!
+
+  public var previewWebView: WKWebView? {
+    return self.previewViewController?.webPreview
+  }
+
+  public var document: Document? {
+    return self.windowController?.document as? Document
+  }
 
   private var scrollView: NSScrollView!
   private var layoutManager: MarkdownLayoutManager!

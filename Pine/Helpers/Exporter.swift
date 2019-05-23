@@ -29,14 +29,19 @@ struct PDFExporter: Exportable {
   static var filetype = "pdf"
 
   static func export<T>(from view: T) {
-    // We expect the view to be a webview from which we can HTML and print from
-    let webview = view as! WKWebView
+    // We expect the view to be a markdown view where we can get the document and HTML
+    let markdownViewController = view as! MarkdownViewController
 
-    webview.evaluateJavaScript("document.documentElement.outerHTML") { (response, err) in
+    let doc = markdownViewController.document
+    let docURL = doc?.fileURL ?? URL(fileURLWithPath: "/")
+
+    let webview = markdownViewController.previewWebView
+
+    webview?.evaluateJavaScript("document.documentElement.outerHTML") { (response, err) in
       if let HTMLString = response as? String {
         let HTMLData = "<!DOCTYPE HTML>" + HTMLString
         let wv = WebView()
-        wv.mainFrame.loadHTMLString(HTMLData, baseURL: nil)
+        wv.mainFrame.loadHTMLString(HTMLData, baseURL: docURL)
 
         let when = DispatchTime.now() + 0.5
         DispatchQueue.main.asyncAfter(deadline: when) {

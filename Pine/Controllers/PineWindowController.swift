@@ -247,7 +247,7 @@ extension PineWindowController {
   // MARK: - First responder methods for exporting
 
   @IBAction func exportPDF(sender: NSMenuItem) {
-    PDFExporter.export(from: previewViewController?.webPreview)
+    PDFExporter.export(from: markdownViewController)
   }
 
   @IBAction func exportHTML(sender: NSMenuItem) {
