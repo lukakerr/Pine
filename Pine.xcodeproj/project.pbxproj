@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		008CD6E8A653CDDA656D692B /* Pods_Pine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66B7DAE689A6827E658233B /* Pods_Pine.framework */; };
+		03782B4223158A60008AABFC /* SplashScreenWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03782B3E23158A60008AABFC /* SplashScreenWindowController.xib */; };
+		03782B4323158A60008AABFC /* SplashScreenWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03782B3F23158A60008AABFC /* SplashScreenWindowController.swift */; };
+		03782B4423158A60008AABFC /* SplashScreenRecentDocumentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03782B4023158A60008AABFC /* SplashScreenRecentDocumentView.xib */; };
+		03782B4523158A60008AABFC /* TulsiDocumentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03782B4123158A60008AABFC /* TulsiDocumentController.swift */; };
 		8F34580B873BD2CCD033F53B /* Pods_Pine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 300B3A71DC5543C53B684729 /* Pods_Pine.framework */; };
 		A104782520E7338800E0930A /* FileSystemItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A104782420E7338800E0930A /* FileSystemItem.swift */; };
 		A10B86DD2227BB3E000656DD /* PreferencesSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B86DC2227BB3E000656DD /* PreferencesSplitViewController.swift */; };
@@ -107,6 +110,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03782B3E23158A60008AABFC /* SplashScreenWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashScreenWindowController.xib; sourceTree = "<group>"; };
+		03782B3F23158A60008AABFC /* SplashScreenWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenWindowController.swift; sourceTree = "<group>"; };
+		03782B4023158A60008AABFC /* SplashScreenRecentDocumentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashScreenRecentDocumentView.xib; sourceTree = "<group>"; };
+		03782B4123158A60008AABFC /* TulsiDocumentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TulsiDocumentController.swift; sourceTree = "<group>"; };
 		300B3A71DC5543C53B684729 /* Pods_Pine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB191E8E2AB43CED7C8E01D /* Pods-Pine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pine.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pine/Pods-Pine.release.xcconfig"; sourceTree = "<group>"; };
 		A104782420E7338800E0930A /* FileSystemItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemItem.swift; sourceTree = "<group>"; };
@@ -206,7 +213,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F34580B873BD2CCD033F53B /* Pods_Pine.framework in Frameworks */,
-				008CD6E8A653CDDA656D692B /* Pods_Pine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +233,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03782B4623158A65008AABFC /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				03782B4023158A60008AABFC /* SplashScreenRecentDocumentView.xib */,
+				03782B3F23158A60008AABFC /* SplashScreenWindowController.swift */,
+				03782B3E23158A60008AABFC /* SplashScreenWindowController.xib */,
+				03782B4123158A60008AABFC /* TulsiDocumentController.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
 		A10378522249CF2700E6F3C6 /* Core Text */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +330,7 @@
 		A142C98320D673B0002ED94F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				03782B4623158A65008AABFC /* SplashScreen */,
 				A13B2E8A22322CBD00F24A84 /* MarkdownTextView.swift */,
 				A198047220DB64BA0066FDA6 /* MarkdownView.swift */,
 				A1E647DB20D1E9C000F32E55 /* PineSplitView.swift */,
@@ -589,7 +607,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Luka Kerr";
 				TargetAttributes = {
 					A156AF7C2090606C0098BBDD = {
@@ -642,10 +660,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1C4020C221F851B00E3DBCC /* Reference.html in Resources */,
+				03782B4423158A60008AABFC /* SplashScreenRecentDocumentView.xib in Resources */,
 				A165D1F6223DB66500A00821 /* autocomplete in Resources */,
 				A189EA742091E4F300DB0559 /* Markdown.css in Resources */,
 				A14BF5942241C4E600ED250D /* Credits.rtf in Resources */,
 				A124783C2233356400CA7A67 /* File.icns in Resources */,
+				03782B4223158A60008AABFC /* SplashScreenWindowController.xib in Resources */,
 				A1D7174622475B21003BE7BC /* MARKDOWN_REFERENCE.md in Resources */,
 				A156AF872090606C0098BBDD /* Assets.xcassets in Resources */,
 				A1D7174522475B21003BE7BC /* RELEASE.md in Resources */,
@@ -751,6 +771,7 @@
 				A10B86DD2227BB3E000656DD /* PreferencesSplitViewController.swift in Sources */,
 				A1FB7AA02227EE9300DC2E0E /* PreferencesRoundedButton.swift in Sources */,
 				A18A040820958C8B006F6B99 /* Preferences.swift in Sources */,
+				03782B4323158A60008AABFC /* SplashScreenWindowController.swift in Sources */,
 				A1F122DF20DE0D27007DFD1A /* FileSaver.swift in Sources */,
 				A198047320DB64BA0066FDA6 /* MarkdownView.swift in Sources */,
 				A13C23F8209153E1008557D0 /* ReferenceWindowController.swift in Sources */,
@@ -759,6 +780,7 @@
 				A156AF812090606C0098BBDD /* AppDelegate.swift in Sources */,
 				A1904EA82228A6EF0004FB82 /* PreferencesWindowController.swift in Sources */,
 				A116F20F22405ED800041BAC /* ToolbarItemInfo.swift in Sources */,
+				03782B4523158A60008AABFC /* TulsiDocumentController.swift in Sources */,
 				A1BC8B0A224214AF00623917 /* String.swift in Sources */,
 				A1BC8B0E224214AF00623917 /* NSAppearance.swift in Sources */,
 				A1BC8B172242164000623917 /* CGPoint.swift in Sources */,
@@ -951,7 +973,8 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = QY544RDL2W;
+				DEVELOPMENT_TEAM = 84WLNJ2YG4;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pine",
@@ -978,7 +1001,8 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = QY544RDL2W;
+				DEVELOPMENT_TEAM = 84WLNJ2YG4;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pine",
