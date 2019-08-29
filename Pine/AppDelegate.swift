@@ -13,6 +13,8 @@ let defaults = UserDefaults.standard
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+  var splashScreenWindowController: SplashScreenWindowController! = nil
+
   /// The key window's `WindowController` instance
   private var keyWindowController: PineWindowController? {
     return NSApp.keyWindow?.windowController as? PineWindowController
@@ -32,8 +34,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
   }
 
+  func applicationOpenUntitledFile(_ sender: NSApplication) -> Bool {
+    if preferences[.openNewDocumentOnStartup] {
+      return false
+    } else {
+      splashScreenWindowController = SplashScreenWindowController()
+      splashScreenWindowController.showWindow(self)
+
+      return true
+    }
+  }
+
   func applicationShouldOpenUntitledFile(_ sender: NSApplication) -> Bool {
-    return preferences[.openNewDocumentOnStartup]
+    return true
   }
 
   func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
@@ -62,7 +75,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     guard
       dialog.runModal() == .OK,
       let result = dialog.url
-    else { return }
+      else { return }
 
     openFiles(files: [result])
   }
@@ -75,7 +88,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       guard FileManager.default.fileExists(
         atPath: file.path,
         isDirectory: &isDirectory
-      ) else { continue }
+        ) else { continue }
 
       DispatchQueue.global(qos: .userInitiated).async {
         let parent = FileSystemItem.createParents(url: file)
@@ -97,8 +110,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
               display: true,
               completionHandler: { _, _, _  in
                 Utils.getCurrentMainWindowController()?.window?.makeKeyAndOrderFront(nil)
-              }
-            )
+            })
           }
         }
       }

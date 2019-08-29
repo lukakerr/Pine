@@ -26,7 +26,7 @@ extension PreferenceKeys {
   static let writingDirection = PreferenceKey<Int>("writingDirection", defaultValue: NSWritingDirection.natural.rawValue)
 
   // AppDelegate options
-  static let openNewDocumentOnStartup = PreferenceKey<Bool>("openNewDocumentOnStartup", defaultValue: true)
+  static let openNewDocumentOnStartup = PreferenceKey<Bool>("openNewDocumentOnStartup", defaultValue: false)
   static let terminateAfterLastWindowClosed = PreferenceKey<Bool>("terminateAfterLastWindowClosed", defaultValue: false)
 
   // Font options

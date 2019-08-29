@@ -54,6 +54,13 @@ class DocumentController: NSDocumentController {
       displayDocument: true,
       completionHandler: completionHandler
     )
+
+    // Ensure after opening a document that the splash screen window is closed
+    for window in NSApp.windows {
+      if let splashScreenWindow = window.windowController as? SplashScreenWindowController {
+        splashScreenWindow.close()
+      }
+    }
   }
 
   /// Replace the currently opened document (if it exists) with the provided URL
