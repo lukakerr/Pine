@@ -23,6 +23,10 @@ class SidebarViewController: NSViewController {
   // Whether to ignore the next row selection
   var ignoreNextSelection: Bool = false
 
+  public var sidebarIsHidden: Bool {
+    return sidebarSplitViewItem?.isCollapsed ?? true
+  }
+
   /// The split view item holding this sidebar view controller
   private var sidebarSplitViewItem: NSSplitViewItem? {
     return (parent as? NSSplitViewController)?.splitViewItems.first
@@ -61,6 +65,10 @@ class SidebarViewController: NSViewController {
     }
 
     syncSelectedRow()
+  }
+
+  public func setSidebarVisibility(hidden: Bool) {
+    sidebarSplitViewItem?.isCollapsed = hidden
   }
 
   @IBAction func toggleSidebar(_ sender: NSButton) {

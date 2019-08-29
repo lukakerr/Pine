@@ -63,6 +63,9 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
     // Setup notification observer for system dark/light mode change
     NotificationCenter.receive(.appearanceChanged, instance: self, selector: #selector(generatePreview))
 
+    // Setup notification observer for markdown content change
+    NotificationCenter.receive(.markdownContentChanged, instance: self, selector: #selector(generatePreview))
+
     // Setup notification observer for when scroll view scrolls
     NotificationCenter.receive(.boundsDidChange, instance: self, selector: #selector(scrollViewDidScroll))
 

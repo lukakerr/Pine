@@ -133,7 +133,11 @@ class PineWindowController: NSWindowController, NSWindowDelegate {
 
     // If the preview is open after toggling, send a notification to re-generate the preview
     if !preview.isCollapsed {
-      NotificationCenter.send(.appearanceChanged)
+      NotificationCenter.send(.markdownContentChanged)
+    }
+
+    if let svc = sidebarViewController {
+      svc.setSidebarVisibility(hidden: svc.sidebarIsHidden)
     }
   }
 
@@ -142,11 +146,6 @@ class PineWindowController: NSWindowController, NSWindowDelegate {
 
     editor.collapseBehavior = .preferResizingSplitViewWithFixedSiblings
     editor.animator().isCollapsed = !editor.isCollapsed
-
-    // If the editor is open after toggling, send a notification to re-generate the preview
-    if !editor.isCollapsed {
-      NotificationCenter.send(.appearanceChanged)
-    }
   }
 
   // MARK: - Public static helper methods
