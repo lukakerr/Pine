@@ -52,15 +52,17 @@ class DocumentController: NSDocumentController {
       for: url,
       toReplace: transientDocument,
       displayDocument: true,
-      completionHandler: completionHandler
-    )
+      completionHandler: { document, alreadyOpen, error in
+        // Ensure after opening a document that the splash screen window is closed
+        for window in NSApp.windows {
+          if let splashScreenWindow = window.windowController as? SplashScreenWindowController {
+            splashScreenWindow.close()
+          }
+        }
 
-    // Ensure after opening a document that the splash screen window is closed
-    for window in NSApp.windows {
-      if let splashScreenWindow = window.windowController as? SplashScreenWindowController {
-        splashScreenWindow.close()
+        completionHandler(document, alreadyOpen, error)
       }
-    }
+    )
   }
 
   /// Replace the currently opened document (if it exists) with the provided URL
