@@ -8,6 +8,26 @@
 ### Other
 
 ## [0.0.9] - 2019-03-23
+
+### New Features
+- Added ability to create custom JavaScript plugins
+- Added splash screen
+- Added preference for writing direction
+- Added preference for closing app after last window closed 
+
+### Fixes
+- Fix documents not updating when changed externally
+- Fix autocompletion crash
+- Fix sidebar items not being sorted alphabetically
+- Fix images not appearing in PDF export
+- Fix about window credits not being readable in dark mode
+- Fix sidebar re-opening when preview toggled
+
+### Other
+- Added more UI and unit tests
+- Updated to Swift 5
+
+## [0.0.9] - 2019-03-23
 ### New Features
 - Added autocomplete support for LaTeX, HTML and markdown with preferences to disable each
 - Added support for WikiLink (`[[Description|./path/to/note.md]]`) markdown extensions
