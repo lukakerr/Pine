@@ -2,6 +2,7 @@
 
 [Unreleased]
 ### New Features
+- Added preference to show editor on startup
 
 ### Fixes
 

@@ -10,12 +10,13 @@ import Cocoa
 import cmark_gfm_swift
 
 extension PreferenceKeys {
-  static let showPreviewOnStartup = PreferenceKey<Bool>("showPreviewOnStartup", defaultValue: true)
   static let autosaveDocument = PreferenceKey<Bool>("autosaveDocument", defaultValue: true)
   static let verticalSplitView = PreferenceKey<Bool>("verticalSplitView", defaultValue: true)
   static let modernTitlebar = PreferenceKey<Bool>("modernTitlebar", defaultValue: true)
   static let useSystemAppearance = PreferenceKey<Bool>("useSystemAppearance", defaultValue: false)
   static let showSidebar = PreferenceKey<Bool>("showSidebar", defaultValue: true)
+  static let showEditorOnStartup = PreferenceKey<Bool>("showEditorOnStartup", defaultValue: true)
+  static let showPreviewOnStartup = PreferenceKey<Bool>("showPreviewOnStartup", defaultValue: true)
   static let spellcheckEnabled = PreferenceKey<Bool>("spellcheckEnabled", defaultValue: false)
   static let autoPairSyntax = PreferenceKey<Bool>("autoPairSyntax", defaultValue: true)
   static let useThemeColorForSidebar = PreferenceKey<Bool>("useThemeColorForSidebar", defaultValue: true)

@@ -40,6 +40,16 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
     return parent as? NSSplitViewController
   }
 
+  /// The split view controllers editor item
+  private var editorSplitViewItem: NSSplitViewItem? {
+    return splitViewController?.splitViewItems.first
+  }
+
+  /// The split view controllers preview item
+  private var previewSplitViewItem: NSSplitViewItem? {
+    return splitViewController?.splitViewItems.last
+  }
+
   /// The preview view controller for this markdown view controller
   private var previewViewController: PreviewViewController? {
     return splitViewController?.splitViewItems.last?.viewController as? PreviewViewController
@@ -74,10 +84,6 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
       self.generatePreview()
     }
 
-    if let preview = splitViewController?.splitViewItems.last {
-      preview.isCollapsed = !preferences[.showPreviewOnStartup]
-    }
-
     self.setupTextStorage()
     self.setupScrollView()
     self.setupLayoutManager()
@@ -90,6 +96,11 @@ class MarkdownViewController: NSViewController, NSTextViewDelegate, HighlightDel
     scrollView.documentView = markdownTextView
 
     view.addSubview(scrollView)
+  }
+
+  override func viewWillAppear() {
+    previewSplitViewItem?.isCollapsed = !preferences[.showPreviewOnStartup]
+    editorSplitViewItem?.isCollapsed = !preferences[.showEditorOnStartup]
   }
 
   // MARK: - Private functions for updating and setting view components

@@ -11,6 +11,7 @@ import Cocoa
 class GeneralStackView: NSStackView, PreferenceStackView {
 
   private let behaviorMap: BoolPreferenceMap = [
+    "Show editor on startup": .showEditorOnStartup,
     "Show preview on startup": .showPreviewOnStartup,
     "Open new document on startup": .openNewDocumentOnStartup,
     "Terminate after last window closed": .terminateAfterLastWindowClosed
