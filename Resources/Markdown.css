@@ -188,6 +188,8 @@ ul .task-list-item {
 }
 
 img, video {
+  margin: 20px auto;
+  display: block;
   max-width: 100%;
 }
 
