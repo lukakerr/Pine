@@ -21,7 +21,6 @@ Pine is still in its very early stages, so if you encounter any bugs or have a f
 **Install via Homebrew Cask**
 
 ```bash
-$ brew tap lukakerr/things
 $ brew cask install pine
 ```
 
