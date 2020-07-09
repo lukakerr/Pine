@@ -31,7 +31,7 @@ Visit the [releases page](https://github.com/lukakerr/pine/releases) to download
 
 ### Uninstalling
 
-**Download via Homebrew Cask**
+**Installed via Homebrew Cask**
 
 ```bash
 $ brew cask remove pine
