@@ -21,7 +21,6 @@ Pine is still in its very early stages, so if you encounter any bugs or have a f
 **Install via Homebrew Cask**
 
 ```bash
-$ brew tap lukakerr/things
 $ brew cask install pine
 ```
 
@@ -34,13 +33,19 @@ Visit the [releases page](https://github.com/lukakerr/pine/releases) to download
 **Download via Homebrew Cask**
 
 ```bash
-$ brew cask remove pine
+$ brew cask zap pine
 ```
 
 **Downloaded Manually**
 
-```
-$ rm -r /Applications/Pine.app ~/Library/Caches/io.github.lukakerr.pine
+```bash
+$ rm -r /Applications/Pine.app \
+    ~/Library/Application\ Support/Pine \
+    ~/Library/Application\ Support/com.apple.sharedfilelist com.apple.LSSharedFileList.ApplicationRecentDocuments/io.github.lukakerr.pine.sfl2 \
+    ~/Library/Caches/io.github.lukakerr.Pine \
+    ~/Library/Preferences/io.github.lukakerr.Pine.plist \
+    ~/Library/Saved Application\ State/io.github.lukakerr.Pine.savedState \
+    ~/Library/WebKit/io.github.lukakerr.Pine
 ```
 
 ### Building
