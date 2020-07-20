@@ -4,6 +4,7 @@
 [![Platform](http://img.shields.io/badge/platform-macOS-red.svg?style=flat)](https://developer.apple.com/macos/)
 [![Github](http://img.shields.io/badge/github-lukakerr-green.svg?style=flat)](https://github.com/lukakerr)
 ![Github All Releases](https://img.shields.io/github/downloads/lukakerr/pine/total.svg)
+[简体中文](./README_zh.md)
 
 <p align="center">
   <img src="./Pine/Assets.xcassets/AppIcon.appiconset/pine-512@1x.png" width="150">
