@@ -14,3 +14,5 @@ DerivedData/
 .DS_Store
 !default.perspectivev3
 Release/
+.Archive
+.markeditor
