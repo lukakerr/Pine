@@ -23,7 +23,7 @@ Pine is still in its very early stages, so if you encounter any bugs or have a f
 
 ```bash
 $ brew tap lukakerr/things
-$ brew cask install pine
+$ brew install --cask pine
 ```
 
 **Manual Download**
