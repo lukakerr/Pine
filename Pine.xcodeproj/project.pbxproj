@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		03782B4223158A60008AABFC /* SplashScreenWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03782B3E23158A60008AABFC /* SplashScreenWindowController.xib */; };
 		03782B4323158A60008AABFC /* SplashScreenWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03782B3F23158A60008AABFC /* SplashScreenWindowController.swift */; };
 		03782B4423158A60008AABFC /* SplashScreenRecentDocumentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03782B4023158A60008AABFC /* SplashScreenRecentDocumentView.xib */; };
-		8F34580B873BD2CCD033F53B /* Pods_Pine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 300B3A71DC5543C53B684729 /* Pods_Pine.framework */; };
 		A104782520E7338800E0930A /* FileSystemItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A104782420E7338800E0930A /* FileSystemItem.swift */; };
 		A10B86DD2227BB3E000656DD /* PreferencesSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B86DC2227BB3E000656DD /* PreferencesSplitViewController.swift */; };
 		A10B86DF2227BB6E000656DD /* PreferencesSidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B86DE2227BB6E000656DD /* PreferencesSidebarViewController.swift */; };
@@ -90,6 +89,8 @@
 		A1FB7AA22227EEEF00DC2E0E /* PreferencesSwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FB7AA12227EEEF00DC2E0E /* PreferencesSwitchButton.swift */; };
 		A1FB7AA52227F5B100DC2E0E /* MarkdownStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FB7AA42227F5B100DC2E0E /* MarkdownStackView.swift */; };
 		A1FD269A20932CDD004D1C95 /* highlight-js in Resources */ = {isa = PBXBuildFile; fileRef = A1FD269820932CDC004D1C95 /* highlight-js */; };
+		BA3F1C08275E0E81006C41ED /* Highlightr in Frameworks */ = {isa = PBXBuildFile; productRef = BA3F1C07275E0E81006C41ED /* Highlightr */; };
+		BA3F1C0B275E0E95006C41ED /* cmark_gfm_swift in Frameworks */ = {isa = PBXBuildFile; productRef = BA3F1C0A275E0E95006C41ED /* cmark_gfm_swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,8 +114,6 @@
 		03782B3E23158A60008AABFC /* SplashScreenWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashScreenWindowController.xib; sourceTree = "<group>"; };
 		03782B3F23158A60008AABFC /* SplashScreenWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenWindowController.swift; sourceTree = "<group>"; };
 		03782B4023158A60008AABFC /* SplashScreenRecentDocumentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashScreenRecentDocumentView.xib; sourceTree = "<group>"; };
-		300B3A71DC5543C53B684729 /* Pods_Pine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DB191E8E2AB43CED7C8E01D /* Pods-Pine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pine.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pine/Pods-Pine.release.xcconfig"; sourceTree = "<group>"; };
 		A104782420E7338800E0930A /* FileSystemItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemItem.swift; sourceTree = "<group>"; };
 		A10B86DC2227BB3E000656DD /* PreferencesSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSplitViewController.swift; sourceTree = "<group>"; };
 		A10B86DE2227BB6E000656DD /* PreferencesSidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSidebarViewController.swift; sourceTree = "<group>"; };
@@ -201,10 +200,6 @@
 		A1FB7AA12227EEEF00DC2E0E /* PreferencesSwitchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSwitchButton.swift; sourceTree = "<group>"; };
 		A1FB7AA42227F5B100DC2E0E /* MarkdownStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownStackView.swift; sourceTree = "<group>"; };
 		A1FD269820932CDC004D1C95 /* highlight-js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "highlight-js"; sourceTree = "<group>"; };
-		B2BE6FC4D33EB0DD8E860B17 /* Pods-Pine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pine/Pods-Pine.debug.xcconfig"; sourceTree = "<group>"; };
-		B66B7DAE689A6827E658233B /* Pods_Pine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEB8F75868608EE6AE483A4C /* Pods-Pine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pine/Pods-Pine.debug.xcconfig"; sourceTree = "<group>"; };
-		DE61D6DEDFEA5C5AF04564BE /* Pods-Pine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pine.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pine/Pods-Pine.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,7 +207,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F34580B873BD2CCD033F53B /* Pods_Pine.framework in Frameworks */,
+				BA3F1C0B275E0E95006C41ED /* cmark_gfm_swift in Frameworks */,
+				BA3F1C08275E0E81006C41ED /* Highlightr in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,8 +350,6 @@
 			isa = PBXGroup;
 			children = (
 				A1D7174022475B21003BE7BC /* Docs */,
-				AF85BB3E71369DF39A9597F6 /* Frameworks */,
-				E4FB2329AC3DC77FB4340593 /* Pods */,
 				A156AF7E2090606C0098BBDD /* Products */,
 				A189EA722091E4E300DB0559 /* Resources */,
 				A156AF7F2090606C0098BBDD /* Pine */,
@@ -530,26 +524,6 @@
 			path = Preferences;
 			sourceTree = "<group>";
 		};
-		AF85BB3E71369DF39A9597F6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B66B7DAE689A6827E658233B /* Pods_Pine.framework */,
-				300B3A71DC5543C53B684729 /* Pods_Pine.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E4FB2329AC3DC77FB4340593 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B2BE6FC4D33EB0DD8E860B17 /* Pods-Pine.debug.xcconfig */,
-				DE61D6DEDFEA5C5AF04564BE /* Pods-Pine.release.xcconfig */,
-				CEB8F75868608EE6AE483A4C /* Pods-Pine.debug.xcconfig */,
-				8DB191E8E2AB43CED7C8E01D /* Pods-Pine.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -557,17 +531,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A156AFA52090606D0098BBDD /* Build configuration list for PBXNativeTarget "Pine" */;
 			buildPhases = (
-				1C9E57CBD9210A5F16D7F6F9 /* [CP] Check Pods Manifest.lock */,
 				A156AF792090606C0098BBDD /* Sources */,
 				A156AF7A2090606C0098BBDD /* Frameworks */,
 				A156AF7B2090606C0098BBDD /* Resources */,
-				AEBBCEE62B5EC34750DFBB6C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Pine;
+			packageProductDependencies = (
+				BA3F1C07275E0E81006C41ED /* Highlightr */,
+				BA3F1C0A275E0E95006C41ED /* cmark_gfm_swift */,
+			);
 			productName = Pine;
 			productReference = A156AF7D2090606C0098BBDD /* Pine.app */;
 			productType = "com.apple.product-type.application";
@@ -651,6 +627,10 @@
 				Base,
 			);
 			mainGroup = A156AF742090606C0098BBDD;
+			packageReferences = (
+				BA3F1C06275E0E81006C41ED /* XCRemoteSwiftPackageReference "Highlightr" */,
+				BA3F1C09275E0E95006C41ED /* XCRemoteSwiftPackageReference "cmark-gfm-swift" */,
+			);
 			productRefGroup = A156AF7E2090606C0098BBDD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -697,47 +677,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1C9E57CBD9210A5F16D7F6F9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Pine-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AEBBCEE62B5EC34750DFBB6C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Pine/Pods-Pine-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Highlightr/Highlightr.framework",
-				"${BUILT_PRODUCTS_DIR}/cmark-gfm-swift/cmark_gfm_swift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Highlightr.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/cmark_gfm_swift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pine/Pods-Pine-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A156AF792090606C0098BBDD /* Sources */ = {
@@ -975,13 +914,12 @@
 		};
 		A156AFA62090606D0098BBDD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CEB8F75868608EE6AE483A4C /* Pods-Pine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = QY544RDL2W;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1003,13 +941,12 @@
 		};
 		A156AFA72090606D0098BBDD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8DB191E8E2AB43CED7C8E01D /* Pods-Pine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = QY544RDL2W;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1155,6 +1092,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BA3F1C06275E0E81006C41ED /* XCRemoteSwiftPackageReference "Highlightr" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lukakerr/Highlightr.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		BA3F1C09275E0E95006C41ED /* XCRemoteSwiftPackageReference "cmark-gfm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lukakerr/cmark-gfm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BA3F1C07275E0E81006C41ED /* Highlightr */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA3F1C06275E0E81006C41ED /* XCRemoteSwiftPackageReference "Highlightr" */;
+			productName = Highlightr;
+		};
+		BA3F1C0A275E0E95006C41ED /* cmark_gfm_swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA3F1C09275E0E95006C41ED /* XCRemoteSwiftPackageReference "cmark-gfm-swift" */;
+			productName = cmark_gfm_swift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A156AF752090606C0098BBDD /* Project object */;
 }
