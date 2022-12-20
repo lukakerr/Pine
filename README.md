@@ -19,11 +19,11 @@ It is a [document based application](https://developer.apple.com/document-based-
 
 Pine is still in its very early stages, so if you encounter any bugs or have a feature request please raise an issue!
 
-**Install via Homebrew Cask**
+**Install via Homebrew**
 
 ```bash
 $ brew tap lukakerr/things
-$ brew install --cask pine
+$ brew install pine
 ```
 
 **Manual Download**
@@ -32,10 +32,10 @@ Visit the [releases page](https://github.com/lukakerr/pine/releases) to download
 
 ### Uninstalling
 
-**Installed via Homebrew Cask**
+**Installed via Homebrew**
 
 ```bash
-$ brew cask remove pine
+$ brew remove pine
 ```
 
 **Downloaded Manually**

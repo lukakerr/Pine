@@ -19,7 +19,7 @@ Pine仍处于测试阶段,因此,如果您遇到任何错误或对新的功能�
 
 ```bash
 $ brew tap lukakerr/things
-$ brew cask install pine
+$ brew install pine
 ```
 
 **直接下载并安装**
@@ -31,7 +31,7 @@ $ brew cask install pine
 **自Homebrew安装应用**
 
 ```bash
-$ brew cask remove pine
+$ brew remove pine
 ```
 
 **直接下载并安装应用**
