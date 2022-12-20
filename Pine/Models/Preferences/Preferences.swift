@@ -95,8 +95,8 @@ class Preferences {
 
   // MARK: - Dynamic preferences
 
-  public var markdownExtensions: [MarkdownExtensions] {
-    var extensions: [MarkdownExtensions] = []
+  public var markdownExtensions: [MarkdownExtension] {
+    var extensions: [MarkdownExtension] = []
 
     if self[.markdownEmojis] {
       extensions.append(.emoji)
@@ -129,8 +129,8 @@ class Preferences {
     return extensions
   }
 
-  public var markdownOptions: [MarkdownOptions] {
-    var options: [MarkdownOptions] = []
+  public var markdownOptions: [MarkdownOption] {
+    var options: [MarkdownOption] = []
 
     if self[.markdownFootnotes] {
       options.append(.footnotes)
