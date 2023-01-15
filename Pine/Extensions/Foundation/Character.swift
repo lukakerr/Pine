@@ -10,8 +10,8 @@ import Foundation
 
 extension Character {
 
-  public var isWhiteSpace: Bool {
-    return self == " " || self == "\n" || self == "\r"
+  public var isWhiteSpace: Bool { 
+    return self == " " || self == "\n" || self == "\r" || self == "$"
   }
 
 }
